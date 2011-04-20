@@ -1,0 +1,19 @@
+#top-menu{
+border-top: 7px solid #003762; /*780F2C*/
+}
+
+#wrapper > #logo-area{
+background: #003762;
+}
+
+#nav ul.primary-links li a.active{
+background: none repeat scroll 0 0 #780F2C;
+}
+
+#logo img{
+padding: 1em;
+}
+
+#top-search-button {
+    padding-right: 2em;
+}

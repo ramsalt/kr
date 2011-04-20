@@ -1,0 +1,19 @@
+name = Kommunal Rapport 2011
+description = OP SubTheme
+base theme = openpublish_theme
+version = VERSION
+core = 6.x
+engine = phptemplate
+ 
+; SubTheme-Specific CSS
+stylesheets[all][]   = css/kr2011-main.css
+ 
+; Print-version styles
+stylesheets[print][] = css/kr2011-print.css
+ 
+regions[left] = Left Sidebar
+regions[right] = Right Sidebar
+regions[over_content] = On Top of Content
+regions[under_content] = Underneath the Content
+regions[header] = Header
+regions[footer] = Footer
