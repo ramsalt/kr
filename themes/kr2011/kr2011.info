@@ -7,11 +7,14 @@ engine = phptemplate
  
 ; SubTheme-Specific CSS
 stylesheets[all][]   = css/kr2011-main.css
+stylesheets[all][]   = css/layout.css
+stylesheets[all][]   = css/html-elements.css
  
 ; Print-version styles
 stylesheets[print][] = css/kr2011-print.css
  
 regions[left] = Left Sidebar
+regions[pre_right] = Before right Sidebar
 regions[right] = Right Sidebar
 regions[over_content] = On Top of Content
 regions[under_content] = Underneath the Content
