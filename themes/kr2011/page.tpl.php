@@ -80,7 +80,7 @@
 <?php print $page_header; ?>
 
 <div id="center" class="clearfix">
-  <?php print $breadcrumb; ?>
+
 
   <?php if ($mission): print '<div id="mission">'. $mission .'</div>'; endif; ?>
   
@@ -91,7 +91,9 @@
       	</div>
         <h1 property="dc:title"><?php print $title; ?></h1>
       <?php endif; ?>
-      
+      <?php if ($field_deck): ?>
+		<div class="deck"><?php print $field_deck_value; ?></div><!-- /.deck -->
+	  <?php endif; ?>
       <?php if ($tabs): ?>
       <div id="drupal-control-bar">      
       <?php endif; ?>
