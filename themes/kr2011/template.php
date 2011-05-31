@@ -1,4 +1,21 @@
 <?php
+
+
+/**
+ * Each selected node goes true this function to create a nice body
+ */
+function kr2011_scs_node_output($node) {
+  $output = '';
+    
+  $output = '<div id="node_' . $node->nid . '">';
+    $output .= '<h2 style="font-size:21px;margin:0 0 10px;font-family:Helvetica, sans-serif">' . $node->title . '</h2>';
+    //$output .= '<p>' . node_teaser($node->body) . '</p>';
+    $output .= '<p>' . l(t('Read more'), 'node/' . $node->nid, array('attributes' => array('style' => 'color:#0a2339;font-weight:700;text-decoration:none;font-family:Helvetica, sans-serif'))) . ' <span style="color:gray">' . format_date($node->created) .'</span></p>';
+  $output .= '</div>';
+  
+  return $output;
+}
+
 function kr2011_preprocess_views_slideshow_ddblock(&$vars) {
   drupal_rebuild_theme_registry();
   $settings = $vars['views_slideshow_ddblock_slider_settings'];
