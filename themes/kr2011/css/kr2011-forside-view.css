@@ -1,0 +1,200 @@
+.view-articles .views-field-tid a{
+	color: #ed1a3a;
+}
+.view-articles .views-field-title h2 a{
+	font-weight: bold;
+}
+#block-views-articles-block_1 .content, #block-views-articles-block_2 .content, #block-views-articles-block_2 .content, #block-views-articles-block_3 .content, #block-views-articles-block_3 .content, #block-views-articles-block_4 .content, #block-views-articles-block_5 .content, #block-views-articles-block_6 .content {
+	margin-bottom: 0px;
+}
+#block-views-articles-block_2{
+	background: #dae2e7;
+}
+.featuredarticle .view-content .views-field-tid{
+	background: #94021c;
+	padding: 1px 0px 1px 10px;
+}
+.featuredarticle .view-content .views-field-tid a{
+	color: #fff;
+}
+.featuredarticle h2 {
+	font-size: 32px;
+	padding-left: 10px;
+}
+.featuredarticle .views-field-field-teaser-value{
+	padding-left: 10px;
+	font-size: 18px;
+	padding-bottom: 15px;
+	font-weight: bold;
+}
+.featuredarticle .views-field-view-node{
+	padding-left: 10px;
+	padding-top: 10px;
+}
+body .featuredarticle .views-field-view-node a{
+	background: url("../images/spirite1.png") no-repeat scroll 0 0 transparent;
+	width: 71px;
+	height: 14px;
+	padding:6px 4px 4px 12px;
+	float: left;
+	color: #48535b;
+}
+body .featuredarticle .views-field-view-node a:hover{
+	text-decoration: none;
+	color: #fff;
+}
+body .featuredarticle .views-field-comment-count{
+	background: url("../images/spirite1.png") no-repeat scroll -98px 0px transparent;
+	float: left;
+	padding: 6px 4px 4px 6px;
+	height: 16px;
+	width: 123px;
+	margin-left: 15px;
+	margin-bottom: 10px;
+}
+body .featuredarticle .views-field-comment-count a{
+	color: #48535b;
+}
+.featuredarticle .views-field-comment-count .tall{
+	color: #94021c;
+}
+.featuredarticle .views-field-comment-count a:hover{
+	text-decoration: none;
+	color: #fff;
+}
+
+.featuredarticle .views-field-field-main-image-data{
+	float: right;
+    margin-bottom: 10px;
+    width: 250px;
+}
+
+.featuredarticle .feature_bilde{
+	float: right;
+	width: 250px;
+	background: #989ea1;
+	padding-bottom: 4px;
+}
+.feature_bilde .text{
+	padding-left:5px;
+	color: #fff;
+}
+.view-articles .views-separator{
+	border: none;
+	clear: none;
+}
+.totilfire .views-row{
+	background: none repeat scroll 0 0 #DAE2E7;
+	border-radius: 4px;
+	padding: 7px;
+	width: 166px;
+	float: left;
+}
+.totilfire .views-row-even{
+	margin: 0px 20px;
+}
+.totilfire .views-separator{
+	margin: 0px;
+	width: 0px;
+	height: 0px;
+	visibility: hidden;
+	clear: none;
+	border: none;
+}
+
+.totilfire .views-field-field-teaser-value{
+	margin-bottom: 10px;
+}
+.totilfire .views-field-comment-count{
+
+}
+.view-articles .views-field-comment-count a{
+	color: #999999;
+	float: left;
+	background: url("../images/spirite1.png") no-repeat scroll 0px -24px  transparent;
+	height: 14px;
+	padding-left: 20px;
+	padding-top: 2px;
+}
+.view-articles .views-field-comment-count a:hover{
+	text-decoration: none;
+	color: #000;
+}
+.totilfire .views-field-view-node{
+
+
+}
+.view-articles .views-field-view-node a{
+	color: #999999;
+	background: url("../images/spirite1.png") no-repeat scroll 100% -40px  transparent;
+	height: 14px;
+	padding-right: 20px;
+	padding-top: 2px;
+	float: right;
+}
+.view-articles .views-field-view-node a:hover{
+	text-decoration: none;
+	color: #000;
+}
+
+#block-views-articles-block_3{
+	width: 280px;
+	float: left;
+	clear: none;
+	border-right: 1px solid #89a0ab;
+	padding-right: 9px;
+	margin: 0px;
+}
+#block-views-articles-block_3 .views-row{
+	float: left;
+	width: 280px;
+	padding-bottom: 8px;
+}
+.view-display-id-block_3 .view-content{
+
+}
+.view-display-id-block_3 .feature_bilde{
+	background: #000000;
+}
+#block-views-articles-block_4{
+	width: 280px;
+	float: left;
+	clear: none;
+	padding-left: 10px;
+}
+#block-views-articles-block_4 .views-row{
+	border-bottom: 1px solid #89a0ab;
+	float: left;
+	width: 280px;
+	padding-bottom: 8px;
+}
+#block-views-articles-block_4 .field-content h2 {
+	font-size: 30px;
+}
+#block-views-articles-block_5{
+	display: inline;
+}
+#block-views-articles-block_5 .views-row{
+	width: 280px;
+	float: left;
+    padding-bottom: 5px;
+	margin-left: 10px;
+}
+#block-views-articles-block_5 .views-field-field-main-image-fid, #block-views-articles-block_5 .views-field-field-thumbnail-image-fid, #block-views-articles-block_6 .views-field-field-main-image-fid, #block-views-articles-block_6 .views-field-field-thumbnail-image-fid{
+	float: right;
+}
+#block-views-articles-block_6 .views-row {
+	width: 280px;
+	float: left;
+	border-top: 1px solid #89A0AB;
+	padding: 12px 0px;
+}
+#block-views-articles-block_6 .views-row.views-row-even{
+	clear: right;
+	margin-left: 10px;
+}
+#block-views-articles-block_6 .views-row.views-row-odd{
+	clear: left;
+	margin-right: 9px;
+
+}
