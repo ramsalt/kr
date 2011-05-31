@@ -1,0 +1,138 @@
+.field-field-teaser .field-items .field-item {
+    background: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+.field-field-job-date .field-items .field-item {
+    background: none;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+    color: #afcbd8;
+    margin: 0 0 15px 0;
+    padding: 0;
+	border-bottom: 1px solid;
+}
+
+.job .field-field-main-image .field-items .field-item{
+    background: none;
+    margin: 0;
+    padding: 0 10px 10px 0;
+    float: left;
+}
+
+.views-slideshow-controls-bottom{
+	float: left;
+	margin-top: -80px;
+	width: 100%;
+	z-index: 4;
+	// background: red;
+	height: 45px;
+	position: relative
+}
+
+.views-slideshow-controls-bottom a, .views-slideshow-controls-bottom img{
+	float: left;
+	margin: 0;
+	cursor: pointer;
+}
+.views-slideshow-controls-bottom span{
+	float: left;
+}
+#views_slideshow_thumbnailhover_breakout_teasers_bilde_slider_node-block_1-2{
+	display: inline;
+	clear: none;
+	float: left;
+	width: auto;
+	
+}
+.views_slideshow_thumbnailhover_div_breakout_teaser {
+    clear: none;
+    display: inline;
+    float: left;
+    padding: 0px 5px;
+}
+.views_slideshow_thumbnailhover_previous {
+	background: url("../images/spirite1.png") no-repeat scroll -13px -56px transparent;
+	height: 40px;
+	width: 13px;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+.views_slideshow_thumbnailhover_next {
+	background: url("../images/spirite1.png") no-repeat scroll 0 -56px transparent;
+	height: 40px;
+	width: 13px;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+.views_slideshow_slide .views-content-field-main-image-fid img.imagecache-article_stor_slideshow{
+ 	margin: 0px;
+}
+.views-content-field-main-image-data{
+	background: #efeee6;
+	width: 569px;
+	padding: 4px 4px 4px 7px;
+	float: left;
+}
+.fakta{
+	background: none repeat scroll 0 0 #EFEEE6;
+	width: 180px;
+	float: right;
+	margin-left: 20px;
+	font-size: 12px;
+}
+.fakta p{
+	margin-bottom: 0.4em;
+}
+.fakta ul, .fakta ol{
+	margin: 0 0 0 15px;
+	padding: 0;
+}
+.fakta ul li {
+	font-size: 12px;
+	margin: 0;	
+	list-style-position: outside;
+}
+.faktatittel{
+	background: #5d93cd;
+    color: #FFFFFF;
+    float: left;
+    padding: 2px 5px;
+	width: 170px;
+}
+.ingress{
+	color: #7c8d97;
+	font-weight: bold;
+}
+.ingress p{
+	font-size: 18px;
+	line-height: 22px;
+}
+.body-content p{
+	font-family: Georgia;
+	font-size: 14px;
+	line-height: 19px;
+}
+.view-also-read .views-row .views-field-created .field-content{
+	color: #ed1a3b;
+}
+.view-also-read .views-field-title{
+	font-size: 11px;
+	font-weight: medium;
+}
+.view-also-read .views-separator {
+    border-bottom: 1px solid #ABAAAA;
+    border-top: 1px solid #89A0AB;
+    clear: both;
+    height: 10px;
+    margin: 10px 0;
+}
+.section-date-author {
+    border-bottom: 1px solid #7E7E69;
+}
+#add-this{
+	padding-top: 10px;
+}
