@@ -39,9 +39,11 @@ font-size: 2em;      12px x 2    = 24px
 
 
 body.front-page #sidebar-left {
-  float: left;
-  width: 180px;
-  margin-left: 20px;
+    border-right: 1px solid #BECCD3;
+    float: left;
+    margin-left: 10px;
+    padding-right: 9px;
+    width: 180px;
 }
 
 body.front-page #container {
@@ -50,10 +52,10 @@ body.front-page #container {
 
 
 body.front-page #op-content {
-
   float: left;
   width: 580px;
-
+  border-right: 1px solid #8ca0aa;
+  padding-right: 9px;
 }
 
 
@@ -67,11 +69,8 @@ body.front-page #op-content {
 
 /* 3 columns */
 body.sidebars #center {
-  border-left: 1px solid #b4d7f0;
-  border-right: 1px solid #b4d7f0;
   float: left;
-  padding: 0 10px;
-  width: 600px;
+  width: 580px;
 }
 
 /* 2 columns - sidebar-left */
@@ -89,15 +88,23 @@ body.sidebar-right #center {
   width: 620px;
 }
 
-
-#sidebar-left {
-  float: left;
- }
+body.sidebars.node-view-page #center{
+	border-top: 10px solid #003663;
+}
+.node-view-page #sidebar-left {
+	border-top: 10px solid #003663;
+	border-right: 1px solid #7e7e7a;
+  	float: left;
+  	width: 180px;
+  	margin-right: 19px;
+  	padding-left: 20px;
+  	padding-top: 10px;
+}
 
 #sidebar-right {
   float: right;
   width: 180px;
-  padding: 0 0 10px 10px;
+  padding: 0;
 }
 
 .indented {

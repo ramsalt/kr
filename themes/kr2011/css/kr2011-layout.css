@@ -1,0 +1,31 @@
+body #wrapper #logo-area{
+	background: url("../images/spirite1.png") repeat-x scroll 0px -126px transparent;
+	height: 100px;
+}
+body div#nav{
+	margin-bottom: 0px;
+	height: 30px;
+	background: url("../images/spirite1.png") repeat-x scroll 0px -96px transparent;
+}
+
+#nav ul.primary-links li.first{
+	background: url("../images/spirite1.png") no-repeat scroll -26px -56px transparent;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 37px;
+}
+body #nav ul.primary-links li a.active{
+	background: transparent;
+}
+body div#nav ul.primary-links li.first-level.first a:hover{
+	background: none;
+	color: inherit;
+}
+#nav ul.primary-links li{
+	border-right: 1px solid #ffffff;
+}
+body #nav ul.primary-links li a:link,body #nav ul.primary-links li a:visited{
+	font-family: helvetica,sans-serif;
+	padding: 8px 12px;
+	color: #48535b;
+}
