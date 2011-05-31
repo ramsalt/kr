@@ -1,0 +1,9 @@
+core        = "6.x"
+name        = "OpenX"
+description = "Integrates the OpenX adserver into Drupal"
+; Information added by drupal.org packaging script on 2011-05-09
+version = "6.x-1.2"
+core = "6.x"
+project = "openx"
+datestamp = "1304941616"
+
