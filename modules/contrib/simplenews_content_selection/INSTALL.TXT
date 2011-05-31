@@ -1,0 +1,45 @@
+//$Id: INSTALL.TXT,v 1.1.4.2 2010/08/12 17:22:55 coworks Exp $
+
+Welcome to Simplenews Content Selection.
+This module allows you to select content from your website and send a newsletter with the selected content.
+
+################################
+# Simplenews Content Selection #
+################################
+
+INSTALL
+Enable the module in admin/build/modules
+
+USAGE
+- Go to admin/settings/simplenews/scs
+- Select the content types of the nodes you want to have available in the selection list
+- Choose the format for your newsletter. HTML requires the mimemail module (http://drupal.org/project/mimemail)
+- Choose the publish state for the newsletters created with SCS
+- Go to admin/content/scs_node_selection and start using this module
+
+##################################################
+# Simplenews Content Selection Views Integration #
+##################################################
+
+INSTALL
+- Make sure you downloaded Views 2 (http://drupal.org/project/views) and Views Bulk Operations (http://drupal.org/project/views_bulk_operations)
+- Enable the module in admin/build/modules
+
+USAGE
+- Create a view with Style: Bulk operations and enable the Create newsletter action
+- Start using this module
+
+###########
+# Theming #
+###########
+
+Multiple theming functions are available
+
+THEME_SCS_NEWSLETTER_OUTPUT
+Theme the whole body of the newsletter including table of contents and all the selected nodes.
+
+THEME_SCS_NODE_OUTPUT
+Theme the output of one single selected node
+
+THEME_SCS_NODE_TITLES
+Theme the table of contents
