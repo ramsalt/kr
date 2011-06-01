@@ -24,12 +24,25 @@ function kr_div_imagecache_default_presets() {
       'actions' => array(
         '0' => array(
           'weight' => '0',
-          'module' => 'imagecache',
-          'action' => 'imagecache_scale',
+          'module' => 'imagecrop',
+          'action' => 'imagecrop_javascript',
           'data' => array(
             'width' => '580',
-            'height' => '',
-            'upscale' => 0,
+            'height' => '384',
+            'xoffset' => 'center',
+            'yoffset' => 'center',
+            'resizable' => 1,
+            'aspect' => 'CROP',
+            'disable_if_no_data' => 1,
+          ),
+        ),
+        '1' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale_and_crop',
+          'data' => array(
+            'width' => '580',
+            'height' => '384',
           ),
         ),
       ),
