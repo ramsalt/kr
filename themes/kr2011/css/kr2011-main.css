@@ -17,3 +17,11 @@ padding: 1em;
 #top-search-button {
     padding-right: 2em;
 }
+ #draggableview_articles_1 h2{
+	background: none;
+	font-size: 14px;
+	border: none;
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+}
