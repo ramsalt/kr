@@ -58,7 +58,7 @@ function kr_newsletter_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_simplenews';
-  $strongarm->value = '2';
+  $strongarm->value = '0';
 
   $export['comment_simplenews'] = $strongarm;
   $strongarm = new stdClass;
@@ -68,6 +68,13 @@ function kr_newsletter_strongarm() {
   $strongarm->value = '1';
 
   $export['comment_subject_field_simplenews'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'enable_revisions_page_simplenews';
+  $strongarm->value = 0;
+
+  $export['enable_revisions_page_simplenews'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -81,7 +88,6 @@ function kr_newsletter_strongarm() {
   $strongarm->name = 'node_options_simplenews';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'promote',
   );
 
   $export['node_options_simplenews'] = $strongarm;
@@ -92,18 +98,19 @@ function kr_newsletter_strongarm() {
   $strongarm->value = array(
     'blog' => 'blog',
     'article' => 'article',
-    'author' => 'author',
-    'editors_choice' => 'editors_choice',
-    'op_image' => 'op_image',
-    'package' => 'package',
-    'resource' => 'resource',
-    'slideshow' => 'slideshow',
-    'video' => 'video',
-    'stillingsannonse' => 'stillingsannonse',
-    'panel' => 'panel',
-    'page' => 'page',
-    'simplenews' => 'simplenews',
-    'topichub' => 'topichub',
+    'author' => 0,
+    'editors_choice' => 0,
+    'op_image' => 0,
+    'package' => 0,
+    'resource' => 0,
+    'slideshow' => 0,
+    'video' => 0,
+    'simplenews' => 0,
+    'stillingsannonse' => 0,
+    'job' => 0,
+    'panel' => 0,
+    'page' => 0,
+    'topichub' => 0,
   );
 
   $export['scs_content_types'] = $strongarm;
@@ -128,6 +135,71 @@ function kr_newsletter_strongarm() {
   $strongarm->value = '1';
 
   $export['scs_publish_default'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplenews_content_types';
+  $strongarm->value = array(
+    'simplenews' => 'simplenews',
+  );
+
+  $export['simplenews_content_types'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplenews_format';
+  $strongarm->value = 'html';
+
+  $export['simplenews_format'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplenews_from_address';
+  $strongarm->value = 'yngve@ramsalt.com';
+
+  $export['simplenews_from_address'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplenews_from_address_18';
+  $strongarm->value = 'yngve@ramsalt.com';
+
+  $export['simplenews_from_address_18'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplenews_from_name';
+  $strongarm->value = 'Kommunal Rapport';
+
+  $export['simplenews_from_name'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplenews_from_name_18';
+  $strongarm->value = 'Kommunal Rapport';
+
+  $export['simplenews_from_name_18'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplenews_hyperlinks_18';
+  $strongarm->value = '1';
+
+  $export['simplenews_hyperlinks_18'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplenews_priority';
+  $strongarm->value = '0';
+
+  $export['simplenews_priority'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplenews_private_key';
+  $strongarm->value = '71e380163d62740a608f47d9cf385583';
+
+  $export['simplenews_private_key'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -160,7 +232,7 @@ function kr_newsletter_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'upload_simplenews';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
 
   $export['upload_simplenews'] = $strongarm;
   return $export;
