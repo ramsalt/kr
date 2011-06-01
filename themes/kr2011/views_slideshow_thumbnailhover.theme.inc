@@ -9,12 +9,12 @@
 /**
  * Implements template_preprocess_hook_THEMENAME().
  */
-function template_preprocess_views_slideshow_thumbnailhover(&$vars) {
+function kr2011_preprocess_views_slideshow_thumbnailhover(&$vars) {
   $options = $vars['options'];
   $view = $vars['view'];
   $rows = $vars['rows'];
   $vss_id = $view->name . '-' . $view->current_display;
-
+  drupal_set_message('rows: '.$rows);
   $settings = array_merge(
     array(
       'num_divs' => sizeof($vars['rows']),
@@ -67,6 +67,7 @@ function template_preprocess_views_slideshow_thumbnailhover(&$vars) {
   $vars['slideshow'] = theme('views_slideshow_main_section', $vss_id, $hidden_elements, 'views_slideshow_thumbnailhover');
 
   $thumbnailhover = $vars['options']['views_slideshow_thumbnailhover'];
+
   $vars['ctr_prev']=theme_views_slideshow_thumbnailhover_control_previous($vss_id, $view, $options);
   $vars['ctr_next']=theme_views_slideshow_thumbnailhover_control_previous($vss_id, $view, $options);
   // Only show controls when there is more than one result.

@@ -112,7 +112,8 @@ function kr2011_preprocess_views_slideshow_thumbnailhover(&$vars) {
   $view = $vars['view'];
   $rows = $vars['rows'];
   $vss_id = $view->name . '-' . $view->current_display;
-
+  //drupal_set_message('rows: '.count($rows));
+  $vars['image_count']= count($rows);
   $settings = array_merge(
     array(
       'num_divs' => sizeof($vars['rows']),
@@ -165,8 +166,10 @@ function kr2011_preprocess_views_slideshow_thumbnailhover(&$vars) {
   $vars['slideshow'] = theme('views_slideshow_main_section', $vss_id, $hidden_elements, 'views_slideshow_thumbnailhover');
 
   $thumbnailhover = $vars['options']['views_slideshow_thumbnailhover'];
-  $vars['ctr_prev']=theme_views_slideshow_thumbnailhover_control_previous($vss_id, $view, $options);
-  $vars['ctr_next']=theme_views_slideshow_thumbnailhover_control_next($vss_id, $view, $options);
+  if(count($rows)>1){
+  	$vars['ctr_prev']=theme_views_slideshow_thumbnailhover_control_previous($vss_id, $view, $options);
+  	$vars['ctr_next']=theme_views_slideshow_thumbnailhover_control_next($vss_id, $view, $options);
+  }
   // Only show controls when there is more than one result.
   if ($settings['num_divs'] > 1) {
     if ($thumbnailhover['controls'] == 1) {
@@ -191,6 +194,50 @@ function kr2011_preprocess_views_slideshow_thumbnailhover(&$vars) {
     $vars['image_count_bottom'] = theme('views_slideshow_thumbnailhover_image_count', $vss_id, $view, $options);
   }
 }
+function kr2011_views_slideshow_thumbnailhover_no_display_section($view, $rows, $vss_id, $options, $teaser = TRUE) {
+  // Add the slideshow elements.
+  $attributes['id'] = "views_slideshow_thumbnailhover_teaser_section_" . $vss_id;
+  $attributes['class'] = 'views_slideshow_thumbnailhover_teaser_section views_slideshow_teaser_section';
+  $attributes = drupal_attributes($attributes);
+
+  $output = "<div$attributes>";
+  foreach ($view->result as $count => $node) {
+    if ($view->display_handler->uses_fields()) {
+      $rendered = '';
+      foreach ($options['views_slideshow_thumbnailhover']['main_fields'] as $field => $use) {
+        if ($use !== 0 && is_object($view->field[$field]) && !$view->field[$field]->options['exclude']) {
+          $rendered .= '<div class="views-field-'. views_css_safe($view->field[$field]->field) .'">';
+          if ($view->field[$field]->label()) {
+            $rendered .= '<label class="view-label-'. views_css_safe($view->field[$field]->field) . '">';
+            $rendered .= $view->field[$field]->label() . ':';
+            $rendered .= '</label>';
+          }
+		  //field-main-image-data
+		  if(views_css_safe($view->field[$field]->field)=='field-main-image-data'){
+		  	if(strlen($view->style_plugin->rendered_fields[$count][$field])>0){
+	          	$rendered .= '<div class="views-content-'. views_css_safe($view->field[$field]->field) .'">';
+	          	$rendered .=  $view->style_plugin->rendered_fields[$count][$field];
+	          	$rendered .= '</div>';
+	          	$rendered .= '</div>';
+			}
+		  }else{
+          	$rendered .= '<div class="views-content-'. views_css_safe($view->field[$field]->field) .'">';
+          	$rendered .=  $view->style_plugin->rendered_fields[$count][$field];
+          	$rendered .= '</div>';
+          	$rendered .= '</div>';
+		  }
+        }
+      }
+    }
+    else {
+      $rendered = node_view(node_load($node->nid), $teaser, FALSE, FALSE);
+    }
+    $output .= theme('views_slideshow_thumbnailhover_no_display_teaser', $rendered, $vss_id, $count);
+  }
+  $output .= "</div>";
+  return $output;
+}
+
 function kr2011_preprocess_node(&$vars){
 	if($vars['type']=='Article'){
 		if(strlen($vars['field_article_fakta'][0]['value'])>4){

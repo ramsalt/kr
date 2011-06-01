@@ -17,8 +17,8 @@
 
 <?php print $slideshow; ?>
 
-<?php if ($breakout_bottom || $controls_bottom || $image_count_bottom): ?>
-  <div class="views-slideshow-controls-bottom clear-block">
+<?php if (($breakout_bottom || $controls_bottom || $image_count_bottom) && $image_count>1): ?>
+  <div class="views-slideshow-controls-bottom clear-block"><?php print $image_count_bottom; ?>
   	<?php print $ctr_prev; ?>
     <?php print $breakout_bottom; ?>
     <?php print $ctr_next; ?>
