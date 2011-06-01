@@ -241,3 +241,6 @@ body .featuredarticle .views-field-comment-count a{
 #block-block-6{
 	border-bottom: 10px solid #003663;
 }
+body a.edit-forsiderekkefolge {
+    text-decoration: underline;
+}

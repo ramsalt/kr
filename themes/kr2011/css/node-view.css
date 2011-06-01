@@ -83,13 +83,15 @@
 	float: right;
 	margin-left: 20px;
 	font-size: 12px;
+	padding-bottom: 10px;
 }
 .fakta p{
 	margin-bottom: 0.4em;
+	padding-left: 5px;
 }
 .fakta ul, .fakta ol{
 	margin: 0 0 0 15px;
-	padding: 0;
+	padding: 0 0 0 5px;
 }
 .fakta ul li {
 	font-size: 12px;
