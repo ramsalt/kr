@@ -5,11 +5,10 @@ function _fb_node_count($nid){
 	global $base_url;
 	$url=$base_url.url('node/'.$nid);
 	//='http://www.uka.no/nyheter/1221/';
-	drupal_set_message($url);
 	$data_from_fb=file_get_contents('http://graph.facebook.com/?ids='.$url);
 	if(!$data_from_fb){
 		watchdog('KR fb comment', 'Unable to fetch facebook comment count for %node',array('%node' => l('Node '.$nid,'node/'.$nid)),WATCHDOG_NOTICE);
-		drupal_set_message('fb fail');
+
 	}
 
 	$from_fb=json_decode($data_from_fb, true);
