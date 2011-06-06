@@ -26,7 +26,6 @@ function _kr_fb_comment_process_node($nid){
 	$result=db_fetch_object($query);
 	if($result){
 		if($result->comment_count != $comment_count){
-			print ' nytt resultat '.$comment_count;
 			$data=array(
 				'nid'=>$nid,
 				'last_comment_timestamp' => time(),
@@ -50,7 +49,7 @@ function _kr_fb_comment_process_node($nid){
 function kr_fb_comment_cron(){
 	$start_nid = variable_get('kr_fb_comment_nid', 1);
 	$sql=db_query('SELECT * FROM {node_comment_statistics} WHERE nid > '.$start_nid.' ORDER BY nid LIMIT 25');
-    if(mysql_num_rows($sql)==0){
+    if(mysqli_num_rows($sql)==0){
     	$sql=db_query('SELECT * FROM {node_comment_statistics} WHERE nid > 1 ORDER BY nid LIMIT 25');
   	}
 	while($nid=db_fetch_object($sql)){
