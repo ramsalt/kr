@@ -417,6 +417,7 @@ function kr_job_views_default_views() {
       'relationship' => 'none',
     ),
   ));
+  $handler->override_option('title', 'Ledige stillinger');
   $handler->override_option('style_plugin', 'list');
   $handler->override_option('row_options', array(
     'inline' => array(),
