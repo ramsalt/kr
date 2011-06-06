@@ -1,0 +1,61 @@
+<?php
+
+
+function _fb_node_count($nid){
+	global $base_url;
+	$url=$base_url.url('node/'.$nid);
+	//='http://www.uka.no/nyheter/1221/';
+	$data_from_fb=file_get_contents('http://graph.facebook.com/?ids='.$url);
+	if(!$data_from_fb){
+		watchdog('KR fb comment', 'Unable to fetch facebook comment count for %node',array('%node' => l('Node '.$nid,'node/'.$nid)),WATCHDOG_NOTICE);
+	}
+
+	$from_fb=json_decode($data_from_fb, true);
+	if(!$from_fb[$url]['comments']){
+		$comments=0;	
+	}else{
+		$comments=$from_fb[$url]['comments'];
+	}
+	return $comments;
+}
+
+//_kr_fb_comment_process_node(12);
+function _kr_fb_comment_process_node($nid){
+	$comment_count=_fb_node_count($nid);
+	$query=db_query('SELECT * FROM {node_comment_statistics} WHERE nid LIKE %d',$nid);
+	$result=db_fetch_object($query);
+	if($result){
+		if($result->comment_count != $comment_count){
+			print ' nytt resultat '.$comment_count;
+			$data=array(
+				'nid'=>$nid,
+				'last_comment_timestamp' => time(),
+				'last_comment_name' => NULL,
+				'last_comment_uid' => 1,
+				'comment_count' => $comment_count,
+			);
+			drupal_write_record('node_comment_statistics', $data,'nid');
+		}
+	}else{
+		$data=array(
+			'nid'=>$nid,
+			'last_comment_timestamp' => time(),
+			'last_comment_name' => NULL,
+			'last_comment_uid' => 1,
+			'comment_count' => $comment_count,
+		);
+		drupal_write_record('node_comment_statistics', $data);
+	}
+}
+function kr_fb_comment_cron(){
+	$start_nid = variable_get('kr_fb_comment_nid', 1);
+	$sql=db_query('SELECT * FROM {node_comment_statistics} WHERE nid > '.$start_nid.' ORDER BY nid LIMIT 25');
+    if(mysql_num_rows($sql)==0){
+    	$sql=db_query('SELECT * FROM {node_comment_statistics} WHERE nid > 1 ORDER BY nid LIMIT 25');
+  	}
+	while($nid=db_fetch_object($sql)){
+		_kr_fb_comment_process_node($nid->nid);
+	 	$end=$nid->nid;
+	}
+	variable_set('kr_fb_comment_nid',$end);
+}

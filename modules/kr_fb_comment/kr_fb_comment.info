@@ -1,0 +1,4 @@
+name = KR fb comment counter
+description = fb comment counter
+package = "Facebook Social"
+core = 6.x
