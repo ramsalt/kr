@@ -67,9 +67,10 @@ function kr2011_preprocess_views_slideshow_thumbnailhover(&$vars) {
   $vars['slideshow'] = theme('views_slideshow_main_section', $vss_id, $hidden_elements, 'views_slideshow_thumbnailhover');
 
   $thumbnailhover = $vars['options']['views_slideshow_thumbnailhover'];
-
-  $vars['ctr_prev']=theme_views_slideshow_thumbnailhover_control_previous($vss_id, $view, $options);
-  $vars['ctr_next']=theme_views_slideshow_thumbnailhover_control_previous($vss_id, $view, $options);
+  if ($settings['num_divs'] > 1) {
+    $vars['ctr_prev']=theme_views_slideshow_thumbnailhover_control_previous($vss_id, $view, $options);
+    $vars['ctr_next']=theme_views_slideshow_thumbnailhover_control_previous($vss_id, $view, $options);
+  }
   // Only show controls when there is more than one result.
   if ($settings['num_divs'] > 1) {
     if ($thumbnailhover['controls'] == 1) {
