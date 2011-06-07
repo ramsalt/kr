@@ -1,0 +1,31 @@
+<?php
+
+function kr_div_block($op = 'list', $delta = 0, $edit = array()) {
+
+  if ($op == 'list') {
+    $blocks[0] = array(
+      'info' => 'KR: addthis widget', 
+      'cache' => BLOCK_CACHE_PER_PAGE,
+    );
+    return $blocks;
+  }
+
+  else if ($op == 'view') {
+    switch ($delta) {
+      case 0:
+        // Your module will need to define this function to render the block.
+        $block = array(
+          'subject' => '', 
+          'content' => _kr_div_addthis(),
+        );
+        break;
+    }
+    return $block;
+  }
+}
+
+function _kr_div_addthis(){
+  $node=node_load(arg(1));
+  $addthis_link_title=$node->title;
+  return theme('op_addthis_widget', $addthis_link_title);
+}

@@ -1,0 +1,6 @@
+name = Kommunal rapport diverse
+description = Diverse funksjoner
+package = Other
+core = 6.x
+version = "6.x-1.x"
+dependencies[] = openpublish_core
