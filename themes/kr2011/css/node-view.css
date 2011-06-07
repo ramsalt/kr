@@ -138,3 +138,7 @@
 #add-this{
 	padding-top: 10px;
 }
+#op-over-content {
+    float: left;
+    width: 580px;
+}
