@@ -70,7 +70,7 @@ body.front-page #op-content {
 /* 3 columns */
 body.sidebars #center {
   float: left;
-
+  width: 580px;
 }
 
 /* 2 columns - sidebar-left */
