@@ -1,6 +1,6 @@
 <?php
 
-function kr_div_block($op = 'list', $delta = 0, $edit = array()) {
+function kr_diverse_block($op = 'list', $delta = 0, $edit = array()) {
 
   if ($op == 'list') {
     $blocks[0] = array(
