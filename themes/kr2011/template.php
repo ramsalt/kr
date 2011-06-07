@@ -214,11 +214,13 @@ function kr2011_views_slideshow_thumbnailhover_no_display_section($view, $rows, 
           }
 		  //field-main-image-data
 		  if(views_css_safe($view->field[$field]->field)=='field-main-image-data'){
-		  	if(strlen($view->style_plugin->rendered_fields[$count][$field])>0){
+		  	if(strlen($view->style_plugin->rendered_fields[$count][$field])>3){
 	          	$rendered .= '<div class="views-content-'. views_css_safe($view->field[$field]->field) .'">';
 	          	$rendered .=  $view->style_plugin->rendered_fields[$count][$field];
 	          	$rendered .= '</div>';
 	          	$rendered .= '</div>';
+			}else{
+			  $rendered .= '</div>';
 			}
 		  }else{
           	$rendered .= '<div class="views-content-'. views_css_safe($view->field[$field]->field) .'">';

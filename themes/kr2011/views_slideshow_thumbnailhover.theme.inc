@@ -64,7 +64,7 @@ function kr2011_preprocess_views_slideshow_thumbnailhover(&$vars) {
 
   $teaser = ($options['views_slideshow_thumbnailhover']['hover_breakout'] == 'teaser') ? TRUE : FALSE;
   $hidden_elements = theme('views_slideshow_thumbnailhover_no_display_section', $view, $rows, $vss_id, $options, $teaser);
-  $vars['slideshow'] = theme('views_slideshow_main_section', $vss_id, $hidden_elements, 'views_slideshow_thumbnailhover');
+//  $vars['slideshow'] = theme('views_slideshow_main_section', $vss_id, $hidden_elements, 'views_slideshow_thumbnailhover');
 
   $thumbnailhover = $vars['options']['views_slideshow_thumbnailhover'];
   if ($settings['num_divs'] > 1) {
@@ -101,7 +101,7 @@ function kr2011_preprocess_views_slideshow_thumbnailhover(&$vars) {
  *
  * @ingroup themeable
  */
-function theme_views_slideshow_thumbnailhover_no_display_section($view, $rows, $vss_id, $options, $teaser = TRUE) {
+function kr2011_views_slideshow_thumbnailhover_no_display_section($view, $rows, $vss_id, $options, $teaser = TRUE) {
   // Add the slideshow elements.
   $attributes['id'] = "views_slideshow_thumbnailhover_teaser_section_" . $vss_id;
   $attributes['class'] = 'views_slideshow_thumbnailhover_teaser_section views_slideshow_teaser_section';
@@ -132,7 +132,7 @@ function theme_views_slideshow_thumbnailhover_no_display_section($view, $rows, $
     $output .= theme('views_slideshow_thumbnailhover_no_display_teaser', $rendered, $vss_id, $count);
   }
   $output .= "</div>";
-  return $output;
+ // return $output;
 }
 
 /**
@@ -140,7 +140,7 @@ function theme_views_slideshow_thumbnailhover_no_display_section($view, $rows, $
  *
  * @ingroup themeable
  */
-function theme_views_slideshow_thumbnailhover_no_display_teaser($item, $vss_id, $count) {
+function kr2011_views_slideshow_thumbnailhover_no_display_teaser($item, $vss_id, $count) {
   $current = $count + 1;
 
   $classes = array(
