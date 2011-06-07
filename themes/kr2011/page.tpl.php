@@ -86,9 +86,6 @@
   
     <?php if ($tabs): print '<div id="tabs-wrapper" class="clear-block">'; endif; ?>
       <?php if ($title && $node->type != 'topichub'): ?>
-      	<div id="add-this" class="float-right clearfix">
-          <?php print openpublish_addthis_widget($head_title); ?>
-      	</div>
         <h1 property="dc:title"><?php print $title; ?></h1>
       <?php endif; ?>
       <?php if ($field_deck): ?>
