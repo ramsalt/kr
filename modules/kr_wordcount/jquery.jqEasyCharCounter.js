@@ -30,7 +30,7 @@ $.fn.extend({
 					msgAppendMethod: 'insertAfter'
                 }, givenOptions);
 	
-			if(options.maxChars <= 0) return;
+			if(options.maxChars < 0) return;
 			
 			// create counter element
 			var jqEasyCounterMsg = $("<div class=\"jqEasyCounterMsg\">&nbsp;</div>");
@@ -56,11 +56,11 @@ $.fn.extend({
 				var val = $this.val(),
 					length = val.length
 				
-				if(length >= options.maxChars) {
+				if(length >= options.maxChars && options.maxChars != 0) {
 					val = val.substring(0, options.maxChars); 				
 				};
 				
-				if(length > options.maxChars){
+				if(length > options.maxChars && options.maxChars != 0){
 					// keep scroll bar position
 					var originalScrollTopPosition = $this.scrollTop();
 					$this.val(val.substring(0, options.maxChars));
