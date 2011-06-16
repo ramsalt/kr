@@ -10,9 +10,9 @@ function kr_wordcount_form_alter(&$form, &$form_state, $form_id){
     $add=true;
   }
   if($form['field_teaser'][0]['#type'] == 'text_textarea'){
-    $js.='$("#edit-field-teaser-0-value").jqEasyCounter({
+    $js.=' $("#edit-field-teaser-0-value").jqEasyCounter({
       "maxChars": 0,
-      "maxCharsWarning": 0
+      "maxCharsWarning": 400
     });';
   }
   if($add){

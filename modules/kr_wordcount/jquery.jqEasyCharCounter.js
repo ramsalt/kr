@@ -72,9 +72,13 @@ $.fn.extend({
 				}else {
 					jqEasyCounterMsg.css({"color" : options.msgFontColor});
 				};
-				
-				jqEasyCounterMsg.html('Tegn: ' + $this.val().length + "/" + options.maxChars);
-                jqEasyCounterMsg.stop().fadeTo( 'fast', 1);
+				if(options.maxChars == 0){
+          jqEasyCounterMsg.html('Tegn: ' + $this.val().length);
+                  jqEasyCounterMsg.stop().fadeTo( 'fast', 1);				  
+				}else{
+  				jqEasyCounterMsg.html('Tegn: ' + $this.val().length + "/" + options.maxChars);
+                  jqEasyCounterMsg.stop().fadeTo( 'fast', 1);
+        }
 			};
         });
     }
