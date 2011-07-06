@@ -26,6 +26,7 @@
   <?php print $op_head; ?>
   <?php print $styles ?>
   <?php print $scripts ?>
+  <meta http-equiv="refresh" content="600" />
   <!--[if gte IE 6]><?php print openpublish_get_ie_styles(); ?><![endif]-->  
   <!--[if IE 6]><?php print openpublish_get_ie6_styles(); ?><![endif]-->
 </head>
