@@ -286,9 +286,15 @@ function kr2011_preprocess_node(&$vars){
 			$vars['ingress']=1;
 			$vars['ingress_value']=$vars['field_teaser'][0]['safe'];
 		}
-
+    $updated = format_date($vars['node']->changed, 'medium');
+    if($vars['node']->changed != $vars['node']->created){
+      $vars['node_updated_rdfa'] = _openpublish_get_rdfa_date($vars['node']->changed, $updated);
+    }
+    
+  //  $vars['node_created_rdfa'] = _openpublish_get_rdfa_date($vars['node']->created, $vars['node_created']);
+  //  $vars['node_created_rdfa'] .= _openpublish_get_rdfa_date($vars['node']->updated, $updated);
 		drupal_add_js(drupal_get_path('theme', 'kr2011').'/js/kr2011.js');
-		//print_R($vars);
+	//	print_R($vars['node']);
 	}
 	
 }

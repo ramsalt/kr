@@ -34,7 +34,9 @@
 <div class="section-date-author"> 
   
   <?php print $node_created_rdfa; ?>
-
+  <?php if ($node_updated_rdfa): ?>
+   (Oppdatert:  <?php print $node_updated_rdfa; ?> )
+  <?php endif; ?>
   <?php if ($authors): ?>
     | <?php print $authors; ?>
   <?php endif; ?>
