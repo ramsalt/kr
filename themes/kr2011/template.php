@@ -3,7 +3,7 @@
 /**
  * Theme a complete newsletter.
  */
-function theme_scs_newsletter_output($nodes, $toc) {
+function kr2011_scs_newsletter_output($nodes, $toc) {
   $body = '';
   $titles = array();
   $i = 0;
