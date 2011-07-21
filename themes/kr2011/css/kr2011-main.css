@@ -25,3 +25,13 @@ padding: 1em;
 	margin: 0;
 	padding: 0;
 }
+
+/* Override for OpenX ads */
+#op-content .block-openx .content {
+    margin-bottom: 0;
+}
+
+.block-openx a:link{
+    color: gray;
+    font-size: 0.9em;
+}
