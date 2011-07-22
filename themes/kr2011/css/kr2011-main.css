@@ -35,3 +35,7 @@ padding: 1em;
     color: gray;
     font-size: 0.9em;
 }
+
+.section-date-author {
+    text-transform: none;
+}
