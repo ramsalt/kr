@@ -46,13 +46,15 @@ padding: 1em;
     left: 0;
     position: absolute;
     top: 0px;
-    width: 185px;
+    width: 160px;
+    background-color: yellow
 }
 
 #toppann_right {
     height: 150px;
-    left: 202px;
+    left: 180px;
     position: absolute;
     top: 0px;
-    width: 778px;
+    width: 800px;
+    background-color: yellow
 }
