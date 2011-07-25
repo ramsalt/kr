@@ -25,7 +25,7 @@ function kr_diverse_block($op = 'list', $delta = 0, $edit = array()) {
 }
 
 function _kr_div_addthis(){
-  if(arg(2) == 'edit' || arg(2) =='add'){
+  if(arg(2) == 'edit' || arg(1) =='add'){
     return;
   }
   $node=node_load(arg(1));
