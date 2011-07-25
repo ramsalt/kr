@@ -38,6 +38,28 @@
   <div id="outer-wrapper"> 
   <div id="wrapper">    	
   <div id="header">
+  
+        <div id="toppannonser">
+
+        <!-- Annonse 768x150 piksler øverst venstre  -->
+
+        <div id="toppann_left">
+
+            <?php print $top_left; ?> 
+    	</div>
+
+		<!--  Annonse 180x150 piksler øverst høyre  -->
+        <div id="toppann_right">
+
+		    <?php print $top_right; ?> 
+
+        </div><!-- .toppann_right-->
+      </div><!-- #toppannonser -->
+
+
+  
+  
+  
     <?php print $header; ?>   
     <div class="clear"></div>
   </div> <!-- /#header -->

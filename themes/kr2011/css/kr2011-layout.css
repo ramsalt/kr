@@ -29,3 +29,7 @@ body #nav ul.primary-links li a:link,body #nav ul.primary-links li a:visited{
 	padding: 8px 12px;
 	color: #48535b;
 }
+
+#header{
+    padding-top:158px;
+}

@@ -39,3 +39,20 @@ padding: 1em;
 .section-date-author {
     text-transform: none;
 }
+
+/* ads */
+#toppann_left {
+    height: 150px;
+    left: 0;
+    position: absolute;
+    top: 0px;
+    width: 185px;
+}
+
+#toppann_right {
+    height: 150px;
+    left: 200px;
+    position: absolute;
+    top: 0px;
+    width: 778px;
+}

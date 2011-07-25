@@ -24,3 +24,5 @@ regions[over_content] = On Top of Content
 regions[under_content] = Underneath the Content
 regions[header] = Header
 regions[footer] = Footer
+regions[top_left] = Left above logo
+regions[top_right] = Right above logo
