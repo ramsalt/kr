@@ -25,6 +25,9 @@ function kr_diverse_block($op = 'list', $delta = 0, $edit = array()) {
 }
 
 function _kr_div_addthis(){
+  if(arg(2)=='edit'){
+    return;
+  }
   $node=node_load(arg(1));
   $addthis_link_title=$node->title;
   return theme('op_addthis_widget', $addthis_link_title);
