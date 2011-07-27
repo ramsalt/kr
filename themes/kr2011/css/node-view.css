@@ -1,3 +1,5 @@
+/* @override http://barentssea.ramsalt.com/sites/default/themes/kr2011/css/node-view.css?8 */
+
 .field-field-teaser .field-items .field-item {
     background: none;
     font-size: 1.1em;
@@ -137,4 +139,22 @@
 }
 #add-this{
 	padding-top: 10px;
+}
+.webform-component{
+	display: block;
+	clear: both;
+}
+.content .webform-component label{
+	width:200px;
+	float: left;
+	overflow: hidden;
+}
+.content .webform-component.webform-component-radios label{
+	width: 100%;
+	float: none;
+}
+
+.webform-component input.form-text.email{
+	width: 200px;
+
 }
