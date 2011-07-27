@@ -305,6 +305,50 @@ function kr2011_preprocess_page(&$vars){
 		$vars['field_deck']=1;
 		$vars['field_deck_value']=$vars['node']->field_deck[0]['safe'];
 	}
-//	print_r($vars);
+//print '<pre>';	print_r($vars); print '</pre>';
 	
+}
+
+function kr2011_form($element){
+  
+   // Anonymous div to satisfy XHTML compliance.
+  $action = $element['#action'] ? 'action="' . check_url($element['#action']) . '" ' : '';
+  $element['#title'] = 'Hei der';
+  return '<form ' . $action . ' accept-charset="UTF-8" method="' . $element['#method'] . '" id="' . $element['#id'] . '"' . drupal_attributes($element['#attributes']) . ">\n<div>" . $element['#children'] . "\n</div></form>\n";
+}
+
+
+function kr2011_views_view_field__comment_count($view, $field, $row){
+
+  // check if node has comments
+  if(intval($view->result[0]->node_comment_statistics_comment_count)<1){
+    // do nothing
+  }else{
+    // if comments, return field
+    return $view->field[$field->options['id']]->advanced_render($row);
+  }
+
+}
+function kr2011_preprocess_block(&$variables) {
+  
+  // unset fb_comment block
+  if($variables['block']->bid == 'fb_social_comments-comments'){
+    $node =  node_load(arg(1));
+    
+    if($node->field_fb_comments[0]['value'] != 1){
+      unset($variables['block']->content);
+    }
+  }
+  static $block_counter = array();
+  // All blocks get an independent counter for each region.
+  if (!isset($block_counter[$variables['block']->region])) {
+    $block_counter[$variables['block']->region] = 1;
+  }
+  // Same with zebra striping.
+  $variables['block_zebra'] = ($block_counter[$variables['block']->region] % 2) ? 'odd' : 'even';
+  $variables['block_id'] = $block_counter[$variables['block']->region]++;
+
+  $variables['template_files'][] = 'block-' . $variables['block']->region;
+  $variables['template_files'][] = 'block-' . $variables['block']->module;
+  $variables['template_files'][] = 'block-' . $variables['block']->module . '-' . $variables['block']->delta;
 }
