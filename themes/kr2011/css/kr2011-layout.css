@@ -6,6 +6,7 @@ body div#nav{
 	margin-bottom: 0px;
 	height: 30px;
 	background: url("../images/spirite1.png") repeat-x scroll 0px -96px transparent;
+	overflow: hidden;
 }
 
 #nav ul.primary-links li.first{
@@ -17,9 +18,11 @@ body div#nav{
 body #nav ul.primary-links li a.active{
 	background: transparent;
 }
-body div#nav ul.primary-links li.first-level.first a:hover{
-	background: none;
+body div#nav ul.primary-links li.first-level.first a:hover, body div#nav ul.primary-links li.first-level.first a.active:hover{
+	background: url("../images/spirite1.png") no-repeat scroll -26px -56px #393939;
 	color: inherit;
+	height: 90%;
+	z-index: 999;
 }
 #nav ul.primary-links li{
 	border-right: 1px solid #ffffff;
