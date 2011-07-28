@@ -31,7 +31,9 @@ Ha en fin dag!
      xmlns:fb="http://www.facebook.com/2008/fbml"
      lang="<?php print $language->language; ?>" 
      dir="<?php print $language->dir; ?>"
-     version="XHTML+RDFa 1.0" >
+     version="XHTML+RDFa 1.0" 
+     xmlns:og="http://opengraphprotocol.org/schema/"
+     >
 <head>
 
   <title><?php print $head_title ?></title>
