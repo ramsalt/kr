@@ -79,29 +79,35 @@ body .featuredarticle .views-field-comment-count a{
     padding-right: 10px;
 }
 
-.feature_bilde{
+.view-display-id-block_2.featuredarticle .field-content .feature_bilde{
 	position: relative;
-	/*
-	float: right;
-	width: 250px;
-	background: #989ea1;
-	padding-bottom: 4px; */
+	overflow: hidden;
 }
-.view-display-id-block_3 .feature_bilde .text-cont{
 
-}	width: 280px;
-
-.feature_bilde .text-cont{
-	position: absolute;
-	width: 250px;
-	top: 170px;
-}
-.feature_bilde .text-cont .text-bg{
+.feature_bilde .text-cont-bg{
+   position: absolute;
+   width: 250px;
    background-image: url(../images/transparent.png) !important;  /* Mozilla only */
    background-color: transparent !important;           /* Mozilla only */
    background-image: none;                             /* IE only */
    background-color: #ffffff;                          /* IE only */
-   filter:alpha(opacity=50);                           /* IE only */
+   filter:alpha(opacity=50);                           /* IE only */	
+     height: 60px;
+     opacity: 0.3;
+     top:145px;
+}
+.feature_bilde .text-cont {
+   position: absolute;
+   width: 250px;
+
+   top: 150px;
+
+}
+.feature_bilde .image img{
+	margin-bottom: 0px;
+}
+.feature_bilde .text-cont .text-bg{
+
 
    padding: 3px 8px;
 }
