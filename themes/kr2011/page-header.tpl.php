@@ -22,6 +22,17 @@
      dir="<?php print $language->dir; ?>"
      version="XHTML+RDFa 1.0" >
 <head>
+  <!--
+Hei, du, HTML-kildekodeleser! :-)
+
+Denne nettsiden er laget ved hjelp av fri programvare. Rammeverket er Drupal.
+PHP er programmeringsspråket og databasen er MySQL. Herligheten bruker Apache som webserver og Varnish som HTTP akselerator.
+
+Har du noen spørsmål svarer vi gjerne på dem, bare kontakt oss på www.ramsalt.com
+
+Ha en fin dag!
+
+-->
   <title><?php print $head_title ?></title>
   <?php print $op_head; ?>
   <?php print $styles ?>
