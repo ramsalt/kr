@@ -84,19 +84,23 @@
 	width: 180px;
 	float: right;
 	margin-left: 20px;
-	font-size: 12px;
+	font-size: 1em;
 	padding-bottom: 10px;
 }
-.fakta p{
+.body-content .fakta p{
 	margin-bottom: 0.4em;
 	padding-left: 5px;
+	font-size: 0.9em;
+}
+.body-content .fakta ul, .body-content .fakta ol{
+	font-size: 1em;
 }
 .fakta ul, .fakta ol{
 	margin: 0 0 0 15px;
 	padding: 0 0 0 5px;
 }
 .fakta ul li {
-	font-size: 12px;
+
 	margin: 0;	
 	list-style-position: outside;
 }
@@ -104,7 +108,7 @@
 	background: #8C9FAA;
     color: #FFFFFF;
     float: left;
-    padding: 2px 5px;
+    padding: 6px 5px;
 	width: 170px;
 }
 .ingress{
@@ -133,6 +137,10 @@
     clear: both;
     height: 10px;
     margin: 10px 0;
+}
+.view-also-read .views-row-last{
+	border-bottom: 1px solid #ABAAAA;
+	padding-bottom: 10px;
 }
 .section-date-author {
     border-bottom: 1px solid #7E7E69;
