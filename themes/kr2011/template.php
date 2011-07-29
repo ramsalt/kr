@@ -331,8 +331,11 @@ function kr2011_views_view_field__comment_count($view, $field, $row){
  //   var_dump(intval($view->field[$field->options['id']]->render($row)));
  //   drupal_set_message('s: '.intval($view->field[$field->options['id']]->render($row)));
     $html = $view->field[$field->options['id']]->advanced_render($row);
-    drupal_set_message('html: '.$html);
-    return $view->field[$field->options['id']]->advanced_render($row);
+    //drupal_set_message('html: '.$html);
+    if(strlen($html)>70){
+      drupal_set_message(strlen($html));
+      return $html;
+    }
   }
   
 
