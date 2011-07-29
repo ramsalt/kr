@@ -330,7 +330,8 @@ function kr2011_views_view_field__comment_count($view, $field, $row){
  //   dpm(get_class_methods($view->field[$field->options['id']]));
  //   var_dump(intval($view->field[$field->options['id']]->render($row)));
  //   drupal_set_message('s: '.intval($view->field[$field->options['id']]->render($row)));
-    
+    $html = $view->field[$field->options['id']]->advanced_render($row);
+    drupal_set_message('html: '.$html);
     return $view->field[$field->options['id']]->advanced_render($row);
   }
   
