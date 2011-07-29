@@ -321,12 +321,19 @@ function kr2011_form($element){
 function kr2011_views_view_field__comment_count($view, $field, $row){
 
   // check if node has comments
-  if(intval($view->result[0]->node_comment_statistics_comment_count)<1){
+  if(intval($view->result[0]->node_comment_statistics_comment_count)<1 || intval($view->field[$field->options['id']]->render($row))<1){
     // do nothing
+    
+    //drupal_set_message('ja');
   }else{
     // if comments, return field
+ //   dpm(get_class_methods($view->field[$field->options['id']]));
+ //   var_dump(intval($view->field[$field->options['id']]->render($row)));
+ //   drupal_set_message('s: '.intval($view->field[$field->options['id']]->render($row)));
+    
     return $view->field[$field->options['id']]->advanced_render($row);
   }
+  
 
 }
 function kr2011_preprocess_block(&$variables) {
