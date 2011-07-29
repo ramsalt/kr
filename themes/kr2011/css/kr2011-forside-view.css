@@ -39,6 +39,8 @@
 	padding-left: 10px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	float: left;
+	clear: left;
 }
 body .featuredarticle .views-field-view-node a{
 	background: url("../images/spirite1.png") no-repeat scroll 0 0 transparent;
