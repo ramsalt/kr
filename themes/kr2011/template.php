@@ -333,7 +333,7 @@ function kr2011_views_view_field__comment_count($view, $field, $row){
     $html = $view->field[$field->options['id']]->advanced_render($row);
     //drupal_set_message('html: '.$html);
     if(strlen($html)>70){
-      drupal_set_message(strlen($html));
+      //drupal_set_message(strlen($html));
       return $html;
     }
   }
