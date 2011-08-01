@@ -75,7 +75,8 @@ class ArticlesMigration extends Migration {
 		// Replace old paths
 	}
 	
-	public function prepareRow($current_row) {	
+	public function prepareRow($current_row) {
+		drush_print($current_row->title);
 		$current_row->data = unserialize($current_row->data);
 		$current_row->sections = unserialize($current_row->sections);
 		$current_row->body = $current_row->data['body'];
@@ -91,7 +92,6 @@ class ArticlesMigration extends Migration {
 		
 		$categories = array();
 		foreach ($current_row->sections as $key => $section) {
-			drush_print($current_row->title);
 			drush_print_r($section['objid']);
 			$query = db_select('kr_import_topics', 't')
              ->fields('t', array('title', 'objid'))
