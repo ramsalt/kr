@@ -92,14 +92,12 @@ class ArticlesMigration extends Migration {
 		
 		$categories = array();
 		foreach ($current_row->sections as $key => $section) {
-			drush_print_r($section['objid']);
 			$query = db_select('kr_import_topics', 't')
              ->fields('t', array('title', 'objid'))
 						 ->condition('objid', $section['objid']);
 			$result = $query->execute();
 		
 			foreach($result as $row) {
-				drush_print_r($row);
 				$categories[] = $row->title;
 			}
 		}
