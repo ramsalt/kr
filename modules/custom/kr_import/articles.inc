@@ -47,7 +47,7 @@ class ArticlesMigration extends Migration {
 				->callbacks('strtotime');		
 		$this->addFieldMapping('changed', 'modified')
 				->callbacks('strtotime');
-    $this->addFieldMapping('Topic', 'categories')
+    $this->addFieldMapping('Kategori', 'categories')
 				->separator('|');
 		
 		$this->addUnmigratedSources(array('hidden', 'locked'));
@@ -138,7 +138,7 @@ class TopicsMigration extends Migration {
     // Create a MigrateSource object, which manages retrieving the input data.
     $this->source = new MigrateSourceSQL($query);
 		
-    $this->destination = new MigrateDestinationTerm('Topic');
+    $this->destination = new MigrateDestinationTerm('Kategori');
 
 		$this->addFieldMapping('name', 'title');
 	}
