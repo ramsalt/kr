@@ -91,6 +91,12 @@ function kr_import_articles_topics_schema () {
         'not null' => TRUE,
         'description' => 'Row ID',
       ),
+      'objid'  => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'description' => 'Article ID',
+      ),
       'title'  => array(
         'type' => 'varchar',
         'length' => 255,
