@@ -48,7 +48,7 @@ class ArticlesMigration extends Migration {
 		$this->addFieldMapping('field_articletype', 'article_type');
 		$this->addFieldMapping('field_teaser', 'caption');
 		$this->addFieldMapping('created', 'created')
-				->callbacks('strtotime');		
+				->callbacks('strtotime');
 		$this->addFieldMapping('changed', 'modified')
 				->callbacks('strtotime');
     $this->addFieldMapping('Kategori', 'categories')
@@ -80,7 +80,6 @@ class ArticlesMigration extends Migration {
 	}
 	
 	public function prepareRow($current_row) {
-		drush_print($current_row->title);
 		$current_row->data = unserialize($current_row->data);
 		$current_row->sections = unserialize($current_row->sections);
 		$current_row->body = $current_row->data['body'];
