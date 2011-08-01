@@ -41,6 +41,10 @@ class ArticlesMigration extends Migration {
 		$this->addSimpleMappings(array('title', 'body'));
 		$this->addFieldMapping('uid')
          ->defaultValue(1);
+		$this->addFieldMapping('promote')
+         ->defaultValue(0);
+		$this->addFieldMapping('status')
+         ->defaultValue(1);
 		$this->addFieldMapping('field_articletype', 'article_type');
 		$this->addFieldMapping('field_teaser', 'caption');
 		$this->addFieldMapping('created', 'created')
