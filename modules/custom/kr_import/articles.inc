@@ -144,6 +144,15 @@ class TopicsMigration extends Migration {
 	}
 	
 	public function prepareRow($current_row) {
+		$query = db_select('term_data', 't')
+             ->fields('t', array('name'))
+						 ->condition('name', $current_row->title);
+		$result = $query->execute();
+		
+		if($record = $result->fetchObject()) {
+			drush_print('Already exists: '.$current_row->title);
+			return FALSE;
+		}
 		
     return TRUE;
   }

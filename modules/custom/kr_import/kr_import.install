@@ -108,6 +108,12 @@ function kr_import_articles_topics_schema () {
         'not null' => FALSE,
         'default' => 1,
       ),
+      'importable' => array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => FALSE,
+        'default' => 1,
+      ),
     ),
     'primary key' => array('id'),
   );
