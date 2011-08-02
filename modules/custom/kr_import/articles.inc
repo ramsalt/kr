@@ -96,7 +96,11 @@ class ArticlesMigration extends Migration {
 		$current_row->payment_code = $current_row->data['betalingskode'];
 		$current_row->payment_code = $current_row->data['betalingskode'];
 		$current_row->article_type = $current_row->data['articletype'];
-		$current_row->author = unserialize($current_row->data['author']);
+		
+		if (isset($current_row->data['author'])) {
+			$current_row->author = unserialize($current_row->data['author']);	
+		}
+		
 		$current_row->free = $current_row->data['free'];
 		
 		$categories = array();
