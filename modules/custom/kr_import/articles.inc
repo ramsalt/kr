@@ -53,6 +53,11 @@ class ArticlesMigration extends Migration {
 				->callbacks('strtotime');
     $this->addFieldMapping('Kategori', 'categories')
 				->separator('|');
+		$this->addFieldMapping('field_fb_comments')
+        ->defaultValue(1);
+	  $this->addFieldMapping('field_op_author', 'author_id');			
+		$this->addFieldMapping('field_show_author_info', 'show_author');		
+				
 		
 		$this->addUnmigratedSources(array('hidden', 'locked'));
 	}
@@ -91,6 +96,7 @@ class ArticlesMigration extends Migration {
 		$current_row->payment_code = $current_row->data['betalingskode'];
 		$current_row->payment_code = $current_row->data['betalingskode'];
 		$current_row->article_type = $current_row->data['articletype'];
+		$current_row->author = unserialize($current_row->data['author']);
 		$current_row->free = $current_row->data['free'];
 		
 		$categories = array();
@@ -106,8 +112,28 @@ class ArticlesMigration extends Migration {
 		}
 		$current_row->categories = implode('|', $categories);
 		
-
-		//drush_print_r($current_row);
+		drush_print_r($current_row->author[0]['name']);
+		$current_row->show_author = 0;
+		
+		if($current_row->author[0]['name']) {
+			$query = db_select('node', 'n')
+             ->fields('n', array('nid'))
+             ->condition('type', 'author')
+						 ->condition('title', $current_row->author[0]['name']);
+			$result = $query->execute();
+			if($record = $result->fetchObject()) {
+				drush_print('Already exists: '.$current_row->title);
+				$current_row->author_id = $record->nid;
+				$current_row->show_author = 1;
+			} else {
+				drush_print('Not exists: '.$current_row->title);
+				
+				$current_row->body = $current_row->body.'<p class="author-info">'.t('Skrevet av: @author', array('@author'=>$current_row->author[0]['name'])).'</p>';
+			}
+			//show author må settes.
+		}
+		
+	
 
     return TRUE;
   }
