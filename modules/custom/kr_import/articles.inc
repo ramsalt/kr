@@ -112,7 +112,7 @@ class ArticlesMigration extends Migration {
 		}
 		$current_row->categories = implode('|', $categories);
 		
-		drush_print_r($current_row->author[0]['name']);
+		//drush_print_r($current_row->author[0]['name']);
 		$current_row->show_author = 0;
 		
 		if($current_row->author[0]['name']) {
@@ -122,11 +122,11 @@ class ArticlesMigration extends Migration {
 						 ->condition('title', $current_row->author[0]['name']);
 			$result = $query->execute();
 			if($record = $result->fetchObject()) {
-				drush_print('Already exists: '.$current_row->title);
+				//drush_print('Already exists: '.$current_row->title);
 				$current_row->author_id = $record->nid;
 				$current_row->show_author = 1;
 			} else {
-				drush_print('Not exists: '.$current_row->title);
+				//drush_print('Not exists: '.$current_row->title);
 				
 				$current_row->body = $current_row->body.'<p class="author-info">'.t('Skrevet av: @author', array('@author'=>$current_row->author[0]['name'])).'</p>';
 			}
