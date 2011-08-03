@@ -83,7 +83,11 @@
 
 
   <?php if ($mission): print '<div id="mission">'. $mission .'</div>'; endif; ?>
-  
+
+  <div id="op-over-content">
+    <?php print $over_content; ?>
+  </div>
+
     <?php if ($tabs): print '<div id="tabs-wrapper" class="clear-block">'; endif; ?>
       <?php if ($title && $node->type != 'topichub'): ?>
         <h1 property="dc:title"><?php print $title; ?></h1>
@@ -106,10 +110,6 @@
   
   <?php if ($show_messages && $messages): print $messages; endif; ?>
   <?php print $help; ?>
-  
-  <div id="op-over-content">
-    <?php print $over_content; ?>    
-  </div>
   
   <div id="op-content" typeof="dcmitype:Text">
     <?php print $content ?>
