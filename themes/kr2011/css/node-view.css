@@ -30,7 +30,7 @@
 	margin-top: 5px;
 	width: 100%;
 	z-index: 4;
-	// background: red;
+	/* background: red; */
 	height: 45px;
 	position: relative
 }
@@ -121,8 +121,9 @@
 }
 .body-content p{
 	font-family: Georgia, Arial, Helvetica;
-	font-size: 14px;
+	font-size: 15px; /* org 14 YWB */
 	line-height: 19px;
+        color: #000000; /* added YWB */
 }
 .view-also-read .views-row .views-field-created .field-content{
 	color: #ed1a3b;
