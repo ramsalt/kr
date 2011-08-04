@@ -56,13 +56,13 @@ h2 {
   font-size: 1.4em;
   font-family: Georgia, "Times New Roman", Times, serif; 
   letter-spacing: .05em;
-  font-style: italic;
-  letter-spacing: -0.02em;
+  /*font-style: italic;*/
+  /*letter-spacing: -0.02em;*/
   margin: 0 0 10px 0;
   color: #000;
   padding: 1em 0 .5em 0;
-  background: url(../images/bkg/bg-h2.png) repeat-x top;
-  border-bottom: dotted 1px #a8a8a8;
+ /* background: url(../images/bkg/bg-h2.png) repeat-x top;*/
+  /*border-bottom: dotted 1px #a8a8a8;*/
 }
 
 h2:after { 
