@@ -200,6 +200,7 @@ body .featuredarticle .views-field-comment-count a{
 }
 .view-display-id-block_3 .feature_bilde{
 	background: #000000;
+	position: relative;
 }
 .view-display-id-block_3 .views-field-field-main-image-data{
 	padding-bottom: 10px;
