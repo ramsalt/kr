@@ -97,7 +97,7 @@
 }
 .fakta ul, .fakta ol{
 	margin: 0 0 0 15px;
-	padding: 0 0 0 5px;
+	padding: 0 4px 0 5px;
 }
 .fakta ul li {
 
@@ -109,6 +109,7 @@
     color: #FFFFFF;
     float: left;
     padding: 6px 5px;
+    margin-bottom: 12px;
 	width: 170px;
 }
 .ingress{
