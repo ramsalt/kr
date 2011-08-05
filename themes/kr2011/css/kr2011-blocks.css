@@ -60,3 +60,7 @@ body #wrapper .block div.item-list li.views-row .views-field-title a{
 	padding: 5px 5px 5px 9px;
 	font-style: normal;
 }
+#block-openx-2{
+	float: left;
+	clear: none;
+}
