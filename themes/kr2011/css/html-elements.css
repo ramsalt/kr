@@ -136,7 +136,7 @@ ul li, ol li{
   padding: 0;
   margin: 5px 0;
 }
-.content ul li, .content ol li {
+.node .content ul li, .node .content ol li {
   list-style-position: outside;
   padding: 0;
   margin: 10px 0px 10px 10px;
