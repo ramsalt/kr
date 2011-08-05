@@ -286,6 +286,14 @@ function kr2011_preprocess_node(&$vars){
 			$vars['ingress']=1;
 			$vars['ingress_value']=$vars['field_teaser'][0]['safe'];
 		}
+    foreach($vars['field_sitat'] as $sitatlinje){
+      $sitater .= '<div class="sitat-line"><span>'.$sitatlinje['value'].'</span></div>';
+      if(strlen($sitatlinje['value'])>2){
+        $vars['sitat']=1;
+      }
+    }
+    $vars['sitat_content']='<div class="sitat-wrapper">'.$sitater.'</div>';
+    
     $updated = format_date($vars['node']->changed, 'medium');
     if($vars['node']->changed != $vars['node']->created){
       $vars['node_updated_rdfa'] = _openpublish_get_rdfa_date($vars['node']->changed, $updated);

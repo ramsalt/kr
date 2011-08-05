@@ -54,6 +54,7 @@
     </div><!-- /.main-image -->
   <?php endif; ?>
   <?php if ($fakta): ?><div class="fakta"><span class="faktatittel">Fakta</span><?php print $fakta; ?></div><?php endif; ?>
+  <?php if ($sitat){ print $sitat_content; } ?>
   <div property="dc:description"><?php print $body; ?></div>
   
   <?php if ($documentcloud_doc): ?>

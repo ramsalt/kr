@@ -45,6 +45,7 @@ Ha en fin dag!
   <?php endif; ?>
   <!--[if gte IE 6]><?php print openpublish_get_ie_styles(); ?><![endif]-->  
   <!--[if IE 6]><?php print openpublish_get_ie6_styles(); ?><![endif]-->
+  <link href="http://cloud.webtype.com/css/7e0250ce-8821-4a64-958c-515d184ac628.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body <?php print openpublish_body_classes($left, $right, $body_classes); ?> >
