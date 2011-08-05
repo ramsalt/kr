@@ -66,7 +66,7 @@ h2 {
 }
 
 h2:after { 
-  content: "  »";
+  /* content: "  »"; */
   font-style: normal;
   color: #760c29;
   
