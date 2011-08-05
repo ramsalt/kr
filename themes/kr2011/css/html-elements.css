@@ -133,9 +133,9 @@ ol, ul {
 }
 
 ul li, ol li {
-  list-style-position: inside;
+  list-style-position: outside;
   padding: 0;
-  margin: 5px 0;
+  margin: 10px 0px 10px 10px;
 }
 
 label {

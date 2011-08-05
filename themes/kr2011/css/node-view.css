@@ -174,3 +174,14 @@
 .node-type-job h1{
 	font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
 }
+.node-type-job .body-content .field-field-teaser .field-item, .node-type-job .body-content .field-field-teaser .field-item p{
+    font-style: italic;
+    font-weight: 500;
+}
+.node-type-job .body-content .field-field-job-utlyser .field-item{
+	background: none;
+	font-size: 18px;
+	margin: 0 0 15px 0;
+	padding: 0;
+	font-family: Helvetica,Arial,"Nimbus Sans L",sans-serif;
+}
