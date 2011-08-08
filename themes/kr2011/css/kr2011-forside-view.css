@@ -13,7 +13,7 @@
 	background: #dae2e7;
 }
 .front-page .block.block-views .content .view-articles.view-id-articles .views-field-title h2, .front-page .block.block-views .content .view-articles.view-id-articles .views-field-title h2 a{
-	font-family: "Publico Headline";
+	font-family: "Publico Headline",Georgia,"Times New Roman",Times,serif;
 }
 #block-views-articles-block_2 .views-field-title{
 	padding-top: 10px;
