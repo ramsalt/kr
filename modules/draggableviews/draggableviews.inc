@@ -677,6 +677,7 @@ function _draggableviews_save_hierarchy($info) {
     $value   = $prop['order'][0];
     $handler = $info['order']['field']['handler'];
     $handler->save($nid, $value);
+    drupal_set_message($nid);
   }
 }
 
