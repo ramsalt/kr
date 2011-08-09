@@ -59,7 +59,8 @@ padding: 1em;
     color: gray;
     font-size: 0.9em;
     clear: both;
-    float: left;
+    
+    display: block;
 }
 
 .section-date-author {
