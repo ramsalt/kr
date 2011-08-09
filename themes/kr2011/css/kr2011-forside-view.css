@@ -256,7 +256,8 @@ body .featuredarticle .views-field-comment-count a{
     clear: none;
     float: right;
     margin: 0;
-    padding-right: 9px;
+    padding-left: 9px;
+    border-left: 1px solid #89A0AB;
     width: 280px;
 }
 #block-views-Kommentarutdrag-block_2{
