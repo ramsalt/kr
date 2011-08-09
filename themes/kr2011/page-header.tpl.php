@@ -39,7 +39,6 @@ Ha en fin dag!
   <title><?php print $head_title ?></title>
   <?php print $op_head; ?>
   <?php print $styles ?>
-  <?php print $scripts ?>
   <?php if ($is_front): ?>
       <meta http-equiv="refresh" content="600" />
   <?php endif; ?>

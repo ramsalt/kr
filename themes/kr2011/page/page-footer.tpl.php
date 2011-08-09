@@ -29,6 +29,7 @@
     
   </div> <!-- /#outer-wrapper -->
   <!-- /layout -->
+  <?php print $scripts ?>
   <?php print $closure ?>
 </body>
 </html>
