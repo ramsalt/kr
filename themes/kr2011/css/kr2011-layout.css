@@ -1,3 +1,10 @@
+#sidebar-left {
+    border-right: 1px solid #BECCD3;
+    float: left;
+    margin-left: 10px;
+    padding-right: 9px;
+    width: 180px;
+}
 body #wrapper #logo-area{
 	background: url("../images/spirite1.png") repeat-x scroll 0px -126px transparent;
 	height: 100px;
