@@ -41,7 +41,7 @@ font-size: 2em;      12px x 2    = 24px
 body.front-page #sidebar-left {
     border-right: 1px solid #BECCD3;
     float: left;
-    margin-left: 10px;
+    /*margin-left: 10px;*/
     padding-right: 9px;
     width: 180px;
 }
@@ -96,7 +96,7 @@ body.sidebars.node-view-page #center{
 	border-right: 1px solid #7e7e7a;
   	float: left;
   	width: 180px;
-  	margin-right: 19px;
+  	/*margin-right: 19px;*/
   	padding-left: 20px;
   	padding-top: 10px;
 }
