@@ -274,6 +274,9 @@ body a.edit-forsiderekkefolge {
     font-family: "Publico Headline";
     font-size: 24px;
 }
+.view-Kommentarutdrag .view-content .views-field-field-sitat-value a:hover{
+	text-decoration: none;
+}
 .view-Kommentarutdrag .views-field-field-op-author-nid,
 .view-Kommentarutdrag .views-field-view-node{
 	float: right;
@@ -290,3 +293,4 @@ body a.edit-forsiderekkefolge {
 .view-Kommentarutdrag .view-content .field-content a{
 	color: #999999;
 }
+
