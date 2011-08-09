@@ -17,7 +17,31 @@ padding: 1em;
 #top-search-button {
     padding-right: 2em;
 }
- #draggableview_articles_1 h2{
+.fagpresse{
+    float: left;
+    padding-top: 10px;
+    position: relative;
+}
+.fagpresse h3{
+	color: #FFFFFF;
+	margin: 10px 0 0;
+}
+.fagpresse span{
+    color: #FFFFFF;
+    font-size: 85%;
+}
+.fagpresse img{
+	border: 1px solid #CCCCCC;
+    float: left;
+    height: 73px;
+    margin-right: 10px;
+    width: auto;
+}
+.fagpresse a{
+	color: #FFFFFF;
+	font-size: 13px;
+}
+#draggableview_articles_1 h2{
 	background: none;
 	font-size: 14px;
 	border: none;
