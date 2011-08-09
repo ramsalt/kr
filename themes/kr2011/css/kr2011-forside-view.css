@@ -256,3 +256,9 @@ body .featuredarticle .views-field-comment-count a{
 body a.edit-forsiderekkefolge {
     text-decoration: underline;
 }
+
+.view-Kommentarutdrag .view-content .views-field-field-sitat-value .field-content{
+    color: #8CA0AA;
+    font-family: "Publico Headline";
+    font-size: 24px;
+}
