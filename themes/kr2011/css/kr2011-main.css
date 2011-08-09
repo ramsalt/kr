@@ -58,6 +58,8 @@ padding: 1em;
 .block-openx a:link{
     color: gray;
     font-size: 0.9em;
+    clear: both;
+    float: left;
 }
 
 .section-date-author {
