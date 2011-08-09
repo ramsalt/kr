@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   margin: .5em 0;
-  font-family: /*"Publico Headline", */Georgia, "Times New Roman", Times, serif;
+  font-family: "Publico Headline", Georgia, "Times New Roman", Times, serif; 
   font-size: 2.5em;
   color: #000;
   font-weight: normal;
