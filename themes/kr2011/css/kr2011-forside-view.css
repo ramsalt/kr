@@ -275,7 +275,7 @@ body a.edit-forsiderekkefolge {
     font-size: 24px;
 }
 .view-Kommentarutdrag .view-content .views-field-field-sitat-value a:hover{
-	text-decoration: none;
+	text-decoration: underline;
 }
 .view-Kommentarutdrag .views-field-field-op-author-nid,
 .view-Kommentarutdrag .views-field-view-node{
