@@ -48,7 +48,7 @@ $.fn.extend({
 			
 			// bind events to this element
 			$this
-				.bind('keypress', doCount)
+				.bind('keyup', doCount)
 				.bind('focus paste', function(){setTimeout(doCount, 10);})
 				.bind('blur', function(){jqEasyCounterMsg.stop().fadeTo( 'fast', 0);return false;});
 			
