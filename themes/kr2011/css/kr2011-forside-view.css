@@ -248,10 +248,20 @@ body .featuredarticle .views-field-comment-count a{
 #block-views-articles-block_6 .views-row.views-row-odd{
 	clear: left;
 	margin-right: 9px;
-
 }
 #block-block-6{
 	border-bottom: 10px solid #003663;
+}
+#block-views-articles-block_7 {
+    clear: none;
+    float: right;
+    margin: 0;
+    padding-right: 9px;
+    width: 280px;
+}
+#block-views-Kommentarutdrag-block_2{
+	width: 280px;
+	float: left;
 }
 body a.edit-forsiderekkefolge {
     text-decoration: underline;
