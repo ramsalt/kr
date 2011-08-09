@@ -266,6 +266,7 @@ body a.edit-forsiderekkefolge {
 .view-Kommentarutdrag .views-field-view-node{
 	float: right;
 	padding-bottom: 4px;
+	clear: both;
 }
 .view-Kommentarutdrag .views-field-view-node a{
     background: url("../images/spirite1.png") no-repeat scroll 100% -40px transparent;
