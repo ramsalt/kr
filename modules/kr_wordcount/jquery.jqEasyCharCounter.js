@@ -48,9 +48,9 @@ $.fn.extend({
 			
 			// bind events to this element
 			$this
-				.bind('keyup', function(){setTimeout(doCount, 10);})
-				.bind('focus paste', function(){setTimeout(doCount, 10);})
-				.bind('blur', function(){jqEasyCounterMsg.stop().fadeTo( 'fast', 0);return false;});
+				.bind('blur', function(){setTimeout(doCount, 10);})
+				.bind('focus paste', function(){setTimeout(doCount, 10);});
+				//.bind('blur', function(){jqEasyCounterMsg.stop().fadeTo( 'fast', 0);return false;});
 			
 			function doCount(){
 				var val = $this.val(),
