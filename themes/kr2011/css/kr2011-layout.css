@@ -1,7 +1,7 @@
 #sidebar-left {
     border-right: 1px solid #BECCD3;
     float: left;
-    margin-left: 10px;
+    /*margin-left: 10px;*/
     padding-right: 9px;
     width: 180px;
 }
