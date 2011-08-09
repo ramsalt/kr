@@ -679,7 +679,6 @@ function _draggableviews_save_hierarchy($info) {
     $handler->save($nid, $value);
     
     if(function_exists('expire_cache_derivative')){
-      drupal_set_message($nid);
       $paths['front'] = '<front>';
       expire_cache_derivative($paths);
     }
