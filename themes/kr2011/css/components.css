@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
-/* Handy font size definitions 
-font-size: .833em;   12px x .833   = 10px 
-font-size: .917em;   12px x .917   = 11px 
-font-size: 1em;      12px x 1      = 12px 
-font-size: 1.083em;  12px x 1.083  = 13px 
+/* Handy font size definitions
+font-size: .833em;   12px x .833   = 10px
+font-size: .917em;   12px x .917   = 11px
+font-size: 1em;      12px x 1      = 12px
+font-size: 1.083em;  12px x 1.083  = 13px
 font-size: 1.167em;  12px x 1.167  = 14px
 font-size: 1.25em;   12px x 1.125  = 15px
 font-size: 1.417em;  12px x 1.417  = 17px
@@ -21,9 +21,9 @@ font-size: 2em;      12px x 2      = 24px
     margin-bottom: 2em;
 }
 
-div.status { 
-  border-color: #c7f2c8; 
-  color: #33a333; 
+div.status {
+  border-color: #c7f2c8;
+  color: #33a333;
 }
 
 
@@ -37,7 +37,7 @@ div.status {
 }
 
 #nav ul.primary-links {
-  
+
   font-weight: 700;
   padding: 0;
 }
@@ -95,52 +95,52 @@ div.status {
 /* Top Utility Menu */
 
 #top-menu ul {
-  width: 400px; 
-  float: right; 
+  width: 400px;
+  float: right;
   text-align: right;}
 
 
-#top-menu { 
+#top-menu {
   padding-top: 5px;
   padding-bottom: 5px;
-  font-family: Arial, Helvetica, sans-serif; 
+  font-family: Arial, Helvetica, sans-serif;
   border-bottom: 1px dotted #b5b5b5;
-  border-top: 7px solid #780f2c;   
+  border-top: 7px solid #780f2c;
   }
-  
+
 #top-menu ul#login-menu  {
   font-family: Georgia, Times, serif;
    font-size: 12px;
   color: #666;
-  width: 250px; 
-  float: left; 
-  margin: 0; 
+  width: 250px;
+  float: left;
+  margin: 0;
   padding: 0;
   float: left;
   text-align: left;
   }
-  
+
 
 ul#login-menu li {
-  list-style-type: none; 
-  display: inline; 
+  list-style-type: none;
+  display: inline;
   padding: 0px 9px 0px 4px;
-  margin: 2px 0; 
+  margin: 2px 0;
   margin: 0;}
 
 ul#login-menu li.hello {
-  border-right: 1px solid #e5e5e5; 
+  border-right: 1px solid #e5e5e5;
   font-style: italic;}
-  
+
 ul#login-menu li a {color: #780f2c;}
-  
+
 
 #top-menu .menu li a {
-  color: #666; 
+  color: #666;
 }
 
 #top-menu .menu li {
-  padding: 0 .5em; 
+  padding: 0 .5em;
   margin: 0;
 }
 
@@ -150,7 +150,7 @@ ul#login-menu li a {color: #780f2c;}
   font-size: .9em;
   margin: 0 0 15px 0;
   padding: 5px;
-  font-family: Arial, Helvetica, sans-serif;  
+  font-family: Arial, Helvetica, sans-serif;
   border-bottom:1px dotted #A8A8A8;
 }
 
@@ -242,7 +242,7 @@ span.submitted {
   width: 50%;
   float: left;
   padding: 1em 0;
-} 
+}
 
 #comments h2.comments:after {
   content: "";
@@ -309,7 +309,7 @@ span.submitted {
    text-transform: uppercase;
   padding: 8px;
   width: 120px;
-  font-size: .833em; 
+  font-size: .833em;
   text-align: center;
   letter-spacing: 0.04em;
 }
@@ -318,7 +318,7 @@ span.submitted {
   text-decoration: none;
   background: #000;
   }
-  
+
 .comment h3 a {background: none;}
 
 .comment ul.links li {
@@ -352,7 +352,7 @@ span.submitted {
 .body-content p a {
   text-decoration: underline;
 }
-  
+
 .body-content p a:hover {
   text-decoration: none;
 }
@@ -388,18 +388,18 @@ span.submitted {
   font-weight: bold;
   font-style: italic;
     }
-    
-.body-content .user-profile h3:after { 
+
+.body-content .user-profile h3:after {
   content: "  »";
   font-style: normal;
-  color: #760c29;  
+  color: #760c29;
   }
 
-    
+
 .body-content .user-profile .user-name {
   margin: 15px 0 0 0;
   font-weight: normal;
-  font-size: 1.2em; 
+  font-size: 1.2em;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-style: italic;
@@ -409,7 +409,7 @@ span.submitted {
   color:#666;
   width:400px;
   margin: 2px 0;
-  font-size: .917em; 
+  font-size: .917em;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -422,7 +422,7 @@ span.submitted {
   font-style: italic;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.03em;
-     font-size: .917em; 
+     font-size: .917em;
     color: #666;
   }
 
@@ -430,7 +430,7 @@ span.submitted {
   margin: 5px 0 12px 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: .917em;
-  font-style: italic; 
+  font-style: italic;
 }
 
 .views-field-item-title-url {
@@ -466,7 +466,7 @@ span.submitted {
 #author-page #author-photo img {
   border: 1px solid #DDDDDD;
   padding: 3px;
-  background: #FFF;  
+  background: #FFF;
 }
 
 
@@ -532,12 +532,12 @@ span.submitted {
 body.front-page .views-field-title {
   font-family: Georgia, "Times New Roman", Times, serif;
   margin: 0 15px 5px 0;
-  font-size: 1.25em;  
+  font-size: 1.25em;
 }
 
 .topichubs-layout-wrapper .views-field-title {
   margin: 0 15px 5px 0;
-  font-size: 1em;  
+  font-size: 1em;
   font-weight: bold;
 }
 
@@ -548,7 +548,7 @@ body.front-page .views-field-title {
   }
 
 body.front-page #sidebar-left .view-dom-id-1 .views-field-title {
-  font-size: 1.833em; 
+  font-size: 1.833em;
 }
 
 #block-views-articles-block_2  .views-field-title {
@@ -556,7 +556,7 @@ body.front-page #sidebar-left .view-dom-id-1 .views-field-title {
   font-family: Georgia, "Times New Roman", Times, serif;
   margin: 0 15px 5px 0;
   font-size: 1.833em;
-  
+
 }
 
 body.front-page #sidebar-left .field-content p {margin-right: 15px;}
@@ -593,7 +593,7 @@ padding-left:12px;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 0 12px 0;
   font-weight: normal;
-  font-size: 1.25em; 
+  font-size: 1.25em;
   color: #808285;
 }
 
@@ -611,11 +611,11 @@ padding-left:12px;
 
 .views-field-type {
   text-transform: uppercase;
-  font-size: .833em; 
+  font-size: .833em;
   margin: 5px 0 5px 0;
  color: #4A4A4A;
   font-family: Arial, Helvetica, sans-serif;
-  
+
 }
 
 .field-type-nodereference {margin: 30px 0;}
@@ -773,7 +773,7 @@ div.addthis_toolbox {
 }
 
 #search_box_top {
-  padding-top: 45px;
+  padding-top: 40px;
   width: 280px;
   float: right;
 }
@@ -786,12 +786,12 @@ div#search .form-item {
 
 div#search .form-text {
   padding: 5px 3px 3px 3px;
-  width: 180px; 
+  width: 180px;
   color: #808285;
   border: 1px solid #dadada;
   font-size: 14px;
   height: 17px;
-  margin-right: 3px;  
+  margin-right: 3px;
 }
 
 div#search .form-submit {
@@ -831,7 +831,7 @@ input.form-submit, a.button {
   margin-bottom: 24px;
   font-family: Arial, Helvetica, sans-serif;
   text-transform:  uppercase;
-   
+
 }
 
 #sidebar-right .item-list li {
@@ -841,8 +841,8 @@ input.form-submit, a.button {
 }
 
 #block-block-4, #block-block-5 {
-  text-align: center; 
-  background: #efefef;  
+  text-align: center;
+  background: #efefef;
   padding: 4px 0 0 0;
   margin: 10px 0;
 }
@@ -865,7 +865,7 @@ input.form-submit, a.button {
 }
 #block-views-most_commented_articles-block_1,
 #block-openpublish_popular_terms-0, #block-views-most_viewed_by_node_type-block,
-#block-views-most_commented_blogs-block_1, #block-openpublish_popular_terms-1, 
+#block-views-most_commented_blogs-block_1, #block-openpublish_popular_terms-1,
 #block-morelikethis-taxonomy, #block-morelikethis-flickr{
   margin: 10px 0;
   background: #FFF;
@@ -875,9 +875,9 @@ input.form-submit, a.button {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.topichubs-layout-wrapper .author img { 
-  margin-right: 10px; 
-  margin-bottom: 5px; 
+.topichubs-layout-wrapper .author img {
+  margin-right: 10px;
+  margin-bottom: 5px;
 }
 
 .mlt-flickr li{
@@ -886,7 +886,7 @@ input.form-submit, a.button {
 
 
 .sidebar h2 {
-  background-image: none; 
+  background-image: none;
    margin: 0;
   color: #000;
   padding: 0 0 .5em 0;
@@ -895,7 +895,7 @@ input.form-submit, a.button {
 }
 
 .more-link {
-  font-size: .917em; 
+  font-size: .917em;
  font-family: Arial, helvetica, sans-serif;
  margin-top: 15px;
 }
@@ -913,7 +913,7 @@ input.form-submit, a.button {
 
 
 #footer-links-wrapper {
- float: left; 
+ float: left;
   width: 700px;
 }
 
@@ -942,7 +942,7 @@ input.form-submit, a.button {
 
 #footer-menu-secondary ul.menu li {
   margin: 0 1px;
-  font-size: .833em; 
+  font-size: .833em;
 }
 
 #footer-menu-secondary li a.active {text-decoration: none;}
@@ -964,12 +964,12 @@ input.form-submit, a.button {
 }
 
 
-#footer-menu-secondary { 
+#footer-menu-secondary {
 font-family: Arial, helvetica, sans-serif;
 clear: both;
   }
-  
-#footer-menu-secondary li a{  
+
+#footer-menu-secondary li a{
   color: #808285
 }
 
@@ -995,12 +995,12 @@ body.node-view-page div#drupal-control-bar li {
 }
 
 body.node-view-page #tabs-wrapper div#drupal-control-bar li.active a {
-  text-decoration: none; 
+  text-decoration: none;
   font-weight: bold;
-  color: #FFF;  
+  color: #FFF;
   border: none;
   background: #000;
-  
+
 }
 
 body.node-view-page #tabs-wrapper div#drupal-control-bar li a {
@@ -1011,7 +1011,7 @@ body.node-view-page #tabs-wrapper div#drupal-control-bar li a {
 #tabs-wrapper div#drupal-control-bar li {list-style-type: none; float: left;}
 
 #tabs-wrapper div#drupal-control-bar li a {
-  display: block;  
+  display: block;
   font-family: Arial, Helvetica, sans-serif;
   padding: 5px 10px 2px 10px;
   font-size: .9em;
@@ -1020,15 +1020,15 @@ body.node-view-page #tabs-wrapper div#drupal-control-bar li a {
   border: 1px solid #CCC;
   border-bottom: none;
   }
-  
+
 #tabs-wrapper div#drupal-control-bar li a:hover {
  text-decoration: none;
   }
-  
+
 #tabs-wrapper div#drupal-control-bar li.active a {
-  color: #000; 
-  background: #f6f6f6; 
-  font-weight: bold; 
+  color: #000;
+  background: #f6f6f6;
+  font-weight: bold;
   text-decoration: none;
   }
 
@@ -1061,7 +1061,7 @@ div.tweets-pulled-listing {
 }
 
 ul.tweets-pulled-listing {
-  margin: 0; 
+  margin: 0;
   padding: 0;
 }
 
@@ -1078,7 +1078,7 @@ div.tweets-pulled-listing a {
 
 div.tweets-pulled-listing ul {
   font-family: Arial, helvetica, sans-serif;
-  font-size: .917em;  
+  font-size: .917em;
   background: none;
   border: none;
 }
@@ -1097,8 +1097,8 @@ div.tweets-pulled-listing .tweet-time a {
 .views-field-title-1 {
   color: #808285;
   font-family: Arial, helvetica, sans-serif;
-  text-transform: uppercase; 
-  font-size: .917em; 
+  text-transform: uppercase;
+  font-size: .917em;
 }
 
 .views-field-title-1 a {color: #808285;}
@@ -1130,11 +1130,11 @@ div.tweets-pulled-listing {
   color: #000;
 }
 #block-twitter_pull-op_tweets div.tweets-pulled-listing {
-  margin: 0; 
+  margin: 0;
 }
 
 ul.tweets-pulled-listing {
-  margin: 0; 
+  margin: 0;
   padding: 0;
 }
 
@@ -1151,7 +1151,7 @@ div.tweets-pulled-listing a {
 
 div.tweets-pulled-listing ul {
   font-family: Arial, helvetica, sans-serif;
-  font-size: .917em;  
+  font-size: .917em;
   background: none;
   border: none;
 }
@@ -1170,16 +1170,16 @@ div.tweets-pulled-listing .tweet-time a {
 .views-field-title-1 {
   color: #808285;
   font-family: Arial, helvetica, sans-serif;
-  text-transform: uppercase; 
-  font-size: .917em; 
+  text-transform: uppercase;
+  font-size: .917em;
   margin: 0 0 4px 0;
 }
 
 .views-field-title-1 a {color: #808285;}
 
 /*#block-views-most_viewed_by_taxonomy-block h3 {
-  background: #760c29; 
-  text-transform: uppercase; 
+  background: #760c29;
+  text-transform: uppercase;
   font-size: .9em;
   letter-spacing: 0.03em;
   font-weight: normal;
@@ -1193,13 +1193,13 @@ div.tweets-pulled-listing .tweet-time a {
 
 
 .search-results dt.title {
-  font-size:1.1em; 
+  font-size:1.1em;
   margin: 10px 0 8px 0;
   font-weight: bold;
   }
 
 .search-results dd {
-  margin: 0 0 0 0; 
+  margin: 0 0 0 0;
   padding: 0 0 20px 0;
   border-bottom: 1px solid #CCC;
   }
@@ -1208,14 +1208,14 @@ form#search-form {border-top: 1px solid #CCC; margin: 0; padding: 15px 0 0 0;}
 
 
 form#search-form label {
-  width: 160px; 
+  width: 160px;
   font-size: 1em;
   color: #000;
   padding: 8px 0 0 0;
   margin: 0
   font-family: Arial, Helvetica, sans-serif;
   }
-  
+
 p.search-snippet  {
   font-size:1.1em;
   line-height:1.3em;
@@ -1229,9 +1229,9 @@ p.search-snippet  {
   font-size: 1em;
   font-style: italic;
 }
-  
-.search-results p.search-info a {font-weight: bold; text-decoration: underline;}  
-  
+
+.search-results p.search-info a {font-weight: bold; text-decoration: underline;}
+
 input.form-text {
   border:1px solid #DADADA;
   color:#808285;
@@ -1257,19 +1257,19 @@ fieldset.search-advanced {
 fieldset.search-advanced legend {
   font-size: 1.3em;
   }
-  
-  
+
+
 fieldset.search-advanced  .action input.form-submit {
   margin: 30px 0 20px 33px;
-  }  
-  
+  }
+
 form#search-form .fieldset-wrapper label {font-size: 1em; margin-left: 20px;}
 
 form#search-form .fieldset-wrapper select#edit-category {
-  font-size: .9em; 
-  width: 200px; 
+  font-size: .9em;
+  width: 200px;
   padding: 2px;
-}  
+}
 
 #op-under-content {margin: 35px 0 0 0;}
 
@@ -1288,8 +1288,8 @@ body.node-type-audio div.field-field-op-audio-thumbnail {
 }
 
 body.node-type-audio div.field-field-op-audio-thumbnail img {
-  vertical-align: bottom; 
-  margin-top: .5em;  
+  vertical-align: bottom;
+  margin-top: .5em;
 }
 
 body.node-type-audio .body-content p {
@@ -1301,37 +1301,37 @@ body.node-type-audio .body-content p {
 
 
 body.admin-vertical .help {
-  font-family: Arial, Helvetica, sans-serif; 
+  font-family: Arial, Helvetica, sans-serif;
   margin-top: 25px;
-  padding: 15px 88px 15px 20px; 
+  padding: 15px 88px 15px 20px;
 }
 
 body.admin-vertical .help p {font-size: 1em; line-height: 1.5em;}
 
 body.admin-vertical .user-profile .user-name {
-  font-family: Arial, Helvetica, sans-serif; 
-  font-size: 1.2em; 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
   font-weight: normal;
 }
 
 body.admin-vertical ul.secondary {
-  clear: both; 
-  margin: 20px 0 0 0; 
+  clear: both;
+  margin: 20px 0 0 0;
   border: none;
 }
 
 body.admin-vertical ul.secondary li {
-  margin: 20px 0 0 0; 
+  margin: 20px 0 0 0;
   font-size: .833em;
 }
 
 body.admin-vertical ul.secondary li a {
-  background: #FFF; 
+  background: #FFF;
   padding: 2px;
 }
 
 body.admin-vertical #tabs-wrapper ul.secondary li.active a {
-  background: #000; 
+  background: #000;
   color: #FFF;
 }
 
@@ -1340,9 +1340,9 @@ form#user-login, form#user-pass, form#user-register {margin: 25px 0 0 0; padding
 .form-required {color: #780F2C; font-size: 1.3em;}
 
 form .description {
-  color: #666; 
-  font-family: Arial, Helvetica, sans-serif; 
-  font-style: italic; 
+  color: #666;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
   margin-top: -2px;}
 
 form#user-login .form-item,
@@ -1357,7 +1357,7 @@ form#user-login li.openid-link {
 }
 
 form#user-login li.openid-link a {
-  background-position: 0 -2px; 
+  background-position: 0 -2px;
   padding: 1px 20px 3px 20px;
   color: #780F2C;
   }
@@ -1393,7 +1393,7 @@ cursor: auto;
 
 .premium-message p{
   font-family: Arial, Helvetica, sans-serif;
-  font-size: .917em;  
+  font-size: .917em;
   line-height: normal;
    padding: 5px 0 5px 0;
   margin: 0 10px 0 0;
@@ -1401,10 +1401,10 @@ cursor: auto;
   color: #7785ab;
   font-weight: bold;
   }
-  
+
 
 .views-field-subject {
-  font-size: 1.167em; 
+  font-size: 1.167em;
 }
 
 .box h2 {background: none; font-size: 1em; color: #666;}

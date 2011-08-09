@@ -105,7 +105,25 @@ Ha en fin dag!
       <span><a href="<?php print url('node/81011'); ?>" title="Kommunal Rapport vant fagpresseprisen" alt="Kommunal Rapport vant fagpresseprisen">Norges beste fagblad!</a></span>
   </div>    
     <div id="search_box_top" class="clearfix">
-      <?php if ($search_box): ?><?php print $search_box; ?><?php endif; ?>
+      <?php /*if ($search_box): ?><?php print $search_box; ?><?php endif;*/ ?>
+
+        <form id="views-exposed-form-search-sorted-by-time-page-1" method="get" accept-charset="UTF-8" action="/sok">
+        <div><div class="view-search-sorted-by-time views-exposed-form">
+          <div class="views-exposed-widgets clear-block">
+                  <div class="views-exposed-widget">
+                                <div class="views-widget">
+                  <div id="edit-keys-wrapper" class="form-item">
+         <input type="text" class="form-text" title="Skriv inn ønskede søkekriterier." value="" size="15" id="edit-keys" name="keys" maxlength="128">
+        </div>
+                </div>
+              </div>
+                <div class="views-exposed-widget">
+              <input type="submit" class="form-submit" value="Søk" id="edit-submit-search-sorted-by-time">
+            </div>
+          </div>
+        </div>
+        </div></form>
+
     </div>
 
   </div><!-- #logo-area -->        
