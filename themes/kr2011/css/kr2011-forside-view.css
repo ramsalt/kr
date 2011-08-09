@@ -262,3 +262,18 @@ body a.edit-forsiderekkefolge {
     font-family: "Publico Headline";
     font-size: 24px;
 }
+.view-Kommentarutdrag .views-field-field-op-author-nid,
+.view-Kommentarutdrag .views-field-view-node{
+	float: right;
+	padding-bottom: 4px;
+}
+.view-Kommentarutdrag .views-field-view-node a{
+    background: url("../images/spirite1.png") no-repeat scroll 100% -40px transparent;
+    float: right;
+    height: 14px;
+    padding-right: 20px;
+    padding-top: 2px;
+}
+.view-Kommentarutdrag .view-content .field-content a{
+	color: #999999;
+}
