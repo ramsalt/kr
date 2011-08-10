@@ -13,7 +13,7 @@
 	background: #dae2e7;
 }
 .front-page .block.block-views .content .view-articles.view-id-articles .views-field-title h2, .front-page .block.block-views .content .view-articles.view-id-articles .views-field-title h2 a{
-	font-family: "Publico Headline",Georgia,"Times New Roman",Times,serif;
+	font-family: /*"Publico Headline",*/Georgia,"Times New Roman",Times,serif;
 }
 #block-views-articles-block_2 .views-field-title{
 	padding-top: 10px;
@@ -271,7 +271,7 @@ body a.edit-forsiderekkefolge {
 
 .view-Kommentarutdrag .view-content .views-field-field-sitat-value .field-content{
     color: #8CA0AA;
-    font-family: "Publico Headline", Georgia, "Times New Roman", Times, serif;
+    font-family: /*"Publico Headline",*/ Georgia, "Times New Roman", Times, serif;
     font-size: 24px;
 }
 .view-Kommentarutdrag .view-content .views-field-field-sitat-value a:hover{
