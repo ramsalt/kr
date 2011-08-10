@@ -141,7 +141,7 @@ body .featuredarticle .views-field-comment-count a{
 .totilfire .views-separator{
 	margin: 0px;
 	width: none;
-	height: 0px;
+	height: none;
 	visibility: hidden;
 	clear: none;
 	border: none;
