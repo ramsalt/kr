@@ -4,6 +4,7 @@
     /*margin-left: 10px;*/
     padding-right: 9px;
     width: 180px;
+    overflow: hidden;
 }
 body #wrapper #logo-area{
 	background: url("../images/spirite1.png") repeat-x scroll 0px -126px transparent;
