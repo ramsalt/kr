@@ -64,3 +64,8 @@ body #wrapper .block div.item-list li.views-row .views-field-title a{
 	float: left;
 	clear: none;
 }
+
+#block-views-jobs-block_1 .item-list ul{
+	width: 164px;
+	
+}
