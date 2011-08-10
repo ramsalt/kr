@@ -235,10 +235,10 @@ body .featuredarticle .views-field-comment-count a{
 	
 }
 #block-views-articles-block_5 .views-row{
-	width: 280px;
+	width: 275px;
 	float: left;
     padding-bottom: 5px;
-	margin-left: 10px;
+	
 }
 #block-views-articles-block_5 .views-field-field-main-image-fid, #block-views-articles-block_5 .views-field-field-thumbnail-image-fid, #block-views-articles-block_6 .views-field-field-main-image-fid, #block-views-articles-block_6 .views-field-field-thumbnail-image-fid{
 	float: right;
