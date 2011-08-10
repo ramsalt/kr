@@ -152,4 +152,10 @@ label {
 
 input, select {margin: 5px 0;}
 
+.view-id-popular.view-display-id-page.view-dom-id-1 .views-field-title {
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 1px 0 5px;
+}
 
