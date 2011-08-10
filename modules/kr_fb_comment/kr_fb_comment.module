@@ -57,5 +57,11 @@ function kr_fb_comment_cron(){
 		_kr_fb_comment_process_node($nid->nid);
 	 	$end=$nid->nid;
 	}
+  $sql=db_query('SELECT * FROM {node_comment_statistics} WHERE nid > 1 ORDER BY nid DESC LIMIT 100');
+  while($nid=db_fetch_object($sql)){
+    _kr_fb_comment_process_node($nid->nid);
+    
+  }  
+  
 	variable_set('kr_fb_comment_nid',$end);
 }
