@@ -198,6 +198,7 @@ body .featuredarticle .views-field-comment-count a{
 	float: left;
 	width: 280px;
 	padding-bottom: 8px;
+	overflow: hidden;
 }
 .view-display-id-block_3 .view-content{
 
