@@ -267,11 +267,13 @@ body .featuredarticle .views-field-comment-count a{
     padding-left: 9px;
     border-left: 1px solid #89A0AB;
     width: 280px;
+    overflow: hidden;
 }
 #block-views-Kommentarutdrag-block_2{
 	width: 280px;
 	float: left;
 	clear: none;
+	overflow: hidden;
 }
 body a.edit-forsiderekkefolge {
     text-decoration: underline;
