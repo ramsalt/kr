@@ -227,6 +227,10 @@ body .featuredarticle .views-field-comment-count a{
 }
 #block-views-articles-block_5{
 	display: inline;
+	width: 275px;
+	padding-left: 10px;
+	overflow: hidden;
+	
 }
 #block-views-articles-block_5 .views-row{
 	width: 280px;
