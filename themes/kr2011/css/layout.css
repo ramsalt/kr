@@ -105,6 +105,7 @@ body.sidebars.node-view-page #center{
   float: right;
   width: 178px;
   padding: 0;
+  overflow: hidden;
 }
 
 .indented {
