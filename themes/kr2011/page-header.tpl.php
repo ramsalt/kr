@@ -43,6 +43,7 @@ Ha en fin dag!
       <meta http-equiv="refresh" content="600" />
   <?php endif; ?>
   <!--[if gte IE 6]><?php print openpublish_get_ie_styles(); ?><![endif]-->  
+  <!--[if gte IE 6]><link type="text/css" rel="stylesheet" media="all" href="<?php print base_path().drupal_get_path('theme', 'kr2011'); ?>/css/ie.css" ><![endif]-->
   <!--[if IE 6]><?php print openpublish_get_ie6_styles(); ?><![endif]-->
   <link href="http://cloud.webtype.com/css/7e0250ce-8821-4a64-958c-515d184ac628.css" rel="stylesheet" type="text/css" />
 </head>
