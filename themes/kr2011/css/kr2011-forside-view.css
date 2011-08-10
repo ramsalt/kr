@@ -130,6 +130,7 @@ body .featuredarticle .views-field-comment-count a{
 .totilfire .views-row{
 	background: none repeat scroll 0 0 #DAE2E7;
 	border-radius: 4px;
+	-moz-border-radius: 4px;
 	padding: 7px;
 	width: 166px;
 	float: left;
@@ -139,7 +140,7 @@ body .featuredarticle .views-field-comment-count a{
 }
 .totilfire .views-separator{
 	margin: 0px;
-	width: 0px;
+	width: none;
 	height: 0px;
 	visibility: hidden;
 	clear: none;
