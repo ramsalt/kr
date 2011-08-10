@@ -117,10 +117,12 @@ function theme_views_slideshow_thumbnailhover_no_display_section($view, $rows, $
             $rendered .= $view->field[$field]->label() . ':';
             $rendered .= '</label>';
           }
+		  
           $rendered .= '<div class="views-content-'. views_css_safe($view->field[$field]->field) .'">';
           $rendered .=  $view->style_plugin->rendered_fields[$count][$field];
           $rendered .= '</div>';
           $rendered .= '</div>';
+		   
         }
       }
     }

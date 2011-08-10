@@ -233,7 +233,7 @@ function fb_social_footer($main = 0){
          cookie: true,
          xfbml: true,
          channelUrl: " . drupal_to_js($channel_url) . ",
-       });
+});
        
        ";
   
