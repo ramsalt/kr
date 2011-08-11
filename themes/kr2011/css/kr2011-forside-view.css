@@ -134,6 +134,7 @@ body .featuredarticle .views-field-comment-count a{
 	padding: 7px;
 	width: 166px;
 	float: left;
+	overflow: hidden;
 }
 .totilfire .views-row-even{
 	margin: 0px 20px;
