@@ -4,6 +4,7 @@
 Drupal.behaviors.run_after_page_loads = function (context) {
 
   set_sidebar_heights();
+  /*
 	$('#sidebar-left').resize(function() {
 	  set_sidebar_heights();
 	});
@@ -13,6 +14,7 @@ Drupal.behaviors.run_after_page_loads = function (context) {
   $('#center').resize(function() {
     set_sidebar_heights();
   });
+  */
 }
 function set_sidebar_heights(){
   var center_height = $('#center').height();
@@ -30,7 +32,7 @@ function set_sidebar_heights(){
       max = sidebar_left_height;
     }
   }
-  
+  max = max + 200;
   $('#sidebar-left').height(max);
   $('#sidebar-right').height(max);
 }
