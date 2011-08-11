@@ -3,7 +3,7 @@
 
 Drupal.behaviors.run_after_page_loads = function (context) {
 
-  set_sidebar_heights();
+ // set_sidebar_heights();
   /*
 	$('#sidebar-left').resize(function() {
 	  set_sidebar_heights();
@@ -32,7 +32,7 @@ function set_sidebar_heights(){
       max = sidebar_left_height;
     }
   }
-  max = max + 300;
+  max = max + 600;
   $('#sidebar-left').height(max);
   $('#sidebar-right').height(max);
 }
