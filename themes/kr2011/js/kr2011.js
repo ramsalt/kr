@@ -32,7 +32,7 @@ function set_sidebar_heights(){
       max = sidebar_left_height;
     }
   }
-  max = max + 200;
+  max = max + 300;
   $('#sidebar-left').height(max);
   $('#sidebar-right').height(max);
 }
