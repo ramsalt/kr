@@ -4,7 +4,15 @@
 Drupal.behaviors.run_after_page_loads = function (context) {
 
   set_sidebar_heights();
-		
+	$('#sidebar-left').resize(function() {
+	  set_sidebar_heights();
+	});
+	$('#sidebar-right').resize(function() {
+    set_sidebar_heights();
+  });
+  $('#center').resize(function() {
+    set_sidebar_heights();
+  });
 }
 function set_sidebar_heights(){
   var center_height = $('#center').height();
