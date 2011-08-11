@@ -10,3 +10,7 @@ body .featuredarticle .views-field-view-node .field-content a{
 .view-articles .views-field-view-node a{
 	margin-right: 10px;
 }
+.totilfire .views-row{
+	margin: 0px;
+	width: 180px;
+}
