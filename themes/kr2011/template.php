@@ -301,7 +301,7 @@ function kr2011_preprocess_node(&$vars){
     
   //  $vars['node_created_rdfa'] = _openpublish_get_rdfa_date($vars['node']->created, $vars['node_created']);
   //  $vars['node_created_rdfa'] .= _openpublish_get_rdfa_date($vars['node']->updated, $updated);
-		drupal_add_js(drupal_get_path('theme', 'kr2011').'/js/kr2011.js');
+		drupal_add_js(drupal_get_path('theme', 'kr2011').'/js/kr2011.js', 'theme', 'footer');
 	//	print_R($vars['node']);
 	}
 	
