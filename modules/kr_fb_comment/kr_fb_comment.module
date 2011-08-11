@@ -78,8 +78,8 @@ function kr_fb_comment_menu(){
 function _kr_add_comment($nid){
   _kr_fb_comment_process_node($nid);
 }
-function kr_fb_comment_init(){
-  if(arg(0)=='node'){
+function kr_fb_comment_fb_social_event_subscribe(){
+
     global $base_url;
     $urlen = $base_url.base_path().'facebook_comment_added/'.arg(1);
     $js = '
@@ -107,7 +107,7 @@ function kr_fb_comment_init(){
   );  
   
   ';
-  drupal_add_js($js, 'inline');
-  }
+  return $js;
+  
   
 }
