@@ -68,3 +68,19 @@ body #wrapper .block div.item-list li.views-row .views-field-title a{
 #block-views-jobs-block_1 .item-list ul{
 	
 }
+#sidebar-left .block .content, #sidebar-right .block .content, #sidebar-left .block .content p, #sidebar-right .block .content p{
+	font-size: 12px;
+}
+#sidebar-left .block h2, #sidebar-right .block h2{
+    background: none repeat scroll 0 0 #8C9FAA;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 13px;
+}
+#sidebar-left .block h2 a, #sidebar-right .block h2 a{
+	font-size: 13px;
+}
+#simplenews-block-form-22 #edit-mail{
+	width: 150px;	
+}
