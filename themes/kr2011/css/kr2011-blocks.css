@@ -78,6 +78,7 @@ body #wrapper .block div.item-list li.views-row .views-field-title a{
     margin: 0;
     padding: 5px 10px;
     font-size: 13px;
+    letter-spacing: normal;
 }
 #sidebar-left .block h2 a, #sidebar-right .block h2 a{
 	font-size: 13px;
