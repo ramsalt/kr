@@ -48,6 +48,7 @@ function _kr_fb_comment_process_node($nid){
 	}
 }
 function kr_fb_comment_cron(){
+/*
 	$start_nid = variable_get('kr_fb_comment_nid', 1);
 	$sql=db_query('SELECT * FROM {node_comment_statistics} WHERE nid > '.$start_nid.' ORDER BY nid LIMIT 25');
     if(mysqli_num_rows($sql)==0){
@@ -64,6 +65,7 @@ function kr_fb_comment_cron(){
   }  
   
 	variable_set('kr_fb_comment_nid',$end);
+*/
 }
 function kr_fb_comment_menu(){
   $items = array();
