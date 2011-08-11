@@ -35,9 +35,12 @@ function kr_import_old_article_callback ($sourceid) {
 	if ($destid1 = $migrate_map = db_result(db_query("SELECT mt.destid1 FROM $map_table mt LEFT JOIN kr_import_articles ka ON ka.krid = mt.sourceid1 WHERE ka.objid = %d", $sourceid))) {
   	// Hurray. We already migrated this content. Go there.
   	watchdog('KR Import', 'Old article id loaded. ID: !id', array('!id'=>$sourceid));
-  	header('Location: ' . kr_import_migrate_build_url($destid1, $method), TRUE, 301);
+		drupal_goto(kr_import_migrate_build_url($destid1, $method), null, null, 301);
 	}
 	
+	drupal_set_message(variable_get('kr_no_source_msg', 'Kommunal Rapport har fått ny publiseringsløsning. Ikke alle gamle linker fungerer. Du er nå videresendt til vår forside.'));
+
+	drupal_goto('', null, null, 301);
 	return 'Source does not exist.';
 }
 
