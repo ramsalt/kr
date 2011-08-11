@@ -72,6 +72,7 @@ body #wrapper .block div.item-list li.views-row .views-field-title a{
 	font-size: 12px;
 }
 #sidebar-left .block h2, #sidebar-right .block h2{
+	font-family: Helvetica,Arial,"Nimbus Sans L",sans-serif;
     background: none repeat scroll 0 0 #8C9FAA;
     color: #FFFFFF;
     margin: 0;
