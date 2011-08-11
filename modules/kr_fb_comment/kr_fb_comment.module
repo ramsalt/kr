@@ -71,6 +71,7 @@ function kr_fb_comment_menu(){
     'type' => MENU_CALLBACK,
     'page callback' => '_kr_add_comment',
     'page arguments' => array(1),
+    'access arguments' => array('access content'), 
   );
   return $items;
 }
