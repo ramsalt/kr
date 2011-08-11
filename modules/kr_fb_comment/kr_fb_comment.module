@@ -65,7 +65,7 @@ function kr_fb_comment_cron(){
   
 	variable_set('kr_fb_comment_nid',$end);
 }
-function kr_fb_menu(){
+function kr_fb_comment_menu(){
   $items = array();
   $items['facebook_comment_added/%'] = array(
     'type' => MENU_CALLBACK,
