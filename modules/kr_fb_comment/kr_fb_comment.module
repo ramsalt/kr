@@ -69,10 +69,8 @@ function kr_fb_menu(){
   $items = array();
   $items['facebook_comment_added/%'] = array(
     'type' => MENU_CALLBACK,
-    'description' => 'Facebook Custom Channel URL',
     'page callback' => '_kr_add_comment',
     'page arguments' => array(1),
-    'access callback' => TRUE,
   );
   return $items;
 }
