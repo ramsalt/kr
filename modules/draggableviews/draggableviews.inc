@@ -680,8 +680,11 @@ function _draggableviews_save_hierarchy($info) {
     
     if(function_exists('expire_cache_derivative')){
       $paths['front'] = '<front>';
-      expire_cache_derivative($paths);
+   //   expire_cache_derivative($paths);
     }
+    $node->nid = $nid;
+    $node->type = 'article';
+    views_content_cache_update_set($node, 'article');
   }
 }
 
