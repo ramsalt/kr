@@ -133,7 +133,7 @@ body.sidebars.node-view-page #center{
 
 #logo-area {
   height: 113px;
-  background: url(../images/bkg/bg-logo-area.png) repeat-x bottom;
+  /* background: url(../images/bkg/bg-logo-area.png) repeat-x bottom; */
 }
 
 #footer {

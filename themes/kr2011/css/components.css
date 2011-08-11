@@ -33,7 +33,7 @@ div.status {
  font-size: 1.083em;
   margin: 0 0 10px;
   border: 1px solid #e1e1e1;
-  background: #efefef url(../images/bkg/top_nav_bg.png) repeat-x;
+ /* background: #efefef url(../images/bkg/top_nav_bg.png) repeat-x; */
 }
 
 #nav ul.primary-links {
