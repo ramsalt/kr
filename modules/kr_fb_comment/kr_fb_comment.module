@@ -65,3 +65,66 @@ function kr_fb_comment_cron(){
   
 	variable_set('kr_fb_comment_nid',$end);
 }
+function kr_fb_menu(){
+  $items = array();
+  $items['facebook_comment_added/%'] = array(
+    'type' => MENU_CALLBACK,
+    'description' => 'Facebook Custom Channel URL',
+    'page callback' => '_kr_add_comment',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+  );
+  return $items;
+}
+function _kr_add_comment($nid){
+  $query=db_query('SELECT * FROM {node_comment_statistics} WHERE nid LIKE %d', $nid);
+  $result=db_fetch_object($query);
+  
+  if($result){
+    $comment_count = $result->comment_count + 1;
+      $data=array(
+        'nid'=>$nid,
+        'last_comment_timestamp' => time(),
+        'last_comment_name' => NULL,
+        'last_comment_uid' => 1,
+        'comment_count' => $comment_count,
+      );
+      drupal_write_record('node_comment_statistics', $data,'nid');
+    
+  }else{
+    $data=array(
+      'nid'=>$nid,
+      'last_comment_timestamp' => time(),
+      'last_comment_name' => NULL,
+      'last_comment_uid' => 1,
+      'comment_count' => 1,
+    );
+    drupal_write_record('node_comment_statistics', $data);
+  }
+  
+}
+function kr_fb_init(){
+  if(arg(0)=='node'){
+    global $base_url;
+    $urlen = $base_url.'facebook_comment_added/'.arg(1);
+    $js = '
+  FB.Event.subscribe("comment.create",
+    function(response) {
+        $.ajax({
+          url: "'.$urlen.'",
+          success: function(data) {
+            $(".result").html(data);
+            alert("Load was performed.");
+          }
+        });
+    }
+  );
+  FB.Event.subscribe("comment.remove",
+    function(response) {
+        
+    }
+  );  
+  
+  ';
+  }
+}
