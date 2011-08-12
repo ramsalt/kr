@@ -310,3 +310,6 @@ body a.edit-forsiderekkefolge {
     border: medium none;
     padding: 0;
 }
+.block .view-nyeste-quiz .views-field-view-node{
+	float: right;
+}
