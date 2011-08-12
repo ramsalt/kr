@@ -57,7 +57,7 @@ function kr_import_migrate_build_url($destid1, $migration_name) {
   $destination_uri = str_replace(':source_id', $destid1, $pattern);
 
   // For speed, we go right to aliases table rather than more bootstrapping.
-  if ($uri_clean = db_result(db_query("SELECT alias FROM {url_alias} WHERE source = '%s'", $destination_uri))) {
+  if ($uri_clean = db_result(db_query("SELECT dst FROM {url_alias} WHERE src = '%s'", $destination_uri))) {
     $destination_uri = $uri_clean;
   }
 
