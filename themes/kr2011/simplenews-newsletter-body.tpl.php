@@ -6,7 +6,7 @@
  * Default theme implementation to format the simplenews newsletter body.
  *
  * Copy this file in your theme directory to create a custom themed body.
- * Rename it to simplenews-newsletter-body--<tid>.tpl.php to override it for a 
+ * Rename it to simplenews-newsletter-body--<tid>.tpl.php to override it for a
  * newsletter using the newsletter term's id.
  *
  * Available variables:
@@ -17,16 +17,16 @@
  *
  * @see template_preprocess_simplenews_newsletter_body()
  */
- 
- 
-/* Bilder 
+
+
+/* Bilder
 <img src="/<?php print path_to_theme();?>/gruppen.gif" width="130" height="55" alt="" border="0" />
-*/ 
- 
- 
+*/
+
+
 /* The following should be moved to template_preprocess_simplenews_newsletter_body() when
-we can use our own template. I don't want to mess with Rubik theme. 
-We need to do som nasty hacks to rewrite HTML code */ 
+we can use our own template. I don't want to mess with Rubik theme.
+We need to do som nasty hacks to rewrite HTML code */
 
 /* Add font style to the title */
 //$body = str_replace('<h2>', '<h2 style="font-size:21px;margin:0 0 10px;font-family:Helvetica, sans-serif">', $body);
@@ -45,7 +45,7 @@ $display['content'] = str_replace($tofind,$toreplace, $display['content']);
 
 ?>
 <HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Kommunal Rapport - nyhetsbrev</title></HEAD><BODY  style="margin:0;padding:0;" bgcolor="#ded199" text="#606060"><STYLE type=text/css>
+<title>Kommunal Rapport - nyhetsbrev</title></HEAD><BODY  style="margin:0;padding:0;" text="black"><STYLE type=text/css>
 A {
   COLOR: #ae0909;
   TEXT-DECORATION: underline;
@@ -75,7 +75,7 @@ IMG {border:2px solid black}
                       <tbody>
                         <tr>
                           <td colspan="2">
-                          
+
                             <?php print $body; ?>
                           <?php /*
                             <h2 style="font-size:21px;margin:0 0 10px;font-family:Helvetica, sans-serif">
@@ -88,7 +88,7 @@ IMG {border:2px solid black}
                             <p style="margin:0;padding:0">
                               <a target="_blank" style="color:#0a2339;font-weight:700;font-size:14px;text-decoration:none;font-family:Helvetica, sans-serif" href="http://www.kommunal-rapport.no/id/11206293.0">Les hele saken Ã‚Â»</a>
                             </p>
-                            
+
                             */ ?>
                           </td>
                         </tr>
@@ -122,9 +122,11 @@ IMG {border:2px solid black}
                                 </tr>
                                 <tr>
                                   <td style="padding:5px">
-                                  
-                                <?php print $display['content']; ?>                              
-                                 
+
+                                  <a href='http://openx.dev.ramsalt.com/delivery/ck.php?zoneid=15' target='_blank'><img src='http://openx.dev.ramsalt.com/delivery/avw.php?zoneid=15&amp;cb=INSERT_RANDOM_NUMBER_HERE' border='0' alt='' /></a>
+
+                                <?php print $display['content']; ?>
+
                                   </td>
                                 </tr>
                               </tbody>
@@ -142,4 +144,4 @@ IMG {border:2px solid black}
 
         </tr>
         <tr>
-         
+
