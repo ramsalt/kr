@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Functions for extending comment management with Rules.
+ */
+
+/**
+ * Implementation of hook_rules_action_info().
+ * @ingroup rules
+ */
+function rb_comment_rules_action_info() {
+  // Add the actions relevant for required core modules.
+  $actions = array(
+    'rb_comment_action_change_owner' => array(
+      'label' => t('Change the comment owner'),
+      'arguments' => array(
+        'comment' => array(
+          'type' => 'comment',
+          'label' => t('Comment to update'),
+        ),
+        'account' => array(
+          'type' => 'user',
+          'label' => t('New comment author'),
+        ),
+      ),
+      'module' => 'Rules Bonus: Comment',
+    ),
+  );
+
+  return $actions;
+}
+
+/**
+ * Action for 'rb_comment_action_change_owner'.
+ */
+function rb_comment_action_change_owner($comment, $account) {
+  $comment->uid = $account->uid;
+  return array('comment' => $comment);
+}

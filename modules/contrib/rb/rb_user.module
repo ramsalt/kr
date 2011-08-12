@@ -1,0 +1,262 @@
+<?php
+
+/**
+ * @file
+ * Functions for extending user management with Rules.
+ */
+
+/**
+ * Implementation of hook_rules_condition_info().
+ * @ingroup rules
+ */
+function rb_user_rules_condition_info() {
+  // Add conditions only depending on required core modules.
+  $conditions = array(
+    'rb_user_condition_author_account' => array(
+      'label' => t('Node author is an authenticated user'),
+      'module' => 'Rules Bonus: User',
+      'arguments' => array(
+        'node' => array(
+          'type' => 'node',
+          'label' => t('Node to check'),
+        ),
+      ),
+    ),
+    'rb_user_condition_username_is_valid' => array(
+      'label' => t('A string is valid user name'),
+      'module' => 'Rules Bonus: User',
+    ),
+  );
+
+  return $conditions;
+}
+
+/**
+ * Implementation of hook_rules_action_info().
+ * @ingroup rules
+ */
+function rb_user_rules_action_info() {
+  // Add the actions relevant for required core modules.
+  $actions = array(
+    'rb_user_action_global_user' => array(
+      'label' => t('Load the acting user'),
+      'new variables' => array(
+        'user' => array(
+          'type' => 'user',
+          'label' => t('Acting user'),
+          'save' => TRUE,
+        ),
+      ),
+      'module' => 'Rules Bonus: User',
+    ),
+    'rb_user_action_provide_username' => array(
+      'label' => t('Generate a valid user name'),
+      'eval input' => array('potential_name'),
+      'new variables' => array(
+        'username' => array(
+          'type' => 'string',
+          'label' => t('New user name'),
+          'save' => TRUE,
+        ),
+      ),
+      'module' => 'Rules Bonus: User',
+    ),
+//    'rb_user_action_transfer_node_authorship' => array(
+//      'label' => t('Transfer node authorship between users'),
+//      'help' => t('This action transfers the authorship of all nodes by one
+//        user to another user.'),
+//      'arguments' => array(
+//        'source' => array(
+//          'type' => 'user',
+//          'label' => t('Old author'),
+//        ),
+//        'target' => array(
+//          'type' => 'user',
+//          'label' => t('New author'),
+//        ),
+//      ),
+//      'module' => 'Rules Bonus: User',
+//    ),
+  );
+  
+  
+
+  // Add actions that depend on non-required modules.
+  if (module_exists('session_api')) {
+    $actions['rb_user_action_sid'] = array(
+      'label' => t('Load session ID for active user'),
+      'new variables' => array(
+        'sid' => array(
+          'type' => 'number',
+          'label' => t('Session id'),
+          'save' => TRUE,
+        ),
+      ),
+    'module' => 'Rules Bonus: User',
+    );
+  }
+
+  return $actions;
+}
+
+/**
+ * The 'rb_user_condition_author_account' condition.
+ */
+function rb_user_condition_author_account($node, $settings) {
+  return ($node->uid > 0);
+}
+
+/**
+ * Configuration form for 'rb_user_condition_username_is_valid'.
+ */
+function rb_user_condition_username_is_valid_form($settings, &$form) {
+  $form['settings']['username'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Potential user name',
+    '#description' => t('The string will be tested against Drupal\'s rules for
+      user names.'),
+    '#default_value' => $form['settings']['username'],
+  );
+  $form['settings']['is_available'] = array(
+    '#type' => 'checkbox',
+    '#title' => 'Check availability',
+    '#description' => t('Also check that the user name is not already taken'),
+    '#default_value' => $settings['is_available'],
+  );
+}
+
+/**
+ * Action for 'rb_user_condition_username_is_valid'.
+ */
+function rb_user_condition_username_is_valid($settings) {
+  // Run the name validation function and see it it returns some kind of error
+  // message. If so, the user name is invalid.
+  if (user_validate_name($settings['username']) != NULL) {
+    return FALSE;
+  }
+
+  // If we should check for availability, do that too.
+  if (user_load(array('name' => $settings['username']))) {
+    // Name exists in the user table and is thus not available.
+    return FALSE;
+  }
+
+  // If nothing else, this name should really be ok.
+  return TRUE;
+}
+
+/**
+ * Configuration form for 'rb_user_action_global_user'.
+ */
+function rb_user_action_global_user_form($settings, &$form) {
+  $form['settings']['clear_cache'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Clear the cache for global user before fetching'),
+    '#description' => t('This may be useful when using this action on a page
+      load where the user object is changed.'),
+    '#default_value' => $settings['clear_cache'],
+  );
+}
+
+/**
+ * Action for 'rb_user_action_global_user'.
+ */
+function rb_user_action_global_user($settings) {
+  // Clear the global user cache, if requested.
+  if ($settings['clear_cache']) {
+    global $user;
+    cache_clear_all($user->uid, 'users');
+  }
+
+  global $user;
+  return array('user' => $user);
+}
+
+/**
+ * Action for 'rb_user_action_sid'.
+ */
+function rb_user_action_sid() {
+  return array('sid' => session_api_get_sid());
+}
+
+
+/**
+ * Action for 'rb_user_action_transfer_node_authorship'.
+ */
+//function rb_user_action_transfer_node_authorship($source, $target, $settings) {
+// This is copy-pasted stuff that needs to be updated. Really.
+//  $result = db_fetch_object(db_query("SELECT feed_nid FROM {feeds_node_item} WHERE nid = %d", $node->nid));
+//
+//  return array('sid' => session_api_get_sid());
+//}
+
+/**
+ * Configuration form for 'rb_user_action_provide_username'.
+ */
+function rb_user_action_provide_username_form($settings, &$form) {
+  $form['settings']['potential_name'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Potential user name',
+    '#description' => t('The string will be changed to validate Drupal\'s user
+      name rules, and if necessary appended with a number to avoid user name
+      conflicts.'),
+    '#default_value' => $settings['potential_name'],
+  );
+}
+
+/**
+ * Action for 'rb_user_action_provide_username'.
+ */
+function rb_user_action_provide_username($settings) {
+  $potential_name = $settings['potential_name'];
+
+  // Go through the checks that user_validate_name has, and clean the string.
+  $potential_name = trim($potential_name);
+  if (!strlen($potential_name)) {
+    return t('dummy name');
+  }
+  while (strpos($potential_name, '  ') !== FALSE) {
+    $potential_name = str_replace('  ', ' ', $potential_name);
+  }
+
+  // '/[^\x{80}-\x{F7} a-z0-9@_.\'-]/i'
+  // Check for, and replace, some regexp patterns.
+  $pattern = implode('', array(
+    '/[\x{80}-\x{A0}',                  // Non-printable ISO-8859-1 + NBSP
+    '\x{AD}',                           // Soft-hyphen
+    '\x{2000}-\x{200F}',                // Various space characters
+    '\x{2028}-\x{202F}',                // Bidirectional text overrides
+    '\x{205F}-\x{206F}',                // Various text hinting characters
+    '\x{FEFF}',                         // Byte order mark
+    '\x{FF01}-\x{FF60}',                // Full-width latin
+    '\x{FFF9}-\x{FFFD}',                // Replacement characters
+    '\x{0}-\x{1F}]/u',                  // NULL byte and control characters
+  ));
+  // Let's iterate, just to make sure that we remove ALL occurances.
+  while (preg_match($pattern, $potential_name)) {
+    $potential_name = preg_replace($pattern, '', $potential_name);
+  }
+
+  // We compare against max length - 3, to make room for two-digit running
+  // numbers for creating uniqueness. This limit is set pretty arbitrary, but
+  // will work for all sane use cases.
+  if (drupal_strlen($potential_name) > USERNAME_MAX_LENGTH - 3) {
+    $potential_name = substr($potential_name, 0, USERNAME_MAX_LENGTH - 3);
+  }
+
+  // Check if the user name STILL contains any troubles.
+  if (user_validate_name($potential_name) != NULL) {
+    $potential_name = 'dummy name';
+  }
+
+  // Add a number to the name until it is unique in the user table.
+  $unique_name = $potential_name;
+  $index = 0;
+  while (user_load(array('name' => $unique_name)) !== FALSE) {
+    // Name exists in the user table; add a number to eventually make it unique.
+    $index++;
+    $unique_name = "$potential_name $index";
+  }
+
+  return array('username' => $unique_name);
+}
