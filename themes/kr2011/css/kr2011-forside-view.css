@@ -229,12 +229,13 @@ body .featuredarticle .views-field-comment-count a{
 	font-size: 30px;
 }
 #block-views-articles-block_5{
-	display: inline;
+	display: block;
 	width: 275px;
 	padding-left: 10px;
 	overflow: hidden;
 	clear: none;
-	
+	position: relative;
+	float: right;
 }
 #block-views-articles-block_5 .views-row{
 	width: 275px;
