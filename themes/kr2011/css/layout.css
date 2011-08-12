@@ -25,6 +25,8 @@ font-size: 2em;      12px x 2    = 24px
   background: #FFF;
   padding: 10px;
   border: 1px solid #dbdbdb;
+  float: left;
+  position: relative;
 }
 
 #container {
@@ -33,6 +35,8 @@ font-size: 2em;      12px x 2    = 24px
 
 #outer-wrapper {
   background: #fff;
+  margin: 0 auto;
+  width: 980px;
  }
 
 /* Home page */
