@@ -306,4 +306,7 @@ body a.edit-forsiderekkefolge {
 .view-Kommentarutdrag .view-content .field-content a{
 	color: #999999;
 }
-
+#wrapper #block-views-most_commented_articles-block_1 {
+    border: medium none;
+    padding: 0;
+}
