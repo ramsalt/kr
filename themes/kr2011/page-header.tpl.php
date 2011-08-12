@@ -102,7 +102,7 @@ Ha en fin dag!
   <div class="fagpresse">
       <img src="/sites/default/files/fagpressepris.jpg" alt="fagpressepris" />
       <h3>Vinner av Fagpresseprisen</h3>
-      <span><a href="<?php print url('node/81011'); ?>" title="Kommunal Rapport vant fagpresseprisen" alt="Kommunal Rapport vant fagpresseprisen">Norges beste fagblad!</a></span>
+      <span><a href="<?php print url('node/81011'); ?>" title="Kommunal Rapport vant fagpresseprisen">Norges beste fagblad!</a></span>
   </div>    
     <div id="search_box_top" class="clearfix">
       <?php /*if ($search_box): ?><?php print $search_box; ?><?php endif;*/ ?>
@@ -113,12 +113,12 @@ Ha en fin dag!
                   <div class="views-exposed-widget">
                                 <div class="views-widget">
                   <div id="edit-keys-wrapper" class="form-item">
-         <input type="text" class="form-text" title="Skriv inn ønskede søkekriterier." value="" size="15" id="edit-keys" name="keys" maxlength="128">
+         <input type="text" class="form-text" title="Skriv inn ønskede søkekriterier." value="" size="15" id="edit-keys" name="keys" maxlength="128" />
         </div>
                 </div>
               </div>
                 <div class="views-exposed-widget">
-              <input type="submit" class="form-submit" value="Søk" id="edit-submit-search-sorted-by-time">
+              <input type="submit" class="form-submit" value="Søk" id="edit-submit-search-sorted-by-time" />
             </div>
           </div>
         </div>
