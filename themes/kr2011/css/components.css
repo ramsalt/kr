@@ -1050,56 +1050,6 @@ body.node-view-page #tabs-wrapper div#drupal-control-bar li a {
   border: 1px solid #d9d9d9;
 }
 
-/* Tweets */
-
-div.tweets-pulled-listing {
-  border: 1px solid #d9d9d9;
-  background: #F6F6F6;
-  padding: 8px 8px 3px 8px;
-  margin: -14px 0 0 0;
-  color: #000;
-}
-
-ul.tweets-pulled-listing {
-  margin: 0;
-  padding: 0;
-}
-
-div.tweets-pulled-listing a {
-  color: #000;
-}
-
-.tweets-pulled-listing li {
-  background: #FFF;
-  border: 1px solid #d9d9d9;
-  padding: 10px;
-  margin: 0 0 7px 0;
-}
-
-div.tweets-pulled-listing ul {
-  font-family: Arial, helvetica, sans-serif;
-  font-size: .917em;
-  background: none;
-  border: none;
-}
-
-div.tweets-pulled-listing .tweet-author a {
-  font-weight:bold;
-  color: #808285;
-}
-
-div.tweets-pulled-listing .tweet-time a {
-  color: #780F2C;
-  font-style: italic;
-   font-family: Georgia, "Times New Roman", Times, serif;
-}
-
-.views-field-title-1 {
-  color: #808285;
-  font-family: Arial, helvetica, sans-serif;
-  text-transform: uppercase;
-  font-size: .917em;
-}
 
 .views-field-title-1 a {color: #808285;}
 
@@ -1122,13 +1072,13 @@ div.tweets-pulled-listing .tweet-time a {
 }
 
 /* Tweets */
-div.tweets-pulled-listing {
+/*div.tweets-pulled-listing {
   border: 1px solid #d9d9d9;
   background: #F6F6F6;
   padding: 8px 8px 3px 8px;
   margin: -14px 0 0 0;
   color: #000;
-}
+}*/
 #block-twitter_pull-op_tweets div.tweets-pulled-listing {
   margin: 0;
 }
@@ -1144,14 +1094,13 @@ div.tweets-pulled-listing a {
 
 .tweets-pulled-listing li {
   background: #FFF;
-  border: 1px solid #d9d9d9;
-  padding: 10px;
-  margin: 0 0 7px 0;
+  padding: 10px 0 0 0;
+  margin: 0 0 0 0;
 }
 
 div.tweets-pulled-listing ul {
   font-family: Arial, helvetica, sans-serif;
-  font-size: .917em;
+  font-size: 1em;
   background: none;
   border: none;
 }
