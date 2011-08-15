@@ -72,3 +72,16 @@ function kr_diverse_cache_nodeapi(&$node, $op, $teaser, $page) {
       break;
   }
 }
+
+/**
+ * Implementation of hook_twitter_pull_blocks()
+ */
+function kr_diverse_twitter_pull_blocks() {
+  $block->delta = 'kr_tweets';
+  $block->name = t('KR Tweets');
+  $block->title = t('Kommunevalg på Twitter');
+  $block->tweetkey = 'kommunevalg';
+  $block->number_of_items = 7;
+//  $block->theme_key = 'kr_tweets';
+  return array($block->delta => $block);
+}
