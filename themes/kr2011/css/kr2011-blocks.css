@@ -89,11 +89,14 @@ body #wrapper .block div.item-list li.views-row .views-field-title a{
 .view-jobs ul li .views-field-title{
 	margin: 0px;
 	padding: 0px;
-	float: left;
+	/* float: left; */
 }
 .view-jobs ul li .views-field-field-main-image-fid{
 	float: left;
 }
 .view-jobs ul li .views-field-field-job-utlyser-value{
-	float: left;
+	/* float: left; */
+}
+.view-jobs ul li .views-field-field-job-date-value{
+	/* float: left; */
 }
