@@ -57,7 +57,7 @@ function kr_diverse_form_alter(&$form, &$form_state, $form_id) {
 
   //$("#edit-field-op-author-0-nid-nid").value(22);
 }
-function kr_diverse_cache_nodeapi(&$node, $op, $teaser, $page) {
+function kr_diverse_nodeapi(&$node, $op, $teaser, $page) {
   switch ($op) {
     case 'insert':
     case 'update':
@@ -70,6 +70,11 @@ function kr_diverse_cache_nodeapi(&$node, $op, $teaser, $page) {
       }
       
       break;
+  }
+  if($op == 'view' && $node->type =='job'){
+    $node->title = str_replace('_', '',$node->title);  
+    $node->content['#title'] = str_replace('_', '',$node->title);  
+    drupal_set_title(str_replace('_', '',$node->title));
   }
 }
 
