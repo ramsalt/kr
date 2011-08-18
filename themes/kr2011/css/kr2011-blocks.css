@@ -96,8 +96,8 @@ body #wrapper .block div.item-list li.views-row .views-field-title a{
 	float: left;
 }
 .view-jobs ul li .views-field-field-job-utlyser-value{
-	/* float: left; */
+	float: right; 
 }
 .view-jobs ul li .views-field-field-job-date-value{
-	/* float: left; */
+	float: right; 
 }
