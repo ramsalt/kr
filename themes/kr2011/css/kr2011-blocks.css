@@ -87,7 +87,8 @@ body #wrapper .block div.item-list li.views-row .views-field-title a{
 	width: 150px;	
 }
 .view-jobs ul li .views-field-title{
-	margin-right: 0px;
+	margin: 0px;
+	padding: 0px;
 }
 .view-jobs ul li .views-field-field-main-image-fid{
 	float: left;
