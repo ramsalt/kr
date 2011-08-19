@@ -61,12 +61,46 @@
     * @return int Word Count
     */
     function GetWordCount(htmlData) {
-        return htmlData.replace(/<(?:.|\s)*?>/g, '').split(' ').length;    
-    }
-   function GetCharCount(htmlData) {
         content=htmlData.replace(/<(?:.|\s)*?>/g, '');
-        content=content.replace(/[\n\r\t]/g,'');
-        content=content.replace('&nbsp;',' ');
+        
+        content=content.replace(/[\r\t]/g,'');
+        content=content.replace(/[\n]/g, ' ');
+        content=$("<div/>").html(htmlData).text();
+        
+        /* content=content.replace(/<br\s*[\/]?>/gi, '\n'); */
+        content=content.replace(/[\r\t]/g,'');
+        content=content.replace(/[\n]/g, ' ');
+        content=content.replace(/[,]/g, '|');
+        content=content.replace('  ', ' ');
+        content=content.trim();
+        
+        words=content.split(' ');
+        words=cleanArray(words);
+        
+       /*alert(words);*/
+        return words.length;    
+    }
+    function cleanArray(actual){
+      var newArray = new Array();
+      for(var i = 0; i<actual.length; i++){
+          if (actual[i]){
+            newArray.push(actual[i]);
+        }
+      }
+      return newArray;
+    }
+
+   function GetCharCount(htmlData) {
+     
+        content=htmlData.replace(/<(?:.|\s)*?>/g, '');
+        
+        content=content.replace(/[\r\t]/g,'');
+        content=$("<div/>").html(htmlData).text();
+        content=content.replace('<br />', '\n');
+        content=content.replace(/[\r\t]/g,'');
+        content=content.trim();
+        
+        /* content=content.replace('&nbsp;',' '); */
         return content.length;
         /* return htmlData.replace(/<(?:.|\s)*?>/g, '').length; */  
    }
