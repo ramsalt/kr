@@ -221,7 +221,9 @@ function google_analytics_counter_get_sum_per_path($path){
   if($path[0] == '/'){
     $path_new=substr($path, 1, strlen($path));
   }
-  $path_new = '/'.drupal_get_path_alias($path_new);
+
+  
+  $path_new = '/'.drupal_get_path_alias($path);
   drupal_set_message($path.' '.$path_new);
   
   $params = array(
