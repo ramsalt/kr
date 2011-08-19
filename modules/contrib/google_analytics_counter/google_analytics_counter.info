@@ -1,0 +1,15 @@
+; $Id: google_analytics_counter.info,v 1.2.2.2 2010/10/22 20:33:21 tjfulopp Exp $
+
+name = Google Analytics Counter
+description = Lightweight page view counter drawing on data collected by Google Analytics.
+dependencies[] = google_analytics_api
+dependencies[] = google_analytics_reports
+package = Statistics
+core = 6.x
+
+; Information added by drupal.org packaging script on 2011-02-19
+version = "6.x-1.4"
+core = "6.x"
+project = "google_analytics_counter"
+datestamp = "1298138678"
+
