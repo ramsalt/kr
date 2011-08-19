@@ -191,7 +191,7 @@ function google_analytics_counter_get_sum_per_path($path){
   }
   $cachedvalue = '';
   // Get from cache if not expired, or if we are forbidden to retrieve from Google (some other request takes place).
-  if ( (($cache = cache_get($key)) AND !empty($cache->data) AND !$needfreshvalue) OR !$noconcurrency OR !$apirequestallowed) {
+  if (FALSE && (($cache = cache_get($key)) AND !empty($cache->data) AND !$needfreshvalue) OR !$noconcurrency OR !$apirequestallowed) {
     //if ( (($cache = cache_get($key)) AND !empty($cache->data)) OR !$noconcurrency OR !$apirequestallowed) {
     //drupal_set_message('a');
     $result = $cache->data;
