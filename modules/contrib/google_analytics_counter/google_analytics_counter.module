@@ -219,16 +219,16 @@ function google_analytics_counter_get_sum_per_path($path){
     );
     //$rows = google_analytics_reports_path_report($request, $path);
   if($path[0]=='/'){
-    $path=substr($path, 1, strlen($path));
+    $path_new=substr($path, 1, strlen($path));
   }
-  $path = '/'.drupal_get_path_alias($path);
+  $path_new = '/'.drupal_get_path_alias($new_path);
   
   
   $params = array(
     'metrics' => array('ga:pageviews'),
     'dimensions' => array('ga:date'),
     'sort_metric' => array('ga:date'),
-    'filters' => _google_analytics_reports_path_filter($path),
+    'filters' => _google_analytics_reports_path_filter($new_path),
     'start_date' => strtotime('2005-01-01'),
     'end_date' => strtotime('now'),
   );
@@ -261,7 +261,7 @@ function google_analytics_counter_get_sum_per_path($path){
 
     // All right. Now - if it's desired and if it's a node page - update Drupal's own page view counter
     if (variable_get('google_analytics_counter_update_node_counter',0) == 1){
-
+drupal_set_message('new_save');
       // Let's get the nid
       $nid = FALSE;
       $pathbits = explode('/',$path);
