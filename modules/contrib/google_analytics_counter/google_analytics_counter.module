@@ -261,7 +261,7 @@ function google_analytics_counter_get_sum_per_path($path){
 
     // All right. Now - if it's desired and if it's a node page - update Drupal's own page view counter
     if (variable_get('google_analytics_counter_update_node_counter',0) == 1){
-drupal_set_message('new_save');
+drupal_set_message('new_save '.$sum_of_pageviews);
       // Let's get the nid
       $nid = FALSE;
       $pathbits = explode('/',$path);
