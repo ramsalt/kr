@@ -141,7 +141,7 @@ function google_analytics_counter_get_searched_path(){
 }
 
 function google_analytics_counter_get_sum_per_path($path){
-
+//drupal_set_message($path);
   $timenow = time();
 
   // Recognize special path 'all'
@@ -217,8 +217,16 @@ function google_analytics_counter_get_sum_per_path($path){
     // We want to retrueve all page views for this path. The earliest valid start-date for Google Analytics is 2005-01-01.
     '#start_date' => strtotime('2005-01-01') 
     );
-    $rows = google_analytics_reports_path_report($request, $path);
-
+    //$rows = google_analytics_reports_path_report($request, $path);
+  $params = array(
+    'metrics' => array('ga:pageviews'),
+    'dimensions' => array('ga:date'),
+    'sort_metric' => array('ga:date'),
+    'filters' => _google_analytics_reports_path_filter($path),
+    'start_date' => strtotime('2005-01-01'),
+    'end_date' => strtotime('now'),
+  );
+  $rows = google_analytics_api_report_data($params);
     $sum_of_pageviews = 0;
     $countdays = 0;
     $lookingforfirsthit = TRUE;
@@ -261,7 +269,7 @@ function google_analytics_counter_get_sum_per_path($path){
           $nid = $pathbits[1];
         }
       }
-drupal_set_message('.'.$nid);
+
       if ($nid !== FALSE AND $sum_of_pageviews <> 0) {
         // This is a node, so update the node's counters.
         // We don't do anything with daycount here
