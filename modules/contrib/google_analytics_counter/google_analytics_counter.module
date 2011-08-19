@@ -222,7 +222,7 @@ function google_analytics_counter_get_sum_per_path($path){
     $path_new=substr($path, 1, strlen($path));
   }
   $path_new = '/'.drupal_get_path_alias($path_new);
-  
+  drupal_set_message($path_new);
   
   $params = array(
     'metrics' => array('ga:pageviews'),
