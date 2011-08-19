@@ -221,14 +221,14 @@ function google_analytics_counter_get_sum_per_path($path){
   if($path[0]=='/'){
     $path_new=substr($path, 1, strlen($path));
   }
-  $path_new = '/'.drupal_get_path_alias($new_path);
+  $path_new = '/'.drupal_get_path_alias($path_new);
   
   
   $params = array(
     'metrics' => array('ga:pageviews'),
     'dimensions' => array('ga:date'),
     'sort_metric' => array('ga:date'),
-    'filters' => _google_analytics_reports_path_filter($new_path),
+    'filters' => _google_analytics_reports_path_filter($path_new),
     'start_date' => strtotime('2005-01-01'),
     'end_date' => strtotime('now'),
   );
