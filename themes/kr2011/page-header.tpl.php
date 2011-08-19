@@ -41,6 +41,7 @@ Ha en fin dag!
   <?php print $styles ?>
   <?php if ($is_front): ?>
       <meta http-equiv="refresh" content="600" />
+      <meta property="fb:admins" content="637922720,100002054981502,1517137300,705756604,1566145296"/>
   <?php endif; ?>
   <!--[if gte IE 6]><?php print openpublish_get_ie_styles(); ?><![endif]-->  
   <!--[if gte IE 6]><link type="text/css" rel="stylesheet" media="all" href="<?php print base_path().drupal_get_path('theme', 'kr2011'); ?>/css/ie.css" ><![endif]-->
