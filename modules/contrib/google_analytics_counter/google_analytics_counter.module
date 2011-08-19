@@ -222,9 +222,7 @@ function google_analytics_counter_get_sum_per_path($path){
     $path_new=substr($path, 1, strlen($path));
   }
 
-  
   $path_new = '/'.drupal_get_path_alias($path);
-  drupal_set_message($path.' '.$path_new);
   
   $params = array(
     'metrics' => array('ga:pageviews'),
@@ -266,7 +264,7 @@ function google_analytics_counter_get_sum_per_path($path){
 
     // All right. Now - if it's desired and if it's a node page - update Drupal's own page view counter
     if (variable_get('google_analytics_counter_update_node_counter',0) == 1){
-drupal_set_message('new_save '.$sum_of_pageviews);
+
       // Let's get the nid
       $nid = FALSE;
       $pathbits = explode('/',$path);
