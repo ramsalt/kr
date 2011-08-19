@@ -141,7 +141,7 @@ function google_analytics_counter_get_searched_path(){
 }
 
 function google_analytics_counter_get_sum_per_path($path){
-drupal_set_message($path);
+
   $timenow = time();
 
   // Recognize special path 'all'
@@ -218,6 +218,7 @@ drupal_set_message($path);
     '#start_date' => strtotime('2005-01-01') 
     );
     //$rows = google_analytics_reports_path_report($request, $path);
+    drupal_set_message($path);
   $params = array(
     'metrics' => array('ga:pageviews'),
     'dimensions' => array('ga:date'),
