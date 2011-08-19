@@ -141,7 +141,7 @@ function google_analytics_counter_get_searched_path(){
 }
 
 function google_analytics_counter_get_sum_per_path($path){
-//drupal_set_message($path);
+drupal_set_message($path);
   $timenow = time();
 
   // Recognize special path 'all'
