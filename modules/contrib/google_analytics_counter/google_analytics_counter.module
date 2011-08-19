@@ -218,12 +218,12 @@ function google_analytics_counter_get_sum_per_path($path){
     '#start_date' => strtotime('2005-01-01') 
     );
     //$rows = google_analytics_reports_path_report($request, $path);
-    drupal_set_message($path);
+    
   $params = array(
     'metrics' => array('ga:pageviews'),
     'dimensions' => array('ga:date'),
     'sort_metric' => array('ga:date'),
-    'filters' => _google_analytics_reports_path_filter($path),
+    'filters' => _google_analytics_reports_path_filter(url($path)),
     'start_date' => strtotime('2005-01-01'),
     'end_date' => strtotime('now'),
   );
