@@ -235,7 +235,9 @@ function google_analytics_counter_get_sum_per_path($path){
   );
   //dsm($params);
   $feed = google_analytics_api_report_data($params);
+  dsm($feed);
   $rows = $feed->results;
+  
     $sum_of_pageviews = 0;
     $countdays = 0;
     $lookingforfirsthit = TRUE;
