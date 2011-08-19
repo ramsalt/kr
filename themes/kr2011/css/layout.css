@@ -188,3 +188,7 @@ body.sidebars.node-view-page #center{
 
 #comments {margin: 45px 0 0 0;}
 
+#footer #block-google_analytics_counter-0{
+    display: none;
+    visibility: hidden;	
+}
