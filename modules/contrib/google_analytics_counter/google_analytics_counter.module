@@ -222,6 +222,7 @@ function google_analytics_counter_get_sum_per_path($path){
     $path=substr($path, 1, strlen($path));
   }
   drupal_set_message($path);
+  drupal_set_message(drupal_get_path_alias($path));
   $params = array(
     'metrics' => array('ga:pageviews'),
     'dimensions' => array('ga:date'),
@@ -230,6 +231,7 @@ function google_analytics_counter_get_sum_per_path($path){
     'start_date' => strtotime('2005-01-01'),
     'end_date' => strtotime('now'),
   );
+  dsm($params);
   $feed = google_analytics_api_report_data($params);
   $rows = $feed->results;
     $sum_of_pageviews = 0;
