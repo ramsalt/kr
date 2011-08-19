@@ -226,7 +226,8 @@ function google_analytics_counter_get_sum_per_path($path){
     'start_date' => strtotime('2005-01-01'),
     'end_date' => strtotime('now'),
   );
-  $rows = google_analytics_api_report_data($params);
+  $feed = google_analytics_api_report_data($params);
+  $rows = $feed->results;
     $sum_of_pageviews = 0;
     $countdays = 0;
     $lookingforfirsthit = TRUE;
