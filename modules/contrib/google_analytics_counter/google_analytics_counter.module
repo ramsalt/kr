@@ -229,8 +229,8 @@ function google_analytics_counter_get_sum_per_path($path){
     'dimensions' => array('ga:date'),
     'sort_metric' => array('ga:date'),
     'filters' => _google_analytics_reports_path_filter($path_new),
-    //'start_date' => strtotime('2005-01-01'),
-    'start_date' => strtotime('- 30days'),
+    'start_date' => strtotime('2005-01-01'),
+    //'start_date' => strtotime('- 30days'),
     'end_date' => strtotime('now'),
   );
   //dsm($params);
