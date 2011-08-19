@@ -245,7 +245,7 @@ function google_analytics_counter_get_sum_per_path($path){
         $sum_of_pageviews = 0; 
         break;
       }
-      $sum_of_pageviews += $date['pageviews'];
+      $sum_of_pageviews += intval($date['pageviews']);
       // We need to count only days since when the first hit was registered
       if ($date['pageviews'] <> 0 OR !$lookingforfirsthit){
         $countdays ++;
