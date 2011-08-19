@@ -114,6 +114,7 @@ IMG {border:2px solid black}
                               <tbody>
                                 <tr>
                                   <td style="padding:1px">
+                                    <a href='http://openx.dev.ramsalt.com/delivery/ck.php?zoneid=15' target='_blank'><img src='http://openx.dev.ramsalt.com/delivery/avw.php?zoneid=15&amp;cb=INSERT_RANDOM_NUMBER_HERE' border='0' alt='' /></a>
 
                                     <h3 style="background:#003762;color:#fff;font-weight:700;text-transform:uppercase;font-size:13px;margin:0px;padding:3px;display:block;font-family:Helvetica, sans-serif">
                                       Ledige stillinger
@@ -123,7 +124,6 @@ IMG {border:2px solid black}
                                 <tr>
                                   <td style="padding:5px">
 
-                                  <a href='http://openx.dev.ramsalt.com/delivery/ck.php?zoneid=15' target='_blank'><img src='http://openx.dev.ramsalt.com/delivery/avw.php?zoneid=15&amp;cb=INSERT_RANDOM_NUMBER_HERE' border='0' alt='' /></a>
 
                                 <?php print $display['content']; ?>
 
