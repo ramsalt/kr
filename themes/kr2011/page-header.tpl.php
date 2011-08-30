@@ -10,6 +10,9 @@
  */
 ?>
 <!--
+
+
+
 Hei, du, HTML-kildekodeleser! :-)
 
 Denne nettsiden er laget ved hjelp av fri programvare. Rammeverket er Drupal.
@@ -18,6 +21,8 @@ PHP er programmeringsspråket og databasen er MySQL. Herligheten bruker Apache s
 Har du noen spørsmål svarer vi gjerne på dem, bare kontakt oss på www.ramsalt.com
 
 Ha en fin dag!
+
+
 
 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
@@ -46,7 +51,7 @@ Ha en fin dag!
   <!--[if gte IE 6]><?php print openpublish_get_ie_styles(); ?><![endif]-->  
   <!--[if gte IE 6]><link type="text/css" rel="stylesheet" media="all" href="<?php print base_path().drupal_get_path('theme', 'kr2011'); ?>/css/ie.css" ><![endif]-->
   <!--[if IE 6]><?php print openpublish_get_ie6_styles(); ?><![endif]-->
-  <link href="http://cloud.webtype.com/css/7e0250ce-8821-4a64-958c-515d184ac628.css" rel="stylesheet" type="text/css" />
+  <?php  /*<link href="http://cloud.webtype.com/css/7e0250ce-8821-4a64-958c-515d184ac628.css" rel="stylesheet" type="text/css" /> */ ?>
 </head>
 
 <body <?php print openpublish_body_classes($left, $right, $body_classes); ?> >
