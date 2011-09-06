@@ -979,7 +979,7 @@ body.node-view-page div#drupal-control-bar ul {
 }
 
 body.node-view-page div#drupal-control-bar {
-  background: url(../images/bkg/black70percent.png) repeat-x;
+  background:  /*url("../images/bkg/black70percent.png") repeat-x scroll 0 0*/ dimgray;
   padding:  3px;
   position:  fixed;
   top:  20px;/* ywb 0*/
