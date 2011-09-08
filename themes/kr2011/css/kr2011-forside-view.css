@@ -57,7 +57,7 @@ body .featuredarticle .views-field-view-node a:hover{
 	text-decoration: none;
 	color: #fff;
 }
-body .featuredarticle .views-field-comment-count{
+body .featuredarticle .views-field-comment-count,body .featuredarticle views-field-disqus-comments{
 	background: url("../images/spirite1.png") no-repeat scroll -98px 0px transparent;
 	float: left;
 	padding: 6px 4px 4px 6px;
@@ -67,13 +67,13 @@ body .featuredarticle .views-field-comment-count{
 	margin-bottom: 10px;
 	margin-top: 10px;
 }
-body .featuredarticle .views-field-comment-count a{
+body .featuredarticle .views-field-comment-count a, body .featuredarticle views-field-disqus-comments a{
 	color: #48535b;
 }
-.featuredarticle .views-field-comment-count .tall{
+.featuredarticle .views-field-comment-count .tall, body .featuredarticle views-field-disqus-comments .tall{
 	color: #94021c;
 }
-.featuredarticle .views-field-comment-count a:hover{
+.featuredarticle .views-field-comment-count a:hover, body .featuredarticle views-field-disqus-comments a:hover{
 	text-decoration: none;
 	color: #fff;
 }
@@ -154,10 +154,10 @@ body .featuredarticle .views-field-comment-count a{
     margin-bottom: 5px;
     padding-bottom: 10px;
 }
-.totilfire .views-field-comment-count{
+.totilfire .views-field-comment-count {
 
 }
-/* .view-articles */.views-field-comment-count a{
+/* .view-articles */.views-field-comment-count a, .views-field-disqus-comments a{
 	color: #999999;
 	float: left;
 	background: url("../images/spirite1.png") no-repeat scroll 0px -24px  transparent;
@@ -165,7 +165,7 @@ body .featuredarticle .views-field-comment-count a{
 	padding-left: 20px;
 	padding-top: 0px;
 }
-/* .view-articles */.views-field-comment-count a:hover{
+/* .view-articles */.views-field-comment-count a:hover, .views-field-disqus-comments a:hover{
 	text-decoration: none;
 	color: #000;
 }
