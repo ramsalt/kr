@@ -13,7 +13,7 @@ function kr_div_default_box() {
   $box->title = '';
   $box->description = 'endre rekkefølgen på forsiden';
   $box->options = array(
-    'body' => '<a href="/forsiderediger" class="edit-forsiderekkefolge">Endre rekkefølgen på saker</a>',
+    'body' => '<a href="/forsiderediger" class="edit-forsiderekkefolge">Endre forsiden</a>',
     'format' => '2',
   );
 

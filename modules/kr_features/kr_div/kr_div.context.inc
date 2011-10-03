@@ -32,7 +32,7 @@ function kr_div_context_default_contexts() {
           'module' => 'boxes',
           'delta' => 'endre_rekkefolgen_pa_forsiden',
           'region' => 'left',
-          'weight' => 0,
+          'weight' => 3,
         ),
       ),
     ),

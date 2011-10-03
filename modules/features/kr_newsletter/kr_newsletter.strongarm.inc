@@ -155,7 +155,7 @@ function kr_newsletter_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'simplenews_from_address';
-  $strongarm->value = 'yngve@ramsalt.com';
+  $strongarm->value = 'auto@kommunal-rapport.no';
 
   $export['simplenews_from_address'] = $strongarm;
   $strongarm = new stdClass;
@@ -211,7 +211,7 @@ function kr_newsletter_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'simplenews_send';
-  $strongarm->value = '0';
+  $strongarm->value = '2';
 
   $export['simplenews_send'] = $strongarm;
   $strongarm = new stdClass;
