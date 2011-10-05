@@ -1,0 +1,120 @@
+<?php
+// $Id: ga_importer.install,v 1.1.2.3 2011/01/24 05:20:13 dstol Exp $
+/**
+ * @file
+ * This file handles some basic setup and removal of variables used to control
+ * the Google Analytics import.
+ */
+
+/**
+ * Implementation of hook_install().
+ */
+function ga_importer_install() {
+  variable_set('ga_importer_frequency', 'on_cron');
+  variable_set('ga_importer_proportion', '1%');
+  variable_set('ga_importer_start_index', '0');
+  variable_set('ga_importer_daily_limit', '0');
+  drupal_install_schema('ga_importer');
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function ga_importer_uninstall() {
+  variable_del('ga_importer_frequency');
+  variable_del('ga_importer_proportion');
+  variable_del('ga_importer_start_index');
+  variable_del('ga_importer_daily_limit');
+  drupal_uninstall_schema('ga_importer');
+}
+
+/**
+ * Implements hook_schema().
+ */
+function ga_importer_schema() {
+  $schema['ga_importer_data'] = array(
+  'description' => 'Local storage for various Google Analytics data.',
+  'fields' => array(
+    'entity_id' => array(
+      'description' => 'Primary Key: entity id.',
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'default' => 0),
+    'entity_type' => array(
+      'description' => 'An entity type, typical node, user, term but potentially other types.',
+      'type' => 'varchar',
+      'length' => 32,
+      'not null' => TRUE,
+      'default' => ''),
+    'metric' => array(
+      'description' => 'The name of the Google Analytics metric.',
+      'type' => 'varchar',
+      'length' => 32,
+      'not null' => TRUE,
+      'default' => ''),
+    'event_date' => array(
+      'description' => 'The date for the data.',
+      'type' => 'int',
+      'not null' => TRUE,
+      'default' => 0),
+    'value' => array(
+      'description' => 'The actual value.',
+      'type' => 'int',
+      'not null' => TRUE,
+      'default' => 0),
+  ),
+  'indexes' => array('event_date' => array('event_date')),
+  'primary key' => array('entity_id', 'entity_type', 'metric', 'event_date'),
+  );
+
+  return $schema;
+}
+
+/**
+ * Create new table to store additional data.
+ */
+function ga_importer_update_6001() {
+  $ret = array();
+
+  $schema['ga_importer_data'] = array(
+    'description' => 'Local storage for various Google Analytics data.',
+    'fields' => array(
+      'entity_id' => array(
+        'description' => 'Primary Key: entity id.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0),
+      'entity_type' => array(
+        'description' => 'An entity type, typical node, user, term but potentially other types.',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => ''),
+      'metric' => array(
+        'description' => 'The name of the Google Analytics metric.',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => ''),
+      'event_date' => array(
+        'description' => 'The date for the data.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0),
+      'value' => array(
+        'description' => 'The actual value.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0),
+    ),
+    'indexes' => array('event_date' => array('event_date')),
+    'primary key' => array('entity_id', 'entity_type', 'metric', 'event_date'),
+  );
+
+  db_create_table($ret, 'ga_importer_data', $schema['ga_importer_data']);
+
+  return $ret;
+}
+
