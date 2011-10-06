@@ -306,7 +306,7 @@ function _draggableviews_build_hierarchy(&$info) {
 
     $depth = ($depth == -1) ? 0 : $depth;
 
-    $nodes[$nid]['order'][$depth + 1] = DRAGGABLEVIEWS_MIN_VALUE;
+    $nodes[$nid]['order'][$depth + 1] = 3;
     $nodes[$nid]['depth']             = $depth;
   }
 
