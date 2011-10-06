@@ -175,7 +175,8 @@ function _draggableviews_info($view, $info = NULL) {
       else {
         // Default position of new nodes. We cannot use $view->total_rows instead of 99999999 because
         // $view->total_rows will not be calculated if paging is not used.
-        $info['nodes'][$row->{$view->base_field}]['order'][0] = $info['default_on_top'] == 1 ? -1 : 99999999;
+        //$info['nodes'][$row->{$view->base_field}]['order'][0] = $info['default_on_top'] == 1 ? -1 : 99999999;
+        $info['nodes'][$row->{$view->base_field}]['order'][0] = 3;
       }
       if (isset($info['hierarchy'])) {
         $info['nodes'][$row->{$view->base_field}]['parent'] = $info['hierarchy']['field']['handler']->get((int)$row->{$info['hierarchy']['field']['field_alias']});
@@ -680,7 +681,7 @@ function _draggableviews_save_hierarchy($info) {
     
     if(function_exists('expire_cache_derivative')){
       $paths['front'] = '<front>';
-   //   expire_cache_derivative($paths);
+      expire_cache_derivative($paths);
     }
     $node->nid = $nid;
     $node->type = 'article';
