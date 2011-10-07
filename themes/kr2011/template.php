@@ -372,6 +372,6 @@ function kr2011_preprocess_block(&$variables) {
   $variables['template_files'][] = 'block-' . $variables['block']->module . '-' . $variables['block']->delta;
 }
 function kr2011_nopremium_message($node){
-  $html = l('Login', 'user',array('attributes'=>array('destination' => 'node/666')));
+  $html = l('Login', 'user',array('query' => 'node/'.$node->nid));
   return $html.check_markup(t(nopremium_get_message($node->type)));
 }
