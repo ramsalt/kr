@@ -1,4 +1,3 @@
-; $Id: README.txt,v 1.1.2.1 2010/10/23 07:25:53 tjfulopp Exp $
 
 Google Analytics Counter is a lightweight page view counter drawing on data collected by Google Analytics.
 
