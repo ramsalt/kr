@@ -139,7 +139,7 @@
 .body-content p, .body-content ol, .body-content ul{
 	font-family: Georgia, Arial, Helvetica;
 	font-size: 15px; /* org 14 YWB */
-	line-height: 19px;
+	line-height: 1.467em;
         color: #000000; /* added YWB */
 }
 .view-also-read .views-row .views-field-created .field-content{
