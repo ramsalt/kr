@@ -85,19 +85,22 @@ Ha en fin dag!
     <div class="clear"></div>
   </div> <!-- /#header -->
   
-  <?php if (menu_tree('menu-top-menu')): ?>
+  <?php /*if (menu_tree('navigation')):*/
+    if (user_is_logged_in()): ?>
+
     <div id="top-menu" class="clearfix">
-    	<?php /* ?>
+    	
       <ul id="login-menu">
         <?php if (user_is_logged_in()) : ?>
-          <li><?php print t('Hello'); ?> <?php print l($GLOBALS['user']->name, 'user') ?></li>
-          <li><?php print l(t('Log Out'), 'logout'); ?></li>
+          <li class="hello"><?php print t('Hei ') . $GLOBALS['user']->name . '!'; ?></li>
+          <li><?php print l(t('Brukerprofil'), 'user') ?></li>
+          <li><?php print l(t('Logg ut'), 'logout'); ?></li>
         <?php else : ?>
-          <li class="hello"><?php print t('Hello Visitor!'); ?></li>
-          <li><?php print l(t('Log In'), 'user') ?> <?php print t('or'); ?> <?php print l(t('Register'),'user/register'); ?></li>
+          <li class="hello"><?php print t('Hei!'); ?></li>
+          <li><?php print l(t('Logg inn'), 'user') ?> <?php print t('eller'); ?> <?php print l(t('register deg'),'user/register'); ?></li>
         <?php endif; ?>
       </ul>
-		 <?php */ ?>
+		 
       <?php print menu_tree('menu-top-menu'); ?>
     </div>
   <?php endif; ?>		

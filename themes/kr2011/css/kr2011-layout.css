@@ -13,7 +13,7 @@ body #wrapper #logo-area{
 body div#nav{
 	margin-bottom: 0px;
 	height: 30px;
-	background: url("../images/spirite1.png") repeat-x scroll 0px -96px transparent;
+	/*background: url("../images/spirite1.png") repeat-x scroll 0px -96px transparent;*/
 	overflow: hidden;
 }
 
