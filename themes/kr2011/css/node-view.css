@@ -137,7 +137,10 @@
 	font-size: 18px;
 	line-height: 22px;
 }
-
+.kommentar{
+    font-family: Georgia, Arial, Helvetica;
+    font-size: 15px;
+}
 .body-content p, .body-content ol, .body-content ul{
 	font-family: Georgia, Arial, Helvetica;
 	font-size: 15px; /* org 14 YWB */
