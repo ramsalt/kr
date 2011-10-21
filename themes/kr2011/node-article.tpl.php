@@ -30,8 +30,8 @@
 ?>
 <?php if ($ingress): ?>
 	<div class="ingress">
-      <?php if (isset($node->taxonomy[80])) print '<div class="kommentar2">KOMMENTAR:</div>' ?>
-    <?php print $ingress_value; ?></div><!-- /.ingress -->
+            <?php print $ingress_value; ?>
+        </div><!-- /.ingress -->
 <?php endif; ?>
 <div class="section-date-author"> 
   
@@ -59,7 +59,9 @@
   <?php if ($sitat){ print $sitat_content; } ?>
   
   <div property="dc:description">
-    <?php print $body; ?>
+      <?php if (isset($node->taxonomy[80])) print '<div class="kommentar">KOMMENTAR:</div>' ?>
+
+      <?php print $body; ?>
   </div>
   
   <?php if ($documentcloud_doc): ?>
