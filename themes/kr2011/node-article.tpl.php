@@ -29,7 +29,9 @@
  */
 ?>
 <?php if ($ingress): ?>
-	<div class="ingress"><?php print $ingress_value; ?></div><!-- /.ingress -->
+	<div class="ingress">
+      <?php if (isset($node->taxonomy[80])) print '<div class="kommentar2">KOMMENTAR:</div>' ?>
+    <?php print $ingress_value; ?></div><!-- /.ingress -->
 <?php endif; ?>
 <div class="section-date-author"> 
   
@@ -55,7 +57,10 @@
   <?php endif; ?>
   <?php if ($fakta): ?><div class="fakta"><span class="faktatittel">Fakta</span><?php print $fakta; ?></div><?php endif; ?>
   <?php if ($sitat){ print $sitat_content; } ?>
-  <div property="dc:description"><?php print $body; ?></div>
+  
+  <div property="dc:description">
+    <?php print $body; ?>
+  </div>
   
   <?php if ($documentcloud_doc): ?>
     <h2><?php print t("Source Documents ");?></h2>
