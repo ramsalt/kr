@@ -1182,8 +1182,8 @@ p.search-snippet  {
 
 input.form-text {
   border:1px solid #DADADA;
-  color:#808285;
-  font-size:auto;
+  /* color:#808285;*/
+  font-size:inherit;
   height:17px;
   padding:5px 3px 5px 5px;
 }
@@ -1361,5 +1361,5 @@ cursor: auto;
 .topichubs-layout-wrapper .more-link {margin: 15px 45px 0 0;}
 
 fieldset {
-    widht: 100%;
+    width: 100%;
 }
