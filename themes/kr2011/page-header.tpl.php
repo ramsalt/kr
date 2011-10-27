@@ -85,14 +85,14 @@ Ha en fin dag!
     <div class="clear"></div>
   </div> <!-- /#header -->
   
-  <?php /*if (menu_tree('navigation')):*/
-    if (user_is_logged_in()): ?>
+  <?php /*if (menu_tree('navigation')):  . $GLOBALS['user']->name . '!' */
+    if (menu_tree('navigation')): ?>
 
     <div id="top-menu" class="clearfix">
     	
       <ul id="login-menu">
         <?php if (user_is_logged_in()) : ?>
-          <li class="hello"><?php print t('Hei ') . $GLOBALS['user']->name . '!'; ?></li>
+          <li class="hello"><?php print t('Hei! '); ?></li>
           <li><?php print l(t('Brukerprofil'), 'user') ?></li>
           <li><?php print l(t('Logg ut'), 'logout'); ?></li>
         <?php else : ?>
