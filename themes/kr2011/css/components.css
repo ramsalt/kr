@@ -1364,7 +1364,7 @@ fieldset {
     width: 100%;
 }
 
-input.form-autocomplete{
+html.js input.form-autocomplete{
     background-position: 100% 7px;
 }
 
