@@ -1363,3 +1363,7 @@ cursor: auto;
 fieldset {
     width: 100%;
 }
+
+input.form-autocomplete{
+    background-position: 100% 7px;
+}
