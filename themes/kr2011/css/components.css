@@ -1183,7 +1183,7 @@ p.search-snippet  {
 input.form-text {
   border:1px solid #DADADA;
   color:#808285;
-  font-size:1.25em;
+  font-size:auto;
   height:17px;
   padding:5px 3px 5px 5px;
 }
@@ -1200,7 +1200,8 @@ form#search-form input.form-text {
   }
 
 fieldset.search-advanced {
-  margin: 15px 0 0 0; font-family: font-family: Arial, Helvetica, sans-serif; padding: 10px;}
+  margin: 15px 0 0 0; font-family: font-family:Arial, Helvetica, sans-serif; padding: 10px;
+}
 
 fieldset.search-advanced legend {
   font-size: 1.3em;
@@ -1310,7 +1311,7 @@ form#user-login li.openid-link a {
   color: #780F2C;
   }
 
-form#user-login label {color: #}
+form#user-login label {}
 
 .combined-header {
   clear:both;
@@ -1359,5 +1360,6 @@ cursor: auto;
 
 .topichubs-layout-wrapper .more-link {margin: 15px 45px 0 0;}
 
-
-
+fieldset {
+    widht: 100%;
+}
