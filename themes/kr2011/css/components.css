@@ -1367,3 +1367,7 @@ fieldset {
 input.form-autocomplete{
     background-position: 100% 7px;
 }
+
+#search_box_top input.form-text{
+    width: 150px
+}
