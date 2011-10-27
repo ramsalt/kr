@@ -210,3 +210,7 @@
 .body-content .kommentar{
 
 }
+
+.nopremium-message{
+    border: 1px solid black;
+}
