@@ -109,7 +109,7 @@ Ha en fin dag!
     <div id="logo"><a href="<?php print check_url($front_page); ?>" title="<?php print check_plain($site_name); ?>"><img src="<?php print check_url($logo); ?>" alt="<?php print check_plain($site_name); ?>" /></a>
     </div><!--/ #logo -->
   <div class="fagpresse">
-      <img src="/sites/default/files/fagpressepris.jpg" alt="fagpressepris" />
+      <img src="/sites/default/files/fagpressepris.jpg" width="42" height="90"alt="fagpressepris" />
       <h3>Vinner av Fagpresseprisen</h3>
       <span><a href="<?php print url('node/81011'); ?>" title="Kommunal Rapport vant fagpresseprisen">Norges beste fagblad!</a></span>
   </div>    
