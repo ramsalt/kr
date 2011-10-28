@@ -374,7 +374,11 @@ function kr2011_preprocess_block(&$variables) {
 
 function kr2011_nopremium_message($node){
   $html = check_markup(t(nopremium_get_message($node->type)));
-  //$html .= l('Login', 'user',array('query' => array('destination' => 'node/'.$node->nid))).' '. t('too see full content.');
+  $html .= '<p>';
+  $html .= 'Registrer deg | ';
+  $html .= l(t('Login'), 'user',array('query' => array('destination' => 'node/'.$node->nid))).' | ';
+  $html .= l(t('Request new password'), 'user/password',array('query' => array('destination' => 'node/'.$node->nid)));
+  $html .= '</p>';
   $block = module_invoke('formblock', 'block', 'view', 'user_register');
   $html .= $block['content'];
   return $html;
@@ -385,6 +389,7 @@ function kr2011_nopremium_message($node){
  *
  * In this case, overrides three user functions
  */
+/*
 function kr2011_theme() {
   return array(
     'user_login' => array(
@@ -401,8 +406,11 @@ function kr2011_theme() {
     ),
   );
 }
-
+*/
+/*
 function kr2011_preprocess_user_register(&$variables) {
   $variables['intro_text'] = t('This is my super awesome reg form');
   $variables['rendered'] = drupal_render($variables['form']);
 }
+
+ */
