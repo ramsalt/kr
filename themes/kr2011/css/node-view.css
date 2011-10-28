@@ -238,4 +238,5 @@ form#user-register input, select {
 
 form#user-register input.form-submit{
     background: #0F7625;
+    font-size: 1em;
 }
