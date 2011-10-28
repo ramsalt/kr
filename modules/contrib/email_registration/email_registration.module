@@ -121,8 +121,9 @@ function custom_email_registration_name_submit($form, &$form_state) {
     if (user_authenticate($auth)) {
       // Authenticated, add a message and go to the users account
       // Since the standard workflow doesn't work, no other messages should appear.
-      drupal_set_message(t('Registration successful. You are now logged in.'));
-      $form_state['redirect'] = 'user/'. $account->uid;
+      // YWB: Removed because we use login toboggan
+      /*drupal_set_message(t('Registration successful. You are now logged in.'));
+      $form_state['redirect'] = 'user/'. $account->uid;*/
     }
   }
 }
