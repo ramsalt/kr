@@ -215,7 +215,10 @@
     background: none repeat scroll 0 0 #F3F3F3;
     border: 3px solid #0F7625;
 }
-
+.nopremium-message p{
+     padding: 25px 25px 0 35px;
+     font: 1.2em Helvetica,Arial,"Nimbus Sans L",sans-serif;
+}
 .nopremium-message form#user-register fieldset{
     border:0;
 }
@@ -231,4 +234,8 @@
 }
 form#user-register input, select {
     margin: 0 0 5px;
+}
+
+form#user-register input.form-submit{
+    background: #0F7625;
 }
