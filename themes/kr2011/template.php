@@ -371,8 +371,38 @@ function kr2011_preprocess_block(&$variables) {
   $variables['template_files'][] = 'block-' . $variables['block']->module;
   $variables['template_files'][] = 'block-' . $variables['block']->module . '-' . $variables['block']->delta;
 }
+
 function kr2011_nopremium_message($node){
   $html = check_markup(t(nopremium_get_message($node->type)));
-  $html .= l('Login', 'user',array('query' => array('destination' => 'node/'.$node->nid))).' '. t('too see full content.');
+  //$html .= l('Login', 'user',array('query' => array('destination' => 'node/'.$node->nid))).' '. t('too see full content.');
+  $block = module_invoke('formblock', 'block', 'view', 'user_register');
+  $html .= $block['content'];
   return $html;
+}
+
+/**
+ * Registers overrides for various functions.
+ *
+ * In this case, overrides three user functions
+ */
+function kr2011_theme() {
+  return array(
+    'user_login' => array(
+      'template' => 'user-login',
+      'arguments' => array('form' => NULL),
+    ),
+    'user_register' => array(
+      'template' => 'user-register',
+      'arguments' => array('form' => NULL),
+    ),
+    'user_pass' => array(
+      'template' => 'user-pass',
+      'arguments' => array('form' => NULL),
+    ),
+  );
+}
+
+function kr2011_preprocess_user_register(&$variables) {
+  $variables['intro_text'] = t('This is my super awesome reg form');
+  $variables['rendered'] = drupal_render($variables['form']);
 }
