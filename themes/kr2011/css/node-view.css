@@ -212,5 +212,23 @@
 }
 
 .nopremium-message{
-    border: 1px solid black;
+    background: none repeat scroll 0 0 #F3F3F3;
+    border: 3px solid #0F7625;
+}
+
+.nopremium-message form#user-register fieldset{
+    border:0;
+}
+
+.nopremium-message form#user-register legend{
+    display: none;
+}
+.nopremium-message form#user-register{
+    margin:0;
+}
+.nopremium-message form#user-register .form-item{
+    margin: 0;
+}
+form#user-register input, select {
+    margin: 0 0 5px;
 }
