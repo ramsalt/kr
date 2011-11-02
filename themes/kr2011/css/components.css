@@ -1371,7 +1371,3 @@ html.js input.form-autocomplete{
 #search_box_top input.form-text{
     width: 150px
 }
-
-div.password-description{
-    display: none !important;
-}

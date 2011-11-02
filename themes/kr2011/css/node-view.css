@@ -219,17 +219,17 @@
      padding: 25px 25px 0 35px;
      font: 1.2em Helvetica,Arial,"Nimbus Sans L",sans-serif;
 }
-.nopremium-message form#user-register fieldset{
+form#user-register fieldset{
     border:0;
 }
 
-.nopremium-message form#user-register legend{
+form#user-register legend{
     display: none;
 }
-.nopremium-message form#user-register{
+form#user-register{
     margin:0;
 }
-.nopremium-message form#user-register .form-item{
+form#user-register .form-item{
     margin: 0;
 }
 form#user-register input, select {
@@ -240,7 +240,9 @@ form#user-register input.form-submit{
     background: #0F7625;
     font-size: 1em;
 }
-
+div.password-description{
+    display: none !important;
+}
 .block-google_analytics_counter{
     display: none;
 }
