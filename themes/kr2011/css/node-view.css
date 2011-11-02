@@ -226,7 +226,7 @@ form#user-register fieldset{
 form#user-register legend{
     display: none;
 }
-form#user-register{
+.nopremium-message form#user-register{
     margin:0;
 }
 form#user-register .form-item{
