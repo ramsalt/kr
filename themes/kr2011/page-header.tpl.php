@@ -95,10 +95,10 @@ Ha en fin dag!
           <li class="hello"><?php print t('Hei! '); ?></li>
           <li><?php print l(t('Brukerprofil'), 'user') ?></li>
           <li><?php print l(t('Logg ut'), 'logout'); ?></li>
-        <?php else : ?>
+        <?php /*else : ?>
           <li class="hello"><?php print t('Hei!'); ?></li>
           <li><?php print l(t('Logg inn'), 'user') ?> <?php print t('eller'); ?> <?php print l(t('register deg'),'user/register'); ?></li>
-        <?php endif; ?>
+        <?php endif;*/ ?>
       </ul>
 		 
       <?php print menu_tree('menu-top-menu'); ?>
