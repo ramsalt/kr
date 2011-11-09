@@ -29,7 +29,12 @@ function kr_import_menu () {
 
 function kr_import_old_article_callback ($sourceid) {
 	$method = 'Articles';
-	print($sourceid1);
+	print $sourceid;
+	if($pos = strpos($sourceid, '.')) {
+		print $pos;
+		$sourceid = substr($sourceid, 0, $pos);
+	}
+	
 	$map_table = 'migrate_map_' . strtolower($method);
 	
 	if ($destid1 = $migrate_map = db_result(db_query("SELECT mt.destid1 FROM $map_table mt LEFT JOIN kr_import_articles ka ON ka.krid = mt.sourceid1 WHERE ka.objid = %d", $sourceid))) {

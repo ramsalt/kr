@@ -29,8 +29,9 @@ class ArticlesMigration extends Migration {
     );
 
     $query = db_select('kr_import_articles', 'a')
-             ->fields('a', array('krid', 'title', 'objid', 'data', 'locked', 'hidden', 'sections', 'created', 'modified', 'expire'))
+             ->fields('a', array('krid', 'title', 'objid', 'data', 'locked', 'hidden', 'sections', 'created', 'modified', 'expire', 'parobjid'))
 						 ->condition('subid', 0)
+						 ->condition('importable', 1)
              ->condition('objecttype', 'article');
 
     // Create a MigrateSource object, which manages retrieving the input data.
@@ -85,6 +86,7 @@ class ArticlesMigration extends Migration {
 	}
 	
 	public function prepareRow($current_row) {
+		//drush_print_r($current_row);
 		$current_row->data = unserialize($current_row->data);
 		$current_row->sections = unserialize($current_row->sections);
 		$current_row->body = $current_row->data['body'];
@@ -102,19 +104,25 @@ class ArticlesMigration extends Migration {
 		}
 		
 		$current_row->free = $current_row->data['free'];
-		
-		$categories = array();
-		foreach ($current_row->sections as $key => $section) {
-			$query = db_select('kr_import_topics', 't')
-             ->fields('t', array('title', 'objid'))
-						 ->condition('objid', $section['objid']);
-			$result = $query->execute();
-		
-			foreach($result as $row) {
-				$categories[] = $row->title;
+		if(count($current_row->sections) > 0) {
+			$categories = array();
+			foreach ($current_row->sections as $key => $section) {
+				$query = db_select('kr_import_topics', 't')
+	             ->fields('t', array('title', 'objid'))
+							 ->condition('objid', $section['objid']);
+				$result = $query->execute();
+			
+				foreach($result as $row) {
+					$categories[] = $row->title;
+				}
 			}
+			$current_row->categories = implode('|', $categories);	
+		} else {
+			$this->getParentTopic($current_row->parobjid);
+			$current_row->categories = $this->found_parent;
+			drush_print('Fixed parents for: '.$current_row->krid);
 		}
-		$current_row->categories = implode('|', $categories);
+		
 		
 		//drush_print_r($current_row->author[0]['name']);
 		$current_row->show_author = 0;
@@ -141,6 +149,28 @@ class ArticlesMigration extends Migration {
 
     return TRUE;
   }
+
+	private function getParentTopic ($id) {
+		$query = db_select('kr_import_articles', 'k')
+             ->fields('k', array('objid', 'title', 'parobjid'))
+             ->condition('objid', $id);
+		$result = $query->execute();
+		if($record = $result->fetchObject()) {
+			if($record->title == 'Temaer') {
+				drush_print($this->current_parent);
+				$topic_query = db_select('kr_import_topics', 't')
+	             ->fields('t', array('title', 'objid'))
+							 ->condition('objid', $this->current_parent);
+				$tresult = $topic_query->execute();
+				if($trecord = $tresult->fetchObject()) {
+					$this->found_parent = $trecord->title;	
+				}
+			} else if($record->parobjid != 0) {
+				$this->current_parent = $record->objid;
+				$this->getParentTopic($record->parobjid);
+			}
+		}
+	}
 }
 
 class TopicsMigration extends Migration {
@@ -187,6 +217,7 @@ class TopicsMigration extends Migration {
 		
     return TRUE;
   }
+
 }
 /*
  * Not in use. Too slow. 
