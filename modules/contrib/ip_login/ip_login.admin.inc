@@ -145,8 +145,8 @@ function _ip_login_users_display_table() {
   $rows = array();
   $result = db_query(
     "SELECT users.name, users.uid, ip_login_user.ip_match
-     FROM users
-     INNER JOIN ip_login_user ON ip_login_user.uid = users.uid
+     FROM {users}
+     INNER JOIN {ip_login_user} ON ip_login_user.uid = users.uid
      ORDER BY ip_login_user.ip_match");
   while ($row = db_fetch_object($result)) {
     $rows[] = array(

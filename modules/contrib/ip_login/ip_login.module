@@ -452,17 +452,14 @@ function ip_login_user_logout() {
     $_SESSION[IP_UID_MATCH] = 0;
   }
 
+  // get user and see if they can use another account
   global $user;
-  watchdog('user', 'Session closed for %name.', array('%name' => $user->name));
-
-  // store whether this user can log back in automatically
   $can_login_as_another_user = _ip_login_can_use_alternate_account($user);
 
-  // Destroy the current session, if we have one; wipe the IP Login UID to ensure no loops on call to hook_user(logout).
-  // from php.net: "session_destroy() destroys all of the data associated with the current session. It does not unset
-  // any of the global variables associated with the session, or unset the session cookie.
+  // Wipe out the current session, if we have one, to ensure no loops on call to hook_user(logout).
+  watchdog('user', 'Session closed for %name.', array('%name' => $user->name));
   if (session_name() <> '') {
-    session_destroy(); //TODO fix/remove this line as it adds warnings to watchdog: http://drupal.org/node/1219692
+    unset($_SESSION);
   }
 
   // Call other module's hook_user logout functions
@@ -479,7 +476,7 @@ function ip_login_user_logout() {
   $_SESSION[LOGIN_AS_DIFFERENT_USER] = $can_login_as_another_user;
   $_SESSION[LOGIN_BY_IP_COMPLETE] = FALSE;
 
-  if (!$_SESSION[LOGIN_AS_DIFFERENT_USER]) {
+  if (!$can_login_as_another_user) {
     $message = t('This account does not have permission to log out once logged in automatically. You have been logged back in.');
     drupal_set_message($message, 'warning');
   }
