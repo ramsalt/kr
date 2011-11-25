@@ -90,14 +90,20 @@ Ha en fin dag!
    * <li class="hello"><?php print t('Logget inn som '). $GLOBALS['user']->mail . ' '; ?></li>
           
    */
+  print_r($GLOBALS['user']->ip_login_match);
     if (menu_tree('navigation')): ?>
 
     <div id="top-menu" class="clearfix">
     	
       <ul id="login-menu">
         <?php if (user_is_logged_in()) : ?>
-          <li><?php print l($GLOBALS['user']->mail, 'user/' . $GLOBALS['user']->uid . '/edit') ?></li>
-          <li><?php print l(t('Logg ut'), 'logout'); ?></li>
+          <?php if (!empty($GLOBALS['user']->ip_login_match)) : ?>
+              <li>Automatisk logget inn fra <?php print $GLOBALS['user']->name ?></li>
+          <?php else : ?>
+              <li><?php print l($GLOBALS['user']->mail, 'user/' . $GLOBALS['user']->uid . '/edit') ?></li>
+              <li><?php print l(t('Logg ut'), 'logout'); ?></li>
+          <?php endif; ?>
+              
         <?php else : ?>
           <?php /*<li class="hello"><?php print t('Hei!'); ?></li>*/ ?>
           <li><?php print l(t('Logg inn'), 'user', array('html' => true, 'query' => drupal_get_destination())) ?> <?php print t('eller'); ?> <?php print l(t('register deg'),'user/register'); ?></li>
