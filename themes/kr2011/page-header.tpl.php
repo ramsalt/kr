@@ -90,7 +90,6 @@ Ha en fin dag!
    * <li class="hello"><?php print t('Logget inn som '). $GLOBALS['user']->mail . ' '; ?></li>
           
    */
-  print_r($GLOBALS['user']->ip_login_match);
     if (menu_tree('navigation')): ?>
 
     <div id="top-menu" class="clearfix">
