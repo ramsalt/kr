@@ -129,7 +129,8 @@ function pollanon_handle_vote_submit($form, &$form_state) {
 
   $cookie_name = 'pa-' . $node->nid;
   //Set flag: User has submitted this form
-  setcookie($cookie_name, '1', time()+3600*24*31, '/'); // Expire in 3 months
+  /* YWB: KR want people to be able to vote after ending browser time()+3600*24*31 */
+  setcookie($cookie_name, '1', 0, '/'); // Expire in 3 months
   //Remove the key cookie
   setcookie('pa-submit', '', time() - 99999, '/');
 }
