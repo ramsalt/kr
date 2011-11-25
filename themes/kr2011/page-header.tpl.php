@@ -100,7 +100,7 @@ Ha en fin dag!
           <li><?php print l(t('Logg ut'), 'logout'); ?></li>
         <?php else : ?>
           <?php /*<li class="hello"><?php print t('Hei!'); ?></li>*/ ?>
-          <li><?php print l(t('Logg inn'), 'user') ?> <?php print t('eller'); ?> <?php print l(t('register deg'),'user/register'); ?></li>
+          <li><?php print l(t('Logg inn'), 'user', array('html' => true, 'query' => drupal_get_destination())) ?> <?php print t('eller'); ?> <?php print l(t('register deg'),'user/register'); ?></li>
         <?php endif; ?>
       </ul>
 		  
