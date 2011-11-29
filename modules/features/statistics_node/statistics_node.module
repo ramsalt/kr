@@ -1,6 +1,7 @@
 <?php
 
 include_once('statistics_node.features.inc');
+require_once('lib/parsecsv.lib.php');
 
 function statistics_node_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
   switch ($op) {
@@ -66,23 +67,17 @@ function _statistics_node_parse_chart_values($values) {
 function _statistics_node_generate_table ($values) {
 	_statistics_node_init_table ();
 	$values_array = _statistics_node_parse_table_values($values);
-	return theme('table', $values_array['header'], $values_array['rows'], array('class'=>'data-table'));
+	return theme('table', array_shift($values_array), $values_array, array('class'=>'data-table'));
 }
 
 function _statistics_node_parse_table_values($values) {
 	$rows = explode("\n", $values);
 	
-	$data = array();
-	
-	if(count($rows) > 0) {
-		
-		$data['header'] = str_getcsv(array_shift($rows), ',', '"');		
-		foreach ($rows as $row) {
-			$data['rows'][] = str_getcsv($row, ',', '"');
-		}
-	}
+	$csv = new parseCSV();
+	$csv->heading = false;
+	$csv->parse($values);
 
-	return $data;
+	return $csv->data;
 }
 
 function _statistics_node_init_table () {
