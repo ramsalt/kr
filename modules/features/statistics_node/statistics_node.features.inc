@@ -26,6 +26,17 @@ function statistics_node_node_info() {
       'min_word_count' => '0',
       'help' => '',
     ),
+    'table' => array(
+      'name' => t('Table'),
+      'module' => 'features',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'has_body' => '0',
+      'body_label' => '',
+      'min_word_count' => '0',
+      'help' => '',
+    ),
   );
   return $items;
 }
