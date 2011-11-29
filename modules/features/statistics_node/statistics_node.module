@@ -1,0 +1,94 @@
+<?php
+
+include_once('statistics_node.features.inc');
+
+function statistics_node_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
+  switch ($op) {
+    case 'view':
+			//dpm($node);
+			if($node->type == 'chart') {
+				unset($node->content['field_values']);
+			
+      	$node->content['chart_output'] = array(
+        	'#value' => _statistics_node_generate_chart($node->field_values[0]['value']), 
+        	'#weight' => 10,
+      	);	
+			} else if($node->type == 'table') {
+				unset($node->content['field_values']);
+			
+      	$node->content['chart_output'] = array(
+        	'#value' => _statistics_node_generate_table($node->field_values[0]['value']), 
+        	'#weight' => 10,
+      	);	
+			}
+			
+      break;
+  }
+}
+
+function _statistics_node_generate_chart ($values) {
+	// Define chart type
+	// Define
+	$values_array = _statistics_node_parse_chart_values($values);
+	dsm($values_array);
+	$example = array(
+	'#plugin'    => 'google', // Google Charts API will be used
+  '#type'     => 'line2D', // To show a simple 2D line chart
+  '#color'    => '336699', // background color, in RRGGBB format
+  '#title'    => t('2015 Sales Projection'), // The chart title
+ 		$values_array[0],$values_array[1] //Some basic data to test our chart
+	);
+	return charts_chart($example);
+}
+
+function _statistics_node_parse_chart_values($values) {
+	$rows = explode("\n", $values);
+	
+	$data = array();
+	
+	if(count($rows) > 0) {
+		$header = explode(';', array_shift($rows));
+		foreach($header as $key => $legend) {
+			$data[$key] = array('#legend'=>$legend);
+		}	
+		
+		foreach ($rows as $row) {
+			$values = explode(';', $row);
+			foreach($values as $key => $value) {
+				$data[$key][] = (int)$value;
+			}
+		}
+	}
+
+	return $data;
+}
+
+function _statistics_node_generate_table ($values) {
+	_statistics_node_init_table ();
+	$values_array = _statistics_node_parse_table_values($values);
+	return theme('table', $values_array['header'], $values_array['rows'], array('class'=>'data-table'));
+}
+
+function _statistics_node_parse_table_values($values) {
+	$rows = explode("\n", $values);
+	
+	$data = array();
+	
+	if(count($rows) > 0) {
+		
+		$data['header'] = str_getcsv(array_shift($rows), ',', '"');		
+		foreach ($rows as $row) {
+			$data['rows'][] = str_getcsv($row, ',', '"');
+		}
+	}
+
+	return $data;
+}
+
+function _statistics_node_init_table () {
+	$path = drupal_get_path('module', 'statistics_node');
+	drupal_add_js($path.'/js/statisticsTable.js');
+	drupal_add_js($path.'/datatables/media/js/jquery.dataTables.js');
+	drupal_add_css($path.'/datatables/media/css/demo_table.css');
+	drupal_add_css($path.'/statistics_node_table.css');
+}
