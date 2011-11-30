@@ -38,8 +38,8 @@ function _jqplot_charts_chart ($id, &$data) {
 	}	
 	
 	// Define defaults!
-	dsm($series);
-	dsm($series_options);
+	//dsm($series);
+	//dsm($series_options);
 	
 	switch ($data['#type']) {
 		case 'line2D':
@@ -61,7 +61,6 @@ function _jqplot_charts_chart ($id, &$data) {
 
 function _jqplot_charts_init_jqplot () {
 	$path = libraries_get_path('jqplot');
-	dsm($path);
 	$plugins = $path.'/plugins';
 	drupal_add_js($path.'/jquery.jqplot.min.js');
 	drupal_add_js($plugins.'/jqplot.canvasAxisLabelRenderer.min.js');
