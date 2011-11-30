@@ -38,6 +38,8 @@ function _jqplot_charts_chart ($id, &$data) {
 	}	
 	
 	// Define defaults!
+	dsm($series);
+	dsm($series_options);
 	
 	switch ($data['#type']) {
 		case 'line2D':
