@@ -11,7 +11,7 @@ function statistics_node_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
 				unset($node->content['field_values']);
 			
       	$node->content['chart_output'] = array(
-        	'#value' => _statistics_node_generate_chart($node->field_values[0]['value']), 
+        	'#value' => _statistics_node_generate_chart($node), 
         	'#weight' => 10,
       	);	
 			} else if($node->type == 'table') {
@@ -27,40 +27,43 @@ function statistics_node_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
   }
 }
 
-function _statistics_node_generate_chart ($values) {
+function _statistics_node_generate_chart ($node) {
 	// Define chart type
 	// Define
-	$values_array = _statistics_node_parse_chart_values($values);
-	dsm($values_array);
-	$example = array(
-	'#plugin'    => 'google', // Google Charts API will be used
-  '#type'     => 'line2D', // To show a simple 2D line chart
-  '#color'    => '336699', // background color, in RRGGBB format
-  '#title'    => t('2015 Sales Projection'), // The chart title
- 		$values_array[0],$values_array[1] //Some basic data to test our chart
+	$values = $node->field_values[0]['value'];
+	$data_array = _statistics_node_parse_chart_values($values);
+	
+	$chart_data = array(
+		'#plugin'    => 'jqplot', // Google Charts API will be used
+  	'#type'     => 'line2D', // To show a simple 2D line chart
+  	'#color'    => '336699', // background color, in RRGGBB format
+  	'#title'	  => $node->title,
 	);
-	return charts_chart($example);
+	
+	foreach($data_array as $data) {
+		$chart_data[] = $data;
+	}
+	
+	return charts_chart($chart_data);
 }
 
 function _statistics_node_parse_chart_values($values) {
-	$rows = explode("\n", $values);
+	$csv = new parseCSV();
+	$csv->heading = false;
+	$csv->parse($values);
 	
 	$data = array();
 	
-	if(count($rows) > 0) {
-		$header = explode(';', array_shift($rows));
-		foreach($header as $key => $legend) {
-			$data[$key] = array('#legend'=>$legend);
-		}	
-		
-		foreach ($rows as $row) {
-			$values = explode(';', $row);
-			foreach($values as $key => $value) {
-				$data[$key][] = (int)$value;
-			}
+	foreach(array_shift($csv->data) as $key => $legend) {
+		$data[$key] = array('#legend'=>$legend);
+	}
+	
+	foreach($csv->data as $row) {
+		foreach ($row as $key=>$val) {
+			$data[$key][] = $val;
 		}
 	}
-
+	
 	return $data;
 }
 
@@ -70,9 +73,7 @@ function _statistics_node_generate_table ($values) {
 	return theme('table', array_shift($values_array), $values_array, array('class'=>'data-table'));
 }
 
-function _statistics_node_parse_table_values($values) {
-	$rows = explode("\n", $values);
-	
+function _statistics_node_parse_table_values($values) {	
 	$csv = new parseCSV();
 	$csv->heading = false;
 	$csv->parse($values);
