@@ -60,7 +60,7 @@ function _statistics_node_parse_chart_values($values) {
 	
 	foreach($csv->data as $row) {
 		foreach ($row as $key=>$val) {
-			$data[$key][] = $val;
+			$data[$key][] = (int)$val;
 		}
 	}
 	

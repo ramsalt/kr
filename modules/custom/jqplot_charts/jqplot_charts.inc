@@ -44,7 +44,7 @@ function _jqplot_charts_chart ($id, &$data) {
 	switch ($data['#type']) {
 		case 'line2D':
 			drupal_add_js('(function ($) { Drupal.behaviors.jqplotCharts = function(context) {
-					 $.jqplot("'.$id.'", [[1,3,4],[5,4,3]],{
+					 $.jqplot("'.$id.'", '.drupal_to_js($series).',{
 					 legend:{show:true},
 					 series: '.drupal_to_js($series_options).'
 					}); 
