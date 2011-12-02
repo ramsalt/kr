@@ -50,6 +50,7 @@ function _statistics_node_generate_chart ($node) {
 function _statistics_node_parse_chart_values($values) {
 	$csv = new parseCSV();
 	$csv->heading = false;
+	$csv->delimiter = ';';
 	$csv->parse($values);
 	
 	$data = array();
