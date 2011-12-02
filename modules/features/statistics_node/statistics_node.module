@@ -77,6 +77,7 @@ function _statistics_node_generate_table ($values) {
 function _statistics_node_parse_table_values($values) {	
 	$csv = new parseCSV();
 	$csv->heading = false;
+	$csv->delimiter = ';';
 	$csv->parse($values);
 
 	return $csv->data;
