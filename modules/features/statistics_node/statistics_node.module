@@ -17,9 +17,9 @@ function statistics_node_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
 			} else if($node->type == 'table') {
 				unset($node->content['field_values']);
 			
-      	$node->content['chart_output'] = array(
+      	$node->content['table_output'] = array(
         	'#value' => _statistics_node_generate_table($node->field_values[0]['value']), 
-        	'#weight' => 10,
+        	'#weight' => -1,
       	);	
 			}
 			
@@ -35,9 +35,9 @@ function _statistics_node_generate_chart ($node) {
 	
 	$chart_data = array(
 		'#plugin'    => 'jqplot', // Google Charts API will be used
-  	'#type'     => 'line2D', // To show a simple 2D line chart
-  	'#color'    => '336699', // background color, in RRGGBB format
-  	'#title'	  => $node->title,
+  		'#type'     => 'line2D', // To show a simple 2D line chart
+	  	'#color'    => '336699', // background color, in RRGGBB format
+  		'#title'	  => $node->title,
 	);
 	
 	foreach($data_array as $data) {
@@ -53,16 +53,31 @@ function _statistics_node_parse_chart_values($values) {
 	$csv->delimiter = ';';
 	$csv->parse($values);
 	
+	$x_key = -1;
+	
 	$data = array();
 	
 	foreach(array_shift($csv->data) as $key => $legend) {
+		if($legend == 'X') {
+			$x_key = $key;
+		}
 		$data[$key] = array('#legend'=>$legend);
 	}
-	
-	foreach($csv->data as $row) {
+
+	foreach($csv->data as $rid=>$row) {
 		foreach ($row as $key=>$val) {
-			$data[$key][] = (int)$val;
+			if($x_key > -1) { 
+				$xid = $row[$x_key];
+			} else {
+				$xid = $rid;
+			}
+			$data[$key][$xid] = (int)$val;
+			
 		}
+	}
+
+	if($x_key > -1) { 
+		unset($data[$x_key]);
 	}
 	
 	return $data;
