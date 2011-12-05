@@ -6,24 +6,28 @@ require_once('lib/parsecsv.lib.php');
 function statistics_node_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
   switch ($op) {
     case 'view':
-			//dpm($node);
-			if($node->type == 'chart') {
-				unset($node->content['field_values']);
+		//dpm($node);
+		if($node->type == 'chart') {
+			unset($node->content['field_values']);
 			
       	$node->content['chart_output'] = array(
         	'#value' => _statistics_node_generate_chart($node), 
         	'#weight' => 10,
       	);	
-			} else if($node->type == 'table') {
-				unset($node->content['field_values']);
+		
+		} else if($node->type == 'table') {
+			unset($node->content['field_values']);
 			
-      	$node->content['table_output'] = array(
-        	'#value' => _statistics_node_generate_table($node->field_values[0]['value']), 
-        	'#weight' => -1,
-      	);	
-			}
+	      	$node->content['table_output'] = array(
+	        	'#value' => _statistics_node_generate_table($node->field_values[0]['value']), 
+	        	'#weight' => 10,
+	      	);
+	      	if(isset($node->content['field_description'])) {
+	    		$node->content['field_description']['#weight'] = 11;
+	      	}
+		}
 			
-      break;
+      	break;
   }
 }
 
