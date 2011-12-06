@@ -10,10 +10,12 @@
 .dataTables_info {
 	font-size: 0.8333em;
 	padding: 7px 0;
+	width: auto;
 }
 
 .paging_full_numbers {
 	font-size: 0.8333em;
+	padding-top: 5px;
 }
 
 .paging_full_numbers span.paginate_active {
