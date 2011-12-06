@@ -3,6 +3,22 @@
 	font-size: 0.83333em;
 }
 
+.data-table tr.odd {
+	background-color: #DEEDF9;
+}
+
+.data-table tr.even td.sorting_1 {
+	background-color: #B9D7F3;
+}
+
+.data-table tr.odd td.sorting_1 {
+	background-color: #88BCEA;
+}
+
+.data-table tr td {
+	padding: 2px;
+}
+
 .node-type-table .field-field-description {
 	clear: both;
 	margin-top: 20px;
