@@ -12,6 +12,10 @@
 	padding: 7px 0;
 }
 
+.paging_full_numbers {
+	font-size: 0.8333em;
+}
+
 .data-table th.sorting, .dataTables_paginate > div {
 	cursor: pointer;
 }
