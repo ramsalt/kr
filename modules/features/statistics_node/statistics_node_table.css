@@ -18,8 +18,14 @@
 	padding-top: 5px;
 }
 
+.paging_full_numbers span.paginate_button {
+	background-color: #EEE;
+	border: none;
+}
+
 .paging_full_numbers span.paginate_active {
 	background-color: #88BCEA;
+	border: none;
 }
 
 .data-table th.sorting, .dataTables_paginate > div {
@@ -48,7 +54,7 @@
 
 .node-type-table .field-field-description {
 	clear: both;
-	margin-top: 20px;
+	margin-top: 5px;
 	font-size: 0.83333em;
 }
 
