@@ -16,6 +16,10 @@
 	font-size: 0.8333em;
 }
 
+.paging_full_numbers span.paginate_active {
+	background-color: #88BCEA;
+}
+
 .data-table th.sorting, .dataTables_paginate > div {
 	cursor: pointer;
 }
