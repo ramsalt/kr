@@ -11,6 +11,10 @@
 	cursor: pointer;
 }
 
+.data-table tr.odd, .data-table tr.even {
+	border: none;
+}
+
 .data-table tr.odd {
 	background-color: #DEEDF9;
 }
