@@ -1,6 +1,7 @@
 Drupal.behaviors.statisticsTable = function (context) {
 	$('.data-table').dataTable({
 		"iDisplayLength": 25,
+					"sPaginationType": "full_numbers",
 		"oLanguage": {
 			"sProcessing":   "Laster...",
 			"sLengthMenu":   "Vis _MENU_ linjer",
@@ -11,7 +12,6 @@ Drupal.behaviors.statisticsTable = function (context) {
 			"sInfoPostFix":  "",
 			"sSearch":       "Søk:",
 			"sUrl":          "",
-			"sPaginationType": "full_numbers",
 		  "oPaginate": {
 			    "sFirst":    "Første",
 			    "sPrevious": "Forrige",
