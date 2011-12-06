@@ -7,6 +7,11 @@
 	font-size: 0.83333em;
 }
 
+.dataTables_info {
+	font-size: 0.8333em;
+	padding: 7px 0;
+}
+
 .data-table th.sorting, .dataTables_paginate > div {
 	cursor: pointer;
 }

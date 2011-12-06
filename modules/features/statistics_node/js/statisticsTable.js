@@ -11,6 +11,7 @@ Drupal.behaviors.statisticsTable = function (context) {
 			"sInfoPostFix":  "",
 			"sSearch":       "Søk:",
 			"sUrl":          "",
+			"sPaginationType": "full_numbers",
 		  "oPaginate": {
 			    "sFirst":    "Første",
 			    "sPrevious": "Forrige",
