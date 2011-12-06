@@ -7,6 +7,10 @@
 	font-size: 0.83333em;
 }
 
+.data-table table.sticky-header {
+	font-size: 0.8333em;
+}
+
 .dataTables_info {
 	font-size: 0.8333em;
 	padding: 7px 0;
