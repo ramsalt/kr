@@ -40,7 +40,6 @@ function _jqplot_charts_chart ($id, &$data) {
 	}	
 	
 	$settings['series'] = $series_options;
-	$settings['axesDefaults']['tickRenderer'] = array('$.jqplot.CanvasAxisTickRenderer', array('tickOptions'=>array()));
 	$settings += _jqplot_charts_parse_settings($data['#settings']);
 
 	
@@ -75,6 +74,7 @@ function _jqplot_charts_init_jqplot () {
 	drupal_add_js($path.'/jquery.jqplot.min.js');
 	drupal_add_js($plugins.'/jqplot.canvasAxisLabelRenderer.min.js');
 	drupal_add_js($plugins.'/jqplot.canvasAxisTickRenderer.min.js');
+	drupal_add_js($plugins.'/jqplot.canvasTextRenderer.min.js');
 	drupal_add_css($path.'/jquery.jqplot.min.css');
 }
 
