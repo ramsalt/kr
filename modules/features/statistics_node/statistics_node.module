@@ -34,6 +34,8 @@ function statistics_node_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
 function _statistics_node_generate_chart ($node) {
 	// Define chart type
 	// Define
+	dsm($node);
+	
 	$values = $node->field_values[0]['value'];
 	$data_array = _statistics_node_parse_chart_values($values);
 	
@@ -43,6 +45,19 @@ function _statistics_node_generate_chart ($node) {
 	  	'#color'    => '336699', // background color, in RRGGBB format
   		'#title'	  => $node->title,
 	);
+	
+	if($node->field_chart_height[0]['value'] != null) $chart_data['#height'] = $node->field_chart_height[0]['value'];
+	if($node->field_chart_width[0]['value'] != null) $chart_data['#width'] = $node->field_chart_width[0]['value'];
+
+	if($node->field_y_min[0]['value'] != null) $chart_data['#settings']['axes']['yaxis']['min'] = $node->field_y_min[0]['value'];
+	if($node->field_y_max[0]['value'] != null) $chart_data['#settings']['axes']['yaxis']['max'] = $node->field_y_max[0]['value'];
+	if($node->field_y_ticks[0]['value'] != null) $chart_data['#settings']['axes']['yaxis']['numberTicks'] = $node->field_y_ticks[0]['value'];
+	
+	if($node->field_show_legend[0]['value'] != 'false') {
+		$chart_data['#settings']['legend']['show'] = $node->field_show_legend[0]['value'];
+		$chart_data['#settings']['legend']['location'] = $node->field_location[0]['value'];
+	}
+	
 	
 	foreach($data_array as $data) {
 		$chart_data[] = $data;
@@ -56,9 +71,9 @@ function _statistics_node_parse_chart_values($values) {
 	$csv->heading = false;
 	$csv->delimiter = ';';
 	$csv->parse($values);
-	
+
 	$x_key = -1;
-	
+
 	$data = array();
 	
 	foreach(array_shift($csv->data) as $key => $legend) {
