@@ -39,8 +39,8 @@ function _jqplot_charts_chart ($id, &$data) {
 		$series_options[$serieid]['label'] = $data[$serieid]['#legend'];
 	}	
 	
+	$settings = _jqplot_charts_parse_settings($data['#settings']);
 	$settings['series'] = $series_options;
-	$settings += _jqplot_charts_parse_settings($data['#settings']);
 
 	
 	//$test = array(array(array(2001,5), array(2002,10), array(2003,7)));
