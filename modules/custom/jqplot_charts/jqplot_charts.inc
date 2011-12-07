@@ -27,7 +27,9 @@ function _jqplot_charts_render(&$data) {
 	return '<div style="width:'.$data['#width'].'px; height:'.$data['#height'].'px;" class="jqplot-container" id="'.$id.'"></div>';
 }
 
-function _jqplot_charts_chart ($id, &$data) {	
+function _jqplot_charts_chart ($id, &$data) {
+	//dsm($data);
+
 	$series = array();
 	$series_options = array();
 	foreach (element_children($data) as $xid => $serieid) {
@@ -37,23 +39,25 @@ function _jqplot_charts_chart ($id, &$data) {
 		$series_options[$serieid]['label'] = $data[$serieid]['#legend'];
 	}	
 	
+	$settings['series'] = $series_options;
+	$settings['axesDefaults']['tickRenderer'] = array('$.jqplot.CanvasAxisTickRenderer', array('tickOptions'=>array()));
+	$settings += _jqplot_charts_parse_settings($data['#settings']);
+
 	
-	$test = array(array(array(2001,5), array(2002,10), array(2003,7)));
-	dsm(drupal_to_js($test));
+	//$test = array(array(array(2001,5), array(2002,10), array(2003,7)));
+	//dsm(drupal_to_js($test));
 	
 	
 	// Define defaults!
 	//dsm($series);
 	//dsm($series_options);
-	dsm(drupal_to_js($series));
+	//dsm(drupal_to_js($series));
 	
 	switch ($data['#type']) {
 		case 'line2D':
 			drupal_add_js('(function ($) { Drupal.behaviors.jqplotCharts = function(context) {
-					 $.jqplot("'.$id.'", '.drupal_to_js($test).',{
-					 legend:{show:true},
-					 series: '.drupal_to_js($series_options).'
-					}); 
+					 $.jqplot("'.$id.'", '.drupal_to_js($series).',
+					  '.drupal_to_js($settings).'); 
 				}; 
 			})(jQuery);', 
 			'inline');
@@ -70,6 +74,7 @@ function _jqplot_charts_init_jqplot () {
 	$plugins = $path.'/plugins';
 	drupal_add_js($path.'/jquery.jqplot.min.js');
 	drupal_add_js($plugins.'/jqplot.canvasAxisLabelRenderer.min.js');
+	drupal_add_js($plugins.'/jqplot.canvasAxisTickRenderer.min.js');
 	drupal_add_css($path.'/jquery.jqplot.min.css');
 }
 
@@ -100,4 +105,9 @@ function _jqplot_charts_series_values($series) {
   }
 
   return $data;
+}
+
+function _jqplot_charts_parse_settings ($settings) {
+	
+	return $settings;
 }
