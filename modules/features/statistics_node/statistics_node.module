@@ -45,17 +45,30 @@ function _statistics_node_generate_chart ($node) {
   		'#title'	  => $node->title,
 	);
 	
+	$chart_data['#settings']['axesDefaults']['tickRenderer'] = array('$.jqplot.CanvasAxisTickRenderer', array('tickOptions'=>array()));
+	
 	if($node->field_chart_height[0]['value'] != null) $chart_data['#height'] = $node->field_chart_height[0]['value'];
 	if($node->field_chart_width[0]['value'] != null) $chart_data['#width'] = $node->field_chart_width[0]['value'];
 
-	if($node->field_y_min[0]['value'] != null) $chart_data['#settings']['axes']['yaxis']['min'] = $node->field_y_min[0]['value'];
-	if($node->field_y_max[0]['value'] != null) $chart_data['#settings']['axes']['yaxis']['max'] = $node->field_y_max[0]['value'];
-	if($node->field_y_ticks[0]['value'] != null) $chart_data['#settings']['axes']['yaxis']['numberTicks'] = $node->field_y_ticks[0]['value'];
+	if($node->field_y_min[0]['value'] != null) $chart_data['#settings']['axes']['yaxis']['min'] = intval($node->field_y_min[0]['value']);
+	if($node->field_y_max[0]['value'] != null) $chart_data['#settings']['axes']['yaxis']['max'] = intval($node->field_y_max[0]['value']);
+	if($node->field_y_ticks[0]['value'] != null) $chart_data['#settings']['axes']['yaxis']['numberTicks'] = intval($node->field_y_ticks[0]['value']);
+	
+	if($node->field_x_min[0]['value'] != null) $chart_data['#settings']['axes']['xaxis']['min'] = intval($node->field_x_min[0]['value']);
+	if($node->field_x_max[0]['value'] != null) $chart_data['#settings']['axes']['xaxis']['max'] = intval($node->field_x_max[0]['value']);
+	if($node->field_x_ticks[0]['value'] != null) $chart_data['#settings']['axes']['xaxis']['numberTicks'] = intval($node->field_x_ticks[0]['value']);
+	
+	$chart_data['#settings']['axes']['yaxis']['tickOptions'] = array('fontSize'=>'9pt');
+	$chart_data['#settings']['axes']['xaxis']['tickOptions'] = array('fontSize'=>'9pt');
+	
+	$chart_data['#settings']['grid']['background'] = '#fff';
 	
 	if($node->field_show_legend[0]['value'] != 'false') {
 		$chart_data['#settings']['legend']['show'] = $node->field_show_legend[0]['value'];
 		$chart_data['#settings']['legend']['location'] = $node->field_location[0]['value'];
 	}
+	
+
 	
 	
 	foreach($data_array as $data) {

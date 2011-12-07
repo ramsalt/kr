@@ -138,14 +138,14 @@ function statistics_node_strongarm() {
   $strongarm->name = 'content_extra_weights_chart';
   $strongarm->value = array(
     'title' => '-5',
-    'revision_information' => '0',
-    'author' => '-1',
-    'options' => '1',
-    'comment_settings' => '3',
-    'menu' => '-3',
-    'path' => '4',
-    'attachments' => '2',
-    'workflow' => '-2',
+    'revision_information' => '4',
+    'author' => '3',
+    'options' => '5',
+    'comment_settings' => '7',
+    'menu' => '1',
+    'path' => '8',
+    'attachments' => '6',
+    'workflow' => '2',
   );
   $export['content_extra_weights_chart'] = $strongarm;
 
