@@ -16,22 +16,22 @@ function statistics_node_ctools_plugin_api() {
 function statistics_node_node_info() {
   $items = array(
     'chart' => array(
-      'name' => t('Chart'),
+      'name' => t('Diagram'),
       'module' => 'features',
       'description' => t('Add a chart with values and specify how you wish to present it.'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Tittel'),
       'has_body' => '0',
       'body_label' => '',
       'min_word_count' => '0',
       'help' => '',
     ),
     'table' => array(
-      'name' => t('Table'),
+      'name' => t('Tabell'),
       'module' => 'features',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Tittel'),
       'has_body' => '0',
       'body_label' => '',
       'min_word_count' => '0',
