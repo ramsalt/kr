@@ -56,13 +56,13 @@
 	padding: 4px 3px;
 }
 
-.node-type-table .field-field-description {
+.node-type-table .field-field-chart-description {
 	clear: both;
 	margin-top: 5px;
 	font-size: 0.83333em;
 }
 
-.node-type-table .field-field-description .field-items .field-item {
+.node-type-table .field-field-chart-description .field-items .field-item {
 	padding: 0 0 15px 0;
 	margin: 0;
 }
