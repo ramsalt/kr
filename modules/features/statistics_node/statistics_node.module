@@ -116,6 +116,9 @@ function _statistics_node_parse_chart_values($values) {
 
 function _statistics_node_generate_table ($values) {
 	_statistics_node_init_table ();
+	
+	$values = str_replace(',', '.', $values);
+	
 	$values_array = _statistics_node_parse_table_values($values);
 	
 	$suffix = '<div style="clear:both;"></div>';
