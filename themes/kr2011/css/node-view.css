@@ -236,13 +236,21 @@ form#user-register input, select {
     margin: 0 0 5px;
 }
 
-form#user-register input.form-submit{
+form#user-register input.form-submit, .nopremium-message input.form-submit{
     background: #0F7625;
     font-size: 1em;
+}
+.nopremium-message input.form-submit{
+    margin: 1em 1em 1.5em 1em;
 }
 div.password-description{
     display: none !important;
 }
+
+html.js body.sidebars div#outer-wrapper div#wrapper div#container.clearfix div#center.clearfix div#op-content div.body-content div div.nopremium-message form#user-login-form div div.item-list{
+    display: none;
+}
+
 .block-google_analytics_counter{
     display: none;
 }
