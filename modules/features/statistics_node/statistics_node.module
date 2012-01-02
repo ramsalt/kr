@@ -61,6 +61,10 @@ function _statistics_node_generate_chart ($node) {
 	$chart_data['#settings']['axes']['yaxis']['tickOptions'] = array('fontSize'=>'9pt');
 	$chart_data['#settings']['axes']['xaxis']['tickOptions'] = array('fontSize'=>'9pt');
 	
+	// Check if years
+	//$chart_data['#settings']['axes']['xaxis']['renderer'] = '$.jqplot.DateAxisRenderer';
+	$chart_data['#settings']['axes']['xaxis']['tickOptions']['formatString'] = '%d';
+	
 	$chart_data['#settings']['grid']['background'] = '#fff';
 	
 	if($node->field_show_legend[0]['value'] != 'false') {
@@ -68,8 +72,7 @@ function _statistics_node_generate_chart ($node) {
 		$chart_data['#settings']['legend']['location'] = $node->field_location[0]['value'];
 	}
 	
-
-	
+	$chart_data['#settings']['highlighter'] = array('show'=>true, 'sizeAdjust'=>7.5);
 	
 	foreach($data_array as $data) {
 		$chart_data[] = $data;
@@ -110,7 +113,6 @@ function _statistics_node_parse_chart_values($values) {
 	if($x_key > -1) { 
 		unset($data[$x_key]);
 	}
-	
 	return $data;
 }
 
