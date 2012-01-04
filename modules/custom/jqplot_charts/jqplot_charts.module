@@ -21,7 +21,7 @@ function jqplot_charts_charts_info() {
       'file'    => drupal_get_path('module', 'jqplot_charts') .'/jqplot_charts.inc',
       'name'    => t('jqPlot Chart'),
       'render'  => '_jqplot_charts_render',
-      'types'   => array('line2D'),
+      'types'   => array('line2D', 'vbar2D', 'hbar2D'),
     ),
   );
 }

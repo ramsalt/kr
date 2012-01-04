@@ -11,7 +11,7 @@
 function _jqplot_charts_render(&$data) {
 	$id = 'chart-'.time();
 	
-	_jqplot_charts_init_jqplot ();
+	_jqplot_charts_init_jqplot ($data['#type']);
 	_jqplot_charts_chart ($id, $data);
 	
 	return '<div style="width:'.$data['#width'].'px; height:'.$data['#height'].'px;" class="jqplot-container" id="'.$id.'"></div>';
@@ -42,32 +42,70 @@ function _jqplot_charts_chart ($id, &$data) {
 	//dsm($series_options);
 	//dsm(drupal_to_js($series));
 	
+	//dsm($data['#type']);
+	
 	switch ($data['#type']) {
 		case 'line2D':
-			drupal_add_js('(function ($) { Drupal.behaviors.jqplotCharts = function(context) {
-					 $.jqplot("'.$id.'", '.drupal_to_js($series).',
-					  '.drupal_to_js($settings).'); 
-				}; 
-			})(jQuery);', 
-			'inline');
+			break;
+			
+		case 'hbar2D':
+			$settings['seriesDefaults']['renderer'] = "$.jqplot.BarRenderer";
+			$settings['seriesDefaults']['rendererOptions']['fillToZero'] = true;
+			break;
+			
+		case 'vbar2D':
+			$settings['seriesDefaults']['renderer'] = '$.jqplot.BarRenderer';
+			$settings['seriesDefaults']['rendererOptions']['fillToZero'] = true;
+			$settings['seriesDefaults']['rendererOptions']['barDirection'] = 'horizontal';
+			$settings['axes']['yaxis']['renderer'] = "$.jqplot.CategoryAxisRenderer";			
 			break;
 		
 		default:
 			
 			break;
 	}
+	
+	$settings_string = json_encode($settings);
+	$settings_string = str_replace('"$.jqplot.BarRenderer"', '$.jqplot.BarRenderer', $settings_string);
+	$settings_string = str_replace('"$.jqplot.CategoryAxisRenderer"', '$.jqplot.CategoryAxisRenderer', $settings_string);
+	
+	drupal_add_js('(function ($) { Drupal.behaviors.jqplotCharts = function(context) {
+			 $.jqplot("'.$id.'", '.json_encode($series).',
+			  '.$settings_string.'); 
+		}; 
+	})(jQuery);', 
+	'inline');
 }
 
-function _jqplot_charts_init_jqplot () {
+function _jqplot_charts_init_jqplot ($type = 'line2D') {
 	$path = libraries_get_path('jqplot');
 	$plugins = $path.'/plugins';
 	drupal_add_js($path.'/jquery.jqplot.min.js');
+	
+	switch ($type) {
+		case 'line2D':
+			break;
+		
+		case 'hbar2D':	
+		case 'vbar2D':
+			drupal_add_js($plugins.'/jqplot.barRenderer.min.js');
+			drupal_add_js($plugins.'/jqplot.categoryAxisRenderer.min.js');
+			drupal_add_js($plugins.'/jqplot.pointLabels.min.js');
+			break;
+		
+		default:
+			
+			break;
+	}
+	
 	drupal_add_js($plugins.'/jqplot.canvasAxisLabelRenderer.min.js');
 	drupal_add_js($plugins.'/jqplot.canvasAxisTickRenderer.min.js');
 	drupal_add_js($plugins.'/jqplot.dateAxisRenderer.min.js');
 	drupal_add_js($plugins.'/jqplot.highlighter.min.js');
 	drupal_add_js($plugins.'/jqplot.canvasTextRenderer.min.js');
 	drupal_add_css($path.'/jquery.jqplot.min.css');
+	
+
 }
 
 /**
@@ -85,11 +123,12 @@ function _jqplot_charts_series_values($series) {
 
   foreach (element_children($series) as $index) {
   	$value = $series[$index];
+
     if (!is_numeric($index)) {
       continue;
     }
     if (is_array($value)) {
-      $data[] = array($index, $value['#value']);
+      $data[] = array($value['#key'], $value['#value']);
     }
     else {
       $data[] = $value;
