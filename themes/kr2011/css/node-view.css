@@ -254,3 +254,7 @@ html.js body.sidebars div#outer-wrapper div#wrapper div#container.clearfix div#c
 .block-google_analytics_counter{
     display: none;
 }
+
+#edit-profile-smsauthenticated-wrapper{
+    display: none
+}
