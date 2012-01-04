@@ -68,7 +68,68 @@ function statistics_node_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Height',
-      'weight' => '14',
+      'weight' => '11',
+      'description' => '',
+      'type' => 'optionwidgets_select',
+      'module' => 'optionwidgets',
+    ),
+  );
+
+  // Exported field: field_chart_type
+  $fields['chart-field_chart_type'] = array(
+    'field_name' => 'field_chart_type',
+    'type_name' => 'chart',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '1',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => 'line2D|Linjediagram
+vbar2D|Vertikal bar
+hbar2D|Horisontal bar',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'default_value' => array(
+        '0' => array(
+          'value' => 'line2D',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Type',
+      'weight' => '9',
       'description' => '',
       'type' => 'optionwidgets_select',
       'module' => 'optionwidgets',
@@ -132,82 +193,10 @@ function statistics_node_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Width',
-      'weight' => '13',
+      'weight' => '10',
       'description' => '',
       'type' => 'optionwidgets_select',
       'module' => 'optionwidgets',
-    ),
-  );
-
-  // Exported field: field_description
-  $fields['chart-field_description'] = array(
-    'field_name' => 'field_description',
-    'type_name' => 'chart',
-    'display_settings' => array(
-      'weight' => '-3',
-      'parent' => '',
-      'label' => array(
-        'format' => 'hidden',
-      ),
-      'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '2' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '3' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'email_plain' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'email_html' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'token' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-    ),
-    'widget_active' => '1',
-    'type' => 'text',
-    'required' => '0',
-    'multiple' => '0',
-    'module' => 'text',
-    'active' => '1',
-    'text_processing' => '1',
-    'max_length' => '',
-    'allowed_values' => '',
-    'allowed_values_php' => '',
-    'widget' => array(
-      'rows' => '2',
-      'size' => 60,
-      'default_value' => array(
-        '0' => array(
-          'value' => '',
-          'format' => '2',
-          '_error_element' => 'default_value_widget][field_description][0][value',
-        ),
-      ),
-      'default_value_php' => NULL,
-      'label' => 'Beskrivelse',
-      'weight' => '-3',
-      'description' => 'Skriv inn forklaringstekst til tabellen du setter inn.',
-      'type' => 'text_textarea',
-      'module' => 'text',
     ),
   );
 
@@ -773,22 +762,21 @@ true|Show',
       ),
       'default_value_php' => NULL,
       'label' => 'Ticks',
-      'weight' => '9',
+      'weight' => '10',
       'description' => '',
       'type' => 'number',
       'module' => 'number',
     ),
   );
 
-  // Exported field: field_description
-  $fields['table-field_description'] = array(
-    'field_name' => 'field_description',
+  // Exported field: field_chart_description
+  $fields['table-field_chart_description'] = array(
+    'field_name' => 'field_chart_description',
     'type_name' => 'table',
     'display_settings' => array(
-      'weight' => '-3',
-      'parent' => '',
       'label' => array(
-        'format' => 'hidden',
+        'format' => 'above',
+        'exclude' => 0,
       ),
       'teaser' => array(
         'format' => 'default',
@@ -810,14 +798,6 @@ true|Show',
         'format' => 'default',
         'exclude' => 0,
       ),
-      'email_plain' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'email_html' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
       'token' => array(
         'format' => 'default',
         'exclude' => 0,
@@ -834,18 +814,18 @@ true|Show',
     'allowed_values' => '',
     'allowed_values_php' => '',
     'widget' => array(
-      'rows' => '2',
+      'rows' => '5',
       'size' => 60,
       'default_value' => array(
         '0' => array(
           'value' => '',
-          '_error_element' => 'default_value_widget][field_description][0][value',
+          '_error_element' => 'default_value_widget][field_chart_description][0][value',
         ),
       ),
       'default_value_php' => NULL,
-      'label' => 'Beskrivelse',
+      'label' => 'Description',
       'weight' => '-3',
-      'description' => 'Skriv inn forklaringstekst til tabellen du setter inn.',
+      'description' => '',
       'type' => 'text_textarea',
       'module' => 'text',
     ),
@@ -915,13 +895,14 @@ true|Show',
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Beskrivelse');
+  t('Description');
   t('Height');
   t('Location');
   t('Max');
   t('Min');
   t('Show legend');
   t('Ticks');
+  t('Type');
   t('Values');
   t('Width');
 
