@@ -1,12 +1,13 @@
 <?php
 
 include_once('statistics_node.features.inc');
-require_once('lib/parsecsv.lib.php');
 
 function statistics_node_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
   switch ($op) {
     case 'view':
 		//dpm($node);
+		include_once(libraries_get_path('parsecsv').'/parsecsv.lib.php');
+		
 		if($node->type == 'chart') {
 			unset($node->content['field_values']);
 			
@@ -40,10 +41,14 @@ function _statistics_node_generate_chart ($node) {
 	
 	$chart_data = array(
 		'#plugin'    => 'jqplot', // Google Charts API will be used
-  		'#type'     => 'line2D', // To show a simple 2D line chart
-	  	'#color'    => '336699', // background color, in RRGGBB format
-  		'#title'	  => $node->title,
+  	'#type'     => 'line2D', // To show a simple 2D line chart
+	  '#color'    => '336699', // background color, in RRGGBB format
+  	'#title'	  => $node->title,
 	);
+	
+	if(isset($node->field_chart_type) and $node->field_chart_type[0]['value']) {
+		$chart_data['#type'] = $node->field_chart_type[0]['value'];
+	} 
 	
 	$chart_data['#settings']['axesDefaults']['tickRenderer'] = array('$.jqplot.CanvasAxisTickRenderer', array('tickOptions'=>array()));
 	
@@ -105,7 +110,7 @@ function _statistics_node_parse_chart_values($values) {
 			} else {
 				$xid = $rid;
 			}
-			$data[$key][$xid] = (int)$val;
+			$data[$key][] = array('#key'=>$xid, '#value'=>(int)$val);
 			
 		}
 	}
