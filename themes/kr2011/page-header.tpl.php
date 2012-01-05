@@ -99,7 +99,7 @@ Ha en fin dag!
           <?php if (!empty($GLOBALS['user']->ip_login_match)) : ?>
               <li><?php print l('Automatisk logget inn fra ' . $GLOBALS['user']->name, 'node/82938'); ?></li>
           <?php else : ?>
-              <li><?php print l($GLOBALS['user']->mail, 'user/' . $GLOBALS['user']->uid . '/edit') ?></li>
+              <li><?php print l($GLOBALS['user']->mail, 'user/' . $GLOBALS['user']->uid . '/edit/Abonnementsinfo') ?></li>
               <li><?php print l(t('Logg ut'), 'logout'); ?></li>
           <?php endif; ?>
               
