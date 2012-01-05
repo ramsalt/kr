@@ -374,14 +374,12 @@ function kr2011_preprocess_block(&$variables) {
 
 function kr2011_nopremium_message($node){
   global $user;
-  print_r(count($user->roles));
-
-  $html = check_markup(t(nopremium_get_message($node->type)));
 
   // Check if this is a free account disabled or has just authenticated role
-  if (isset($user->roles[8]) || count($user->roles) == 1) {
+  if (isset($user->roles[13]) || count($user->roles) == 1) {
     $block = module_invoke('boxes', 'block', 'view', 'show_to_disabled_free_user');
   } else {
+    $html = check_markup(t(nopremium_get_message($node->type)));
     $html .= '<p>';
     $html .= 'Logg inn | ';
     $html .= l(t('Register'), 'user/register',array('query' => array('destination' => 'node/'.$node->nid))).' | ';
