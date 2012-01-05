@@ -377,7 +377,8 @@ function kr2011_nopremium_message($node){
 
   // Check if this is a free account disabled or has just authenticated role
   if (isset($user->roles[13]) || count($user->roles) == 1) {
-    $block = module_invoke('boxes', 'block', 'view', 'premium_box_disabled_user');
+      $html = check_markup(t(nopremium_get_message($node->type)));
+      $block = module_invoke('boxes', 'block', 'view', 'premium_box_disabled_user');
   } else {
     $html = check_markup(t(nopremium_get_message($node->type)));
     $html .= '<p>';
