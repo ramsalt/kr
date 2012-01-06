@@ -218,7 +218,10 @@
 
 #block-boxes-show_to_disabled_free_user{
     margin: 1.5em 0;
-    padding-bottom: 1em;
+    padding-bottom: 2em;
+}
+#block-boxes-show_to_disabled_free_user p{
+    margin: 0;
 }
 .nopremium-message, #block-boxes-show_to_disabled_free_user{
     background: none repeat scroll 0 0 #F3F3F3;
