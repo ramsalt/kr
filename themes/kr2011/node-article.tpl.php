@@ -55,8 +55,8 @@
         </div><!-- /.main-image-desc -->
     </div><!-- /.main-image -->
   <?php endif; ?>
-  <?php if ($fakta): ?><div class="fakta"><span class="faktatittel">Fakta</span><?php print $fakta; ?></div><?php endif; ?>
-  <?php if ($sitat){ print $sitat_content; } ?>
+  <?php if ($fakta && !isset($user->roles[1])): ?><div class="fakta"><span class="faktatittel">Fakta</span><?php print $fakta; ?></div><?php endif; ?>
+  <?php if ($sitat && !isset($user->roles[1])) { print $sitat_content; } ?>
   
   <div property="dc:description">
       <?php if (isset($node->taxonomy[80])) print '<div class="kommentar">KOMMENTAR:</div>' ?>
