@@ -1,6 +1,16 @@
 <?php
 
 /**
+ * Implementation of hook_ctools_plugin_api().
+ */
+function kr_payment_wall_light_ctools_plugin_api() {
+  list($module, $api) = func_get_args();
+  if ($module == "boxes" && $api == "box") {
+    return array("version" => 1);
+  }
+}
+
+/**
  * Implementation of hook_rules_defaults().
  */
 function kr_payment_wall_light_rules_defaults() {
@@ -19,23 +29,25 @@ function kr_payment_wall_light_rules_defaults() {
         '#status' => 'default',
         '#conditions' => array(
           '0' => array(
+            '#type' => 'condition',
             '#settings' => array(
               'roles' => array(
                 '0' => 1,
-                '1' => 9,
+                '1' => 11,
                 '2' => 3,
                 '3' => 5,
                 '4' => 4,
-                '5' => 8,
-                '6' => 7,
-                '7' => 6,
+                '5' => 10,
+                '6' => 9,
+                '7' => 8,
+                '8' => 7,
+                '9' => 6,
               ),
               'operation' => 'OR',
               '#argument map' => array(
                 'user' => 'user',
               ),
             ),
-            '#type' => 'condition',
             '#name' => 'rules_condition_user_hasrole',
             '#info' => array(
               'label' => 'Bruker har rolle(r)',
@@ -51,30 +63,7 @@ function kr_payment_wall_light_rules_defaults() {
             '#negate' => 1,
           ),
         ),
-        '#actions' => array(
-          '0' => array(
-            '#weight' => 0,
-            '#info' => array(
-              'label' => 'Show a configurable message on the site',
-              'module' => 'System',
-              'eval input' => array(
-                '0' => 'message',
-              ),
-            ),
-            '#name' => 'rules_action_drupal_message',
-            '#settings' => array(
-              'message' => 'Du har nå hatt gratis tilgang til kommunal-rapport.no i sju dager. Om du ønsker å fortsette å lese våre nyheter, må du kjøpe abonnement.
-
-Hvis du allerede er abonnent på papirutgaven til Kommunal Rapport, betaler du 750 kroner i året for abonnement på den digitale utgaven. Full pris er 1.550 kroner per år. Abonnementet løper til det blir sagt opp.
-
-Fullfør skjemaet under for å kjøpe abonnement. Du fortsetter da å få full tilgang til kommunal-rapport.no, uten opphold.
-
-Om du jobber i en virksomhet der flere har bruk for kommunal-rapport.no, kan det lønne seg å kjøpe IP-abonnement, som gir alle innenfor datanettverket tilgang. Dette er sterkt rabatterte abonnement. Ta kontakt på abonnement@kommunal-rapport.no for pristilbud.',
-              'error' => 0,
-            ),
-            '#type' => 'action',
-          ),
-        ),
+        '#actions' => array(),
         '#version' => 6003,
       ),
       'rules_order_subscription' => array(
@@ -90,17 +79,8 @@ Om du jobber i en virksomhet der flere har bruk for kommunal-rapport.no, kan det
         '#status' => 'default',
         '#conditions' => array(
           '0' => array(
-            '#info' => array(
-              'label' => 'Check a truth value',
-              'arguments' => array(
-                'boolean' => array(
-                  'type' => 'boolean',
-                  'label' => 'Truth value',
-                ),
-              ),
-              'module' => 'Rules',
-            ),
-            '#name' => 'rules_condition_check_boolean',
+            '#weight' => 0,
+            '#type' => 'condition',
             '#settings' => array(
               'boolean' => '[account:user:profile_bestill_abo]',
               '#eval input' => array(
@@ -111,85 +91,22 @@ Om du jobber i en virksomhet der flere har bruk for kommunal-rapport.no, kan det
                 ),
               ),
             ),
-            '#type' => 'condition',
-            '#weight' => 0,
-          ),
-          '1' => array(
-            '#type' => 'condition',
-            '#settings' => array(
-              'profile_field' => 'profile_bestill_abo',
-              'profile_field_value' => '1',
-              '#argument map' => array(
-                'user' => 'account',
-              ),
-            ),
-            '#name' => 'profile_rules_string_condition',
+            '#name' => 'rules_condition_check_boolean',
             '#info' => array(
-              'label' => 'Compare generic profile field',
+              'label' => 'Check a truth value',
               'arguments' => array(
-                'user' => array(
-                  'type' => 'user',
-                  'label' => 'User to grab profile fields from',
+                'boolean' => array(
+                  'type' => 'boolean',
+                  'label' => 'Truth value',
                 ),
               ),
-              'module' => 'Profile',
+              'module' => 'Rules',
             ),
-            '#weight' => 0,
-          ),
-          '2' => array(
-            '#settings' => array(
-              'profile_field' => 'profile_bestill_abo',
-              'profile_field_value' => '1',
-              '#argument map' => array(
-                'user' => 'account_unchanged',
-              ),
-            ),
-            '#type' => 'condition',
-            '#name' => 'profile_rules_string_condition',
-            '#info' => array(
-              'label' => 'Compare generic profile field, unchanged',
-              'label callback' => FALSE,
-              'arguments' => array(
-                'user' => array(
-                  'type' => 'user',
-                  'label' => 'User to grab profile fields from',
-                ),
-              ),
-              'module' => 'Profile',
-            ),
-            '#weight' => 0,
-          ),
-          '3' => array(
-            '#weight' => 0,
-            '#info' => array(
-              'label' => 'Compare generic profile field',
-              'arguments' => array(
-                'user' => array(
-                  'type' => 'user',
-                  'label' => 'User to grab profile fields from',
-                ),
-              ),
-              'module' => 'Profile',
-            ),
-            '#name' => 'profile_rules_string_condition',
-            '#settings' => array(
-              'profile_field' => 'profile_bestill_abo',
-              'profile_field_value' => '1',
-              '#argument map' => array(
-                'user' => 'user',
-              ),
-            ),
-            '#type' => 'condition',
           ),
         ),
         '#actions' => array(
           '0' => array(
-            '#type' => 'action',
-            '#settings' => array(
-              'message' => 'Takk for at du bestilte abonnement på Kommunal-Rapport.no. Din konto er blitt oppgradert slik at du kan starte å bruke abonnementet ditt umiddelbart. ',
-              'error' => 0,
-            ),
-            '#name' => 'rules_action_drupal_message',
+            '#weight' => 0,
             '#info' => array(
               'label' => 'Show a configurable message on the site',
               'module' => 'System',
@@ -197,44 +114,29 @@ Om du jobber i en virksomhet der flere har bruk for kommunal-rapport.no, kan det
                 '0' => 'message',
               ),
             ),
-            '#weight' => 0,
+            '#name' => 'rules_action_drupal_message',
+            '#settings' => array(
+              'message' => 'Takk for at du bestilte abonnement på Kommunal-Rapport.no. Din konto er blitt oppgradert slik at du kan starte å bruke abonnementet ditt umiddelbart. ',
+              'error' => 0,
+            ),
+            '#type' => 'action',
           ),
           '1' => array(
             '#weight' => 0,
-            '#info' => array(
-              'label' => 'Fjern brukerrolle',
-              'arguments' => array(
-                'user' => array(
-                  'type' => 'user',
-                  'label' => 'User whos roles should be changed',
-                ),
+            '#type' => 'action',
+            '#settings' => array(
+              'roles' => array(
+                '0' => 13,
+                '1' => 12,
               ),
-              'module' => 'User',
+              '#argument map' => array(
+                'user' => 'account',
+              ),
             ),
             '#name' => 'rules_action_user_removerole',
-            '#settings' => array(
-              'roles' => array(
-                '0' => 8,
-              ),
-              '#argument map' => array(
-                'user' => 'user',
-              ),
-            ),
-            '#type' => 'action',
-          ),
-          '2' => array(
-            '#type' => 'action',
-            '#settings' => array(
-              'roles' => array(
-                '0' => 9,
-              ),
-              '#argument map' => array(
-                'user' => 'user',
-              ),
-            ),
-            '#name' => 'rules_action_user_addrole',
             '#info' => array(
-              'label' => 'Legg til brukerrolle',
+              'label' => 'Fjern brukerrolle "free" og "disabled"',
+              'label callback' => FALSE,
               'arguments' => array(
                 'user' => array(
                   'type' => 'user',
@@ -243,9 +145,67 @@ Om du jobber i en virksomhet der flere har bruk for kommunal-rapport.no, kan det
               ),
               'module' => 'User',
             ),
+          ),
+          '2' => array(
             '#weight' => 0,
+            '#info' => array(
+              'label' => 'Legg til brukerrolle "abonnent"',
+              'label callback' => FALSE,
+              'arguments' => array(
+                'user' => array(
+                  'type' => 'user',
+                  'label' => 'User whos roles should be changed',
+                ),
+              ),
+              'module' => 'User',
+            ),
+            '#name' => 'rules_action_user_addrole',
+            '#settings' => array(
+              'roles' => array(
+                '0' => 11,
+              ),
+              '#argument map' => array(
+                'user' => 'account',
+              ),
+            ),
+            '#type' => 'action',
           ),
           '3' => array(
+            '#type' => 'action',
+            '#settings' => array(
+              'from' => 'abonnement@kommunal-rapport.no',
+              'subject' => 'Endring av abonnementinformasjon hos Kommunal-Rapport.no',
+              'message' => 'Takk for at du bestilte abonnement på Kommunal-Rapport.no. Din konto er blitt oppgradert slik at du kan starte å bruke abonnementet umiddelbart.
+Faktura for abonnement ut 2012 blir sendt til oppgitt fakturaadresse.
+
+Fullt navn: [account:user:profile_navn]	
+E-postadressen for brukerkontoen: [account:mail]
+
+Fakturabetalers navn: [account:user:profile_fakturabetalers_navn]	
+Epost til fakturamottak: [account:user:profile_epost_fakturamottak]
+Gateadresse: [account:user:profile_gateadresse]
+Poststed: [account:user:profile_poststed]
+Postnr: [account:user:profile_postnr]
+Hvilken kommune er du tilknyttet: [account:user:profile_kommune]
+Jobber som: [account:user:profile_stilling]
+[account:user:profile_bestill_abo]	
+Papirabonnent? [account:user:profile_papirabonnent]
+[user:user:profile_ipabonnent]
+
+URL-en for din kontoredigeringssiden [account:account-edit-url]	',
+              '#argument map' => array(
+                'user' => 'account',
+              ),
+              '#eval input' => array(
+                'token_rules_input_evaluator' => array(
+                  'message' => array(
+                    '0' => 'account',
+                    '1' => 'user',
+                  ),
+                ),
+              ),
+            ),
+            '#name' => 'rules_action_mail_to_user',
             '#info' => array(
               'label' => 'Send a mail to a user',
               'arguments' => array(
@@ -261,44 +221,21 @@ Om du jobber i en virksomhet der flere har bruk for kommunal-rapport.no, kan det
                 '2' => 'from',
               ),
             ),
-            '#name' => 'rules_action_mail_to_user',
-            '#settings' => array(
-              'from' => 'abonnement@kommunal-rapport.no',
-              'subject' => 'Endring av abonnementinformasjon hos Kommunal-Rapport.no',
-              'message' => 'Du har endret dine kontoopplysninger hos Kommunal-Rapport.no. Vennligst kontrollert at informasjonen nedenfor er korrekt. 
-
-Fullt navn: [account:user:profile_navn]	
-E-postadressen for brukerkontoen: [account:mail]	
-Kontoen ble opprettet: [account:user-created-small]
-
-Fakturabetalers navn: [account:user:profile_fakturabetalers_navn]	
-Referanse: [account:user:profile_referanse]	
-Epost til fakturamottak: [account:user:profile_epost_fakturamottak]
-Gateadresse: [account:user:profile_gateadresse]
-Poststed: [account:user:profile_poststed]
-Postnr: [account:user:profile_postnr]
-Hvilken kommune er du tilknyttet: [account:user:profile_kommune]
-Er du: [account:user:profile_stilling]
-Ja, jeg ønsker å abonnere på kommunal-rapport.no nå [account:user:profile_bestill_abo]	
-
-URL-en for din kontoredigeringssiden [account:account-edit-url]	',
-              '#argument map' => array(
-                'user' => 'user',
-              ),
-              '#eval input' => array(
-                'token_rules_input_evaluator' => array(
-                  'message' => array(
-                    '0' => 'account',
-                  ),
-                ),
-              ),
-            ),
-            '#type' => 'action',
             '#weight' => 0,
           ),
           '4' => array(
             '#weight' => 0,
-            '#type' => 'action',
+            '#info' => array(
+              'label' => 'Send a mail to an arbitrary mail address',
+              'module' => 'System',
+              'eval input' => array(
+                '0' => 'subject',
+                '1' => 'message',
+                '2' => 'from',
+                '3' => 'to',
+              ),
+            ),
+            '#name' => 'rules_action_mail',
             '#settings' => array(
               'to' => 'abonnement@kommunal-rapport.no',
               'from' => '[account:mail]',
@@ -317,11 +254,14 @@ Poststed: [account:user:profile_poststed]
 Postnr: [account:user:profile_postnr]
 Hvilken kommune er du tilknyttet: [account:user:profile_kommune]
 Er du: [account:user:profile_stilling]
-Ja, jeg ønsker å abonnere på kommunal-rapport.no nå [account:user:profile_bestill_abo]	',
+[account:user:profile_bestill_abo]	
+Papirabonnent? [account:user:profile_papirabonnent]
+IP-abonnent? [user:user:profile_ipabonnent]',
               '#eval input' => array(
                 'token_rules_input_evaluator' => array(
                   'message' => array(
                     '0' => 'account',
+                    '1' => 'user',
                   ),
                   'from' => array(
                     '0' => 'account',
@@ -329,17 +269,7 @@ Ja, jeg ønsker å abonnere på kommunal-rapport.no nå [account:user:profile_be
                 ),
               ),
             ),
-            '#name' => 'rules_action_mail',
-            '#info' => array(
-              'label' => 'Send a mail to an arbitrary mail address',
-              'module' => 'System',
-              'eval input' => array(
-                '0' => 'subject',
-                '1' => 'message',
-                '2' => 'from',
-                '3' => 'to',
-              ),
-            ),
+            '#type' => 'action',
           ),
         ),
         '#version' => 6003,
@@ -388,7 +318,7 @@ Ja, jeg ønsker å abonnere på kommunal-rapport.no nå [account:user:profile_be
             '#type' => 'condition',
             '#settings' => array(
               'roles' => array(
-                '0' => 8,
+                '0' => 12,
               ),
               'operation' => 'OR',
               '#argument map' => array(
@@ -426,6 +356,8 @@ Ja, jeg ønsker å abonnere på kommunal-rapport.no nå [account:user:profile_be
             ),
             '#name' => 'rules_core_views_bulk_operations_profile_action',
             '#settings' => array(
+              'profile_bestill_abo_check' => 0,
+              'profile_bestill_abo' => 0,
               'profile_navn_check' => 0,
               'profile_navn' => '',
               'profile_fakturabetalers_navn_check' => 0,
@@ -444,8 +376,6 @@ Ja, jeg ønsker å abonnere på kommunal-rapport.no nå [account:user:profile_be
               'profile_stilling' => '',
               'profile_referanse_check' => 0,
               'profile_referanse' => '',
-              'profile_bestill_abo_check' => 0,
-              'profile_bestill_abo' => 0,
               'profile_smsauthenticated_check' => 1,
               'profile_smsauthenticated' => '1',
               'profile_sms_authenticated_earlier_check' => 1,
@@ -461,7 +391,7 @@ Ja, jeg ønsker å abonnere på kommunal-rapport.no nå [account:user:profile_be
             '#type' => 'action',
             '#settings' => array(
               'task_identifier' => 'freeuser[user:uid]',
-              'task_date' => '-60 minutes',
+              'task_date' => '+7 days',
               '#argument map' => array(
                 'user' => 'user',
               ),
@@ -516,17 +446,7 @@ Ja, jeg ønsker å abonnere på kommunal-rapport.no nå [account:user:profile_be
         '#status' => 'default',
         '#conditions' => array(
           '0' => array(
-            '#type' => 'condition',
-            '#settings' => array(
-              'roles' => array(
-                '0' => 8,
-              ),
-              'operation' => 'OR',
-              '#argument map' => array(
-                'user' => 'user',
-              ),
-            ),
-            '#name' => 'rules_condition_user_hasrole',
+            '#weight' => 0,
             '#info' => array(
               'label' => 'Bruker har rolle(r)',
               'arguments' => array(
@@ -537,14 +457,60 @@ Ja, jeg ønsker å abonnere på kommunal-rapport.no nå [account:user:profile_be
               ),
               'module' => 'User',
             ),
+            '#name' => 'rules_condition_user_hasrole',
+            '#settings' => array(
+              'roles' => array(
+                '0' => 12,
+              ),
+              'operation' => 'OR',
+              '#argument map' => array(
+                'user' => 'user',
+              ),
+            ),
+            '#type' => 'condition',
+          ),
+          '1' => array(
             '#weight' => 0,
+            '#negate' => 1,
+            '#type' => 'condition',
+            '#settings' => array(
+              'boolean' => '[user:user:profile_bestill_abo]',
+              '#eval input' => array(
+                'token_rules_input_evaluator' => array(
+                  'boolean' => array(
+                    '0' => 'user',
+                  ),
+                ),
+              ),
+            ),
+            '#info' => array(
+              'label' => 'Check a truth value',
+              'arguments' => array(
+                'boolean' => array(
+                  'type' => 'boolean',
+                  'label' => 'Truth value',
+                ),
+              ),
+              'module' => 'Rules',
+            ),
+            '#name' => 'rules_condition_check_boolean',
           ),
         ),
         '#actions' => array(
           '0' => array(
-            '#weight' => 0,
+            '#type' => 'action',
+            '#settings' => array(
+              'roles' => array(
+                '0' => 12,
+              ),
+              '#argument map' => array(
+                'user' => 'user',
+              ),
+            ),
+            '#name' => 'rules_action_user_removerole',
             '#info' => array(
-              'label' => 'Fjern brukerrolle',
+              'label' => 'Fjern brukerrolle free',
+              'label callback' => FALSE,
               'arguments' => array(
                 'user' => array(
                   'type' => 'user',
@@ -553,48 +519,10 @@ Ja, jeg ønsker å abonnere på kommunal-rapport.no nå [account:user:profile_be
               ),
               'module' => 'User',
             ),
-            '#name' => 'rules_action_user_removerole',
-            '#settings' => array(
-              'roles' => array(
-                '0' => 8,
-              ),
-              '#argument map' => array(
-                'user' => 'user',
-              ),
-            ),
-            '#type' => 'action',
+            '#weight' => 0,
           ),
           '1' => array(
             '#weight' => 0,
-            '#type' => 'action',
-            '#settings' => array(
-              'from' => 'abonnement@kommunal-rapport.no',
-              'subject' => 'Gratisperioden går ut - bli abonnent på kommunal-rapport.no nå',
-              'message' => 'Hei [user:user:profile_navn],
-
-Du har nå hatt gratis tilgang til kommunal-rapport.no i sju dager. Om du ønsker å fortsette å lese våre nyheter, må du kjøpe abonnement.
-
-Hvis du allerede er abonnent på papirutgaven til Kommunal Rapport, betaler du 750 kroner i året for abonnement på den digitale utgaven. Full pris er 1.550 kroner per år. Abonnementet løper til det blir sagt opp.
-
-Du fortsetter da å få full tilgang til kommunal-rapport.no, uten opphold.
-
-For å kjøpe abonnement trykk på følgende lenke: http://www.kommunal-rapport.no/user/[user:uid]/edit/Personlige%20opplysninger
-
-Om du jobber i en virksomhet der flere har bruk for kommunal-rapport.no, kan det lønne seg å kjøpe IP-abonnement, som gir alle innenfor datanettverket tilgang. Dette er sterkt rabatterte abonnement. Ta kontakt på abonnement@kommunal-rapport.no for pristilbud.
-
-Vennlig hilsen Kommunal Rapport',
-              '#argument map' => array(
-                'user' => 'user',
-              ),
-              '#eval input' => array(
-                'token_rules_input_evaluator' => array(
-                  'message' => array(
-                    '0' => 'user',
-                  ),
-                ),
-              ),
-            ),
-            '#name' => 'rules_action_mail_to_user',
             '#info' => array(
               'label' => 'Send a mail to a user',
               'arguments' => array(
@@ -610,6 +538,59 @@ Vennlig hilsen Kommunal Rapport',
                 '2' => 'from',
               ),
             ),
+            '#name' => 'rules_action_mail_to_user',
+            '#settings' => array(
+              'from' => 'abonnement@kommunal-rapport.no',
+              'subject' => 'Gratisperioden går ut - bli abonnent på kommunal-rapport.no nå',
+              'message' => 'Hei [user:user:profile_navn],
+
+Du har nå hatt gratis tilgang til kommunal-rapport.no i sju dager. Om du ønsker å fortsette å lese oss, må du kjøpe abonnement.
+
+Hvis du allerede er abonnent på papirutgaven til Kommunal Rapport, betaler du 750 kroner i året for abonnement på den digitale utgaven. Full pris er 1.550 kroner per år. Abonnementet løper til det blir sagt opp.
+
+Du fortsetter da å få full tilgang til kommunal-rapport.no, uten opphold.
+
+For å kjøpe abonnement trykk på følgende lenke: www.kommunal-rapport.no/user/bestillabonnement
+
+Om du jobber i en virksomhet der flere har bruk for kommunal-rapport.no, kan det lønne seg å kjøpe IP-abonnement, som gir alle innenfor datanettverket tilgang. Dette er sterkt rabatterte abonnement. Ta kontakt på abonnement@kommunal-rapport.no for pristilbud.
+
+Vennlig hilsen Kommunal Rapport',
+              '#argument map' => array(
+                'user' => 'user',
+              ),
+              '#eval input' => array(
+                'token_rules_input_evaluator' => array(
+                  'message' => array(
+                    '0' => 'user',
+                  ),
+                ),
+              ),
+            ),
+            '#type' => 'action',
+          ),
+          '2' => array(
+            '#weight' => 0,
+            '#info' => array(
+              'label' => 'Legg til brukerrolle disabled',
+              'label callback' => FALSE,
+              'arguments' => array(
+                'user' => array(
+                  'type' => 'user',
+                  'label' => 'User whos roles should be changed',
+                ),
+              ),
+              'module' => 'User',
+            ),
+            '#name' => 'rules_action_user_addrole',
+            '#settings' => array(
+              'roles' => array(
+                '0' => 13,
+              ),
+              '#argument map' => array(
+                'user' => 'user',
+              ),
+            ),
+            '#type' => 'action',
           ),
         ),
         '#version' => 6003,
