@@ -226,6 +226,7 @@
 .nopremium-message, #block-boxes-show_to_disabled_free_user{
     background: none repeat scroll 0 0 #F3F3F3;
     border: 3px solid #0F7625;
+    position: absolute;
 }
 .nopremium-message p, #block-boxes-show_to_disabled_free_user p{
      padding: 25px 25px 0 35px;
