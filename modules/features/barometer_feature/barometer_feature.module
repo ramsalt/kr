@@ -16,6 +16,20 @@ function barometer_feature_nodeapi (&$node, $op, $a3 = NULL, $a4 = NULL) {
 	}
 }
 
+/**
+ * Implementation of hook_theme().
+ */
+function barometer_feature_theme($existing, $type, $theme, $path) {
+  return array(
+    'barometer_chart' => array(
+      'arguments' => array('filtered_data' => NULL, 'data' => NULL),
+    ),
+    'barometer_table' => array(
+      'arguments' => array('filtered_data' => NULL, 'data' => NULL),
+    ),
+  );
+}
+
 function barometer_feature_generate_content ($node) {
 	_barometer_feature_init_externals ();
 	
@@ -23,8 +37,9 @@ function barometer_feature_generate_content ($node) {
 	
 	foreach ($node->field_barometer_data as $key=>$file) {
 		$data[$key] = _barometer_feature_parse_data($file['filepath']);
+		$data[$key]['#heading'] = $file['data']['description'];
 	}
-	
+
 	$output = '';
 
 	$filtered_data = _barometer_feature_filter_data($data, $values);
@@ -34,9 +49,8 @@ function barometer_feature_generate_content ($node) {
 	if(!is_array($values['main_keys'])) {
 		$output .= t('Here comes a descriptive text about what the user should do');
 	} else {
-
-		
-		$output .= _barometer_feature_render_chart($filtered_data, $data);
+		$output .= theme('barometer_chart', $filtered_data, $data);
+		$output .= theme('barometer_table', $filtered_data, $data);
 	}
 
 	return $output;
@@ -46,7 +60,7 @@ function _barometer_feature_render_content ($node) {
 
 }
 
-function _barometer_feature_render_chart ($filtered_data, $data) {
+function theme_barometer_chart ($filtered_data, $data) {
 	$chart_data = array(
 		'#plugin'    => 'jqplot', // Google Charts API will be used
 		'#type'     => 'vbar2D', // To show a simple 2D line chart
@@ -88,31 +102,56 @@ function _barometer_feature_render_chart ($filtered_data, $data) {
 	return '';
 }
 
+function theme_barometer_table ($filtered_data, $data) {
+	$header = $filtered_data['#header'];
+	
+	$table_data = array();
+	$table_data[0][0] = '';
+	
+	$table_header = array(0=>'');
+	
+	foreach(element_children($filtered_data) as $set_id) {
+		$set_data = array();
+		foreach($filtered_data[$set_id] as $row_key => $row) {
+			$table_header[$row_key] = array('data'=>$data[$set_id][$row_key][1], 'colspan'=>count(element_children($filtered_data)));
+			$table_data[0][$row_key] = $data[$set_id]['#heading'];
+			foreach($row as $k => $v) {
+				$table_data[$k][0] = array('data'=>$data[$set_id][0][$k], 'header'=>true);
+				$table_data[$k][$row_key] = (int)$v[0].'('.(int)$v[1].')';
+			}
+		}
+	}
+
+	return theme('table', $table_header, $table_data);
+}
+
 function _barometer_feature_filter_data ($data, $values = array()) {
 	// Handle filtered values
-		foreach($data as $set_key => $set) {
-			$header = $data[$set_key][0];
-			unset($data[$set_key][0]);
-			foreach ($data[$set_key] as $row_key => $row) {
-			
-				if(is_array($values['main_keys'])) {
-					if(!in_array($data[$set_key][$row_key][0], $values['main_keys'])) { unset ($data[$set_key][$row_key]); continue;}
-					
-				}
-				unset($data[$set_key][$row_key][0]);
-				unset($data[$set_key][$row_key][1]);
-				foreach($data[$set_key][$row_key] as $k=>$v) {
-					$data[$set_key][$row_key][$k] = explode(':', $data[$set_key][$row_key][$k]);
-				}
-				if(isset($values['option_keys'])) {
-					foreach($values['option_keys'] as $key => $value) {
-						if($value == 0) {
-							unset($data[$set_key][$row_key][$key]);
-						}
+	$header = $data[0][0];
+	unset($data[0][0]);
+	
+	foreach($data as $set_key => $set) {
+		foreach ($data[$set_key] as $row_key => $row) {
+		
+			if(is_array($values['main_keys'])) {
+				if(!in_array($data[$set_key][$row_key][0], $values['main_keys'])) { unset ($data[$set_key][$row_key]); continue;}
+				
+			}
+			unset($data[$set_key][$row_key][0]);
+			unset($data[$set_key][$row_key][1]);
+			foreach($data[$set_key][$row_key] as $k=>$v) {
+				$data[$set_key][$row_key][$k] = explode(':', $data[$set_key][$row_key][$k]);
+			}
+			if(isset($values['option_keys'])) {
+				foreach($values['option_keys'] as $key => $value) {
+					if($value == 0) {
+						unset($data[$set_key][$row_key][$key]);
 					}
 				}
 			}
 		}
+	}
+	$data['#header'] = $header;
 	return $data;
 }
 
