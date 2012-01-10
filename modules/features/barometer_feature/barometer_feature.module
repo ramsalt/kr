@@ -165,9 +165,9 @@ function _barometer_feature_parse_data ($file) {
 	
 	$csv = new parseCSV();
 	$csv->heading = false;
-	$csv->convert_encoding = true;
-	$csv->input_encoding = 'ISO-8859-1';
-	$csv->output_encoding = 'utf8';
+	//$csv->convert_encoding = true;
+	//$csv->input_encoding = 'ISO-8859-1';
+	//$csv->output_encoding = 'utf8';
 	$csv->delimiter = ';';
 	$csv->parse($file);
 	
