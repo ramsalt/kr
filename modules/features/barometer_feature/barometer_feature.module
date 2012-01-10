@@ -128,7 +128,7 @@ function theme_barometer_table ($filtered_data, $data) {
 }
 
 function _barometer_feature_filter_data ($data, $values = array()) {
-	dsm($data);
+	//dsm($data);
 	// Handle filtered values
 	$header = $data[0][0];
 	unset($data[0][0]);
@@ -156,7 +156,7 @@ function _barometer_feature_filter_data ($data, $values = array()) {
 		}
 	}
 	$data['#header'] = $header;
-	dsm($data);
+	//dsm($data);
 	return $data;
 }
 
