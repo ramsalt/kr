@@ -2,3 +2,29 @@
 	float: left;
 	margin-right: 20px;
 }
+
+.barometer-table {
+	margin-top: 2em;
+	width: 100%;
+}
+
+.barometer-table td, .barometer-table th {
+	padding: 0.2em 0.4em;
+}
+
+.barometer-table tr.odd, .barometer-table tr.even {
+	background: none;
+}
+
+.remove-mlinks .selected-main-key {
+	background: #eee;
+	border: 1px solid #ccc;
+	padding: .5em;
+	float: left;
+	margin-right: 1em;
+}
+
+.remove-mlinks .selected-main-key a.remove-mkey-link {
+	color: gray;
+	padding-left: .2em;
+}

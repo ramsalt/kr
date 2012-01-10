@@ -35,6 +35,11 @@ function barometer_feature_generate_content ($node) {
 	
 	$values = barometer_feature_get_saved_values();
 	
+	if(isset($_GET['remove_mkey'])) {
+		barometer_feature_remove_saved_value('main_keys', $_GET['remove_mkey']);
+		unset($values['main_keys'][$_GET['remove_mkey']]);
+	}
+	
 	foreach ($node->field_barometer_data as $key=>$file) {
 		$data[$key] = _barometer_feature_parse_data($file['filepath']);
 		$data[$key]['#heading'] = $file['data']['description'];
@@ -44,7 +49,7 @@ function barometer_feature_generate_content ($node) {
 
 	$filtered_data = _barometer_feature_filter_data($data, $values);
 
-	$output .= drupal_get_form('barometer_feature_key_form', $data, $values);
+	$output .= drupal_get_form('barometer_feature_key_form', $data, $values, $node);
 	
 	if(!is_array($values['main_keys'])) {
 		$output .= t('Here comes a descriptive text about what the user should do');
@@ -65,13 +70,14 @@ function theme_barometer_chart ($filtered_data, $data) {
 		'#plugin'    => 'jqplot', // Google Charts API will be used
 		'#type'     => 'vbar2D', // To show a simple 2D line chart
 	  '#color'    => '336699', // background color, in RRGGBB format
-	  '#height'		=> 500,
+
 	  '#width'		=> 500,
 	);
 	
 	$header = $filtered_data['#header'];
 	
-	foreach(element_children($filtered_data) as $set_id) {
+	$set_id = 0;
+	//foreach(element_children($filtered_data) as $set_id) {
 		$set_data = array();
 		foreach(element_children($filtered_data[$set_id]) as $row_key) {
 			$row = $filtered_data[$set_id][$row_key];
@@ -83,20 +89,29 @@ function theme_barometer_chart ($filtered_data, $data) {
 			$row_data['#legend'] = $data[$set_id][$row_key][1];
 			$chart_data[] = $row_data;
 		}
-	}
-	
+	//}
 	$chart_data['#settings']['grid']['background'] = '#fff';
+	$chart_data['#settings']['grid']['shadow'] = false;
+	$chart_data['#settings']['grid']['borderWidth'] = 1;
+	$chart_data['#settings']['grid']['borderColor'] = '#000';
 	
 	$chart_data['#settings']['axes']['xaxis']['min'] = 0;
 	$chart_data['#settings']['axes']['xaxis']['max'] = _barometer_feature_get_max_value();
+	$chart_data['#settings']['axes']['xaxis']['tickOptions'] = array('showGridline'=>false, 'showLabel'=>false, 'showMark'=>false);
 	
-	$chart_data['#settings']['axes']['yaxis']['tickOptions'] = array('fontSize'=>'10pt', 'markSize'=>10);
+	$chart_data['#settings']['axes']['yaxis']['tickOptions'] = array('showGridline'=>true, 'fontSize'=>'10pt', 'markSize'=>10);
+	$chart_data['#settings']['axes']['xaxis']['numberTicks'] = _barometer_feature_get_max_value()/22;
 	
-	$chart_data['#settings']['seriesDefaults']['pointLabels'] = array('show' => false, 'location'=>'e', 'edgeTolerance'=>20);
+
+		$chart_data['#settings']['seriesDefaults']['pointLabels'] = array('show' => false);
 	$chart_data['#settings']['seriesDefaults']['shadowAngle'] = 135;
+	$chart_data['#settings']['seriesDefaults']['shadow'] = false;
 	
+	$chart_data['#settings']['seriesDefaults']['rendererOptions']['barWidth'] = 10;
+
 	$chart_data['#settings']['legend']['show'] = true;
 	$chart_data['#settings']['legend']['location'] = 'ne';
+	$chart_data['#settings']['legend']['placement'] = 'outsideGrid';
 
 	return charts_chart($chart_data);
 	
@@ -104,27 +119,30 @@ function theme_barometer_chart ($filtered_data, $data) {
 }
 
 function theme_barometer_table ($filtered_data, $data) {
-	$header = $filtered_data['#header'];
-	
 	$table_data = array();
 	$table_data[0][0] = '';
+	$set_data = array();
+	$first_set = current($filtered_data);
+	$first_row = current($first_set);
 	
-	$table_header = array(0=>'');
-	
-	foreach(element_children($filtered_data) as $set_id) {
-		$set_data = array();
-		foreach(element_children($filtered_data[$set_id]) as $row_key) {
-			$row = $filtered_data[$set_id][$row_key];
-			$table_header[$row_key] = array('data'=>$data[$set_id][$row_key][1], 'colspan'=>count(element_children($filtered_data)));
-			$table_data[0][$row_key] = $data[$set_id]['#heading'];
-			foreach($row as $k => $v) {
-				$table_data[$k][0] = array('data'=>$data[$set_id][0][$k], 'header'=>true);
-				$table_data[$k][$row_key] = (int)$v[0].'('.(int)$v[1].')';
+	foreach(element_children($first_row) as $key_id) {
+		$table_data[$key_id][] = array('data'=>$filtered_data['#header'][$key_id], 'header'=>true);
+		$table_data[0] = array();
+		$table_data[0][0] = '';
+		$table_header = array(0=>'');
+		foreach(element_children($first_set) as $row_id) {
+			foreach(element_children($filtered_data) as $set_id) {
+				$v = $filtered_data[$set_id][$row_id][$key_id];
+				$table_data[$key_id][] = (int)$v[0].'('.(int)$v[1].')';
+				$table_data[0][] = array('data'=>$data[$set_id]['#heading'], 'header'=>true);
+				if(!isset($table_header[$row_id])) {			
+					$table_header[$row_id] = array('data'=>$data[$set_id][$row_id][1], 'colspan'=>count(element_children($filtered_data)));
+				}
 			}
 		}
 	}
 
-	return theme('table', $table_header, $table_data);
+	return theme('table', $table_header, $table_data, array('class'=>'barometer-table'));
 }
 
 function _barometer_feature_filter_data ($data, $values = array()) {
@@ -174,19 +192,31 @@ function _barometer_feature_parse_data ($file) {
 	return $csv->data;
 }
 
-function barometer_feature_key_form ($form_state, $data, $values) {
+function barometer_feature_key_form ($form_state, $data, $values, $node) {
 	$header = array_shift($data[0]); // Remove headers
 	
 	$main_keys_options = array();
 	$main_keys_options[-1] = t('Choose @title', array('@title'=>$header[1]));
 	
 	foreach($data[0] as $row) {
-		$main_keys_options[$row[0]] = $row[1];
+		$main_keys_options[(int)$row[0]] = $row[1];
 	}
 
 	$form['main_keys'] = array (
 		'#type' => 'select',
 		'#options' => $main_keys_options,
+	);
+	
+	$selected_keys = array();
+	if(isset($values['main_keys'])) {
+		foreach ($values['main_keys'] as $key => $value) {
+			$remove_link = l(t('Remove'), 'node/'.$node->nid, array('query'=>'remove_mkey='.$value, 'attributes'=>array('class'=>'remove-mkey-link')));
+			$selected_keys[] = '<div class="selected-main-key" id="selected-key-'.$value.'">'.$main_keys_options[$value].$remove_link.'</div>';
+		}
+	}
+		
+	$form['selected_keys'] = array (
+		'#value' => '<div class="remove-mlinks clearfix">'.implode(' ', $selected_keys).'</div>',
 	);
 	
 	$option_keys = array();
@@ -215,13 +245,10 @@ function barometer_feature_key_form_submit ($form, &$form_state) {
 	
 	$values['option_keys'] = $form_state['values']['option_keys'];
 	
-	if($form_state['values']['main_keys'] == -1) {
-		unset($values['main_keys']);
-	} else {
+	if($form_state['values']['main_keys'] > 0) {
 		$values['main_keys'][$form_state['values']['main_keys']] = $form_state['values']['main_keys'];
 	}
-	
-	setcookie('barometer-data', serialize($values));
+	barometer_feature_save_values($values);
 }
 
 function barometer_feature_get_saved_values() {
@@ -232,16 +259,25 @@ function barometer_feature_get_saved_values() {
 	return $values;
 }
 
+function barometer_feature_save_values($values) {
+	setcookie('barometer-data', serialize($values));
+}
+
+function barometer_feature_remove_saved_value($key, $value) {
+		$values = barometer_feature_get_saved_values();
+		unset($values[$key][$value]);
+		barometer_feature_save_values($values);
+}
 
 function _barometer_feature_get_max_value () {
-	return _barometer_feature_set_max_value(0);
+	return ceil(_barometer_feature_set_max_value(0)/10)*10;
 }
 
 function _barometer_feature_set_max_value ($value) {
 	static $max_value;
 
 	if (!isset($max_value)) {
-		$max_value = 0;
+		$max_value = $value;
 	} else {
 		$max_value = $value > $max_value ? $value : $max_value;
 	}
