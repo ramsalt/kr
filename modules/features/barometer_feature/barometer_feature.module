@@ -213,6 +213,7 @@ function barometer_feature_key_form ($form_state, $data, $values, $node) {
 	$form['main_keys'] = array (
 		'#type' => 'select',
 		'#options' => $main_keys_options,
+		'#title' => 'Velg kommune',
 	);
 	
 	$selected_keys = array();
@@ -224,6 +225,8 @@ function barometer_feature_key_form ($form_state, $data, $values, $node) {
 	}
 		
 	$form['selected_keys'] = array (
+		'#type' => 'item',
+		'#title' => 'Valgte kommuner',
 		'#value' => '<div class="remove-mlinks clearfix">'.implode(' ', $selected_keys).'</div>',
 	);
 	
@@ -241,6 +244,7 @@ function barometer_feature_key_form ($form_state, $data, $values, $node) {
 		'#suffix' => '</div>',
 		'#options' => $option_keys,
 		'#default_value' => $values['option_keys'],
+		'#title' => 'Velg nøkler',
 	);
 	
 	$form['submit'] = array('#type' => 'submit', '#value' => t('Filter'));

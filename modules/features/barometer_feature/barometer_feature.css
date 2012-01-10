@@ -16,6 +16,15 @@
 	background: none;
 }
 
+#barometer-feature-key-form {
+	margin: 1.5em 0;
+}
+
+#edit-main-keys-wrapper label {
+	float: left;
+	margin-right: 10px;
+}
+
 .remove-mlinks .selected-main-key {
 	background: #eee;
 	border: 1px solid #ccc;
