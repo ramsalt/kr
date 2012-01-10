@@ -73,7 +73,8 @@ function theme_barometer_chart ($filtered_data, $data) {
 	
 	foreach(element_children($filtered_data) as $set_id) {
 		$set_data = array();
-		foreach($filtered_data[$set_id] as $row_key => $row) {
+		foreach(element_children($filtered_data[$set_id]) as $row_key) {
+			$row = $filtered_data[$set_id][$row_key];
 			$row_data = array();
 			foreach($row as $k => $v) {
 				$row_data[] = array('#key'=>(int)$v[1], '#value'=>$data[$set_id][0][$k]);
@@ -112,7 +113,8 @@ function theme_barometer_table ($filtered_data, $data) {
 	
 	foreach(element_children($filtered_data) as $set_id) {
 		$set_data = array();
-		foreach($filtered_data[$set_id] as $row_key => $row) {
+		foreach(element_children($filtered_data[$set_id]) as $row_key) {
+			$row = $filtered_data[$set_id][$row_key];
 			$table_header[$row_key] = array('data'=>$data[$set_id][$row_key][1], 'colspan'=>count(element_children($filtered_data)));
 			$table_data[0][$row_key] = $data[$set_id]['#heading'];
 			foreach($row as $k => $v) {
@@ -126,12 +128,14 @@ function theme_barometer_table ($filtered_data, $data) {
 }
 
 function _barometer_feature_filter_data ($data, $values = array()) {
+	dsm($data);
 	// Handle filtered values
 	$header = $data[0][0];
 	unset($data[0][0]);
 	
 	foreach($data as $set_key => $set) {
-		foreach ($data[$set_key] as $row_key => $row) {
+		foreach (element_children($data[$set_key]) as $row_key) {
+			$row = $data[$set_key][$row_key];
 		
 			if(is_array($values['main_keys'])) {
 				if(!in_array($data[$set_key][$row_key][0], $values['main_keys'])) { unset ($data[$set_key][$row_key]); continue;}
@@ -152,6 +156,7 @@ function _barometer_feature_filter_data ($data, $values = array()) {
 		}
 	}
 	$data['#header'] = $header;
+	dsm($data);
 	return $data;
 }
 
@@ -160,6 +165,9 @@ function _barometer_feature_parse_data ($file) {
 	
 	$csv = new parseCSV();
 	$csv->heading = false;
+	$csv->convert_encoding = true;
+	$csv->input_encoding = 'ISO-8859-1';
+	$csv->output_encoding = 'utf8';
 	$csv->delimiter = ';';
 	$csv->parse($file);
 	
