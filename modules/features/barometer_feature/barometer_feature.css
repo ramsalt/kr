@@ -28,3 +28,7 @@
 	color: gray;
 	padding-left: .2em;
 }
+
+.jqplot-table-legend {
+	padding: 4px !important;
+}
