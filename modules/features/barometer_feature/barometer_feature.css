@@ -16,6 +16,10 @@
 	background: none;
 }
 
+.barometer-table .rangering {
+	color: grey;
+}
+
 #barometer-feature-key-form {
 	margin: 1.5em 0;
 }
@@ -31,6 +35,7 @@
 	padding: .5em;
 	float: left;
 	margin-right: 1em;
+	margin-bottom: 0.5em;
 }
 
 .remove-mlinks .selected-main-key a.remove-mkey-link {
@@ -40,4 +45,9 @@
 
 .jqplot-table-legend {
 	padding: 4px !important;
+}
+
+.table-description {
+	font-size: 0.83333em;
+	text-align: right;
 }

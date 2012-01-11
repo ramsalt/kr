@@ -48,6 +48,7 @@ function barometer_feature_generate_content ($node) {
 	$output = '';
 
 	$filtered_data = _barometer_feature_filter_data($data, $values);
+	$filtered_data['#table']['#description'] = $node->field_table_description[0]['value'];
 
 	$output .= drupal_get_form('barometer_feature_key_form', $data, $values, $node);
 	
@@ -96,6 +97,8 @@ function theme_barometer_chart ($filtered_data, $data) {
 			$chart_data[] = $row_data;
 		}
 	//}
+	$chart_data['#settings']['title']['text'] = 'Rangering '.$filtered_data[$set_id]['#heading'];
+
 	$chart_data['#settings']['grid']['background'] = '#fff';
 	$chart_data['#settings']['grid']['shadow'] = false;
 	$chart_data['#settings']['grid']['borderWidth'] = 1;
@@ -141,7 +144,7 @@ function theme_barometer_table ($filtered_data, $data) {
 		foreach(element_children($first_set) as $row_id) {
 			foreach(element_children($filtered_data) as $set_id) {
 				$v = $filtered_data[$set_id][$row_id][$key_id];
-				$table_data[$key_id][] = (int)$v[0].'('.(int)$v[1].')';
+				$table_data[$key_id][] = (int)$v[0].' <span class="rangering">('.(int)$v[1].')</span>';
 				$table_data[0][] = array('data'=>$data[$set_id]['#heading'], 'header'=>true);
 				if(!isset($table_header[$row_id])) {			
 					$table_header[$row_id] = array('data'=>$data[$set_id][$row_id][1], 'colspan'=>count(element_children($filtered_data)));
@@ -150,7 +153,10 @@ function theme_barometer_table ($filtered_data, $data) {
 		}
 	}
 
-	return theme('table', $table_header, $table_data, array('class'=>'barometer-table'));
+	$output = theme('table', $table_header, $table_data, array('class'=>'barometer-table'));
+	$output .= '<div class="caption table-description">'.$filtered_data['#table']['#description'].'</div>';
+
+	return $output;
 }
 
 function _barometer_feature_filter_data ($data, $values = array()) {
@@ -247,7 +253,7 @@ function barometer_feature_key_form ($form_state, $data, $values, $node) {
 		'#title' => 'Velg nøkler',
 	);
 	
-	$form['submit'] = array('#type' => 'submit', '#value' => t('Filter'));
+	$form['submit'] = array('#type' => 'submit', '#value' => t('Update'));
 	
 	return $form;
 }
