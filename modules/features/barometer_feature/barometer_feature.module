@@ -53,7 +53,7 @@ function barometer_feature_generate_content ($node) {
 	$output .= drupal_get_form('barometer_feature_key_form', $data, $values, $node);
 	
 	if(!is_array($values['main_keys'])) {
-		$output .= t('Here comes a descriptive text about what the user should do');
+		$output .= 'Velg først en kommune og hvilke nøkkeltall du ønsker å se. Deretter kan du legge til flere kommuner, slik at du kan sammenlikne disse med hverandre.';
 	} else {
 		$output .= theme('barometer_chart', $filtered_data, $data);
 		$output .= theme('barometer_table', $filtered_data, $data);
@@ -105,14 +105,14 @@ function theme_barometer_chart ($filtered_data, $data) {
 	$chart_data['#settings']['grid']['borderColor'] = '#000';
 	
 	$chart_data['#settings']['axes']['xaxis']['min'] = 0;
-	$chart_data['#settings']['axes']['xaxis']['max'] = _barometer_feature_get_max_value();
+	$chart_data['#settings']['axes']['xaxis']['max'] = _barometer_feature_get_max_value()+10;
 	$chart_data['#settings']['axes']['xaxis']['tickOptions'] = array('showGridline'=>false, 'showLabel'=>false, 'showMark'=>false);
 	
 	$chart_data['#settings']['axes']['yaxis']['tickOptions'] = array('showGridline'=>true, 'textColor'=>'#000', 'fontSize'=>'8pt', 'markSize'=>10);
 	$chart_data['#settings']['axes']['xaxis']['numberTicks'] = _barometer_feature_get_max_value()/22;
 	
 
-		$chart_data['#settings']['seriesDefaults']['pointLabels'] = array('show' => false);
+	$chart_data['#settings']['seriesDefaults']['pointLabels'] = array('show' => false);
 	$chart_data['#settings']['seriesDefaults']['shadowAngle'] = 135;
 	$chart_data['#settings']['seriesDefaults']['shadow'] = false;
 	
@@ -144,7 +144,7 @@ function theme_barometer_table ($filtered_data, $data) {
 		foreach(element_children($first_set) as $row_id) {
 			foreach(element_children($filtered_data) as $set_id) {
 				$v = $filtered_data[$set_id][$row_id][$key_id];
-				$table_data[$key_id][] = (int)$v[0].' <span class="rangering">('.(int)$v[1].')</span>';
+				$table_data[$key_id][] = $v[0].' <span class="rangering">('.$v[1].')</span>';
 				$table_data[0][] = array('data'=>$data[$set_id]['#heading'], 'header'=>true);
 				if(!isset($table_header[$row_id])) {			
 					$table_header[$row_id] = array('data'=>$data[$set_id][$row_id][1], 'colspan'=>count(element_children($filtered_data)));
@@ -153,7 +153,7 @@ function theme_barometer_table ($filtered_data, $data) {
 		}
 	}
 
-	$output = theme('table', $table_header, $table_data, array('class'=>'barometer-table'));
+	$output = theme('table', $table_header, $table_data, array('class'=>'barometer-table data-table'));
 	$output .= '<div class="caption table-description">'.$filtered_data['#table']['#description'].'</div>';
 
 	return $output;
@@ -219,7 +219,7 @@ function barometer_feature_key_form ($form_state, $data, $values, $node) {
 	$form['main_keys'] = array (
 		'#type' => 'select',
 		'#options' => $main_keys_options,
-		'#title' => 'Velg kommune',
+		'#title' => 'Kommuner',
 	);
 	
 	$selected_keys = array();
@@ -232,7 +232,6 @@ function barometer_feature_key_form ($form_state, $data, $values, $node) {
 		
 	$form['selected_keys'] = array (
 		'#type' => 'item',
-		'#title' => 'Valgte kommuner',
 		'#value' => '<div class="remove-mlinks clearfix">'.implode(' ', $selected_keys).'</div>',
 	);
 	
