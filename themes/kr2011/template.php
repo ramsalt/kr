@@ -22,7 +22,7 @@ function kr2011_scs_newsletter_output($nodes, $toc) {
     }
     if ($i == 3) {
         $body .= $ad1;
-    } elseif ($i == 8) {
+    } elseif ($i == 7) {
         $body .= $ad2;
     }
     $body .= theme('scs_node_output', $node);
