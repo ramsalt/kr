@@ -243,7 +243,16 @@ function barometer_feature_key_form ($form_state, $data, $values, $node) {
 	if (!isset($values['option_keys'])) $values['option_keys'] = array(); 
 	ksort($values['option_keys']);
 	
-	$form['option_keys'] = array (
+	
+	
+	$form['more_options'] = array (
+		'#type' => 'fieldset',
+		'#collapsed' => count(_barometer_feature_get_option_key_values($values['option_keys'])) > 0 ? true : false,
+		'#collapsible' => true,
+		'#title' => 'Flere valg',
+	);
+	
+	$form['more_options']['option_keys'] = array (
 		'#type' => 'checkboxes',
 		'#prefix' => '<div class="key-options clearfix">',
 		'#suffix' => '</div>',
@@ -288,6 +297,18 @@ function barometer_feature_remove_saved_value($key, $value) {
 
 function _barometer_feature_get_max_value () {
 	return ceil(_barometer_feature_set_max_value(0)/10)*10;
+}
+
+function _barometer_feature_get_option_key_values ($values) {
+	$ret = array();
+	if(isset($values)) {
+		foreach($values as $key => $value) {
+			if($value > 0) {
+				$ret[$key] = $value;
+			}
+		}
+	}
+	return $ret;
 }
 
 function _barometer_feature_set_max_value ($value) {
