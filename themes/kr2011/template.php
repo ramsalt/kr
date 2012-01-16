@@ -4,6 +4,7 @@
  * Theme a complete newsletter.
  */
 function kr2011_scs_newsletter_output($nodes, $toc) {
+  $addedAd2 = FALSE;
   $body = '';
   $titles = array();
   $i = 0;
@@ -23,6 +24,10 @@ function kr2011_scs_newsletter_output($nodes, $toc) {
     if ($i == 3) {
         $body .= $ad1;
     } elseif ($i == 7) {
+        $body .= $ad2;
+        $addedAd2 = TRUE;
+    }
+    if (!$addedAd2) {
         $body .= $ad2;
     }
     $body .= theme('scs_node_output', $node);
