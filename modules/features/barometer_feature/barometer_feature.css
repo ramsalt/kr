@@ -15,6 +15,7 @@
 
 .barometer-table td, .barometer-table th {
 	padding: 0.2em 0.4em;
+	white-space: nowrap;
 }
 
 .barometer-table tr.odd, .barometer-table tr.even {
