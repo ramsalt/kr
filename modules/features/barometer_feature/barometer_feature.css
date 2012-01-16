@@ -3,9 +3,14 @@
 	margin-right: 20px;
 }
 
+.barometer-table-wrapper {
+	overflow-x: scroll;
+}
+
 .barometer-table {
 	margin-top: 2em;
 	width: 100%;
+	font-size: 0.83333em;
 }
 
 .barometer-table td, .barometer-table th {
@@ -27,6 +32,10 @@
 #edit-main-keys-wrapper label {
 	float: left;
 	margin-right: 10px;
+}
+
+.remove-mlinks {
+	margin: 1em 0;
 }
 
 .remove-mlinks .selected-main-key {

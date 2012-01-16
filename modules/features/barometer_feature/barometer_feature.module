@@ -153,7 +153,7 @@ function theme_barometer_table ($filtered_data, $data) {
 		}
 	}
 
-	$output = theme('table', $table_header, $table_data, array('class'=>'barometer-table data-table'));
+	$output = '<div class="barometer-table-wrapper">'.theme('table', $table_header, $table_data, array('class'=>'barometer-table data-table')).'</div>';
 	$output .= '<div class="caption table-description">'.$filtered_data['#table']['#description'].'</div>';
 
 	return $output;
