@@ -328,5 +328,6 @@ function _barometer_feature_init_externals () {
 	$path = drupal_get_path('module', 'barometer_feature');
 	drupal_add_css($path.'/barometer_feature.css');
 	
-
+	$jquery_file = array('none' => 'jquery-1.4.2.js', 'min' => 'jquery-1.4.2.min.js'); 
+  jquery_update_jquery_path($jquery_file);
 }
