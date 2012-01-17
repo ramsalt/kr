@@ -35,6 +35,8 @@ function statistics_node_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
 function _statistics_node_generate_chart ($node) {
 	// Define chart type
 	// Define
+	$jquery_file = array('none' => 'jquery-1.4.2.js', 'min' => 'jquery-1.4.2.min.js'); 
+	jquery_update_jquery_path($jquery_file);
 	
 	$values = $node->field_values[0]['value'];
 	$data_array = _statistics_node_parse_chart_values($values);
@@ -49,8 +51,6 @@ function _statistics_node_generate_chart ($node) {
 	if(isset($node->field_chart_type) and $node->field_chart_type[0]['value']) {
 		$chart_data['#type'] = $node->field_chart_type[0]['value'];
 	} 
-	
-	$chart_data['#settings']['axesDefaults']['tickRenderer'] = array('$.jqplot.CanvasAxisTickRenderer', array('tickOptions'=>array()));
 	
 	if($node->field_chart_height[0]['value'] != null) $chart_data['#height'] = $node->field_chart_height[0]['value'];
 	if($node->field_chart_width[0]['value'] != null) $chart_data['#width'] = $node->field_chart_width[0]['value'];
