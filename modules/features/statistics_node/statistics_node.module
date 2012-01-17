@@ -64,7 +64,8 @@ function _statistics_node_generate_chart ($node) {
 	if($node->field_x_ticks[0]['value'] != null) $chart_data['#settings']['axes']['xaxis']['numberTicks'] = intval($node->field_x_ticks[0]['value']);
 	
 	$chart_data['#settings']['axes']['yaxis']['tickOptions'] = array('fontSize'=>'9pt');
-	$chart_data['#settings']['axes']['xaxis']['tickOptions'] = array('fontSize'=>'9pt');
+	$chart_data['#settings']['axes']['xaxis']['tickOptions'] = array('fontSize'=>'9pt', 'markSize'=>2);
+	$chart_data['#settings']['seriesDefaults']['rendererOptions']['barWidth'] = 20;
 	
 	// Check if years
 	//$chart_data['#settings']['axes']['xaxis']['renderer'] = '$.jqplot.DateAxisRenderer';
