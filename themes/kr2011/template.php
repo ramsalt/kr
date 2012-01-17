@@ -27,11 +27,11 @@ function kr2011_scs_newsletter_output($nodes, $toc) {
         $body .= $ad2;
         $addedAd2 = TRUE;
     }
-    if (!$addedAd2) {
-        $body .= $ad2;
-    }
     $body .= theme('scs_node_output', $node);
     $i++;
+  }
+  if (!$addedAd2) {
+      $body .= $ad2;
   }
 
   // ToC (if required)
