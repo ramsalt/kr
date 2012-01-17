@@ -105,14 +105,15 @@ function theme_barometer_chart ($filtered_data, $data) {
 	$chart_data['#settings']['grid']['borderColor'] = '#000';
 	
 	$chart_data['#settings']['axes']['xaxis']['min'] = 0;
-	$chart_data['#settings']['axes']['xaxis']['max'] = _barometer_feature_get_max_value()+10;
+	$chart_data['#settings']['axes']['xaxis']['max'] = _barometer_feature_get_max_value()+20;
 	$chart_data['#settings']['axes']['xaxis']['tickOptions'] = array('showGridline'=>false, 'showLabel'=>false, 'showMark'=>false);
 	
 	$chart_data['#settings']['axes']['yaxis']['tickOptions'] = array('showGridline'=>true, 'textColor'=>'#000', 'fontSize'=>'8pt', 'markSize'=>10);
 	$chart_data['#settings']['axes']['xaxis']['numberTicks'] = _barometer_feature_get_max_value()/22;
 	
 
-	$chart_data['#settings']['seriesDefaults']['pointLabels'] = array('show' => false);
+	$chart_data['#settings']['seriesDefaults']['pointLabels'] = array('show' => true, 'location'=> 'e', 'edgeTolerance'=> -15, 'formatString'=>'%d');
+
 	$chart_data['#settings']['seriesDefaults']['shadowAngle'] = 135;
 	$chart_data['#settings']['seriesDefaults']['shadow'] = false;
 	
