@@ -51,6 +51,7 @@ function _jqplot_charts_chart ($id, &$data) {
 		case 'hbar2D':
 			$settings['seriesDefaults']['renderer'] = "$.jqplot.BarRenderer";
 			$settings['seriesDefaults']['rendererOptions']['fillToZero'] = true;
+			//$settings['axes']['xaxis']['renderer'] = "$.jqplot.CategoryAxisRenderer";		
 			break;
 			
 		case 'vbar2D':
