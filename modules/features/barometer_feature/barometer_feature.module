@@ -326,4 +326,6 @@ function _barometer_feature_set_max_value ($value) {
 function _barometer_feature_init_externals () {
 	$path = drupal_get_path('module', 'barometer_feature');
 	drupal_add_css($path.'/barometer_feature.css');
+	
+
 }
