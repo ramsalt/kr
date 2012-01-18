@@ -47,16 +47,17 @@ function barometer_feature_generate_content ($node) {
 
 	$output = '';
 
-	$filtered_data = _barometer_feature_filter_data($data, $values);
-	$filtered_data['#table']['#description'] = $node->field_table_description[0]['value'];
+	$filtered_table_data = _barometer_feature_filter_table_data($data, $node, $values);
+	$filtered_chart_data = _barometer_feature_filter_chart_data($data, $node, $values);
+
 
 	$output .= drupal_get_form('barometer_feature_key_form', $data, $values, $node);
 	
 	if(!is_array($values['main_keys'])) {
 		$output .= 'Velg først en kommune og hvilke nøkkeltall du ønsker å se. Deretter kan du legge til flere kommuner, slik at du kan sammenlikne disse med hverandre.';
 	} else {
-		$output .= theme('barometer_chart', $filtered_data, $data);
-		$output .= theme('barometer_table', $filtered_data, $data);
+		$output .= theme('barometer_chart', $filtered_chart_data, $data);
+		$output .= theme('barometer_table', $filtered_table_data, $data);
 	}
 
 	return $output;
@@ -153,7 +154,6 @@ function theme_barometer_table ($filtered_data, $data) {
 			}
 		}
 	}
-
 	$output = '<div class="barometer-table-wrapper">'.theme('table', $table_header, $table_data, array('class'=>'barometer-table data-table')).'</div>';
 	$output .= '<div class="caption table-description">'.$filtered_data['#table']['#description'].'</div>';
 
@@ -191,6 +191,25 @@ function _barometer_feature_filter_data ($data, $values = array()) {
 	$data['#header'] = $header;
 	//dsm($data);
 	return $data;
+}
+
+function _barometer_feature_filter_table_data($data, $node, $values) {
+	$filtered_data =	_barometer_feature_filter_data($data, $values);
+	if(!empty($values['dataset_keys'])) {
+		foreach (element_children($filtered_data) as $set_key) {
+			if(!in_array($set_key+1, $values['dataset_keys'])) unset($filtered_data[$set_key]);
+		}
+	}
+	reset($filtered_data);
+	$filtered_data['#table']['#description'] = $node->field_table_description[0]['value'];
+	
+	return $filtered_data;
+}
+
+function _barometer_feature_filter_chart_data($data, $node, $values) {
+	$filtered_data =	_barometer_feature_filter_data($data, $values);
+	
+	return $filtered_data;
 }
 
 function _barometer_feature_parse_data ($file) {
@@ -262,6 +281,28 @@ function barometer_feature_key_form ($form_state, $data, $values, $node) {
 		'#title' => 'Velg nøkler',
 	);
 	
+	
+	$dataset_keys = array();
+	foreach($data as $set_key => $set) {
+		$dataset_keys[$set_key+1] = $set['#heading'];
+	}
+	
+	if (!isset($values['dataset_keys'])) $values['dataset_keys'] = array();
+	if(empty($values['dataset_keys'])) {
+		foreach($dataset_keys as $key => $heading) {
+			$values['dataset_keys'][$key] = $key; 
+		}
+	}
+	
+	$form['more_options']['dataset_keys'] = array (
+		'#type' => 'checkboxes',
+		'#prefix' => '<div class="key-options clearfix">',
+		'#suffix' => '</div>',
+		'#options' => $dataset_keys,
+		'#default_value' => $values['dataset_keys'],
+		'#title' => 'Velg serier',
+	);
+	
 	$form['submit'] = array('#type' => 'submit', '#value' => t('Update'));
 	
 	return $form;
@@ -271,6 +312,8 @@ function barometer_feature_key_form_submit ($form, &$form_state) {
 	$values = barometer_feature_get_saved_values();
 	
 	$values['option_keys'] = $form_state['values']['option_keys'];
+	
+	$values['dataset_keys'] = $form_state['values']['dataset_keys'];
 	
 	if($form_state['values']['main_keys'] > 0) {
 		$values['main_keys'][$form_state['values']['main_keys']] = $form_state['values']['main_keys'];
