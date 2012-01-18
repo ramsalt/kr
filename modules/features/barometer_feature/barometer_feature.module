@@ -57,7 +57,7 @@ function barometer_feature_generate_content ($node) {
 		$output .= 'Velg først en kommune og hvilke nøkkeltall du ønsker å se. Deretter kan du legge til flere kommuner, slik at du kan sammenlikne disse med hverandre.';
 	} else {
 		$output .= theme('barometer_chart', $filtered_chart_data, $data);
-		$output .= theme('barometer_table', $filtered_table_data, $data, $node->field_table_modus[0]['value']);
+		$output .= theme('barometer_table', $filtered_table_data, $data, 1);
 	}
 
 	return $output;
