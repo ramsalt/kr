@@ -6,10 +6,6 @@ function barometer_feature_nodeapi (&$node, $op, $a3 = NULL, $a4 = NULL) {
 	switch ($op) {
 		case 'view';
 			if($node->type == 'barometer') {
-				unset($node->content['field_barometer_data']);
-				unset($node->content['group_table_settings']);
-				unset($node->content['field_table_description']);
-				unset($node->content['field_table_modus']);
 				
 				$node->content['barometer_output'] = array(
 					'#value' => barometer_feature_generate_content($node), 
