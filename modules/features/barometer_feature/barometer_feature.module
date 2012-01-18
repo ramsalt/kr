@@ -61,7 +61,7 @@ function barometer_feature_generate_content ($node) {
 		$output .= 'Velg først en kommune og hvilke nøkkeltall du ønsker å se. Deretter kan du legge til flere kommuner, slik at du kan sammenlikne disse med hverandre.';
 	} else {
 		$output .= theme('barometer_chart', $filtered_chart_data, $data);
-		$output .= theme('barometer_table', $filtered_table_data, $data, 1);
+		$output .= theme('barometer_table', $filtered_table_data, $data, $node->field_table_modus[0]['value']);
 	}
 
 	return $output;
@@ -165,7 +165,6 @@ function theme_barometer_table ($filtered_data, $data, $mode = 1) {
 			
 		case 2:
 			foreach(element_children(current($filtered_data)) as $key_id) {
-				dsm($key_id);
 				$table_data[$key_id][] = array('data'=>$data[0][$key_id][1], 'header'=>true);
 				$table_data[0] = array();
 				$table_data[0][0] = '';
