@@ -75,14 +75,14 @@ function barometer_feature_strongarm() {
   $strongarm->name = 'content_extra_weights_barometer';
   $strongarm->value = array(
     'title' => '-5',
-    'revision_information' => '0',
-    'author' => '-1',
-    'options' => '1',
-    'comment_settings' => '3',
-    'menu' => '-3',
-    'path' => '4',
-    'attachments' => '2',
-    'workflow' => '-2',
+    'revision_information' => '2',
+    'author' => '1',
+    'options' => '3',
+    'comment_settings' => '5',
+    'menu' => '-1',
+    'path' => '6',
+    'attachments' => '4',
+    'workflow' => '0',
   );
   $export['content_extra_weights_barometer'] = $strongarm;
 

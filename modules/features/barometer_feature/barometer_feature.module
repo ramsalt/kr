@@ -25,7 +25,7 @@ function barometer_feature_theme($existing, $type, $theme, $path) {
       'arguments' => array('filtered_data' => NULL, 'data' => NULL),
     ),
     'barometer_table' => array(
-      'arguments' => array('filtered_data' => NULL, 'data' => NULL),
+      'arguments' => array('filtered_data' => NULL, 'data' => NULL, 'mode' => 1),
     ),
   );
 }
@@ -57,7 +57,7 @@ function barometer_feature_generate_content ($node) {
 		$output .= 'Velg først en kommune og hvilke nøkkeltall du ønsker å se. Deretter kan du legge til flere kommuner, slik at du kan sammenlikne disse med hverandre.';
 	} else {
 		$output .= theme('barometer_chart', $filtered_chart_data, $data);
-		$output .= theme('barometer_table', $filtered_table_data, $data);
+		$output .= theme('barometer_table', $filtered_table_data, $data, $node->field_table_modus[0]['value']);
 	}
 
 	return $output;
@@ -131,28 +131,53 @@ function theme_barometer_chart ($filtered_data, $data) {
 	return '';
 }
 
-function theme_barometer_table ($filtered_data, $data) {
+function theme_barometer_table ($filtered_data, $data, $mode = 1) {
 	$table_data = array();
 	$table_data[0][0] = '';
 	$set_data = array();
+	
 	$first_set = current($filtered_data);
 	$first_row = current($first_set);
-	
-	foreach(element_children($first_row) as $key_id) {
-		$table_data[$key_id][] = array('data'=>$filtered_data['#header'][$key_id], 'header'=>true);
-		$table_data[0] = array();
-		$table_data[0][0] = '';
-		$table_header = array(0=>'');
-		foreach(element_children($first_set) as $row_id) {
-			foreach(element_children($filtered_data) as $set_id) {
-				$v = $filtered_data[$set_id][$row_id][$key_id];
-				$table_data[$key_id][] = $v[0].' <span class="rangering">('.$v[1].')</span>';
-				$table_data[0][] = array('data'=>$data[$set_id]['#heading'], 'header'=>true);
-				if(!isset($table_header[$row_id])) {			
-					$table_header[$row_id] = array('data'=>$data[$set_id][$row_id][1], 'colspan'=>count(element_children($filtered_data)));
+
+	switch ($mode) {
+		case 1:
+			foreach(element_children($first_row) as $key_id) {
+				$table_data[$key_id][] = array('data'=>$filtered_data['#header'][$key_id], 'header'=>true);
+				$table_data[0] = array();
+				$table_data[0][0] = '';
+				$table_header = array(0=>'');
+				foreach(element_children($first_set) as $row_id) {
+					foreach(element_children($filtered_data) as $set_id) {
+						$v = $filtered_data[$set_id][$row_id][$key_id];
+						$table_data[$key_id][] = $v[0].' <span class="rangering">('.$v[1].')</span>';
+						$table_data[0][] = array('data'=>$data[$set_id]['#heading'], 'header'=>true);
+						if(!isset($table_header[$row_id])) {			
+							$table_header[$row_id] = array('data'=>$data[$set_id][$row_id][1], 'colspan'=>count(element_children($filtered_data)));
+						}
+					}
+				}
+			}		
+			break;
+			
+		case 2:
+			foreach(element_children(current($filtered_data)) as $key_id) {
+				dsm($key_id);
+				$table_data[$key_id][] = array('data'=>$data[0][$key_id][1], 'header'=>true);
+				$table_data[0] = array();
+				$table_data[0][0] = '';
+				$table_header = array(0=>'');
+				foreach(element_children($first_row) as $row_id) {
+					foreach(element_children($filtered_data) as $set_id) {
+						$v = $filtered_data[$set_id][$key_id][$row_id];
+						$table_data[$key_id][] = $v[0].' <span class="rangering">('.$v[1].')</span>';
+						$table_data[0][] = array('data'=>$data[$set_id]['#heading'], 'header'=>true);
+						if(!isset($table_header[$row_id])) {			
+							$table_header[$row_id] = array('data'=>$filtered_data['#header'][$row_id], 'colspan'=>count(element_children($filtered_data)));
+						}
+					}
 				}
 			}
-		}
+			break;
 	}
 	$output = '<div class="barometer-table-wrapper">'.theme('table', $table_header, $table_data, array('class'=>'barometer-table data-table')).'</div>';
 	$output .= '<div class="caption table-description">'.$filtered_data['#table']['#description'].'</div>';
