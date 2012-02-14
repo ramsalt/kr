@@ -68,8 +68,29 @@ function _statistics_node_generate_chart ($node) {
 	$chart_data['#settings']['seriesDefaults']['rendererOptions']['barWidth'] = 20;
 	
 	// Check if years
+	$ticks = _statistics_node_set_ticks();
+	$axis = $chart_data['#type'] == 'vbar2D' ? 'yaxis' : 'xaxis';
+	
+	switch ($node->field_x_format[0]['value']) {
+		case 'text':
+			if(!empty($ticks)) {
+				$chart_data['#ticks'] = $ticks;
+			}
+			$chart_data['#settings']['axes'][$axis]['tickOptions']['angle'] = -30;
+			break;
+
+		case 'date':
+			$chart_data['#settings']['axes'][$axis]['tickOptions']['formatString'] = '%d';
+			$chart_data['#settings']['axes'][$axis]['renderer'] = "$.jqplot.DateAxisRenderer";
+			//$chart_data['#settings']['axes'][$axis]['tickOptions']['formatString'] = '%b %y';
+			break;
+			
+		default:
+		case 'int':
+			$chart_data['#settings']['axes'][$axis]['tickOptions']['formatString'] = '%d';
+			break;
+	}
 	//$chart_data['#settings']['axes']['xaxis']['renderer'] = '$.jqplot.DateAxisRenderer';
-	$chart_data['#settings']['axes']['xaxis']['tickOptions']['formatString'] = '%d';
 	
 	$chart_data['#settings']['grid']['background'] = '#fff';
 	
@@ -79,7 +100,7 @@ function _statistics_node_generate_chart ($node) {
 	}
 	
 	$chart_data['#settings']['highlighter'] = array('show'=>true, 'sizeAdjust'=>7.5);
-	
+	//dsm($data_array);
 	foreach($data_array as $data) {
 		$chart_data[] = $data;
 	}
@@ -108,10 +129,16 @@ function _statistics_node_parse_chart_values($values) {
 		foreach ($row as $key=>$val) {
 			if($x_key > -1) { 
 				$xid = $row[$x_key];
+				if($x_key != $key) {
+					$data[$key][] = ((int)$val);
+				} else {
+					_statistics_node_set_ticks($val);
+				}
 			} else {
 				$xid = $rid;
+				$data[$key][] = array('#key'=>$rid, '#value'=>(int)$val);
 			}
-			$data[$key][] = array('#key'=>$xid, '#value'=>(int)$val);
+			
 			
 		}
 	}
@@ -119,6 +146,7 @@ function _statistics_node_parse_chart_values($values) {
 	if($x_key > -1) { 
 		unset($data[$x_key]);
 	}
+	//dsm($data);
 	return $data;
 }
 
@@ -132,6 +160,16 @@ function _statistics_node_generate_table ($values) {
 	$suffix = '<div style="clear:both;"></div>';
 	
 	return theme('table', array_shift($values_array), $values_array, array('class'=>'data-table')).$suffix;
+}
+
+function _statistics_node_set_ticks ($value = null) {
+	static $values = array();
+
+	if($value) {
+		$values[] = $value;
+	}
+	
+	return $values;
 }
 
 function _statistics_node_parse_table_values($values) {	
