@@ -33,11 +33,12 @@ function _kr_div_addthis(){
   return theme('op_addthis_widget', $addthis_link_title);
 }
 function kr_div_forside_clear($form_id, $form_values){
-  drupal_set_message('joe33');
+  drupal_set_message('joe44');
   
   db_query("DELETE FROM {views_content_cache}");
   db_query("DELETE FROM {cache_views}");
   db_query("DELETE FROM {cache_views_data}");
+  db_query("DELETE FROM {cache_page}");
   cache_clear_all();
 }
 function kr_diverse_form_alter(&$form, &$form_state, $form_id) {
