@@ -34,7 +34,9 @@ function _kr_div_addthis(){
 }
 
 function kr_diverse_form_alter(&$form, &$form_state, $form_id) {
-print $form_id . '<br>';
+  if($form_id == 'draggableviews_view_draggabletable_form_articles_page_2'){
+print '<pre>';    print_r($form); print '</pre>';
+  }
   if($form_id == 'article_node_form' && arg(1)=='add'){
     
     global $user;
