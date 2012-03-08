@@ -33,16 +33,8 @@ function _kr_div_addthis(){
   return theme('op_addthis_widget', $addthis_link_title);
 }
 function kr_div_forside_clear($form_id, $form_values){
-  drupal_set_message('joess');
-$full_urls = array('/');
-
-
-// Process Full URLs
-// hook_expire_cache
-$modules = module_implements('expire_cache');
-foreach ($modules as $module) {
-  module_invoke($module, 'expire_cache', $full_urls);
-}
+  drupal_set_message('joe22');
+  cache_clear_all();
 }
 function kr_diverse_form_alter(&$form, &$form_state, $form_id) {
   if($form_id == 'draggableviews_view_draggabletable_form_articles_page_2'){
