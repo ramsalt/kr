@@ -33,7 +33,7 @@ function _kr_div_addthis(){
   return theme('op_addthis_widget', $addthis_link_title);
 }
 function kr_div_forside_clear($form_id, $form_values){
-drupal_set_message('new orders');
+
   dmemcache_flush();
   db_query("DELETE FROM {views_content_cache}");
   db_query("DELETE FROM {cache_views}");
