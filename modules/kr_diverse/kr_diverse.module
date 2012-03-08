@@ -32,10 +32,13 @@ function _kr_div_addthis(){
   $addthis_link_title=$node->title;
   return theme('op_addthis_widget', $addthis_link_title);
 }
-
+function _kr_div_forside_clear($form_id, $form_values){
+  drupal_Set_message('joe');
+}
 function kr_diverse_form_alter(&$form, &$form_state, $form_id) {
   if($form_id == 'draggableviews_view_draggabletable_form_articles_page_2'){
-print '<pre>';    print_r($form); print '</pre>';
+    $form['#submit']['_kr_div_forside_clear'] = array();
+//print '<pre>';    print_r($form); print '</pre>';
   }
   if($form_id == 'article_node_form' && arg(1)=='add'){
     
