@@ -33,8 +33,9 @@ function _kr_div_addthis(){
   return theme('op_addthis_widget', $addthis_link_title);
 }
 function kr_div_forside_clear($form_id, $form_values){
-  drupal_set_message('joe22');
-  cache_clear_all();
+  drupal_set_message('joe222');
+  //cache_clear_all();
+  db_query("DELETE FROM {views_content_cache}");
 }
 function kr_diverse_form_alter(&$form, &$form_state, $form_id) {
   if($form_id == 'draggableviews_view_draggabletable_form_articles_page_2'){
