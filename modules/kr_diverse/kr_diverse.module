@@ -34,6 +34,7 @@ function _kr_div_addthis(){
 }
 
 function kr_diverse_form_alter(&$form, &$form_state, $form_id) {
+dsm($form_id);
   if($form_id == 'article_node_form' && arg(1)=='add'){
     
     global $user;
