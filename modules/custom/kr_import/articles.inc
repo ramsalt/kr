@@ -31,7 +31,7 @@ class KommunerMigration extends Migration {
         MigrateDestinationNode::getKeySchema()
     );
     $this->addFieldMapping('title', 'Kommunenavn');
-    $this->addFieldMapping('field_kommunenr', 'Kommunenr');
+    $this->addFieldMapping('field_kommunenummer', 'Kommunenr');
   }
 }
  
