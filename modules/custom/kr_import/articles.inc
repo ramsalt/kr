@@ -9,6 +9,32 @@
  * Note that, if basing a migration on an XML source, you need to derive it
  * from XMLMigration instead of Migration.
  */
+class KommunerMigration extends Migration {
+  public function __construct() {
+    parent::__construct();
+    $this->description = t('Legg inn kommuner');
+    $columns = array(
+      // "Source": ('Fieldname', 'Description')
+      0 => array('Kommunenr', 'Kommunenr'),
+      1 => array('Kommunenavn', 'Kommunenavn'),
+    );
+    $this->source = new MigrateSourceCSV(DRUPAL_ROOT . '/' . drupal_get_path('module', 'kr_import') . '/komkat2012.csv', $columns, array('header_rows' => 4));
+    $this->destination = new MigrateDestinationNode('kommune');
+    $this->map = new MigrateSQLMap($this->machineName,
+        array('Kommunenr' => array( // this field is used to connect user und profile2
+                'type' => 'varchar',
+                'length' => 6,
+                'not null' => TRUE,
+                'description' => 'kommunenr' // description never used
+              )
+             ),
+        MigrateDestinationNode::getKeySchema()
+    );
+    $this->addFieldMapping('title', 'Kommunenavn');
+    $this->addFieldMapping('field_kommunenr', 'Kommunenr');
+  }
+}
+ 
 class ArticlesMigration extends Migration {
   public function __construct() {
     parent::__construct();
