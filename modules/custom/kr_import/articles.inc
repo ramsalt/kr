@@ -18,7 +18,7 @@ class KommunerMigration extends Migration {
       0 => array('Kommunenr', 'Kommunenr'),
       1 => array('Kommunenavn', 'Kommunenavn'),
     );
-    $this->source = new MigrateSourceCSV(DRUPAL_ROOT . '/' . drupal_get_path('module', 'kr_import') . '/komkat2012.csv', $columns, array('header_rows' => 4));
+    $this->source = new MigrateSourceCSV('/var/www/' . drupal_get_path('module', 'kr_import') . '/komkat2012.csv', $columns, array('header_rows' => 4));
     $this->destination = new MigrateDestinationNode('kommune');
     $this->map = new MigrateSQLMap($this->machineName,
         array('Kommunenr' => array( // this field is used to connect user und profile2
