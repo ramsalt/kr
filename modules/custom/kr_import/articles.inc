@@ -22,7 +22,7 @@ class KommunerMigration extends Migration {
       4 => array('ordf', 'ordf')
       
     );
-    $this->source = new MigrateSourceCSV('/var/www/' . drupal_get_path('module', 'kr_import') . '/komkat.csv', $columns);
+    $this->source = new MigrateSourceCSV('/var/www/' . drupal_get_path('module', 'kr_import') . '/komkat2.csv', $columns);
     $this->destination = new MigrateDestinationNode('kommune');
     $this->map = new MigrateSQLMap($this->machineName,
         array('Kommunenr' => array( // this field is used to connect user und profile2
