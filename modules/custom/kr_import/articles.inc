@@ -17,6 +17,10 @@ class KommunerMigration extends Migration {
       // "Source": ('Fieldname', 'Description')
       0 => array('Kommunenr', 'Kommunenr'),
       1 => array('Kommunenavn', 'Kommunenavn'),
+      2 => array('adm','adm'),
+      3 => array('fylke','fylke'),
+      4 => array('ordf', 'ordf')
+      
     );
     $this->source = new MigrateSourceCSV('/var/www/' . drupal_get_path('module', 'kr_import') . '/komkat.csv', $columns);
     $this->destination = new MigrateDestinationNode('kommune');
@@ -30,8 +34,11 @@ class KommunerMigration extends Migration {
              ),
         MigrateDestinationNode::getKeySchema()
     );
-    $this->addFieldMapping('title', 'Kommunenavn');
+    $this->addFieldMapping('field_kommunenavn', 'Kommunenavn');
     $this->addFieldMapping('field_kommunenummer', 'Kommunenr');
+    $this->addFieldMapping('field_adm_senter', 'adm');
+    $this->addFieldMapping('field_fylke', 'fylke');
+    
   }
 }
  
