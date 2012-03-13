@@ -1,0 +1,14 @@
+name = "Kommunal Rapport Import ordforere"
+description = "Import ord"
+package = "Development"
+core = 6.x
+php = 5.2
+dependencies[] = taxonomy
+dependencies[] = imagefield
+dependencies[] = comment
+dependencies[] = migrate
+dependencies[] = content
+dependencies[] = date
+;dependencies[] = migrate_extras
+files[] = kr_import_ord.module
+files[] = kom.inc
