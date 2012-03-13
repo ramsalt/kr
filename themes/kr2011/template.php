@@ -309,6 +309,7 @@ function kr2011_preprocess_node(&$vars){
 		drupal_add_js(drupal_get_path('theme', 'kr2011').'/js/kr2011.js', 'theme', 'footer');
 	//	print_R($vars['node']);
 	}
+
 	
 }
 
@@ -397,7 +398,44 @@ function kr2011_nopremium_message($node){
   $html .= $block['content'];
   return $html;
 }
+function kr2011_content_multigroup_display_table_multiple($element) {
+  $headers = array();
+  foreach ($element['#fields'] as $field_name => $field) {
+    $label_display = isset($field['display_settings']['label']['format']) ? $field['display_settings']['label']['format'] : 'above';
+    $headers[] = array(
+      'data' => ($label_display != 'hidden' ? check_plain(t($field['widget']['label'])) : ''),
+      'class' => 'content-multigroup-cell-'. str_replace('_', '-', $field_name),
+    );
+  }
+  $rows = array();
+  foreach (element_children($element) as $delta) {
+    $cells = array();
+    $empty = TRUE;
+    foreach ($element['#fields'] as $field_name => $field) {
+      $item = drupal_render($element[$delta][$field_name]);
+      
+      if($element[$delta][$field_name]['#field_name']== 'field_periode_til' && empty($item)){
+        $item = '
+        <div class="field field-type-date field-field-periode-til"> <div class="field-label">Til:&nbsp;</div> <div class="field-items"> <div class="field-item odd"> <span class="date-display-single">--></span> </div> </div> </div> 
+        ';
+      }
+      
+      $cells[] = array(
+        'data' => $item,
+        'class' => $element[$delta]['#attributes']['class'] .' content-multigroup-cell-'. str_replace('_', '-', $field_name),
+      );
+      if (!empty($item)) {
+        $empty = FALSE;
+      }
+    }
+    // Get the row only if there is at least one non-empty field.
+    if (!$empty) {
+      $rows[] = $cells;
+    }
+  }
 
+  return count($rows) ? theme('table', $headers, $rows, $element['#attributes']) : '';
+}
 /**
  * Registers overrides for various functions.
  *
