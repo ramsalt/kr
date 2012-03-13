@@ -33,9 +33,7 @@ class OrdMigration extends Migration {
       'kommune' => 'kommune',
       'periodestart' => 'periodestart',
       'image_file_fid' => 'image_file_fid'
-      
-      
-      
+
     );
     $this->source = new MigrateSourceSQL($query, $source_fields);
     $this->destination = new MigrateDestinationNode('ordforer');
@@ -71,7 +69,8 @@ class OrdMigration extends Migration {
     $this->addFieldMapping('field_ordf_slag', 'slag');
    
     $this->addFieldMapping('field_rel_kommune', 'kommune');
-    $this->addFieldMapping('field_ordf_perioder', 'periodestart'); 
+    
+    $this->addFieldMapping('field_periode_fra', 'periodestart'); 
     
     $this->addFieldMapping('field_ordf_bilde', 'image_file_fid')
          ->arguments(array('file_function' => 'file_copy'));
