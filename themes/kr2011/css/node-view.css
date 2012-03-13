@@ -271,5 +271,14 @@ html.js body.sidebars div#outer-wrapper div#wrapper div#container.clearfix div#c
     display: none
 }
 .node-type-ordforer .field-type-nodereference{
-  margin:  0px;
+  margin: 0px;
+}
+.node-type-ordforer .field-type-nodereference .field-items .field-item{
+  font-size: 2em;  
+}
+.node-type-ordforer .field-items .field-item{
+  background: none;
+}
+.node-type-ordforer .field-field-rel-kommune{
+  
 }
