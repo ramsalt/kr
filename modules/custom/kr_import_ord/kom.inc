@@ -67,7 +67,8 @@ class OrdMigration extends Migration {
     $this->addFieldMapping('field_ordf_org_med', 'org');
     $this->addFieldMapping('field_ordf_beste', 'beste');
     $this->addFieldMapping('field_ordf_slag', 'slag');
-   
+    $this->addFieldMapping('uid')
+        ->defaultValue(1);
     $this->addFieldMapping('field_rel_kommune', 'kommune');
     
     $this->addFieldMapping('field_periode_fra', 'periodestart'); 
