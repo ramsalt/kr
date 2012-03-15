@@ -84,6 +84,10 @@ function _statistics_node_generate_chart ($node) {
 			$chart_data['#settings']['axes'][$axis]['renderer'] = "$.jqplot.DateAxisRenderer";
 			//$chart_data['#settings']['axes'][$axis]['tickOptions']['formatString'] = '%b %y';
 			break;
+		
+    case 'dec':
+    	//$chart_data['#settings']['axes'][$axis]['tickOptions']['formatString'] = '%d';
+	    break;
 			
 		default:
 		case 'int':
