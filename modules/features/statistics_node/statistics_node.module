@@ -128,19 +128,19 @@ function _statistics_node_parse_chart_values($values) {
 		}
 		$data[$key] = array('#legend'=>$legend);
 	}
-
+	
 	foreach($csv->data as $rid=>$row) {
 		foreach ($row as $key=>$val) {
 			if($x_key > -1) { 
 				$xid = $row[$x_key];
 				if($x_key != $key) {
-					$data[$key][] = ((int)$val);
+					$data[$key][] = ((float)$val);
 				} else {
 					_statistics_node_set_ticks($val);
 				}
 			} else {
 				$xid = $rid;
-				$data[$key][] = array('#key'=>$rid, '#value'=>(int)$val);
+				$data[$key][] = array('#key'=>$rid, '#value'=>(float)$val);
 			}
 			
 			
