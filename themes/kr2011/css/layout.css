@@ -1,3 +1,6 @@
+/* @override 
+	http://www.kommunal-rapport.no/sites/default/themes/kr2011/css/layout.css?4 */
+
 @charset "UTF-8";
 
 /* Handy font size definitions 
@@ -43,7 +46,7 @@ font-size: 2em;      12px x 2    = 24px
 
 
 body.front-page #sidebar-left {
-    border-right: 1px solid #BECCD3;
+    border-right: 1px solid #BECCD3; 
     float: left;
     margin-left: 10px;
     padding-right: 9px;
@@ -93,11 +96,11 @@ body.sidebar-right #center {
 }
 
 body.sidebars.node-view-page #center{
-	border-top: 10px solid #003663;
+/*	border-top: 10px solid #003663; */
 }
 .node-view-page #sidebar-left {
-	border-top: 10px solid #003663;
-	border-right: 1px solid #7e7e7a;
+/*	border-top: 10px solid #003663; */
+/*	border-right: 1px solid #7e7e7a; */
   	float: left;
   	width: 180px;
   	/*margin-right: 19px;*/
