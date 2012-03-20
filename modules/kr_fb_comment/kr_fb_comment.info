@@ -1,5 +1,0 @@
-name = KR fb comment counter
-description = fb comment counter
-package = "Facebook Social"
-core = 6.x
-version = "6.x-1.x"

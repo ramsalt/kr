@@ -1,3 +1,0 @@
-<?php
-
-include_once('kr_payment_wall_light.features.inc');

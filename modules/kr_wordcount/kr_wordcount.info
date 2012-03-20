@@ -1,6 +1,0 @@
-name = Kommunal rapport wordcount
-description = Teller ord og tegn
-package = Other
-core = 6.x
-version = "6.x-1.x"
-dependencies[] = ckeditor

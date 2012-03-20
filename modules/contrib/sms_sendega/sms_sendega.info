@@ -1,6 +1,0 @@
-; $Id$
-name = Sms Sendega
-description = "The description of this module"
-core = 6.x
-package = SMS Framework
-dependencies[] = sms

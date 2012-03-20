@@ -1,3 +1,0 @@
-Drupal 6 todo:
-* Either support for Ajax Poll module or custom AJAX/AJAH handling for better usability when submitting votes.
-* Support multiple polls to exist on the same page view (for instance when having more than one block displaying diffrent polls)
