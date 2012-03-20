@@ -111,7 +111,7 @@ body.sidebars.node-view-page #center{
 #sidebar-right {
   float: right;
   width: 178px;
-  padding: 0;
+  padding-left: 3px;
   overflow: hidden;
 }
 
