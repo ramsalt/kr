@@ -78,7 +78,7 @@
  ?>
 
 <?php print $page_header; ?>
-<div id="center-left-wraper">
+<div id="center-left-wrapper">
 <div id="center" class="clearfix">
 
 
