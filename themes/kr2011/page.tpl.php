@@ -78,7 +78,7 @@
  ?>
 
 <?php print $page_header; ?>
-
+<div id="center-left-wraper">
 <div id="center" class="clearfix">
 
 
@@ -125,7 +125,7 @@
   	<?php print $left ?>
   </div> <!-- /#sidebar-left -->
 <?php endif; ?>
-
+</div> <!-- /#center-left-wrapper -->
 <?php if ($right): ?>
   <div id="sidebar-right" class="sidebar">
   	<?php print $right ?>
