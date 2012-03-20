@@ -6,6 +6,7 @@
   border-top: 10px solid #003663;
   background: url("../images/border.gif") repeat-y scroll right center transparent;
   float: left;
+  padding-top: 10px;
 }
 #sidebar-left {
 /*    border-right: 1px solid #BECCD3; */ 
