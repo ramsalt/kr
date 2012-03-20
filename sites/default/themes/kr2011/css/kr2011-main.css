@@ -1,0 +1,85 @@
+#top-menu{
+border-top: 0px solid #003762; /*780F2C*/
+}
+
+#wrapper > #logo-area{
+background: #003762;
+}
+
+#nav ul.primary-links li a.active{
+background: none repeat scroll 0 0 #780F2C;
+}
+
+#logo img{
+padding: 1em;
+}
+
+#top-search-button {
+    padding-right: 2em;
+}
+.fagpresse{
+    float: left;
+    padding-top: 10px;
+    position: relative;
+}
+.fagpresse h3{
+	color: #FFFFFF;
+	margin: 10px 0 0;
+}
+.fagpresse span{
+    color: #FFFFFF;
+    font-size: 85%;
+}
+.fagpresse img{
+	border: 1px solid #CCCCCC;
+    float: left;
+    height: 73px;
+    margin-right: 10px;
+}
+.fagpresse a{
+	color: #FFFFFF;
+	font-size: 13px;
+}
+#draggableview_articles_1 h2{
+	background: none;
+	font-size: 14px;
+	border: none;
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+}
+
+/* Override for OpenX ads */
+#op-content .block-openx .content {
+    margin-bottom: 0;
+}
+
+.block-openx a:link{
+    color: gray;
+    font-size: 0.9em;
+    clear: both;
+    
+    display: block;
+}
+
+.section-date-author {
+    text-transform: none;
+}
+
+/* ads */
+#toppann_left {
+    height: 150px;
+    left: 0;
+    position: absolute;
+    top: 0px;
+    width: 160px;
+}
+
+#toppann_right {
+    height: 150px;
+    left: 180px;
+    position: absolute;
+    top: 0px;
+    width: 800px;
+    padding-left: 22px;
+}

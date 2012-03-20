@@ -1,0 +1,8 @@
+name = Subscriber status
+description = Shows subscriber status in the profile
+package = Other
+dependencies[] = profile
+core = 6.x
+php = 5.x
+
+//$Id$

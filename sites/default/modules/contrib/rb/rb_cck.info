@@ -1,0 +1,13 @@
+name = "Rules Bonus: CCK"
+description = "Additional CCK field management for Rules."
+package = "Rules"
+core = "6.x"
+dependencies[] = rules
+dependencies[] = content
+
+; Information added by drupal.org packaging script on 2011-07-25
+version = "6.x-1.x-dev"
+core = "6.x"
+project = "rb"
+datestamp = "1311554025"
+

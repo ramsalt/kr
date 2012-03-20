@@ -1,0 +1,10 @@
+; $Id: elysia_cron.info,v 1.4 2009/02/25 09:36:29 gotheric Exp $
+name = "Elysia Cron"
+description = "Extended cron support with crontab-like scheduling and other features."
+core = 6.x
+; Information added by drupal.org packaging script on 2009-10-01
+version = "6.x-1.2"
+core = "6.x"
+project = "elysia_cron"
+datestamp = "1254389732"
+

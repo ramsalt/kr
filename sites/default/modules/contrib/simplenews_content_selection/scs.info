@@ -1,0 +1,13 @@
+;$Id: scs.info,v 1.1.2.1.2.2 2010/08/12 17:15:33 coworks Exp $
+name = Simplenews Content Selection
+description = Select Drupal content to create a newsletter
+core = 6.x
+version = 6.x-1.6
+package = Mail
+dependencies[] = simplenews
+; Information added by drupal.org packaging script on 2010-08-18
+version = "6.x-1.6"
+core = "6.x"
+project = "simplenews_content_selection"
+datestamp = "1282159893"
+

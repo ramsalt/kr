@@ -1,0 +1,284 @@
+/* @override http://barentssea.ramsalt.com/sites/default/themes/kr2011/css/node-view.css?8 */
+
+.field-field-teaser .field-items .field-item {
+    background: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+.field-field-job-date .field-items .field-item {
+    background: none;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+    color: #afcbd8;
+    margin: 0 0 15px 0;
+    padding: 0;
+	border-bottom: 1px solid;
+}
+
+.job .field-field-main-image .field-items .field-item{
+    background: none;
+    margin: 0;
+    padding: 0 10px 10px 0;
+    float: left;
+}
+
+.views-slideshow-controls-bottom{
+	float: left;
+	margin-top: 5px;
+	width: 100%;
+	z-index: 4;
+	/* background: red; */
+	height: 45px;
+	position: relative
+}
+
+.views-slideshow-controls-bottom a, .views-slideshow-controls-bottom img{
+	float: left;
+	margin: 0;
+	cursor: pointer;
+}
+.views-slideshow-controls-bottom span{
+	float: left;
+}
+#views_slideshow_thumbnailhover_breakout_teasers_bilde_slider_node-block_1-2{
+	display: inline;
+	clear: none;
+	float: left;
+	width: auto;
+	
+}
+.views_slideshow_thumbnailhover_div_breakout_teaser {
+    clear: none;
+    display: inline;
+    float: left;
+    padding: 0px 5px;
+}
+.views_slideshow_thumbnailhover_previous {
+	background: url("../images/spirite1.png") no-repeat scroll -13px -56px transparent;
+	height: 40px;
+	width: 13px;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+.views_slideshow_thumbnailhover_next {
+	background: url("../images/spirite1.png") no-repeat scroll 0 -56px transparent;
+	height: 40px;
+	width: 13px;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+.views_slideshow_slide .views-content-field-main-image-fid img.imagecache-article_stor_slideshow{
+ 	margin: 0px;
+}
+.views-content-field-main-image-data{
+	background: #efeee6;
+	width: 569px;
+	padding: 4px 4px 4px 7px;
+	float: left;
+}
+.fakta{
+	background: none repeat scroll 0 0 #EFEEE6;
+	width: 180px;
+	float: right;
+	margin-left: 20px;
+	font-size: 1em;
+	padding-bottom: 10px;
+}
+.sitat-wrapper{
+	width: 180px;
+	float: right;
+	margin-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	clear: right;
+}
+.sitat-wrapper .sitat-line{
+	padding-bottom: 13px;
+}
+.sitat-wrapper .sitat-line span{
+	font-size: 24px;
+	font-family: Georgia, Arial, Helvetica;
+	color: #8ca0aa;
+}
+.body-content .fakta p{
+	margin-bottom: 0.4em;
+	padding-left: 5px;
+	font-size: 0.9em;
+}
+.body-content .fakta ul, .body-content .fakta ol{
+	font-size: 1em;
+}
+.fakta ul, .fakta ol{
+	margin: 0 0 0 15px;
+	padding: 0 4px 0 5px;
+}
+.fakta ul li {
+
+	margin: 0;	
+	list-style-position: outside;
+}
+.faktatittel{
+	background: #8C9FAA;
+    color: #FFFFFF;
+    float: left;
+    padding: 6px 5px;
+    margin-bottom: 12px;
+	width: 170px;
+}
+.ingress{
+	/*color: #7c8d97;*/
+	font-weight: bold;
+
+}
+.ingress p{
+	font-size: 18px;
+	line-height: 22px;
+}
+.kommentar{
+    font-family: Georgia, Arial, Helvetica;
+    font-size: 15px;
+}
+.body-content p, .body-content ol, .body-content ul{
+	font-family: Georgia, Arial, Helvetica;
+	font-size: 15px; /* org 14 YWB */
+	line-height: 1.467em;
+        color: #000000; /* added YWB */
+}
+.view-also-read .views-row .views-field-created .field-content{
+	color: #ed1a3b;
+}
+.view-also-read .views-field-title{
+	font-size: 11px;
+	font-weight: medium;
+}
+.view-also-read .views-separator {
+    border-bottom: 1px solid #ABAAAA;
+    border-top: 1px solid #89A0AB;
+    clear: both;
+    height: 10px;
+    margin: 10px 0;
+}
+.view-also-read .views-row-last{
+	border-bottom: 1px solid #ABAAAA;
+	padding-bottom: 10px;
+}
+.section-date-author {
+    border-bottom: 1px solid #7E7E69;
+}
+#add-this{
+	padding-top: 10px;
+}
+.webform-component{
+	display: block;
+	clear: both;
+}
+.content .webform-component label{
+	width:200px;
+	float: left;
+	overflow: hidden;
+}
+.content .webform-component.webform-component-radios label{
+	width: 100%;
+	float: none;
+}
+
+.webform-component input.form-text.email{
+	width: 200px;
+
+}
+.content ul{
+	font-size: 1.2em;
+}
+.node-type-job h1{
+	font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
+}
+.node-type-job .body-content .field-field-teaser .field-item, .node-type-job .body-content .field-field-teaser .field-item p{
+    font-style: italic;
+    font-weight: 500;
+}
+.node-type-job .body-content .field-field-job-utlyser .field-item{
+	background: none;
+	font-size: 18px;
+	margin: 0 0 15px 0;
+	padding: 0;
+	font-family: Helvetica,Arial,"Nimbus Sans L",sans-serif;
+}
+
+.body-content .kommentar{
+
+}
+
+#block-boxes-show_to_disabled_free_user h2{
+     padding: 25px 25px 0 35px;
+
+}
+
+#block-boxes-show_to_disabled_free_user{
+    margin: 1.5em 0;
+    padding-bottom: 2em;
+}
+#block-boxes-show_to_disabled_free_user p{
+    margin: 0;
+}
+.nopremium-message, #block-boxes-show_to_disabled_free_user{
+    background: none repeat scroll 0 0 #F3F3F3;
+    border: 3px solid #0F7625;
+}
+.nopremium-message p, #block-boxes-show_to_disabled_free_user p{
+     padding: 25px 25px 0 35px;
+     font: 1.2em Helvetica,Arial,"Nimbus Sans L",sans-serif;
+}
+form#user-register fieldset{
+    border:0;
+}
+
+form#user-register legend{
+    display: none;
+}
+.nopremium-message form#user-register{
+    margin:0;
+}
+form#user-register .form-item{
+    margin: 0;
+}
+form#user-register input, select {
+    margin: 0 0 5px;
+}
+
+form#user-register input.form-submit, .nopremium-message input.form-submit{
+    background: #0F7625;
+    font-size: 1em;
+}
+.nopremium-message input.form-submit{
+    margin: 1em 1em 1.5em 1em;
+}
+div.password-description{
+    display: none !important;
+}
+
+html.js body.sidebars div#outer-wrapper div#wrapper div#container.clearfix div#center.clearfix div#op-content div.body-content div div.nopremium-message form#user-login-form div div.item-list{
+    display: none;
+}
+
+.block-google_analytics_counter{
+    display: none;
+}
+
+#edit-profile-smsauthenticated-wrapper{
+    display: none
+}
+.node-type-ordforer .field-type-nodereference{
+  margin: 0px;
+}
+.node-type-ordforer .field-type-nodereference .field-items .field-item{
+  font-size: 2em;  
+}
+.node-type-ordforer .field-items .field-item{
+  background: none;
+}
+.node-type-ordforer .field-field-rel-kommune{
+  
+}

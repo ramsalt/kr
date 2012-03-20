@@ -1,0 +1,47 @@
+<?php
+//$Id: scs_views.module,v 1.1.2.1.2.9 2010/08/18 19:25:29 coworks Exp $
+  
+/**
+ * @file
+ * Integrate Simplenews Content Selection with views and views bulk operations
+ */
+
+/**
+ * Implementation of hook_action_info().
+ */
+function scs_views_action_info() {
+  return array(
+    'scs_views_create_newsletter_action' => array(
+      'type' => 'node',
+      'description' => t('Create newsletter'),
+      'configurable' => TRUE,
+      'behavior' => array('scs_views_create_newsletter'),
+    ),
+  );
+}
+
+/**
+ * Configuration form for tis action. Not used as form, but used as a step to go to the node sorter.
+ */
+function scs_views_create_newsletter_action_form($context) {
+  $nodes = array();
+  $counter = 0;
+  
+  foreach ($context['selection'] as $node) {
+  	$nodes['node_' . $counter] = $node->nid;
+  	$counter++;
+  }
+  
+  $query = http_build_query($nodes, '', '&');
+  drupal_goto('admin/content/scs_sort_nodes', $query);
+  
+  //Done this to make sure VBO is still working.
+  $form = array();
+  return $form;
+}
+
+/**
+ * Get the selected nodes and create a newsletter from it
+ */
+function scs_views_create_newsletter_action() {
+}

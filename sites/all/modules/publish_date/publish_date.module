@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file Publish Date module file.
+ */
+
+/**
+ * Implements hook_form_alter().
+ */
+function publish_date_form_alter(&$form, &$form_state, $form_id) {
+  // Node edit form
+  if (isset($form['#id']) && $form['#id'] == 'node-form') {
+    if (!empty($form['#node']->nid) && !$form['#node']->status) {
+      unset($form['author']['date']['#default_value']);
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function publish_date_form_modr8_form_alter(&$form, &$form_state) {
+  $form['#submit'] = array('publish_date_node_form_submit', 'modr8_form_submit');
+}
+
+/**
+ * Workbench moderation form submit handler.
+ */
+function publish_date_node_form_submit($form, &$form_state) {
+  foreach ($form_state['values'] as $nid => $node) {
+    if (is_array($node) && $node['ops'] == 'approve') {
+      $node = node_load($nid, NULL, TRUE);
+      $node->created = NULL;
+      node_save($node);
+    }
+  }
+}

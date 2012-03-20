@@ -1,0 +1,13 @@
+; $Id: ajax_poll.info,v 1.1.2.1 2010/07/11 22:19:07 quicksketch Exp $
+name = AJAX Poll
+description = Enables voting on polls without reloading the page.
+core = 6.x
+package = User interface
+dependencies[] = poll
+
+; Information added by drupal.org packaging script on January 1, 1970 - 00:00
+version = "6.x-1.1"
+core = "6.x"
+project = "ajax_poll"
+datestamp = "1296179792"
+

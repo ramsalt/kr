@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ *   Publish Date module install/schema hooks.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function publish_date_install() {
+  db_query("UPDATE {system} SET weight = 9999 WHERE name = 'publish_date'");
+}

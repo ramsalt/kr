@@ -1,0 +1,47 @@
+<?php
+// $Id: elysia_cron.install,v 1.3.2.1 2009/09/21 08:33:44 gotheric Exp $
+
+/**
+ * Implementation of hook_install().
+ */
+function elysia_cron_install() {
+  // elysia_cron MUST be the first returned by module_list
+  // This is to ensure elysia_cron_cron is the first hook called by standard cron.php.
+  $min = db_result(db_query("select min(weight) from {system}"));
+  if ($min > -65535) $min = -65535; 
+  else $min--;
+  db_query("UPDATE {system} SET weight = %d WHERE name = '%s'", $min, 'elysia_cron');
+  
+  variable_set('elysia_cron_version', 20090218);
+  
+  drupal_set_message('Elysia cron installed. Setup could be found at '.l(t('Settings page'), 'admin/build/cron/settings').'. See INSTALL.TXT for more info.');
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function elysia_cron_uninstall() {
+  $rs = db_query("select name from {variable} where name like 'elysia_cron_%%'");
+  while ($o = db_fetch_object($rs))
+    variable_del($o->name);
+    
+  $rs = db_query("select name from {variable} where name like 'ec_%%'");
+  while ($o = db_fetch_object($rs))
+    if (preg_match('/^ec_.*_[a-z]{1,3}$/', $o->name))
+      variable_del($o->name);
+  
+  $rs = db_query("select name from {variable} where name like 'ecc_%%'");
+  while ($o = db_fetch_object($rs))
+    if (preg_match('/^ecc_.*_[a-z]{1,3}$/', $o->name))
+      variable_del($o->name);
+      
+  drupal_set_message('Elysia cron uninstalled.');
+}
+
+function elysia_cron_update_1() {
+  $cron_key = variable_get('elysia_cron_key', false);
+  if ($cron_key)
+    variable_set('cron_key', $cron_key);
+  variable_del('elysia_cron_key');
+  return array();
+}

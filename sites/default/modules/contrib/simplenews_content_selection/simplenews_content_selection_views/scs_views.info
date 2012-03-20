@@ -1,0 +1,14 @@
+;$Id: scs_views.info,v 1.1.2.1.2.1 2010/06/22 19:32:12 coworks Exp $
+name = Simplenews Content Selection Views Integration
+description = Integrate Simplenews Content Selection with views and views bulk operations
+core = 6.x
+version = 6.x-1.1
+package = Mail
+dependencies[] = views_bulk_operations
+dependencies[] = scs
+; Information added by drupal.org packaging script on 2010-08-18
+version = "6.x-1.6"
+core = "6.x"
+project = "simplenews_content_selection"
+datestamp = "1282159893"
+

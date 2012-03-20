@@ -1,0 +1,103 @@
+
+.block .item-list h3{
+	background: none repeat scroll 0 0 #8C9FAA;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 5px 10px;
+}
+.block .item-list h3 a{
+	color: #FFFFFF;
+}
+.block .item-list ol, .block .item-list ul{
+	padding: 0;
+	margin: 0;
+	color: #94021d;
+}
+.block .item-list li.views-row {
+	font-size: 12px;
+	font-family: Helvetica, Arial,"Nimbus Sans L",sans-serif;
+	border-bottom: 1px solid #8CA0AA;
+	clear: both;
+
+	padding-bottom: 5px;
+	margin-left: 0;
+}
+body #wrapper .block div.item-list li.views-row .views-field-title{
+	font-size: 12px;
+	font-family: Helvetica, Arial,"Nimbus Sans L",sans-serif;
+}
+body #wrapper .block div.item-list ol li.views-row .views-field-title{
+
+	margin-right: 0;
+}
+body #wrapper .block div.item-list li.views-row .views-field-title a{
+	color: #94021d;
+}
+.block .field-content{
+	color: #000;
+}
+
+.block .item-list .views-field-teaser{
+	display: inline;
+	font-size: 11px;
+	color: #000;
+}
+#sidebar-right .block .item-list li{
+	border-bottom: none;
+}
+#sidebar-right .item-list ul {
+	float: none;
+}
+.node-type-article #sidebar-left .block{
+	width: 160px;
+}
+
+.node-type-article #sidebar-left h2{
+	background: #9f0008;
+	color: #fff;
+	font-size: 13px;
+	font-family: Helvetica, Arial,"Nimbus Sans L",sans-serif;
+	padding: 5px 5px 5px 9px;
+	font-style: normal;
+}
+#block-openx-2{
+	float: left;
+	clear: none;
+}
+
+#block-views-jobs-block_1 .item-list ul{
+	
+}
+#sidebar-left .block .content, #sidebar-right .block .content, #sidebar-left .block .content p, #sidebar-right .block .content p{
+	font-size: 12px;
+}
+#sidebar-left .block h2, #sidebar-right .block h2{
+	font-family: Helvetica,Arial,"Nimbus Sans L",sans-serif;
+    background: none repeat scroll 0 0 #8C9FAA;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 13px;
+    letter-spacing: normal;
+}
+#sidebar-left .block h2 a, #sidebar-right .block h2 a{
+	font-size: 13px;
+}
+#simplenews-block-form-22 #edit-mail{
+	width: 150px;	
+}
+.view-jobs ul li .views-field-title{
+	margin: 0px;
+	padding: 0px;
+	width: 103px;
+	float: left; 
+}
+.view-jobs ul li .views-field-field-main-image-fid{
+	float: left;
+}
+.view-jobs ul li .views-field-field-job-utlyser-value{
+	/* float: right; */ 
+}
+.view-jobs ul li .views-field-field-job-date-value{
+	/*float: right;  */
+}

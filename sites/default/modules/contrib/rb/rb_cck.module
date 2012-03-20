@@ -1,0 +1,906 @@
+<?php
+/**
+ * @file
+ * Functions for extending CCK field management with Rules.
+ */
+
+/**
+ * Implementation of hook_rules_condition_info().
+ * @ingroup rules
+ */
+function rb_cck_rules_condition_info() {
+  return array(
+    'rb_cck_condition_in_multiple' => array(
+      'label' => t('Field value is one of several'),
+      'module' => 'Rules Bonus: CCK',
+      'arguments' => array(
+        'node' => array(
+          'type' => 'node',
+          'label' => t('Node to check'),
+        ),
+      ),
+    ),
+    'rb_cck_condition_has_content' => array(
+      'label' => t('Field has content'),
+      'module' => 'Rules Bonus: CCK',
+      'arguments' => array(
+        'node' => array(
+          'type' => 'node',
+          'label' => t('Node to check'),
+        ),
+      ),
+    ),
+  );
+}
+
+/**
+ * Implementation of hook_rules_action_info().
+ * @ingroup rules
+ */
+function rb_cck_rules_action_info() {
+  // Add all actions that doesn't require additional modules.
+  $actions = array(
+    'rb_cck_action_set_field_unvalidated' => array(
+      'label' => t('Set a CCK field without validation'),
+      'arguments' => array(
+        'node' => array(
+          'type' => 'node',
+          'label' => t('Node to change'),
+        ),
+      ),
+      'eval input' => array('value'),
+      'module' => 'Rules Bonus: CCK',
+    ),
+    'rb_cck_action_insert_value_multiple' => array(
+      'label' => t('Insert a value in a multiple-value field'),
+      'arguments' => array(
+        'node' => array(
+          'type' => 'node',
+          'label' => t('Node to change'),
+        ),
+      ),
+      'eval input' => array('value'),
+      'module' => 'Rules Bonus: CCK',
+    ),
+    'rb_cck_action_remove_value_multiple' => array(
+      'label' => t('Remove a value from a multiple-value field'),
+      'arguments' => array(
+        'node' => array(
+          'type' => 'node',
+          'label' => t('Node to change'),
+        ),
+      ),
+      'eval input' => array('value'),
+      'module' => 'Rules Bonus: CCK',
+    ),
+    'rb_cck_action_get_field_value' => array(
+      'label' => t('Get a field value, bypassing Token'),
+      'arguments' => array(
+        'node' => array(
+          'type' => 'node',
+          'label' => t('Node'),
+        ),
+      ),
+      'new variables' => array(
+        'raw' => array(
+          'type' => 'string',
+          'label' => t('Raw field value'),
+          'save' => TRUE,
+        ),
+        'formatted' => array(
+          'type' => 'string',
+          'label' => t('CCK-formatted field value'),
+          'save' => TRUE,
+        ),
+      ),
+      'module' => 'Rules Bonus: CCK',
+    ),
+    'rb_cck_action_copy_multiple' => array(
+      'label' => t('Copy multiple field content between nodes'),
+      'arguments' => array(
+        'source' => array(
+          'type' => 'node',
+          'label' => t('Source node'),
+        ),
+        'target' => array(
+          'type' => 'node',
+          'label' => t('Target node'),
+        ),
+      ),
+      'help' => t('Note that only fields existing in both source and target node
+        will be copied.'),
+      'module' => 'Rules Bonus: CCK',
+    ),
+    'rb_cck_action_copy_field' => array(
+      'label' => t('Copy entire field content between nodes'),
+      'arguments' => array(
+        'source' => array(
+          'type' => 'node',
+          'label' => t('Source node'),
+        ),
+        'target' => array(
+          'type' => 'node',
+          'label' => t('Target node'),
+        ),
+      ),
+      'module' => 'Rules Bonus: CCK',
+    ),
+    'rb_cck_action_set_multiple_values' => array(
+      'label' => t('Insert multiple values to a CCK field'),
+      'arguments' => array(
+        'node' => array(
+          'type' => 'node',
+          'label' => t('Node'),
+        ),
+      ),
+      'eval input' => array('values'),
+      'module' => 'Rules Bonus: CCK',
+    ),
+    'rb_cck_action_merge_multiple_values' => array(
+      'label' => t('Merge two multiple-value fields'),
+      'arguments' => array(
+        'source' => array(
+          'type' => 'node',
+          'label' => t('Source'),
+        ),
+        'target' => array(
+          'type' => 'node',
+          'label' => t('Target'),
+        ),
+      ),
+      'module' => 'Rules Bonus: CCK',
+    ),
+    'rb_cck_action_force_to_allowed_values' => array(
+      'label' => t('Force a text field to an allowed value'),
+      'arguments' => array(
+        'node' => array(
+          'type' => 'node',
+          'label' => t('Node to correct'),
+        ),
+      ),
+      'help' => t('Note that this action will empty the field if a relevant
+        match against allowed values cannot be made. It only works with text
+        fields, and only single-value fields.'),
+      'module' => 'Rules Bonus: CCK',
+    ),
+  );
+
+  // Add actions that depend on additional modules.
+  if (module_exists('userreference')) {
+    $actions['rb_cck_action_email_userreference'] = array(
+      'label' => t('Send e-mail to all users in a user reference field'),
+      'arguments' => array(
+        'node' => array(
+          'type' => 'node',
+          'label' => t('Node with user references'),
+        ),
+      ),
+      'help' => t('Note that this action will send all e-mail messages at once,
+        which may cause server choking or blacklisting for large amounts of
+        messages.'),
+      'module' => 'Rules Bonus: CCK',
+      'eval input' => array('sender', 'subject', 'message'),
+    );
+  }
+
+  return $actions;
+}
+
+/**
+ * Helper function to get a storage key for a field.
+ *
+ * Only fields with exactly one storage key are supported by this function,
+ * since we want to be able to store a single value when calling the function.
+ *
+ * @param string $field_name
+ *   The machine name of the field.
+ * @return string
+ *   The key with which the field value is stored, for example 'nid' for node
+ *   references or 'value' for text fields.
+ */
+function rb_cck_field_storage_key($field_name) {
+  // Get basic field information.
+  $field_information = content_fields($field_name);
+
+  // If the field has not exactly one storage key, bail out by returning FALSE.
+  if (count($field_information['columns']) != 1) {
+    return FALSE;
+  }
+
+  // This is a quick cheat to get and return the storage key for the column.
+  // If you're good at PHP you probably know a better way of doing this – feel
+  // free to contribute a patch! (But it must be shorter than three lines.)
+  foreach($field_information['columns'] as $storage_key => $value) {
+    return $storage_key;
+  }
+}
+
+/**
+ * Helper function to get all fields on the site with single column for storage.
+ *
+ * @param array $requirements
+ *   An array with special requirements that must be fulfilled. Options are:
+ *     - multiple: Returns only multiple-value fields.
+ *     - userreference: Returns only userreference fields.
+ *     - all: Forces the function to include even non-sigle column fields.
+ * @return array
+ *   An associative array with key and value set to field machine name.
+ */
+function rb_cck_get_fields($requirements = array()) {
+  // Get raw data for all configured fields on the site.
+  $all_fields = content_fields();
+
+  $allowed_fields = array();
+  // Build a base array of fields with exactly one storage column, unless
+  // requirements are set to 'all'.
+  if (in_array('all', $requirements)) {
+    foreach($all_fields as $field_name => $field_info) {
+      $allowed_fields[$field_name] = $field_name;
+    }
+  }
+  else {
+    foreach($all_fields as $field_name => $field_info) {
+      if (count($field_info['columns']) == 1) {
+        $allowed_fields[$field_name] = $field_name;
+      }
+    }
+  }
+
+  // Run any additional conditions on the field array. Note that we are
+  // *removing* fields – not selecting which to keep. This makes it easier to
+  // run several requirement tests in sequence.
+  if (in_array('multiple', $requirements)) {
+    foreach ($allowed_fields as $field_name) {
+      if ($all_fields[$field_name]['multiple'] != 1) {
+        unset($allowed_fields[$field_name]);
+      }
+    }
+  }
+
+  if (in_array('single', $requirements)) {
+    foreach ($allowed_fields as $field_name) {
+      if ($all_fields[$field_name]['multiple']) {
+        unset($allowed_fields[$field_name]);
+      }
+    }
+  }
+
+  if (in_array('userreference', $requirements)) {
+    foreach ($allowed_fields as $field_name) {
+      if ($all_fields[$field_name]['type'] != 'userreference') {
+        unset($allowed_fields[$field_name]);
+      }
+    }
+  }
+
+  if (in_array('text', $requirements)) {
+    foreach ($allowed_fields as $field_name) {
+      if ($all_fields[$field_name]['type'] != 'text') {
+        unset($allowed_fields[$field_name]);
+      }
+    }
+  }
+
+
+  // Sort the array and return the whole shebang.
+  asort($allowed_fields);
+  return $allowed_fields;
+}
+
+/**
+ * Helper function to determine if a field is empty in a given node.
+ *
+ * It seems really awkward that there isn't a publically available API function
+ * that wraps all the TYPE_content_is_empty functions. But I couldn't find one.
+ * I'd be happy if I'm wrong and you tell me about it. //Itangalo 2011-05-10
+ *
+ * And here's note! I can find no documentation whatsoever telling me if
+ * hook_content_is_empty($element, $field) expects $field to be the field array
+ * of information, or just the field name. And I haven't found any example of a
+ * module actually using the parameter. I gamble and set it to the info array.
+ * //Itangalo 2011-07-05.
+ *
+ * @parameter $field_name
+ *   The (machine) name of the field to check.
+ * @parameter $node
+ *   The node where to check the field emptyness.
+ * @return
+ *   TRUE if the field is empty, otherwise FALSE.
+ */
+function rb_cck_field_is_empty($field_name, $node) {
+  // Get the field type name.
+  $field_information = content_fields($field_name);
+  $module = &$field_information['module'];
+  
+  // Build the name of the empty callback function, on the form
+  // TYPE_content_is_empty.
+  $empty_callback = $module . '_content_is_empty';
+  
+  // Check the first field entry for emptiness, return the result.
+  return $empty_callback($node->{$field_name}[0], $field_information);
+}
+
+/**
+ * Configuration form for 'rb_cck_condition_in_multiple'.
+ */
+function rb_cck_condition_in_multiple_form($settings, &$form) {
+  $form['settings']['field'] = array(
+    '#type' => 'select',
+    '#title' => t('Field to check'),
+    '#options' => rb_cck_get_fields(),
+    '#default_value' => $settings['field'],
+    '#description' => t('Note that only fields with a single storage values are
+      supported.'),
+  );
+  $form['settings']['values'] = array(
+    '#type' => 'textarea',
+    '#default_value' => $settings['values'],
+    '#title' => t('Values to match'),
+    '#description' => t('Enter one value per line. Note that raw values are
+      used, such as NID for node references. If any value in the selected field
+      matches any value in the list, this condition returns TRUE.'),
+  );
+}
+
+/**
+ * The 'rb_cck_condition_in_multiple' condition.
+ */
+function rb_cck_condition_in_multiple($node, $settings) {
+  // Get required metadata for the field.
+  $storage_key = rb_cck_field_storage_key($settings['field']);
+
+  // Build an array of all the values to search for.
+  $values = explode("\r", $settings['values']);
+
+  // Check each field value to see if it matches the provided list. If so
+  // return TRUE.
+  foreach ($node->{$settings['field']} as $key => $field) {
+    if (in_array($field[$storage_key], $values)) {
+      return TRUE;
+    }
+  }
+
+  // If no match was found, return FALSE.
+  return FALSE;
+}
+
+/**
+ * Configuration form for 'rb_cck_condition_has_content'.
+ */
+function rb_cck_condition_has_content_form($settings, &$form) {
+  $form['settings']['field'] = array(
+    '#type' => 'select',
+    '#title' => t('Field to check'),
+    '#options' => rb_cck_get_fields(array('all')),
+    '#default_value' => (isset($settings['field'])) ? $settings['field'] : NULL,
+    '#description' => t('If the field is non-empty, according to CCK, this
+      condition will be TRUE.'),
+  );
+}
+
+/**
+ * The 'rb_cck_condition_has_content' condition.
+ */
+function rb_cck_condition_has_content($node, $settings) {
+  return (!rb_cck_field_is_empty($settings['field'], $node));
+}
+
+/**
+ * Configuration form for 'rb_cck_action_set_field_unvalidated'.
+ */
+function rb_cck_action_set_field_unvalidated_form($settings, &$form) {
+  $form['settings']['field'] = array(
+    '#type' => 'select',
+    '#title' => t('Field'),
+    '#options' => rb_cck_get_fields(),
+    '#default_value' => $settings['field'],
+    '#description' => t('Note that only fields with a single storage values are
+      supported.'),
+  );
+  $form['settings']['value'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Raw value'),
+    '#default_value' => $settings['value'],
+    '#description' => t('The value to insert into the field. Feel free to use
+      tokens without being disturbed by select widgets or validators! Note that
+      you must enter the raw value – for example NID for node references.'),
+  );
+}
+
+/**
+ * Action for 'rb_cck_action_set_field_unvalidated'.
+ */
+function rb_cck_action_set_field_unvalidated($node, $settings) {
+  // Get required metadata for the field.
+  $storage_key = rb_cck_field_storage_key($settings['field']);
+
+  // Set the field value, and return the node for saving.
+  $node->{$settings['field']}[0][$storage_key] = $settings['value'];
+  
+  return array('node' => $node);
+}
+
+/**
+ * Configuration form for 'rb_cck_action_insert_value_multiple'.
+ */
+function rb_cck_action_insert_value_multiple_form($settings, &$form) {
+  $form['settings']['field'] = array(
+    '#type' => 'select',
+    '#title' => t('Multiple-value field'),
+    '#options' => rb_cck_get_fields(array('multiple')),
+    '#default_value' => $settings['field'],
+    '#description' => t('Note that only fields with a single storage values are
+      supported.'),
+  );
+  $form['settings']['value'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Value to insert'),
+    '#default_value' => $settings['value'],
+    '#description' => t('The value to insert into the field. If the value is
+      already present in the field the insertion will be ignored. Note that you
+      must enter the raw value – for example NID for node references.'),
+  );
+}
+
+/**
+ * Action for 'rb_cck_action_insert_value_multiple'.
+ */
+function rb_cck_action_insert_value_multiple($node, $settings) {
+  // Get required metadata for the field.
+  $storage_key = rb_cck_field_storage_key($settings['field']);
+
+  // Check if the value is already present in the multiple-value field.
+  foreach($node->{$settings['field']} as $existing_value) {
+    if ($settings['value'] == $existing_value[$storage_key]) {
+      // If we have a match, just bail out. No need to store anything new.
+      return;
+    }
+  }
+
+  // If we don't have a match, insert the new value.
+  $node->{$settings['field']}[] = array($storage_key => $settings['value']);
+
+  // Return the node, so Rules can save it later on.
+  return array('node' => $node);
+}
+
+/**
+ * Configuration form for 'rb_cck_action_remove_value_multiple'.
+ */
+function rb_cck_action_remove_value_multiple_form($settings, &$form) {
+  $form['settings']['field'] = array(
+    '#type' => 'select',
+    '#title' => t('Multiple-value field'),
+    '#options' => rb_cck_get_fields(array('multiple')),
+    '#default_value' => $settings['field'],
+    '#description' => t('Note that only fields with a single storage values are
+      supported.'),
+  );
+  $form['settings']['value'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Value to remove'),
+    '#default_value' => $settings['value'],
+    '#description' => t('The value to remove from the multiple-value field. Note
+      that you must enter the raw value – for example NID for node references.'),
+  );
+}
+
+/**
+ * Action for 'rb_cck_action_remove_value_multiple'.
+ */
+function rb_cck_action_remove_value_multiple($node, $settings) {
+  // Get required metadata for the field.
+  $storage_key = rb_cck_field_storage_key($settings['field']);
+
+  // Check if the value is present in the multiple-value field.
+  foreach($node->{$settings['field']} as $key => $existing_value) {
+    if ($settings['value'] == $existing_value[$storage_key]) {
+      // If we have a match, remove this entry and send off the node for saving.
+      unset ($node->{$settings['field']}[$key]);
+      return array('node' => $node);
+    }
+  }
+
+  // If we don't have a match, just return. There is no need to save anything.
+  return;
+}
+
+/**
+ * Configuration form for 'rb_cck_action_get_field_value'.
+ */
+function rb_cck_action_get_field_value_form($settings, &$form) {
+  $form['settings']['field'] = array(
+    '#type' => 'select',
+    '#title' => t('Field'),
+    '#options' => rb_cck_fields(''),
+    '#default_value' => $settings['field'],
+    '#description' => t('Note that only fields with a single storage values are
+      supported.'),
+  );
+}
+
+/**
+ * Action for 'rb_cck_action_get_field_value'.
+ */
+function rb_cck_action_get_field_value($node, $settings) {
+  // Get required metadata for the field.
+  $storage_key = rb_cck_field_storage_key($settings['field']);
+
+  $raw = $node->{$settings['field']}[0][$storage_key];
+  $formatted = content_format($settings['field'], $node->{$settings['field']}[0]);
+  
+
+  return array(
+    'raw' => $raw,
+    'formatted' => $formatted,
+  );
+}
+
+/**
+ * Configuration form for 'rb_cck_action_copy_multiple'.
+ */
+function rb_cck_action_copy_multiple_form($settings, &$form) {
+  // Get a list of all existing fields in a plain array.
+  $fields = rb_cck_get_fields(array('all'));
+  
+  // Allow to copy node title, optionally.
+  $form['settings']['copy_title'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Copy node title as well'),
+    '#default_value' => $settings['copy_title'],
+  );
+
+  // Allow to skip empty fields, optionally.
+  $form['settings']['skip_empty'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Skip empty fields'),
+    '#default_value' => $settings['skip_empty'],
+    '#description' => t('Checking this box will allow preserving existing values
+      in the target node, if the corresponding fields in the source node are
+      empty.'),
+  );
+
+  // Allow to skip selected fields.
+  $form['settings']['fields_to_copy'] = array(
+    '#type' => 'select',
+    '#title' => t('Fields to copy'),
+    '#options' => $fields,
+    '#multiple' => TRUE,
+    '#default_value' => $settings['fields_to_copy'],
+    '#description' => t('The content of the selected fields will be copied from
+      the source to the target node.'),
+  );
+}
+
+/**
+ * Action for 'rb_cck_action_copy_multiple'.
+ */
+function rb_cck_action_copy_multiple($source, $target, $settings) {
+  // Loop through all fields that should be copied.
+  foreach ($settings['fields_to_copy'] as $field) {
+
+    // If we shouldn't copy empty fields, don't copy empty fields. (Yeah, you
+    // heard me!) Note that we first check the skip_emtpy setting, to avoid
+    // running the somewhat heavy rb_cck_field_is_empty function more than
+    // necessary.
+    if ($settings['skip_empty'] == 0 || !rb_cck_field_is_empty($field, $source)) {
+      $target->{$field} = $source->{$field};
+    }
+  }
+  
+  // If we should copy the title, copy the title.
+  if ($settings['copy_title']) {
+    $target->title = $source->title;
+  }
+
+  // Return the target node for saving by Rules.
+  return array('target' => $target);
+}
+
+/**
+ * Configuration form for 'rb_cck_action_email_userreference'.
+ */
+function rb_cck_action_email_userreference_form($settings, &$form) {
+  $userreference_fields = rb_cck_get_fields(array('userreference'));
+
+  $form['settings']['field'] = array(
+    '#type' => 'select',
+    '#options' => $userreference_fields,
+    '#title' => t('User reference field to use'),
+    '#description' => t('All users listed in this field will receive the e-mail
+      message.'),
+    '#default_value' => $settings['field'],
+  );
+  $form['settings']['from'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Sender'),
+    '#default_value' => $settings['from'],
+    '#description' => t('The from address of the e-mail. Leave it empty to use
+      the site-wide configured address.'),
+  );
+  $form['settings']['subject'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Subject'),
+    '#default_value' => $settings['subject'],
+    '#description' => t('The subject of the e-mail.'),
+  );
+  $form['settings']['message'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Message'),
+    '#default_value' => $settings['message'],
+    '#description' => t('The e-mail message.'),
+  );
+}
+
+/**
+ * Action for 'rb_cck_action_email_userreference'.
+ */
+function rb_cck_action_email_userreference($node, $settings) {
+  // Build a list of recipient e-mail addresses, comma separated.
+  $recipients = $node->{$settings['field']};
+  $to_addresses = array();
+  foreach ($recipients as $recipient) {
+    $account = user_load($recipient['uid']);
+    $to_addresses[] = $account->mail;
+  }
+
+  $to = implode(', ', $to_addresses);
+
+  $from = ($settings['from']) ?
+    str_replace(array("\r", "\n"), '', $settings['from'])
+    : NULL;
+
+  $message = drupal_mail('rules', 'rules_action_mail', $to, language_default(),
+    $settings, $from);
+  if ($message['result']) {
+    watchdog('rules', 'Successfully sent email to %recipient',
+      array('%recipient' => $to));
+  }
+}
+
+/**
+ * Configuration form for 'rb_cck_action_copy_field'.
+ */
+function rb_cck_action_copy_field_form($settings, &$form) {
+  // Get a list of all existing fields in a plain array.
+  $fields = rb_cck_get_fields(array('all'));
+
+  // Set from and to fields.
+  $form['settings']['source_field'] = array(
+    '#type' => 'select',
+    '#title' => t('Field in source node'),
+    '#options' => $fields,
+    '#default_value' => $settings['source_field'],
+    '#description' => t('The content of the selected field will be munged into
+      the target field below. They must be of the same type.'),
+  );
+  $form['settings']['target_field'] = array(
+    '#type' => 'select',
+    '#title' => t('Field in target node'),
+    '#options' => $fields,
+    '#default_value' => $settings['target_field'],
+    '#description' => t('The content of the selected field will be replaced with
+      the content of the field above. They must be of the same type.'),
+  );
+}
+
+/**
+ * Validation function for the 'rb_cck_action_copy_field' form.
+ */
+function rb_cck_action_copy_field_validate($form, $form_state) {
+  $source_field = content_fields($form['settings']['source_field']);
+  $target_field = content_fields($form['settings']['target_field']);
+  if ($target_field['type'] != $source_field['type']) {
+    form_set_error('settings][target_field', t('Target field type must be the
+      same as the source field.'));
+  }
+}
+
+/**
+ * Action for 'rb_cck_action_copy_field'.
+ */
+function rb_cck_action_copy_field($source, $target, $settings) {
+  // Set the target field in the target node.
+  $target->{$settings['target_field']} = $source->{$settings['source_field']};
+
+  // Return the target node for saving by Rules.
+  return array('target' => $target);
+}
+
+/**
+ * Configuration form for 'rb_cck_action_set_multiple_values'.
+ */
+function rb_cck_action_set_multiple_values_form($settings, &$form) {
+  $form['settings']['field'] = array(
+    '#type' => 'select',
+    '#title' => t('Multiple-value field'),
+    '#options' => rb_cck_get_fields(array('multiple')),
+    '#default_value' => $settings['field'],
+    '#description' => t('Note that only fields with a single storage values are
+      supported.'),
+  );
+  $form['settings']['values'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Value(s) to insert'),
+    '#default_value' => $settings['values'],
+    '#description' => t('The values to insert into the field. Enter one per
+      line. Only new values will be added – duplicates will be ignored.'),
+  );
+  $form['settings']['replace'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Empty the field before inserting new values.'),
+    '#default_value' => $settings['no-replace'],
+    '#description' => t('Use this option if you don\'t want to keep existing
+      field values. Note that values still won\'t be repeated – only unique
+      values will be added.'),
+  );
+}
+
+/**
+ * Action for 'rb_cck_action_set_multiple_values'.
+ */
+function rb_cck_action_set_multiple_values($node, $settings) {
+  // Get required metadata for the field.
+  $storage_key = rb_cck_field_storage_key($settings['field']);
+
+  // If we should replace the existing field values, remove the existing ones
+  // first. Then we set it to an empty array to have the foreach below work.
+  if ($settings['replace']) {
+    unset($node->{$settings['field']});
+    $node->{$settings['field']} = array();
+  }
+
+  // Loop through all the supplied values.
+  foreach(explode("\r", $settings['values']) as $value) {
+    // Check if the value is already present in the multiple-value field.
+    $value_exists = FALSE;
+    foreach($node->{$settings['field']} as $existing_value) {
+      if ($value == $existing_value[$storage_key]) {
+        $value_exists = TRUE;
+        continue;
+      }
+    }
+    if (!$value_exists) {
+      $node->{$settings['field']}[] = array($storage_key => $value);
+    }
+  }
+
+  // Return the node, so Rules can save it later on.
+  return array('node' => $node);
+}
+
+/**
+ * Configuration form for 'rb_cck_action_force_to_allowed_values'.
+ */
+function rb_cck_action_force_to_allowed_values_form($settings, &$form) {
+  $form['settings']['field'] = array(
+    '#type' => 'select',
+    '#title' => t('CCK text field list'),
+    '#options' => rb_cck_get_fields(array('single', 'text')),
+    '#default_value' => $settings['field'],
+    '#description' => t('Note that only fields with a single storage values are
+      supported.'),
+  );
+  $form['settings']['smart_compare'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Do extended text comparison'),
+    '#default_value' => $settings['smart_compare'],
+    '#description' => t('If this option is checked, matching against allowed
+      values is made case insensitive and, if necessary, by trimming white
+      spaces. Results are always forced into values in the allowed values
+      list.'),
+  );
+}
+
+/**
+ * Action for 'rb_cck_action_force_to_allowed_values'.
+ */
+function rb_cck_action_force_to_allowed_values($node, $settings) {
+  // Get required metadata for the field.
+  $storage_key = rb_cck_field_storage_key($settings['field']);
+  $allowed_values = array_keys(content_allowed_values(content_fields($settings['field'])));
+
+  // If we don't have any allowed values defined, bail out by returning.
+  if (!count($allowed_values)) {
+    return;
+  }
+
+  // Get a quick reference for the field value, to increase readability. Note
+  // that this variable is created by reference.
+  $field_value = &$node->{$settings['field']}[0][$storage_key];
+
+  // First check if the field is already ok. Note that the empty case is
+  // included here, regardless of the fields required status – if a value is
+  // missing, there isn't much we can do about it anyway.
+  if (!$field_value || in_array($field_value, $allowed_values)) {
+    return;
+  }
+
+  // Ok, so the field has a disallowed value. If we shouldn't do any smart
+  // comparison, this means that we should just empty the field.
+  if (!$settings['smart_compare']) {
+    unset ($node->{$settings['field']}[0]);
+    return array('node' => $node);
+  }
+
+  // Then for the last part – doing 'smart comparison' using case-insensitive
+  // comparison and trimming.
+  foreach ($allowed_values as $allowed_value) {
+    if (strtolower($allowed_value) == strtolower($field_value) ||
+              trim($allowed_value) ==       trim($field_value)) {
+      $field_value = $allowed_value;
+      return array('node' => $node);
+    }
+  }
+
+  // Ok, if we got this far, then we have no plausible mapping for the field
+  // value. Unset the value and return the node for saving.
+  unset ($node->{$settings['field']}[0]);
+  return array('node' => $node);
+}
+
+/**
+ * Configuration form for 'rb_cck_action_merge_multiple_values'.
+ */
+function rb_cck_action_merge_multiple_values_form($settings, &$form) {
+  $form['settings']['source_field'] = array(
+    '#type' => 'select',
+    '#title' => t('Field to copy from'),
+    '#options' => rb_cck_get_fields(array('multiple')),
+    '#default_value' => $settings['source_field'],
+    '#description' => t('Note that only fields with single storage value (per
+      entry) are selectable.'),
+  );
+  $form['settings']['target_field'] = array(
+    '#type' => 'select',
+    '#title' => t('Field to merge into'),
+    '#options' => rb_cck_get_fields(array('multiple')),
+    '#default_value' => $settings['target_field'],
+    '#description' => t('Note that source and target field must be of the same
+      type.'),
+  );
+}
+
+/**
+ * Action for 'rb_cck_action_merge_multiple_values'.
+ */
+function rb_cck_action_merge_multiple_values($source, $target, $settings) {
+  // Get required metadata for the field.
+  $source_info = content_fields($settings['source_field']);
+  $target_info = content_fields($settings['target_field']);
+  $storage_key = rb_cck_field_storage_key($settings['target_field']);
+
+  // Verify that source and target fields are of the same type.
+  if ($source_info['type'] != $target_info['type']) {
+    // TODO: Write to watchdog.
+    return;
+  }
+
+  // Loop through the source field content, insert into target.
+  $anything_changed = FALSE;
+  foreach ($source->{$settings['source_field']} as &$source_content) {
+    // A simple in_array would be much quicker here, but there seems sometimes
+    // to be _error_element added to the target node. Most disturbing.
+    $value_present = FALSE;
+    foreach ($target->{$settings['target_field']} as $target_content) {
+      if ($source_content[$storage_key] == $target_content[$storage_key]) {
+        $value_present = TRUE;
+        continue;
+      }
+    }
+
+    if (!$value_present) {
+      $anything_changed = TRUE;
+      $target->{$settings['target_field']}[] = $source_content;
+    }
+  }
+
+  // If anything has changed, return the changed target node for saving by
+  // Rules. Otherwise, just return.
+  if ($anything_changed) {
+    return array('target' => $target);
+  }
+  else {
+    return;
+  }
+}

@@ -1,0 +1,11 @@
+name = "Google Analytics API"
+package = Statistics
+description = "API to access statistics from the Google Analytics Data Export API."
+core = 6.x
+dependencies[] = oauth_common
+; Information added by drupal.org packaging script on 2011-06-24
+version = "6.x-1.0"
+core = "6.x"
+project = "google_analytics_reports"
+datestamp = "1308935815"
+

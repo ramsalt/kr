@@ -1,0 +1,272 @@
+<?php
+
+/**
+ * @file
+ * Functions for extending number management with Rules.
+ */
+
+/**
+ * Implementation of hook_rules_action_info().
+ * @ingroup rules
+ */
+function rb_numbers_rules_action_info() {
+  // Add all actions that depend on required modules only.
+  $actions = array(
+    'rb_numbers_action_random' => array(
+      'label' => t('Generate a random number'),
+      'new variables' => array(
+        'random_number' => array(
+          'type' => 'number',
+          'label' => t('Random number'),
+          'save' => TRUE,
+        ),
+      ),
+      'module' => 'Rules Bonus: Numbers',
+    ),
+    'rb_numbers_action_sum' => array(
+      'label' => t('Sum up numbers'),
+      'new variables' => array(
+        'sum' => array(
+          'type' => 'number',
+          'label' => t('Sum'),
+          'save' => TRUE,
+        ),
+      ),
+      'eval input' => array('terms'),
+      'module' => 'Rules Bonus: Numbers',
+    ),
+    'rb_numbers_action_multiply' => array(
+      'label' => t('Multiply numbers'),
+      'new variables' => array(
+        'product' => array(
+          'type' => 'number',
+          'label' => t('Product'),
+          'save' => TRUE,
+        ),
+      ),
+      'eval input' => array('factors'),
+      'module' => 'Rules Bonus: Numbers',
+    ),
+  );
+
+  // Add actions that depend on non-required modules.
+  if (module_exists('views')) {
+    $actions['rb_numbers_action_views_sum'] = array(
+      'label' => t('Build a sum from Views'),
+      'new variables' => array(
+        'sum' => array(
+          'type' => 'number',
+          'label' => t('Sum'),
+          'save' => TRUE,
+        ),
+      ),
+      'eval input' => array('args'),
+      'module' => 'Rules Bonus: Numbers',
+    );
+  }
+
+  return $actions;
+}
+
+/**
+ * Configuration form for 'rb_numbers_action_random'.
+ */
+function rb_numbers_action_random_form($settings, &$form) {
+  $form['settings']['min'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Lowest value'),
+    '#default_value' => $settings['min'],
+  );
+  $form['settings']['max'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Highest value'),
+    '#default_value' => $settings['max'],
+  );
+
+  // TODO: Write validations for the settings, to assure that they are actually
+  // sensible integers.
+}
+
+/**
+ * Action for 'rb_numbers_action_random'.
+ */
+function rb_numbers_action_random($settings) {
+  // This function uses the PHP rand function for randomization. See
+  // http://php.net/manual/en/function.rand.php for details.
+  return array('random_number' => rand($settings['min'], $settings['max']));
+}
+
+/**
+ * Configuration form for 'rb_numbers_action_sum'.
+ */
+function rb_numbers_action_sum_form($settings, &$form) {
+  $form['settings']['terms'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Terms to sum'),
+    '#default_value' => $settings['terms'],
+    '#description' => t('Enter the numbers to sum, one per line.'),
+  );
+}
+
+/**
+ * Action for 'rb_numbers_action_sum'.
+ */
+function rb_numbers_action_sum($settings) {
+  $terms = explode("\n", $settings['terms']);
+  $sum = array_sum($terms);
+  return array('sum' => $sum);
+}
+
+/**
+ * Configuration form for 'rb_numbers_action_multiply'.
+ */
+function rb_numbers_action_multiply_form($settings, &$form) {
+  $form['settings']['factors'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Factors to multiply'),
+    '#default_value' => $settings['factors'],
+    '#description' => t('Enter the numbers to multiply, one per line. Note that
+      CCK tokens should user raw values, not formatted ones.'),
+  );
+}
+
+/**
+ * Action for 'rb_numbers_action_multiply'.
+ */
+function rb_numbers_action_multiply($settings) {
+  $factors = explode("\n", $settings['factors']);
+  $product = 1;
+  foreach ($factors as $factor) {
+    $product = $product * $factor;
+  }
+  return array('product' => $product);
+}
+
+/**
+ * Configuration form for 'rb_numbers_action_views_sum'.
+ * This is a multistep form!
+ */
+function rb_numbers_action_views_sum_form($settings, &$form, &$form_state) {
+  // Set default values for possibly non-set elements.
+  if (isset($form_state['values']['settings'])) {
+    $settings += $form_state['values']['settings'];
+  }
+  $settings += array(
+    'view' => '',
+    'args' => '',
+    'view_fields' => array()
+  );
+
+  // Do form settings for the first step.
+  if (empty($settings['view'])) {
+    // Build a select list with all Views displays on the site.
+    $selectable_displays = array();
+    foreach(views_get_all_views() as $view_name => $view) {
+      foreach ($view->display as $display_name => $display) {
+        $selectable_displays[$view_name . '|' . $display_name] =
+          $view_name . '|' . check_plain($display->display_title);
+      }
+    }
+
+    $form['settings']['view'] = array(
+      '#type' => 'select',
+      '#title' => t('View and display to use'),
+      '#options' => $selectable_displays,
+      '#default_value' => $settings['view'],
+      '#description' => t('Select the view you want to use for creating a sum.'),
+    );
+    $form['settings']['args'] = array(
+      '#type' => 'textarea',
+      '#default_value' => $settings['args'],
+      '#title' => t('View arguments'),
+      '#description' => t('Add any arguments you want to send to the view, one per
+        line. You may use tokens.'),
+    );
+
+    // Hide some form elements in the first step.
+    $form['negate']['#access'] = FALSE;
+    $form['input_help']['#access'] = FALSE;
+    $form['weight']['#access'] = FALSE;
+
+    // Replace the usual submit handlers with a own handler, to allow multi-step.
+    $form['submit']['#submit'] = array('rb_numbers_action_views_sum_form_step_submit');
+    $form['submit']['#value'] = t('Continue');
+  }
+  else {
+    // This is step two in the configuration – allow for selecting view fields.
+
+    // Build a list of all fields in the selected view.
+    $views_settings = explode('|', $settings['view']);
+    $view_name = $views_settings[0];
+    $display_name = $views_settings[1];
+    $view = views_get_view($view_name);
+
+    $selectable_fields = array();
+    foreach ($view->display[$display_name]->display_options['fields'] as $field) {
+      $selectable_fields[$field[id]] = (empty($field['label']))
+        ? $field['id']
+        : $field['label'];
+    }
+
+    $form['settings']['view_fields'] = array(
+      '#type' => 'checkboxes',
+      '#title' => t('Fields to sum'),
+      '#options' => $selectable_fields,
+      '#default_value' => $settings['view_fields'],
+      '#multiple' => TRUE,
+      '#required' => TRUE,
+      '#description' => t('The content of the selected fields will be used to
+        build a sum.'),
+    );
+  }
+}
+
+/**
+ * Submit handler for the 'rb_numbers_action_views_sum' form, first step.
+ */
+function rb_numbers_action_views_sum_form_step_submit($form, &$form_state) {
+  // Pass on the settings to the next step of the configuration.
+  $form_state['element']['#settings']['view']
+    = $form_state['values']['settings']['view'];
+  $form_state['element']['#settings']['args']
+    = $form_state['values']['settings']['args'];
+}
+
+/**
+ * Action for 'rb_numbers_action_views_sum'.
+ */
+function rb_numbers_action_views_sum($settings) {
+  // Get necessary metadata about the view.
+  $views_settings = explode('|', $settings['view']);
+  $view_name = $views_settings[0];
+  $display_name = $views_settings[1];
+  $view_arguments = explode("\r", $settings['args']);
+
+  // Build and execute the view.
+  $view = views_get_view($view_name);
+  $view->set_display($display_name);
+  $view->set_arguments($view_arguments);
+  $view->set_items_per_page(0);
+  $view->execute();
+
+  // Get the sum!
+  $sum = 0;
+  foreach($settings['view_fields'] as $field) {
+    // Only sum over the selected fields.
+    if ($field) {
+      // Assign the alias to a variable, for code readability. (We need this
+      // alias, since the view results are stored by alias.)
+      $alias = &$view->display[$display_name]->handler->handlers['field'][$field]->field_alias;
+      foreach ($view->result as &$row) {
+        $sum += $row->$alias;
+      }
+      // Destroy the $row variable left after doing a foreach-by-reference.
+      unset($row);
+    }
+  }
+
+  // Return the sum.
+  return array(
+    'sum' => $sum,
+  );
+}

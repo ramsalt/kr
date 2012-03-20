@@ -1,0 +1,120 @@
+<?php
+// $Id$
+
+/**
+ * @file
+ * This is the file description for Sms Sendega module.
+ *
+ * In this more verbose, multi-line description, you can specify what this
+ * file does exactly. Make sure to wrap your documentation in column 78 so
+ * that the file can be displayed nicely in default-sized consoles.
+ */
+include_once('includes/sendega.php');
+
+/**
+ * Implementation of hook_gateway_info().
+ */
+function sms_sendega_gateway_info() {
+  return array(
+    'sendega' => array(
+      'name' => 'Sendega',
+      'configure form' => 'sms_sendega_admin_form',
+      'send' => 'sms_sendega_send',
+      'send form' => 'sms_sendega_send_form',
+	  'format number' => 'sms_sendega_format_number',
+	  'validate number' => 'sms_sendega_validate_number',
+    ),
+  );
+}
+
+function sms_sendega_admin_form($configuration) {
+	
+  $form['sms_sendega_ssl'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Use SSL Encyption'),
+    '#description' => t('Drupal\'s built-in HTTP client only supports SSL on PHP 4.3 compiled with OpenSSL.'),
+    '#default_value' => $configuration['sms_sendega_ssl'],
+  );
+
+  $form['sms_sendega_cid'] = array(
+    '#type' => 'textfield',
+    '#title' => t('CID'),
+    '#description' => t('Sendega customer ID.'),
+    '#size' => 40,
+    '#maxlength' => 255,
+		'#required' => true,
+    '#default_value' => $configuration['sms_sendega_cid'],
+  );
+
+  $form['sms_sendega_password'] = array(
+    '#type' => 'password',
+    '#title' => t('Password'),
+    '#description' => t('The current password on your Sendega account.'),
+    '#size' => 30,
+    '#maxlength' => 64,
+		'#required' => true,
+    '#default_value' => $configuration['sms_sendega_password'],
+  );
+  
+  return $form;
+}
+
+/**
+ * Validates the submission of the configuration form.
+ */ 
+function sms_sendega_admin_form_validate($form, &$form_state) {
+
+}
+
+function sms_sendega_format_number ($number, $options = array()) {
+}
+
+function sms_sendega_validate_number (&$number, $options = array()) {
+	if(substr($number, 0, 3) != '+47' || substr($number, 0, 2) != '47') {
+		$number = '47'.$number;
+	} else if (substr($number, 0, 1) == '+') {
+		$number = substr($number, 1);
+	}
+}
+
+/**
+ * Callback for sending messages.
+ */
+function sms_sendega_send($number, $message, $options) {
+	$gateway = sms_gateways('gateway', 'sendega');
+  $config = $gateway['configuration'];
+	
+	$schema = $config['sms_sendega_ssl'] ? 'https' : 'http';
+	$sender = new sendega($config['sms_sendega_cid'],$config['sms_sendega_password'], $schema);
+	
+	if ($log_only) {
+		watchdog('sms_sendega', ('Send SMS number LOG ONLY: !number message: !message'), array('!number'=>$number, '!message'=>$message));
+	} else {
+		//sms_sendega_validate_number($number);
+		
+		$sender->send(
+			array(
+				'sender' => utf8_decode(variable_get('sms_sender', 'Sender')), 
+				'destination' => $number, 
+				'content' => utf8_decode($message), 
+			)
+		);
+		if($sender->success) {
+			sms_sendega_log($message->account->uid, $sender->result);
+			watchdog('sms_sendega', ('Sent SMS number: !number message: !message'), array('!number'=>$number, '!message'=>$message));
+			return array('status'=>true);
+		} else {
+			watchdog('sms_sendega', ('SMS Error number: !number message: !message'), array('!number'=>$number, '!message'=>$sender->result), WATCHDOG_ERROR);
+			return array('status'=>false, 'message'=>$sendega->result);
+		}
+	}
+}
+
+function sms_sendega_log ($uid, $msid) {
+	$message = array(
+		'uid'=>$uid,
+		'msid'=>$msid,
+		'date'=>time(),	
+	);
+	drupal_write_record('sms_sendega_log', $message);
+}

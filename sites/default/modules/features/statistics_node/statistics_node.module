@@ -1,0 +1,194 @@
+<?php
+
+include_once('statistics_node.features.inc');
+
+function statistics_node_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
+  switch ($op) {
+    case 'view':
+		//dpm($node);
+		include_once(libraries_get_path('parsecsv').'/parsecsv.lib.php');
+		
+		if($node->type == 'chart') {
+			unset($node->content['field_values']);
+			
+      	$node->content['chart_output'] = array(
+        	'#value' => _statistics_node_generate_chart($node), 
+        	'#weight' => 10,
+      	);	
+		
+		} else if($node->type == 'table') {
+			unset($node->content['field_values']);
+			
+	      	$node->content['table_output'] = array(
+	        	'#value' => _statistics_node_generate_table($node->field_values[0]['value']), 
+	        	'#weight' => 10,
+	      	);
+	      	if(isset($node->content['field_description'])) {
+	    		$node->content['field_description']['#weight'] = 11;
+	      	}
+		}
+			
+      	break;
+  }
+}
+
+function _statistics_node_generate_chart ($node) {
+	// Define chart type
+	// Define
+	$jquery_file = array('none' => 'jquery-1.4.2.js', 'min' => 'jquery-1.4.2.min.js'); 
+	jquery_update_jquery_path($jquery_file);
+	
+	$values = $node->field_values[0]['value'];
+	$data_array = _statistics_node_parse_chart_values($values);
+	
+	$chart_data = array(
+		'#plugin'    => 'jqplot', // Google Charts API will be used
+  	'#type'     => 'line2D', // To show a simple 2D line chart
+	  '#color'    => '336699', // background color, in RRGGBB format
+  	'#title'	  => $node->title,
+	);
+	
+	if(isset($node->field_chart_type) and $node->field_chart_type[0]['value']) {
+		$chart_data['#type'] = $node->field_chart_type[0]['value'];
+	} 
+	
+	if($node->field_chart_height[0]['value'] != null) $chart_data['#height'] = $node->field_chart_height[0]['value'];
+	if($node->field_chart_width[0]['value'] != null) $chart_data['#width'] = $node->field_chart_width[0]['value'];
+
+	if($node->field_y_min[0]['value'] != null) $chart_data['#settings']['axes']['yaxis']['min'] = intval($node->field_y_min[0]['value']);
+	if($node->field_y_max[0]['value'] != null) $chart_data['#settings']['axes']['yaxis']['max'] = intval($node->field_y_max[0]['value']);
+	if($node->field_y_ticks[0]['value'] != null) $chart_data['#settings']['axes']['yaxis']['numberTicks'] = intval($node->field_y_ticks[0]['value']);
+	
+	if($node->field_x_min[0]['value'] != null) $chart_data['#settings']['axes']['xaxis']['min'] = intval($node->field_x_min[0]['value']);
+	if($node->field_x_max[0]['value'] != null) $chart_data['#settings']['axes']['xaxis']['max'] = intval($node->field_x_max[0]['value']);
+	if($node->field_x_ticks[0]['value'] != null) $chart_data['#settings']['axes']['xaxis']['numberTicks'] = intval($node->field_x_ticks[0]['value']);
+	
+	$chart_data['#settings']['axes']['yaxis']['tickOptions'] = array('fontSize'=>'9pt');
+	$chart_data['#settings']['axes']['xaxis']['tickOptions'] = array('fontSize'=>'9pt', 'markSize'=>2);
+	$chart_data['#settings']['seriesDefaults']['rendererOptions']['barWidth'] = 20;
+	
+	// Check if years
+	$ticks = _statistics_node_set_ticks();
+	$axis = $chart_data['#type'] == 'vbar2D' ? 'yaxis' : 'xaxis';
+	
+	switch ($node->field_x_format[0]['value']) {
+		case 'text':
+			if(!empty($ticks)) {
+				$chart_data['#ticks'] = $ticks;
+			}
+			$chart_data['#settings']['axes'][$axis]['tickOptions']['angle'] = -30;
+			break;
+
+		case 'date':
+			$chart_data['#settings']['axes'][$axis]['tickOptions']['formatString'] = '%d';
+			$chart_data['#settings']['axes'][$axis]['renderer'] = "$.jqplot.DateAxisRenderer";
+			//$chart_data['#settings']['axes'][$axis]['tickOptions']['formatString'] = '%b %y';
+			break;
+		
+    case 'dec':
+    	//$chart_data['#settings']['axes'][$axis]['tickOptions']['formatString'] = '%d';
+	    break;
+			
+		default:
+		case 'int':
+			$chart_data['#settings']['axes'][$axis]['tickOptions']['formatString'] = '%d';
+			break;
+	}
+	//$chart_data['#settings']['axes']['xaxis']['renderer'] = '$.jqplot.DateAxisRenderer';
+	
+	$chart_data['#settings']['grid']['background'] = '#fff';
+	
+	if($node->field_show_legend[0]['value'] != 'false') {
+		$chart_data['#settings']['legend']['show'] = $node->field_show_legend[0]['value'];
+		$chart_data['#settings']['legend']['location'] = $node->field_location[0]['value'];
+	}
+	
+	$chart_data['#settings']['highlighter'] = array('show'=>true, 'sizeAdjust'=>7.5);
+	//dsm($data_array);
+	foreach($data_array as $data) {
+		$chart_data[] = $data;
+	}
+	
+	return charts_chart($chart_data);
+}
+
+function _statistics_node_parse_chart_values($values) {
+	$csv = new parseCSV();
+	$csv->heading = false;
+	$csv->delimiter = ';';
+	$csv->parse($values);
+
+	$x_key = -1;
+
+	$data = array();
+	
+	foreach(array_shift($csv->data) as $key => $legend) {
+		if($legend == 'X') {
+			$x_key = $key;
+		}
+		$data[$key] = array('#legend'=>$legend);
+	}
+	
+	foreach($csv->data as $rid=>$row) {
+		foreach ($row as $key=>$val) {
+			if($x_key > -1) { 
+				$xid = $row[$x_key];
+				if($x_key != $key) {
+					$data[$key][] = ((float)$val);
+				} else {
+					_statistics_node_set_ticks($val);
+				}
+			} else {
+				$xid = $rid;
+				$data[$key][] = array('#key'=>$rid, '#value'=>(float)$val);
+			}
+			
+			
+		}
+	}
+
+	if($x_key > -1) { 
+		unset($data[$x_key]);
+	}
+	//dsm($data);
+	return $data;
+}
+
+function _statistics_node_generate_table ($values) {
+	_statistics_node_init_table ();
+	
+	$values = str_replace(',', '.', $values);
+	
+	$values_array = _statistics_node_parse_table_values($values);
+	
+	$suffix = '<div style="clear:both;"></div>';
+	
+	return theme('table', array_shift($values_array), $values_array, array('class'=>'data-table')).$suffix;
+}
+
+function _statistics_node_set_ticks ($value = null) {
+	static $values = array();
+
+	if($value) {
+		$values[] = $value;
+	}
+	
+	return $values;
+}
+
+function _statistics_node_parse_table_values($values) {	
+	$csv = new parseCSV();
+	$csv->heading = false;
+	$csv->delimiter = ';';
+	$csv->parse($values);
+
+	return $csv->data;
+}
+
+function _statistics_node_init_table () {
+	$path = drupal_get_path('module', 'statistics_node');
+	drupal_add_js($path.'/js/statisticsTable.js');
+	drupal_add_js($path.'/datatables/media/js/jquery.dataTables.js');
+	drupal_add_css($path.'/datatables/media/css/demo_table.css');
+	drupal_add_css($path.'/statistics_node_table.css');
+}

@@ -1,0 +1,250 @@
+<?php
+//$Id: scs.module,v 1.1.2.1.2.18 2010/08/18 19:11:43 coworks Exp $
+  
+/**
+ * @file
+ * Select Drupal content to create a newsletter
+ */
+
+/**
+ * Implements hook_menu()
+ */
+function scs_menu() {
+  $items = array();
+  	
+  $items['admin/settings/simplenews/scs'] = array(
+    'title' => 'Simplenews Content Selection',
+    'description' => 'Configure what node types could be used for SCS, ...',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('scs_admin_settings_form'),
+    'access arguments' => array('administer scs'),
+    'file' => 'scs.admin.inc',
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  $items['admin/content/scs_node_selection/nodes'] = array(
+    'title' => t('From nodes'),
+    'description' => t('Select nodes to create a newsletter'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('scs_node_selection'),
+    'access arguments' => array('scs create newsletters'),
+    'file' => 'scs.pages.inc',
+    'type' => MENU_LOCAL_TASK,
+  );
+
+  $items['admin/content/scs_node_selection'] = array(
+    'title' => 'Simplenews Content Selection Creator',
+    'description' => 'Select nodes to create a newsletter',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('scs_node_selection'),
+    'access arguments' => array('scs create newsletters'),
+    'file' => 'scs.pages.inc',
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  $items['admin/content/scs_sort_nodes'] = array(
+    'title' => 'Simplenews Content Select Sorter',
+    'description' => 'Sort the nodes like you want them in the newsletter',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('scs_sort_nodes'),
+    'access arguments' => array('scs create newsletters'),
+    'file' => 'scs.pages.inc',
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+  
+/**
+ * Implements hook_perm()
+ */
+function scs_perm() {
+  return array('administer scs', 'scs create newsletters');
+}
+  
+/**
+ * Implements hook_theme()
+ */
+function scs_theme() {
+  return array(
+    'scs_node_selection' => array(
+      'arguments' => array('form' => NULL),
+      'file' => 'scs.theme.inc',
+    ),
+    'scs_node_output' => array(
+      'arguments' => array('form' => NULL),
+      'file' => 'scs.theme.inc',
+    ),
+    'scs_newsletter_output' => array(
+      'arguments' => array('nodes' => NULL, 'toc' => FALSE),
+      'file' => 'scs.theme.inc',
+    ),
+    'scs_sort_nodes' => array(
+      'arguments' => array('form' => NULL),
+      'file' => 'scs.theme.inc',
+    ),
+    'scs_node_titles' => array(
+      'arguments' => array('titles' => array()),
+      'file' => 'scs.theme.inc',
+    ),
+  );
+}
+  
+/**
+ * Implements hook_form_alter()
+ * Used to add an extra update operation to admin/content/node
+ */
+function scs_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'node_admin_content') {
+    $form['admin']['options']['operation']['#options']['scs'] = t('Create newsletter');
+    $form['admin']['options']['submit']['#submit'][] = 'scs_admin_content_node_submit';
+  }
+}
+  
+/**
+ * Extra submit function on admin/content/node form
+  */
+function scs_admin_content_node_submit($form, &$form_state) {
+  if ($form_state['values']['operation'] == 'scs') {
+    $nodes = $form_state['values']['nodes'];
+    
+    foreach ($nodes as $key=>$selected) {
+      if ($selected == 0) {
+        unset($nodes[$key]);
+      }
+    }
+      
+    $counter = 0;
+      
+    foreach ($nodes as $key=>$nid) {
+      $nodes['nid_' . $counter] = $nid;
+      unset($nodes[$key]);
+      $counter++;
+    }
+      
+    $query = http_build_query($nodes, '', '&');
+    drupal_goto('admin/content/scs_sort_nodes', $query);
+  }
+}
+  
+/**
+ * Get nodes avaiable for selection
+ */
+function _scs_get_nodes($headers = array(), $filters = array()) {
+  $nodes = array();
+
+  $content_types = variable_get('scs_content_types', array());
+    
+  foreach ($content_types as $type=>$selected) {
+    if ($selected == '0') {
+      unset($content_types[$type]);
+    }
+  }
+
+  if (count($content_types) != 0) {
+    //Filters
+    if (!empty($filters)) {
+      $filtersql = array();
+       
+      if (array_key_exists('nid', $filters)) {
+        $filtersql[] = sprintf('nid=%d', $filters['nid']);
+      }
+        
+      if (array_key_exists('title', $filters)) {
+        $filtersql[] = "title LIKE '" . $filters['title'] . "%'";
+      }
+        
+      if (array_key_exists('type', $filters)) {
+        $content_types = array($filters['type']);
+      }
+        
+      $prefix = '';
+        
+      if (!empty($filtersql)) {
+        $prefix = ' AND ';
+      }
+        
+      $filtersql = $prefix . implode(' AND ', $filtersql);
+    }
+      
+    $p = db_placeholders($content_types, 'varchar');
+      
+    //Table sort
+    $tablesortsql = '';
+    if (!empty($headers)) {
+      $tablesortsql = tablesort_sql($headers);
+    }
+      
+    $result = db_query("SELECT nid, title, created FROM {node} WHERE ({node}.status <> 0) AND type IN ($p)$filtersql $tablesortsql", $content_types);
+      
+    while ($node = db_fetch_object($result)) {
+      $node->created = date('Y-m-d H:i:s', $node->created);
+      $nodes[] = $node;
+    }
+  }
+    
+  return $nodes;
+}
+  
+/**
+ * Newsletter creator function
+ */
+function _scs_create_newsletter($title, $nodes, $toc = 0, $type) {
+  global $user, $custom_theme;
+  
+  if ($theme = variable_get('theme_default', FALSE)) {
+  	$custom_theme = $theme;
+  	init_theme();
+  }
+    
+  //Title
+  if ($title == '') {
+    $title = variable_get('scs_default_title', t('Please edit the title of this newsletter'));
+  }
+    
+  // Load node information
+  foreach ($nodes as $node) {
+    $complete_nodes[] = node_load(array('nid' => $node));
+  }
+
+  // Create the body of the newsletter
+  $body = theme('scs_newsletter_output', $complete_nodes, $toc);
+    
+  $newsletter = new StdClass();
+  $newsletter->type = $type;
+  $newsletter->uid = $user->uid;
+  $newsletter->title = $title;
+  $newsletter->body = $body;
+  $newsletter->teaser = node_teaser($body);
+  $newsletter->filter = variable_get('filter_default_format', 1);
+  $newsletter->status = variable_get('scs_publish_default', 1);
+  $newsletter->revision = 1;
+  $newsletter->promote = 0;
+  $newsletter->comment = 0;
+  $newsletter->created = time();
+  $newsletter->changed = time();
+  $newsletter->simplenews['s_format'] = strtolower(variable_get('scs_format', 'plain'));
+  $newsletter->priority = 0;
+  $newsletter->receipt = 0;
+
+  node_save($newsletter);
+    
+  drupal_goto('node/' . $newsletter->nid . '/edit');
+}
+  
+/**
+ * Interal to get the possible content types to filter on
+ */
+function _scs_get_typefilter() {
+  $types = variable_get('scs_content_types', array());
+  $options = array();
+  $options[0] = t('Select node type');
+  
+  foreach ($types as $key=>$value) {
+    if (!is_numeric($value)) {
+      $options[$key] = $value;
+    }
+  }
+    
+  return $options;
+}

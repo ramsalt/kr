@@ -1,0 +1,333 @@
+<?php
+
+/**
+ * @file
+ * Written by Henri MEDOT <henri.medot[AT]absyx[DOT]fr>
+ * http://www.absyx.fr
+ */
+
+
+
+/******************************************************************************
+ * Hook functions
+ ******************************************************************************/
+
+/**
+ * Implementation of hook_form_FORM_ID_alter().
+ */
+function nopremium_form_node_type_form_alter(&$form, &$form_state) {
+  if (isset($form['workflow']['node_options']['#options'])) {
+    $form['workflow']['node_options']['#options']['premium'] = t('Premium content');
+  }
+}
+
+
+
+/**
+ * Implementation of hook_node_operations().
+ */
+function nopremium_node_operations() {
+  return array(
+    'premium' => array(
+      'label' => t('Make premium'),
+      'callback' => 'node_mass_update',
+      'callback arguments' => array('updates' => array('status' => 1, 'premium' => 1)),
+    ),
+    'non_premium' => array(
+      'label' => t('Make non-premium'),
+      'callback' => 'node_mass_update',
+      'callback arguments' => array('updates' => array('premium' => 0)),
+    ),
+  );
+}
+
+
+
+/**
+ * Implementation of hook_action_info().
+ */
+function nopremium_action_info() {
+  return array(
+    'node_make_premium_action' => array(
+      'type' => 'node',
+      'description' => t('Make content premium'),
+      'configurable' => FALSE,
+      'behavior' => array('changes_node_property'),
+      'hooks' => array(
+        'nodeapi' => array('presave'),
+        'comment' => array('insert', 'update'),
+      ),
+    ),
+    'node_make_non_premium_action' => array(
+      'type' => 'node',
+      'description' => t('Make content non-premium'),
+      'configurable' => FALSE,
+      'behavior' => array('changes_node_property'),
+      'hooks' => array(
+        'nodeapi' => array('presave'),
+        'comment' => array('delete', 'insert', 'update'),
+      ),
+    ),
+  );
+}
+
+/**
+ * Implementation of a Drupal action.
+ * Sets the premium property of a node to 1.
+ */
+function node_make_premium_action(&$node, $context = array()) {
+  $node->premium = 1;
+  watchdog('action', 'Set @type %title to premium.', array('@type' => node_get_types('name', $node), '%title' => $node->title));
+}
+
+/**
+ * Implementation of a Drupal action.
+ * Sets the premium property of a node to 0.
+ */
+function node_make_non_premium_action(&$node, $context = array()) {
+  $node->premium = 0;
+  watchdog('action', 'Set @type %title to non-premium.', array('@type' => node_get_types('name', $node), '%title' => $node->title));
+}
+
+
+
+/**
+ * Implementation of hook_theme().
+ */
+function nopremium_theme() {
+  return array(
+    'nopremium_body' => array(
+      'arguments' => array('node' => NULL),
+    ),
+    'nopremium_message' => array(
+      'arguments' => array('node' => NULL, 'field' => NULL),
+    ),
+  );
+}
+
+
+
+/**
+ * Implementation of hook_nodeapi().
+ */
+function nopremium_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
+  switch ($op) {
+    case 'alter':
+      if (!$a3 && $node->premium && !nopremium_access_full_content($node)) {
+        $node = nopremium_alter_node($node, $a4);
+      }
+      break;
+    case 'view':
+      if ($a3 && $node->premium && !nopremium_access_full_content($node) && nopremium_check_content_extra_field()) {
+        $node->content['nopremium_message_field'] = array(
+          '#value' => theme('nopremium_message', $node, TRUE),
+        );
+      }
+      break;
+    case 'prepare':
+      // Set up premium default value, if required.
+      if (!isset($node->nid)) {
+        $node_options = variable_get('node_options_'.$node->type, array());
+        $node->premium = in_array('premium', $node_options);
+      }
+      break;
+  }
+}
+
+
+
+/**
+ * Implementation of hook_form_alter().
+ */
+function nopremium_form_alter(&$form, $form_state, $form_id) {
+  if (isset($form['#node']->type) && ($form['#node']->type.'_node_form' == $form_id)) {
+    $form['options']['premium'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Premium content'),
+      '#default_value' => $form['#node']->premium,
+    );
+
+    // Allow or not to override the premium option.
+    // See http://drupal.org/project/override_node_options
+    if (!user_access('administer nodes') && user_access('override '. $form['#node']->type .' premium option')) {
+      foreach (element_children($form['options']) as $key) {
+        if (!isset($form['options'][$key]['#access'])) {
+          $form['options'][$key]['#access'] = FALSE;
+        }
+        $form['options']['#access'] = $form['options']['premium']['#access'] = TRUE;
+      }
+    }
+  }
+}
+
+
+
+/**
+ * Implementation of hook_views_api().
+ */
+function nopremium_views_api() {
+  return array('api' => 2);
+}
+
+
+
+/**
+ * Implementation of hook_perm().
+ */
+function nopremium_perm() {
+  $perms = array();
+  foreach (array_keys(node_get_types('names')) as $type) {
+    $perms[] = 'view full '. $type .' premium content';
+    $perms[] = 'override '. $type .' premium option';
+  }
+  return $perms;
+}
+
+
+
+/**
+ * Implementation of hook_menu().
+ */
+function nopremium_menu() {
+  $items['admin/settings/nopremium'] = array(
+    'title' => 'Node Option Premium',
+    'description' => 'Configure Node Option Premium.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('nopremium_settings_form'),
+    'access arguments' => array('administer permissions'),
+    'file' => 'nopremium.admin.inc',
+  );
+  return $items;
+}
+
+
+
+/**
+ * Implementation of hook_content_extra_fields.
+ */
+function nopremium_content_extra_fields($type_name) {
+  $extra = array();
+
+  if (nopremium_check_content_extra_field()) {
+    $extra['nopremium_message_field'] = array(
+      'label' => t('Premium message'),
+      'description' => t('Node Option Premium module message.'),
+      'weight' => 1,
+    );
+  }
+
+  return $extra;
+}
+
+
+
+/******************************************************************************
+ * Theme functions
+ ******************************************************************************/
+
+/**
+ * Theme nopremium body.
+ *
+ * This function is used only when the nopremium message is not managed as a 
+ * content extra field.
+ *
+ * @ingroup themeable
+ */
+function theme_nopremium_body($node) {
+  $output  = $node->teaser;
+  $output .= '<div class="nopremium-message">'. $node->nopremium_message .'</div>';
+  return $output;
+}
+
+
+
+/**
+ * Theme nopremium message.
+ *
+ * @ingroup themeable
+ */
+function theme_nopremium_message($node, $field = FALSE) {
+  $output = check_markup(t(nopremium_get_message($node->type)));
+  if ($field) {
+    $output = '<div class="nopremium-message">'. $output .'</div>';
+  }
+  return $output;
+}
+
+
+
+/******************************************************************************
+ * API and helper functions
+ ******************************************************************************/
+
+/**
+ * Determine whether the current user may access the full content of the
+ * specified nopremium node.
+ */
+function nopremium_access_full_content($node, $account = NULL) {
+  if (empty($account)) {
+    $account = $GLOBALS['user'];
+  }
+
+  return user_access('administer nodes', $account)
+    || user_access('view full '. $node->type .' premium content', $account)
+    || node_access('update', $node, $account)
+    || $account->uid && ($account->uid == $node->uid);
+}
+
+
+
+/**
+ * Alter a node replacing full body by nopremium body.
+ */
+function nopremium_alter_node($node, $page) {
+  $links = isset($node->links);
+  $node = node_load($node->nid);
+
+  $node = node_build_content($node, TRUE, $page);
+  $node->readmore = FALSE;
+  if ($links) {
+    $node->links = module_invoke_all('link', 'node', $node, TRUE);
+    drupal_alter('link', $node->links, $node);
+  }
+  $content = drupal_render($node->content);
+  $node->teaser = $content;
+  unset($node->body);
+  node_invoke_nodeapi($node, 'alter', TRUE, $page);
+
+  if (nopremium_check_content_extra_field()) {
+    $node->body = $node->teaser;
+  }
+  else {
+    $node->nopremium_message = theme('nopremium_message', $node);
+    $node->body = theme('nopremium_body', $node);
+  }
+  unset($node->teaser);
+  return $node;
+}
+
+
+
+/**
+ * Get the raw nopremium message for the given node type.
+ */
+function nopremium_get_message($type = '') {
+  if ($type) {
+    $message = variable_get('nopremium_message_'. $type, '');
+    if ($message) {
+      return $message;
+    }
+  }
+
+  return variable_get('nopremium_message', 'The full content of this page is available to premium users only.');
+}
+
+
+
+/**
+ * Check whether the nopremium message should be managed as a content extra
+ * field.
+ */
+function nopremium_check_content_extra_field() {
+  return module_exists('content') && variable_get('nopremium_content_extra_field', 0);
+}

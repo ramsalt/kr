@@ -1,0 +1,197 @@
+# $Id$
+#
+# French translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  ip_login.admin.inc: n/a
+#  ip_login.module, v1.1.4.4 2008/11/15 02:51:43 davidwhthomas
+#  ip_login.info,v 1.1.4.2 2008/11/14 23:56:39 davidwhthomas
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2010-06-18 09:11-0400\n"
+"PO-Revision-Date: 2010-06-18 09:37-0500\n"
+"Last-Translator: Sébastien Nadeau <sebastien.nadeau@bibl.ulaval.ca>\n"
+"Language-Team: French <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: ip_login.admin.inc:18
+msgid "You can use the !profile_module to add a text field to the user profile to store the user's ip address."
+msgstr "Vous pouvez utiliser le module !profile_module afin d'ajouter un champ de saisie pour les adresses IP dans le profil de l'utilisateur."
+
+#: ip_login.admin.inc:29
+msgid "The field %profile_field you have chosen to store IP matches is accessible by non-administators. It is strongly recommended this field's visibility is kept 'Hidden'."
+msgstr "Le champ %profile_field sélectionné pour contenir les adresses IP est accessible par des non-administrateurs. Il est recommandé de garder ce champ masqué et accessible seulement aux administrateurs."
+
+#: ip_login.admin.inc:40
+msgid "IP Login enabled"
+msgstr "Activer IP Login"
+
+#: ip_login.admin.inc:41
+msgid "Check to enable IP Login, uncheck to disable. If unchecked no user will be able to login via IP address."
+msgstr "Cocher pour activer IP Login, décocher pour le désactiver. Si décoché, il y'aura pas de connexion automatique d'utilisateurs par adresse IP."
+
+#: ip_login.admin.inc:46
+msgid "Profile module IP address field"
+msgstr "Champ du profil qui contient les adresses IP"
+
+#: ip_login.admin.inc:47
+msgid "Select the profile field containing the user IP address."
+msgstr "Sélectionner le champ du profile qui contient les adresses IP."
+
+#: ip_login.admin.inc:55
+msgid "This profile field's visiblity should ideally be set to 'Hidden' for best security"
+msgstr "La visibilité de ce champ du profil devrait "
+
+#: ip_login.admin.inc:60
+msgid "Destination after successful login by IP"
+msgstr "Redirection après connection par adresse IP"
+
+#: ip_login.admin.inc:61
+msgid "<strong>Leave blank to send user back to their originally requested page</strong>, or enter the Drupal path users should be redirected to when automatically logged in. For example \"user\" or \"&lt;front&gt;\" etc."
+msgstr "<strong>Laisser vide pour rediriger l'utilisateur vers la page qu'il a demandée</strong>, ou saisir le chemin Drupal vers lequel l'utilisateur sera redirigé une fois connecté. Par exemple: \"user\" ou \"&lt;front&gt;\", etc."
+
+#: ip_login.admin.inc:67
+msgid "Login page link"
+msgstr "Lien pour la page de connexion utilisateur"
+
+#: ip_login.admin.inc:68;93
+msgid "A link with text from the <em>Login page link text</em> to log the user in automatically will be added to the login page unless it is blank."
+msgstr "Un lien sera ajouté à la page de connexion utilisateur, à moins que le champ <em>texte du lien pour la page de connexion utilisateur</em> ne soit laissé vide."
+
+#: ip_login.admin.inc:72
+msgid "Login page link text"
+msgstr "Texte du lien sur la page de connexion utilisateur"
+
+#: ip_login.admin.inc:73
+msgid "Text for link on login page. Blank to remove link, defaults to \"Log in automatically\""
+msgstr "Texte du lien sur la page de connexion utilisateur. Laisser vide pour ne rien afficher. Valeur par défaut: \"Log in automatically\"."
+
+#: ip_login.admin.inc:74;99
+msgid "Log in automatically"
+msgstr "Me connecter automatiquement"
+
+#: ip_login.admin.inc:78
+msgid "Login page help text"
+msgstr "Texte de l'aide sur la page de connexion utilisateur"
+
+#: ip_login.admin.inc:79
+msgid "Help text under IP Login link on login page. Defaults to 'Your computer's IP address has been matched and validated.' and will not appear if <em>Login page link text</em> is blank."
+msgstr "Texte explicatif sous le lien sur la page de connexion utilisateur. La valeur par défaut est: \"Your computer's IP address has been matched and validated.\" et n'apparaitra pas si le <em>lien sur la page de connexion utilisateur</em> est laissé vide."
+
+#: ip_login.admin.inc:80
+msgid "Your computer's IP address has been matched and validated."
+msgstr "L'adresse IP do votre poste de travail a été reconnue et validée."
+
+#: ip_login.admin.inc:84;104
+msgid "Weight"
+msgstr "Poids"
+
+#: ip_login.admin.inc:87
+msgid "Optional. The position withn the login page form for this link."
+msgstr "Optionnel. L'ordre d'affichage dans la page de connexion utilisateur pour ce lien."
+
+#: ip_login.admin.inc:92
+msgid "Login block link"
+msgstr "Lien dans le bloc de connexion utilisateur"
+
+#: ip_login.admin.inc:97
+msgid "Login block link text"
+msgstr "Texte du lien dans le bloc de connexion utilisateur"
+
+#: ip_login.admin.inc:98
+msgid "Text for link on login page. Use blank to remove link, defaults to \"Log in automatically\""
+msgstr "Lien sur la page de connexion utilisateur. Laisser vide pour ne rien afficher. Valeur par défaut: \"Log in automatically\"."
+
+#: ip_login.admin.inc:107
+msgid "Optional. The position withn the login block form for this link."
+msgstr "Optionnel. L'ordre d'affichage dans le bloc de connexion utilisateur pour ce lien."
+
+#: ip_login.module:64
+msgid "This module allows this site to automatically authenticate and login users arriving with a chosen IP address."
+msgstr "Ce module permet d'authentifier et de connecter un compte utilisateur d'après son adresse IP."
+
+#: ip_login.module:65
+msgid "IP values can be stored in a user's profile (using the core <em>Profile</em> module) in the field selected by the <em>Profile module IP address</em> field, below."
+msgstr "Les adresses ou plages d'adresses IP sont stockées dans le profil de l'utilisateur (il faut activer le module <em>Profil</em> fournit avec le core de Drupal). Il faut saisir le nom du champ du module profil qui contient les adresses IP à utiliser ci-bas."
+
+#: ip_login.module:66
+msgid "It also allows users with the <code>administer ip login</code> and <code>can log in as another user</code> <a href=\"@permissions-link\">permissions</a> to log out and log in as another user, with other users being forced to stay logged in."
+msgstr "Il permet également aux comptes utilisateurs avec les <a href=\"@permissions-link\">permissions</a> <code>administrer IP Login</code> et <code>peut se connecter avec un autre compte</code> de se déconnecter et de se reconnecter en utilisant un autre compte, alors que les utilisateurs n'ayant pas ces droits ne peuvent pas se déconnecter."
+
+#: ip_login.module:70
+msgid "Accepted profile field IP values are:"
+msgstr "Les formes d'adresses IP acceptées sont:"
+
+#: ip_login.module:72
+msgid "Single IP matches like <code>123.123.123.123</code>"
+msgstr "Adresse IP unique comme <code>123.123.123.123</code>"
+
+#: ip_login.module:74
+msgid "Wildcards using an asterisk (<code>*</code>) in any quadrant except the first one, for example <code>123.123.123.*</code> or <code>100.*.*.*</code> etc."
+msgstr "En utilisant l'astérisque (<code>*</code>) remplaçant n'importe quel entier de 0 à 255, dans n'importe quel octet, excepté le premier, par exemple: <code>123.123.123.*</code> ou <code>100.*.*.*</code>, etc."
+
+#: ip_login.module:76
+msgid "Ranges using a hyphen (<code>-</code>) in any quadrant except the first one, for example <code>123.123.123.100-200</code> etc."
+msgstr "Plages d'adresse utilisant le trait d'union (<code>-</code>) dans nimporte quel octet, excepté le premier, par exemple: <code>123.123.123.100-200</code>."
+
+#: ip_login.module:78
+msgid "Any number of comma-separated IP addresses or ranges like <code>10.11.12.13, 123.123.123.100-200, 123.123.124-125.*</code> etc."
+msgstr "Toute combinaison d'adresses ou de plages dans une liste séparée par des virgules, par exemple: <code>10.11.12.13, 123.123.123.100-200, 123.123.124-125.*</code>."
+
+#: ip_login.module:250
+msgid "Welcome %name. You have been automatically logged into %sitename."
+msgstr "Bienvenue %name, vous avez été connecté automatiquement au site %sitename."
+
+#: ip_login.module:259
+msgid "You may also <a href=\"@other_user_link\">log in as another user</a> if required."
+msgstr "Vous pouvez <a href=\"@other_user_link\">vous connecter avec un autre compte</a> au besoin."
+
+#: ip_login.module:328
+msgid "This account does not have permission to log out once logged in automatically. You have been logged back in."
+msgstr "Ce compte n'a pas l'autorisation de se déconnecter une fois connecté par adresse IP. Vous avez été reconnecté automatiquement."
+
+#: ip_login.module:265;306
+msgid "user"
+msgstr "utilisateur"
+
+#: ip_login.module:265
+msgid "Session opened for %name by IP Login."
+msgstr "Ouverture de session par adresse IP pour %name"
+
+#: ip_login.module:306
+msgid "Session closed for %name."
+msgstr "Session terminée pour %name."
+
+#: ip_login.module:148
+msgid "administer ip login"
+msgstr "administrer IP Login"
+
+#: ip_login.module:148
+msgid "can log in as another user"
+msgstr "peut se connecter avec un autre compte"
+
+#: ip_login.module:102
+msgid "Automatically log me in by IP"
+msgstr "Me connecter automatiquement par adresse IP"
+
+#: ip_login.module:108
+msgid "IP Login settings"
+msgstr "Configurer IP Login"
+
+#: ip_login.module:109
+msgid "Configure IP Login settings"
+msgstr "Modifier la configuration de IP Login"
+
+#: ip_login.info:0
+msgid "IP Login"
+msgstr "IP Login"
+
+#: ip_login.info:0
+msgid "Allows users to login automatically by an IP address, range or wildcards specified in a profile field"
+msgstr "Permet de connecter des comptes par adresse ou plage d'adresses IP spécifiées dans un champ du profil utilisateur"
+
