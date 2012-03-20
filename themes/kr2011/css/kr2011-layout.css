@@ -2,8 +2,9 @@
 	http://www.kommunal-rapport.no/sites/default/themes/kr2011/css/kr2011-layout.css?4 */
 
 #center-left-wrapper{
-  border-right: 1px solid #BECCD3;
+/*  border-right: 1px solid #BECCD3; */
   border-top: 10px solid #003663;
+  background: transparent url('../images/border.gif');
   float: left;
 }
 #sidebar-left {
