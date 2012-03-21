@@ -1,5 +1,9 @@
 /* @override 
 	http://www.kommunal-rapport.no/sites/default/themes/kr2011/css/kr2011-layout.css?4 */
+#block-openx-2.block, #block-openx-6.block {
+  margin: 0 0 0px;
+  clear: both;
+}
 
 #center-left-wrapper{
 /*  border-right: 1px solid #BECCD3; */
