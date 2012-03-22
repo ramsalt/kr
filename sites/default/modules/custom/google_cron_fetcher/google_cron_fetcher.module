@@ -2,6 +2,7 @@
 
 function google_cron_fetcher_cron(){
   gc_global_visits();
+  gc_daily_visits();
 }
 
 function gc_daily_visits(){
