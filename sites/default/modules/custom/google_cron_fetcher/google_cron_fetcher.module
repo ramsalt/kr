@@ -24,7 +24,7 @@ function global_visits(){
   
   $GAFeed = google_analytics_api_new_gafeed();
   $GAFeed->queryReportFeed($params, $cache_options);
-  if($GAFeed->results == 0){
+  if(count($GAFeed->results) > 0){
     $i = 0;
     foreach ($GAFeed->results as $delta => $item) {
       $i++;
