@@ -30,11 +30,16 @@ function gc_daily_visits(){
       $views = $item['pageviews'];
       $nid = google_path_to_nid($item['pagePath']);
       if($nid){
-        
+        db_query('UPDATE {node_counter} SET daycount = %d, timestamp = %d WHERE nid = %d', $views, time(), $nid);
+        // If we affected 0 rows, this is the first time viewing the node.
+        if (!db_affected_rows()) {
+          // We must create a new row to store counters for the new node.
+          db_query('INSERT INTO {node_counter} (nid, daycount, totalcount, timestamp) VALUES (%d, %d, %d, %d)', $nid, $views, $views, time());
+        }        
       }
     }
   }
-  dsm($GAFeed);
+
 }
 
 function gc_global_visits(){
