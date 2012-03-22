@@ -3,3 +3,5 @@ description = "Analytics stats fetcher"
 package = "Development"
 core = 6.x
 php = 5.2
+
+dependencies[] = google_analytics_reports
