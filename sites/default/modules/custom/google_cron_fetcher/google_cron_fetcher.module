@@ -1,10 +1,10 @@
 <?php
 
 function google_cron_fetcher_cron(){
-  global_visits();
+  gc_global_visits();
 }
 
-function daily_visits(){
+function gc_daily_visits(){
   $cache_options = array(
   'cid' => 'google_analytics_counter_' . md5(time()),
   'expire' => google_analytics_reports_cache_time(),
@@ -37,7 +37,7 @@ function daily_visits(){
   dsm($GAFeed);
 }
 
-function global_visits(){
+function gc_global_visits(){
   $cache_options = array(
   'cid' => 'google_analytics_counter_' . md5(time()),
   'expire' => google_analytics_reports_cache_time(),
