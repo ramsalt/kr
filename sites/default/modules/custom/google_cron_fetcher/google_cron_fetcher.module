@@ -1,7 +1,7 @@
 <?php
 
 function google_cron_fetcher_cron(){
-
+  global_visits();
 }
 
 function global_visits(){
@@ -31,7 +31,12 @@ function global_visits(){
       $views = $item['pageviews'];
       $nid = google_path_to_nid($item['pagePath']);
       if($nid){
-        dsm($nid, $views);
+        db_query('UPDATE {node_counter} SET totalcount = %d, timestamp = %d WHERE nid = %d', $views, time(), $nid);
+        // If we affected 0 rows, this is the first time viewing the node.
+        if (!db_affected_rows()) {
+          // We must create a new row to store counters for the new node.
+          db_query('INSERT INTO {node_counter} (nid, daycount, totalcount, timestamp) VALUES (%d, 0, %d, %d)', $nid, $views, time());
+        }
       }
     }
     variable_set('google_cron_fetcher_index', $index+$i);
