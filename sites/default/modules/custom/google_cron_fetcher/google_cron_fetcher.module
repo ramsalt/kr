@@ -16,7 +16,7 @@ function global_visits(){
     'profile_id' => 'ga:' . variable_get('google_analytics_reports_profile_id', 0),
     'metrics' => array('ga:pageviews'),
     'dimensions' => array('ga:pagePath'),
-    'max_results' => 1000,
+    'max_results' => 5000,
     'sort' => array('ga:pagePath'),
     'start_index' => $index,
   );
