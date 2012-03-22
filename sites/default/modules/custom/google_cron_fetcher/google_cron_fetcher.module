@@ -11,25 +11,32 @@ function global_visits(){
   'refresh' => FALSE,
   );
   
-  $index = 1;
+  $index = variable_get('google_cron_fetcher_index', 1);
   $params = array(
     'profile_id' => 'ga:' . variable_get('google_analytics_reports_profile_id', 0),
     'metrics' => array('ga:pageviews'),
     'dimensions' => array('ga:pagePath'),
-    'max_results' => 50,
-    'sort' => array('-ga:pageviews'),
-    'start-index' => $index,
+    'max_results' => 1000,
+    'sort' => array('ga:pagePath'),
+    'start_index' => $index,
   );
   
   
   $GAFeed = google_analytics_api_new_gafeed();
   $GAFeed->queryReportFeed($params, $cache_options);
-  foreach ($GAFeed->results as $item) {
-    $views = $item['pageviews'];
-    $nid = google_path_to_nid($pagePath);
-    if($nid){
-      dsm($nid, $views);
+  if($GAFeed->results == 0){
+    $i = 0;
+    foreach ($GAFeed->results as $delta => $item) {
+      $i++;
+      $views = $item['pageviews'];
+      $nid = google_path_to_nid($item['pagePath']);
+      if($nid){
+        dsm($nid, $views);
+      }
     }
+    variable_set('google_cron_fetcher_index', $index+$i);
+  }else{
+    variable_set('google_cron_fetcher_index', 1);
   }
 }
 function google_path_to_nid($path){
