@@ -273,6 +273,23 @@ html.js body.sidebars div#outer-wrapper div#wrapper div#container.clearfix div#c
 .node-type-ordforer .field-type-nodereference{
   margin: 0px;
 }
+.node-type-ordforer .pane-ordforer-group-perioder h2{
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 0.9em;
+  padding: 0px;
+  margin: 0px;
+}
+.node-type-ordforer .pane-ordforer-group-perioder thead{
+  display: none;
+}
+.node-type-ordforer .pane-ordforer-group-perioder tbody{
+  border-top: none;
+}
+.node-type-ordforer .pane-ordforer-group-perioder tbody tr{
+  padding: 0px;
+  border-bottom: none;
+  background: transparent;
+}
 .node-type-ordforer .field-items .field-item{
   background: none;
 }
