@@ -275,12 +275,13 @@ html.js body.sidebars div#outer-wrapper div#wrapper div#container.clearfix div#c
 }
 .node-type-ordforer div.fieldgroup .content, .node-type-ordforer .field-items .field-item{
   padding-left: 0px;
+  margin-left: 0px;
 }
 .node-type-ordforer .field-type-nodereference{
   margin: 0px;
 }
 .node-type-ordforer .pane-ordforer-group-perioder{
-  margin: 0 0 15px 5px;
+  margin: 0 0 15px 0px;
 }
 .node-type-ordforer .pane-ordforer-group-perioder h2{
   font-family: Arial,Helvetica,sans-serif;
