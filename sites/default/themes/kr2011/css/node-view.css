@@ -273,7 +273,7 @@ html.js body.sidebars div#outer-wrapper div#wrapper div#container.clearfix div#c
 .node-type-ordforer .field-label{
   text-transform: none;
 }
-.node-type-ordforer div.fieldgroup .content{
+.node-type-ordforer div.fieldgroup .content, .node-type-ordforer .field-items .field-item{
   padding-left: 0px;
 }
 .node-type-ordforer .field-type-nodereference{
