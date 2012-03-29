@@ -87,8 +87,13 @@ DirectoryIndex index.php
   # To redirect all users to access the site WITH the 'www.' prefix,
   # (http://example.com/... will be redirected to http://www.example.com/...)
   # adapt and uncomment the following:
-  # RewriteCond %{HTTP_HOST} ^example\.com$ [NC]
-  # RewriteRule ^(.*)$ http://www.example.com/$1 [L,R=301]
+  RewriteCond %{HTTP_HOST} ^kommunal-rapport\.no$ [NC]
+  RewriteRule ^(.*)$ http://www.kommunal-rapport.no/$1 [L,R=301]
+
+  RewriteCond %{HTTP_HOST} ^barentssea\.ramsalt\.com$ [NC]
+  RewriteRule ^(.*)$ http://www.kommunal-rapport.no/$1 [L,R=301]
+
+
   #
   # To redirect all users to access the site WITHOUT the 'www.' prefix,
   # (http://www.example.com/... will be redirected to http://example.com/...)
@@ -104,7 +109,14 @@ DirectoryIndex index.php
   #
   # If your site is running in a VirtualDocumentRoot at http://example.com/,
   # uncomment the following line:
-   RewriteBase /
+  # RewriteBase /
+
+	# Rewrite migrated news article URLs (Migrate module)
+	# Old format: index.db2?id=123
+	RewriteCond %{QUERY_STRING} ^.*id=([0-9]+).*$
+	RewriteRule ^index.db2.*$ http://%{HTTP_HOST}:80/onode/%1? [NC,R=301,L]
+	
+	RewriteRule ^id/([^/]+)/?$ http://%{HTTP_HOST}:80/onode/$1 [NC,R=301,L]	
 
   # Rewrite URLs of the form 'x' to the form 'index.php?q=x'.
   RewriteCond %{REQUEST_FILENAME} !-f
@@ -113,4 +125,4 @@ DirectoryIndex index.php
   RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
 </IfModule>
 
-# $Id: .htaccess,v 1.90.2.5 2010/02/02 07:25:22 dries Exp $
+# $Id$
