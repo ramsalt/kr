@@ -311,6 +311,7 @@ function kr2011_preprocess_node(&$vars){
 	}
   elseif($vars['type']=='bildegalleri'){
     dsm($vars);
+    $vars['content'] = 'bilder';
   }
 
 	
