@@ -309,6 +309,9 @@ function kr2011_preprocess_node(&$vars){
 		drupal_add_js(drupal_get_path('theme', 'kr2011').'/js/kr2011.js', 'theme', 'footer');
 	//	print_R($vars['node']);
 	}
+  elseif($vars['type']=='bildegalleri'){
+    dsm($vars);
+  }
 
 	
 }
