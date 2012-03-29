@@ -14,7 +14,7 @@ function template_preprocess_views_bonus_export_csv(&$vars) {
   _views_bonus_export_shared_preprocess($vars);
 
   // Make sure we catch saved options that are misspelled. LEGACY
-  if (isset($vars['options']['separator'])) {
+  if (!isset($vars['options']['separator'])) {
     $vars['options']['separator'] = $vars['options']['seperator'];
   }
   // Support old misspelled templates. LEGACY
