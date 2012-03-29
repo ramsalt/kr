@@ -5,3 +5,19 @@
     position: relative;
     width: auto;
 }
+.node .flex-control-nav li {
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 1px 0 0 #757575;
+    margin-bottom: 10px;
+}
+.node .flex-control-nav li a {
+    background: none repeat scroll 0 0 #252525;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 1px 1px 0 #000000 inset;
+    color: #FFFFFF;
+    font-size: 12px;
+    height: auto;
+    padding: 4px 0;
+    text-indent: 0;
+    width: 25px;
+}
