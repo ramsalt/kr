@@ -325,14 +325,15 @@ function kr2011_preprocess_node(&$vars){
     foreach ($vars['field_galleri_bilde'] as $delta => $item) {
       $html .= '<li>'.$item['view'];
       
-      if($vars['field_galleri_desc'][$delta]['safe']){
+      if($vars['field_galleri_desc'][$delta]['safe'] && $vars['field_galleri_kredit'][$delta]['safe']){
         $html .= '<p>'.$vars['field_galleri_desc'][$delta]['safe'];
-      }
-      if($vars['field_galleri_kredit'][$delta]['safe']){
         $html .= '<span class="kredit">'.$vars['field_galleri_kredit'][$delta]['safe'].'</span></p>';
       }elseif($vars['field_galleri_desc'][$delta]['safe']){
-        $html .= '</p>';
+        $html .= '<p>'.$vars['field_galleri_desc'][$delta]['safe'].'</p>';
+      }elseif ($vars['field_galleri_kredit'][$delta]['safe']) {
+        $html .= '<p><span class="kredit">'.$vars['field_galleri_kredit'][$delta]['safe'].'</span></p>';
       }
+
       $html .='</li>';
     }
     $html .='</ul></div>';
