@@ -16,7 +16,11 @@
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
   width: 96%;  
 }
-
+.page-node .flexslider p.kredit{
+  font-size: 13px;
+  font-style: italic;
+  text-align: right;
+}
 .page-node .flexslider .flex-control-nav {
     background: none repeat scroll 0 0 #5D5D5D;
     bottom: 0;
