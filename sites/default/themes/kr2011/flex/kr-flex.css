@@ -3,7 +3,18 @@
   margin: 0px;
 }
 .page-node .flexslider .flex-caption, .flexslider p{
-  font-family: Georgia,Arial,Helvetica;  
+  font-family: Georgia,Arial,Helvetica;
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  color: #FFFFFF;
+  font-size: 14px;
+  left: 0;
+  line-height: 18px;
+  margin: 0;
+  padding: 2%;
+  position: absolute;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  width: 96%;  
 }
 
 .page-node .flexslider .flex-control-nav {
