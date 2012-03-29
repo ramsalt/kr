@@ -311,8 +311,10 @@ function kr2011_preprocess_node(&$vars){
 	}
   elseif($vars['type']=='bildegalleri'){
     dsm($vars);
+    drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery.min.js');
+    drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery-noconflict.js');
     drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery.flexslider.js', 'theme', 'header');
-    drupal_add_css(drupal_get_path('theme', 'kr2011').'/flex/jquery.flexslider-min.js', 'flexslider.css');
+    drupal_add_css(drupal_get_path('theme', 'kr2011').'/flexslider.css');
     $html = '<div class="flexslider">
         <ul class="slides">';
     foreach ($vars['field_galleri_bilde'] as $delta => $item) {
