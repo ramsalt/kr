@@ -280,8 +280,11 @@ html.js body.sidebars div#outer-wrapper div#wrapper div#container.clearfix div#c
 .node-type-ordforer .field-type-nodereference{
   margin: 0px;
 }
-.node-type-ordforer .pane-ordforer-group-perioder{
-  margin: 0 0 15px 0px;
+.node-type-ordforer .pane-ordforer-group-perioder,
+.node-type-ordforer .pane-ordforer-group-perioder div.fieldgroup,
+.node-type-ordforer #op-content .content
+{
+  margin-bottom: 0px;
 }
 .node-type-ordforer .pane-ordforer-group-perioder h2{
   font-family: Arial,Helvetica,sans-serif;
