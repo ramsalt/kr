@@ -1,16 +1,19 @@
-.node .flexslider .flex-control-nav {
+.page-node .flexslider .flex-control-nav {
     background: none repeat scroll 0 0 #5D5D5D;
     bottom: 0;
     padding: 10px 40px 0;
     position: relative;
     width: auto;
 }
-.node .flex-control-nav li {
+.page-node .flex-direction-nav {
+    bottom: 0;
+}
+.page-node .flex-control-nav li {
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0 1px 0 0 #757575;
     margin-bottom: 10px;
 }
-.node .flex-control-nav li a {
+.page-node .flex-control-nav li a {
     background: none repeat scroll 0 0 #252525;
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0 1px 1px 0 #000000 inset;
@@ -20,4 +23,48 @@
     padding: 4px 0;
     text-indent: 0;
     width: 25px;
+}
+.page-node .flex-control-nav li a.active {
+    background: none repeat scroll 0 0 #C21D29;
+    box-shadow: 0 1px 1px 0 #D4616A inset;
+    color: #D1555E;
+}
+.page-node .flex-control-nav li a:hover {
+    background: none repeat scroll 0 0 #5D5D5D;
+    box-shadow: 0 1px 1px 0 #333333 inset;
+    color: #FFFFFF;
+}
+.page-node .flex-direction-nav {
+    display: block;
+}
+.page-node .flex-direction-nav li .next {
+    background: url("slider-arrow-right-small.png") no-repeat scroll 0 0 #5D5D5D;
+    height: 20px;
+    right: 10px;
+    width: 20px;
+}
+.page-node .flex-direction-nav li .next:hover {
+    background: url("slider-arrow-right-small-active.png") no-repeat scroll 0 0 transparent;
+}
+.page-node .flex-direction-nav li .prev {
+    background: url("slider-arrow-left-small.png") no-repeat scroll 0 0 #5D5D5D;
+    height: 20px;
+    left: 10px;
+    width: 20px;
+}
+.page-node .flex-direction-nav li .prev:hover {
+    background: url("slider-arrow-left-small-active.png") no-repeat scroll 0 0 transparent;
+}
+.page-node .flex-direction-nav li a {
+    bottom: 13px;
+    top: auto;
+}
+.ds-1col.view-mode-thumbnail .field-name-field-op-main-image {
+    float: none;
+}
+.flexslider .flex-control-nav {
+    padding-bottom: 30px;
+}
+.flexslider ul {
+    padding: 0;
 }
