@@ -326,10 +326,12 @@ function kr2011_preprocess_node(&$vars){
       $html .= '<li>'.$item['view'];
       
       if($vars['field_galleri_desc'][$delta]['safe']){
-        $html .= $vars['field_galleri_desc'][$delta]['safe'];
+        $html .= '<p>'.$vars['field_galleri_desc'][$delta]['safe'];
       }
       if($vars['field_galleri_kredit'][$delta]['safe']){
-        $html .= '<p class="kredit">'.$vars['field_galleri_kredit'][$delta]['safe'].'</p>';
+        $html .= '<span class="kredit">'.$vars['field_galleri_kredit'][$delta]['safe'].'</span></p>';
+      }elseif($vars['field_galleri_desc'][$delta]['safe']){
+        $html .= '</p>';
       }
       $html .='</li>';
     }

@@ -16,7 +16,7 @@
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
   width: 96%;  
 }
-.page-node .flexslider p.kredit{
+.page-node .flexslider .kredit{
   font-size: 13px;
   font-style: italic;
   text-align: right;
