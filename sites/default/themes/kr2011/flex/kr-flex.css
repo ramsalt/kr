@@ -20,6 +20,7 @@
   font-size: 13px;
   font-style: italic;
   text-align: right;
+  float: right;
 }
 .page-node .flexslider .flex-control-nav {
     background: none repeat scroll 0 0 #5D5D5D;
