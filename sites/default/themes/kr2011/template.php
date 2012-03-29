@@ -311,7 +311,13 @@ function kr2011_preprocess_node(&$vars){
 	}
   elseif($vars['type']=='bildegalleri'){
     dsm($vars);
-    $vars['content'] = 'bilder';
+    $html = '<div class="flexslider">
+        <ul class="slides">';
+    foreach ($vars['field_galleri_bilde'] as $delta => $item) {
+      $html .= '<li>'.$item['view'].'</li>';
+    }
+    $html .='</ul></div>';
+    $vars['content'] = $html;
   }
 
 	
