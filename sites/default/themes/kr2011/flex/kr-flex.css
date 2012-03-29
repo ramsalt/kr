@@ -28,11 +28,13 @@
     background: none repeat scroll 0 0 #C21D29;
     box-shadow: 0 1px 1px 0 #D4616A inset;
     color: #D1555E;
+    text-decoration: none;
 }
 .page-node .flex-control-nav li a:hover {
     background: none repeat scroll 0 0 #5D5D5D;
     box-shadow: 0 1px 1px 0 #333333 inset;
     color: #FFFFFF;
+    text-decoration: none;
 }
 .page-node .flex-direction-nav {
     display: block;
