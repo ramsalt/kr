@@ -315,6 +315,7 @@ function kr2011_preprocess_node(&$vars){
     drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery-noconflict.js');
     drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery.flexslider.js', 'theme', 'header');
     drupal_add_css(drupal_get_path('theme', 'kr2011').'/flex/flexslider.css');
+    drupal_add_css(drupal_get_path('theme', 'kr2011').'/flex/kr-flex.css');
     drupal_add_js('$(window).load(function() {jQuery164(".flexslider").flexslider(); });','inline');
     
     $html = '<div class="flexslider">
