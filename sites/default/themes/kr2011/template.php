@@ -323,7 +323,15 @@ function kr2011_preprocess_node(&$vars){
     $html = '<div class="flexslider">
         <ul class="slides">';
     foreach ($vars['field_galleri_bilde'] as $delta => $item) {
-      $html .= '<li>'.$item['view'].'<p>Bare en test dette her Bare en test dette her Bare en test dette her Bare en test dette her Bare en test dette her Bare en test dette her Bare en test dette her Bare en test dette her Bare en test dette her Bare en test dette her Bare en test dette her Bare en test dette her Bare en test dette her Bare en test dette her </p></li>';
+      $html .= '<li>'.$item['view'];
+      
+      if($vars['field_galleri_desc'][$delta]['safe']){
+        $html .= $vars['field_galleri_desc'][$delta]['safe'];
+      }
+      if($vars['field_galleri_kredit'][$delta]['safe']){
+        $html .= '<p class="kredit">'.$vars['field_galleri_kredit'][$delta]['safe'].'</p>';
+      }
+      $html .='</li>';
     }
     $html .='</ul></div>';
     $vars['content'] = $html;
