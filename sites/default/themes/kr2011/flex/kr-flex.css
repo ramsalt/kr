@@ -2,6 +2,9 @@
   padding: 0px;
   margin: 0px;
 }
+.page-node .flexslider .flex-caption, .flexslider p{
+  font-family: Georgia,Arial,Helvetica;  
+}
 
 .page-node .flexslider .flex-control-nav {
     background: none repeat scroll 0 0 #5D5D5D;
