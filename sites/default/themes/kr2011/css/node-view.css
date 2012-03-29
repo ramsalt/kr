@@ -303,6 +303,7 @@ html.js body.sidebars div#outer-wrapper div#wrapper div#container.clearfix div#c
 .node-type-ordforer .field-items .field-item{
   background: none;
 }
-.node-type-ordforer .field-field-rel-kommune{
-  
+.node-type-ordforer .pane-field-ordf-bilde{
+  float: right;
+  margin-left: 15px;
 }
