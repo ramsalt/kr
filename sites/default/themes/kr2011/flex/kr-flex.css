@@ -1,3 +1,8 @@
+.page-node .flexslider ul.slides li{
+  padding: 0px;
+  margin: 0px;
+}
+
 .page-node .flexslider .flex-control-nav {
     background: none repeat scroll 0 0 #5D5D5D;
     bottom: 0;
