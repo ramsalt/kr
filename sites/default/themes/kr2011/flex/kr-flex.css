@@ -37,28 +37,28 @@
 .page-node .flex-direction-nav {
     display: block;
 }
-.page-node .flex-direction-nav li{
+.page-node .content .flex-direction-nav li{
     margin: 0px;
 }
-.page-node .flex-direction-nav li .next {
+.page-node .content .flex-direction-nav li .next {
     background: url("slider-arrow-right-small.png") no-repeat scroll 0 0 #5D5D5D;
     height: 20px;
     right: 10px;
     width: 20px;
 }
-.page-node .flex-direction-nav li .next:hover {
+.page-node .content .flex-direction-nav li .next:hover {
     background: url("slider-arrow-right-small-active.png") no-repeat scroll 0 0 transparent;
 }
-.page-node .flex-direction-nav li .prev {
+.page-node .content .flex-direction-nav li .prev {
     background: url("slider-arrow-left-small.png") no-repeat scroll 0 0 #5D5D5D;
     height: 20px;
     left: 10px;
     width: 20px;
 }
-.page-node .flex-direction-nav li .prev:hover {
+.page-node .content .flex-direction-nav li .prev:hover {
     background: url("slider-arrow-left-small-active.png") no-repeat scroll 0 0 transparent;
 }
-.page-node .flex-direction-nav li a {
+.page-node .content .flex-direction-nav li a {
     bottom: 13px;
     top: auto;
 }
