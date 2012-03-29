@@ -320,7 +320,7 @@ function kr2011_preprocess_node(&$vars){
     $html = '<div class="flexslider">
         <ul class="slides">';
     foreach ($vars['field_galleri_bilde'] as $delta => $item) {
-      $html .= '<li>'.$item['view'].'<p class="flex-caption"></p></li>';
+      $html .= '<li>'.$item['view'].'<p class="flex-caption">Bare en test dette her</p></li>';
     }
     $html .='</ul></div>';
     $vars['content'] = $html;
