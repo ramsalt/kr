@@ -331,12 +331,12 @@ function kr2011_preprocess_node(&$vars){
     }); 
     
     });','inline');
-    
+    $hidden = '<div class="colorbox-images-container">';
     $html = '<div class="flexslider">
         <ul class="slides">';
     foreach ($vars['field_galleri_bilde'] as $delta => $item) {
-      $html .= '<li class="color'.$vars['nid'].'">';
-      //$html .= '<a class="color'.$vars['nid'].'" href="'.imagecache_create_url('slider_stort', $vars['field_galleri_bilde'][$delta]['filepath']).'" title="'.$vars['field_galleri_desc'][$delta]['safe'].'">';
+      $html .= '<li>';
+      $html .= '<a class="color'.$vars['nid'].'" href="#bilde_'.$vars['nid'].'_'.$delta.'">';
       $html .= $item['view'];
       if($vars['field_galleri_desc'][$delta]['safe'] && $vars['field_galleri_kredit'][$delta]['safe']){
         $html .= '<p>'.$vars['field_galleri_desc'][$delta]['safe'];
@@ -348,9 +348,14 @@ function kr2011_preprocess_node(&$vars){
       }
       //$html .='</a>';
       $html .='</li>';
+
+      $hidden.= '<div id="bilde_'.$vars['nid'].'_'.$delta.'">
+      '.imagecache_create_url('slider_stort', $vars['field_galleri_bilde'][$delta]['filepath']).'
+      </div>';
     }
     $html .='</ul></div>';
-    $vars['content'] = $html;
+    $hidden .='</div>';
+    $vars['content'] = $html. $hidden;
   }
 
 	
