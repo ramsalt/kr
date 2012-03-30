@@ -314,17 +314,22 @@ function kr2011_preprocess_node(&$vars){
     drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery.min.js');
     drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery-noconflict.js');
     drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery.flexslider.js', 'theme', 'header');
+    drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery.colorbox.js', 'theme', 'header');    
     drupal_add_css(drupal_get_path('theme', 'kr2011').'/flex/flexslider.css');
     drupal_add_css(drupal_get_path('theme', 'kr2011').'/flex/kr-flex.css');
-    drupal_add_js('$(window).load(function() {jQuery164(".flexslider").flexslider({
-    slideshow: "false",
-    }); });','inline');
+    drupal_add_js('$(window).load(function() {
+    jQuery164(".flexslider").flexslider({
+      slideshow: "false",
+    });
+    jQuery164(".group3").colorbox({rel:"group3", transition:"none", width:"75%", height:"75%"}); 
+    
+    });','inline');
     
     $html = '<div class="flexslider">
         <ul class="slides">';
     foreach ($vars['field_galleri_bilde'] as $delta => $item) {
       $html .= '<li>'.$item['view'];
-      
+      $html .= '<a class="group3" href="http://kr.dev.ramsalt.com/sites/default/files/stoltenberg2_4.jpg" title="test">';
       if($vars['field_galleri_desc'][$delta]['safe'] && $vars['field_galleri_kredit'][$delta]['safe']){
         $html .= '<p>'.$vars['field_galleri_desc'][$delta]['safe'];
         $html .= '<span class="kredit">'.$vars['field_galleri_kredit'][$delta]['safe'].'</span></p>';
@@ -333,7 +338,7 @@ function kr2011_preprocess_node(&$vars){
       }elseif ($vars['field_galleri_kredit'][$delta]['safe']) {
         $html .= '<p><span class="kredit">'.$vars['field_galleri_kredit'][$delta]['safe'].'</span></p>';
       }
-
+      $html .='</a>';
       $html .='</li>';
     }
     $html .='</ul></div>';
