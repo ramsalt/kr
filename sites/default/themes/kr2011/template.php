@@ -331,7 +331,7 @@ function kr2011_preprocess_node(&$vars){
     }); 
     
     });','inline');
-    $hidden = '<div id="colorbox-images-container">';
+    $hidden = '<div class="colorbox-images-container">';
     $html = '<div class="flexslider">
         <ul class="slides">';
     foreach ($vars['field_galleri_bilde'] as $delta => $item) {
@@ -346,7 +346,7 @@ function kr2011_preprocess_node(&$vars){
       }elseif ($vars['field_galleri_kredit'][$delta]['safe']) {
         $html .= '<p><span class="kredit">'.$vars['field_galleri_kredit'][$delta]['safe'].'</span></p>';
       }
-      //$html .='</a>';
+      $html .='</a>';
       $html .='</li>';
 
       $hidden.= '<div id="bilde_'.$vars['nid'].'_'.$delta.'">
