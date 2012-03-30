@@ -322,7 +322,7 @@ function kr2011_preprocess_node(&$vars){
     jQuery164(".flexslider").flexslider({
       slideshow: "false",
     });
-    jQuery164("color'.$vars['nid'].'").colorbox({
+    jQuery164(".color'.$vars['nid'].'").colorbox({
     rel:"color", 
     transition:"none", 
     width:"75%", 
@@ -331,7 +331,7 @@ function kr2011_preprocess_node(&$vars){
     }); 
     
     });','inline');
-    $hidden = '<div class="colorbox-images-container">';
+    $hidden = '<div id="colorbox-images-container">';
     $html = '<div class="flexslider">
         <ul class="slides">';
     foreach ($vars['field_galleri_bilde'] as $delta => $item) {
@@ -350,7 +350,8 @@ function kr2011_preprocess_node(&$vars){
       $html .='</li>';
 
       $hidden.= '<div id="bilde_'.$vars['nid'].'_'.$delta.'">
-      '.imagecache_create_url('slider_stort', $vars['field_galleri_bilde'][$delta]['filepath']).'
+      '.theme_imagecache('slider_stort', $vars['field_galleri_bilde'][$delta]['filepath']).'
+      <div class="caption">'.$vars['field_galleri_desc'][$delta]['safe'].'</div>
       </div>';
     }
     $html .='</ul></div>';
