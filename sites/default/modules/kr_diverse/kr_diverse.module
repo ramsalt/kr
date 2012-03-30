@@ -35,7 +35,55 @@ function kr_diverse_block($op = 'list', $delta = 0, $edit = array()) {
   }
 }
 function _kr_bildegalleri(){
-
+  $nid = arg(1);
+  $node = node_load(array('nid' => $nid));
+  if($node->field_rel_bildegalleri[0]['nid']>1){
+      drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery.min.js');
+      drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery-noconflict.js');
+      drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery.flexslider.js', 'theme', 'header');
+      drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery.colorbox.js', 'theme', 'header');    
+      drupal_add_css(drupal_get_path('theme', 'kr2011').'/flex/flexslider.css');
+      drupal_add_css(drupal_get_path('theme', 'kr2011').'/flex/kr-flex.css');
+      drupal_add_css(drupal_get_path('theme', 'kr2011').'/flex/colorbox.css');
+      drupal_add_js('$(window).load(function() {
+      jQuery164(".flexslider").flexslider({
+        slideshow: "false",
+      });
+      jQuery164(".color'.$vars['nid'].'").colorbox({
+      rel:"color", 
+      transition:"fade",
+      inline:true
+      }); 
+      
+      });','inline');
+      $hidden = '<div class="colorbox-images-container">';
+      $html = '<div class="flexslider">
+          <ul class="slides">';
+      foreach ($node->field_galleri_bilde as $delta => $item) {
+        $html .= '<li>';
+        $html .= '<a class="color'.$vars['nid'].'" href="#bilde_'.$nid.'_'.$delta.'">';
+        $html .= $item['view'];
+        if($node->field_galleri_desc[$delta]['safe'] && $node->field_galleri_kredit[$delta]['safe']){
+          $html .= '<p>'.$node->field_galleri_desc[$delta]['safe'];
+          $html .= '<span class="kredit">'.$node->field_galleri_kredit[$delta]['safe'].'</span></p>';
+        }elseif($node->field_galleri_desc[$delta]['safe']){
+          $html .= '<p>'.$node->field_galleri_desc[$delta]['safe'].'</p>';
+        }elseif ($node->field_galleri_kredit[$delta]['safe']) {
+          $html .= '<p><span class="kredit">'.$node->field_galleri_kredit[$delta]['safe'].'</span></p>';
+        }
+        $html .='</a>';
+        $html .='</li>';
+        $image = image_get_info(imagecache_create_path('slider_stort', $node->field_galleri_bilde[$delta]['filepath']));
+  
+        $hidden.= '<div id="bilde_'.$nid.'_'.$delta.'">
+        '.theme_imagecache('slider_stort', $node->field_galleri_bilde[$delta]['filepath']).'
+        <div class="caption" style="width: '.$image['width'].'px;">'.$node->field_galleri_desc[$delta]['safe'].'</div>
+        </div>';
+      }
+      $html .='</ul></div>';
+      $hidden .='</div>';
+      return = $html. $hidden;
+  }
 }
 function _kr_div_addthis(){
   if(arg(2) == 'edit' || arg(1) =='add'){
