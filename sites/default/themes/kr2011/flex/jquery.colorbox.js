@@ -885,4 +885,4 @@
 
 	publicMethod.settings = defaults;
 
-}(jQuery, document, this));
+}(jQuery164, document, this));
