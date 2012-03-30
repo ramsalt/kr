@@ -329,8 +329,9 @@ function kr2011_preprocess_node(&$vars){
     $html = '<div class="flexslider">
         <ul class="slides">';
     foreach ($vars['field_galleri_bilde'] as $delta => $item) {
-      $html .= '<li>'.$item['view'];
+      $html .= '<li>';
       $html .= '<a class="group3" href="http://kr.dev.ramsalt.com/sites/default/files/stoltenberg2_4.jpg" title="test">';
+      $html .= $item['view'];
       if($vars['field_galleri_desc'][$delta]['safe'] && $vars['field_galleri_kredit'][$delta]['safe']){
         $html .= '<p>'.$vars['field_galleri_desc'][$delta]['safe'];
         $html .= '<span class="kredit">'.$vars['field_galleri_kredit'][$delta]['safe'].'</span></p>';
