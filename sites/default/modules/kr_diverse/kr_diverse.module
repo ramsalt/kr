@@ -39,7 +39,7 @@ function _kr_bildegalleri(){
   $node_artikkel = node_load(array('nid' => $nid));
   if($node_artikkel->field_rel_bildegalleri[0]['nid']>1){
     $node = node_load(array('nid' => $node_artikkel->field_rel_bildegalleri[0]['nid']));
-    dsm($node);
+    if($node->status == 1){
       drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery.min.js');
       drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery-noconflict.js');
       drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery.flexslider.js', 'theme', 'header');
@@ -85,6 +85,7 @@ function _kr_bildegalleri(){
       $html .='</ul></div>';
       $hidden .='</div>';
       return $html. $hidden;
+    }
   }
 }
 function _kr_div_addthis(){
