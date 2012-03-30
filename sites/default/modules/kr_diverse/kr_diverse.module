@@ -36,8 +36,9 @@ function kr_diverse_block($op = 'list', $delta = 0, $edit = array()) {
 }
 function _kr_bildegalleri(){
   $nid = arg(1);
-  $node = node_load(array('nid' => $nid));
-  if($node->field_rel_bildegalleri[0]['nid']>1){
+  $node_artikkel = node_load(array('nid' => $nid));
+  if($node_artikkel->field_rel_bildegalleri[0]['nid']>1){
+    $node = node_load(array('nid' => $node_artikkel->field_rel_bildegalleri[0]['nid']));
       drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery.min.js');
       drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery-noconflict.js');
       drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery.flexslider.js', 'theme', 'header');
