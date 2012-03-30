@@ -15,6 +15,10 @@
 .colorbox-images-container{
   display: none;
 }
+.caption{
+  font-family: Georgia,Arial,Helvetica;
+  font-size: 14px;
+}
 
 /* 
     User Style:
