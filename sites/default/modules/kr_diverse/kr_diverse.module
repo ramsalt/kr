@@ -64,7 +64,7 @@ function _kr_bildegalleri(){
       foreach ($node->field_galleri_bilde as $delta => $item) {
         $html .= '<li>';
         $html .= '<a class="color'.$vars['nid'].'" href="#bilde_'.$nid.'_'.$delta.'">';
-        $html .= '.theme_imagecache('article_stor_slideshow', $node->field_galleri_bilde[$delta]['filepath']).';
+        $html .= theme_imagecache('article_stor_slideshow', $node->field_galleri_bilde[$delta]['filepath']);
         if($node->field_galleri_desc[$delta]['value'] && $node->field_galleri_kredit[$delta]['value']){
           $html .= '<p>'.$node->field_galleri_desc[$delta]['value'];
           $html .= '<span class="kredit">'.$node->field_galleri_kredit[$delta]['value'].'</span></p>';
