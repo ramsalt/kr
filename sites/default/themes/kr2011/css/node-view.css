@@ -310,3 +310,15 @@ html.js body.sidebars div#outer-wrapper div#wrapper div#container.clearfix div#c
   float: right;
   margin-left: 15px;
 }
+.view-Bildegalleri .views-view-grid td{
+  width: 33%;
+  border: 1px solid #DBDBDB;
+  padding: 4px;
+}
+.view-Bildegalleri .views-view-grid .views-field-title a{
+   font-family: Georgia,"Times New Roman",Times,serif;
+   font-size: 16px;
+}
+.view-Bildegalleri .views-field-field-galleri-bilde-fid .field-item{
+  float:  left;
+}
