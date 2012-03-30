@@ -326,7 +326,8 @@ function kr2011_preprocess_node(&$vars){
     rel:"color", 
     transition:"none", 
     width:"75%", 
-    height:"75%"
+    height:"75%",
+    inline:true
     }); 
     
     });','inline');
