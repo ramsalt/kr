@@ -75,7 +75,6 @@ function bildegalleri_strongarm() {
   $strongarm->value = array(
     'workflow' => '0',
     'title' => '-5',
-    'body_field' => '-1',
     'revision_information' => '1',
     'author' => '2',
     'options' => '3',

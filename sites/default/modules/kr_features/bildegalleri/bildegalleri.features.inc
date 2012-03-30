@@ -11,6 +11,30 @@ function bildegalleri_ctools_plugin_api() {
 }
 
 /**
+ * Implementation of hook_imagecache_default_presets().
+ */
+function bildegalleri_imagecache_default_presets() {
+  $items = array(
+    'slider_stort' => array(
+      'presetname' => 'slider_stort',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '1200',
+            'height' => '1200',
+            'upscale' => 0,
+          ),
+        ),
+      ),
+    ),
+  );
+  return $items;
+}
+
+/**
  * Implementation of hook_node_info().
  */
 function bildegalleri_node_info() {
@@ -21,8 +45,8 @@ function bildegalleri_node_info() {
       'description' => '',
       'has_title' => '1',
       'title_label' => t('Tittel'),
-      'has_body' => '1',
-      'body_label' => t('Beskrivelse'),
+      'has_body' => '0',
+      'body_label' => '',
       'min_word_count' => '0',
       'help' => '',
     ),
