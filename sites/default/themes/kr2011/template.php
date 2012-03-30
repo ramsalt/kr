@@ -330,7 +330,7 @@ function kr2011_preprocess_node(&$vars){
         <ul class="slides">';
     foreach ($vars['field_galleri_bilde'] as $delta => $item) {
       $html .= '<li>';
-      $html .= '<a class="group3" href="'.theme_imagecache('slider_stort', $vars['field_galleri_bilde'][$delta]['filepath']).'" title="'.$vars['field_galleri_desc'][$delta]['safe'].'">';
+      $html .= '<a class="group3" href="'.imagecache_create_url('slider_stort', $vars['field_galleri_bilde'][$delta]['filepath']).'" title="'.$vars['field_galleri_desc'][$delta]['safe'].'">';
       $html .= $item['view'];
       if($vars['field_galleri_desc'][$delta]['safe'] && $vars['field_galleri_kredit'][$delta]['safe']){
         $html .= '<p>'.$vars['field_galleri_desc'][$delta]['safe'];
