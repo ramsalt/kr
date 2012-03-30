@@ -64,14 +64,14 @@ function _kr_bildegalleri(){
       foreach ($node->field_galleri_bilde as $delta => $item) {
         $html .= '<li>';
         $html .= '<a class="color'.$vars['nid'].'" href="#bilde_'.$nid.'_'.$delta.'">';
-        $html .= $item['view'];
-        if($node->field_galleri_desc[$delta]['safe'] && $node->field_galleri_kredit[$delta]['safe']){
-          $html .= '<p>'.$node->field_galleri_desc[$delta]['safe'];
-          $html .= '<span class="kredit">'.$node->field_galleri_kredit[$delta]['safe'].'</span></p>';
-        }elseif($node->field_galleri_desc[$delta]['safe']){
-          $html .= '<p>'.$node->field_galleri_desc[$delta]['safe'].'</p>';
-        }elseif ($node->field_galleri_kredit[$delta]['safe']) {
-          $html .= '<p><span class="kredit">'.$node->field_galleri_kredit[$delta]['safe'].'</span></p>';
+        $html .= '.theme_imagecache('article_stor_slideshow', $node->field_galleri_bilde[$delta]['filepath']).';
+        if($node->field_galleri_desc[$delta]['value'] && $node->field_galleri_kredit[$delta]['value']){
+          $html .= '<p>'.$node->field_galleri_desc[$delta]['value'];
+          $html .= '<span class="kredit">'.$node->field_galleri_kredit[$delta]['value'].'</span></p>';
+        }elseif($node->field_galleri_desc[$delta]['value']){
+          $html .= '<p>'.$node->field_galleri_desc[$delta]['value'].'</p>';
+        }elseif ($node->field_galleri_kredit[$delta]['value']) {
+          $html .= '<p><span class="kredit">'.$node->field_galleri_kredit[$delta]['value'].'</span></p>';
         }
         $html .='</a>';
         $html .='</li>';
@@ -79,7 +79,7 @@ function _kr_bildegalleri(){
   
         $hidden.= '<div id="bilde_'.$nid.'_'.$delta.'">
         '.theme_imagecache('slider_stort', $node->field_galleri_bilde[$delta]['filepath']).'
-        <div class="caption" style="width: '.$image['width'].'px;">'.$node->field_galleri_desc[$delta]['safe'].'</div>
+        <div class="caption" style="width: '.$image['width'].'px;">'.$node->field_galleri_desc[$delta]['value'].'</div>
         </div>';
       }
       $html .='</ul></div>';
