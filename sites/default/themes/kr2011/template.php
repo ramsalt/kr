@@ -322,15 +322,20 @@ function kr2011_preprocess_node(&$vars){
     jQuery164(".flexslider").flexslider({
       slideshow: "false",
     });
-    jQuery164(".group3").colorbox({rel:"group3", transition:"none", width:"75%", height:"75%"}); 
+    jQuery164("color'.$vars['nid'].'").colorbox({
+    rel:"color", 
+    transition:"none", 
+    width:"75%", 
+    height:"75%"
+    }); 
     
     });','inline');
     
     $html = '<div class="flexslider">
         <ul class="slides">';
     foreach ($vars['field_galleri_bilde'] as $delta => $item) {
-      $html .= '<li>';
-      $html .= '<a class="group3" href="'.imagecache_create_url('slider_stort', $vars['field_galleri_bilde'][$delta]['filepath']).'" title="'.$vars['field_galleri_desc'][$delta]['safe'].'">';
+      $html .= '<li class="color'.$vars['nid'].'">';
+      //$html .= '<a class="color'.$vars['nid'].'" href="'.imagecache_create_url('slider_stort', $vars['field_galleri_bilde'][$delta]['filepath']).'" title="'.$vars['field_galleri_desc'][$delta]['safe'].'">';
       $html .= $item['view'];
       if($vars['field_galleri_desc'][$delta]['safe'] && $vars['field_galleri_kredit'][$delta]['safe']){
         $html .= '<p>'.$vars['field_galleri_desc'][$delta]['safe'];
@@ -340,7 +345,7 @@ function kr2011_preprocess_node(&$vars){
       }elseif ($vars['field_galleri_kredit'][$delta]['safe']) {
         $html .= '<p><span class="kredit">'.$vars['field_galleri_kredit'][$delta]['safe'].'</span></p>';
       }
-      $html .='</a>';
+      //$html .='</a>';
       $html .='</li>';
     }
     $html .='</ul></div>';
