@@ -318,7 +318,7 @@ body.sidebars.page-bildegalleri #sidebar-left{
   padding: 0;
   width: 0;
 }
-.view-Bildegalleri .view-content .item-list li {
+.galleriside .view-content .item-list li {
   float: left;
   margin: 0px 4px 8px 0px;
   padding: 0;
@@ -326,17 +326,17 @@ body.sidebars.page-bildegalleri #sidebar-left{
   height: 170px;
   position: relative;
 }
-.view-Bildegalleri .views-field-created{
+.galleriside .views-field-created{
   background: none repeat scroll 0 0 #111111;
   position: absolute;
   right: 0;
   top: 0;
   z-index: 600;
 }
-.view-Bildegalleri .views-field-created .field-content{
+.galleriside .views-field-created .field-content{
   color: #EEEEEE; 
 }
-.view-Bildegalleri .views-field-title{
+.galleriside .views-field-title{
   background: none repeat scroll 0 0 #111111;
   bottom: 0;
   color: #EEEEEE;
@@ -348,11 +348,11 @@ body.sidebars.page-bildegalleri #sidebar-left{
   z-index: 300;
   text-decoration: none;
 }
-.view-Bildegalleri .views-field-title a{
+.galleriside .views-field-title a{
   color: #EEEEEE;
   
 }
-.view-Bildegalleri .views-field-field-galleri-bilde-fid a{
+.galleriside .views-field-field-galleri-bilde-fid a{
   bottom: 0;
   left: 0;
   position: absolute;
@@ -360,7 +360,7 @@ body.sidebars.page-bildegalleri #sidebar-left{
   text-align: center;
   top: 0;
 }
-.view-Bildegalleri .views-field-field-galleri-bilde-fid a img{
+.galleriside .views-field-field-galleri-bilde-fid a img{
   padding: 0px;
   margin: 0px;
 }
