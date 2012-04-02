@@ -27,14 +27,14 @@ function kr_diverse_block($op = 'list', $delta = 0, $edit = array()) {
         // Your module will need to define this function to render the block.
         $block = array(
           'subject' => '', 
-          'content' => _kr_bildegalleri(),
+          'content' => _kr_bildegalleriet(),
         );
         break;
     }
     return $block;
   }
 }
-function _kr_bildegalleri(){
+function _kr_bildegalleriet(){
   $nid = arg(1);
   $node_artikkel = node_load(array('nid' => $nid));
   if($node_artikkel->field_rel_bildegalleri[0]['nid']>1){
