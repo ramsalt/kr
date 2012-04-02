@@ -311,10 +311,12 @@ html.js body.sidebars div#outer-wrapper div#wrapper div#container.clearfix div#c
   margin-left: 15px;
 }
 body.sidebars.page-bildegalleri #center{
-  
+  width: 760px;
 }
 body.sidebars.page-bildegalleri #sidebar-left{
-  
+  display: none;
+  padding: 0;
+  width: 0;
 }
 .view-Bildegalleri .view-content .item-list li {
   float: left;
@@ -332,7 +334,7 @@ body.sidebars.page-bildegalleri #sidebar-left{
   z-index: 600;
 }
 .view-Bildegalleri .views-field-created .field-content{
-  
+  color: #EEEEEE; 
 }
 .view-Bildegalleri .views-field-title{
   background: none repeat scroll 0 0 #111111;
