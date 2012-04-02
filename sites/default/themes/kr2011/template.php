@@ -405,7 +405,7 @@ function _kr_bildegalleri(){
       }
       $html .='</ul></div>';
       $hidden .='</div>';
-      return = $html. $hidden;
+      return $html. $hidden;
   }
 }
 	
