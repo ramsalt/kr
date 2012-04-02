@@ -314,6 +314,13 @@ html.js body.sidebars div#outer-wrapper div#wrapper div#container.clearfix div#c
   width: 33%;
   padding: 4px;
 }
+.view-Bildegalleri .view-content .item-list li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 193px;
+    position: relative;
+}
 .view-Bildegalleri .views-field-created{
   
 }
