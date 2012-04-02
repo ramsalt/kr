@@ -310,7 +310,12 @@ html.js body.sidebars div#outer-wrapper div#wrapper div#container.clearfix div#c
   float: right;
   margin-left: 15px;
 }
-
+body.sidebars.page-bildegalleri #center{
+  
+}
+body.sidebars.page-bildegalleri #sidebar-left{
+  
+}
 .view-Bildegalleri .view-content .item-list li {
   float: left;
   margin: 0px 4px 8px 0px;
