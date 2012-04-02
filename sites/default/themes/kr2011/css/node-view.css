@@ -325,13 +325,16 @@ html.js body.sidebars div#outer-wrapper div#wrapper div#container.clearfix div#c
   background: none repeat scroll 0 0 #111111;
   bottom: 0;
   color: #EEEEEE;
-
   left: 0;
   opacity: 0.8;
   padding: 1em;
   position: absolute;
   right: 0;
+  z-index: 300;
   text-decoration: none;
+}
+.view-Bildegalleri .views-field-title a{
+  color: #EEEEEE;  
 }
 .view-Bildegalleri .views-field-field-galleri-bilde-fid a{
   bottom: 0;
