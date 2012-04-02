@@ -310,10 +310,7 @@ html.js body.sidebars div#outer-wrapper div#wrapper div#container.clearfix div#c
   float: right;
   margin-left: 15px;
 }
-.view-Bildegalleri .views-view-grid td{
-  width: 33%;
-  padding: 4px;
-}
+
 .view-Bildegalleri .view-content .item-list li {
     float: left;
     margin: 0;
@@ -325,18 +322,30 @@ html.js body.sidebars div#outer-wrapper div#wrapper div#container.clearfix div#c
   
 }
 .view-Bildegalleri .views-field-title{
-  
+  background: none repeat scroll 0 0 #111111;
+  bottom: 0;
+  color: #EEEEEE;
+
+  left: 0;
+  opacity: 0.8;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  text-decoration: none;
 }
-.view-Bildegalleri .views-field-field-galleri-bilde-fid{
-  
+.view-Bildegalleri .views-field-field-galleri-bilde-fid a{
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
 }
-.view-Bildegalleri .views-view-grid .views-field-title a{
-   font-family: Georgia,"Times New Roman",Times,serif;
-   font-size: 16px;
+.view-Bildegalleri .views-field-field-galleri-bilde-fid a img{
+  padding: 0px;
+  margin: 0px;
 }
-.view-Bildegalleri .views-field-field-galleri-bilde-fid .field-item{
-  float:  left;
-}
+
 
 .node-type-bildegalleri .block .item-list li.views-row{
   padding: 6px 10px 10px;
