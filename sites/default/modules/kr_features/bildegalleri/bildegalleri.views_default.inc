@@ -160,6 +160,43 @@ function bildegalleri_views_default_views() {
   $handler->override_option('use_more_text', 'flere bilder');
   $handler = $view->new_display('page', 'Galleri', 'page_1');
   $handler->override_option('fields', array(
+    'created' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'date_format' => 'custom',
+      'custom_date_format' => 'd.m.Y',
+      'exclude' => 0,
+      'id' => 'created',
+      'table' => 'node',
+      'field' => 'created',
+      'override' => array(
+        'button' => 'Bruk standard',
+      ),
+      'relationship' => 'none',
+    ),
     'title' => array(
       'label' => '',
       'alter' => array(
@@ -227,7 +264,7 @@ function bildegalleri_views_default_views() {
       'format' => 'galleri_thumb_linked',
       'multiple' => array(
         'group' => 1,
-        'multiple_number' => '2',
+        'multiple_number' => '1',
         'multiple_from' => '0',
         'multiple_reversed' => 0,
       ),
@@ -241,13 +278,11 @@ function bildegalleri_views_default_views() {
       ),
     ),
   ));
-  $handler->override_option('style_plugin', 'grid');
+  $handler->override_option('css_class', 'galleriside');
+  $handler->override_option('style_plugin', 'list');
   $handler->override_option('style_options', array(
     'grouping' => '',
-    'columns' => '3',
-    'alignment' => 'horizontal',
-    'fill_single_line' => 1,
-    'summary' => '',
+    'type' => 'ul',
   ));
   $handler->override_option('path', 'bildegalleri');
   $handler->override_option('menu', array(
