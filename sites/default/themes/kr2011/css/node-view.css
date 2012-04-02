@@ -322,3 +322,10 @@ html.js body.sidebars div#outer-wrapper div#wrapper div#container.clearfix div#c
 .view-Bildegalleri .views-field-field-galleri-bilde-fid .field-item{
   float:  left;
 }
+
+.node-type-bildegalleri .block .item-list li.views-row{
+  padding: 6px 10px 10px;
+}
+.node-type-bildegalleri .block .item-list li.views-row.views-row-last{
+  border-bottom: none;
+}
