@@ -101,6 +101,7 @@ padding: 1em;
 .galleriforside .more-link{
   float: left;
   width: 100%;
+  margin: 5px -8px;
 }
 .galleriforside .more-link a{
   background: url("../images/spirite1.png") no-repeat scroll 100% -40px transparent;
