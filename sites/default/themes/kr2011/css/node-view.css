@@ -312,7 +312,6 @@ html.js body.sidebars div#outer-wrapper div#wrapper div#container.clearfix div#c
 }
 .view-Bildegalleri .views-view-grid td{
   width: 33%;
-  border: 1px solid #DBDBDB;
   padding: 4px;
 }
 .view-Bildegalleri .views-view-grid .views-field-title a{
