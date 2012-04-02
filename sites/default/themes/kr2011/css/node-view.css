@@ -312,14 +312,21 @@ html.js body.sidebars div#outer-wrapper div#wrapper div#container.clearfix div#c
 }
 
 .view-Bildegalleri .view-content .item-list li {
-    float: left;
-    margin: 0px 4px 8px;
-    padding: 0;
-    width: 184px;
-    height: 140px;
-    position: relative;
+  float: left;
+  margin: 0px 4px 8px;
+  padding: 0;
+  width: 184px;
+  height: 140px;
+  position: relative;
 }
 .view-Bildegalleri .views-field-created{
+  background: none repeat scroll 0 0 #111111;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 600;
+}
+.view-Bildegalleri .views-field-created .field-content{
   
 }
 .view-Bildegalleri .views-field-title{
@@ -335,7 +342,8 @@ html.js body.sidebars div#outer-wrapper div#wrapper div#container.clearfix div#c
   text-decoration: none;
 }
 .view-Bildegalleri .views-field-title a{
-  color: #EEEEEE;  
+  color: #EEEEEE;
+  
 }
 .view-Bildegalleri .views-field-field-galleri-bilde-fid a{
   bottom: 0;
