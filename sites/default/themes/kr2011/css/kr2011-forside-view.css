@@ -324,3 +324,6 @@ body a.edit-forsiderekkefolge {
 #block-views-Bildegalleri-block_1 .views-row{
   width: 556px;
 }
+#block-views-Bildegalleri-block_1 .views-row .views-field-field-galleri-bilde-fid-1 img{
+  margin: 0px;
+}
