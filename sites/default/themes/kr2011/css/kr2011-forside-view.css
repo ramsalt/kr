@@ -319,4 +319,5 @@ body a.edit-forsiderekkefolge {
 }
 #block-views-Bildegalleri-block_1{
   width: 580px;
+  overflow: hidden;
 }
