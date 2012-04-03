@@ -329,10 +329,13 @@ function kr2011_preprocess_node(&$vars){
     width:"75%", 
     height:"75%"
     });
-jQuery164(".c-image").each(function(index, item) {
-  console.log(index);
-});
-    
+    jQuery164(document).bind("cbox_complete", function(){
+      max_width = jQuery164("#cboxLoadedContent").width();
+      max_width = max_width - 20;
+      jQuery164(".cimage img").attr("width", max_width+"px");
+      jQuery164(".cimage .caption").width(max_width+"px");
+    });
+
     });','inline');
     $hidden = '<div class="colorbox-images-container">';
     $html = '<div class="flexslider">
