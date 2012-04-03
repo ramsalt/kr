@@ -37,6 +37,7 @@
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0 1px 0 0 #757575;
     margin: 0px 0px 10px 5px;
+    height: 21px;
 }
 .page-node .flex-control-nav li a {
     background: none repeat scroll 0 0 #252525;
@@ -44,7 +45,7 @@
     box-shadow: 0 1px 1px 0 #000000 inset;
     color: #FFFFFF;
     font-size: 12px;
-    height: auto;
+    height: 13px;
     padding: 4px 0;
     text-indent: 0;
     width: 25px;
