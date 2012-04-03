@@ -331,9 +331,7 @@ function kr2011_preprocess_node(&$vars){
 maxWidth: "90%",
 maxHeight: "90%",
 fixed: "true",
-top: "5%",
-left: "auto",
-right: "auto"
+top: "5%"
 
 
       });
