@@ -18,6 +18,72 @@ function bildegalleri_ctools_plugin_api() {
  */
 function bildegalleri_imagecache_default_presets() {
   $items = array(
+    'forside_galleri_liten' => array(
+      'presetname' => 'forside_galleri_liten',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale_and_crop',
+          'data' => array(
+            'width' => '122',
+            'height' => '74',
+          ),
+        ),
+      ),
+    ),
+    'forside_galleri_stor' => array(
+      'presetname' => 'forside_galleri_stor',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '435',
+            'height' => '',
+            'upscale' => 0,
+          ),
+        ),
+        '1' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_crop',
+          'data' => array(
+            'width' => '390',
+            'height' => '232',
+            'xoffset' => 'center',
+            'yoffset' => 'center',
+          ),
+        ),
+      ),
+    ),
+    'galleri_thumb' => array(
+      'presetname' => 'galleri_thumb',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '260',
+            'height' => '180',
+            'upscale' => 1,
+          ),
+        ),
+        '1' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_crop',
+          'data' => array(
+            'width' => '245',
+            'height' => '170',
+            'xoffset' => 'center',
+            'yoffset' => 'center',
+          ),
+        ),
+      ),
+    ),
     'slider_stort' => array(
       'presetname' => 'slider_stort',
       'actions' => array(

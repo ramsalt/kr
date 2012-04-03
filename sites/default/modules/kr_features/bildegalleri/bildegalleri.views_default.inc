@@ -412,7 +412,7 @@ function bildegalleri_views_default_views() {
       'format' => 'forside_galleri_liten_linked',
       'multiple' => array(
         'group' => 1,
-        'multiple_number' => '4',
+        'multiple_number' => '3',
         'multiple_from' => '1',
         'multiple_reversed' => 0,
       ),
