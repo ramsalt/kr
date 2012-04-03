@@ -52,19 +52,30 @@ function _kr_bildegalleriet(){
         slideshow: "false",
       });
       jQuery164(".color'.$vars['nid'].'").colorbox({
-      rel:"color", 
-      transition:"fade",
-      inline:true,
-      width:"75%", 
-      height:"75%"
+        rel:"color", 
+        transition:"fade",
+        inline:true,
+        width:"75%", 
+        height:"75%"
       }); 
+      
       jQuery164(document).bind("cbox_complete", function(){
         max_width = jQuery164("#cboxLoadedContent").width();
         max_width = max_width - 20;
-        jQuery164(".cimage img").attr("width", max_width+"px");
-        jQuery164(".cimage img").attr("height", "");
-        jQuery164(".cimage .caption").width(max_width+"px");
+        max_height = jQuery164("#cboxLoadedContent").height();
+        max_height = max_height - jQuery164(".cimage .caption").height() - 20;
+        
+        jQuery164("#cboxLoadedContent .cimage img").attr("width", max_width+"px");
+        jQuery164("#cboxLoadedContent .cimage img").attr("height", "");
+        jQuery164("#cboxLoadedContent .cimage .caption").width(max_width+"px");
+        
+        if(jQuery164("#cboxLoadedContent .cimage img").height()>max_height){
+          jQuery164("#cboxLoadedContent .cimage img").attr("width", "");
+          jQuery164("#cboxLoadedContent .cimage img").attr("height", max_height+"px");
+        }
+        
       });
+      
       });','inline');
       $hidden = '<div class="colorbox-images-container">';
       $html = '<div class="flexslider">
