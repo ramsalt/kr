@@ -321,7 +321,7 @@ function kr2011_preprocess_node(&$vars){
     drupal_add_js('
     jQuery164(window).load(function() {
       jQuery164(".flexslider").flexslider({
-        slideshow: "false",
+        slideshow: "false"
       });
       jQuery164(".color'.$vars['nid'].'").colorbox({
         rel:"color", 
