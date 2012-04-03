@@ -335,6 +335,8 @@ function kr2011_preprocess_node(&$vars){
         height:"90%"
       });
       jQuery164(document).bind("cbox_complete", function(){
+        jQuery164("#header").css("width","0px");
+        jQuery164("#header").css("height","0px");
         jQuery164("#header").css("display","none");
         jQuery164("#colorbox").css("overflow","visible");
         
