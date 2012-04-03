@@ -333,7 +333,7 @@ maxHeight: "90%"
 
       });
       jQuery164(document).bind("cbox_complete", function(){
-
+        
         jQuery164("#header").css("width","0px");
         jQuery164("#header").css("height","0px");
         jQuery164("#header").css("display","none");
@@ -348,7 +348,7 @@ maxHeight: "90%"
         jQuery164("#cboxLoadedContent .cimage img").height("auto");
         jQuery164("#cboxLoadedContent .cimage img").attr("height","auto");
         jQuery164.colorbox.resize()
-      
+        jQuery164("#colorbox").css("overflow","visible");
     });
 
     });','inline');
