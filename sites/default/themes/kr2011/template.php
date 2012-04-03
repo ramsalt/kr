@@ -327,8 +327,10 @@ function kr2011_preprocess_node(&$vars){
         rel:"color", 
         transition:"fade",
         inline:true,
-        width:"75%", 
-        height:"75%"
+        width:"90%", 
+        innerWidth: "80%",
+        innerHeight: "80%",
+        height:"90%"
       });
       jQuery164(document).bind("cbox_complete", function(){
         max_width = jQuery164("#cboxLoadedContent").width();
