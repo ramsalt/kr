@@ -328,8 +328,10 @@ function kr2011_preprocess_node(&$vars){
         transition:"fade",
         inline:true,
         width:"90%", 
-        innerWidth: "80%",
-        innerHeight: "80%",
+        innerWidth: "85%",
+        innerHeight: "85%",
+        maxWidth: "80%",
+        maxHeight: "80%",
         height:"90%"
       });
       jQuery164(document).bind("cbox_complete", function(){
