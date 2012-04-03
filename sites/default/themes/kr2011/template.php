@@ -327,12 +327,8 @@ function kr2011_preprocess_node(&$vars){
         rel:"color", 
         transition:"fade",
         inline:true,
-        width:"90%", 
-        innerWidth: "85%",
-        innerHeight: "85%",
-        maxWidth: "80%",
-        maxHeight: "80%",
-        height:"90%"
+        scalePhotos, "true",
+
       });
       jQuery164(document).bind("cbox_complete", function(){
         jQuery164("#header").css("width","0px");
