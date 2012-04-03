@@ -336,6 +336,8 @@ function kr2011_preprocess_node(&$vars){
       });
       jQuery164(document).bind("cbox_complete", function(){
         jQuery164("#header").css("display","none");
+        jQuery164("#colorbox").css("overflow","visible");
+        
         max_width = jQuery164("#cboxLoadedContent").width();
         max_width = max_width - 20;
         max_height = jQuery164("#cboxLoadedContent").height();
