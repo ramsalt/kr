@@ -100,3 +100,6 @@
 .flexslider ul {
     padding: 0;
 }
+.node .caption{
+  float: left;
+}

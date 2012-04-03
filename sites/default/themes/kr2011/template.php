@@ -348,13 +348,13 @@ maxHeight: "90%"
         jQuery164("#cboxLoadedContent .cimage img").attr("width", max_width+"px");
         jQuery164("#cboxLoadedContent .cimage img").width(max_width+"px");
         jQuery164("#cboxLoadedContent .cimage img").attr("height", "");
-        jQuery164("#cboxLoadedContent .cimage .caption").width(max_width+"px");
+
         
         if(jQuery164("#cboxLoadedContent .cimage img").height()>max_height){
           jQuery164("#cboxLoadedContent .cimage img").attr("width", "");
           jQuery164("#cboxLoadedContent .cimage img").width("");
           jQuery164("#cboxLoadedContent .cimage img").attr("height", max_height+"px");
-          jQuery164("#cboxLoadedContent .cimage img").height(max_height+"px");
+
         }
       
     });
