@@ -352,7 +352,7 @@ function kr2011_preprocess_node(&$vars){
 
       $hidden.= '<div id="bilde_'.$vars['nid'].'_'.$delta.'">
       '.theme_imagecache('slider_stort', $vars['field_galleri_bilde'][$delta]['filepath']).'
-      <img src="'.imagecache_create_path('slider_stort', $node->field_galleri_bilde[$delta]['filepath']).'">
+      <img src="'.imagecache_create_path('slider_stort', $vars['field_galleri_bilde'][$delta]['filepath']).'">
       <div class="caption" style="width: '.$image['width'].'px;">'.$vars['field_galleri_desc'][$delta]['safe'].'</div>
       </div>';
     }
