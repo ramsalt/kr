@@ -373,7 +373,7 @@ top: "5%"
           jQuery164("#cboxLoadedContent .cimage img").attr("height", "");
 
         }
-        wrap_width=jQuery164("#cboxLoadedContent .cimage").width();
+        wrap_width=jQuery164("#cboxLoadedContent .cimage").width()+28;
         jQuery164.colorbox.resize({width: wrap_width});
         jQuery164("#colorbox").css("overflow","visible");
     });
