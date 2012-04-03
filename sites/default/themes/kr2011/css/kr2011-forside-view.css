@@ -327,10 +327,12 @@ body a.edit-forsiderekkefolge {
 #block-views-Bildegalleri-block_1 .views-field-field-galleri-bilde-fid{
   width: 420px;
   float: left;
+  overflow: hidden;
 }
 #block-views-Bildegalleri-block_1 .views-field-field-galleri-bilde-fid-1{
   float: left;
   width: 122px;
+  overflow: hidden;
 }
 #block-views-Bildegalleri-block_1 .views-field-field-galleri-bilde-fid img{
   margin: 0px;
