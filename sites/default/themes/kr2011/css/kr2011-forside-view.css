@@ -325,14 +325,19 @@ body a.edit-forsiderekkefolge {
   width: 556px;
 }
 #block-views-Bildegalleri-block_1 .views-field-field-galleri-bilde-fid{
-  width: 556px;
+  width: 420px;
+  float: left;
+}
+#block-views-Bildegalleri-block_1 .views-field-field-galleri-bilde-fid-1{
+  float: left;
+  width: 122px;
 }
 #block-views-Bildegalleri-block_1 .views-field-field-galleri-bilde-fid img{
   margin: 0px;
 }
 .views-field-field-galleri-bilde-fid-1 .field-item{
   float: left;
-  margin: 0 0 0px 3px;
+  margin: 0px;
 }
 .views-field-field-galleri-bilde-fid-1 .field-item a{
   width: 122px;
@@ -340,5 +345,5 @@ body a.edit-forsiderekkefolge {
 #block-views-Bildegalleri-block_1 .views-field-field-galleri-bilde-fid-1 img,
 .node img.imagecache-forside_galleri_liten,
 .views-field-field-galleri-bilde-fid-1 .views-row-odd IMG{
-  margin-right: 0px;
+  margin: 0px;
 }
