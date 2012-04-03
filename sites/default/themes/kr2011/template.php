@@ -361,7 +361,7 @@ top: "5%"
           jQuery164("#cboxLoadedContent .cimage img").attr("height",new_height);
         }
         
-        jQuery164.colorbox.resize()
+        jQuery164.colorbox.resize();
         jQuery164("#colorbox").css("overflow","visible");
     });
 
