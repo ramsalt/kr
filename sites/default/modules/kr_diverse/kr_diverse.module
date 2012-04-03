@@ -81,6 +81,7 @@ function _kr_bildegalleriet(){
   
         $hidden.= '<div id="bilde_'.$nid.'_'.$delta.'">
         '.theme_imagecache('slider_stort', $node->field_galleri_bilde[$delta]['filepath']).'
+        <img src="'.imagecache_create_path('slider_stort', $node->field_galleri_bilde[$delta]['filepath']).'">
         <div class="caption" style="width: '.$image['width'].'px;">'.$node->field_galleri_desc[$delta]['value'].'</div>
         </div>';
       }
