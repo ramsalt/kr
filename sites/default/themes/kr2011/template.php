@@ -328,7 +328,7 @@ function kr2011_preprocess_node(&$vars){
         transition:"fade",
         inline:true,
         scalePhotos: "true",
-maxwidth: "90%",
+
 maxheight: "90%",
 fixed: "true",
 top: "5%"
