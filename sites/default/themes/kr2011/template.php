@@ -351,6 +351,8 @@ top: "5%"
         jQuery164("#cboxLoadedContent .cimage img").height("auto");
         jQuery164("#cboxLoadedContent .cimage img").attr("height","auto");
         
+        wrap_width = jQuery164("#cboxLoadedContent .cimage img").width(max_width);
+        
         if(jQuery164("#cboxLoadedContent").height() > (jQuery164(window).height()-120)){
           console.log("height is larger "+jQuery164(window).height());
           new_height = jQuery164(window).height() - jQuery164("#cboxLoadedContent .cimage .caption").height() - 120;
@@ -359,6 +361,8 @@ top: "5%"
           jQuery164("#cboxLoadedContent .cimage img").attr("width", "");
           jQuery164("#cboxLoadedContent .cimage img").height(new_height);
           jQuery164("#cboxLoadedContent .cimage img").attr("height",new_height);
+          
+          
         }
         if(jQuery164("#cboxLoadedContent").width() > (jQuery164(window).width()-70)){
           console.log("width is larger "+jQuery164(window).width());
@@ -370,7 +374,7 @@ top: "5%"
           jQuery164("#cboxLoadedContent .cimage img").attr("height", "");
         }
         
-        jQuery164.colorbox.resize();
+        jQuery164.colorbox.resize({width: wrap_width});
         jQuery164("#colorbox").css("overflow","visible");
     });
 
