@@ -333,6 +333,7 @@ maxHeight: "90%"
 
       });
       jQuery164(document).bind("cbox_complete", function(){
+
         jQuery164("#header").css("width","0px");
         jQuery164("#header").css("height","0px");
         jQuery164("#header").css("display","none");
@@ -342,7 +343,7 @@ maxHeight: "90%"
         max_width = max_width - 20;
         max_height = jQuery164("#cboxLoadedContent").height();
         max_height = max_height - jQuery164("#cboxLoadedContent .cimage .caption").height() - 20;
-        
+        console.log("width: "+max_width+" height: "+max_height);
         jQuery164("#cboxLoadedContent .cimage img").attr("width", max_width+"px");
         jQuery164("#cboxLoadedContent .cimage img").attr("height", "");
         jQuery164("#cboxLoadedContent .cimage .caption").width(max_width+"px");
