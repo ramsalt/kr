@@ -50,10 +50,10 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endCol
 
 /* Direction Nav */
 .flex-direction-nav { height: 0; }
-.flex-direction-nav li a {width: 52px; height: 52px; margin: -13px 0 0; display: block; background: url(theme/bg_direction_nav.png) no-repeat; position: absolute; top: 50%; cursor: pointer; text-indent: -999em;}
-.flex-direction-nav li .next {background-position: -52px 0; right: -21px;}
-.flex-direction-nav li .prev {left: -20px;}
-.flex-direction-nav li .disabled {opacity: .3; filter:alpha(opacity=30); cursor: default;}
+.node .flex-direction-nav li a {width: 52px; height: 52px; margin: -13px 0 0; display: block; background: url(theme/bg_direction_nav.png) no-repeat; position: absolute; top: 50%; cursor: pointer; text-indent: -999em;}
+.node .flex-direction-nav li .next {background-position: -52px 0; right: -21px;}
+.node .flex-direction-nav li .prev {left: -20px;}
+.node .flex-direction-nav li .disabled {opacity: .3; filter:alpha(opacity=30); cursor: default;}
 
 /* Control Nav */
 .flex-control-nav {width: 100%; position: absolute; bottom: -30px; text-align: center;}
