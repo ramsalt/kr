@@ -340,11 +340,11 @@ maxHeight: "90%"
         jQuery164("#colorbox").css("overflow","visible");
         
         max_width = jQuery164("#cboxLoadedContent").width();
-        max_width = max_width - 20;
         max_height = jQuery164("#cboxLoadedContent").height();
         max_height = max_height - jQuery164("#cboxLoadedContent .cimage .caption").height() - 20;
         console.log("width: "+max_width+" height: "+max_height);
-        
+        jQuery164("#cboxLoadedContent .cimage img").width(max_width);
+        jQuery164.colorbox.resize()
       
     });
 
@@ -371,7 +371,7 @@ maxHeight: "90%"
       $hidden.= '<div id="bilde_'.$vars['nid'].'_'.$delta.'" class="cimage">
       '.theme_imagecache('slider_stort', $vars['field_galleri_bilde'][$delta]['filepath']).'
       
-      <div class="caption" style="width: '.$image['width'].'px;">'.$vars['field_galleri_desc'][$delta]['safe'].'</div>
+      <div class="caption">'.$vars['field_galleri_desc'][$delta]['safe'].'</div>
       </div>';
     }
     $html .='</ul></div>';
