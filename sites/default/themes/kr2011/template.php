@@ -344,6 +344,9 @@ maxHeight: "90%"
         max_height = max_height - jQuery164("#cboxLoadedContent .cimage .caption").height() - 20;
         console.log("width: "+max_width+" height: "+max_height);
         jQuery164("#cboxLoadedContent .cimage img").width(max_width);
+        jQuery164("#cboxLoadedContent .cimage img").attr("width", max_width);
+        jQuery164("#cboxLoadedContent .cimage img").height("auto");
+        jQuery164("#cboxLoadedContent .cimage img").attr("height","auto");
         jQuery164.colorbox.resize()
       
     });
