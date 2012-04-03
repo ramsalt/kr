@@ -360,6 +360,15 @@ top: "5%"
           jQuery164("#cboxLoadedContent .cimage img").height(new_height);
           jQuery164("#cboxLoadedContent .cimage img").attr("height",new_height);
         }
+        if(jQuery164("#cboxLoadedContent").width() > (jQuery164(window).width()-70)){
+          console.log("width is larger "+jQuery164(window).width());
+          new_width = jQuery164(window).width() - 60;
+          console.log("new width: "+new_width);
+          jQuery164("#cboxLoadedContent .cimage img").width(new_width);
+          jQuery164("#cboxLoadedContent .cimage img").attr("width", new_width);
+          jQuery164("#cboxLoadedContent .cimage img").height("");
+          jQuery164("#cboxLoadedContent .cimage img").attr("height", "");
+        }
         
         jQuery164.colorbox.resize();
         jQuery164("#colorbox").css("overflow","visible");
