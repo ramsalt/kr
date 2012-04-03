@@ -329,8 +329,9 @@ function kr2011_preprocess_node(&$vars){
     width:"75%", 
     height:"75%"
     });
-    jQuery164(.colorbox-images-container).each(function(index, item) {
-    });
+jQuery164(".c-image").each(function(index, item) {
+  console.log(index);
+});
     
     });','inline');
     $hidden = '<div class="colorbox-images-container">';
