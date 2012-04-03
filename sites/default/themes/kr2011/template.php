@@ -350,6 +350,13 @@ top: "5%"
         jQuery164("#cboxLoadedContent .cimage img").attr("width", max_width);
         jQuery164("#cboxLoadedContent .cimage img").height("auto");
         jQuery164("#cboxLoadedContent .cimage img").attr("height","auto");
+        
+        if(jQuery164("#cboxLoadedContent .cimage img").height("auto")>jQuery164(window).height()){
+          new_height = jQuery164(window).height() - jQuery164("#cboxLoadedContent .cimage .caption").height() - 120;
+          jQuery164("#cboxLoadedContent .cimage img").width("");
+          jQuery164("#cboxLoadedContent .cimage img").height(new_height);
+        }
+        
         jQuery164.colorbox.resize()
         jQuery164("#colorbox").css("overflow","visible");
     });
