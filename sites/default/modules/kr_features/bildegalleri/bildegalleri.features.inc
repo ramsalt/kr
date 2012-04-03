@@ -40,7 +40,7 @@ function bildegalleri_imagecache_default_presets() {
           'module' => 'imagecache',
           'action' => 'imagecache_scale',
           'data' => array(
-            'width' => '435',
+            'width' => '445',
             'height' => '',
             'upscale' => 0,
           ),
@@ -50,8 +50,8 @@ function bildegalleri_imagecache_default_presets() {
           'module' => 'imagecache',
           'action' => 'imagecache_crop',
           'data' => array(
-            'width' => '390',
-            'height' => '232',
+            'width' => '420',
+            'height' => '248',
             'xoffset' => 'center',
             'yoffset' => 'center',
           ),
