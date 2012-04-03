@@ -333,6 +333,7 @@ function kr2011_preprocess_node(&$vars){
       max_width = jQuery164("#cboxLoadedContent").width();
       max_width = max_width - 20;
       jQuery164(".cimage img").attr("width", max_width+"px");
+      jQuery164(".cimage img").attr("height", "");
       jQuery164(".cimage .caption").width(max_width+"px");
     });
 
