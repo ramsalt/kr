@@ -325,7 +325,9 @@ function kr2011_preprocess_node(&$vars){
     jQuery164(".color'.$vars['nid'].'").colorbox({
     rel:"color", 
     transition:"fade",
-    inline:true
+    inline:true,
+    width:"75%", 
+    height:"75%"
     }); 
     
     });','inline');

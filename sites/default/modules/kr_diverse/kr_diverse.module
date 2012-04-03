@@ -54,7 +54,9 @@ function _kr_bildegalleriet(){
       jQuery164(".color'.$vars['nid'].'").colorbox({
       rel:"color", 
       transition:"fade",
-      inline:true
+      inline:true,
+      width:"75%", 
+      height:"75%"
       }); 
       
       });','inline');
