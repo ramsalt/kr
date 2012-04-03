@@ -327,7 +327,7 @@ function kr2011_preprocess_node(&$vars){
         rel:"color", 
         transition:"fade",
         inline:true,
-        scalePhotos, "true",
+        scalePhotos: "true",
 
       });
       jQuery164(document).bind("cbox_complete", function(){
