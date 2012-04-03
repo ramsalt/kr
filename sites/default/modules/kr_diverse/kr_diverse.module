@@ -47,32 +47,33 @@ function _kr_bildegalleriet(){
       drupal_add_css(drupal_get_path('theme', 'kr2011').'/flex/flexslider.css');
       drupal_add_css(drupal_get_path('theme', 'kr2011').'/flex/kr-flex.css');
       drupal_add_css(drupal_get_path('theme', 'kr2011').'/flex/colorbox.css');
-      drupal_add_js('$(window).load(function() {
-      jQuery164(".flexslider").flexslider({
-        slideshow: "false",
-      });
-      jQuery164(".color'.$vars['nid'].'").colorbox({
-        rel:"color", 
-        transition:"fade",
-        inline:true,
-        width:"75%", 
-        height:"75%"
-      }); 
-      
-      jQuery164(document).bind("cbox_complete", function(){
-        max_width = jQuery164("#cboxLoadedContent").width();
-        max_width = max_width - 20;
-        max_height = jQuery164("#cboxLoadedContent").height();
-        max_height = max_height - jQuery164("#cboxLoadedContent .cimage .caption").height() - 20;
+      drupal_add_js('
+      jQuery164(window).load(function() {
+        jQuery164(".flexslider").flexslider({
+          slideshow: "false",
+        });
+        jQuery164(".color'.$vars['nid'].'").colorbox({
+          rel:"color", 
+          transition:"fade",
+          inline:true,
+          width:"75%", 
+          height:"75%"
+        }); 
         
-        jQuery164("#cboxLoadedContent .cimage img").attr("width", max_width+"px");
-        jQuery164("#cboxLoadedContent .cimage img").attr("height", "");
-        jQuery164("#cboxLoadedContent .cimage .caption").width(max_width+"px");
-        
-        if(jQuery164("#cboxLoadedContent .cimage img").height()>max_height){
-          jQuery164("#cboxLoadedContent .cimage img").attr("width", "");
-          jQuery164("#cboxLoadedContent .cimage img").attr("height", max_height+"px");
-        }
+        jQuery164(document).bind("cbox_complete", function(){
+          max_width = jQuery164("#cboxLoadedContent").width();
+          max_width = max_width - 20;
+          max_height = jQuery164("#cboxLoadedContent").height();
+          max_height = max_height - jQuery164("#cboxLoadedContent .cimage .caption").height() - 20;
+          
+          jQuery164("#cboxLoadedContent .cimage img").attr("width", max_width+"px");
+          jQuery164("#cboxLoadedContent .cimage img").attr("height", "");
+          jQuery164("#cboxLoadedContent .cimage .caption").width(max_width+"px");
+          
+          if(jQuery164("#cboxLoadedContent .cimage img").height()>max_height){
+            jQuery164("#cboxLoadedContent .cimage img").attr("width", "");
+            jQuery164("#cboxLoadedContent .cimage img").attr("height", max_height+"px");
+          }
         
       });
       
