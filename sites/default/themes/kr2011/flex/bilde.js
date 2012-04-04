@@ -65,6 +65,7 @@ jQuery164(".flexslider").flexslider({
       wrap_width=jQuery164("#cboxLoadedContent .cimage img").width()+28;
       jQuery164.colorbox.resize({width: wrap_width});
       jQuery164("#colorbox").css("overflow","visible");
+      jQuery164("#colorbox").css("margin","0px auto");
     });
 /*  } */
 
