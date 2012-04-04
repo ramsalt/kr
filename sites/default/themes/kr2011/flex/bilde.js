@@ -4,7 +4,7 @@ jQuery164(".flexslider").flexslider({
   slideshow: "false"
 });
   
-  if(!jQuery164.browser.msie){
+ /* if(!jQuery164.browser.msie){ */
     jQuery164(".colorboks1").colorbox({
       rel: "colorboks1",
       transition:"fade",
@@ -53,6 +53,6 @@ jQuery164(".flexslider").flexslider({
       jQuery164.colorbox.resize({width: wrap_width});
       jQuery164("#colorbox").css("overflow","visible");
     });
-  }
+/*  } */
 
 });
