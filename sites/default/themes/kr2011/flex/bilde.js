@@ -1,5 +1,7 @@
 jQuery164(document).ready(function() {
-      jQuery164(".flexslider").flexslider();
+      jQuery164(".flexslider").flexslider({
+        slideshow: "false"
+      });
       
       jQuery164(".colorboksen").colorbox({
         rel:"color", 
