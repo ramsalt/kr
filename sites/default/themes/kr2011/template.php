@@ -325,7 +325,7 @@ function kr2011_preprocess_node(&$vars){
         <ul class="slides">';
     foreach ($vars['field_galleri_bilde'] as $delta => $item) {
       $html .= '<li>';
-      //$html .= '<a class="colorboks1" href="#bilde_'.$vars['nid'].'_'.$delta.'">';
+      $html .= '<a class="colorboks1" href="#bilde_'.$vars['nid'].'_'.$delta.'">';
       $html .= $item['view'];
       if($vars['field_galleri_desc'][$delta]['safe'] && $vars['field_galleri_kredit'][$delta]['safe']){
         $html .= '<p>'.$vars['field_galleri_desc'][$delta]['safe'];
@@ -335,7 +335,7 @@ function kr2011_preprocess_node(&$vars){
       }elseif ($vars['field_galleri_kredit'][$delta]['safe']) {
         $html .= '<p><span class="kredit">'.$vars['field_galleri_kredit'][$delta]['safe'].'</span></p>';
       }
-      //$html .='</a>';
+      $html .='</a>';
       $html .='</li>';
       $image = image_get_info(imagecache_create_path('slider_stort', $vars['field_galleri_bilde'][$delta]['filepath']));
 //<img src="'.imagecache_create_path('slider_stort', $vars['field_galleri_bilde'][$delta]['filepath']).'">
