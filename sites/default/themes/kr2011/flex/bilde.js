@@ -1,8 +1,7 @@
 jQuery164(document).ready(function() {
 
   jQuery164(".flexslider").flexslider({
-    slideshow: "false",
-    animation: "slide" 
+    slideshow: "false"
   });
   if(!jQuery164.browser.msie){
     jQuery164(".colorboks1").colorbox({
