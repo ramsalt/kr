@@ -328,10 +328,10 @@ function kr2011_preprocess_node(&$vars){
         transition:"fade",
         inline:true,
         scalePhotos: "true",
-scrolling: "false",
-maxheight: "90%",
-fixed: "true",
-top: "5%"
+        scrolling: "false",
+        maxheight: "90%",
+        fixed: "true",
+        top: "5%"
 
 
       });
@@ -359,9 +359,6 @@ top: "5%"
           jQuery164("#cboxLoadedContent .cimage img").attr("width", "");
           jQuery164("#cboxLoadedContent .cimage img").height(new_height);
           jQuery164("#cboxLoadedContent .cimage img").attr("height",new_height);
-          
-
-          
         }
         if(jQuery164("#cboxLoadedContent").width() > (jQuery164(window).width()-70)){
           console.log("width is larger "+jQuery164(window).width());
@@ -373,7 +370,7 @@ top: "5%"
           jQuery164("#cboxLoadedContent .cimage img").attr("height", "");
 
         }
-        wrap_width=jQuery164("#cboxLoadedContent .cimage").width()+28;
+        wrap_width=jQuery164("#cboxLoadedContent .cimage img").width()+28;
         jQuery164.colorbox.resize({width: wrap_width});
         jQuery164("#colorbox").css("overflow","visible");
     });
