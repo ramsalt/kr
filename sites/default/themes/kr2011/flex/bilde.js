@@ -23,14 +23,12 @@ jQuery164(".flexslider").flexslider({
       jQuery164("#header").css("display","none");
       jQuery164("#colorbox").css("overflow","visible");
       
-      max_width = jQuery164("#cboxLoadedContent").width();
-      max_height = jQuery164("#cboxLoadedContent").height();
-      max_height = max_height - jQuery164("#cboxLoadedContent .cimage .caption").height() - 20;
-      console.log("width: "+max_width+" height: "+max_height);
+
+      console.log("width: "+jQuery164("#cboxLoadedContent .cimage img").width()+" height: "+jQuery164("#cboxLoadedContent .cimage img").height();
 
       
       if(jQuery164("#cboxLoadedContent").height() > (jQuery164(window).height()-120)){
-        console.log("height is larger "+jQuery164(window).height());
+        console.log("height is larger. current height: "+jQuery164("#cboxLoadedContent").height()+" window height: "+jQuery164(window).height());
         old_height = jQuery164("#cboxLoadedContent .cimage img").height();
         old_width = jQuery164("#cboxLoadedContent .cimage img").width();
         new_height = jQuery164(window).height() - jQuery164("#cboxLoadedContent .cimage .caption").height() - 120;
@@ -38,8 +36,9 @@ jQuery164(".flexslider").flexslider({
         multiplier = diff/old_height;
         new_width = old_width - (old_width*multiplier);
         
-        console.log("oldwidth: "+old_width+" newwidth: "+new_width );
-        console.log("new height: "+new_height + "wh: "+jQuery164(window).height());
+        console.log("old width: "+old_width+" new width: "+new_width );
+        console.log("old height: "+old_height+" new height: "+new_height + " window height: "+jQuery164(window).height());
+        
         jQuery164("#cboxLoadedContent .cimage img").width(new_width);
         jQuery164("#cboxLoadedContent .cimage img").attr("width", new_width);
         jQuery164("#cboxLoadedContent .cimage img").height(new_height);
