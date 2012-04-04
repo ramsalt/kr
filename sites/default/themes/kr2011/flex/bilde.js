@@ -27,10 +27,7 @@ jQuery164(".flexslider").flexslider({
       max_height = jQuery164("#cboxLoadedContent").height();
       max_height = max_height - jQuery164("#cboxLoadedContent .cimage .caption").height() - 20;
       console.log("width: "+max_width+" height: "+max_height);
-      jQuery164("#cboxLoadedContent .cimage img").width(max_width);
-      jQuery164("#cboxLoadedContent .cimage img").attr("width", max_width);
-      jQuery164("#cboxLoadedContent .cimage img").height("auto");
-      jQuery164("#cboxLoadedContent .cimage img").attr("height","auto");
+
       
       if(jQuery164("#cboxLoadedContent").height() > (jQuery164(window).height()-120)){
         console.log("height is larger "+jQuery164(window).height());
