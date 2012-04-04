@@ -31,10 +31,17 @@ jQuery164(".flexslider").flexslider({
       
       if(jQuery164("#cboxLoadedContent").height() > (jQuery164(window).height()-120)){
         console.log("height is larger "+jQuery164(window).height());
+        old_height = jQuery164("#cboxLoadedContent .cimage img").height();
+        old_width = jQuery164("#cboxLoadedContent .cimage img").width();
         new_height = jQuery164(window).height() - jQuery164("#cboxLoadedContent .cimage .caption").height() - 120;
+        diff = old_height-new_height;
+        multiplier = diff/old_height;
+        new_width = old_width - (old_width*multiplier);
+        
+        console.log("oldwidth: "+old_width+" newwidth: "+new_width );
         console.log("new height: "+new_height + "wh: "+jQuery164(window).height());
-        jQuery164("#cboxLoadedContent .cimage img").width("");
-        jQuery164("#cboxLoadedContent .cimage img").attr("width", "");
+        jQuery164("#cboxLoadedContent .cimage img").width(new_width);
+        jQuery164("#cboxLoadedContent .cimage img").attr("width", new_width);
         jQuery164("#cboxLoadedContent .cimage img").height(new_height);
         jQuery164("#cboxLoadedContent .cimage img").attr("height",new_height);
       }
