@@ -1,8 +1,12 @@
 jQuery164(document).ready(function() {
-  setTimeout (jQuery164(".flexslider").flexslider({
-    slideshow: "false"
-  }), 3500);
-setTimeout(alert("hei"), 10000);
+  setTimeout (
+  function() {
+        jQuery164(".flexslider").flexslider({
+          slideshow: "false"
+        })
+        alert("der");
+  }
+, 10000);
       
 jQuery164(".colorboksen").colorbox({
   rel:"color", 
