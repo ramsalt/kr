@@ -4,7 +4,7 @@ jQuery164(".flexslider").flexslider({
   slideshow: "false"
 });
   
-  
+  if(!jQuery164.browser.msie){
     jQuery164(".colorboks1").colorbox({
       rel: "colorboks1",
       transition:"fade",
@@ -41,7 +41,7 @@ jQuery164(".flexslider").flexslider({
         jQuery164("#cboxLoadedContent .cimage img").height(new_height);
         jQuery164("#cboxLoadedContent .cimage img").attr("height",new_height);
       }
-      if(jQuery164("#cboxLoadedContent").width() > (jQuery164(window).width()-70)){
+      else if (jQuery164("#cboxLoadedContent").width() > (jQuery164(window).width()-70)){
         console.log("width is larger "+jQuery164(window).width());
         new_width = jQuery164(window).width() - 60;
         console.log("new width: "+new_width);
@@ -56,6 +56,6 @@ jQuery164(".flexslider").flexslider({
       jQuery164.colorbox.resize({width: wrap_width});
       jQuery164("#colorbox").css("overflow","visible");
     });
-  
+  }
 
 });
