@@ -376,7 +376,7 @@ function kr2011_preprocess_node(&$vars){
         jQuery164("#colorbox").css("overflow","visible");
     });
 
-    });','inline');
+    });','inline', 'header');
     $hidden = '<div class="colorbox-images-container">';
     $html = '<div class="flexslider">
         <ul class="slides">';
