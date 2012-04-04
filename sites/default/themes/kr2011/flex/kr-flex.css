@@ -62,10 +62,12 @@
     color: #FFFFFF;
     text-decoration: none;
 }
+<!--[if IE]>
 .page-node .flex-direction-nav {
     display: block;
     margin-top: -32px;
 }
+<![endif]-->
 .page-node .content .flex-direction-nav li{
     margin: 0px;
 }
