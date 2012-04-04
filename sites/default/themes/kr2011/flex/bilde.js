@@ -1,4 +1,4 @@
-jQuery164(window).load(function() {
+jQuery164(document).ready(function() {
       jQuery164(".flexslider").flexslider({
         slideshow: "false"
       });
