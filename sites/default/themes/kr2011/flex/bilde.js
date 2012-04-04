@@ -1,6 +1,7 @@
 jQuery164(document).ready(function() {
 
   jQuery164(".colorboksen").colorbox({
+    rel: "gal",
     transition:"fade",
     inline:true,
     scalePhotos: "true",
@@ -9,6 +10,7 @@ jQuery164(document).ready(function() {
     fixed: "true",
     top: "5%"
   });
+  
   jQuery164(document).bind("cbox_complete", function(){
     
     jQuery164("#header").css("width","0px");
