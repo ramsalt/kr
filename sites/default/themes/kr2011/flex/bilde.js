@@ -1,6 +1,15 @@
 jQuery164(document).ready(function() {
 
-
+  jQuery164(".colorboks1").colorbox({
+    rel: "colorboks1",
+    transition:"fade",
+    inline:true,
+    scalePhotos: "true",
+    scrolling: "false",
+    maxheight: "90%",
+    fixed: "true",
+    top: "5%"
+  });
   
   jQuery164(document).bind("cbox_complete", function(){
     
