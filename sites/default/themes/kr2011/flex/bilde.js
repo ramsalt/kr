@@ -1,5 +1,9 @@
 jQuery164(document).ready(function() {
 
+  jQuery164(".flexslider").flexslider({
+    slideshow: "false",
+    animation: "slide" 
+  });
   jQuery164(".colorboks1").colorbox({
     rel: "colorboks1",
     transition:"fade",
@@ -52,9 +56,5 @@ jQuery164(document).ready(function() {
     jQuery164("#colorbox").css("overflow","visible");
   });
 
-  jQuery164(".flexslider").flexslider({
-    slideshow: "false",
-    animation: "slide" 
-  });
 
 });
