@@ -45,7 +45,7 @@ jQuery164(".flexslider").flexslider({
         jQuery164("#cboxLoadedContent .cimage img").attr("height",new_height);
       }
       else if (jQuery164("#cboxLoadedContent").width() > (jQuery164(window).width()-70)){
-        console.log("width is larger "+jQuery164(window).width());
+        console.log("width is larger. current:"+jQuery164("#cboxLoadedContent").width()+" window width:"+jQuery164(window).width());
         new_width = jQuery164(window).width() - 60;
         console.log("new width: "+new_width+ "ww: " +jQuery164(window).width());
         jQuery164("#cboxLoadedContent .cimage img").width(new_width);
