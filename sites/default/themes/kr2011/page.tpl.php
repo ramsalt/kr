@@ -76,7 +76,6 @@
   * @see template_preprocess_page()
   */
  ?>
-
 <?php print $page_header; ?>
 <div id="center-left-wrapper">
 <div id="center" class="clearfix">
