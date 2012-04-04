@@ -9,7 +9,7 @@ jQuery164(".flexslider").flexslider({
       rel: "colorboks1",
       transition:"fade",
       inline:true,
-      scalePhotos: "true",
+
       scrolling: "false",
       maxheight: "88%",
       fixed: "true",
