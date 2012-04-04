@@ -1,7 +1,6 @@
 jQuery164(document).ready(function() {
 
   jQuery164(".colorboksen").colorbox({
-    rel:"color", 
     transition:"fade",
     inline:true,
     scalePhotos: "true",
