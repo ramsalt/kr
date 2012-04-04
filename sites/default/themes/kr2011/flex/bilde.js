@@ -11,9 +11,9 @@ jQuery164(".flexslider").flexslider({
       inline:true,
       scalePhotos: "true",
       scrolling: "false",
-      maxheight: "90%",
+      maxheight: "88%",
       fixed: "true",
-      top: "5%"
+      top: "2%"
     });
     
     jQuery164(document).bind("cbox_complete", function(){
