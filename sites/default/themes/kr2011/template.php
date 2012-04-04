@@ -325,7 +325,7 @@ function kr2011_preprocess_node(&$vars){
         <ul class="slides">';
     foreach ($vars['field_galleri_bilde'] as $delta => $item) {
       $html .= '<li>';
-      $html .= '<a class="colorboks1" href="#bilde_'.$vars['nid'].'_'.$delta.'">';
+      $html .= '<a class="colorboks1" href="#bilde_'.$vars['nid'].'_'.$delta.'" rel="colorboks1">';
       $html .= $item['view'];
       if($vars['field_galleri_desc'][$delta]['safe'] && $vars['field_galleri_kredit'][$delta]['safe']){
         $html .= '<p>'.$vars['field_galleri_desc'][$delta]['safe'];
