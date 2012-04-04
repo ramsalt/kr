@@ -43,8 +43,6 @@ jQuery164(".flexslider").flexslider({
         jQuery164("#cboxLoadedContent .cimage img").attr("width", new_width);
         jQuery164("#cboxLoadedContent .cimage img").height(new_height);
         jQuery164("#cboxLoadedContent .cimage img").attr("height",new_height);
-        wrap_width=jQuery164("#cboxLoadedContent .cimage img").width()+28;
-        jQuery164.colorbox.resize({width: wrap_width});
       }
       if (jQuery164("#cboxLoadedContent").width() > (jQuery164(window).width()-70)){
         console.log("width is larger. current:"+jQuery164("#cboxLoadedContent").width()+" window width:"+jQuery164(window).width());
@@ -62,10 +60,10 @@ jQuery164(".flexslider").flexslider({
         jQuery164("#cboxLoadedContent .cimage img").attr("width", new_width);
         jQuery164("#cboxLoadedContent .cimage img").height(new_height);
         jQuery164("#cboxLoadedContent .cimage img").attr("height",new_height);
-        wrap_width=jQuery164("#cboxLoadedContent .cimage img").width()+28;
-        jQuery164.colorbox.resize({width: wrap_width});
+  
       }
-
+      wrap_width=jQuery164("#cboxLoadedContent .cimage img").width()+28;
+      jQuery164.colorbox.resize({width: wrap_width});
       jQuery164("#colorbox").css("overflow","visible");
     });
 /*  } */
