@@ -348,7 +348,7 @@ function kr2011_preprocess_node(&$vars){
     $html .='</ul></div>';
     $hidden .='</div>';
     $vars['content'] = $html;
-   // $vars['content'] .=$hidden;
+    $vars['content'] .=$hidden;
   }
 }
 function kr2011_preprocess_page(&$vars){
