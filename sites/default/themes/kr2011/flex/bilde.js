@@ -23,12 +23,9 @@ jQuery164(".flexslider").flexslider({
       jQuery164("#header").css("display","none");
       jQuery164("#colorbox").css("overflow","visible");
       
-
-      console.log("width: "+jQuery164("#cboxLoadedContent .cimage img").width()+" height: "+jQuery164("#cboxLoadedContent .cimage img").height());
-
       
       if(jQuery164("#cboxLoadedContent").height() > (jQuery164(window).height()-120)){
-        console.log("height is larger. current height: "+jQuery164("#cboxLoadedContent").height()+" window height: "+jQuery164(window).height());
+
         old_height = jQuery164("#cboxLoadedContent .cimage img").height();
         old_width = jQuery164("#cboxLoadedContent .cimage img").width();
         new_height = jQuery164(window).height() - jQuery164("#cboxLoadedContent .cimage .caption").height() - 120;
@@ -36,8 +33,7 @@ jQuery164(".flexslider").flexslider({
         multiplier = diff/old_height;
         new_width = old_width - (old_width*multiplier);
         
-        console.log("old width: "+old_width+" new width: "+new_width);
-        console.log("old height: "+old_height+" new height: "+new_height + " window height: "+jQuery164(window).height());
+
         
         jQuery164("#cboxLoadedContent .cimage img").width(new_width);
         jQuery164("#cboxLoadedContent .cimage img").attr("width", new_width);
@@ -45,7 +41,7 @@ jQuery164(".flexslider").flexslider({
         jQuery164("#cboxLoadedContent .cimage img").attr("height",new_height);
       }
       if (jQuery164("#cboxLoadedContent").width() > (jQuery164(window).width()-70)){
-        console.log("width is larger. current:"+jQuery164("#cboxLoadedContent").width()+" window width:"+jQuery164(window).width());
+
         old_height = jQuery164("#cboxLoadedContent .cimage img").height();
         old_width = jQuery164("#cboxLoadedContent .cimage img").width();
         new_width = jQuery164("#cboxLoadedContent .cimage img").width() - 60;
@@ -53,8 +49,7 @@ jQuery164(".flexslider").flexslider({
         multiplier = diff/old_width;
         new_height = old_height - (old_height*multiplier);
         
-        console.log("old width: "+old_width+" new width: "+new_width);
-        console.log("old height: "+old_height+" new height: "+new_height + " window height: "+jQuery164(window).height());
+
         
         jQuery164("#cboxLoadedContent .cimage img").width(new_width);
         jQuery164("#cboxLoadedContent .cimage img").attr("width", new_width);
