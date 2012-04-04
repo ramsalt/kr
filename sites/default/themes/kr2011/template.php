@@ -371,6 +371,7 @@ function kr2011_preprocess_node(&$vars){
 
         }
         wrap_width=jQuery164("#cboxLoadedContent .cimage img").width()+28;
+        console.log("ww: "+ wrap_width);
         jQuery164.colorbox.resize({width: wrap_width});
         jQuery164("#colorbox").css("overflow","visible");
     });
