@@ -24,7 +24,7 @@ jQuery164(".flexslider").flexslider({
       jQuery164("#colorbox").css("overflow","visible");
       
 
-      console.log("width: "+jQuery164("#cboxLoadedContent .cimage img").width()+" height: "+jQuery164("#cboxLoadedContent .cimage img").height();
+      console.log("width: "+jQuery164("#cboxLoadedContent .cimage img").width()+" height: "+jQuery164("#cboxLoadedContent .cimage img").height());
 
       
       if(jQuery164("#cboxLoadedContent").height() > (jQuery164(window).height()-120)){
