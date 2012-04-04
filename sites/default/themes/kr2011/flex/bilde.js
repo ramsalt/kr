@@ -1,7 +1,7 @@
 jQuery164(document).ready(function() {
 
-  jQuery164(".colorboksen").colorbox({
-    rel: "gal",
+  jQuery164(".colorboks1").colorbox({
+    rel: "colorboks1",
     transition:"fade",
     inline:true,
     scalePhotos: "true",
