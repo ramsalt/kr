@@ -67,6 +67,7 @@ jQuery164(".flexslider").flexslider({
       jQuery164("#colorbox").css("overflow","visible");
       
       jQuery164("#colorbox").css("margin","0px auto");
+      jQuery164("#colorbox").css("position","absolute");
       jQuery164("#cboxOverlay").css("display", "block");
       jQuery164("#cboxOverlay").css("position", "absolute");
     });
