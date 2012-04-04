@@ -49,12 +49,11 @@ body div#nav ul.primary-links li.first-level.first a:hover, body div#nav ul.prim
 #nav ul.primary-links li{
 	border-right: 1px solid #ffffff;
 }
-body #nav ul.primary-links li a{
-  font-family: helvetica,sans-serif;
-  padding: 8px 12px;  
-}
+
 body #nav ul.primary-links li a:link, body #nav ul.primary-links li a:visited{
 	color: #48535b;
+	font-family: helvetica,sans-serif;
+	padding: 8px 12px;  
 }
 
 #header{
