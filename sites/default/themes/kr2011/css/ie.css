@@ -20,3 +20,10 @@ body .featuredarticle .views-field-view-node .field-content a{
 #wrapper #toppann_right{
 	padding-left: 1px;
 }
+.page-node .flex-direction-nav {
+    display: block;
+    margin-top: -32px;
+}
+.page-node .flexslider .flex-caption, .flexslider p{
+  bottom: 33px;
+}

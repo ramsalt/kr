@@ -83,3 +83,35 @@ padding: 1em;
     width: 800px;
     padding-left: 22px;
 }
+.galleriforside{
+  background: none repeat scroll 0 0 #E1E7E9;
+  float: left;
+  width: 100%;
+}
+.galleriforside .view-content{
+  padding: 12px;
+}
+.galleriforside .view-content .views-row{
+  float: left;
+}
+.galleriforside h2{
+  display: none;
+}
+.galleriforside .more-link{
+  float: left;
+  width: 100%;
+  margin: 5px -8px;
+}
+.galleriforside .more-link a{
+  background: url("../images/spirite1.png") no-repeat scroll 100% -40px transparent;
+  color: #999999;
+  float: right;
+  font-size: 11px;
+  font-weight: bold;
+  height: 14px;
+  padding-right: 20px;
+  padding-top: 2px;
+}
+body.front-page .galleriforside .views-field-title a{
+  font-size: 28px;
+}

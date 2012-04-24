@@ -1,0 +1,105 @@
+.page-node .flexslider ul.slides li{
+  padding: 0px;
+  margin: 0px;
+}
+.page-node .flexslider .flex-caption, .flexslider p{
+  font-family: Georgia,Arial,Helvetica;
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  color: #FFFFFF;
+  font-size: 14px;
+  left: 0;
+  line-height: 18px;
+  margin: 0;
+  padding: 2%;
+  position: absolute;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  width: 96%;  
+}
+.page-node .flexslider .kredit{
+  font-size: 13px;
+  font-style: italic;
+  text-align: right;
+  float: right;
+}
+.page-node .flexslider .flex-control-nav {
+    background: none repeat scroll 0 0 #5D5D5D;
+    bottom: 0;
+    padding: 10px 40px 0;
+    position: relative;
+    width: auto;
+    height: 31px;
+}
+.page-node .flex-direction-nav {
+    bottom: 0;
+}
+.page-node .content .flex-control-nav li {
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 1px 0 0 #757575;
+    margin: 0px 0px 10px 5px;
+    height: 21px;
+}
+.page-node .flex-control-nav li a {
+    background: none repeat scroll 0 0 #252525;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 1px 1px 0 #000000 inset;
+    color: #FFFFFF;
+    font-size: 12px;
+    height: 13px;
+    padding: 4px 0;
+    text-indent: 0;
+    width: 25px;
+}
+.page-node .flex-control-nav li a.active {
+    background: none repeat scroll 0 0 #94021C;
+    box-shadow: 0 1px 1px 0 #D4616A inset;
+    color: #D1555E;
+    text-decoration: none;
+}
+.page-node .flex-control-nav li a:hover {
+    background: none repeat scroll 0 0 #5D5D5D;
+    box-shadow: 0 1px 1px 0 #333333 inset;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.page-node .content .flex-direction-nav li{
+    margin: 0px;
+}
+.page-node .content .flex-direction-nav li .next {
+    background: url("slider-arrow-right-small.png") no-repeat scroll 0 0 #5D5D5D;
+    height: 20px;
+    right: 10px;
+    width: 20px;
+}
+.page-node .content .flex-direction-nav li .next:hover {
+    background: url("slider-arrow-right-small-active.png") no-repeat scroll 0 0 transparent;
+}
+.page-node .content .flex-direction-nav li .prev {
+    background: url("slider-arrow-left-small.png") no-repeat scroll 0 0 #5D5D5D;
+    height: 20px;
+    left: 10px;
+    width: 20px;
+}
+.page-node .content .flex-direction-nav li .prev:hover {
+    background: url("slider-arrow-left-small-active.png") no-repeat scroll 0 0 transparent;
+}
+.page-node .content .flex-direction-nav li a {
+    bottom: 13px;
+    top: auto;
+}
+.ds-1col.view-mode-thumbnail .field-name-field-op-main-image {
+    float: none;
+}
+.flexslider .flex-control-nav {
+    padding-bottom: 30px;
+}
+.flexslider ul {
+    padding: 0;
+}
+.node .caption, .caption{
+  float: left;
+}
+.cimage{
+  float: left;
+}

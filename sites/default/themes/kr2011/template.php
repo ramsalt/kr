@@ -309,10 +309,48 @@ function kr2011_preprocess_node(&$vars){
 		drupal_add_js(drupal_get_path('theme', 'kr2011').'/js/kr2011.js', 'theme', 'footer');
 	//	print_R($vars['node']);
 	}
+  elseif($vars['type']=='bildegalleri'){
 
-	
+    drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery.min.js');
+    drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery-noconflict.js');
+    drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery.flexslider.js', 'theme', 'header');
+    drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery.colorbox.js', 'theme', 'header');    
+    drupal_add_css(drupal_get_path('theme', 'kr2011').'/flex/flexslider.css');
+    drupal_add_css(drupal_get_path('theme', 'kr2011').'/flex/kr-flex.css');
+    drupal_add_css(drupal_get_path('theme', 'kr2011').'/flex/colorbox.css');
+    drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/bilde.js', 'theme', 'header');
+    
+    $hidden = '<div class="colorbox-images-container">';
+    $html = '<div class="flexslider">
+        <ul class="slides">';
+    foreach ($vars['field_galleri_bilde'] as $delta => $item) {
+      $html .= '<li>';
+      $html .= '<a class="colorboks1" href="#bilde_'.$vars['nid'].'_'.$delta.'">';
+      $html .= $item['view'];
+      if($vars['field_galleri_desc'][$delta]['safe'] && $vars['field_galleri_kredit'][$delta]['safe']){
+        $html .= '<p>'.$vars['field_galleri_desc'][$delta]['safe'];
+        $html .= '<span class="kredit">'.$vars['field_galleri_kredit'][$delta]['safe'].'</span></p>';
+      }elseif($vars['field_galleri_desc'][$delta]['safe']){
+        $html .= '<p>'.$vars['field_galleri_desc'][$delta]['safe'].'</p>';
+      }elseif ($vars['field_galleri_kredit'][$delta]['safe']) {
+        $html .= '<p><span class="kredit">'.$vars['field_galleri_kredit'][$delta]['safe'].'</span></p>';
+      }
+      $html .='</a>';
+      $html .='</li>';
+      $image = image_get_info(imagecache_create_path('slider_stort', $vars['field_galleri_bilde'][$delta]['filepath']));
+//<img src="'.imagecache_create_path('slider_stort', $vars['field_galleri_bilde'][$delta]['filepath']).'">
+      $hidden.= '<div id="bilde_'.$vars['nid'].'_'.$delta.'" class="cimage">
+      '.theme_imagecache('slider_stort', $vars['field_galleri_bilde'][$delta]['filepath']).'
+      
+      <div class="caption">'.$vars['field_galleri_desc'][$delta]['safe'].'</div>
+      </div>';
+    }
+    $html .='</ul></div>';
+    $hidden .='</div>';
+    $vars['content'] = $html;
+    $vars['content'] .=$hidden;
+  }
 }
-
 function kr2011_preprocess_page(&$vars){
 	if($vars['node']->type=='article' && strlen($vars['node']->field_deck[0]['safe'])>0){
 		
