@@ -355,7 +355,6 @@ function kr2011_views_view_field__comment_count($view, $field, $row){
 
 }
 function kr2011_preprocess_block(&$variables) {
-  
   // unset fb_comment block
   if($variables['block']->bid == 'fb_social_comments-comments'){
     $node =  node_load(arg(1));
@@ -379,10 +378,12 @@ function kr2011_preprocess_block(&$variables) {
 }
 
 function kr2011_nopremium_message($node){
-  global $user;
+global $user;
 
   // Check if this is a free account disabled or has just authenticated role
-  if (isset($user->roles[12]) || !(count($user->roles) && isset($user->roles[1])) ) {
+  if ($user->sms_user['status'] != 2) {
+      $block = module_invoke('boxes', 'block', 'view', 'premium_box_non_authenticated');
+  } else if (isset($user->roles[12]) || !(count($user->roles) && isset($user->roles[1])) ) {
       $block = module_invoke('boxes', 'block', 'view', 'premium_box_disabled_user');
   } else {
     $html = check_markup(t(nopremium_get_message($node->type)));
