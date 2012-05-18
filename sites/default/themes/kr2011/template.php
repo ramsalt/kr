@@ -354,9 +354,10 @@ function kr2011_preprocess_node(&$vars){
     $blogcontent = node_load($vars['nid']);
     $blog = node_load($blogcontent->feeds_node_item->feed_nid);
     $html = '<div class="bloginfo">';
-    $html.='Fra: '.l($blog->title, 'node/'.$blog->nid);
+    $html.='Av: '.l($blog->title, 'node/'.$blog->nid);
     $html.='</div>';
-    $vars['content'] = $html.$vars['content'];
+    $html2 = 'Dette blogginnlegget er hentet fra: '.l($blogcontent->feeds_node_item->url, $blogcontent->feeds_node_item->url);
+    $vars['content'] = $html.$vars['content'].$html2;
   }
    
   
