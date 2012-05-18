@@ -355,7 +355,8 @@ function kr2011_preprocess_node(&$vars){
     $blog = node_load($blogcontent->feeds_node_item->feed_nid);
     $html = '<div class="bloginfo">';
     $html.='<div class="section-date-author">';
-    $html.=_openpublish_get_rdfa_date($blogcontent->created, 'm');
+    $date_label= date('d. ',$blogcontent->created).t(date('M',$blogcontent->created)).date(' Y. - H:i',$blogcontent->created);
+    $html.=_openpublish_get_rdfa_date($blogcontent->created, $date_label);
     $html.='Av: '.l($blog->title, 'node/'.$blog->nid);
     $html.='</div></div>';
     $html2 = 'Dette blogginnlegget er hentet fra: '.l($blogcontent->feeds_node_item->url, $blogcontent->feeds_node_item->url);
