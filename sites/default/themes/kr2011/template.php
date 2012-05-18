@@ -356,7 +356,7 @@ function kr2011_preprocess_node(&$vars){
     $html = '<div class="bloginfo">';
     $html.='Fra: '.l($blog->title, 'node/'.$blog->nid);
     $html.='</div>';
-    $vars['content'] = $html.$vars['content];
+    $vars['content'] = $html.$vars['content'];
   }
    
   
