@@ -350,6 +350,9 @@ function kr2011_preprocess_node(&$vars){
     $vars['content'] = $html;
     $vars['content'] .=$hidden;
   }
+  elseif($vars['type']=='eksternt-blogginnlegg'){
+    dsm($vars);
+  }
 }
 function kr2011_preprocess_page(&$vars){
 	if($vars['node']->type=='article' && strlen($vars['node']->field_deck[0]['safe'])>0){
