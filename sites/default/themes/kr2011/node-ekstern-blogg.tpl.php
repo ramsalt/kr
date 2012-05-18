@@ -7,6 +7,7 @@
   <?php endif; ?>
 
   <div class="content">
+test
     <?php print $content ?>
   </div>
 <!-- 
