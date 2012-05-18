@@ -351,8 +351,12 @@ function kr2011_preprocess_node(&$vars){
     $vars['content'] .=$hidden;
   }
   elseif($vars['type'] == 'eksternt_blogginnlegg'){
-    $blog = node_load($vars['nid']);
-    dsm($blog->feeds_node_item);
+    $blogcontent = node_load($vars['nid']);
+    $blog = node_load($blogcontent->feeds_node_item->feed_nid);
+    $html = '<div class="bloginfo">';
+    $html.='Fra: '.l($blog->title, 'node/'.$blog->nid);
+    $html.='</div>';
+    $vars['content'] = $html.$vars['content];
   }
    
   
