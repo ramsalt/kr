@@ -354,23 +354,33 @@ body a.edit-forsiderekkefolge {
   float: left;
   width: 100%;
 }
-.forside-blogger h2{
+.forside-blogger h3{
   background: none repeat scroll 0 0 #8C9FAA;
   color: #ffffff;
   padding: 4px 0px;
   text-align: center;
 }
-.forside-blogger h2 a{
+.forside-blogger h3 a{
   color: #ffffff;
   font-family: Helvetica,Arial,"Nimbus Sans L",sans-serif;
   
 }
 .forside-blogger .item-list ul{
-  padding: 0 6px;
+  padding: 5px 6px;
 }
 .forside-blogger .item-list ul li.views-row{
   clear: none;
   border-bottom: none;
+}
+body #wrapper .block .forside-blogger .item-list ul li.views-row .views-field-body,
+body #wrapper .block .forside-blogger .item-list ul li.views-row .views-field-title-1,
+body #wrapper .block .forside-blogger .item-list ul li.views-row .views-field-title{
+  
+}
+
+body #wrapper .block .forside-blogger .item-list ul li.views-row .views-field-title a{
+  color: #000000;
+  font-size: 1.5em;
 }
 .forside-blogger .views-row.views-row-1 .views-field-field-blogg-bilde-fid{
   float: left;
