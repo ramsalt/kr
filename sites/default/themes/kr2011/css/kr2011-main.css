@@ -122,7 +122,7 @@ body.front-page .galleriforside .views-field-title a{
   font-size: 12px;
   font-family: Helvetica,Arial,"Nimbus Sans L",sans-serif;
 }
-.node-type-eksternt-blogginnlegg #op-content .content span{
+.node-type-eksternt-blogginnlegg #op-content .content div{
   margin-bottom: 0.9em;
   display: block;
 }
