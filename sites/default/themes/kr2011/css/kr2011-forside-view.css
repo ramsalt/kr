@@ -358,10 +358,20 @@ body a.edit-forsiderekkefolge {
   background: none repeat scroll 0 0 #8C9FAA;
   color: #ffffff;
   padding: 4px 0px;
+  text-align: center;
 }
 .forside-blogger h2 a{
   color: #ffffff;
+  font-family: Helvetica,Arial,"Nimbus Sans L",sans-serif;
   
+}
+.forside-blogger .views-row{
+  padding: 0 6px;
+}
+.forside-blogger .views-row.views-row-1 .views-field-field-blogg-bilde-fid{
+  float: left;
+  height: 200px;
+  width: 200px;
 }
 .forside-blogger .views-row .views-field-body, .forside-blogger .views-row .views-field-field-blogg-bilde-fid{
   display: none;
