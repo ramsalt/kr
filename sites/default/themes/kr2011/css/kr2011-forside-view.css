@@ -365,8 +365,11 @@ body a.edit-forsiderekkefolge {
   font-family: Helvetica,Arial,"Nimbus Sans L",sans-serif;
   
 }
-.forside-blogger .views-row{
+.forside-blogger .item-list ul{
   padding: 0 6px;
+}
+.forside-blogger .item-list ul .views-row{
+  clear: none;
 }
 .forside-blogger .views-row.views-row-1 .views-field-field-blogg-bilde-fid{
   float: left;
