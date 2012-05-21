@@ -359,7 +359,7 @@ function kr2011_preprocess_node(&$vars){
     $html.=_openpublish_get_rdfa_date($blogcontent->created, $date_label);
     $html.=' | Fra bloggen: '.l($blog->title, 'node/'.$blog->nid);
     $html.='</div></div>';
-    $html2 = 'Dette blogginnlegget er hentet fra: '.l($blogcontent->feeds_node_item->url, $blogcontent->feeds_node_item->url);
+    $html2 = '<div class="bloggfooter">Dette blogginnlegget er hentet fra: '.l($blogcontent->feeds_node_item->url, $blogcontent->feeds_node_item->url).'</div>';
     $vars['content'] = $html.$vars['content'].$html2;
   }
    

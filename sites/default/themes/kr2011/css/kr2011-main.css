@@ -125,3 +125,7 @@ body.front-page .galleriforside .views-field-title a{
 .node-type-eksternt-blogginnlegg #op-content .content span{
   margin-bottom: 1.1em;
 }
+.bloggfooter{
+  float: left;
+  clear: left;
+}
