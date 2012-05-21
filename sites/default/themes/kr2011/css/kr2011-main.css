@@ -118,7 +118,7 @@ body.front-page .galleriforside .views-field-title a{
 .field-field-compu-blogginnlegg{
   clear: left;
 }
-.view-Blogger .views-field-teaser .field-content{
+.view-Blogger .views-field-body .field-content{
   font-size: 12px;
   font-family: Helvetica,Arial,"Nimbus Sans L",sans-serif;
 }
