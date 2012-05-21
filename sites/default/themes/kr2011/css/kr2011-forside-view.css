@@ -349,3 +349,10 @@ body a.edit-forsiderekkefolge {
 .views-field-field-galleri-bilde-fid-1 .views-row-odd IMG{
   margin: 0px;
 }
+
+.forside-blogger .views-row .views-field-body, .forside-blogger .views-row .views-field-field-blogg-bilde-fid{
+  display: none;
+}
+.forside-blogger .views-row.views-row-1 .views-field-body, .forside-blogger .views-row.views-row-1 .views-field-field-blogg-bilde-fid{
+  display: block;
+}
