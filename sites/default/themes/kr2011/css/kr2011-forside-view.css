@@ -354,6 +354,15 @@ body a.edit-forsiderekkefolge {
   float: left;
   width: 100%;
 }
+.forside-blogger h2{
+  background: none repeat scroll 0 0 #8C9FAA;
+  color: #ffffff;
+  padding: 4px 0px;
+}
+.forside-blogger h2 a{
+  color: #ffffff;
+  
+}
 .forside-blogger .views-row .views-field-body, .forside-blogger .views-row .views-field-field-blogg-bilde-fid{
   display: none;
 }
