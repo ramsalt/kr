@@ -375,7 +375,7 @@ body a.edit-forsiderekkefolge {
 body #wrapper .block .forside-blogger .item-list ul li.views-row .views-field-body,
 body #wrapper .block .forside-blogger .item-list ul li.views-row .views-field-title-1,
 body #wrapper .block .forside-blogger .item-list ul li.views-row .views-field-title{
-  
+  margin-left: 200px;
 }
 
 body #wrapper .block .forside-blogger .item-list ul li.views-row .views-field-title a{
