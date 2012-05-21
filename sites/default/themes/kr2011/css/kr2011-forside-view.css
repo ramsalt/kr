@@ -368,8 +368,9 @@ body a.edit-forsiderekkefolge {
 .forside-blogger .item-list ul{
   padding: 0 6px;
 }
-.forside-blogger .item-list ul .views-row{
+.forside-blogger .item-list ul li.views-row{
   clear: none;
+  border-bottom: none;
 }
 .forside-blogger .views-row.views-row-1 .views-field-field-blogg-bilde-fid{
   float: left;
