@@ -141,7 +141,7 @@
     font-family: Georgia, Arial, Helvetica;
     font-size: 15px;
 }
-.body-content p, .body-content ol, .body-content ul{
+.body-content p, .body-content ol, .body-content ul, .node-type-eksternt-blogginnlegg #op-content .content{
 	font-family: Georgia, Arial, Helvetica;
 	font-size: 15px; /* org 14 YWB */
 	line-height: 1.467em;
