@@ -135,3 +135,7 @@ body.front-page .galleriforside .views-field-title a{
 .sidebar .kr-lest ul{
   border: none;
 }
+.node-type-eksternt-blogginnlegg #op-content .content img{
+  width: 100%;
+  height: auto;
+}
