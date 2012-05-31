@@ -368,14 +368,20 @@ body a.edit-forsiderekkefolge {
 .forside-blogger .item-list ul{
   padding: 5px 6px;
 }
+.forside-blogger .item-list ul li.views-row-1.views-row{
+  clear: both;
+  float: left;
+  width: 100%;
+}
 .forside-blogger .item-list ul li.views-row{
   clear: none;
+  width: 50%;
   border-bottom: none;
 }
 body #wrapper .block .forside-blogger .item-list ul li.views-row .views-field-body,
 body #wrapper .block .forside-blogger .item-list ul li.views-row .views-field-title-1,
 body #wrapper .block .forside-blogger .item-list ul li.views-row .views-field-title{
-  margin-left: 200px;
+
 }
 
 body #wrapper .block .forside-blogger .item-list ul li.views-row .views-field-title a{
@@ -384,8 +390,7 @@ body #wrapper .block .forside-blogger .item-list ul li.views-row .views-field-ti
 }
 .forside-blogger .views-row.views-row-1 .views-field-field-blogg-bilde-fid{
   float: left;
-  height: 200px;
-  width: 200px;
+
 }
 .forside-blogger .views-row .views-field-body, .forside-blogger .views-row .views-field-field-blogg-bilde-fid{
   display: none;
