@@ -136,6 +136,6 @@ body.front-page .galleriforside .views-field-title a{
   border: none;
 }
 .node-type-eksternt-blogginnlegg #op-content .content img{
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+
 }
