@@ -354,6 +354,9 @@ body a.edit-forsiderekkefolge {
   float: left;
   width: 100%;
 }
+.forside-blogger .view-content{
+  float: left;
+}
 .forside-blogger h3{
   background: none repeat scroll 0 0 #8C9FAA;
   color: #ffffff;
@@ -367,6 +370,7 @@ body a.edit-forsiderekkefolge {
 }
 .forside-blogger .item-list ul{
   padding: 5px 6px;
+  float: left;
 }
 .forside-blogger .item-list ul li.views-row-1.views-row{
   clear: both;
@@ -376,6 +380,7 @@ body a.edit-forsiderekkefolge {
 .forside-blogger .item-list ul li.views-row{
   clear: none;
   width: 50%;
+  float: left;
   border-bottom: none;
 }
 body #wrapper .block .forside-blogger .item-list ul li.views-row .views-field-body,
@@ -400,6 +405,7 @@ body #wrapper .block .forside-blogger .item-list ul li.views-row .views-field-ti
 }
 .forside-blogger .more-link{
   height: 19px;
+  float: right;
   padding-right: 4px;
 }
 .forside-blogger .more-link a{
