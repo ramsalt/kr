@@ -232,7 +232,7 @@
 
 	function launch(target) {
 		if (!closing) {
-			
+			$("html").scrollTop(0);
 			element = target;
 			
 			makeSettings();
