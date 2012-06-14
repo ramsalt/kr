@@ -233,7 +233,7 @@ function quiz_get_user_results($user_id) {
   $results = array();
   $sql = "SELECT n.nid, n.title, qnp.pass_rate, qnrs.result_id, qnrs.time_start, qnrs.time_end, qnrs.score, qnrs.is_evaluated
     FROM {node} n
-    INNER JOIN {quiz_node_properties} qnp ON n.vid = qnp.vid
+    INNER JOIN {quiz_node_properties} qnp ON n.nid = qnp.nid
     INNER JOIN {quiz_node_results} qnrs ON qnrs.vid = qnp.vid
     INNER JOIN {users} u ON u.uid = qnrs.uid
     WHERE n.type = 'quiz'
@@ -327,7 +327,7 @@ function theme_quiz_get_user_results($results) {
   );
 
   $output = theme('table', $header, $rows);
-  $output .= '<p><em>' . t('@quiz that are not evaluated may have different score and grade when it is done.', array('@quiz' => QUIZ_NAME)) . '</em></p>';
+  $output .= '<p><em>' . t('@quizzes that are not evaluated may have different score and grade when it is done.', array('@quizzes' => QUIZ_NAME)) . '</em></p>';
   return $output;
 }
 
@@ -347,7 +347,7 @@ function theme_quiz_my_results_for_quiz($results) {
   while (list($key, $result) = each($results)) {
     $interval = _quiz_format_duration($result['time_end'] - $result['time_start']);
     $score = $result['score'] . ' %';
-    
+
     $row = array(
       'time_start'  => format_date($result['time_start'], 'small'),
       'duration' => $interval,

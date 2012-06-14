@@ -326,6 +326,7 @@ function quiz_admin_node_form_submit($form, &$form_state) {
   $form_state['values']['save_def_uid'] = variable_get('quiz_def_uid', NULL);
   $form_state['values']['nid'] = 0;
   $form_state['values']['vid'] = 0;
+  $form_state['values']['aid'] = '';
   _quiz_save_user_settings($form_state['values']);
 }
 
@@ -383,7 +384,7 @@ function quiz_admin_results($quiz, $rid) {
  */
 function _quiz_results_mr_store_filters($filters) {
   $pre = 'quiz_results_mr_';
-  $_SESSION[$pre .'name'] = $filters['name'];
+  $_SESSION[$pre .'name'] = trim($filters['name']);
   $_SESSION[$pre .'started'] = $filters['started'];
   $_SESSION[$pre .'finished'] = $filters['finished'];
   $_SESSION[$pre .'score'] = $filters['score'];
@@ -771,7 +772,7 @@ function _quiz_search_terms($start, $all = FALSE) {
     return $terms;
   }
   $sql = "SELECT t.name, t.tid
-          FROM term_data t
+          FROM {term_data} t
           WHERE vid IN (" . db_placeholders($sql_args) . ")";
   if (!$all) {
     $sql .= " AND t.name LIKE '%%%s%%'";
@@ -995,7 +996,7 @@ function _quiz_get_questions_from_form_state(&$form_state, &$questions_to_add) {
   $res = db_query(db_rewrite_sql($sql));
   while ($res_o = db_fetch_object($res)) {
     $cur_questions[$res_o->nid]->type = $res_o->type;
-    $cur_questions[$res_o->nid]->title = check_plain($res_o->title);
+    $cur_questions[$res_o->nid]->title = $res_o->title;
     $cur_questions[$res_o->nid]->latest_vid = $res_o->latest_vid;
     $questions[] = $cur_questions[$res_o->nid];
   }
@@ -1128,7 +1129,6 @@ function _quiz_add_questions_to_form(&$form, &$questions, &$quiz, &$question_typ
     }
     $link_options = array(
       'attributes' => array('class' => 'handle-changes'),
-      'html' => TRUE,
     );
     $form[$fieldset]['titles'][$id] = array('#value' => l($question->title, 'node/'. $question->nid, $link_options));
     $form[$fieldset]['types'][$id] = array(
@@ -1158,7 +1158,7 @@ function _quiz_add_questions_to_form(&$form, &$questions, &$quiz, &$question_typ
     else {
       $update_cell = array(
       '#type' => 'checkbox',
-      '#title' => (l(t('Latest'), 'node/' . $question->nid . '/revisions/' . $latest->vid . '/view')
+      '#title' => (l(t('Latest'), 'node/' . $question->nid . '/revisions/' . $question->latest_vid . '/view')
                   .' of '.
                   l(t('revisions'), 'node/' . $question->nid . '/revisions')
                   ),
@@ -1371,7 +1371,7 @@ function _quiz_question_browser_add_filter_fields(&$browser, &$question_types, $
   $filters['title'] = array(
     '#type' => 'textfield',
     '#size' => 20,
-    '#default_value' => $_SESSION[$pre .'title'],
+    '#default_value' => isset($_SESSION[$pre .'title']) ? $_SESSION[$pre .'title'] : '',
     '#ahah' => array(
       'path' => $ahah_path,
       'wrapper' => 'ahah-target',
@@ -1382,7 +1382,7 @@ function _quiz_question_browser_add_filter_fields(&$browser, &$question_types, $
   $filters['type'] = array(
     '#type' => 'select',
     '#options' => $type_options,
-    '#default_value' => $_SESSION[$pre .'type'],
+    '#default_value' => isset($_SESSION[$pre .'type']) ? $_SESSION[$pre .'type'] : '',
     '#ahah' => array(
       'path' => $ahah_path,
       'wrapper' => 'ahah-target',
@@ -1392,7 +1392,7 @@ function _quiz_question_browser_add_filter_fields(&$browser, &$question_types, $
   $filters['changed'] = array(
     '#type' => 'select',
     '#options' => $changed_options,
-    '#default_value' => $_SESSION[$pre .'changed'],
+    '#default_value' => isset($_SESSION[$pre .'changed']) ? $_SESSION[$pre .'changed'] : '',
     '#ahah' => array(
       'path' => $ahah_path,
       'wrapper' => 'ahah-target',
@@ -1402,7 +1402,7 @@ function _quiz_question_browser_add_filter_fields(&$browser, &$question_types, $
   $filters['name'] = array(
     '#type' => 'textfield',
     '#size' => 10,
-    '#default_value' => $_SESSION[$pre .'name'],
+    '#default_value' => isset($_SESSION[$pre .'name']) ? $_SESSION[$pre .'name'] : '',
     '#ahah' => array(
       'path' => $ahah_path,
       'wrapper' => 'ahah-target',
@@ -1426,11 +1426,11 @@ function _quiz_question_browser_prepare_filter_sql(&$filter_params) {
   $pre = 'quiz_question_browser_';
   $changed_timestamps = _quiz_get_interval_timestamps('changed');
   $filter_sql = '';
-  if (drupal_strlen($_SESSION[$pre .'title']) > 0) {
+  if (isset($_SESSION[$pre .'title']) && drupal_strlen($_SESSION[$pre .'title']) > 0) {
     $filter_sql .= ' AND n.title LIKE \'%s%%\'';
     $filter_params[] = $_SESSION[$pre .'title'];
   }
-  if (drupal_strlen($_SESSION[$pre .'name']) > 0) {
+  if (isset($_SESSION[$pre .'name']) && drupal_strlen($_SESSION[$pre .'name']) > 0) {
     $filter_sql .= ' AND u.name LIKE \'%s%%\'';
     $filter_params[] = $_SESSION[$pre .'name'];
   }
@@ -1694,10 +1694,10 @@ function _quiz_question_browser_submit($form, &$form_state) {
  */
 function _quiz_browser_store_filters($filters) {
   $pre = 'quiz_question_browser_';
-  $_SESSION[$pre .'title'] = $filters['title'];
+  $_SESSION[$pre .'title'] = trim($filters['title']);
   $_SESSION[$pre .'type'] = $filters['type'];
   $_SESSION[$pre .'changed'] = $filters['changed'];
-  $_SESSION[$pre .'name'] = $filters['name'];
+  $_SESSION[$pre .'name'] = trim($filters['name']);
 }
 
 
@@ -1919,9 +1919,9 @@ function theme_quiz_admin_summary($quiz, $questions, $score, $summary) {
   $output .= '<div id="quiz_score_possible">'. t('This person got %num_correct of %question_count possible points.', $params) .'</div>'."\n";
   $output .= '<div id="quiz_score_percent">'. t('Total score: @score %', array('@score' => $score['percentage_score'])) .'</div>'."\n";
   if (isset($summary['passfail']))
-    $output .= '<div id="quiz_summary">'. $summary['passfail'] .'</div>'."\n";
+    $output .= '<div id="quiz_summary">'. check_markup($summary['passfail'], $quiz->format, FALSE) .'</div>'."\n";
   if (isset($summary['result']))
-    $output .= '<div id="quiz_summary">'. $summary['result'] .'</div>'."\n";
+    $output .= '<div id="quiz_summary">'. check_markup($summary['result'], $quiz->format, FALSE) .'</div>'."\n";
 
   // Get the feedback for all questions.
   require_once(drupal_get_path('module', 'quiz') .'/quiz.pages.inc');

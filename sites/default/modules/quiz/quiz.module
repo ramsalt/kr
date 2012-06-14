@@ -385,7 +385,7 @@ function quiz_menu() {
     'page arguments' => array(3),
     'access arguments' => array(3),
     'access callback' => 'quiz_access_my_result',
-    'type' => MENU_LOCAL_TASK,
+    'type' => MENU_CALLBACK,
     'file' => 'quiz.pages.inc',
   );
 
@@ -393,7 +393,7 @@ function quiz_menu() {
     'title' => 'Results',
     'page callback' => 'quiz_admin_results',
     'page arguments' => array(1, 3),
-    'type' => MENU_LOCAL_TASK, // MENU_CALLBACK, MENU_SUGGESTED_ITEM, MENU_LOCAL_TASK, MENU_DEFAULT_LOCAL_TASK
+    'type' => MENU_CALLBACK, // , MENU_SUGGESTED_ITEM, MENU_LOCAL_TASK, MENU_DEFAULT_LOCAL_TASK
     'file' => 'quiz.admin.inc',
     'access arguments' => array(1, 3),
     'access callback' => 'quiz_access_results',
@@ -838,7 +838,7 @@ function quiz_load($node) {
 function quiz_view($node, $teaser = FALSE, $page = FALSE) {
   drupal_alter('quiz_view', $node, $teaser, $page);
   $node = node_prepare($node, $teaser);
-
+  
   // Number of questions is needed on the statistics page.
   $node->number_of_questions = $node->number_of_random_questions + _quiz_get_num_always_questions($node->vid);
 
@@ -947,8 +947,6 @@ function quiz_form(&$node) {
 
   // We tell quiz_form_alter to check for the manual revisioning permission.
   $form['#quiz_check_revision_access'] = TRUE;
-
-  $form['theme']['#theme'] = 'quiz_node_form';
 
   $form['title'] = array(
     '#type' => 'textfield',
@@ -1544,7 +1542,7 @@ function quiz_get_all_version_titles() {
 function quiz_get_score_data($nids, $uid, $include_num_questions = FALSE) {
   // Validate that the nids are integers.
   foreach ($nids as $key => $nid) {
-    if (!is_int($nid)) {
+    if (!_quiz_is_int($nid)) {
       unset($nids[$key]);
     }
   }
@@ -1675,7 +1673,7 @@ function quiz_take_quiz($quiz) {
 
   // If anonymous user and no unique hash, refresh with a unique string to
   // prevent caching.
-  if (!$quiz->name && arg(4) == NULL) {
+  if (!$user->uid && arg(4) != NULL) {
     drupal_goto('node/'. $quiz->nid .'/take/'. md5(mt_rand() . time()));
   }
 
@@ -1739,7 +1737,7 @@ function quiz_take_quiz($quiz) {
   if (!isset($_POST['op'])) {
     // @todo Starting new quiz... Do we need to show instructions here?
   }
-  elseif ($_POST['question_nid'] != $_SESSION['quiz_'. $quiz->nid]['quiz_questions'][0]['nid']) {
+  elseif (isset($_POST['question_nid']) && $_POST['question_nid'] != $_SESSION['quiz_'. $quiz->nid]['quiz_questions'][0]['nid']) {
     // The user has pressed the navigation buttons multiple times...
   }
   // We maintain two lists: previous questions and upcomming questions.
@@ -1768,7 +1766,7 @@ function quiz_take_quiz($quiz) {
       quiz_store_question_result($quiz, $result, array('set_msg' => TRUE, 'question_data' => $former_question_array));
     }
     elseif ($quiz->allow_jumping && _quiz_is_int($_POST['jump_to_question'])) {
-      $_POST['op'] = t('Skip');
+      $_POST['op'] = t('Leave blank');
       $allow_skipping = TRUE;
       $jumping = TRUE;
     }
@@ -1806,7 +1804,7 @@ function quiz_take_quiz($quiz) {
     }
   }
   // Check for a skip.
-  if (($_POST['op'] == t('Skip') || $_POST['op'] == t('Skip and finish')) && $allow_skipping) {
+  if (isset($_POST['op']) && ($_POST['op'] == t('Leave blank') || $_POST['op'] == t('Leave blank and finish')) && $allow_skipping) {
     if (!isset($_SESSION['quiz_'. $quiz->nid]['result_id'])) {
       $_SESSION['quiz_'. $quiz->nid]['result_id'] = quiz_create_rid($quiz);
     }
@@ -1829,7 +1827,7 @@ function quiz_take_quiz($quiz) {
     quiz_store_question_result($quiz, $result, array('set_msg' => TRUE, 'question_data' => $former_question_array));
   }
 
-  if ($check_jump) {
+  if (isset($check_jump) && $check_jump) {
     if ($quiz->allow_jumping && _quiz_is_int($_POST['jump_to_question'])) {
       quiz_jump_to($_POST['jump_to_question'], $quiz, $_SESSION['quiz_'. $quiz->nid]['result_id']);
     }
@@ -1852,10 +1850,11 @@ function quiz_take_quiz($quiz) {
       $show_validation_message = TRUE;
       array_unshift($_SESSION['quiz_'. $quiz->nid]['quiz_questions'], $former_question_array);
       if (is_array($_SESSION['quiz_'. $quiz->nid]['previous_quiz_questions'])) {
-        array_shift($_SESSION['quiz_'. $quiz->nid]['previous_quiz_questions']);
+        array_pop($_SESSION['quiz_'. $quiz->nid]['previous_quiz_questions']);
       }
       // Avoid caching for anonymous users
       if (!$user->uid) {
+        drupal_set_message($q_passed_validation, 'error');
         drupal_goto('node/'. $quiz->nid .'/take', array('quizkey' => md5(mt_rand() . time())));
       }
     }
@@ -1935,6 +1934,7 @@ function quiz_take_quiz($quiz) {
   }
   // Else we're at the end of quiz.
   else {
+    drupal_set_title(filter_xss($quiz->title));
     $quiz_end = TRUE;
   }
   // If we're at the end of the quiz.
@@ -1966,9 +1966,9 @@ function quiz_take_quiz($quiz) {
 
 /**
  * Set the current session to jump to a specific question number
- * 
+ *
  * @param int $question_num
- *  The question number we want to jump to 
+ *  The question number we want to jump to
  */
 function quiz_jump_to($question_num, $quiz, $rid) {
   $num_next = count($_SESSION['quiz_'. $quiz->nid]['quiz_questions']);
@@ -2152,6 +2152,8 @@ function quiz_end_scoring($quiz, $rid) {
  *  Score as a number
  */
 function quiz_end_actions($quiz, $rid, $score) {
+  // Call hook_quiz_finished().
+  module_invoke_all('quiz_finished', $quiz, $score, $rid);
   // Lets piggy back here to perform the quiz defined action since were done
   // with this quiz.
   // We will verify that there is an associated action with this quiz and then
@@ -2161,18 +2163,13 @@ function quiz_end_actions($quiz, $rid, $score) {
     // have simply passed the actions_do() function an empty array. By passing
     // this function a single id then it will retrieve the callback, get the
     // parameters and perform that function (action) for you.
-    // @todo Add ability to assign multiple actions and pass the actions_do() an
-    //   array of aid's
-    // @todo Create feature to only fire action if certain score is reached.
     $context = array(
       'result_id' => $rid,
       'score' => $score,
     );
-    actions_do($quiz->aid, $quiz, $context, $score);
+    actions_do($quiz->aid, $quiz, $context, $score); // WARNING: MIGHT GET REDIRECTED HERE
   }
 
-  // Call hook_quiz_finished().
-  module_invoke_all('quiz_finished', $quiz, $score, $rid);
   return $score;
 }
 
@@ -2217,6 +2214,7 @@ function quiz_quiz_finished($quiz, $score, $rid) {
       'points' => $score['numeric_score'],
       'description' => t('Attened @title @quiz on @time', $variables),
       'tid' => $selected_tid,
+      'uid' => $taker->uid,
     );
     userpoints_userpointsapi($params);
   }
@@ -2228,16 +2226,16 @@ function quiz_quiz_finished($quiz, $score, $rid) {
  * Performs actions like sending quiz results over email at the end of quiz.
  */
 function quiz_quiz_scored($quiz, $score, $rid) {
-  global $user;
-
-  if (variable_get('quiz_email_results', 0) && $user->uid != 0 && $score['is_evaluated']) {
-    drupal_mail('quiz', 'notice', $user->mail, NULL, array($quiz, $score, $rid, 'taker'));
+  $sql = 'SELECT u.uid, u.mail FROM {users} u JOIN {quiz_node_results} qnr ON u.uid = qnr.uid WHERE result_id = %d';
+  $taker = db_fetch_object(db_query($sql, $rid));
+  if (variable_get('quiz_email_results', 0) && $taker->uid != 0 && $score['is_evaluated']) {
+    drupal_mail('quiz', 'notice', $taker->mail, NULL, array($quiz, $score, $rid, 'taker'));
     drupal_set_message(t('The results has been sent to the users e-mail address.'));
   }
 
   // Calls userpoints functions to credit user point based on number of correct
   // answers.
-  if ($quiz->has_userpoints && $user->uid != 0 && $score['is_evaluated']) {
+  if ($quiz->has_userpoints && $taker->uid != 0 && $score['is_evaluated']) {
 
     //Looking up the tid of the selected Userpoint vocabulary
     $selected_tid = db_result(
@@ -2585,7 +2583,7 @@ function quiz_calculate_score($quiz, $rid) {
   // 1. Fetch all questions and their max scores
   $sql = 'SELECT a.question_nid, a.question_vid, n.type, r.max_score, qt.max_score as term_max_score
   FROM {quiz_node_results_answers} a
-  LEFT JOIN {node} n ON (question_nid = nid)
+  LEFT JOIN {node} n ON (a.question_nid = n.nid)
   LEFT OUTER JOIN {quiz_node_relationship} r ON (r.child_vid = a.question_vid AND r.parent_vid = %d)
   LEFT OUTER JOIN {quiz_terms} qt ON (a.tid = qt.tid AND qt.vid = %d)
   WHERE a.result_id = %d';
@@ -2690,9 +2688,11 @@ function quiz_build_question_list($quiz) {
 
   // Get required questions first.
   $sql = "SELECT child_nid as nid, child_vid as vid, max_score as relative_max_score
-    FROM {quiz_node_relationship}
-    WHERE parent_vid = %d
-      AND question_status = %d
+    FROM {quiz_node_relationship} qnr
+    JOIN {node} n ON qnr.child_nid = n.nid
+    WHERE qnr.parent_vid = %d
+    AND qnr.question_status = %d
+    AND n.status = 1
     ORDER BY weight";
   $result = db_query($sql, $quiz->vid, QUESTION_ALWAYS);
   while ($question_node = db_fetch_array($result)) {
@@ -2802,7 +2802,7 @@ function quiz_node_map($node, $include_question = TRUE) {
   if ($include_question) {
     $new_question->question = check_markup($node->body, $node->format, FALSE);
   }
-  $new_question->title = check_plain($node->title);
+  $new_question->title = $node->title;
   $new_question->nid = $node->nid;
   $new_question->vid = $node->vid;
   $new_question->type = $node->type;
@@ -2913,19 +2913,19 @@ function _quiz_resume_existing_quiz($quiz, $uid, $rid) {
       if ($question['vid'] == $answered->vid) {
         $already_answered[] = $answered->vid;
         // we found it, no need to continue the foreach loop
-        continue;
+        continue 2;
       }
     }
     // This question was answered, but wasn't in $questions, so we need
     // to replace an unanswered question in $questions with it.
     if (!in_array($answered->vid, $already_answered)) {
       foreach ($questions as $key => $question) {
-        if (!in_array($question['vid'],$already_answered) && $question['random'] === TRUE) {
+        if (!in_array($question['vid'], $already_answered) && $question['random'] === TRUE) {
           $questions[$key]['vid'] = $answered->vid;
           $questions[$key]['nid'] = $answered->nid;
           $questions[$key]['rid'] = $rid;
           $already_answered[] = $answered->vid;
-          continue;
+          continue 2;
         }
       }
     }
@@ -2946,6 +2946,12 @@ function _quiz_resume_existing_quiz($quiz, $uid, $rid) {
       $next_number++;
       $_SESSION['quiz_'. $quiz->nid]['quiz_questions'][] = $question;
     }
+  }
+
+  if (empty($_SESSION['quiz_'. $quiz->nid]['quiz_questions']) &&
+      count($_SESSION['quiz_'. $quiz->nid]['previous_quiz_questions']) == count($already_answered)
+    ) {
+    $_SESSION['quiz_'. $quiz->nid]['quiz_questions'][] = array_pop($_SESSION['quiz_'. $quiz->nid]['previous_quiz_questions']);
   }
 
   $_SESSION['quiz_'. $quiz->nid]['result_id'] = $rid;
@@ -3182,8 +3188,13 @@ function _quiz_get_random_questions($quiz) {
     else {
       // Select random question from assigned pool.
       $result = db_query_range("SELECT child_nid as nid, child_vid as vid
-                                FROM {quiz_node_relationship}
-                                WHERE parent_vid = %d AND parent_nid = %d AND question_status = %d ORDER BY RAND()",
+                                FROM {quiz_node_relationship} qnr
+                                JOIN {node} n on qnr.child_nid = n.nid
+                                WHERE qnr.parent_vid = %d
+                                AND qnr.parent_nid = %d
+                                AND qnr.question_status = %d
+                                AND n.status = 1
+                                ORDER BY RAND()",
                                 $quiz->vid, $quiz->nid, QUESTION_RANDOM, 0, $num_random);
       while ($question_node = db_fetch_array($result)) {
         $question_node['random'] = TRUE;
@@ -3969,8 +3980,9 @@ function _quiz_redirect_if_empty($node) {
  */
 function _quiz_get_num_always_questions($vid) {
   $sql = 'SELECT count(*)
-          FROM {quiz_node_relationship}
-          WHERE parent_vid = %d AND question_status = %d';
+          FROM {quiz_node_relationship} qnr
+          JOIN {node} n ON n.nid = qnr.child_nid
+          WHERE n.status = 1 AND qnr.parent_vid = %d AND qnr.question_status = %d';
   return db_result(db_query($sql, $vid, QUESTION_ALWAYS));
 }
 
