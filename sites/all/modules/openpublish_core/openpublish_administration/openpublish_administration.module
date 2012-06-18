@@ -37,8 +37,8 @@ function openpublish_administration_form_alter(&$form, $form_state, $form_id) {
     
     // Hide the split summary button
     if (!empty($form['body_field'])) {
-      $form['body_field']['teaser_js']['#type'] = 'hidden';
-      $form['body_field']['teaser_include']['#type'] = 'hidden';
+//      $form['body_field']['teaser_js']['#type'] = 'hidden';
+//      $form['body_field']['teaser_include']['#type'] = 'hidden';
     }    
   }
 }
