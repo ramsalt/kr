@@ -219,7 +219,7 @@ class GAFeed {
       $error_msg = 'Code: !code - Error: !message - Message: !details';
       $error_vars = array('!code' => $this->response->code, '!message' => $this->response->error, '!details' => strip_tags($this->response->data));
       $this->error =  t($error_msg, $error_vars);
-      watchdog('google analytics reports', $error_msg, $error_vars, WATCHDOG_ERROR);
+      watchdog('ga reports', $error_msg, $error_vars, WATCHDOG_ERROR);
     }
   }
 
@@ -341,8 +341,8 @@ class GAFeed {
     $parameters['end-date'] = $end_date;
 
     /* Accept only strings, not arrays, for the following parameters */
-    $parameters['filters'] = $params['filters'];
-    $parameters['segment'] = $params['segment'];
+    if (!empty($params['filters'])) $parameters['filters'] = $params['filters'];
+    if (!empty($params['segment'])) $parameters['segment'] = $params['segment'];
     $parameters['start-index'] = $params['start_index'];
     $parameters['max-results'] = $params['max_results'];
 
