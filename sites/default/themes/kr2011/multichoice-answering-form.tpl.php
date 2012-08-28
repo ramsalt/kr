@@ -9,12 +9,10 @@
  */
 //print '<pre>';print_r($form);print '</pre>';
 
-if(strlen($form['#parameters'][2]->title)>2){
-  print '<h2>'.$form['#parameters'][2]->title.'</h2>';
+if(strlen($variables['form']['question']['#value'])==0){
+  print $form['#parameters'][2]->teaser;
 }
-if(strlen($form['#parameters'][2]->teaser)>2){
-  print '<p>'.$form['#parameters'][2]->teaser.'</h2>';
-}
+
 print drupal_render($form);
 
 ?>
