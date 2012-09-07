@@ -37,10 +37,12 @@ function _statistics_node_generate_chart ($node) {
 	// Define
 	$jquery_file = array('none' => 'jquery-1.4.2.js', 'min' => 'jquery-1.4.2.min.js'); 
 	jquery_update_jquery_path($jquery_file);
+
+	_statistics_node_set_ticks(null, true);
 	
 	$values = $node->field_values[0]['value'];
 	$data_array = _statistics_node_parse_chart_values($values);
-	
+
 	$chart_data = array(
 		'#plugin'    => 'jqplot', // Google Charts API will be used
   	'#type'     => 'line2D', // To show a simple 2D line chart
@@ -69,6 +71,7 @@ function _statistics_node_generate_chart ($node) {
 	
 	// Check if years
 	$ticks = _statistics_node_set_ticks();
+
 	$axis = $chart_data['#type'] == 'vbar2D' ? 'yaxis' : 'xaxis';
 	
 	switch ($node->field_x_format[0]['value']) {
@@ -166,8 +169,10 @@ function _statistics_node_generate_table ($values) {
 	return theme('table', array_shift($values_array), $values_array, array('class'=>'data-table')).$suffix;
 }
 
-function _statistics_node_set_ticks ($value = null) {
+function _statistics_node_set_ticks ($value = null, $reset = false) {
 	static $values = array();
+
+  if($reset) $values = array();
 
 	if($value) {
 		$values[] = $value;

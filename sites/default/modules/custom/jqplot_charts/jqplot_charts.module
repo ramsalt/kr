@@ -26,6 +26,35 @@ function jqplot_charts_charts_info() {
   );
 }
 
+function jqplot_charts_set_charts ($id = null, $data = null, $settings = null) {
+  static $charts = array();
+  
+  if($id && $data && $settings) {
+    if (!isset($charts[$id])) {
+      $charts[$id]['id'] = $id;
+      $charts[$id]['data'] = $data;
+      $charts[$id]['settings'] = $settings;
+    }
+  }
+  return $charts;
+}
+
+function jqplot_charts_preprocess_page(&$vars) {
+  $charts = jqplot_charts_set_charts();
+
+  $chart_loader = '';
+  foreach($charts as $id => $chart) {
+    $chart_loader .= '$.jqplot("'.$chart['id'].'", '.json_encode($chart['data']).',
+     '.$chart['settings'].'); '; 
+  }
+
+  drupal_add_js('(function ($) { Drupal.behaviors.jqplotCharts = function(context) {
+  	'.$chart_loader.'	 
+  	}; 
+  })(jQuery);', 
+  'inline');
+}
+
 /**
  * Implementation of hook_chart_types().
  */

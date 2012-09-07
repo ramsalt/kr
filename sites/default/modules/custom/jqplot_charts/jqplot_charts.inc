@@ -9,7 +9,7 @@
  *   Array. The
  */
 function _jqplot_charts_render(&$data) {
-	$id = 'chart-'.time();
+	$id = 'chart-'.drupal_get_token(serialize($data));
 	
 	_jqplot_charts_init_jqplot ($data['#type']);
 	_jqplot_charts_chart ($id, $data);
@@ -81,12 +81,7 @@ function _jqplot_charts_chart ($id, &$data) {
 	$settings_string = str_replace('"$.jqplot.DateAxisRenderer"', '$.jqplot.DateAxisRenderer', $settings_string);
 	$settings_string = str_replace('"$.jqplot.CategoryAxisRenderer"', '$.jqplot.CategoryAxisRenderer', $settings_string);
 	
-	drupal_add_js('(function ($) { Drupal.behaviors.jqplotCharts = function(context) {
-			 $.jqplot("'.$id.'", '.json_encode($series).',
-			  '.$settings_string.'); 
-		}; 
-	})(jQuery);', 
-	'inline');
+	jqplot_charts_set_charts($id, $series, $settings_string);
 }
 
 function _jqplot_charts_init_jqplot ($type = 'line2D') {
