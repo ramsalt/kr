@@ -115,6 +115,16 @@ padding-top: 2px;
 	text-decoration: none;
 	width: auto;
 }
+.block-tema .node-text p{
+	color: black;
+	display: block;
+	font-family: Helvetica, Arial, 'Nimbus Sans L', sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 16.78333282470703px;
+}
 .block-tema.tema-layout-std .item.first{
 	width: auto;
 	padding: 0px;
