@@ -48,7 +48,7 @@ function _tema_block($nid){
 		
 		$node = node_load($nid);
 		$layout = variable_get('tema_layout_'.$nid, 'std');
-		$content = '<div class="edit-tema-link">'.l('Rediger block', 'admin/build/block/configure/tema/'.$nid).'</div>';
+		//$content = '<div class="edit-tema-link">'.l('Rediger block', 'admin/build/block/configure/tema/'.$nid).'</div>';
 		if($layout == 'std'){
 			$content .= _tema_layout_std($node);
 		}
