@@ -28,10 +28,12 @@
  * @see openpublish_node_article_preprocess()
  */
 ?>
+
 <?php if ($ingress): ?>
 	<div class="ingress">
             <?php print $ingress_value; ?>
         </div><!-- /.ingress -->
+
 <?php endif; ?>
 <div class="section-date-author"> 
   

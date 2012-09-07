@@ -1,0 +1,132 @@
+.block-tema .edit-tema-link{
+	display: none;
+}
+.block-tema .edit-tema-link a{
+	padding: 5px;
+float: left;
+color: #093D72;
+}
+body.admin-nw .block-tema .edit-tema-link{
+	display: block;
+	position: absolute;
+	right: 0px;
+	background: #999;
+	
+	border-radius: 3px;
+}
+
+.block-tema .content{
+	position: relative;
+}
+.block-tema{
+	background: #DAE2E7;
+}
+
+.block-tema .title{
+	-webkit-background-clip: border-box;
+	-webkit-background-origin: padding-box;
+	-webkit-background-size: auto;
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-color: #94021C;
+	background-image: none;
+	background-origin: padding-box;
+	background-size: auto;
+	color: #333;
+	display: block;
+	font-family: Helvetica, Arial, 'Nimbus Sans L', sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	height: 14px;
+	line-height: normal;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	padding-right: 0px;
+	padding-top: 4px;
+}
+.block-tema .title a {
+	color: white;
+	cursor: auto;
+	display: inline;
+	font-family: Helvetica, Arial, 'Nimbus Sans L', sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	height: auto;
+	line-height: normal;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: auto;
+}
+.block-tema a.lesmer{
+	background: url("/sites/default/themes/kr2011/images/spirite1.png") no-repeat scroll 100% -40px transparent;
+	padding-right: 20px;
+	color: #999;
+	font-size: 12px;
+padding-top: 2px;
+}
+.block-tema .node-title a{
+	-webkit-background-clip: border-box;
+	-webkit-background-origin: padding-box;
+	-webkit-background-size: auto;
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-color: transparent;
+	background-image: none;
+	background-origin: padding-box;
+	background-size: auto;
+	border-bottom-color: black;
+	border-bottom-style: none;
+	border-bottom-width: 0px;
+	color: black;
+	cursor: auto;
+	display: inline;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	height: auto;
+	letter-spacing: normal;
+	line-height: normal;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	text-decoration: none;
+	width: auto;
+}
+.block-tema.tema-layout-std .item.first{
+	width: auto;
+	padding: 0px;
+}
+.block-tema.tema-layout-std .item.first .node-text, .block-tema.tema-layout-std .item.first .node-title{
+	padding: 0px 10px;
+}
+.block-tema.tema-layout-std .item{
+	width: 166px;
+	float: left;
+	padding: 0px 10px;
+}
+.block-tema.tema-layout-std .item.number-3{
+	padding: 0px 23px 0px 19px;
+}
