@@ -48,9 +48,9 @@ function jqplot_charts_preprocess_page(&$vars) {
      '.$chart['settings'].'); '; 
   }
 
-  drupal_add_js('(function ($) { Drupal.behaviors.jqplotCharts = function(context) {
+  drupal_add_js('(function ($) { try { Drupal.behaviors.jqplotCharts = function(context) {
   	'.$chart_loader.'	 
-  	}; 
+  	}; } catch(err) { } 
   })(jQuery);', 
   'inline');
 }
