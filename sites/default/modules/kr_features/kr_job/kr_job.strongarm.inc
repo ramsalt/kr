@@ -73,17 +73,18 @@ function kr_job_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'content_extra_weights_job';
   $strongarm->value = array(
-    'title' => '-5',
-    'body_field' => '-1',
-    'revision_information' => '4',
-    'author' => '5',
-    'options' => '6',
-    'comment_settings' => '8',
-    'menu' => '1',
-    'path' => '9',
-    'attachments' => '7',
-    'scheduler_settings' => '2',
-    'workflow' => '3',
+    'workflow' => '6',
+    'title' => '1',
+    'body_field' => '4',
+    'revision_information' => '7',
+    'author' => '8',
+    'options' => '9',
+    'comment_settings' => '11',
+    'menu' => '5',
+    'taxonomy' => '-3',
+    'path' => '12',
+    'attachments' => '10',
+    'path_redirect' => '13',
   );
 
   $export['content_extra_weights_job'] = $strongarm;

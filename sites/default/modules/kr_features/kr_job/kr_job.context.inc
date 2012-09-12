@@ -28,7 +28,7 @@ function kr_job_context_default_contexts() {
           'module' => 'views',
           'delta' => 'jobs-block_1',
           'region' => 'right',
-          'weight' => 0,
+          'weight' => 2,
         ),
       ),
     ),

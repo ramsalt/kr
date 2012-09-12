@@ -8,6 +8,15 @@ function kr_job_ctools_plugin_api() {
   if ($module == "context" && $api == "context") {
     return array("version" => 3);
   }
+  elseif ($module == "openlayers" && $api == "openlayers_presets") {
+    return array("version" => 1);
+  }
+  elseif ($module == "openlayers" && $api == "openlayers_styles") {
+    return array("version" => 1);
+  }
+  elseif ($module == "page_manager" && $api == "pages_default") {
+    return array("version" => 1);
+  }
   elseif ($module == "strongarm" && $api == "strongarm") {
     return array("version" => 1);
   }
@@ -28,6 +37,31 @@ function kr_job_imagecache_default_presets() {
           'data' => array(
             'width' => '45',
             'height' => '',
+            'upscale' => 0,
+          ),
+        ),
+      ),
+    ),
+    'premium_stilling_liste' => array(
+      'presetname' => 'premium_stilling_liste',
+      'actions' => array(
+        '0' => array(
+          'weight' => '-10',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '129',
+            'height' => '',
+            'upscale' => 0,
+          ),
+        ),
+        '1' => array(
+          'weight' => '-9',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '',
+            'height' => '56',
             'upscale' => 0,
           ),
         ),
