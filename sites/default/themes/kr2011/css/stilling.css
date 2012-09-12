@@ -11,7 +11,11 @@
 }
 .premiumstillingsblock .item-list ul li{
 	float: left;
-    width: 20%;
+    margin: 0 4px 0 0;
+    width: 135px;
+}
+.premiumstillingsblock .item-list ul li.views-row-last{
+	margin-right: 0px;
 }
 .premiumstillingsblock .item-list ul li .views-field-title{
 	font-size: 1em;
