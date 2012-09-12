@@ -24,7 +24,9 @@
 	margin-right: 0px;
 }
 .premiumstillingsblock .item-list ul li .views-field-title a{
-	font-size: 1em;
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
 }
 .premiumstillingsblock .item-list ul li .views-field-field-job-utlyser-value{
 	
