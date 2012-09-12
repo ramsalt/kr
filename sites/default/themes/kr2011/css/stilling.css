@@ -14,7 +14,7 @@
     margin: 0 3px 0 0;
     padding: 3px;
     width: 129px;
-    
+    min-height: 121px;
     overflow: hidden;
     border: 1px solid #A4A4A4;
     border-radius: 4px;
@@ -29,7 +29,9 @@
     font-weight: bold;
 }
 .premiumstillingsblock .item-list ul li .views-field-field-job-utlyser-value{
-	
+    float: left;
+    overflow: hidden;
+    width: 100%;
 }
 .premiumstillingsblock .item-list ul li .views-field-field-main-image-fid a {
 	display: block;
