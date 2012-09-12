@@ -12,9 +12,13 @@
 .premiumstillingsblock .item-list ul li{
 	float: left;
     margin: 0 3px 0 0;
-    width: 135px;
+    padding: 3px;
+    width: 129px;
     height: 100px;
     overflow: hidden;
+    border: 1px solid #A4A4A4;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
 }
 .premiumstillingsblock .item-list ul li.views-row-last{
 	margin-right: 0px;
@@ -26,6 +30,7 @@
 	display: block;
     float: left;
     width: 100%;
+    text-align: center;
 }
 .premiumstillingsblock .item-list ul li .views-field-field-main-image-fid a img{
 	float: none;
