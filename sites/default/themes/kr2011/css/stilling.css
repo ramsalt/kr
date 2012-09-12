@@ -22,3 +22,13 @@
 .premiumstillingsblock .item-list ul li .views-field-title{
 	font-size: 1em;
 }
+.premiumstillingsblock .item-list ul li .views-field-field-main-image-fid a {
+	display: block;
+    float: left;
+    width: 100%;
+}
+.premiumstillingsblock .item-list ul li .views-field-field-main-image-fid a img{
+	float: none;
+	margin: 0px;
+	padding: 0px;
+}
