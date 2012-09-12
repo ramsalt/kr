@@ -20,6 +20,9 @@
     border-radius: 4px;
     -moz-border-radius: 4px;
 }
+.premiumstillingsblock .item-list ul li:hover{
+	background: #003663;
+}
 .premiumstillingsblock .item-list ul li.views-row-last{
 	margin-right: 0px;
 }
