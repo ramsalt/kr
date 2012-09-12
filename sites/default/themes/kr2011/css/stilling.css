@@ -2,5 +2,9 @@
 	
 }
 .premiumstillingsblock .item-list ul li{
-	
+	float: left;
+    width: 20%;
+}
+.premiumstillingsblock .item-list ul li .views-field-title{
+	font-size: 1em;
 }
