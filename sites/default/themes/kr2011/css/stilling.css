@@ -11,8 +11,10 @@
 }
 .premiumstillingsblock .item-list ul li{
 	float: left;
-    margin: 0 4px 0 0;
+    margin: 0 3px 0 0;
     width: 135px;
+    height: 100px;
+    overflow: hidden;
 }
 .premiumstillingsblock .item-list ul li.views-row-last{
 	margin-right: 0px;
