@@ -41,9 +41,9 @@ function kr_job_openlayers_presets() {
       ),
       'openlayers_behavior_panzoombar' => array(),
     ),
-    'default_layer' => 'osm_mapnik',
+    'default_layer' => 'google_normal',
     'layers' => array(
-      'osm_mapnik' => 'osm_mapnik',
+      'google_normal' => 'google_normal',
       'stillinger_kartlayer_openlayers_1' => 'stillinger_kartlayer_openlayers_1',
     ),
     'layer_styles' => array(
@@ -62,9 +62,9 @@ function kr_job_openlayers_presets() {
     'projection' => '900913',
     'displayProjection' => '4326',
     'styles' => array(
-      'default' => 'default',
-      'select' => 'default',
-      'temporary' => 'default',
+      'default' => 'arbeidsicon',
+      'select' => 'arbeidsicon',
+      'temporary' => 'arbeidsicon',
     ),
   );
 

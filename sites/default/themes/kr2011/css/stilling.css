@@ -52,3 +52,31 @@
     clear: both;
     padding: 10px 0;
 }
+
+.stillinger{
+	
+}
+.stillinger ul{
+	padding: 0px;
+	margin: 0px;
+}
+.stillinger ul li{
+	padding: 10px 0px;
+	margin: 0px 0px 10px 0px;
+	border-bottom: 1px dotted #A8A8A8;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.stillinger ul li:hover{
+	background: #F8F8F8;
+}
+.stillinger ul li div{
+	margin-left: 60px;
+}
+.stillinger ul li div.views-field-field-main-image-fid div{
+	margin: 0px;
+}
+.stillinger ul li div.views-field-field-main-image-fid{
+	margin-left: 0px;
+	float: left;
+	clear: left;
+}

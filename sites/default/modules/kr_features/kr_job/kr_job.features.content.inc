@@ -373,7 +373,7 @@ function kr_job_content_default_fields() {
       'polygon' => 0,
     ),
     'widget' => array(
-      'openlayers_cck_preset_map' => 'default',
+      'openlayers_cck_preset_map' => 'stillingskartpreset',
       'openlayers_behaviors' => array(
         'openlayers_behavior_zoomtolayer' => array(
           'enabled' => 0,
@@ -383,6 +383,8 @@ function kr_job_content_default_fields() {
           ),
         ),
       ),
+      'keep_points' => 0,
+      'position' => '10',
       'default_value' => array(
         '0' => array(
           'openlayers_wkt' => '',
@@ -393,8 +395,6 @@ function kr_job_content_default_fields() {
       'autocompletion_field_job_utlyser_override' => 0,
       'autocompletion_field_job_utlyser_content' => '',
       'autocompletion_field_job_utlyser_type' => 'input',
-      'keep_points' => 0,
-      'position' => '10',
       'label' => 'Hvor er dette',
       'weight' => '15',
       'description' => '',

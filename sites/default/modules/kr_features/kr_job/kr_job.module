@@ -1,3 +1,8 @@
 <?php
 
 include_once('kr_job.features.inc');
+
+function kr_job_init(){
+	drupal_add_css(drupal_get_path('module', 'kr_job') .'/kr_job.css');
+}
+
