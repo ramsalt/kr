@@ -1,3 +1,8 @@
+@import "compass";
+
+$icons: sprite-map("backgrounds/*.png");
+$logos: sprite-map("logo/*.png");
+
 body{
   font-family: 'Merriweather', serif;
   font-size: 0.9em;
@@ -10,6 +15,12 @@ body{
   h2{
     font-family: 'Helvetica Neue', helvetica;
     font-weight: bold;
+  }
+  h3{
+    font-family: helvetica;
+    font-weight: normal;
+    color: #333333;
+    font-size: 1.4em;
   }
   p{
     margin: 1em 0em;
@@ -44,6 +55,7 @@ body{
             float: left;
           }
           span.icon{
+            
             background: sprite($logos, search) no-repeat;
             width: 12px;
             height: 13px;
@@ -195,6 +207,12 @@ body{
   }
   .views-field-field-main-image-fid{
     float: left;
+    width: 100%;
+    height: auto;
+    img{
+      width: 100%;
+      height: auto;
+    }
   }
   .views-field-field-main-image-data{
     font-family: Arial;
@@ -285,5 +303,35 @@ body{
     display: block;
     text-indent: -999px;
     
+  }
+}
+.block {
+  .item-list{
+    h3{
+      border-bottom: 2px solid #333;
+      padding: 4px 0px;
+      margin-bottom: 5px;
+    }
+    ul{
+      padding: 0px;
+      margin: 0px;
+      li{
+        list-style: none;
+        padding: 7px 0px 7px 0px;
+        margin: 0px 0px 7px 0px;
+        border-bottom: 1px solid #dddddd;
+        a{
+          color: #2c91c5;
+          text-decoration: none;
+          font-family: 'Merriweather', serif;
+        }
+
+      }
+    }
+  }
+  .siste-saker{
+    .views-field-field-main-image-fid{
+      display: none;
+    }
   }
 }
