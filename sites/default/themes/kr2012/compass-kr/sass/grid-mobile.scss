@@ -1,0 +1,40 @@
+.container{
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    .grid{
+      width: 290px;
+      margin-left: 15px;
+      margin-right: 15px;
+      display: inline;
+      float: left;
+      overflow: hidden;
+    }
+}
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+.clearfix:before,
+.clearfix:after, {
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}

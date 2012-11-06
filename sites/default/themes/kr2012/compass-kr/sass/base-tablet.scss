@@ -1,0 +1,8 @@
+@media (min-width: 740px) and (min-device-width: 740px){
+  .visible-mobile, .visible-desktop{
+    display: none;
+  }
+  .visible-tablet{
+    display: block;
+  }
+}

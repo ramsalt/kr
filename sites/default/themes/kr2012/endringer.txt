@@ -1,0 +1,4 @@
+
+sites/all/modules/openpublish_core/openpublish_menu/openpublish-menu.tpl.php
+Linje 9:
+<li class="first-level <?php print ($top_item->active ? $top_item->active : "off"); ?> <?php if ($top_item->position_class) print $top_item->position_class; if (is_array($top_item->sublinks) && sizeof($top_item->sublinks) > 0) print "multilevel"; ?>">

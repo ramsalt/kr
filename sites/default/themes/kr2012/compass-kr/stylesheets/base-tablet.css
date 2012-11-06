@@ -1,0 +1,11 @@
+@media (min-width: 740px) and (min-device-width: 740px) {
+  /* line 2, ../sass/base-tablet.scss */
+  .visible-mobile, .visible-desktop {
+    display: none;
+  }
+
+  /* line 5, ../sass/base-tablet.scss */
+  .visible-tablet {
+    display: block;
+  }
+}
