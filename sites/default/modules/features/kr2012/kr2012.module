@@ -1,0 +1,3 @@
+<?php
+
+include_once('kr2012.features.inc');
