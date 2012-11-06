@@ -6,117 +6,981 @@
 function op_contexts_views_default_views() {
   $views = array();
 
-  // Exported view: popular
+  // Exported view: Blogger
   $view = new view;
-  $view->name = 'popular';
-  $view->description = 'Shows the most-viewed nodes on the site. This requires the statistics to be enabled at administer >> reports >> access log settings.';
-  $view->tag = 'default';
-  $view->view_php = '';
+  $view->name = 'Blogger';
+  $view->description = 'Eksterne blogginnlegg';
+  $view->tag = '';
   $view->base_table = 'node';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 6;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-  $handler = $view->new_display('default', 'Defaults', 'default');
-  $handler->override_option('fields', array(
-    'type' => array(
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'label' => 'Type',
+  $handler = $view->new_display('default', 'Standardverdier', 'default');
+  $handler->override_option('relationships', array(
+    'feed_nid' => array(
+      'id' => 'feed_nid',
+      'table' => 'feeds_node_item',
+      'field' => 'feed_nid',
     ),
+  ));
+  $handler->override_option('fields', array(
     'title' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 1,
+      'exclude' => 0,
       'id' => 'title',
       'table' => 'node',
       'field' => 'title',
-      'label' => 'Title',
-      'link_to_node' => TRUE,
-    ),
-    'name' => array(
-      'id' => 'name',
-      'table' => 'users',
-      'field' => 'name',
-      'label' => 'Author',
-      'link_to_user' => TRUE,
-    ),
-    'timestamp' => array(
-      'id' => 'timestamp',
-      'table' => 'history_user',
-      'field' => 'timestamp',
-      'label' => '',
-      'comments' => 1,
       'relationship' => 'none',
-      'link_to_node' => 0,
-      'comment' => 1,
+    ),
+    'created' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'date_format' => 'small',
+      'custom_date_format' => '',
+      'exclude' => 0,
+      'id' => 'created',
+      'table' => 'node',
+      'field' => 'created',
+      'relationship' => 'none',
+    ),
+    'body' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 1,
+        'max_length' => '220',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 1,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'exclude' => 0,
+      'id' => 'body',
+      'table' => 'node_revisions',
+      'field' => 'body',
+      'override' => array(
+        'button' => 'Overstyr',
+      ),
+      'relationship' => 'none',
     ),
   ));
   $handler->override_option('sorts', array(
-    'totalcount' => array(
-      'id' => 'totalcount',
-      'table' => 'node_counter',
-      'field' => 'totalcount',
+    'value0' => array(
+      'id' => 'value0',
+      'table' => 'draggableviews_structure_node0',
+      'field' => 'value0',
+    ),
+    'created' => array(
       'order' => 'DESC',
+      'granularity' => 'second',
+      'id' => 'created',
+      'table' => 'node',
+      'field' => 'created',
+      'override' => array(
+        'button' => 'Overstyr',
+      ),
       'relationship' => 'none',
     ),
   ));
-  $handler->override_option('filters', array(
-    'status' => array(
-      'id' => 'status',
-      'table' => 'node',
-      'field' => 'status',
-      'operator' => '=',
-      'value' => '1',
-      'group' => 0,
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
+  $handler->override_option('arguments', array(
+    'feed_nid' => array(
+      'default_action' => 'ignore',
+      'style_plugin' => 'default_summary',
+      'style_options' => array(),
+      'wildcard' => 'all',
+      'wildcard_substitution' => 'Siste nytt',
+      'title' => '',
+      'breadcrumb' => '',
+      'default_argument_type' => 'fixed',
+      'default_argument' => '',
+      'validate_type' => 'node',
+      'validate_fail' => 'not found',
+      'break_phrase' => 0,
+      'not' => 0,
+      'id' => 'feed_nid',
+      'table' => 'feeds_node_item',
+      'field' => 'feed_nid',
+      'validate_user_argument_type' => 'uid',
+      'validate_user_roles' => array(
+        2 => 0,
+        11 => 0,
+        12 => 0,
+        3 => 0,
+        5 => 0,
+        4 => 0,
+        10 => 0,
+        9 => 0,
+        13 => 0,
+        8 => 0,
+        7 => 0,
+        6 => 0,
       ),
-    ),
-    'totalcount' => array(
-      'id' => 'totalcount',
-      'table' => 'node_counter',
-      'field' => 'totalcount',
-      'operator' => '>',
-      'value' => array(
-        'value' => '0',
-        'min' => '',
-        'max' => '',
-      ),
-      'group' => 0,
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
+      'me_redirect' => 0,
+      'me_validate_user_argument_type' => 'uid',
+      'me_validate_user_roles' => array(
+        2 => 0,
+        11 => 0,
+        12 => 0,
+        3 => 0,
+        5 => 0,
+        4 => 0,
+        10 => 0,
+        9 => 0,
+        13 => 0,
+        8 => 0,
+        7 => 0,
+        6 => 0,
       ),
       'relationship' => 'none',
+      'default_options_div_prefix' => '',
+      'default_taxonomy_tid_term_page' => 0,
+      'default_taxonomy_tid_node' => 0,
+      'default_taxonomy_tid_limit' => 0,
+      'default_taxonomy_tid_vids' => array(
+        43 => 0,
+        44 => 0,
+        45 => 0,
+      ),
+      'default_argument_user' => 0,
+      'default_argument_fixed' => '',
+      'default_argument_php' => '',
+      'validate_argument_node_type' => array(
+        'ekstern_blogg' => 'ekstern_blogg',
+        'blog' => 0,
+        'poll' => 0,
+        'article' => 0,
+        'author' => 0,
+        'op_image' => 0,
+        'resource' => 0,
+        'barometer' => 0,
+        'simplenews' => 0,
+        'chart' => 0,
+        'table' => 0,
+        'bildegalleri' => 0,
+        'job' => 0,
+        'multichoice' => 0,
+        'quiz' => 0,
+        'panel' => 0,
+        'book' => 0,
+        'eksternt_blogginnlegg' => 0,
+        'kommune' => 0,
+        'ordforer' => 0,
+        'page' => 0,
+        'topichub' => 0,
+        'webform' => 0,
+      ),
+      'validate_argument_node_access' => 0,
+      'validate_argument_nid_type' => 'nid',
+      'validate_argument_vocabulary' => array(
+        43 => 0,
+        44 => 0,
+        45 => 0,
+      ),
+      'validate_argument_type' => 'tid',
+      'validate_argument_transform' => 0,
+      'validate_user_restrict_roles' => 0,
+      'validate_argument_php' => '',
+      'me_validate_user_restrict_roles' => 0,
+      'override' => array(
+        'button' => 'Overstyr',
+      ),
+    ),
+  ));
+  $handler->override_option('filters', array(
+    'type' => array(
+      'operator' => 'in',
+      'value' => array(
+        'eksternt_blogginnlegg' => 'eksternt_blogginnlegg',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'type',
+      'table' => 'node',
+      'field' => 'type',
+      'relationship' => 'none',
+    ),
+    'status_extra' => array(
+      'id' => 'status_extra',
+      'table' => 'node',
+      'field' => 'status_extra',
     ),
   ));
   $handler->override_option('access', array(
     'type' => 'none',
-    'role' => array(),
-    'perm' => '',
+  ));
+  $handler->override_option('cache', array(
+    'type' => 'views_content_cache',
+    'keys' => array(
+      'comment' => array(
+        'changed' => 0,
+      ),
+      'node' => array(
+        'ekstern_blogg' => 'ekstern_blogg',
+        'eksternt_blogginnlegg' => 'eksternt_blogginnlegg',
+        'article' => 0,
+        'poll' => 0,
+        'barometer' => 0,
+        'op_image' => 0,
+        'bildegalleri' => 0,
+        'blog' => 0,
+        'book' => 0,
+        'chart' => 0,
+        'multichoice' => 0,
+        'author' => 0,
+        'kommune' => 0,
+        'simplenews' => 0,
+        'ordforer' => 0,
+        'page' => 0,
+        'panel' => 0,
+        'quiz' => 0,
+        'resource' => 0,
+        'job' => 0,
+        'table' => 0,
+        'topichub' => 0,
+        'webform' => 0,
+      ),
+    ),
+    'results_min_lifespan' => '60',
+    'results_max_lifespan' => '3600',
+    'output_min_lifespan' => '21600',
+    'output_max_lifespan' => '21600',
+  ));
+  $handler->override_option('link_display', 'page_2');
+  $handler = $view->new_display('page', 'Blogger til en person', 'page_1');
+  $handler->override_option('path', 'blogger/%');
+  $handler->override_option('menu', array(
+    'type' => 'none',
+    'title' => '',
+    'description' => '',
+    'weight' => 0,
+    'name' => 'navigation',
+  ));
+  $handler->override_option('tab_options', array(
+    'type' => 'none',
+    'title' => '',
+    'description' => '',
+    'weight' => 0,
+    'name' => 'navigation',
+  ));
+  $handler = $view->new_display('block', 'Blokk', 'block_1');
+  $handler->override_option('block_description', '');
+  $handler->override_option('block_caching', -1);
+  $handler = $view->new_display('page', 'Nettside', 'page_2');
+  $handler->override_option('fields', array(
+    'field_blogg_bilde_fid' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'author_photo_linked',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 0,
+      'id' => 'field_blogg_bilde_fid',
+      'table' => 'node_data_field_blogg_bilde',
+      'field' => 'field_blogg_bilde_fid',
+      'override' => array(
+        'button' => 'Bruk standard',
+      ),
+      'relationship' => 'feed_nid',
+    ),
+    'title' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 1,
+      'exclude' => 0,
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
+      'relationship' => 'none',
+    ),
+    'title_1' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 1,
+      'exclude' => 0,
+      'id' => 'title_1',
+      'table' => 'node',
+      'field' => 'title',
+      'override' => array(
+        'button' => 'Bruk standard',
+      ),
+      'relationship' => 'feed_nid',
+    ),
+    'created' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'date_format' => 'small',
+      'custom_date_format' => '',
+      'exclude' => 0,
+      'id' => 'created',
+      'table' => 'node',
+      'field' => 'created',
+      'relationship' => 'none',
+    ),
+    'body' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 1,
+        'max_length' => '220',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 1,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'exclude' => 0,
+      'id' => 'body',
+      'table' => 'node_revisions',
+      'field' => 'body',
+      'override' => array(
+        'button' => 'Bruk standard',
+      ),
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('arguments', array());
+  $handler->override_option('filters', array(
+    'type' => array(
+      'operator' => 'in',
+      'value' => array(
+        'eksternt_blogginnlegg' => 'eksternt_blogginnlegg',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'type',
+      'table' => 'node',
+      'field' => 'type',
+      'relationship' => 'none',
+    ),
+    'status_extra' => array(
+      'operator' => '=',
+      'value' => '',
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'status_extra',
+      'table' => 'node',
+      'field' => 'status_extra',
+      'override' => array(
+        'button' => 'Bruk standard',
+      ),
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('use_pager', '1');
+  $handler->override_option('path', 'blogger');
+  $handler->override_option('menu', array(
+    'type' => 'none',
+    'title' => '',
+    'description' => '',
+    'weight' => 0,
+    'name' => 'navigation',
+  ));
+  $handler->override_option('tab_options', array(
+    'type' => 'none',
+    'title' => '',
+    'description' => '',
+    'weight' => 0,
+    'name' => 'navigation',
+  ));
+  $handler = $view->new_display('block', 'Forside', 'block_2');
+  $handler->override_option('fields', array(
+    'field_blogg_bilde_fid' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'thumbnail_linked',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 0,
+      'id' => 'field_blogg_bilde_fid',
+      'table' => 'node_data_field_blogg_bilde',
+      'field' => 'field_blogg_bilde_fid',
+      'override' => array(
+        'button' => 'Bruk standard',
+      ),
+      'relationship' => 'feed_nid',
+    ),
+    'title_1' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 1,
+      'exclude' => 0,
+      'id' => 'title_1',
+      'table' => 'node',
+      'field' => 'title',
+      'override' => array(
+        'button' => 'Bruk standard',
+      ),
+      'relationship' => 'feed_nid',
+    ),
+    'title' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 1,
+      'exclude' => 0,
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
+      'relationship' => 'none',
+    ),
+    'body' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 1,
+        'max_length' => '220',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 1,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'exclude' => 0,
+      'id' => 'body',
+      'table' => 'node_revisions',
+      'field' => 'body',
+      'override' => array(
+        'button' => 'Overstyr',
+      ),
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('filters', array(
+    'type' => array(
+      'operator' => 'in',
+      'value' => array(
+        'eksternt_blogginnlegg' => 'eksternt_blogginnlegg',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'type',
+      'table' => 'node',
+      'field' => 'type',
+      'relationship' => 'none',
+    ),
+    'status' => array(
+      'operator' => '=',
+      'value' => '1',
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'status',
+      'table' => 'node',
+      'field' => 'status',
+      'override' => array(
+        'button' => 'Bruk standard',
+      ),
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('title', 'Blogger om Kommune-Norge');
+  $handler->override_option('css_class', 'forside-blogger');
+  $handler->override_option('items_per_page', 5);
+  $handler->override_option('use_more', 1);
+  $handler->override_option('use_more_always', 0);
+  $handler->override_option('use_more_text', 'Les flere blogger her');
+  $handler->override_option('style_plugin', 'list');
+  $handler->override_option('style_options', array(
+    'grouping' => '',
+    'type' => 'ul',
+  ));
+  $handler->override_option('block_description', '');
+  $handler->override_option('block_caching', -1);
+  $handler = $view->new_display('page', 'Endre rekkefølge', 'page_4');
+  $handler->override_option('relationships', array());
+  $handler->override_option('fields', array(
+    'value0' => array(
+      'label' => 'Rekkefølge',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'exclude' => 0,
+      'id' => 'value0',
+      'table' => 'draggableviews_structure_node0',
+      'field' => 'value0',
+      'override' => array(
+        'button' => 'Bruk standard',
+      ),
+      'relationship' => 'none',
+    ),
+    'title' => array(
+      'label' => 'Tittel',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 1,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'link_to_node' => 1,
+      'exclude' => 0,
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Bruk standard',
+      ),
+    ),
+    'created' => array(
+      'label' => 'Opprettet',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'date_format' => 'custom',
+      'custom_date_format' => 'D d.m - H:i',
+      'exclude' => 0,
+      'id' => 'created',
+      'table' => 'node',
+      'field' => 'created',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Bruk standard',
+      ),
+    ),
+    'value0_1' => array(
+      'label' => 'Rekkefølge',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'exclude' => 0,
+      'id' => 'value0_1',
+      'table' => 'draggableviews_structure_node0',
+      'field' => 'value0',
+      'override' => array(
+        'button' => 'Bruk standard',
+      ),
+      'relationship' => 'none',
+    ),
+    'publish_node' => array(
+      'label' => 'Publisert',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'absolute' => 0,
+        'link_class' => '',
+        'alt' => '',
+        'rel' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'hide_alter_empty' => 1,
+      'text' => '',
+      'exclude' => 0,
+      'id' => 'publish_node',
+      'table' => 'node',
+      'field' => 'publish_node',
+      'override' => array(
+        'button' => 'Bruk standard',
+      ),
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('arguments', array());
+  $handler->override_option('access', array(
+    'type' => 'role',
+    'role' => array(
+      3 => 3,
+      4 => 4,
+      6 => 6,
+    ),
   ));
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
-  $handler->override_option('title', 'Populært innhold');
-  $handler->override_option('items_per_page', '25');
-  $handler->override_option('use_pager', TRUE);
-  $handler->override_option('use_more', 1);
-  $handler->override_option('use_more_text', 'mer');
-  $handler->override_option('style_plugin', 'table');
+  $handler->override_option('title', 'Endre rekkefølgen på blogginnlegg');
+  $handler->override_option('css_class', 'endrebloggrekkefolge');
+  $handler->override_option('items_per_page', 50);
+  $handler->override_option('style_plugin', 'draggabletable');
   $handler->override_option('style_options', array(
-    'override' => 0,
-    'order' => 'desc',
+    'override' => 1,
+    'sticky' => 0,
+    'order' => 'asc',
+    'summary' => '',
     'columns' => array(
-      'type' => 'type',
+      'value0' => 'value0',
       'title' => 'title',
-      'name' => 'name',
-      'timestamp' => 'title',
-      'totalcount' => 'totalcount',
+      'created' => 'created',
+      'body' => 'body',
+      'value0_1' => 'value0_1',
     ),
     'info' => array(
-      'type' => array(
+      'value0' => array(
         'sortable' => 0,
         'separator' => '',
       ),
@@ -124,194 +988,307 @@ function op_contexts_views_default_views() {
         'sortable' => 0,
         'separator' => '',
       ),
-      'name' => array(
+      'created' => array(
         'sortable' => 0,
         'separator' => '',
       ),
-      'timestamp' => array(
+      'body' => array(
         'separator' => '',
       ),
-      'totalcount' => array(
+      'value0_1' => array(
         'sortable' => 0,
         'separator' => '',
       ),
     ),
-    'default' => '-1',
+    'default' => -1,
+    'tabledrag_order' => array(
+      'field' => 'value0_1',
+      'handler' => 'native',
+    ),
+    'tabledrag_order_visible' => array(
+      'visible' => 0,
+    ),
+    'tabledrag_hierarchy' => array(
+      'field' => 'none',
+      'handler' => 'native',
+    ),
+    'tabledrag_hierarchy_visible' => array(
+      'visible' => 0,
+    ),
+    'draggableviews_depth_limit' => '0',
+    'draggableviews_repair' => array(
+      'repair' => 'repair',
+    ),
+    'tabledrag_types_add' => 'Add type',
+    'tabledrag_expand' => array(
+      'expand_links' => 0,
+      'collapsed' => 0,
+      'by_uid' => 0,
+    ),
+    'draggableviews_extensions' => array(
+      'extension_top' => '3',
+      'extension_bottom' => '3',
+    ),
+    'tabledrag_lock' => array(
+      'lock' => 0,
+    ),
+    'draggableviews_default_on_top' => '1',
+    'draggableviews_button_text' => 'Lagre rekkefølge',
+    'draggableviews_arguments' => array(
+      'use_args' => 0,
+    ),
   ));
-  $handler = $view->new_display('page', 'Popular (page)', 'page');
-  $handler->override_option('path', 'popular/all');
+  $handler->override_option('path', 'endreblogger');
   $handler->override_option('menu', array(
-    'type' => 'default tab',
-    'title' => 'Popular content',
+    'type' => 'none',
+    'title' => '',
     'description' => '',
-    'weight' => '-1',
+    'weight' => 0,
     'name' => 'navigation',
   ));
   $handler->override_option('tab_options', array(
-    'type' => 'normal',
-    'title' => 'Popular content',
+    'type' => 'none',
+    'title' => '',
     'description' => '',
-    'weight' => '',
+    'weight' => 0,
     'name' => 'navigation',
   ));
-  $handler = $view->new_display('page', 'Today (page)', 'page_1');
+
+  $views[$view->name] = $view;
+
+  // Exported view: Kommentarutdrag
+  $view = new view;
+  $view->name = 'Kommentarutdrag';
+  $view->description = '';
+  $view->tag = '';
+  $view->base_table = 'node';
+  $view->core = 0;
+  $view->api_version = '2';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+  $handler = $view->new_display('default', 'Standardverdier', 'default');
   $handler->override_option('fields', array(
-    'type' => array(
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'label' => 'Type',
+    'field_sitat_value' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 1,
+      'label_type' => 'none',
+      'format' => 'default',
+      'multiple' => array(
+        'group' => 1,
+        'multiple_number' => '1',
+        'multiple_from' => '0',
+        'multiple_reversed' => 0,
+      ),
+      'exclude' => 0,
+      'id' => 'field_sitat_value',
+      'table' => 'node_data_field_sitat',
+      'field' => 'field_sitat_value',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Overstyr',
+      ),
     ),
-    'title' => array(
-      'id' => 'title',
+    'field_op_author_nid' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'default',
+      'multiple' => array(
+        'group' => 1,
+        'multiple_number' => '1',
+        'multiple_from' => '0',
+        'multiple_reversed' => 0,
+      ),
+      'exclude' => 0,
+      'id' => 'field_op_author_nid',
+      'table' => 'node_data_field_op_author',
+      'field' => 'field_op_author_nid',
+      'relationship' => 'none',
+    ),
+    'view_node' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'text' => 'Les kommentaren',
+      'exclude' => 0,
+      'id' => 'view_node',
       'table' => 'node',
-      'field' => 'title',
-      'label' => 'Title',
-      'link_to_node' => TRUE,
+      'field' => 'view_node',
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('sorts', array(
+    'created' => array(
+      'order' => 'DESC',
+      'granularity' => 'second',
+      'id' => 'created',
+      'table' => 'node',
+      'field' => 'created',
+      'relationship' => 'none',
+    ),
+    'changed' => array(
+      'order' => 'DESC',
+      'granularity' => 'second',
+      'id' => 'changed',
+      'table' => 'node',
+      'field' => 'changed',
+      'override' => array(
+        'button' => 'Overstyr',
+      ),
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('filters', array(
+    'field_sitat_value' => array(
+      'operator' => 'not empty',
+      'value' => '',
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'case' => 0,
+      'id' => 'field_sitat_value',
+      'table' => 'node_data_field_sitat',
+      'field' => 'field_sitat_value',
+      'relationship' => 'none',
+    ),
+    'status' => array(
+      'operator' => '=',
+      'value' => '1',
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'status',
+      'table' => 'node',
+      'field' => 'status',
+      'override' => array(
+        'button' => 'Overstyr',
+      ),
+      'relationship' => 'none',
     ),
     'name' => array(
+      'operator' => '=',
+      'value' => 'Kommentar',
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'case' => 1,
       'id' => 'name',
-      'table' => 'users',
+      'table' => 'term_data',
       'field' => 'name',
-      'label' => 'Author',
-      'link_to_user' => TRUE,
-    ),
-    'timestamp' => array(
-      'id' => 'timestamp',
-      'table' => 'history_user',
-      'field' => 'timestamp',
-      'label' => '',
-      'comments' => 1,
-      'relationship' => 'none',
-      'link_to_node' => 0,
-      'comment' => 1,
-    ),
-    'daycount' => array(
-      'id' => 'daycount',
-      'table' => 'node_counter',
-      'field' => 'daycount',
-      'label' => 'Views today',
-      'set_precision' => FALSE,
-      'precision' => 0,
-      'decimal' => '.',
-      'separator' => ',',
-      'prefix' => '',
-      'suffix' => '',
       'relationship' => 'none',
     ),
   ));
-  $handler->override_option('sorts', array(
-    'daycount' => array(
-      'id' => 'daycount',
-      'table' => 'node_counter',
-      'field' => 'daycount',
-      'order' => 'DESC',
-      'relationship' => 'none',
+  $handler->override_option('access', array(
+    'type' => 'none',
+  ));
+  $handler->override_option('cache', array(
+    'type' => 'views_content_cache',
+    'keys' => array(
+      'comment' => array(
+        'changed' => 0,
+      ),
+      'node' => array(
+        'article' => 'article',
+        'poll' => 0,
+        'op_image' => 0,
+        'blog' => 0,
+        'book' => 0,
+        'multichoice' => 0,
+        'author' => 0,
+        'simplenews' => 0,
+        'ordforer' => 0,
+        'page' => 0,
+        'panel' => 0,
+        'quiz' => 0,
+        'resource' => 0,
+        'job' => 0,
+        'topichub' => 0,
+        'webform' => 0,
+      ),
     ),
+    'results_min_lifespan' => '1800',
+    'results_max_lifespan' => '21600',
+    'output_min_lifespan' => '300',
+    'output_max_lifespan' => '21600',
   ));
-  $handler->override_option('path', 'popular/today');
-  $handler->override_option('menu', array(
-    'type' => 'tab',
-    'title' => 'Today\'s popular content',
-    'description' => '',
-    'weight' => '0',
-    'name' => 'navigation',
-  ));
-  $handler->override_option('tab_options', array(
-    'type' => 'normal',
-    'title' => 'Popular content',
-    'description' => '',
-    'weight' => '0',
-    'name' => 'navigation',
-  ));
-  $handler = $view->new_display('block', 'Popular (block)', 'block');
-  $handler->override_option('fields', array(
-    'title' => array(
-      'id' => 'title',
-      'table' => 'node',
-      'field' => 'title',
-      'label' => '',
-      'link_to_node' => 1,
-      'relationship' => 'none',
-    ),
-    'totalcount' => array(
-      'id' => 'totalcount',
-      'table' => 'node_counter',
-      'field' => 'totalcount',
-      'label' => '',
-      'set_precision' => FALSE,
-      'precision' => 0,
-      'decimal' => '.',
-      'separator' => ',',
-      'prefix' => ' (',
-      'suffix' => ')',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('items_per_page', 10);
-  $handler->override_option('use_pager', '0');
-  $handler->override_option('style_plugin', 'list');
-  $handler->override_option('style_options', array(
-    'grouping' => '',
-    'type' => 'ol',
-  ));
-  $handler->override_option('row_options', array(
-    'inline' => array(
-      'title' => 'title',
-      'totalcount' => 'totalcount',
-    ),
-    'separator' => '',
-  ));
-  $handler->override_option('block_description', 'Populært innhold');
+  $handler->override_option('css_class', 'kommentar-liste');
+  $handler->override_option('items_per_page', 1);
+  $handler = $view->new_display('block', 'Nest nyeste sitat', 'block_2');
+  $handler->override_option('offset', 1);
+  $handler->override_option('block_description', '');
   $handler->override_option('block_caching', -1);
-  $handler = $view->new_display('block', 'Today (block)', 'block_1');
-  $handler->override_option('fields', array(
-    'title' => array(
-      'id' => 'title',
-      'table' => 'node',
-      'field' => 'title',
-      'label' => '',
-      'link_to_node' => 1,
-      'relationship' => 'none',
-    ),
-    'daycount' => array(
-      'id' => 'daycount',
-      'table' => 'node_counter',
-      'field' => 'daycount',
-      'label' => '',
-      'set_precision' => FALSE,
-      'precision' => 0,
-      'decimal' => '.',
-      'separator' => ',',
-      'prefix' => ' (',
-      'suffix' => ')',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('sorts', array(
-    'daycount' => array(
-      'id' => 'daycount',
-      'table' => 'node_counter',
-      'field' => 'daycount',
-      'order' => 'DESC',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('title', 'Today\'s popular content');
-  $handler->override_option('items_per_page', 5);
-  $handler->override_option('link_display', 'page_1');
-  $handler->override_option('style_plugin', 'list');
-  $handler->override_option('style_options', array(
-    'type' => 'ul',
-  ));
-  $handler->override_option('row_options', array(
-    'inline' => array(
-      'title' => 'title',
-      'daycount' => 'daycount',
-    ),
-    'separator' => '',
-  ));
-  $handler->override_option('block_description', 'Today\'s popular content');
+  $handler = $view->new_display('block', 'Nyeste sitat', 'block_1');
+  $handler->override_option('title', 'Kommentar');
+  $handler->override_option('block_description', '');
   $handler->override_option('block_caching', -1);
 
   $views[$view->name] = $view;
