@@ -12,9 +12,19 @@ $logos: sprite-map("logo/*.png");
   .byline{ 
     .forfatter{
       float: none;
+      padding-right: 5px;
     }
     .updated{
       clear: none;
+      float: left;
+      padding-right: 5px;
+    }
+    .addthis{
+     height: 25px;
+     overflow: hidden;
+      .twitter-share-button{
+          //width: 76px;
+      }
     }
   }
   #login-area{
@@ -27,10 +37,8 @@ $logos: sprite-map("logo/*.png");
         //background: url('/sites/default/themes/kr2012/compass-kr/images/desktop-top-wrapper-bg.png') repeat-x 0 33px #F1F2EE;
         .inner-container{
           @include border-top-radius(4px);
-
           background: url('/sites/default/themes/kr2012/compass-kr/images/backxrepeat.png') 0px -75px repeat-x;
           height: 38px;
-
           border-top: 1px solid #d9d9d9;
           border-left: 1px solid #d9d9d9;
           border-right: 1px solid #d9d9d9;
