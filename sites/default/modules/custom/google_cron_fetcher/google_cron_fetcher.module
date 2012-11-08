@@ -60,6 +60,7 @@ function gc_global_visits(){
     'metrics' => array('ga:pageviews'),
     'dimensions' => array('ga:pagePath'),
     'max_results' => 5000,
+    'filters' => 'ga:pagePath=~^/artikkel.*',
     'sort' => array('ga:pagePath'),
     'start_index' => $index,
   );
@@ -69,11 +70,13 @@ function gc_global_visits(){
   $GAFeed->queryReportFeed($params, $cache_options);
   if(count($GAFeed->results) > 0){
     $i = 0;
+	$ni = 0;
     foreach ($GAFeed->results as $delta => $item) {
       $i++;
       $views = $item['pageviews'];
       $nid = google_path_to_nid($item['pagePath']);
       if($nid){
+      	$ni++;
         db_query('UPDATE {node_counter} SET totalcount = %d WHERE timestamp = %d AND nid = %d', $views, strtotime('today'), $nid);
         // If we affected 0 rows, this is the first time viewing the node.
         if (!db_affected_rows()) {
@@ -82,6 +85,7 @@ function gc_global_visits(){
         }
       }
     }
+	dsm(array('ent: '.$i. ' nids: '.$ni));
     variable_set('google_cron_fetcher_index', $index+$i);
   }else{
     variable_set('google_cron_fetcher_index', 1);
