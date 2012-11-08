@@ -279,25 +279,26 @@ body p {
   background-image: -moz-linear-gradient(top, #225a84, #083e6b);
   background-image: -o-linear-gradient(top, #225a84, #083e6b);
   background-image: linear-gradient(top, #225a84, #083e6b);
+  background-color: #225A84;
   border-top: 1px solid #073e6a;
   border-bottom: 1px solid #174a73;
 }
-/* line 81, ../sass/base.scss */
+/* line 82, ../sass/base.scss */
 #logo-area .wrapper {
   border-top: 1px solid #34668f;
 }
-/* line 85, ../sass/base.scss */
+/* line 86, ../sass/base.scss */
 #logo-area .wrapper .container .grid {
   width: 320px;
   margin: 0px;
 }
-/* line 90, ../sass/base.scss */
+/* line 91, ../sass/base.scss */
 #logo-area .wrapper #logo {
   margin-left: 15px;
   height: 62px;
   float: left;
 }
-/* line 94, ../sass/base.scss */
+/* line 95, ../sass/base.scss */
 #logo-area .wrapper #logo a {
   text-indent: -9999px;
   display: block;
@@ -307,19 +308,19 @@ body p {
   height: 28px;
   width: 220px;
 }
-/* line 102, ../sass/base.scss */
+/* line 103, ../sass/base.scss */
 #logo-area .wrapper #logo a span {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s7f14812931.png') 0 -60px no-repeat;
   width: 219px;
   height: 23px;
   float: left;
 }
-/* line 111, ../sass/base.scss */
+/* line 112, ../sass/base.scss */
 #logo-area #nav-button {
   margin-right: 15px;
   float: right;
 }
-/* line 114, ../sass/base.scss */
+/* line 115, ../sass/base.scss */
 #logo-area #nav-button a {
   float: left;
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s7f14812931.png') 0 -164px no-repeat;
@@ -328,15 +329,15 @@ body p {
   text-indent: -9999px;
   margin: 10px 0px 0px 0px;
 }
-/* line 124, ../sass/base.scss */
+/* line 125, ../sass/base.scss */
 #logo-area #nav-button.open a {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s7f14812931.png') 0 -125px no-repeat;
 }
-/* line 128, ../sass/base.scss */
+/* line 129, ../sass/base.scss */
 #logo-area #nav.open {
   display: block;
 }
-/* line 131, ../sass/base.scss */
+/* line 132, ../sass/base.scss */
 #logo-area #nav {
   float: left;
   display: none;
@@ -345,18 +346,18 @@ body p {
   margin: 0px;
   padding: 0px;
 }
-/* line 138, ../sass/base.scss */
+/* line 139, ../sass/base.scss */
 #logo-area #nav ul {
   background: transparent;
 }
-/* line 140, ../sass/base.scss */
+/* line 141, ../sass/base.scss */
 #logo-area #nav ul li {
   border-top: 1px solid #6e8697;
   padding: 0px;
   width: 100%;
   clear: both;
 }
-/* line 145, ../sass/base.scss */
+/* line 146, ../sass/base.scss */
 #logo-area #nav ul li a {
   font-size: 0.85em;
   padding: 15px;
@@ -367,26 +368,26 @@ body p {
   float: left;
   width: 290px;
 }
-/* line 154, ../sass/base.scss */
+/* line 155, ../sass/base.scss */
 #logo-area #nav ul li a span {
   float: left;
 }
-/* line 158, ../sass/base.scss */
+/* line 159, ../sass/base.scss */
 #logo-area #nav ul li a:hover {
   background: transparent;
 }
-/* line 163, ../sass/base.scss */
+/* line 164, ../sass/base.scss */
 #logo-area #nav ul li.multilevel.open ul {
   display: block;
 }
-/* line 169, ../sass/base.scss */
+/* line 170, ../sass/base.scss */
 #logo-area #nav ul li.multilevel a span.level {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s7f14812931.png') 0 -267px no-repeat;
   width: 7px;
   height: 7px;
   margin: 3px 0px 0px 10px;
 }
-/* line 176, ../sass/base.scss */
+/* line 177, ../sass/base.scss */
 #logo-area #nav ul li.multilevel ul {
   border-left: 30px solid #0F3554;
   position: relative;
@@ -397,38 +398,38 @@ body p {
   height: auto;
   top: 0px;
 }
-/* line 185, ../sass/base.scss */
+/* line 186, ../sass/base.scss */
 #logo-area #nav ul li.multilevel ul li {
   width: auto;
   float: left;
 }
-/* line 188, ../sass/base.scss */
+/* line 189, ../sass/base.scss */
 #logo-area #nav ul li.multilevel ul li a {
   width: 260px;
   font-weight: normal;
   text-transform: none;
 }
-/* line 197, ../sass/base.scss */
+/* line 198, ../sass/base.scss */
 #logo-area #nav ul li:hover a {
   background: transparent;
 }
 
-/* line 205, ../sass/base.scss */
+/* line 206, ../sass/base.scss */
 .view-bilde-slider-node .views-slideshow-controls-bottom {
   display: none;
 }
-/* line 208, ../sass/base.scss */
+/* line 209, ../sass/base.scss */
 .view-bilde-slider-node .views-field-field-main-image-fid {
   float: left;
   width: 100%;
   height: auto;
 }
-/* line 212, ../sass/base.scss */
+/* line 213, ../sass/base.scss */
 .view-bilde-slider-node .views-field-field-main-image-fid img {
   width: 100%;
   height: auto;
 }
-/* line 217, ../sass/base.scss */
+/* line 218, ../sass/base.scss */
 .view-bilde-slider-node .views-field-field-main-image-data {
   font-family: Arial;
   font-size: 0.8em;
@@ -437,7 +438,7 @@ body p {
   border-bottom: 1px solid #c1bfb9;
 }
 
-/* line 225, ../sass/base.scss */
+/* line 226, ../sass/base.scss */
 .ingress {
   font-family: Arial;
   font-weight: bold;
@@ -446,7 +447,7 @@ body p {
   margin: 15px 0px;
 }
 
-/* line 232, ../sass/base.scss */
+/* line 233, ../sass/base.scss */
 .byline {
   font-family: Arial;
   font-size: 0.8em;
@@ -455,27 +456,27 @@ body p {
   margin-bottom: 15px;
   padding-bottom: 10px;
 }
-/* line 242, ../sass/base.scss */
+/* line 243, ../sass/base.scss */
 .byline .forfatter {
   float: left;
   font-weight: bold;
   margin-right: 5px;
 }
-/* line 247, ../sass/base.scss */
+/* line 248, ../sass/base.scss */
 .byline .created {
   float: left;
 }
-/* line 250, ../sass/base.scss */
+/* line 251, ../sass/base.scss */
 .byline .updated {
   clear: both;
 }
-/* line 253, ../sass/base.scss */
+/* line 254, ../sass/base.scss */
 .byline a {
   color: #333333;
   text-decoration: none;
 }
 
-/* line 258, ../sass/base.scss */
+/* line 259, ../sass/base.scss */
 .fakta-mobil {
   background: #f1f2ee;
   border-bottom: 2px solid #c1bfb9;
@@ -484,7 +485,7 @@ body p {
   border-right: 1px solid #d9d9d9;
   margin: 10px 0px 20px 0px;
 }
-/* line 265, ../sass/base.scss */
+/* line 266, ../sass/base.scss */
 .fakta-mobil .faktatittel a {
   color: #d71010;
   font-family: Arial;
@@ -493,35 +494,35 @@ body p {
   display: block;
   padding: 7px;
 }
-/* line 272, ../sass/base.scss */
+/* line 273, ../sass/base.scss */
 .fakta-mobil .faktatittel a .icon {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s7f14812931.png') 0 -221px no-repeat;
   width: 19px;
   height: 18px;
   float: right;
 }
-/* line 280, ../sass/base.scss */
+/* line 281, ../sass/base.scss */
 .fakta-mobil .innhold {
   padding: 7px;
   display: none;
 }
 
-/* line 287, ../sass/base.scss */
+/* line 288, ../sass/base.scss */
 .fakta-mobil.open .faktatittel a .icon {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s7f14812931.png') 0 -203px no-repeat;
 }
-/* line 291, ../sass/base.scss */
+/* line 292, ../sass/base.scss */
 .fakta-mobil.open .innhold {
   display: block;
 }
 
-/* line 295, ../sass/base.scss */
+/* line 296, ../sass/base.scss */
 .tiltoppen {
   width: 100%;
   clear: both;
   margin: 20px 0px;
 }
-/* line 299, ../sass/base.scss */
+/* line 300, ../sass/base.scss */
 .tiltoppen a {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s7f14812931.png') 0 -83px no-repeat;
   width: 174px;
@@ -530,31 +531,31 @@ body p {
   text-indent: -999px;
 }
 
-/* line 310, ../sass/base.scss */
+/* line 311, ../sass/base.scss */
 .block .item-list h3 {
   border-bottom: 2px solid #333;
   padding: 4px 0px;
   margin-bottom: 5px;
 }
-/* line 315, ../sass/base.scss */
+/* line 316, ../sass/base.scss */
 .block .item-list ul {
   padding: 0px;
   margin: 0px;
 }
-/* line 318, ../sass/base.scss */
+/* line 319, ../sass/base.scss */
 .block .item-list ul li {
   list-style: none;
   padding: 7px 0px 7px 0px;
   margin: 0px 0px 7px 0px;
   border-bottom: 1px solid #dddddd;
 }
-/* line 323, ../sass/base.scss */
+/* line 324, ../sass/base.scss */
 .block .item-list ul li a {
   color: #2c91c5;
   text-decoration: none;
   font-family: 'Merriweather', serif;
 }
-/* line 333, ../sass/base.scss */
+/* line 334, ../sass/base.scss */
 .block .siste-saker .views-field-field-main-image-fid {
   display: none;
 }

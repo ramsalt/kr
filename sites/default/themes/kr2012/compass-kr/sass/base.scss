@@ -76,6 +76,7 @@ body{
 }
 #logo-area{
   @include background-image(linear-gradient(top, #225a84, #083e6b));
+  background-color: #225A84;
   border-top: 1px solid #073e6a;
   border-bottom: 1px solid #174a73;
   .wrapper{
