@@ -2,7 +2,7 @@
 $icons: sprite-map("backgrounds/*.png");
 $logos: sprite-map("logo/*.png");
 
-@media (min-width: 1004px){
+@media all and (min-width: 800px) and (orientation:landscape) {
   .visible-mobile, .visible-tablet{
     display: none;
   }
@@ -27,14 +27,15 @@ $logos: sprite-map("logo/*.png");
         //background: url('/sites/default/themes/kr2012/compass-kr/images/desktop-top-wrapper-bg.png') repeat-x 0 33px #F1F2EE;
         .inner-container{
           @include border-top-radius(4px);
-          float: left;
+
           background: url('/sites/default/themes/kr2012/compass-kr/images/backxrepeat.png') 0px -75px repeat-x;
           height: 38px;
+
           border-top: 1px solid #d9d9d9;
           border-left: 1px solid #d9d9d9;
           border-right: 1px solid #d9d9d9;
           border-bottom: 1px solid #d9d9d9;
-          .grid-16{
+          .art-main{
             width: 962px;
           }
         }
@@ -76,18 +77,12 @@ $logos: sprite-map("logo/*.png");
     .wrapper{
       border-top: none;
       .container{
-
         .inner-container{
-          float: left;
           height: 74px;
           background: url('/sites/default/themes/kr2012/compass-kr/images/backxrepeat.png') 0px 0px repeat-x;
           .grid{
-            width: auto;
-            margin: 0px 20px;
-            .inner{
-              float: left;
-              margin-top: 6px;
-            }
+            width: 96%;
+            margin: 0px 2% 0px 2%;
           }
         }
 
@@ -96,6 +91,8 @@ $logos: sprite-map("logo/*.png");
         margin-left: 0px;
         height: 62px;
         float: left;
+        width: 291px;
+        position: absolute;
         a{
           text-indent: -9999px;
           display: block;
@@ -117,7 +114,10 @@ $logos: sprite-map("logo/*.png");
       }
       #nav{
         display: block;
-        width: 673px;
+        margin-left: 291px;
+        width: auto;
+        height: 60px;
+        overflow: hidden;
         ul{
           padding: 6px 0px;
           li{
@@ -151,12 +151,23 @@ $logos: sprite-map("logo/*.png");
           float: left;
           border-left: 1px solid #dddddd;
           border-right: 1px solid #dddddd;
-          .grid-4{
-            width: 315px;
+          .grid.art-side{
             margin: 0px;
-            padding: 0px 20px 20px 20px;
+            padding: 0px;
+
+            width: 36%;
+            
+            //width: 31.9%;
+            //margin: 0px;
+            //padding: 0px 2% 2% 2%;
+            //border-left: 1px solid #dddddd;
+            //border-bottom: 1px solid #dddddd;
+          }
+          .sidebar{
+            padding: 0px 4% 5% 4%;
             border-left: 1px solid #dddddd;
             border-bottom: 1px solid #dddddd;
+            //padding: 0px 2% 2% 2%;
           }
         }
       }

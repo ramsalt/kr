@@ -87,7 +87,7 @@
   	<div class="wrapper">
   	  <div class="container container-16 clearfix">
   	  	<div class="inner-container">
-	  	  	<div class="grid grid-12">
+	  	  	<div class="grid art-main">
 				  <?php// print $breadcrumb; ?>
 				
 				    <?php if ($tabs): print '<div id="tabs-wrapper" class="clear-block">'; endif; ?>
@@ -123,7 +123,7 @@
 				  </div>
 				  
 			</div><!-- /.grid -->
-			<div class="grid grid-4">
+			<div class="grid art-side">
 				  <div id="sidebar-right" class="sidebar">
 				  	<?php print $right ?>
 				  </div> <!-- /#sidebar-right -->

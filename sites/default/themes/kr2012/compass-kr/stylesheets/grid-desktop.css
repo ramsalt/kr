@@ -1,32 +1,41 @@
-@media (min-width: 1004px) {
+@media all and (min-width: 800px) and (orientation: landscape) {
   /* line 2, ../sass/grid-desktop.scss */
+  #outer-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* line 6, ../sass/grid-desktop.scss */
   .container {
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 5, ../sass/grid-desktop.scss */
+  /* line 9, ../sass/grid-desktop.scss */
   .container .grid {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
     display: inline;
     float: left;
     overflow: hidden;
   }
 
-  /* line 13, ../sass/grid-desktop.scss */
+  /* line 19, ../sass/grid-desktop.scss */
   .container-16 {
-    width: 1004px;
+    width: 100%;
+    max-width: 1004px;
+    min-width: 800px;
+    margin: 0 auto;
   }
-  /* line 15, ../sass/grid-desktop.scss */
-  .container-16 .grid-16 {
-    width: 964px;
+  /* line 25, ../sass/grid-desktop.scss */
+  .container-16 .inner-container .grid-16 {
+    width: 96%;
   }
-  /* line 18, ../sass/grid-desktop.scss */
-  .container-16 .grid-12 {
-    width: 606px;
+  /* line 28, ../sass/grid-desktop.scss */
+  .container-16 .inner-container .art-main {
+    width: 60%;
   }
-  /* line 21, ../sass/grid-desktop.scss */
-  .container-16 .grid-4 {
-    width: 316px;
+  /* line 31, ../sass/grid-desktop.scss */
+  .container-16 .inner-container .art-side {
+    width: 30%;
   }
 }

@@ -1,4 +1,4 @@
-@media (min-width: 740px) and (min-device-width: 740px){
+@media all and (min-width: 740px) and (orientation:landscape){
   .visible-mobile, .visible-desktop{
     display: none;
   }
