@@ -42,7 +42,7 @@ function gc_daily_visits(){
         }        
       }
     }
-	dsm(array('ent: '.$i. ' nids: '.$ni));
+
   }
 
 }
@@ -63,6 +63,8 @@ function gc_global_visits(){
     'filters' => 'ga:pagePath=~^/artikkel.*',
     'sort' => array('ga:pagePath'),
     'start_index' => $index,
+    'start_date' => strtotime('1 January 2005'),
+    'end_date' => strtotime('today'),
   );
   
   
@@ -85,7 +87,7 @@ function gc_global_visits(){
         }
       }
     }
-	dsm(array('ent: '.$i. ' nids: '.$ni));
+
     variable_set('google_cron_fetcher_index', $index+$i);
   }else{
     variable_set('google_cron_fetcher_index', 1);
