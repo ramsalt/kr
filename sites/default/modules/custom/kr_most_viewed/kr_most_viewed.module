@@ -1,0 +1,65 @@
+<?php
+
+function kr_most_viewed_block($op = 'list', $delta = 0, $edit = array()) {
+  if ($op == 'list') {
+    $blocks[0] = array(
+      'info' => t('Most viewed last week'), 
+    );
+
+    return $blocks;
+  }
+  else if ($op == 'view') {
+    switch ($delta) {
+      case 0:
+        // Your module will need to define this function to render the block.
+        $block = array(
+          'subject' => '<none>', 
+          'content' => _most_viewd_last_week(),
+        );
+        break;
+    }
+    return $block;
+  }
+}
+  
+function _most_viewd_last_week(){
+	$sid = 'mest_lest_forrige_uke';
+	if (($cache = cache_get($sid, 'cache'))
+      && !empty($cache->data)
+      && (time() < $cache->expire)) //check expiration manually
+	{
+	    $data = $cache->data;
+	}
+	else
+	{
+    	$lastweek_start = strtotime('last week');
+		$lastweek_end = strtotime('last week +7 days');
+		$query = db_query('SELECT  n.title, c.nid, SUM(c.daycount) FROM {node_counter} c
+		LEFT JOIN node n ON n.nid = c.nid
+		WHERE c.timestamp > %d AND c.timestamp < %d AND c.nid > 1 AND n.status LIKE 1
+		GROUP BY c.nid ORDER BY SUM(c.daycount) DESC
+		LIMIT 5', $lastweek_start, $lastweek_end);
+	
+		$i = 0;
+		while($result = db_fetch_object($query)){
+			$items[] = l($result->title, 'node/'.$result->nid);
+			$i++;
+		}
+		if($i == 0){
+			$data = NULL;
+		}
+		$type = 'ul';
+		$attributes = array('class' => 'lenker');
+		$title = 'Mest lest forrige uke';
+		$html = 'sss';
+		$data = theme('item_list', $items, $title, $type, $attributes);
+		cache_set($sid, $data, 'cache', time()+3600);
+	}
+	return $data;
+}
+
+function kr_most_viewed_cron(){
+	$expiredate = strtotime('-30 days');
+	dsm($expiredate);
+	db_query('DELETE FROM {node_counter} WHERE timestamp < %d AND', $expiredate);
+}

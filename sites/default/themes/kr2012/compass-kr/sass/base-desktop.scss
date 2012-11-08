@@ -201,10 +201,11 @@ $logos: sprite-map("logo/*.png");
       margin-bottom: 0px;
     }
     ul{
-      padding: 0px 10px 15px 10px;
+      padding: 0px 3% 15px 3%;
       background: #f1f2ee;
       float: left;
       border-bottom: 2px solid #c1bfb9;
+      width: 94%;
       li{
         float: left;
         width: 100%;
@@ -215,7 +216,7 @@ $logos: sprite-map("logo/*.png");
           font-size: 1.2em;
         }
       }
-      li.views-row-last{
+      li:last-child{
         border: none;
         padding-bottom: 0px;
       }

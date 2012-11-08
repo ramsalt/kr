@@ -209,40 +209,41 @@
 }
 /* line 203, ../sass/base-desktop.scss */
 .block .item-list ul {
-  padding: 0px 10px 15px 10px;
+  padding: 0px 3% 15px 3%;
   background: #f1f2ee;
   float: left;
   border-bottom: 2px solid #c1bfb9;
+  width: 94%;
 }
-/* line 208, ../sass/base-desktop.scss */
+/* line 209, ../sass/base-desktop.scss */
 .block .item-list ul li {
   float: left;
   width: 100%;
   padding: 9px 0px 9px 0px;
   margin: 0px;
 }
-/* line 213, ../sass/base-desktop.scss */
+/* line 214, ../sass/base-desktop.scss */
 .block .item-list ul li a {
   color: #333333;
   font-size: 1.2em;
 }
-/* line 218, ../sass/base-desktop.scss */
-.block .item-list ul li.views-row-last {
+/* line 219, ../sass/base-desktop.scss */
+.block .item-list ul li:last-child {
   border: none;
   padding-bottom: 0px;
 }
-/* line 225, ../sass/base-desktop.scss */
+/* line 226, ../sass/base-desktop.scss */
 .block .siste-saker .views-field-field-main-image-fid {
   display: inline;
   float: left;
   margin-right: 10px;
 }
-/* line 229, ../sass/base-desktop.scss */
+/* line 230, ../sass/base-desktop.scss */
 .block .siste-saker .views-field-field-main-image-fid .field-content {
   width: 78px;
   float: left;
 }
-/* line 234, ../sass/base-desktop.scss */
+/* line 235, ../sass/base-desktop.scss */
 .block .siste-saker .views-field-title {
   padding: 0px;
   margin-top: 6px;

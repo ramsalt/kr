@@ -237,6 +237,8 @@ body{
   border-bottom: 1px solid #dddddd;
   margin-bottom: 15px;
   padding-bottom: 10px;
+  float: left;
+  width: 100%;
   div{
     
   }
@@ -307,6 +309,7 @@ body{
   }
 }
 .block {
+  margin-bottom: 20px;
   .item-list{
     h3{
       border-bottom: 2px solid #333;
@@ -327,6 +330,14 @@ body{
           font-family: 'Merriweather', serif;
         }
 
+      }
+    }
+    ul.lenker{
+      li{
+        a{
+          color: #2c91c5;
+          font-size: 1em;
+        }
       }
     }
   }

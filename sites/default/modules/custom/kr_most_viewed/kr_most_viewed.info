@@ -1,0 +1,4 @@
+name = "Kommunal Rapport mest lest"
+description = "Mest lest"
+core = 6.x
+php = 5.2
