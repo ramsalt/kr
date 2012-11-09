@@ -228,22 +228,35 @@ body p {
   background: transparent;
 }
 
-/* line 207, ../sass/base.scss */
+/* line 206, ../sass/base.scss */
+#pre-area {
+  border-top: 1px solid #a3a19b;
+  border-bottom: 1px solid #c1bfb9;
+  height: 40px;
+  background: #f1f2ee;
+}
+/* line 211, ../sass/base.scss */
+#pre-area .wrapper {
+  border-top: 1px solid #cac9c6;
+  background: #f1f2ee;
+}
+
+/* line 224, ../sass/base.scss */
 .view-bilde-slider-node .views-slideshow-controls-bottom {
   display: none;
 }
-/* line 210, ../sass/base.scss */
+/* line 227, ../sass/base.scss */
 .view-bilde-slider-node .views-field-field-main-image-fid {
   float: left;
   width: 100%;
   height: auto;
 }
-/* line 214, ../sass/base.scss */
+/* line 231, ../sass/base.scss */
 .view-bilde-slider-node .views-field-field-main-image-fid img {
   width: 100%;
   height: auto;
 }
-/* line 219, ../sass/base.scss */
+/* line 236, ../sass/base.scss */
 .view-bilde-slider-node .views-field-field-main-image-data {
   font-family: Arial;
   font-size: 0.8em;
@@ -252,7 +265,7 @@ body p {
   border-bottom: 1px solid #c1bfb9;
 }
 
-/* line 227, ../sass/base.scss */
+/* line 244, ../sass/base.scss */
 .ingress {
   font-family: Arial;
   font-weight: bold;
@@ -261,7 +274,7 @@ body p {
   margin: 15px 0px;
 }
 
-/* line 234, ../sass/base.scss */
+/* line 251, ../sass/base.scss */
 .byline {
   font-family: Arial;
   font-size: 0.8em;
@@ -272,27 +285,27 @@ body p {
   float: left;
   width: 100%;
 }
-/* line 246, ../sass/base.scss */
+/* line 263, ../sass/base.scss */
 .byline .forfatter {
   float: left;
   font-weight: bold;
   margin-right: 5px;
 }
-/* line 251, ../sass/base.scss */
+/* line 268, ../sass/base.scss */
 .byline .created {
   float: left;
 }
-/* line 254, ../sass/base.scss */
+/* line 271, ../sass/base.scss */
 .byline .updated {
   clear: both;
 }
-/* line 257, ../sass/base.scss */
+/* line 274, ../sass/base.scss */
 .byline a {
   color: #333333;
   text-decoration: none;
 }
 
-/* line 262, ../sass/base.scss */
+/* line 279, ../sass/base.scss */
 .fakta-mobil {
   background: #f1f2ee;
   border-bottom: 2px solid #c1bfb9;
@@ -301,7 +314,7 @@ body p {
   border-right: 1px solid #d9d9d9;
   margin: 10px 0px 20px 0px;
 }
-/* line 269, ../sass/base.scss */
+/* line 286, ../sass/base.scss */
 .fakta-mobil .faktatittel a {
   color: #d71010;
   font-family: Arial;
@@ -310,35 +323,35 @@ body p {
   display: block;
   padding: 7px;
 }
-/* line 276, ../sass/base.scss */
+/* line 293, ../sass/base.scss */
 .fakta-mobil .faktatittel a .icon {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s7f14812931.png') 0 -221px no-repeat;
   width: 19px;
   height: 18px;
   float: right;
 }
-/* line 284, ../sass/base.scss */
+/* line 301, ../sass/base.scss */
 .fakta-mobil .innhold {
   padding: 7px;
   display: none;
 }
 
-/* line 291, ../sass/base.scss */
+/* line 308, ../sass/base.scss */
 .fakta-mobil.open .faktatittel a .icon {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s7f14812931.png') 0 -203px no-repeat;
 }
-/* line 295, ../sass/base.scss */
+/* line 312, ../sass/base.scss */
 .fakta-mobil.open .innhold {
   display: block;
 }
 
-/* line 299, ../sass/base.scss */
+/* line 316, ../sass/base.scss */
 .tiltoppen {
   width: 100%;
   clear: both;
   margin: 20px 0px;
 }
-/* line 303, ../sass/base.scss */
+/* line 320, ../sass/base.scss */
 .tiltoppen a {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s7f14812931.png') 0 -83px no-repeat;
   width: 174px;
@@ -347,40 +360,40 @@ body p {
   text-indent: -999px;
 }
 
-/* line 312, ../sass/base.scss */
+/* line 329, ../sass/base.scss */
 .block {
   margin-bottom: 20px;
 }
-/* line 315, ../sass/base.scss */
+/* line 332, ../sass/base.scss */
 .block .item-list h3 {
   border-bottom: 2px solid #333;
   padding: 4px 0px;
   margin-bottom: 5px;
 }
-/* line 320, ../sass/base.scss */
+/* line 337, ../sass/base.scss */
 .block .item-list ul {
   padding: 0px;
   margin: 0px;
 }
-/* line 323, ../sass/base.scss */
+/* line 340, ../sass/base.scss */
 .block .item-list ul li {
   list-style: none;
   padding: 7px 0px 7px 0px;
   margin: 0px 0px 7px 0px;
   border-bottom: 1px solid #dddddd;
 }
-/* line 328, ../sass/base.scss */
+/* line 345, ../sass/base.scss */
 .block .item-list ul li a {
   color: #2c91c5;
   text-decoration: none;
   font-family: 'Merriweather', serif;
 }
-/* line 338, ../sass/base.scss */
+/* line 355, ../sass/base.scss */
 .block .item-list ul.lenker li a {
   color: #2c91c5;
   font-size: 1em;
 }
-/* line 346, ../sass/base.scss */
+/* line 363, ../sass/base.scss */
 .block .siste-saker .views-field-field-main-image-fid {
   display: none;
 }

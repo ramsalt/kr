@@ -38,4 +38,8 @@
   .container-16 .inner-container .art-side {
     width: 30%;
   }
+  /* line 35, ../sass/grid-desktop.scss */
+  .container-16 .inner-container .full {
+    width: 100%;
+  }
 }
