@@ -4,7 +4,8 @@ base theme = openpublish_theme
 version = VERSION
 core = 6.x
 engine = phptemplate
- 
+
+scripts[] = js/respond.min.js
 scripts[] = js/base.js 
 scripts[] = js/meny.js 
 scripts[] = js/article.js 
