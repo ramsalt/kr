@@ -1,4 +1,4 @@
-@media all and (min-width: 800px) and (orientation:landscape) {
+@media all and (min-width: 800px)  {
 #outer-wrapper{
   padding-left: 20px;
   padding-right: 20px;
@@ -14,6 +14,7 @@
       display: inline;
       float: left;
       overflow: hidden;
+      
     }
 }
 .container-16{

@@ -61,7 +61,7 @@
       <?php if (isset($node->taxonomy[80])) print '<div class="kommentar">KOMMENTAR:</div>' ?>
       <?php if ($fakta ): ?><div class="fakta visible-desktop"><div class="faktatittel">Fakta</div><div class="content"><?php print $fakta; ?></div></div><?php endif; ?>
       <?php print $body; ?>
-      <?php if ($fakta && !isset($user->roles[1])): ?><div class="fakta-mobil visible-mobile"><div class="faktatittel"><a href=""><span>Fakta</span><span class="icon"></span></a></div><div class="innhold"><?php print $fakta; ?></div></div><?php endif; ?>
+      <?php if ($fakta): ?><div class="fakta-mobil visible-mobile"><div class="faktatittel"><a href=""><span>Fakta</span><span class="icon"></span></a></div><div class="innhold"><?php print $fakta; ?></div></div><?php endif; ?>
   </div>
   
   <?php if ($documentcloud_doc): ?>

@@ -1,4 +1,4 @@
-@media all and (min-width: 800px) and (orientation: landscape) {
+@media all and (min-width: 800px) {
   /* line 2, ../sass/grid-desktop.scss */
   #outer-wrapper {
     padding-left: 20px;
@@ -19,22 +19,22 @@
     overflow: hidden;
   }
 
-  /* line 19, ../sass/grid-desktop.scss */
+  /* line 20, ../sass/grid-desktop.scss */
   .container-16 {
     width: 100%;
     max-width: 1004px;
     min-width: 800px;
     margin: 0 auto;
   }
-  /* line 25, ../sass/grid-desktop.scss */
+  /* line 26, ../sass/grid-desktop.scss */
   .container-16 .inner-container .grid-16 {
     width: 96%;
   }
-  /* line 28, ../sass/grid-desktop.scss */
+  /* line 29, ../sass/grid-desktop.scss */
   .container-16 .inner-container .art-main {
     width: 60%;
   }
-  /* line 31, ../sass/grid-desktop.scss */
+  /* line 32, ../sass/grid-desktop.scss */
   .container-16 .inner-container .art-side {
     width: 30%;
   }
