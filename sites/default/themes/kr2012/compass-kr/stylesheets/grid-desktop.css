@@ -39,7 +39,11 @@
     width: 30%;
   }
   /* line 35, ../sass/grid-desktop.scss */
+  .container-16 .inner-container .full.pre {
+    width: 100%;
+  }
+  /* line 38, ../sass/grid-desktop.scss */
   .container-16 .inner-container .full {
-    width: 98%;
+    width: 96%;
   }
 }
