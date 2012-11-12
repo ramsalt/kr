@@ -1,4 +1,4 @@
-@media all and (min-width: 740px) and (orientation:landscape){
+@media all and (min-width: 740px){
 .container{
     margin-left: auto;
     margin-right: auto;
@@ -12,6 +12,9 @@
 }
 .container-16{
   width: 768px;
+  .grid-16{
+    width: 728px;
+  }
   .art-main{
     width: 728px;
   }
@@ -22,5 +25,18 @@
     width: 213px;
   }
 }
-
+.front-page{
+  .grid.one{
+    margin: 0px;
+  }
+  .grid.one_one{
+    width: 475px;
+  }
+  .grid.one_two{
+    width: 100%;
+  }
+  .grid.one_three{
+    width: 244px;
+  }
+}
 }

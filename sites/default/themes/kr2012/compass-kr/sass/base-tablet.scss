@@ -1,8 +1,21 @@
-@media all and (min-width: 740px) and (orientation:landscape){
+@media all and (min-width: 740px) {
   .visible-mobile, .visible-desktop{
     display: none;
   }
   .visible-tablet{
     display: block;
+  }
+  #logo-area{ 
+    .wrapper {
+      .container { 
+        .grid{
+          width: 728px;      
+          margin: 0px 20px;
+        }
+        #logo{
+          margin-left: 0px;
+        }
+      }
+    }
   }
 }

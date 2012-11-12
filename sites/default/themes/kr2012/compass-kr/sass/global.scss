@@ -6,11 +6,11 @@ $icons: sprite-map("backgrounds/*.png");
 $logos: sprite-map("logo/*.png");
 
 @import "grid-mobile.scss";
-//@import "grid-tablet.scss";
+@import "grid-tablet.scss";
 @import "grid-desktop.scss";
 
 @import "base.scss";
-//@import "base-tablet.scss";
+@import "base-tablet.scss";
 @import "base-desktop.scss";
 
 @import "admin.scss";

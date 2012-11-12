@@ -1,4 +1,4 @@
-@media all and (min-width: 740px) and (orientation: landscape) {
+@media all and (min-width: 740px) {
   /* line 2, ../sass/grid-tablet.scss */
   .container {
     margin-left: auto;
@@ -18,15 +18,36 @@
     width: 768px;
   }
   /* line 15, ../sass/grid-tablet.scss */
-  .container-16 .art-main {
+  .container-16 .grid-16 {
     width: 728px;
   }
   /* line 18, ../sass/grid-tablet.scss */
+  .container-16 .art-main {
+    width: 728px;
+  }
+  /* line 21, ../sass/grid-tablet.scss */
   .container-16 .grid-12 {
     width: 475px;
   }
-  /* line 21, ../sass/grid-tablet.scss */
+  /* line 24, ../sass/grid-tablet.scss */
   .container-16 .art-side {
     width: 213px;
+  }
+
+  /* line 29, ../sass/grid-tablet.scss */
+  .front-page .grid.one {
+    margin: 0px;
+  }
+  /* line 32, ../sass/grid-tablet.scss */
+  .front-page .grid.one_one {
+    width: 475px;
+  }
+  /* line 35, ../sass/grid-tablet.scss */
+  .front-page .grid.one_two {
+    width: 100%;
+  }
+  /* line 38, ../sass/grid-tablet.scss */
+  .front-page .grid.one_three {
+    width: 244px;
   }
 }

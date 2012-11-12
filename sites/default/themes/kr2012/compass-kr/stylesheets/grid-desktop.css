@@ -53,15 +53,21 @@
   }
   /* line 47, ../sass/grid-desktop.scss */
   .front-page .grid.one_one {
-    margin-left: 2%;
-    width: 50%;
+    width: 75%;
   }
-  /* line 51, ../sass/grid-desktop.scss */
-  .front-page .grid.one_two {
-    width: 23%;
+  /* line 49, ../sass/grid-desktop.scss */
+  .front-page .grid.one_one .inner-left {
+    margin-left: 2%;
+    float: left;
+    width: 67%;
   }
   /* line 54, ../sass/grid-desktop.scss */
-  .front-page .grid.one_three {
+  .front-page .grid.one_one .inner-right {
+    float: left;
+    width: 31%;
+  }
+  /* line 59, ../sass/grid-desktop.scss */
+  .front-page .grid.one_two {
     width: 25%;
   }
 }

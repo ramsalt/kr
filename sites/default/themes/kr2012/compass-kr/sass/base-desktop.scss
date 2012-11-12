@@ -9,6 +9,9 @@ $logos: sprite-map("logo/*.png");
   .visible-desktop{
     display: block;
   }
+  body{
+    margin-top: 20px;
+  }
   .byline{ 
     .forfatter{
       float: none;

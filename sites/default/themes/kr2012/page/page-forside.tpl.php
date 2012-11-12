@@ -98,14 +98,17 @@
   	  <div class="container container-16 clearfix">
   	  	<div class="inner-container clearfix">
 	  	  	<div class="grid one one_one">
-				<?php print $one_one; ?>
+	  	  		<div class="inner-left">
+					<?php print $one_one; ?>
+				</div>
+				<div class="inner-right">
+					<?php print $one_two; ?>
+				</div>
 			</div><!-- /.grid -->
 			<div class="grid one one_two">
-				<?php print $one_two; ?>
-			</div><!-- /.grid -->
-			<div class="grid one one_three">
 				<?php print $one_three; ?>
 			</div><!-- /.grid -->
+
 		</div> <!-- /.inner-container -->
 	</div> <!-- /.container -->
   </div> <!-- /.wrapper -->

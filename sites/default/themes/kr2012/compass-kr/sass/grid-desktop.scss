@@ -45,13 +45,18 @@
     margin: 0px;
   }
   .grid.one_one{
-    margin-left: 2%;
-    width: 50%;
+    width: 75%;
+    .inner-left{
+      margin-left: 2%;
+      float: left;
+      width: 67%
+    }
+    .inner-right{
+      float: left;
+      width: 31%
+    }
   }
   .grid.one_two{
-    width: 23%
-  }
-  .grid.one_three{
     width: 25%;
   }
 }

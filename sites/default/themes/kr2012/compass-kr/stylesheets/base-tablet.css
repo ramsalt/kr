@@ -1,4 +1,4 @@
-@media all and (min-width: 740px) and (orientation: landscape) {
+@media all and (min-width: 740px) {
   /* line 2, ../sass/base-tablet.scss */
   .visible-mobile, .visible-desktop {
     display: none;
@@ -7,5 +7,15 @@
   /* line 5, ../sass/base-tablet.scss */
   .visible-tablet {
     display: block;
+  }
+
+  /* line 11, ../sass/base-tablet.scss */
+  #logo-area .wrapper .container .grid {
+    width: 728px;
+    margin: 0px 20px;
+  }
+  /* line 15, ../sass/base-tablet.scss */
+  #logo-area .wrapper .container #logo {
+    margin-left: 0px;
   }
 }
