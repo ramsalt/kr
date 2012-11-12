@@ -1,0 +1,115 @@
+<?php
+
+/**
+ * @file block_class.module
+ * Provides core logic for adding block classes.
+ *
+ */
+
+/**
+ * Implementation of hook_perm().
+ *
+ * Define user permissions.
+ */
+function block_class_perm() {
+  return array('administer block classes');
+}
+
+/**
+ * Implementation of template_preprocess_block().
+ *
+ * Make $block_class string available to block.tpl.php.
+ */
+function block_class_preprocess_block(&$variables) {
+  if (isset($variables['block_classes'])) {
+    $variables['block_classes'] .= ' ' . block_class($variables['block']);
+  }
+  else {
+    $variables['block_classes'] = block_class($variables['block']);
+  }
+}
+
+
+function block_class($block) {
+  $attributes = block_class_attributes($block);
+  return check_plain($attributes->css_class);
+}
+
+
+function block_class_attributes($block, $reset = FALSE) {
+  static $blocks;
+
+  // If we've not fetched the data, or we're being reset, fetch all the data:
+  if (is_null($blocks) || $reset) {
+    $result = db_query("SELECT css_class, module, delta FROM {block_class}");
+    while ($row = db_fetch_object($result)) {
+      $blocks[$row->module][$row->delta] = $row;
+    }
+  }
+
+  // Do we have info for this block:
+  if (isset($blocks[$block->module][$block->delta])) {
+    return $blocks[$block->module][$block->delta];
+  }
+  else {
+    $undef = (object) NULL;
+    $undef->css_class = '';
+    return $undef;
+  }
+}
+
+
+function block_class_form_alter(&$form, &$form_state, $form_id) {
+  if (user_access('administer block classes') && ($form_id == 'block_admin_configure' || $form_id == 'block_add_block_form')) {
+    $block->module = $form['module']['#value'];
+    $block->delta = $form['delta']['#value'];
+    $attributes = block_class_attributes($block);
+
+    // Create a more technical description for users with administer blocks permission.
+    $description = t('Customize the styling of this block by adding CSS classes. You can add multiple classes.');
+    if (user_access('administer blocks')) {
+      $description .= ' ' .  t('IMPORTANT: You must add <code>&lt;?php print $block_classes; ?&gt;</code> to your theme\'s block.tpl.php file to make the classes appear. See the module\'s README.txt for more details.');
+    }
+
+    $form['block_class'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('Block Class settings'),
+      '#collapsible' => TRUE,
+      '#weight' => 0,
+      '#description' => $description,
+    );
+    $form['block_class']['css_class'] = array(
+      '#type' => 'textfield',
+      '#title' => t('CSS class(es)'),
+      '#default_value' => $attributes->css_class,
+      '#description' => t('Separate classes with a space.'),
+      '#maxlength' => 255,
+    );
+
+    $form['#submit'][] = 'block_class_form_submit';
+  }
+}
+
+
+function block_class_form_submit($form, &$form_state) {
+  if ($form_state['values']['form_id'] == 'block_admin_configure' || $form_state['values']['form_id'] == 'block_add_block_form') {
+    if (isset($form_state['values']['css_class']) && user_access('administer blocks')) {
+      $module = $form_state['values']['module'];
+      $delta = $form_state['values']['delta'];
+      $class = $form_state['values']['css_class'];
+
+      // Adding new block (i.e., the "Add Block" form) requires special handling.
+      // $delta is null if this is the "Add Block" form.
+      if ($form_state['values']['form_id'] == 'block_add_block_form') {
+        $last_block = db_last_insert_id('blocks', 'bid');
+        $delta = $last_block;
+      }
+
+      db_query("DELETE FROM {block_class} WHERE module = '%s' AND delta = '%s'", $module, $delta);
+
+      if (!empty($class)) {
+        db_query("INSERT INTO {block_class} (module, delta, css_class) VALUES ('%s', '%s', '%s')", $module, $delta, $class);
+      }
+    }
+  }
+}

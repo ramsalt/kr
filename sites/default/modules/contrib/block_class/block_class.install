@@ -1,0 +1,97 @@
+<?php
+
+/**
+ * @file block_class.install
+ * Provides the (un)install and update logic for block_class.
+ */
+
+/**
+ * Implementation of hook_schema().
+ */
+function block_class_schema() {
+  $schema['block_class'] = array(
+    'fields' => array(
+      'module' => array(
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => TRUE,
+        'description' => 'The module to which the block belongs.',
+      ),
+      'delta' => array(
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'description' => "The ID of the module's block.",
+      ),
+      'css_class' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'description' => 'String containing the classes for the block.',
+      ),
+    ),
+    'primary key' => array('module', 'delta'),
+  );
+
+  return $schema;
+}
+
+/**
+ * Implementation of hook_install().
+ */
+function block_class_install() {
+  drupal_install_schema('block_class');
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function block_class_uninstall() {
+  drupal_uninstall_schema('block_class');
+}
+
+/**
+ * Alters the structure of {block_class} schema.
+ */
+function block_class_update_6100() {
+  $ret = array();
+  // Removed. This schema update made new installations of post-6.x-1.3
+  // snapshots fail due to a too long primary key index. As many users updated
+  // to it anyway, the corrected schema change has been moved to
+  // block_class_update_6101() now.
+  return $ret;
+}
+
+/**
+ * Fix too long primary key length in {block_class}.
+ */
+function block_class_update_6101() {
+  $ret = array();
+
+  // Drop current primary key.
+  db_drop_primary_key($ret, 'block_class');
+
+  db_change_field($ret, 'block_class', 'module', 'module', array(
+    'type' => 'varchar',
+    'length' => 64,
+    'not null' => TRUE,
+    'description' => 'The module to which the block belongs.',
+  ));
+  db_change_field($ret, 'block_class', 'delta', 'delta', array(
+    'type' => 'varchar',
+    'length' => 32,
+    'not null' => TRUE,
+    'description' => "The ID of the module's block.",
+  ));
+  db_change_field($ret, 'block_class', 'css_class', 'css_class', array(
+    'type' => 'varchar',
+    'length' => 255,
+    'not null' => TRUE,
+    'description' => 'String containing the classes for the block.',
+  ));
+
+  // Create new primary key.
+  db_add_primary_key($ret, 'block_class', array('module', 'delta'));
+
+  return $ret;
+}
