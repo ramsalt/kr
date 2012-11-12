@@ -4,6 +4,7 @@ $icons: sprite-map("backgrounds/*.png");
 $logos: sprite-map("logo/*.png");
 
 body{
+  margin-top: 20px;
   font-family: 'Merriweather', serif;
   font-size: 0.9em;
   line-height: 1.3em;
@@ -26,6 +27,9 @@ body{
   p{
     margin: 1em 0em;
   }
+}
+body.admin-menu{
+  margin-top: 40px !important;
 }
 .visible-desktop, .visible-tablet{
     display: none;
@@ -83,7 +87,6 @@ body{
   .wrapper{
     border-top: 1px solid #34668f;
     .container{
-      
       .grid{
         width: 320px;
         margin: 0px;
