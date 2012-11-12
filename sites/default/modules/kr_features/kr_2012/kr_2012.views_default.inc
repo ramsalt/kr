@@ -6,6 +6,243 @@
 function kr_2012_views_default_views() {
   $views = array();
 
+  // Exported view: Kommentarutdrag
+  $view = new view;
+  $view->name = 'Kommentarutdrag';
+  $view->description = '';
+  $view->tag = '';
+  $view->base_table = 'node';
+  $view->core = 0;
+  $view->api_version = '2';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+  $handler = $view->new_display('default', 'Standardverdier', 'default');
+  $handler->override_option('fields', array(
+    'field_sitat_value' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 1,
+      'label_type' => 'none',
+      'format' => 'default',
+      'multiple' => array(
+        'group' => 1,
+        'multiple_number' => '1',
+        'multiple_from' => '0',
+        'multiple_reversed' => 0,
+      ),
+      'exclude' => 0,
+      'id' => 'field_sitat_value',
+      'table' => 'node_data_field_sitat',
+      'field' => 'field_sitat_value',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Overstyr',
+      ),
+    ),
+    'field_op_author_nid' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'default',
+      'multiple' => array(
+        'group' => 1,
+        'multiple_number' => '1',
+        'multiple_from' => '0',
+        'multiple_reversed' => 0,
+      ),
+      'exclude' => 0,
+      'id' => 'field_op_author_nid',
+      'table' => 'node_data_field_op_author',
+      'field' => 'field_op_author_nid',
+      'relationship' => 'none',
+    ),
+    'view_node' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'text' => 'Les kommentaren',
+      'exclude' => 0,
+      'id' => 'view_node',
+      'table' => 'node',
+      'field' => 'view_node',
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('sorts', array(
+    'created' => array(
+      'order' => 'DESC',
+      'granularity' => 'second',
+      'id' => 'created',
+      'table' => 'node',
+      'field' => 'created',
+      'relationship' => 'none',
+    ),
+    'changed' => array(
+      'order' => 'DESC',
+      'granularity' => 'second',
+      'id' => 'changed',
+      'table' => 'node',
+      'field' => 'changed',
+      'override' => array(
+        'button' => 'Overstyr',
+      ),
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('filters', array(
+    'field_sitat_value' => array(
+      'operator' => 'not empty',
+      'value' => '',
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'case' => 0,
+      'id' => 'field_sitat_value',
+      'table' => 'node_data_field_sitat',
+      'field' => 'field_sitat_value',
+      'relationship' => 'none',
+    ),
+    'status' => array(
+      'operator' => '=',
+      'value' => '1',
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'status',
+      'table' => 'node',
+      'field' => 'status',
+      'override' => array(
+        'button' => 'Overstyr',
+      ),
+      'relationship' => 'none',
+    ),
+    'name' => array(
+      'operator' => '=',
+      'value' => 'Kommentar',
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'case' => 1,
+      'id' => 'name',
+      'table' => 'term_data',
+      'field' => 'name',
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('access', array(
+    'type' => 'none',
+  ));
+  $handler->override_option('cache', array(
+    'type' => 'views_content_cache',
+    'keys' => array(
+      'comment' => array(
+        'changed' => 0,
+      ),
+      'node' => array(
+        'article' => 'article',
+        'poll' => 0,
+        'op_image' => 0,
+        'blog' => 0,
+        'book' => 0,
+        'multichoice' => 0,
+        'author' => 0,
+        'simplenews' => 0,
+        'ordforer' => 0,
+        'page' => 0,
+        'panel' => 0,
+        'quiz' => 0,
+        'resource' => 0,
+        'job' => 0,
+        'topichub' => 0,
+        'webform' => 0,
+      ),
+    ),
+    'results_min_lifespan' => '1800',
+    'results_max_lifespan' => '21600',
+    'output_min_lifespan' => '300',
+    'output_max_lifespan' => '21600',
+  ));
+  $handler->override_option('css_class', 'kommentar-liste');
+  $handler->override_option('items_per_page', 1);
+  $handler = $view->new_display('block', 'Nest nyeste sitat', 'block_2');
+  $handler->override_option('offset', 1);
+  $handler->override_option('block_description', '');
+  $handler->override_option('block_caching', -1);
+  $handler = $view->new_display('block', 'Nyeste sitat', 'block_1');
+  $handler->override_option('title', 'Kommentar');
+  $handler->override_option('block_description', '');
+  $handler->override_option('block_caching', -1);
+
+  $views[$view->name] = $view;
+
   // Exported view: siste_saker
   $view = new view;
   $view->name = 'siste_saker';
