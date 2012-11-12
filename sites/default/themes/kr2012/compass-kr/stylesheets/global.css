@@ -147,23 +147,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   .container-16 .art-side {
     width: 213px;
   }
-
-  /* line 29, ../sass/grid-tablet.scss */
-  .front-page .grid.one {
-    margin: 0px;
-  }
-  /* line 32, ../sass/grid-tablet.scss */
-  .front-page .grid.one_one {
-    width: 475px;
-  }
-  /* line 35, ../sass/grid-tablet.scss */
-  .front-page .grid.one_two {
-    width: 100%;
-  }
-  /* line 38, ../sass/grid-tablet.scss */
-  .front-page .grid.one_three {
-    width: 244px;
-  }
 }
 @media all and (min-width: 800px) {
   /* line 2, ../sass/grid-desktop.scss */
@@ -213,29 +196,30 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   .container-16 .inner-container .full {
     width: 96%;
   }
-
-  /* line 44, ../sass/grid-desktop.scss */
-  .front-page .grid.one {
+  /* line 41, ../sass/grid-desktop.scss */
+  .container-16 .inner-container .full.nomargin {
+    width: 100%;
     margin: 0px;
   }
-  /* line 47, ../sass/grid-desktop.scss */
-  .front-page .grid.one_one {
-    width: 75%;
-  }
-  /* line 49, ../sass/grid-desktop.scss */
-  .front-page .grid.one_one .inner-left {
-    margin-left: 2%;
+
+  /* line 48, ../sass/grid-desktop.scss */
+  .front-page .one {
     float: left;
-    width: 67%;
+    position: relative;
   }
-  /* line 54, ../sass/grid-desktop.scss */
-  .front-page .grid.one_one .inner-right {
-    float: left;
-    width: 31%;
+  /* line 52, ../sass/grid-desktop.scss */
+  .front-page .one_one {
+    width: 52%;
+  }
+  /* line 55, ../sass/grid-desktop.scss */
+  .front-page .one_two {
+    width: 23%;
+    left: -25%;
   }
   /* line 59, ../sass/grid-desktop.scss */
-  .front-page .grid.one_two {
+  .front-page .one_three {
     width: 25%;
+    left: 23%;
   }
 }
 /* line 6, ../sass/base.scss */

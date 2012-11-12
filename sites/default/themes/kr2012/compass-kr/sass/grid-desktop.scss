@@ -38,26 +38,27 @@
     .full{
       width: 96%;
     }
+    .full.nomargin{
+      width: 100%;
+      margin: 0px;
+    }
   }
 }
 .front-page{
-  .grid.one{
-    margin: 0px;
+  .one{
+    float:left;
+    position: relative;
   }
-  .grid.one_one{
-    width: 75%;
-    .inner-left{
-      margin-left: 2%;
-      float: left;
-      width: 67%
-    }
-    .inner-right{
-      float: left;
-      width: 31%
-    }
+  .one_one{
+    width: 52%;
   }
-  .grid.one_two{
+  .one_two{
+    width: 23%;
+    left: -25%;
+  }
+  .one_three{
     width: 25%;
+    left: 23%;
   }
 }
 }
