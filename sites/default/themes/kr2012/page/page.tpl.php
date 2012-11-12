@@ -96,7 +96,7 @@
   <div id="content-area" class="area">
   	<div class="wrapper">
   	  <div class="container container-16 clearfix">
-  	  	<div class="inner-container">
+  	  	<div class="inner-container clearfix">
 	  	  	<div class="grid full">
 				  <?php// print $breadcrumb; ?>
 				    <?php if ($tabs): print '<div id="tabs-wrapper" class="clear-block">'; endif; ?>

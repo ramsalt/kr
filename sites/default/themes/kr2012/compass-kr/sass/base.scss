@@ -161,6 +161,9 @@ body{
           background: transparent;
         }
       }
+      li.on{
+        background: transparent;
+      }
       li.multilevel.open{
         ul{
           display: block;
