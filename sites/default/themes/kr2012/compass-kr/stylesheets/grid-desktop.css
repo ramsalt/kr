@@ -46,4 +46,22 @@
   .container-16 .inner-container .full {
     width: 96%;
   }
+
+  /* line 44, ../sass/grid-desktop.scss */
+  .front-page .grid.one {
+    margin: 0px;
+  }
+  /* line 47, ../sass/grid-desktop.scss */
+  .front-page .grid.one_one {
+    margin-left: 2%;
+    width: 50%;
+  }
+  /* line 51, ../sass/grid-desktop.scss */
+  .front-page .grid.one_two {
+    width: 23%;
+  }
+  /* line 54, ../sass/grid-desktop.scss */
+  .front-page .grid.one_three {
+    width: 25%;
+  }
 }

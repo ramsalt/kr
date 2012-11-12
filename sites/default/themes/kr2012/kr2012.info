@@ -24,3 +24,27 @@ regions[over_content] = On Top of Content
 regions[under_content] = Underneath the Content
 regions[header] = Header
 regions[footer] = Footer
+
+regions[one_one] = Front: One one
+regions[one_two] = Front: One two
+regions[one_three] = Front: One Three
+
+    ; Layout: Default
+    layouts[default][name] = "Default"
+    layouts[default][description] = "Simple two column page."
+    layouts[default][template] = "page-node"
+    layouts[default][regions][] = "header"
+    layouts[default][regions][] = "over_content"
+    layouts[default][regions][] = "content"
+    layouts[default][regions][] = "under_content"
+    layouts[default][regions][] = "right"
+    layouts[default][regions][] = "footer"
+
+    ; Layout: Columns
+    layouts[columns][name] = "Frontpage"
+    layouts[columns][description] = "Frontpage"
+    layouts[columns][stylesheet] = "front.css"
+    layouts[columns][template] = "page-forside"
+    layouts[columns][regions][] = "one_one"
+    layouts[columns][regions][] = "one_two"
+    layouts[columns][regions][] = "one_three"
