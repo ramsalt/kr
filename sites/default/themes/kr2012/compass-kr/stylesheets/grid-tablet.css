@@ -33,4 +33,29 @@
   .container-16 .art-side {
     width: 213px;
   }
+  /* line 27, ../sass/grid-tablet.scss */
+  .container-16 .grid.full.nomargin {
+    margin: 0px;
+    width: 768px;
+  }
+
+  /* line 34, ../sass/grid-tablet.scss */
+  .front-page .one {
+    float: left;
+    position: relative;
+  }
+  /* line 38, ../sass/grid-tablet.scss */
+  .front-page .one_one {
+    width: 475px;
+  }
+  /* line 41, ../sass/grid-tablet.scss */
+  .front-page .one_two {
+    width: 100%;
+    left: 0px;
+  }
+  /* line 45, ../sass/grid-tablet.scss */
+  .front-page .one_three {
+    width: 292px;
+    left: 0px;
+  }
 }

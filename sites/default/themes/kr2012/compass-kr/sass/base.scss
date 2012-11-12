@@ -2,7 +2,19 @@
 
 $icons: sprite-map("backgrounds/*.png");
 $logos: sprite-map("logo/*.png");
-
+@mixin rammeboks-mob{
+  padding: 15px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 2px solid #c1bfb9;
+  background: #f1f2ee;
+  h2{
+    color: #d71010;
+    font-size: 0.8em;
+    text-transform: Uppercase;
+    border-bottom: 1px solid #d71010;
+    margin-bottom: 10px;
+  }
+}
 body{
   font-family: 'Merriweather', serif;
   font-size: 0.9em;
@@ -331,8 +343,11 @@ body.admin-menu{
     
   }
 }
+.rammeboks{
+    @include rammeboks-mob;
+}
 .block {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   .item-list{
     h3{
       border-bottom: 2px solid #333;
@@ -368,5 +383,8 @@ body.admin-menu{
     .views-field-field-main-image-fid{
       display: none;
     }
+  }
+  .newest-comment{
+
   }
 }

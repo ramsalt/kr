@@ -24,6 +24,27 @@
   .art-side{
     width: 213px;
   }
+  .grid.full.nomargin{
+    margin: 0px;
+    width: 768px;
+    
+  }
 }
-
+.front-page{
+  .one{
+    float:left;
+    position: relative;
+  }
+  .one_one{
+    width: 475px;
+  }
+  .one_two{
+    width: 100%;
+    left: 0px;
+  }
+  .one_three{
+    width: 292px;
+    left: 0px;
+  }
+}
 }

@@ -99,13 +99,19 @@
   	  	<div class="inner-container clearfix">
 	  	  	<div class="grid full nomargin">
 	  	  		<div class="one one_one">
-					<?php print $one_one; ?>
+	  	  			<div class="one-inner">
+						<?php print $one_one; ?>
+					</div>
 				</div>
 				<div class="one one_three">
-					<?php print $one_three; ?>
+					<div class="one-inner">
+						<?php print $one_three; ?>
+					</div>
 				</div>				
 				<div class="one one_two">
-					<?php print $one_two; ?>
+					<div class="one-inner">
+						<?php print $one_two; ?>
+					</div>
 				</div>
 			</div><!-- /.grid -->
 
