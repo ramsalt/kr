@@ -97,8 +97,9 @@
   	<div class="wrapper">
   	  <div class="container container-16 clearfix">
   	  	<div class="inner-container">
-	  	  	<div class="grid full">
+	  	  	<div class="grid art-main">
 				  <?php// print $breadcrumb; ?>
+				<h4>NODE</h4>
 				    <?php if ($tabs): print '<div id="tabs-wrapper" class="clear-block">'; endif; ?>
 				      <?php if ($tabs): ?>
 				      <div id="drupal-control-bar">      
@@ -131,6 +132,11 @@
 				    <?php print $under_content ?>  
 				  </div>
 				  
+			</div><!-- /.grid -->
+			<div class="grid art-side">
+				  <div id="sidebar-right" class="sidebar">
+				  	<?php print $right ?>
+				  </div> <!-- /#sidebar-right -->
 			</div><!-- /.grid -->
 		</div> <!-- /.inner-container -->
 	</div> <!-- /.container -->
