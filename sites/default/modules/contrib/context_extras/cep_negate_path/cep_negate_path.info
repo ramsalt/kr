@@ -1,0 +1,13 @@
+name = "Context Negate Path"
+dependencies[] = "context"
+dependencies[] = "path"
+dependencies[] = "pathauto"
+description = "Context condition: Show on every page except the listed pages."
+package = "Context Extras"
+core = "6.x"
+; Information added by drupal.org packaging script on 2011-03-09
+version = "6.x-3.0-beta5"
+core = "6.x"
+project = "context_extras"
+datestamp = "1299637871"
+

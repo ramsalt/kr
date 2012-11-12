@@ -1,0 +1,7 @@
+<?php
+
+function cep_negate_path_install() {
+  // Set the weight so that other path altering modules have a chance
+  // to execute prior to this one.
+  db_query("UPDATE system SET weight = 10 WHERE name = 'cep_negate_path'");
+}

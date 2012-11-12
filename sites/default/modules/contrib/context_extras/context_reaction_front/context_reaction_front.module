@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * Implementation of hook_init().
+ */
+function context_reaction_front_init() {
+  if ($plugin = context_get_plugin('reaction', 'context_reaction_default_front')) {
+    $plugin->execute();
+  }
+}
+
+
+/**
+ * Notify CTools that we'll be using the plugin API with Context module
+ */
+function context_reaction_front_ctools_plugin_api($module, $api) {
+  if ($module == 'context' && $api == 'plugins') {
+    return array('version' => 3);
+  }
+}
+
+/**
+ * CTools plugin API hook for Context
+ */
+function context_reaction_front_context_plugins() {
+  $plugins = array();
+  $plugins['context_reaction_default_front'] = array(
+    'handler' => array(
+      'path' => drupal_get_path('module', 'context_reaction_front') .'/plugins',
+      'file' => 'context_reaction_default_front.inc',
+      'class' => 'context_reaction_default_front',
+      'parent' => 'context_reaction',
+    ),
+  );
+
+  return $plugins;
+}
+
+/**
+ * Registry hook for conditions & reactions.
+ */
+function context_reaction_front_context_registry() {
+  return array(
+    'reactions' => array(
+      'context_reaction_default_front' => array(
+        'title' => t('Front page'),
+        'plugin' => 'context_reaction_default_front',
+      ),
+    ),
+  );
+}

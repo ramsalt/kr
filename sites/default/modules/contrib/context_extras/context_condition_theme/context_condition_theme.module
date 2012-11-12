@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * Implementation of hook_init().
+ */
+function context_condition_theme_init() {
+  if ($plugin = context_get_plugin('condition', 'context_condition_theme')) {
+    global $custom_theme;
+    $theme = $custom_theme ? $custom_theme : variable_get('theme_default', '');
+    $plugin->execute($theme);
+  }
+}
+
+/**
+ * Implementation of hook_context_plugins().
+ */
+function context_condition_theme_context_plugins() {
+  $plugins = array();
+  $plugins['context_condition_theme'] = array(
+    'handler' => array(
+      'path' => drupal_get_path('module', 'context_condition_theme') . '/plugins',
+      'file' => 'context_condition_theme.inc',
+      'class' => 'context_condition_theme',
+      'parent' => 'context_condition',
+    ),
+  );
+  return $plugins;
+}
+
+/**
+ * Implementation of hook_context_registry().
+ */
+function context_condition_theme_context_registry() {
+  return array(
+    'conditions' => array(
+      'context_condition_theme' => array(
+        'title' => t('Theme'),
+        'plugin' => 'context_condition_theme',
+      ),
+    ),
+  );
+}

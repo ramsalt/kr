@@ -1,0 +1,12 @@
+name = "Context Immediate Taxonomy Child"
+dependencies[] = "context"
+dependencies[] = "taxonomy"
+description = "Assign the immediate taxonomy children of a selected taxonomy as a condition"
+package = "Context Extras"
+core = "6.x"
+; Information added by drupal.org packaging script on 2011-03-09
+version = "6.x-3.0-beta5"
+core = "6.x"
+project = "context_extras"
+datestamp = "1299637871"
+

@@ -1,0 +1,12 @@
+name = "Context Condition: Theme"
+description = "Adds a condition based on the active theme."
+package = "Context Extras"
+dependencies[] = context
+core = "6.x"
+
+; Information added by drupal.org packaging script on 2011-03-09
+version = "6.x-3.0-beta5"
+core = "6.x"
+project = "context_extras"
+datestamp = "1299637871"
+

@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * Implementation of hook_context_registry().
+ */
+function cep_negate_path_context_registry() {
+  return array(
+    'conditions' => array(
+      'cep_negate_path' => array(
+        'title' => t('Show on every page except the listed pages.'),
+        'plugin' => 'cep_negate_path_context_condition',
+      ),
+    ),
+  );
+}
+
+/**
+ * Implementation of hook_ctools_plugin_api().
+ */
+function cep_negate_path_ctools_plugin_api($module, $api) {
+  if ($module == 'context' && $api == 'plugins') {
+    return array('version' => 3);
+  }
+}
+
+/**
+ * Implementation of hook_context_plugins().
+ */
+function cep_negate_path_context_plugins() {
+  $plugins = array();
+  $plugins['cep_negate_path_context_condition'] = array(
+    'handler' => array(
+      'path' => drupal_get_path('module', 'cep_negate_path') .'/plugins',
+      'file' => 'cep_negate_path_context_condition.inc',
+      'class' => 'cep_negate_path_context_condition',
+      'parent' => 'context_condition',
+    ),
+  );
+  return $plugins;
+}
+
+/**
+ * Implementation of hook_init().
+ */
+function cep_negate_path_init() {
+  $map = context_condition_map();
+  if (!empty($map['cep_negate_path']) && $plugin = context_get_plugin('condition', 'cep_negate_path')) {
+    $plugin->execute();
+  }
+}

@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * Implementation of hook_context_registry().
+ */
+function cep_immediate_taxonomy_child_context_registry() {
+  return array(
+    'conditions' => array(
+      'cep_immediate_taxonomy_child' => array(
+        'title' => t('Assign the immediate taxonomy children of a selected taxonomy as a condition'),
+        'plugin' => 'cep_immediate_taxonomy_child_context_condition',
+      ),
+    ),
+  );
+}
+
+/**
+ * Implementation of hook_ctools_plugin_api().
+ */
+function cep_immediate_taxonomy_child_ctools_plugin_api($module, $api) {
+  if ($module == 'context' && $api == 'plugins') {
+    return array('version' => 3);
+  }
+}
+
+/**
+ * Implementation of hook_context_plugins().
+ */
+function cep_immediate_taxonomy_child_context_plugins() {
+  $plugins = array();
+  $plugins['cep_immediate_taxonomy_child_context_condition'] = array(
+    'handler' => array(
+      'path' => drupal_get_path('module', 'cep_immediate_taxonomy_child') .'/plugins',
+      'file' => 'cep_immediate_taxonomy_child_context_condition.inc',
+      'class' => 'cep_immediate_taxonomy_child_context_condition',
+      'parent' => 'context_condition',
+    ),
+  );
+  return $plugins;
+}
+
+/**
+ * Implementation of hook_init().
+ */
+function cep_immediate_taxonomy_child_init() {
+  $map = context_condition_map();
+  if (!empty($map['cep_immediate_taxonomy_child']) && $plugin = context_get_plugin('condition', 'cep_immediate_taxonomy_child')) {
+    $plugin->execute();
+  }
+}
