@@ -278,4 +278,13 @@ $logos: sprite-map("logo/*.png");
       }
     }
   }
+  .newslist.sak-4{
+    .views-field-field-main-image-fid{
+      float: left;
+      display: none;
+    }
+    .views-field-field-teaser-value{
+      display: block;
+    }
+  }
 }

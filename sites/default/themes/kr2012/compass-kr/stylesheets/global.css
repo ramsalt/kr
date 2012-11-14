@@ -905,6 +905,15 @@ body.admin-menu {
     font-size: 1.8em;
     line-height: 1.1em;
   }
+  /* line 282, ../sass/mixins.scss */
+  .block-views .newslist.sak-4 .views-field-field-main-image-fid {
+    float: left;
+    display: none;
+  }
+  /* line 286, ../sass/mixins.scss */
+  .block-views .newslist.sak-4 .views-field-field-teaser-value {
+    display: block;
+  }
 }
 @media all and (min-width: 800px) {
   /* line 9, ../sass/base-desktop.scss */
