@@ -1,48 +1,48 @@
 @media all and (min-width: 800px) {
-  /* line 6, ../sass/base-desktop.scss */
+  /* line 9, ../sass/base-desktop.scss */
   .visible-mobile, .visible-tablet {
     display: none;
   }
 
-  /* line 9, ../sass/base-desktop.scss */
+  /* line 12, ../sass/base-desktop.scss */
   .visible-desktop {
     display: block;
   }
 
-  /* line 12, ../sass/base-desktop.scss */
+  /* line 15, ../sass/base-desktop.scss */
   body {
     margin-top: 20px;
   }
 
-  /* line 16, ../sass/base-desktop.scss */
+  /* line 19, ../sass/base-desktop.scss */
   .byline .forfatter {
     float: none;
     padding-right: 5px;
   }
-  /* line 20, ../sass/base-desktop.scss */
+  /* line 23, ../sass/base-desktop.scss */
   .byline .updated {
     clear: none;
     float: left;
     padding-right: 5px;
   }
-  /* line 25, ../sass/base-desktop.scss */
+  /* line 28, ../sass/base-desktop.scss */
   .byline .addthis {
     height: 25px;
     min-width: 191px;
     overflow: hidden;
   }
 
-  /* line 34, ../sass/base-desktop.scss */
+  /* line 37, ../sass/base-desktop.scss */
   #login-area {
     margin-top: 10px;
     background: transparent;
     border: none;
   }
-  /* line 38, ../sass/base-desktop.scss */
+  /* line 41, ../sass/base-desktop.scss */
   #login-area .wrapper {
     border: none;
   }
-  /* line 42, ../sass/base-desktop.scss */
+  /* line 45, ../sass/base-desktop.scss */
   #login-area .wrapper .container .inner-container {
     -moz-border-radius-topleft: 4px;
     -webkit-border-top-left-radius: 4px;
@@ -57,34 +57,34 @@
     border-right: 1px solid #d9d9d9;
     border-bottom: 1px solid #a1a1a1;
   }
-  /* line 50, ../sass/base-desktop.scss */
+  /* line 53, ../sass/base-desktop.scss */
   #login-area .wrapper .container .inner-container .art-main {
     width: 962px;
   }
-  /* line 55, ../sass/base-desktop.scss */
+  /* line 58, ../sass/base-desktop.scss */
   #login-area .wrapper .inner {
     float: right;
     width: auto;
   }
-  /* line 58, ../sass/base-desktop.scss */
+  /* line 61, ../sass/base-desktop.scss */
   #login-area .wrapper .inner #login-content {
     float: left;
   }
-  /* line 61, ../sass/base-desktop.scss */
+  /* line 64, ../sass/base-desktop.scss */
   #login-area .wrapper .inner #search-content {
     float: left;
     margin-top: 0px;
     padding-left: 25px;
   }
-  /* line 66, ../sass/base-desktop.scss */
+  /* line 69, ../sass/base-desktop.scss */
   #login-area .wrapper .inner #search-content a span.icon {
-    background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s7f14812931.png') 0 -239px no-repeat;
+    background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sf3b25e0d6b.png') 0 -256px no-repeat;
     width: 14px;
     height: 15px;
     margin-left: 4px;
     maring-top: 1px;
   }
-  /* line 77, ../sass/base-desktop.scss */
+  /* line 80, ../sass/base-desktop.scss */
   #login-area a {
     font-size: 1em;
     font-family: Arial;
@@ -94,26 +94,26 @@
     text-transform: Uppercase;
   }
 
-  /* line 86, ../sass/base-desktop.scss */
+  /* line 89, ../sass/base-desktop.scss */
   #logo-area {
     background: transparent;
     border: none;
   }
-  /* line 89, ../sass/base-desktop.scss */
+  /* line 92, ../sass/base-desktop.scss */
   #logo-area .wrapper {
     border-top: none;
   }
-  /* line 92, ../sass/base-desktop.scss */
+  /* line 95, ../sass/base-desktop.scss */
   #logo-area .wrapper .container .inner-container {
     height: 74px;
     background: url("/sites/default/themes/kr2012/compass-kr/images/backxrepeat.png") 0px 0px repeat-x;
   }
-  /* line 95, ../sass/base-desktop.scss */
+  /* line 98, ../sass/base-desktop.scss */
   #logo-area .wrapper .container .inner-container .grid {
     width: 96%;
     margin: 0px 2% 0px 2%;
   }
-  /* line 102, ../sass/base-desktop.scss */
+  /* line 105, ../sass/base-desktop.scss */
   #logo-area .wrapper #logo {
     margin-left: 0px;
     height: 62px;
@@ -121,7 +121,7 @@
     width: 291px;
     position: absolute;
   }
-  /* line 108, ../sass/base-desktop.scss */
+  /* line 111, ../sass/base-desktop.scss */
   #logo-area .wrapper #logo a {
     text-indent: -9999px;
     display: block;
@@ -131,18 +131,18 @@
     height: 31px;
     width: 291px;
   }
-  /* line 116, ../sass/base-desktop.scss */
+  /* line 119, ../sass/base-desktop.scss */
   #logo-area .wrapper #logo a span {
-    background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s7f14812931.png') 0 0 no-repeat;
+    background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sf3b25e0d6b.png') 0 0 no-repeat;
     width: 291px;
     height: 31px;
     float: left;
   }
-  /* line 124, ../sass/base-desktop.scss */
+  /* line 127, ../sass/base-desktop.scss */
   #logo-area .wrapper #nav-button {
     display: none;
   }
-  /* line 127, ../sass/base-desktop.scss */
+  /* line 130, ../sass/base-desktop.scss */
   #logo-area .wrapper #nav {
     display: block;
     margin-left: 291px;
@@ -150,17 +150,17 @@
     height: 60px;
     overflow: hidden;
   }
-  /* line 133, ../sass/base-desktop.scss */
+  /* line 136, ../sass/base-desktop.scss */
   #logo-area .wrapper #nav ul {
     padding: 6px 0px;
   }
-  /* line 135, ../sass/base-desktop.scss */
+  /* line 138, ../sass/base-desktop.scss */
   #logo-area .wrapper #nav ul li {
     border: none;
     width: auto;
     clear: none;
   }
-  /* line 139, ../sass/base-desktop.scss */
+  /* line 142, ../sass/base-desktop.scss */
   #logo-area .wrapper #nav ul li a {
     font-family: "Helvetica Neue", Helvetica;
     font-size: 1.05em;
@@ -169,23 +169,23 @@
     text-transform: none;
     width: auto;
   }
-  /* line 150, ../sass/base-desktop.scss */
+  /* line 153, ../sass/base-desktop.scss */
   #logo-area .wrapper #nav ul li.multilevel a span.level {
     margin: 7px 0px 0px 4px;
   }
 
-  /* line 159, ../sass/base-desktop.scss */
+  /* line 162, ../sass/base-desktop.scss */
   #pre-area {
     border-top: none;
     border-bottom: none;
     background: transparent;
   }
-  /* line 164, ../sass/base-desktop.scss */
+  /* line 166, ../sass/base-desktop.scss */
   #pre-area .wrapper {
     background: transparent;
     border-top: none;
   }
-  /* line 167, ../sass/base-desktop.scss */
+  /* line 169, ../sass/base-desktop.scss */
   #pre-area .wrapper .container {
     border-top: 1px solid #a3a19b;
   }
@@ -206,25 +206,22 @@
     border-top: 1px solid #dddddd;
     border-left: 1px solid #dddddd;
     border-right: 1px solid #dddddd;
+    padding-top: 2%;
   }
-  /* line 190, ../sass/base-desktop.scss */
-  #content-area .wrapper .container .inner-container .grid {
-    margin-top: 2%;
-  }
-  /* line 193, ../sass/base-desktop.scss */
+  /* line 192, ../sass/base-desktop.scss */
   #content-area .wrapper .container .inner-container .grid.art-side {
     margin: 0px;
     padding: 0px;
     width: 36%;
   }
-  /* line 205, ../sass/base-desktop.scss */
+  /* line 204, ../sass/base-desktop.scss */
   #content-area .wrapper .container .inner-container .sidebar {
     padding: 4% 4% 5% 4%;
     border-left: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
   }
 
-  /* line 216, ../sass/base-desktop.scss */
+  /* line 215, ../sass/base-desktop.scss */
   .fakta {
     width: 200px;
     float: right;
@@ -236,59 +233,166 @@
     background: #f1f2ee;
     font-family: Arial;
   }
-  /* line 226, ../sass/base-desktop.scss */
+  /* line 225, ../sass/base-desktop.scss */
   .fakta .faktatittel {
     color: #d71010;
     font-weight: bold;
     text-transform: uppercase;
     border-bottom: 2px solid #D71010;
   }
-  /* line 232, ../sass/base-desktop.scss */
+  /* line 231, ../sass/base-desktop.scss */
   .fakta .content {
     font-size: 0.8em;
   }
 
-  /* line 238, ../sass/base-desktop.scss */
-  .block .item-list h3 {
+  /* line 4, ../sass/mixins.scss */
+  .rammeboks .rammeboks {
+    padding: 5%;
+    width: 90%;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 2px solid #c1bfb9;
+    background: #f1f2ee;
+    float: left;
+  }
+  /* line 11, ../sass/mixins.scss */
+  .rammeboks .rammeboks h2 {
+    color: #d71010;
+    font-size: 0.8em;
+    text-transform: Uppercase;
+    border-bottom: 1px solid #d71010;
+    margin-bottom: 10px;
+  }
+  /* line 18, ../sass/mixins.scss */
+  .rammeboks .rammeboks h3 {
+    border-bottom: 2px solid #333;
+    padding: 4px 0px;
+    margin-bottom: 5px;
+  }
+  /* line 23, ../sass/mixins.scss */
+  .rammeboks .rammeboks ul {
+    padding: 0px;
+    margin: 0px;
+  }
+  /* line 26, ../sass/mixins.scss */
+  .rammeboks .rammeboks ul li {
+    float: left;
+    width: 100%;
+    clear: both;
+    list-style: none;
+    padding: 7px 0px 7px 0px;
+    margin: 0px 0px 7px 0px;
+    border-bottom: 1px solid #dddddd;
+  }
+  /* line 34, ../sass/mixins.scss */
+  .rammeboks .rammeboks ul li a {
+    color: #2c91c5;
+    text-decoration: none;
+    font-family: 'Merriweather', serif;
+  }
+  /* line 43, ../sass/mixins.scss */
+  .rammeboks .rammeboks ul.lenker li a {
+    color: #2c91c5;
+    font-size: 1em;
+  }
+  /* line 51, ../sass/mixins.scss */
+  .rammeboks .rammeboks.kommentar-liste h2 {
+    color: #78a21e;
+    border-bottom: 1px solid #78a21e;
+  }
+  /* line 55, ../sass/mixins.scss */
+  .rammeboks .rammeboks.kommentar-liste .views-field-field-sitat-value:before {
+    content: '“';
+    float: left;
+    color: #78a21e;
+    font-weight: bold;
+    font-size: 1.7em;
+    font-family: 'Merriweather', serif;
+  }
+  /* line 64, ../sass/mixins.scss */
+  .rammeboks .rammeboks.kommentar-liste .views-field-field-sitat-value a {
+    text-decoration: none;
+    color: #333333;
+    font-family: 'Merriweather', serif;
+    font-size: 1.1em;
+  }
+  /* line 71, ../sass/mixins.scss */
+  .rammeboks .rammeboks.kommentar-liste .views-field-view-node {
+    border-top: 1px solid #c1bfb9;
+    margin-top: 10px;
+    padding-top: 6px;
+    float: left;
+    width: 50%;
+  }
+  /* line 77, ../sass/mixins.scss */
+  .rammeboks .rammeboks.kommentar-liste .views-field-view-node a {
+    height: 13px;
+    padding-top: 4px;
+    float: left;
+    font-size: 0.7em;
+    line-height: 1em;
+    padding-left: 20px;
+    background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sf3b25e0d6b.png') 0 -239px no-repeat;
+    font-family: Arial;
+    color: #333333;
+    text-decoration: none;
+  }
+  /* line 90, ../sass/mixins.scss */
+  .rammeboks .rammeboks.kommentar-liste .views-field-field-op-author-nid {
+    border-top: 1px solid #c1bfb9;
+    margin-top: 10px;
+    padding-top: 6px;
+    float: left;
+    width: 50%;
+  }
+  /* line 96, ../sass/mixins.scss */
+  .rammeboks .rammeboks.kommentar-liste .views-field-field-op-author-nid a {
+    font-size: 0.8em;
+    font-family: Arial;
+    color: #333333;
+    text-decoration: none;
+  }
+
+  /* line 144, ../sass/mixins.scss */
+  .listeboks h3, .listeboks .item-list h3 {
     margin-bottom: 0px;
   }
-  /* line 241, ../sass/base-desktop.scss */
-  .block .item-list ul {
+  /* line 148, ../sass/mixins.scss */
+  .listeboks ul, .listeboks .item-list ul {
     padding: 0px 3% 15px 3%;
     background: #f1f2ee;
     float: left;
     border-bottom: 2px solid #c1bfb9;
-    width: 94%;
   }
-  /* line 247, ../sass/base-desktop.scss */
-  .block .item-list ul li {
+  /* line 154, ../sass/mixins.scss */
+  .listeboks ul li, .listeboks .item-list ul li {
     float: left;
     width: 100%;
     padding: 9px 0px 9px 0px;
     margin: 0px;
   }
-  /* line 252, ../sass/base-desktop.scss */
-  .block .item-list ul li a {
+  /* line 159, ../sass/mixins.scss */
+  .listeboks ul li a, .listeboks .item-list ul li a {
     color: #333333;
     font-size: 1.2em;
   }
-  /* line 257, ../sass/base-desktop.scss */
-  .block .item-list ul li:last-child {
+  /* line 164, ../sass/mixins.scss */
+  .listeboks ul li:last-child, .listeboks .item-list ul li:last-child {
     border: none;
     padding-bottom: 0px;
   }
-  /* line 264, ../sass/base-desktop.scss */
+
+  /* line 243, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-field-main-image-fid {
     display: inline;
     float: left;
     margin-right: 10px;
   }
-  /* line 268, ../sass/base-desktop.scss */
+  /* line 247, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-field-main-image-fid .field-content {
     width: 78px;
     float: left;
   }
-  /* line 273, ../sass/base-desktop.scss */
+  /* line 252, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-title {
     padding: 0px;
     margin-top: 6px;

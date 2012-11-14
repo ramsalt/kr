@@ -1,6 +1,9 @@
 @import "compass/css3/border-radius";
+@import "mixins.scss";
 $icons: sprite-map("backgrounds/*.png");
 $logos: sprite-map("logo/*.png");
+
+
 
 @media all and (min-width: 800px)  {
   .visible-mobile, .visible-tablet{
@@ -159,15 +162,12 @@ $logos: sprite-map("logo/*.png");
   #pre-area{
     border-top: none;
     border-bottom: none;
-    
     background: transparent;
     .wrapper{
       background: transparent;
       border-top: none;
       .container{
         border-top: 1px solid #a3a19b;
-        
-        
         .inner-container{
           border-top: 1px solid #cac9c6;
           .grid.pre.full{
@@ -187,9 +187,8 @@ $logos: sprite-map("logo/*.png");
           border-top: 1px solid #dddddd;
           border-left: 1px solid #dddddd;
           border-right: 1px solid #dddddd;
-          .grid{
-            margin-top: 2%;
-          }
+          padding-top: 2%;
+
           .grid.art-side{
             margin: 0px;
             padding: 0px;
@@ -233,33 +232,13 @@ $logos: sprite-map("logo/*.png");
       font-size: 0.8em;
     }
   }
+  .rammeboks{
+    @include rammeboks; 
+  }
+  .listeboks{
+    @include listeboks-desktop;
+  }
   .block{
-    .item-list{
-      h3{
-        margin-bottom: 0px;
-      }
-      ul{
-        padding: 0px 3% 15px 3%;
-        background: #f1f2ee;
-        float: left;
-        border-bottom: 2px solid #c1bfb9;
-        width: 94%;
-        li{
-          float: left;
-          width: 100%;
-          padding: 9px 0px 9px 0px;
-          margin: 0px;
-          a{
-            color: #333333;
-            font-size: 1.2em;
-          }
-        }
-        li:last-child{
-          border: none;
-          padding-bottom: 0px;
-        }
-      }
-    }
     .siste-saker{
       .views-field-field-main-image-fid{
         display: inline;

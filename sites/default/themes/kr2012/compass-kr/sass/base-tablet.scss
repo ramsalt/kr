@@ -18,4 +18,16 @@
       }
     }
   }
+  #content-area{
+    .wrapper{
+      .container{
+        .inner-container{
+          padding-top: 2%;
+        }
+      }
+    }
+  }
+  .block-views{
+    @include newslist-brett;
+  }
 }

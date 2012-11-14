@@ -1,20 +1,8 @@
 @import "compass";
-
+@import "mixins.scss";
 $icons: sprite-map("backgrounds/*.png");
 $logos: sprite-map("logo/*.png");
-@mixin rammeboks-mob{
-  padding: 15px;
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 2px solid #c1bfb9;
-  background: #f1f2ee;
-  h2{
-    color: #d71010;
-    font-size: 0.8em;
-    text-transform: Uppercase;
-    border-bottom: 1px solid #d71010;
-    margin-bottom: 10px;
-  }
-}
+
 body{
   font-family: 'Merriweather', serif;
   font-size: 0.9em;
@@ -236,6 +224,15 @@ body.admin-menu{
       }
     }
   }
+}  
+#content-area{
+  .wrapper{
+    .container{
+      .inner-container{
+        padding-top: 2%;
+      }
+    }
+  }
 }
 .view-bilde-slider-node{
   .views-slideshow-controls-bottom{
@@ -343,42 +340,18 @@ body.admin-menu{
     
   }
 }
-.rammeboks{
-    @include rammeboks-mob;
+.block{
+  @include rammeboks;
+}
+.listeboks{
+  @include listeboks;
+}
+.block-views{
+  @include newslist-mob;
 }
 .block {
   margin-bottom: 15px;
-  .item-list{
-    h3{
-      border-bottom: 2px solid #333;
-      padding: 4px 0px;
-      margin-bottom: 5px;
-    }
-    ul{
-      padding: 0px;
-      margin: 0px;
-      li{
-        list-style: none;
-        padding: 7px 0px 7px 0px;
-        margin: 0px 0px 7px 0px;
-        border-bottom: 1px solid #dddddd;
-        a{
-          color: #2c91c5;
-          text-decoration: none;
-          font-family: 'Merriweather', serif;
-        }
 
-      }
-    }
-    ul.lenker{
-      li{
-        a{
-          color: #2c91c5;
-          font-size: 1em;
-        }
-      }
-    }
-  }
   .siste-saker{
     .views-field-field-main-image-fid{
       display: none;

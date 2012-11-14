@@ -83,16 +83,6 @@
 
 <?php print $page_header; ?>
 <section>
-  <div id="pre-area" class="area">
-  	<div class="wrapper">
-  		<div class="container container-16 clearfix">
-  			<div class="inner-container">
-  	  			<div class="grid pre full">
-  	  			</div>  				
-  			</div>
-  		</div>
-  	</div>
-  </div>
   <div id="content-area" class="area">
   	<div class="wrapper">
   	  <div class="container container-16 clearfix">

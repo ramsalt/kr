@@ -92,5 +92,15 @@
 	    	</div>
     	</div>
     </div>
-  </div><!-- #logo-area -->        
+  </div><!-- #logo-area -->
+    <div id="pre-area" class="area">
+  	<div class="wrapper">
+  		<div class="container container-16 clearfix">
+  			<div class="inner-container">
+  	  			<div class="grid pre full">
+  	  			</div>  				
+  			</div>
+  		</div>
+  	</div>
+  </div><!-- #pre-area -->    
   </header>
