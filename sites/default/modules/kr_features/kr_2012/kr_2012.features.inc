@@ -33,6 +33,46 @@ function kr_2012_imagecache_default_presets() {
         ),
       ),
     ),
+    'v2_forside_b170' => array(
+      'presetname' => 'v2_forside_b170',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale_and_crop',
+          'data' => array(
+            'width' => '170',
+            'height' => '115',
+          ),
+        ),
+      ),
+    ),
+    'v2_forside_stor' => array(
+      'presetname' => 'v2_forside_stor',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '500',
+            'height' => '',
+            'upscale' => 0,
+          ),
+        ),
+        '1' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_crop',
+          'data' => array(
+            'width' => '468',
+            'height' => '310',
+            'xoffset' => 'center',
+            'yoffset' => 'center',
+          ),
+        ),
+      ),
+    ),
   );
   return $items;
 }
