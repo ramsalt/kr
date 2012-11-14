@@ -773,7 +773,7 @@ body.admin-menu {
 }
 
 /* line 172, ../sass/mixins.scss */
-.block-views .newslist .views-field-title, .block-views .newslist .views-field-field-main-image-fid, .block-views .newslist .views-field-teaser {
+.block-views .newslist .views-field-title, .block-views .newslist .views-field-field-main-image-fid, .block-views .newslist .views-field-field-teaser-value {
   margin: 0px 15px;
 }
 /* line 175, ../sass/mixins.scss */
@@ -802,7 +802,7 @@ body.admin-menu {
   font-size: 1.2em;
 }
 /* line 196, ../sass/mixins.scss */
-.block-views .newslist .views-field-teaser {
+.block-views .newslist .views-field-field-teaser-value {
   font-family: Arial;
   font-size: 0.95em;
 }
@@ -815,7 +815,7 @@ body.admin-menu {
   font-size: 1.8em;
 }
 /* line 208, ../sass/mixins.scss */
-.block-views .newslist.sak-1 .views-field-teaser {
+.block-views .newslist.sak-1 .views-field-field-teaser-value {
   font-weight: bold;
 }
 /* line 211, ../sass/mixins.scss */
@@ -874,7 +874,7 @@ body.admin-menu {
   }
 
   /* line 236, ../sass/mixins.scss */
-  .block-views .newslist .views-field-title, .block-views .newslist .views-field-field-main-image-fid, .block-views .newslist .views-field-teaser {
+  .block-views .newslist .views-field-title, .block-views .newslist .views-field-field-main-image-fid, .block-views .newslist .views-field-field-teaser-value {
     margin: 0px 20px;
   }
   /* line 243, ../sass/mixins.scss */

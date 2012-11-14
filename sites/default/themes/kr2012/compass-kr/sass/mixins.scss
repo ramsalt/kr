@@ -169,7 +169,7 @@ $logos: sprite-map("logo/*.png");
 }
 @mixin newslist-mob{
   .newslist{
-    .views-field-title, .views-field-field-main-image-fid, .views-field-teaser{
+    .views-field-title, .views-field-field-main-image-fid, .views-field-field-teaser-value{
       margin: 0px 15px;
     }
     p{
@@ -193,7 +193,7 @@ $logos: sprite-map("logo/*.png");
       color: #333333;
       font-size: 1.2em;
     }
-    .views-field-teaser{
+    .views-field-field-teaser-value{
       font-family: Arial;
       font-size: 0.95em;
     }
@@ -205,7 +205,7 @@ $logos: sprite-map("logo/*.png");
         font-size: 1.8em;
       }
     }
-    .views-field-teaser{
+    .views-field-field-teaser-value{
       font-weight: bold;
     }
     img{
@@ -233,7 +233,7 @@ $logos: sprite-map("logo/*.png");
 }
 @mixin newslist-brett{
   .newslist{
-    .views-field-title, .views-field-field-main-image-fid, .views-field-teaser{
+    .views-field-title, .views-field-field-main-image-fid, .views-field-field-teaser-value{
       margin: 0px 20px;
     }
 
