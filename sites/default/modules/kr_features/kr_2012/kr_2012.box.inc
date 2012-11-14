@@ -24,10 +24,12 @@ function kr_2012_default_box() {
   $box->api_version = 1;
   $box->delta = 'box-61c5e380';
   $box->plugin_key = 'simple';
-  $box->title = '';
+  $box->title = 'tittel';
   $box->description = 'skolebarometeret';
   $box->options = array(
-    'body' => '<a href="http://www.kommunal-rapport.no/topics/Skolebarometeret"><img src="http://www.kommunal-rapport.no/sites/default/files/skolebarometeret.jpg" width="100%"></a>',
+    'body' => '<p>
+	<a href="http://www.kommunal-rapport.no/topics/Skolebarometeret"><img src="http://www.kommunal-rapport.no/sites/default/files/skolebarometeret.jpg" width="100%" /></a></p>
+',
     'format' => '2',
   );
   $export['box-61c5e380'] = $box;

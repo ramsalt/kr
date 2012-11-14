@@ -27,17 +27,29 @@ function kr_2012_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'boxes-box-5c93aa7' => array(
-          'module' => 'boxes',
-          'delta' => 'box-5c93aa7',
+        'views-forside-block_1' => array(
+          'module' => 'views',
+          'delta' => 'forside-block_1',
           'region' => 'one_one',
           'weight' => 0,
+        ),
+        'views-forside-block_2' => array(
+          'module' => 'views',
+          'delta' => 'forside-block_2',
+          'region' => 'one_one',
+          'weight' => 1,
         ),
         'boxes-box-61c5e380' => array(
           'module' => 'boxes',
           'delta' => 'box-61c5e380',
           'region' => 'one_two',
           'weight' => 0,
+        ),
+        'block-10' => array(
+          'module' => 'block',
+          'delta' => 10,
+          'region' => 'one_two',
+          'weight' => 1,
         ),
         'views-Kommentarutdrag-block_1' => array(
           'module' => 'views',
