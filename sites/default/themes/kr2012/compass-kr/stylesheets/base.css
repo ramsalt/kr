@@ -583,6 +583,14 @@ body.admin-menu {
   height: auto;
   border: 1px solid #d1d1d1;
 }
+/* line 234, ../sass/mixins.scss */
+.block-views .newslist.sak-4 .views-field-field-main-image-fid {
+  float: left;
+}
+/* line 237, ../sass/mixins.scss */
+.block-views .newslist.sak-4 .views-field-field-teaser-value {
+  display: none;
+}
 
 /* line 352, ../sass/base.scss */
 .block {

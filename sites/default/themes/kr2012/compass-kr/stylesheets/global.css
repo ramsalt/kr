@@ -837,6 +837,14 @@ body.admin-menu {
   height: auto;
   border: 1px solid #d1d1d1;
 }
+/* line 234, ../sass/mixins.scss */
+.block-views .newslist.sak-4 .views-field-field-main-image-fid {
+  float: left;
+}
+/* line 237, ../sass/mixins.scss */
+.block-views .newslist.sak-4 .views-field-field-teaser-value {
+  display: none;
+}
 
 /* line 352, ../sass/base.scss */
 .block {
@@ -873,26 +881,26 @@ body.admin-menu {
     padding-top: 2%;
   }
 
-  /* line 236, ../sass/mixins.scss */
+  /* line 244, ../sass/mixins.scss */
   .block-views .newslist .views-field-title, .block-views .newslist .views-field-field-main-image-fid, .block-views .newslist .views-field-field-teaser-value {
     margin: 0px 20px;
   }
-  /* line 243, ../sass/mixins.scss */
+  /* line 251, ../sass/mixins.scss */
   .block-views .newslist.sak-1 .views-field-title a {
     font-size: 2.2em;
     line-height: 1.2em;
   }
-  /* line 249, ../sass/mixins.scss */
+  /* line 257, ../sass/mixins.scss */
   .block-views .newslist.sak-1 ul li {
     margin-top: 0px;
   }
-  /* line 258, ../sass/mixins.scss */
+  /* line 266, ../sass/mixins.scss */
   .block-views .newslist.sak-2 .views-field-field-main-image-fid .field-content a img {
     width: 170px;
     height: auto;
     border: 1px solid #d1d1d1;
   }
-  /* line 267, ../sass/mixins.scss */
+  /* line 275, ../sass/mixins.scss */
   .block-views .newslist.sak-2 .views-field-title a {
     font-size: 1.8em;
     line-height: 1.1em;

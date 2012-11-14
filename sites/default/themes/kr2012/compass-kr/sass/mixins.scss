@@ -230,6 +230,14 @@ $logos: sprite-map("logo/*.png");
       }
     }
   }
+  .newslist.sak-4{
+    .views-field-field-main-image-fid{
+      float: left;
+    }
+    .views-field-field-teaser-value{
+      display: none;
+    }
+  }
 }
 @mixin newslist-brett{
   .newslist{
