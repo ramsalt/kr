@@ -63,6 +63,38 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+@font-face {
+  font-family: 'MerriweatherRegular';
+  src: url("../merriweather-fontfacekit/Merriweather-webfont.eot");
+  src: url("../merriweather-fontfacekit/Merriweather-webfont.eot?#iefix") format("embedded-opentype"), url("../merriweather-fontfacekit/Merriweather-webfont.svg#MerriweatherRegular") format("svg"), url("../merriweather-fontfacekit/Merriweather-webfont.woff") format("woff"), url("../merriweather-fontfacekit/Merriweather-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MerriweatherLight';
+  src: url("../merriweather-fontfacekit/Merriweather-Light-webfont.eot");
+  src: url("../merriweather-fontfacekit/Merriweather-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../merriweather-fontfacekit/Merriweather-Light-webfont.svg#MerriweatherLight") format("svg"), url("../merriweather-fontfacekit/Merriweather-Light-webfont.woff") format("woff"), url("../merriweather-fontfacekit/Merriweather-Light-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MerriweatherBold';
+  src: url("../merriweather-fontfacekit/Merriweather-Bold-webfont.eot");
+  src: url("../merriweather-fontfacekit/Merriweather-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../merriweather-fontfacekit/Merriweather-Bold-webfont.svg#MerriweatherBold") format("svg"), url("../merriweather-fontfacekit/Merriweather-Bold-webfont.woff") format("woff"), url("../merriweather-fontfacekit/Merriweather-Bold-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MerriweatherBlack';
+  src: url("../merriweather-fontfacekit/Merriweather-Black-webfont.eot");
+  src: url("../merriweather-fontfacekit/Merriweather-Black-webfont.eot?#iefix") format("embedded-opentype"), url("../merriweather-fontfacekit/Merriweather-Black-webfont.svg#MerriweatherBlack") format("svg"), url("../merriweather-fontfacekit/Merriweather-Black-webfont.woff") format("woff"), url("../merriweather-fontfacekit/Merriweather-Black-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* line 1, ../sass/grid-mobile.scss */
 .container {
   width: 320px;
