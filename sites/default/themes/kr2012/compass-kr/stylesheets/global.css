@@ -63,38 +63,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-@font-face {
-  font-family: 'MerriweatherRegular';
-  src: url("../merriweather-fontfacekit/Merriweather-webfont.eot");
-  src: url("../merriweather-fontfacekit/Merriweather-webfont.eot?#iefix") format("embedded-opentype"), url("../merriweather-fontfacekit/Merriweather-webfont.svg#MerriweatherRegular") format("svg"), url("../merriweather-fontfacekit/Merriweather-webfont.woff") format("woff"), url("../merriweather-fontfacekit/Merriweather-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'MerriweatherLight';
-  src: url("../merriweather-fontfacekit/Merriweather-Light-webfont.eot");
-  src: url("../merriweather-fontfacekit/Merriweather-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../merriweather-fontfacekit/Merriweather-Light-webfont.svg#MerriweatherLight") format("svg"), url("../merriweather-fontfacekit/Merriweather-Light-webfont.woff") format("woff"), url("../merriweather-fontfacekit/Merriweather-Light-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'MerriweatherBold';
-  src: url("../merriweather-fontfacekit/Merriweather-Bold-webfont.eot");
-  src: url("../merriweather-fontfacekit/Merriweather-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../merriweather-fontfacekit/Merriweather-Bold-webfont.svg#MerriweatherBold") format("svg"), url("../merriweather-fontfacekit/Merriweather-Bold-webfont.woff") format("woff"), url("../merriweather-fontfacekit/Merriweather-Bold-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'MerriweatherBlack';
-  src: url("../merriweather-fontfacekit/Merriweather-Black-webfont.eot");
-  src: url("../merriweather-fontfacekit/Merriweather-Black-webfont.eot?#iefix") format("embedded-opentype"), url("../merriweather-fontfacekit/Merriweather-Black-webfont.svg#MerriweatherBlack") format("svg"), url("../merriweather-fontfacekit/Merriweather-Black-webfont.woff") format("woff"), url("../merriweather-fontfacekit/Merriweather-Black-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* line 1, ../sass/grid-mobile.scss */
 .container {
   width: 320px;
@@ -664,7 +632,7 @@ body.admin-menu {
   text-indent: -999px;
 }
 
-/* line 4, ../sass/mixins.scss */
+/* line 4, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block .rammeboks {
   padding: 5%;
   width: 90%;
@@ -673,7 +641,7 @@ body.admin-menu {
   background: #f1f2ee;
   float: left;
 }
-/* line 11, ../sass/mixins.scss */
+/* line 11, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block .rammeboks h2 {
   color: #d71010;
   font-size: 0.8em;
@@ -681,18 +649,18 @@ body.admin-menu {
   border-bottom: 1px solid #d71010;
   margin-bottom: 10px;
 }
-/* line 18, ../sass/mixins.scss */
+/* line 18, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block .rammeboks h3 {
   border-bottom: 2px solid #333;
   padding: 4px 0px;
   margin-bottom: 5px;
 }
-/* line 23, ../sass/mixins.scss */
+/* line 23, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block .rammeboks ul {
   padding: 0px;
   margin: 0px;
 }
-/* line 26, ../sass/mixins.scss */
+/* line 26, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block .rammeboks ul li {
   float: left;
   width: 100%;
@@ -702,23 +670,23 @@ body.admin-menu {
   margin: 0px 0px 7px 0px;
   border-bottom: 1px solid #dddddd;
 }
-/* line 34, ../sass/mixins.scss */
+/* line 34, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block .rammeboks ul li a {
   color: #2c91c5;
   text-decoration: none;
   font-family: 'Merriweather', serif;
 }
-/* line 43, ../sass/mixins.scss */
+/* line 43, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block .rammeboks ul.lenker li a {
   color: #2c91c5;
   font-size: 1em;
 }
-/* line 51, ../sass/mixins.scss */
+/* line 51, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block .rammeboks.kommentar-liste h2 {
   color: #78a21e;
   border-bottom: 1px solid #78a21e;
 }
-/* line 55, ../sass/mixins.scss */
+/* line 55, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block .rammeboks.kommentar-liste .views-field-field-sitat-value:before {
   content: '“';
   float: left;
@@ -727,14 +695,14 @@ body.admin-menu {
   font-size: 1.7em;
   font-family: 'Merriweather', serif;
 }
-/* line 64, ../sass/mixins.scss */
+/* line 64, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block .rammeboks.kommentar-liste .views-field-field-sitat-value a {
   text-decoration: none;
   color: #333333;
   font-family: 'Merriweather', serif;
   font-size: 1.1em;
 }
-/* line 71, ../sass/mixins.scss */
+/* line 71, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block .rammeboks.kommentar-liste .views-field-view-node {
   border-top: 1px solid #c1bfb9;
   margin-top: 10px;
@@ -742,7 +710,7 @@ body.admin-menu {
   float: left;
   width: 50%;
 }
-/* line 77, ../sass/mixins.scss */
+/* line 77, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block .rammeboks.kommentar-liste .views-field-view-node a {
   height: 13px;
   padding-top: 4px;
@@ -755,7 +723,7 @@ body.admin-menu {
   color: #333333;
   text-decoration: none;
 }
-/* line 90, ../sass/mixins.scss */
+/* line 90, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block .rammeboks.kommentar-liste .views-field-field-op-author-nid {
   border-top: 1px solid #c1bfb9;
   margin-top: 10px;
@@ -763,7 +731,7 @@ body.admin-menu {
   float: left;
   width: 50%;
 }
-/* line 96, ../sass/mixins.scss */
+/* line 96, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block .rammeboks.kommentar-liste .views-field-field-op-author-nid a {
   font-size: 0.8em;
   font-family: Arial;
@@ -775,18 +743,18 @@ body.admin-menu {
 .listeboks {
   margin-bottom: 15px;
 }
-/* line 109, ../sass/mixins.scss */
+/* line 109, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .listeboks .item-list h3 {
   border-bottom: 2px solid #333;
   padding: 4px 0px;
   margin-bottom: 5px;
 }
-/* line 114, ../sass/mixins.scss */
+/* line 114, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .listeboks .item-list ul {
   padding: 0px;
   margin: 0px;
 }
-/* line 117, ../sass/mixins.scss */
+/* line 117, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .listeboks .item-list ul li {
   clear: both;
   float: left;
@@ -796,33 +764,33 @@ body.admin-menu {
   margin: 0px 0px 7px 0px;
   border-bottom: 1px solid #dddddd;
 }
-/* line 125, ../sass/mixins.scss */
+/* line 125, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .listeboks .item-list ul li a {
   color: #2c91c5;
   text-decoration: none;
   font-family: 'Merriweather', serif;
 }
-/* line 135, ../sass/mixins.scss */
+/* line 135, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .listeboks .item-list ul.lenker li a {
   color: #2c91c5;
   font-size: 1em;
 }
 
-/* line 172, ../sass/mixins.scss */
+/* line 172, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist .views-field-title, .block-views .newslist .views-field-field-main-image-fid, .block-views .newslist .views-field-field-teaser-value {
   margin: 0px 15px;
 }
-/* line 175, ../sass/mixins.scss */
+/* line 175, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist p {
   margin: 0px;
 }
-/* line 178, ../sass/mixins.scss */
+/* line 178, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist ul {
   margin: 0px;
   padding: 0px;
   list-style: none;
 }
-/* line 182, ../sass/mixins.scss */
+/* line 182, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist ul li {
   float: left;
   width: 100%;
@@ -831,53 +799,53 @@ body.admin-menu {
   list-style: none;
   border-bottom: 1px solid #dddddd;
 }
-/* line 191, ../sass/mixins.scss */
+/* line 191, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist a {
   text-decoration: none;
   color: #333333;
   font-size: 1.2em;
 }
-/* line 196, ../sass/mixins.scss */
+/* line 196, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist .views-field-field-teaser-value {
   font-family: Arial;
   font-size: 0.95em;
 }
-/* line 202, ../sass/mixins.scss */
+/* line 202, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.sak-1 .views-field-title {
   line-height: 2em;
 }
-/* line 204, ../sass/mixins.scss */
+/* line 204, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.sak-1 .views-field-title a {
   font-size: 1.8em;
 }
-/* line 208, ../sass/mixins.scss */
+/* line 208, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.sak-1 .views-field-field-teaser-value {
   font-weight: bold;
 }
-/* line 211, ../sass/mixins.scss */
+/* line 211, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.sak-1 img {
   width: 100%;
   height: auto;
 }
-/* line 217, ../sass/mixins.scss */
+/* line 217, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.sak-2 .views-row-1 {
   margin-top: 0px;
 }
-/* line 220, ../sass/mixins.scss */
+/* line 220, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.sak-2 .views-field-field-main-image-fid {
   float: right;
 }
-/* line 224, ../sass/mixins.scss */
+/* line 224, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.sak-2 .views-field-field-main-image-fid .field-content a img {
   width: 84px;
   height: auto;
   border: 1px solid #d1d1d1;
 }
-/* line 234, ../sass/mixins.scss */
+/* line 234, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.sak-4 .views-field-field-main-image-fid {
   float: left;
 }
-/* line 237, ../sass/mixins.scss */
+/* line 237, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.sak-4 .views-field-field-teaser-value {
   display: none;
 }
@@ -917,36 +885,36 @@ body.admin-menu {
     padding-top: 2%;
   }
 
-  /* line 244, ../sass/mixins.scss */
+  /* line 244, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist .views-field-title, .block-views .newslist .views-field-field-main-image-fid, .block-views .newslist .views-field-field-teaser-value {
     margin: 0px 20px;
   }
-  /* line 251, ../sass/mixins.scss */
+  /* line 251, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-1 .views-field-title a {
     font-size: 2.2em;
     line-height: 1.2em;
   }
-  /* line 257, ../sass/mixins.scss */
+  /* line 257, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-1 ul li {
     margin-top: 0px;
   }
-  /* line 266, ../sass/mixins.scss */
+  /* line 266, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-2 .views-field-field-main-image-fid .field-content a img {
     width: 170px;
     height: auto;
     border: 1px solid #d1d1d1;
   }
-  /* line 275, ../sass/mixins.scss */
+  /* line 275, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-2 .views-field-title a {
     font-size: 1.8em;
     line-height: 1.1em;
   }
-  /* line 282, ../sass/mixins.scss */
+  /* line 282, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-4 .views-field-field-main-image-fid {
     float: left;
     display: none;
   }
-  /* line 286, ../sass/mixins.scss */
+  /* line 286, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-4 .views-field-field-teaser-value {
     display: block;
   }

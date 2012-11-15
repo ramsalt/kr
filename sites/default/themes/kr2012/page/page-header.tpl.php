@@ -24,6 +24,7 @@
 <head>
   <title><?php print $head_title ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <link href='/styles/default/themes/kr2012/css/font.css' rel='stylesheet' type='text/css'>
   <!-- <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'> -->
   <?php print $op_head; ?>
   <?php print $styles ?>
