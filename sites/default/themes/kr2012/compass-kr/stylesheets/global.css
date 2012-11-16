@@ -633,7 +633,7 @@ body.admin-menu {
 }
 
 /* line 4, ../sass/mixins.scss */
-.block .rammeboks {
+.rammeboks {
   padding: 5%;
   width: 90%;
   border-top: 1px solid #d9d9d9;
@@ -642,7 +642,7 @@ body.admin-menu {
   float: left;
 }
 /* line 11, ../sass/mixins.scss */
-.block .rammeboks h2 {
+.rammeboks h2 {
   color: #d71010;
   font-size: 0.8em;
   text-transform: Uppercase;
@@ -650,18 +650,18 @@ body.admin-menu {
   margin-bottom: 10px;
 }
 /* line 18, ../sass/mixins.scss */
-.block .rammeboks h3 {
+.rammeboks h3 {
   border-bottom: 2px solid #333;
   padding: 4px 0px;
   margin-bottom: 5px;
 }
 /* line 23, ../sass/mixins.scss */
-.block .rammeboks ul {
+.rammeboks ul {
   padding: 0px;
   margin: 0px;
 }
 /* line 26, ../sass/mixins.scss */
-.block .rammeboks ul li {
+.rammeboks ul li {
   float: left;
   width: 100%;
   clear: both;
@@ -671,23 +671,24 @@ body.admin-menu {
   border-bottom: 1px solid #dddddd;
 }
 /* line 34, ../sass/mixins.scss */
-.block .rammeboks ul li a {
+.rammeboks ul li a {
   color: #2c91c5;
   text-decoration: none;
   font-family: 'Merriweather', serif;
 }
 /* line 43, ../sass/mixins.scss */
-.block .rammeboks ul.lenker li a {
+.rammeboks ul.lenker li a {
   color: #2c91c5;
   font-size: 1em;
 }
+
 /* line 51, ../sass/mixins.scss */
-.block .rammeboks.kommentar-liste h2 {
+.rammeboks.kommentar-liste h2 {
   color: #78a21e;
   border-bottom: 1px solid #78a21e;
 }
 /* line 55, ../sass/mixins.scss */
-.block .rammeboks.kommentar-liste .views-field-field-sitat-value:before {
+.rammeboks.kommentar-liste .views-field-field-sitat-value:before {
   content: '“';
   float: left;
   color: #78a21e;
@@ -696,14 +697,14 @@ body.admin-menu {
   font-family: 'Merriweather', serif;
 }
 /* line 64, ../sass/mixins.scss */
-.block .rammeboks.kommentar-liste .views-field-field-sitat-value a {
+.rammeboks.kommentar-liste .views-field-field-sitat-value a {
   text-decoration: none;
   color: #333333;
   font-family: 'Merriweather', serif;
   font-size: 1.1em;
 }
 /* line 71, ../sass/mixins.scss */
-.block .rammeboks.kommentar-liste .views-field-view-node {
+.rammeboks.kommentar-liste .views-field-view-node {
   border-top: 1px solid #c1bfb9;
   margin-top: 10px;
   padding-top: 6px;
@@ -711,7 +712,7 @@ body.admin-menu {
   width: 50%;
 }
 /* line 77, ../sass/mixins.scss */
-.block .rammeboks.kommentar-liste .views-field-view-node a {
+.rammeboks.kommentar-liste .views-field-view-node a {
   height: 13px;
   padding-top: 4px;
   float: left;
@@ -724,7 +725,7 @@ body.admin-menu {
   text-decoration: none;
 }
 /* line 90, ../sass/mixins.scss */
-.block .rammeboks.kommentar-liste .views-field-field-op-author-nid {
+.rammeboks.kommentar-liste .views-field-field-op-author-nid {
   border-top: 1px solid #c1bfb9;
   margin-top: 10px;
   padding-top: 6px;
@@ -732,7 +733,7 @@ body.admin-menu {
   width: 50%;
 }
 /* line 96, ../sass/mixins.scss */
-.block .rammeboks.kommentar-liste .views-field-field-op-author-nid a {
+.rammeboks.kommentar-liste .views-field-field-op-author-nid a {
   font-size: 0.8em;
   font-family: Arial;
   color: #333333;
