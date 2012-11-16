@@ -298,18 +298,23 @@
     border-right: 1px solid #DDD;
   }
 
-  /* line 238, ../sass/base-desktop.scss */
+  /* line 236, ../sass/base-desktop.scss */
+  .one.one_two .one-inner {
+    margin-right: 1em;
+  }
+
+  /* line 241, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-field-main-image-fid {
     display: inline;
     float: left;
     margin-right: 10px;
   }
-  /* line 242, ../sass/base-desktop.scss */
+  /* line 245, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-field-main-image-fid .field-content {
     width: 78px;
     float: left;
   }
-  /* line 247, ../sass/base-desktop.scss */
+  /* line 250, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-title {
     padding: 0px;
     margin-top: 6px;
