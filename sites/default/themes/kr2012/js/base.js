@@ -19,10 +19,11 @@ function kr2012_set_body_class(new_class){
 	
 }
 function kr2012_current_body(width){
-	if(width>1003){
+	
+	if(width >= 800){
 		return "layout-desktop";
 	}
-	else if(width>739){
+	else if(width>739 && width < 800){
 		return "layout-tablet";
 	}
 	else{

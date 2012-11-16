@@ -1,4 +1,6 @@
-@media all and (min-width: 740px) {
+@import "mixins.scss";
+
+@media all and (min-width: 740px)  {
   .visible-mobile, .visible-desktop{
     display: none;
   }
@@ -29,5 +31,8 @@
   }
   .block-views{
     @include newslist-brett;
+  }
+  .block{
+    @include rammeboks-brett; 
   }
 }

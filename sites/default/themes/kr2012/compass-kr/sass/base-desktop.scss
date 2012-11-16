@@ -4,7 +4,6 @@ $icons: sprite-map("backgrounds/*.png");
 $logos: sprite-map("logo/*.png");
 
 
-
 @media all and (min-width: 800px)  {
   .visible-mobile, .visible-tablet{
     display: none;
@@ -188,24 +187,16 @@ $logos: sprite-map("logo/*.png");
           border-left: 1px solid #dddddd;
           border-right: 1px solid #dddddd;
           padding-top: 2%;
-
           .grid.art-side{
             margin: 0px;
             padding: 0px;
-
             width: 36%;
-            
-            //width: 31.9%;
-            //margin: 0px;
-            //padding: 0px 2% 2% 2%;
-            //border-left: 1px solid #dddddd;
-            //border-bottom: 1px solid #dddddd;
           }
           .sidebar{
             padding: 4% 4% 5% 4%;
             border-left: 1px solid #dddddd;
             border-bottom: 1px solid #dddddd;
-            //padding: 0px 2% 2% 2%;
+
           }
         }
       }
@@ -232,11 +223,15 @@ $logos: sprite-map("logo/*.png");
       font-size: 0.8em;
     }
   }
-  .rammeboks{
-    @include rammeboks; 
-  }
+
   .listeboks{
     @include listeboks-desktop;
+  }
+  .block-views{
+    @include newslist-desktop;
+  }
+  .one.one_one .one-inner{
+    border-right: 1px solid #DDD;
   }
   .block{
     .siste-saker{

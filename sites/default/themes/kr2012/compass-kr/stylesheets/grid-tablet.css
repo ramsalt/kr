@@ -1,4 +1,4 @@
-@media all and (min-width: 740px) {
+@media all and (min-width: 740px) and (max-width: 800px) {
   /* line 2, ../sass/grid-tablet.scss */
   .container {
     margin-left: auto;

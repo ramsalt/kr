@@ -8,7 +8,8 @@ engine = phptemplate
 scripts[] = js/respond.min.js
 scripts[] = js/base.js 
 scripts[] = js/meny.js 
-scripts[] = js/article.js 
+scripts[] = js/article.js
+
  
 ; SubTheme-Specific CSS
 stylesheets[all][]   = compass-kr/stylesheets/global.css

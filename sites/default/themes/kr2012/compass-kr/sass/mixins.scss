@@ -1,6 +1,6 @@
 $logos: sprite-map("logo/*.png");
 
-@mixin rammeboks{
+@mixin rammeboks-mob{
   .rammeboks{
     padding: 5%;
     width: 90%;
@@ -102,7 +102,18 @@ $logos: sprite-map("logo/*.png");
     }
   }
 }
-
+@mixin rammeboks-brett{
+  .rammeboks{
+    padding: 5%;
+    width: 90%;
+    border-top: 1px solid #d9d9d9;
+    border-left: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;
+    border-bottom: 2px solid #c1bfb9;
+    background: #f1f2ee;
+    float: left;
+  }
+}
 @mixin listeboks{
   margin-bottom: 15px;
   .item-list{
@@ -244,7 +255,13 @@ $logos: sprite-map("logo/*.png");
     .views-field-title, .views-field-field-main-image-fid, .views-field-field-teaser-value{
       margin: 0px 20px;
     }
-
+    a{
+      font-size: 1.8em;
+      line-height: 1.1em;
+    }
+    .views-field-title{
+      padding-bottom: 10px;
+    }
   }
   .newslist.sak-1{
     .views-field-title{
@@ -260,6 +277,9 @@ $logos: sprite-map("logo/*.png");
     }
   }
   .newslist.sak-2{
+    li{
+      border-bottom: 0px;
+    }
     .views-field-field-main-image-fid{
       .field-content{
         a{
@@ -279,12 +299,53 @@ $logos: sprite-map("logo/*.png");
     }
   }
   .newslist.sak-4{
-    .views-field-field-main-image-fid{
+    ul{
+      width: 100%;
       float: left;
-      display: none;
+      border-top: 1px solid #DDD;
+      border-bottom: 1px solid #DDD;
+      li{
+        float: left;
+        width: 253px;
+        border-bottom: 0px;
+        border-right: 1px solid #DDD;
+        margin: 0px;
+        padding: 0px;
+        .views-field-field-main-image-fid{
+          float: left;
+          display: none;
+        }
+        .views-field-title{
+          padding-top: 25px;
+        }
+        .views-field-field-teaser-value{
+          display: block;
+          padding-bottom: 25px;
+        }
+      }
+      li.views-row-last{
+        border-right: 0px;
+      }
     }
-    .views-field-field-teaser-value{
-      display: block;
+  }
+}
+@mixin newslist-desktop{
+  .newslist.sak-4{
+    ul{
+      border: none;
+      li{
+        border: none;
+        width: 100%;
+        border-bottom: 1px solid #DDD;
+      }
+      li.views-row-last{
+        border-bottom: 0px;
+      }
+      li.views-row-first{
+        .views-field-title{
+          padding-top: 0px;
+        }
+      }
     }
   }
 }
