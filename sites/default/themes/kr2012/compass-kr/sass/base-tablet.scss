@@ -32,7 +32,7 @@
   .block-views{
     @include newslist-brett;
   }
-  .block{
-    @include rammeboks-brett; 
-  }
+
+  @include rammeboks-brett; 
+ 
 }

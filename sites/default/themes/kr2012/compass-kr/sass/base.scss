@@ -345,7 +345,7 @@ body.admin-menu{
   }
 }
 
-  @include rammeboks-mob;
+@include rammeboks-mob;
 
 .listeboks{
   @include listeboks;
