@@ -911,25 +911,29 @@ body.admin-menu {
   .block-views .newslist.sak-2 li {
     border-bottom: 0px;
   }
-  /* line 286, ../sass/mixins.scss */
+  /* line 283, ../sass/mixins.scss */
+  .block-views .newslist.sak-2 li.views-row-first {
+    border-bottom: 1px solid #DDD;
+  }
+  /* line 289, ../sass/mixins.scss */
   .block-views .newslist.sak-2 .views-field-field-main-image-fid .field-content a img {
     width: 170px;
     height: auto;
     border: 1px solid #d1d1d1;
   }
-  /* line 295, ../sass/mixins.scss */
+  /* line 298, ../sass/mixins.scss */
   .block-views .newslist.sak-2 .views-field-title a {
     font-size: 1.8em;
     line-height: 1.1em;
   }
-  /* line 302, ../sass/mixins.scss */
+  /* line 305, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul {
     width: 100%;
     float: left;
     border-top: 1px solid #DDD;
     border-bottom: 1px solid #DDD;
   }
-  /* line 307, ../sass/mixins.scss */
+  /* line 310, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li {
     float: left;
     width: 253px;
@@ -938,21 +942,21 @@ body.admin-menu {
     margin: 0px;
     padding: 0px;
   }
-  /* line 314, ../sass/mixins.scss */
+  /* line 317, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li .views-field-field-main-image-fid {
     float: left;
     display: none;
   }
-  /* line 318, ../sass/mixins.scss */
+  /* line 321, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li .views-field-title {
     padding-top: 25px;
   }
-  /* line 321, ../sass/mixins.scss */
+  /* line 324, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li .views-field-field-teaser-value {
     display: block;
     padding-bottom: 25px;
   }
-  /* line 326, ../sass/mixins.scss */
+  /* line 329, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-last {
     border-right: 0px;
   }
@@ -1245,21 +1249,21 @@ body.admin-menu {
     padding-bottom: 0px;
   }
 
-  /* line 334, ../sass/mixins.scss */
+  /* line 337, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul {
     border: none;
   }
-  /* line 336, ../sass/mixins.scss */
+  /* line 339, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li {
     border: none;
     width: 100%;
     border-bottom: 1px solid #DDD;
   }
-  /* line 341, ../sass/mixins.scss */
+  /* line 344, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-last {
     border-bottom: 0px;
   }
-  /* line 345, ../sass/mixins.scss */
+  /* line 348, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-first .views-field-title {
     padding-top: 0px;
   }

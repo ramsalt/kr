@@ -280,6 +280,9 @@ $logos: sprite-map("logo/*.png");
     li{
       border-bottom: 0px;
     }
+    li.views-row-first{
+      border-bottom: 1px solid #DDD;
+    }
     .views-field-field-main-image-fid{
       .field-content{
         a{
