@@ -39,23 +39,29 @@ function kr_2012_context_default_contexts() {
           'region' => 'one_one',
           'weight' => 1,
         ),
-        'boxes-box-61c5e380' => array(
-          'module' => 'boxes',
-          'delta' => 'box-61c5e380',
+        'views-forside-block_3' => array(
+          'module' => 'views',
+          'delta' => 'forside-block_3',
           'region' => 'one_two',
           'weight' => 0,
-        ),
-        'block-10' => array(
-          'module' => 'block',
-          'delta' => 10,
-          'region' => 'one_two',
-          'weight' => 1,
         ),
         'views-Kommentarutdrag-block_1' => array(
           'module' => 'views',
           'delta' => 'Kommentarutdrag-block_1',
           'region' => 'one_three',
           'weight' => 0,
+        ),
+        'boxes-box-4bb00d6c' => array(
+          'module' => 'boxes',
+          'delta' => 'box-4bb00d6c',
+          'region' => 'one_three',
+          'weight' => 1,
+        ),
+        'simplenews-22' => array(
+          'module' => 'simplenews',
+          'delta' => 22,
+          'region' => 'one_three',
+          'weight' => 2,
         ),
       ),
       'layout' => 'columns',

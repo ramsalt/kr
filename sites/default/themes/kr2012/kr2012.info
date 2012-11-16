@@ -29,6 +29,7 @@ regions[footer] = Footer
 regions[one_one] = Front: One one
 regions[one_two] = Front: One two
 regions[one_three] = Front: One Three
+regions[two] = Front: Two
 
     ; Layout: Default
     layouts[default][name] = "Default"
@@ -49,3 +50,5 @@ regions[one_three] = Front: One Three
     layouts[columns][regions][] = "one_one"
     layouts[columns][regions][] = "one_two"
     layouts[columns][regions][] = "one_three"
+    layouts[columns][regions][] = "two"ls
+    
