@@ -249,7 +249,7 @@ $logos: sprite-map("logo/*.png");
       display: none;
     }
   }
-  .newslist.fire{
+  .newslist.fire, .newslist.fem{
     ul{
       border-top: 1px solid #DDD;
     }
@@ -262,9 +262,8 @@ $logos: sprite-map("logo/*.png");
       }
     }
     .views-field-title{
-        margin-left: 15px;
         float: left;
-        margin: 0px;
+        margin: 0px 0px 0px 15px;
         width: 59%;
     }
     .views-field-field-teaser-value{
