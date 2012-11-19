@@ -875,7 +875,7 @@ body.admin-menu {
   display: none;
 }
 
-/* line 457, ../sass/mixins.scss */
+/* line 431, ../sass/mixins.scss */
 div .ownsection {
   -webkit-border-radius: 4px 4px;
   -moz-border-radius: 4px / 4px;
@@ -887,13 +887,13 @@ div .ownsection {
   background: #dce4eb;
   padding: 1em;
 }
-/* line 465, ../sass/mixins.scss */
+/* line 439, ../sass/mixins.scss */
 div .ownsection h2 {
   font-size: 1.4em;
   font-family: Arial;
   float: left;
 }
-/* line 470, ../sass/mixins.scss */
+/* line 444, ../sass/mixins.scss */
 div .ownsection .link {
   float: right;
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -203px no-repeat;
@@ -901,7 +901,7 @@ div .ownsection .link {
   height: 20px;
   width: 20px;
 }
-/* line 477, ../sass/mixins.scss */
+/* line 451, ../sass/mixins.scss */
 div .ownsection .desc {
   display: none;
 }
@@ -1048,13 +1048,13 @@ div .ownsection .desc {
     float: left;
   }
 
-  /* line 483, ../sass/mixins.scss */
+  /* line 457, ../sass/mixins.scss */
   div .ownsection {
     float: left;
     width: 197px;
     margin-left: 20px;
   }
-  /* line 487, ../sass/mixins.scss */
+  /* line 461, ../sass/mixins.scss */
   div .ownsection .desc {
     padding-top: 1em;
     display: block;
@@ -1359,12 +1359,12 @@ div .ownsection .desc {
     padding-top: 0px;
   }
   /* line 394, ../sass/mixins.scss */
-  .block-views .newslist.fire ul {
+  .block-views .newslist.fire ul, .block-views .newslist.fem ul {
     float: left;
     border-bottom: 1px solid #DDD;
   }
   /* line 397, ../sass/mixins.scss */
-  .block-views .newslist.fire ul li {
+  .block-views .newslist.fire ul li, .block-views .newslist.fem ul li {
     width: 24.8%;
     border-bottom: 0px;
     border-right: 1px solid #DDD;
@@ -1372,64 +1372,33 @@ div .ownsection .desc {
     padding: 1em 0px 0px 0px;
   }
   /* line 404, ../sass/mixins.scss */
-  .block-views .newslist.fire ul li .views-field-field-teaser-value {
+  .block-views .newslist.fire ul li .views-field-field-teaser-value, .block-views .newslist.fem ul li .views-field-field-teaser-value {
     margin: 0px 15px;
   }
   /* line 407, ../sass/mixins.scss */
-  .block-views .newslist.fire ul li .views-field-title {
+  .block-views .newslist.fire ul li .views-field-title, .block-views .newslist.fem ul li .views-field-title {
     width: 85%;
     margin: 0px 15px;
   }
   /* line 411, ../sass/mixins.scss */
-  .block-views .newslist.fire ul li .views-field-field-main-image-fid {
+  .block-views .newslist.fire ul li .views-field-field-main-image-fid, .block-views .newslist.fem ul li .views-field-field-main-image-fid {
     margin: 0px 15px;
   }
   /* line 413, ../sass/mixins.scss */
-  .block-views .newslist.fire ul li .views-field-field-main-image-fid img {
+  .block-views .newslist.fire ul li .views-field-field-main-image-fid img, .block-views .newslist.fem ul li .views-field-field-main-image-fid img {
     width: 100%;
     height: auto;
   }
   /* line 419, ../sass/mixins.scss */
-  .block-views .newslist.fire ul li.views-row-last {
+  .block-views .newslist.fire ul li.views-row-last, .block-views .newslist.fem ul li.views-row-last {
     border: 0px;
   }
   /* line 425, ../sass/mixins.scss */
-  .block-views .newslist.fem ul {
-    float: left;
-    border-bottom: 1px solid #DDD;
-  }
-  /* line 428, ../sass/mixins.scss */
-  .block-views .newslist.fem ul li {
-    width: 24.8%;
-    border-bottom: 0px;
-    border-right: 1px solid #DDD;
-    margin: 0px;
-    padding: 1em 0px 0px 0px;
-  }
-  /* line 435, ../sass/mixins.scss */
-  .block-views .newslist.fem ul li .views-field-field-teaser-value {
-    margin: 0px 15px;
-  }
-  /* line 438, ../sass/mixins.scss */
-  .block-views .newslist.fem ul li .views-field-title {
-    width: 85%;
-    margin: 0px 15px;
-  }
-  /* line 442, ../sass/mixins.scss */
-  .block-views .newslist.fem ul li .views-field-field-main-image-fid {
-    margin: 0px 15px;
-  }
-  /* line 444, ../sass/mixins.scss */
-  .block-views .newslist.fem ul li .views-field-field-main-image-fid img {
-    width: 100%;
-    height: auto;
-  }
-  /* line 450, ../sass/mixins.scss */
-  .block-views .newslist.fem ul li.views-row-last {
-    border: 0px;
+  .block-views .newslist.fem .item-list ul li.views-row {
+    width: 19.8%;
   }
 
-  /* line 497, ../sass/mixins.scss */
+  /* line 471, ../sass/mixins.scss */
   div .ownsection {
     margin-top: 1em;
     margin-left: 3%;

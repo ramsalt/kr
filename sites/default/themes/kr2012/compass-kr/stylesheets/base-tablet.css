@@ -131,13 +131,13 @@
     float: left;
   }
 
-  /* line 483, ../sass/mixins.scss */
+  /* line 457, ../sass/mixins.scss */
   div .ownsection {
     float: left;
     width: 197px;
     margin-left: 20px;
   }
-  /* line 487, ../sass/mixins.scss */
+  /* line 461, ../sass/mixins.scss */
   div .ownsection .desc {
     padding-top: 1em;
     display: block;
