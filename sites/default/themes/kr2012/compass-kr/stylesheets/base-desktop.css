@@ -274,26 +274,30 @@
     padding-bottom: 0px;
   }
 
-  /* line 371, ../sass/mixins.scss */
+  /* line 373, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul {
     border: none;
   }
-  /* line 373, ../sass/mixins.scss */
+  /* line 375, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li {
     border: none;
     width: 100%;
     border-bottom: 1px solid #DDD;
   }
-  /* line 378, ../sass/mixins.scss */
+  /* line 380, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-last {
     border-bottom: 0px;
   }
-  /* line 382, ../sass/mixins.scss */
+  /* line 384, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-first .views-field-title {
     padding-top: 0px;
   }
+  /* line 392, ../sass/mixins.scss */
+  .block-views .newslist.sak-7 ul li {
+    width: 20%;
+  }
 
-  /* line 430, ../sass/mixins.scss */
+  /* line 439, ../sass/mixins.scss */
   div .ownsection {
     margin-top: 1em;
     margin-left: 3%;

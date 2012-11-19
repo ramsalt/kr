@@ -262,6 +262,8 @@ $logos: sprite-map("logo/*.png");
     }
     .views-field-title{
         float: left;
+        margin: 0px;
+        width: 59%;
     }
     .views-field-field-teaser-value{
       display: none;
@@ -350,7 +352,6 @@ $logos: sprite-map("logo/*.png");
     }
   }
   .newslist.sak-7{
-
     .views-field-field-main-image-fid{
       float: left;
       img{
@@ -360,6 +361,7 @@ $logos: sprite-map("logo/*.png");
     }
     .views-field-title{
         float: none;
+        width: auto;
     }
     .views-field-field-teaser-value{
       display: block;
@@ -382,6 +384,13 @@ $logos: sprite-map("logo/*.png");
         .views-field-title{
           padding-top: 0px;
         }
+      }
+    }
+  }
+  .newslist.sak-7{
+    ul{
+      li{
+        width: 20%;
       }
     }
   }
