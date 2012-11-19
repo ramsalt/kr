@@ -50,6 +50,20 @@ function kr_2012_imagecache_default_presets() {
         ),
       ),
     ),
+    'v2_forside_b219' => array(
+      'presetname' => 'v2_forside_b219',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale_and_crop',
+          'data' => array(
+            'width' => '219',
+            'height' => '146',
+          ),
+        ),
+      ),
+    ),
     'v2_forside_stor' => array(
       'presetname' => 'v2_forside_stor',
       'actions' => array(
