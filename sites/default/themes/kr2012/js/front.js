@@ -23,8 +23,13 @@
 				$('li.views-row', this).height('auto');
 				$('.item-list li.views-row', this).height($('.item-list ul', this).height());
 			});
+			$('.newslist.fem').each(function(index) {
+				$('li.views-row', this).height('auto');
+				$('.item-list li.views-row', this).height($('.item-list ul', this).height());
+			});
 		}else{
 			$('.newslist.fire .item-list li.views-row').height('auto');
+			$('.newslist.fem .item-list li.views-row').height('auto');
 			$('.container-16 .grid.full.nomargin .one').height('auto');
 		}
 	}
