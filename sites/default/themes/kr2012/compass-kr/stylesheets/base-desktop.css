@@ -304,12 +304,16 @@
     margin: 0px;
     padding: 0px;
   }
-  /* line 400, ../sass/mixins.scss */
+  /* line 399, ../sass/mixins.scss */
+  .block-views .newslist.sak-7 ul li .views-field-title {
+    margin: 0px 20px;
+  }
+  /* line 403, ../sass/mixins.scss */
   .block-views .newslist.sak-7 ul li.views-row-last {
     border: 0px;
   }
 
-  /* line 447, ../sass/mixins.scss */
+  /* line 450, ../sass/mixins.scss */
   div .ownsection {
     margin-top: 1em;
     margin-left: 3%;

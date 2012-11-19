@@ -396,6 +396,9 @@ $logos: sprite-map("logo/*.png");
         border-right: 1px solid #DDD;
         margin: 0px;
         padding: 0px;
+        .views-field-title{
+          margin: 0px 20px;
+        }
       }
       li.views-row-last{
         border: 0px;
