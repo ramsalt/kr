@@ -249,6 +249,24 @@ $logos: sprite-map("logo/*.png");
       display: none;
     }
   }
+  .newslist.sak-7{
+    ul{
+      border-top: 1px solid #DDD;
+    }
+    .views-field-field-main-image-fid{
+      float: left;
+      img{
+        width: 86px;
+        height: auto;
+      }
+    }
+    .views-field-title{
+        float: left;
+    }
+    .views-field-field-teaser-value{
+      display: none;
+    }
+  }
 }
 @mixin newslist-brett{
   .newslist{
@@ -329,6 +347,22 @@ $logos: sprite-map("logo/*.png");
       li.views-row-last{
         border-right: 0px;
       }
+    }
+  }
+  .newslist.sak-7{
+
+    .views-field-field-main-image-fid{
+      float: left;
+      img{
+        width: 223px;
+        height: auto;
+      }
+    }
+    .views-field-title{
+        float: none;
+    }
+    .views-field-field-teaser-value{
+      display: block;
     }
   }
 }
