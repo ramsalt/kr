@@ -874,7 +874,7 @@ body.admin-menu {
   display: none;
 }
 
-/* line 410, ../sass/mixins.scss */
+/* line 416, ../sass/mixins.scss */
 div .ownsection {
   -webkit-border-radius: 4px 4px;
   -moz-border-radius: 4px / 4px;
@@ -886,13 +886,13 @@ div .ownsection {
   background: #dce4eb;
   padding: 1em;
 }
-/* line 418, ../sass/mixins.scss */
+/* line 424, ../sass/mixins.scss */
 div .ownsection h2 {
   font-size: 1.4em;
   font-family: Arial;
   float: left;
 }
-/* line 423, ../sass/mixins.scss */
+/* line 429, ../sass/mixins.scss */
 div .ownsection .link {
   float: right;
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -203px no-repeat;
@@ -900,7 +900,7 @@ div .ownsection .link {
   height: 20px;
   width: 20px;
 }
-/* line 430, ../sass/mixins.scss */
+/* line 436, ../sass/mixins.scss */
 div .ownsection .desc {
   display: none;
 }
@@ -1046,13 +1046,13 @@ div .ownsection .desc {
     float: left;
   }
 
-  /* line 436, ../sass/mixins.scss */
+  /* line 442, ../sass/mixins.scss */
   div .ownsection {
     float: left;
     width: 197px;
     margin-left: 20px;
   }
-  /* line 440, ../sass/mixins.scss */
+  /* line 446, ../sass/mixins.scss */
   div .ownsection .desc {
     padding-top: 1em;
     display: block;
@@ -1372,11 +1372,16 @@ div .ownsection .desc {
     margin: 0px 15px;
   }
   /* line 403, ../sass/mixins.scss */
+  .block-views .newslist.sak-7 ul li .views-field-field-main-image-fid img {
+    width: auto;
+    height: auto;
+  }
+  /* line 409, ../sass/mixins.scss */
   .block-views .newslist.sak-7 ul li.views-row-last {
     border: 0px;
   }
 
-  /* line 450, ../sass/mixins.scss */
+  /* line 456, ../sass/mixins.scss */
   div .ownsection {
     margin-top: 1em;
     margin-left: 3%;
