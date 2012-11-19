@@ -111,6 +111,20 @@
 					</div>	
 				</div>
 			</div><!-- /.grid -->
+			<div class="grid full nomargin ">
+				<div class="three">
+					<div class="three-inner">
+						<?php print $three; ?>
+					</div>	
+				</div>
+			</div><!-- /.grid -->
+			<div class="grid full nomargin">
+				<div class="four">
+					<div class="four-inner">
+						<?php print $four; ?>
+					</div>	
+				</div>
+			</div><!-- /.grid -->
 		</div> <!-- /.inner-container -->
 	</div> <!-- /.container -->
   </div> <!-- /.wrapper -->

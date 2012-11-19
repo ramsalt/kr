@@ -81,6 +81,12 @@ function kr_2012_context_default_contexts() {
           'region' => 'two',
           'weight' => 2,
         ),
+        'views-forside-block_4' => array(
+          'module' => 'views',
+          'delta' => 'forside-block_4',
+          'region' => 'four',
+          'weight' => 0,
+        ),
       ),
       'layout' => 'columns',
     ),
@@ -146,6 +152,12 @@ function kr_2012_context_default_contexts() {
             'class' => 'ownsection',
           ),
         ),
+      ),
+      'three' => array(
+        'class' => '',
+      ),
+      'four' => array(
+        'class' => '',
       ),
     ),
   );
