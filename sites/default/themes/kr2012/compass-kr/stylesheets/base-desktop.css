@@ -292,12 +292,24 @@
   .block-views .newslist.sak-4 ul li.views-row-first .views-field-title {
     padding-top: 0px;
   }
-  /* line 392, ../sass/mixins.scss */
+  /* line 391, ../sass/mixins.scss */
+  .block-views .newslist.sak-7 ul {
+    border-bottom: 1px solid #DDD;
+  }
+  /* line 393, ../sass/mixins.scss */
   .block-views .newslist.sak-7 ul li {
-    width: 20%;
+    width: 24.8%;
+    border-bottom: 0px;
+    border-right: 1px solid #DDD;
+    margin: 0px;
+    padding: 0px;
+  }
+  /* line 400, ../sass/mixins.scss */
+  .block-views .newslist.sak-7 ul li.views-row-last {
+    border: 0px;
   }
 
-  /* line 439, ../sass/mixins.scss */
+  /* line 447, ../sass/mixins.scss */
   div .ownsection {
     margin-top: 1em;
     margin-left: 3%;

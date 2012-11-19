@@ -389,8 +389,16 @@ $logos: sprite-map("logo/*.png");
   }
   .newslist.sak-7{
     ul{
+      border-bottom: 1px solid #DDD;
       li{
-        width: 20%;
+        width: 24.8%;
+        border-bottom: 0px;
+        border-right: 1px solid #DDD;
+        margin: 0px;
+        padding: 0px;
+      }
+      li.views-row-last{
+        border: 0px;
       }
     }
   }
