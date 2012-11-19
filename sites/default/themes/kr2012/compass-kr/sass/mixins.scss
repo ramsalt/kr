@@ -47,7 +47,7 @@ $logos: sprite-map("logo/*.png");
       }
     }
   }
-  .rammeboks.kommentar-liste{
+  .kommentar-liste{
     h2{
       color: #78a21e;
       border-bottom: 1px solid #78a21e;
@@ -350,5 +350,52 @@ $logos: sprite-map("logo/*.png");
         }
       }
     }
+  }
+}
+@mixin ownsection-mob{
+  .ownsection{
+    @include border-radius(4px, 4px);
+    border-top: 1px solid #b4c5d2;
+    border-right: 1px solid #b4c5d2;
+    border-bottom: 2px solid #b4c5d2;
+    border-left: 1px solid #b4c5d2;
+    background: #dce4eb;
+    padding: 1em;
+    h2{
+      font-size: 1.4em;
+      font-family: Arial;
+      float: left;
+    }
+    .link{
+      float: right;
+      background: sprite($logos, arrowright) no-repeat;
+      text-indent: -9999px;
+      height: 20px;
+      width: 20px;
+    }
+    .desc{
+      display: none;
+    }
+  }
+}
+@mixin ownsection-brett{
+  .ownsection{
+    float: left;
+    width: 197px;
+    margin-left: 20px;
+    .desc{
+      padding-top: 1em;
+      display: block;
+      clear: both;
+      font-family: Arial;
+      color: #333333;
+    }
+  }
+}
+@mixin ownsection-desktop{
+  .ownsection{
+    margin-top: 1em;
+    margin-left: 3%;
+    width: 26%; // 100  78 22
   }
 }

@@ -80,7 +80,7 @@ body.admin-menu {
 }
 /* line 65, ../sass/base.scss */
 #login-area .wrapper .inner #search-content a span.icon {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sf3b25e0d6b.png') 0 -271px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -291px no-repeat;
   width: 12px;
   height: 13px;
   margin-left: 4px;
@@ -133,7 +133,7 @@ body.admin-menu {
 }
 /* line 110, ../sass/base.scss */
 #logo-area .wrapper #logo a span {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sf3b25e0d6b.png') 0 -60px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -60px no-repeat;
   width: 219px;
   height: 23px;
   float: left;
@@ -146,7 +146,7 @@ body.admin-menu {
 /* line 122, ../sass/base.scss */
 #logo-area #nav-button a {
   float: left;
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sf3b25e0d6b.png') 0 -164px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -164px no-repeat;
   width: 38px;
   height: 39px;
   text-indent: -9999px;
@@ -154,7 +154,7 @@ body.admin-menu {
 }
 /* line 132, ../sass/base.scss */
 #logo-area #nav-button.open a {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sf3b25e0d6b.png') 0 -125px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -125px no-repeat;
 }
 /* line 136, ../sass/base.scss */
 #logo-area #nav.open {
@@ -209,7 +209,7 @@ body.admin-menu {
 }
 /* line 180, ../sass/base.scss */
 #logo-area #nav ul li.multilevel a span.level {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sf3b25e0d6b.png') 0 -284px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -304px no-repeat;
   width: 7px;
   height: 7px;
   margin: 3px 0px 0px 10px;
@@ -343,7 +343,7 @@ body.admin-menu {
 }
 /* line 311, ../sass/base.scss */
 .fakta-mobil .faktatittel a .icon {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sf3b25e0d6b.png') 0 -221px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -241px no-repeat;
   width: 19px;
   height: 18px;
   float: right;
@@ -356,7 +356,7 @@ body.admin-menu {
 
 /* line 326, ../sass/base.scss */
 .fakta-mobil.open .faktatittel a .icon {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sf3b25e0d6b.png') 0 -203px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -223px no-repeat;
 }
 /* line 330, ../sass/base.scss */
 .fakta-mobil.open .innhold {
@@ -371,7 +371,7 @@ body.admin-menu {
 }
 /* line 338, ../sass/base.scss */
 .tiltoppen a {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sf3b25e0d6b.png') 0 -83px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -83px no-repeat;
   width: 174px;
   height: 42px;
   display: block;
@@ -429,12 +429,12 @@ body.admin-menu {
 }
 
 /* line 51, ../sass/mixins.scss */
-.rammeboks.kommentar-liste h2 {
+.kommentar-liste h2 {
   color: #78a21e;
   border-bottom: 1px solid #78a21e;
 }
 /* line 55, ../sass/mixins.scss */
-.rammeboks.kommentar-liste .views-field-field-sitat-value:before {
+.kommentar-liste .views-field-field-sitat-value:before {
   content: '“';
   float: left;
   color: #78a21e;
@@ -443,14 +443,14 @@ body.admin-menu {
   font-family: 'MerriweatherRegular', serif;
 }
 /* line 64, ../sass/mixins.scss */
-.rammeboks.kommentar-liste .views-field-field-sitat-value a {
+.kommentar-liste .views-field-field-sitat-value a {
   text-decoration: none;
   color: #333333;
   font-family: 'MerriweatherRegular', serif;
   font-size: 1.1em;
 }
 /* line 71, ../sass/mixins.scss */
-.rammeboks.kommentar-liste .views-field-view-node {
+.kommentar-liste .views-field-view-node {
   border-top: 1px solid #c1bfb9;
   margin-top: 10px;
   padding-top: 6px;
@@ -458,20 +458,20 @@ body.admin-menu {
   width: 50%;
 }
 /* line 77, ../sass/mixins.scss */
-.rammeboks.kommentar-liste .views-field-view-node a {
+.kommentar-liste .views-field-view-node a {
   height: 13px;
   padding-top: 4px;
   float: left;
   font-size: 0.7em;
   line-height: 1em;
   padding-left: 20px;
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sf3b25e0d6b.png') 0 -239px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -259px no-repeat;
   font-family: Arial;
   color: #333333;
   text-decoration: none;
 }
 /* line 90, ../sass/mixins.scss */
-.rammeboks.kommentar-liste .views-field-field-op-author-nid {
+.kommentar-liste .views-field-field-op-author-nid {
   border-top: 1px solid #c1bfb9;
   margin-top: 10px;
   padding-top: 6px;
@@ -479,7 +479,7 @@ body.admin-menu {
   width: 50%;
 }
 /* line 96, ../sass/mixins.scss */
-.rammeboks.kommentar-liste .views-field-field-op-author-nid a {
+.kommentar-liste .views-field-field-op-author-nid a {
   font-size: 0.8em;
   font-family: Arial;
   color: #333333;
@@ -597,11 +597,42 @@ body.admin-menu {
   display: none;
 }
 
-/* line 356, ../sass/base.scss */
+/* line 356, ../sass/mixins.scss */
+div .ownsection {
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px / 4px;
+  border-radius: 4px / 4px;
+  border-top: 1px solid #b4c5d2;
+  border-right: 1px solid #b4c5d2;
+  border-bottom: 2px solid #b4c5d2;
+  border-left: 1px solid #b4c5d2;
+  background: #dce4eb;
+  padding: 1em;
+}
+/* line 364, ../sass/mixins.scss */
+div .ownsection h2 {
+  font-size: 1.4em;
+  font-family: Arial;
+  float: left;
+}
+/* line 369, ../sass/mixins.scss */
+div .ownsection .link {
+  float: right;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -203px no-repeat;
+  text-indent: -9999px;
+  height: 20px;
+  width: 20px;
+}
+/* line 376, ../sass/mixins.scss */
+div .ownsection .desc {
+  display: none;
+}
+
+/* line 359, ../sass/base.scss */
 .block {
   margin-bottom: 15px;
 }
-/* line 360, ../sass/base.scss */
+/* line 363, ../sass/base.scss */
 .block .siste-saker .views-field-field-main-image-fid {
   display: none;
 }

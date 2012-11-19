@@ -230,11 +230,18 @@ $logos: sprite-map("logo/*.png");
   .block-views{
     @include newslist-desktop;
   }
+  div{
+    @include ownsection-desktop;
+  }
   .one.one_one .one-inner{
     border-right: 1px solid #DDD;
+    height: 100%;
   }
   .one.one_two .one-inner{
     margin-right: 1em;
+  }
+  .deskbordertop{
+    border-top: 1px solid #dddddd;
   }
   .block{
     .siste-saker{

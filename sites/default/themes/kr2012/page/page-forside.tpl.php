@@ -104,7 +104,7 @@
 					</div>
 				</div>
 			</div><!-- /.grid -->
-			<div class="grid full nomargin">
+			<div class="grid full nomargin deskbordertop">
 				<div class="two">
 					<div class="two-inner">
 						<?php print $two; ?>

@@ -37,7 +37,7 @@ function kr_2012_block($op = 'list', $delta = 0, $edit = array()) {
   else if ($op == 'save') {
     variable_set('kr_2012_text_'.$delta, $edit['text']);
 	variable_set('kr_2012_title_'.$delta, $edit['title']);
-	variable_set('kr_2012_link_'.$delta, $edit['title']);
+	variable_set('kr_2012_link_'.$delta, $edit['link']);
   }
   else if ($op == 'view') {
   	$block = array(
@@ -49,7 +49,7 @@ function kr_2012_block($op = 'list', $delta = 0, $edit = array()) {
   }
 }
 function _kr_2012_block_content($delta){
-	$html = '<a href="'.url(variable_get('kr_2012_link_'.$delta, '')).'" class="link"></a>';
-	$html .= '<div>'.variable_get('kr_2012_text_'.$delta, '').'</div>';
+	$html = '<a href="'.url(variable_get('kr_2012_link_'.$delta, '')).'" class="link">Link</a>';
+	$html .= '<div class="desc">'.variable_get('kr_2012_text_'.$delta, '').'</div>';
 	return $html;
 }

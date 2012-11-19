@@ -353,6 +353,9 @@ body.admin-menu{
 .block-views{
   @include newslist-mob;
 }
+div {
+  @include ownsection-mob;
+}
 .block {
   margin-bottom: 15px;
 

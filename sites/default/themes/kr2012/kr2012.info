@@ -50,5 +50,5 @@ regions[two] = Front: Two
     layouts[columns][regions][] = "one_one"
     layouts[columns][regions][] = "one_two"
     layouts[columns][regions][] = "one_three"
-    layouts[columns][regions][] = "two"ls
+    layouts[columns][regions][] = "two"
     
