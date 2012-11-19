@@ -17,7 +17,7 @@ function kr_2012_block($op = 'list', $delta = 0, $edit = array()) {
   }
   else if ($op == 'configure') {
   	
-  	$form['title'] = array(
+  	$form['tittel'] = array(
   	  '#type' => 'textfield',
   	  '#title' => 'Tittel',
   	  '#default_value' => variable_get('kr_2012_tittel_'.$delta, ''),
@@ -36,7 +36,7 @@ function kr_2012_block($op = 'list', $delta = 0, $edit = array()) {
   }
   else if ($op == 'save') {
     variable_set('kr_2012_text_'.$delta, $edit['text']);
-	variable_set('kr_2012_title_'.$delta, $edit['title']);
+	variable_set('kr_2012_title_'.$delta, $edit['tittel']);
 	variable_set('kr_2012_link_'.$delta, $edit['link']);
   }
   else if ($op == 'view') {
