@@ -102,18 +102,19 @@
   /* line 356, ../sass/mixins.scss */
   .block-views .newslist.fire .views-field-field-main-image-fid, .block-views .newslist.fem .views-field-field-main-image-fid {
     float: left;
+    margin-right: 10px;
   }
-  /* line 358, ../sass/mixins.scss */
+  /* line 359, ../sass/mixins.scss */
   .block-views .newslist.fire .views-field-field-main-image-fid img, .block-views .newslist.fem .views-field-field-main-image-fid img {
     width: 223px;
     height: auto;
   }
-  /* line 363, ../sass/mixins.scss */
+  /* line 364, ../sass/mixins.scss */
   .block-views .newslist.fire .views-field-title, .block-views .newslist.fem .views-field-title {
     float: none;
     width: auto;
   }
-  /* line 367, ../sass/mixins.scss */
+  /* line 368, ../sass/mixins.scss */
   .block-views .newslist.fire .views-field-field-teaser-value, .block-views .newslist.fem .views-field-field-teaser-value {
     display: block;
   }
@@ -130,13 +131,13 @@
     float: left;
   }
 
-  /* line 451, ../sass/mixins.scss */
+  /* line 452, ../sass/mixins.scss */
   div .ownsection {
     float: left;
     width: 197px;
     margin-left: 20px;
   }
-  /* line 455, ../sass/mixins.scss */
+  /* line 456, ../sass/mixins.scss */
   div .ownsection .desc {
     padding-top: 1em;
     display: block;
