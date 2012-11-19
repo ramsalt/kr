@@ -399,6 +399,12 @@ $logos: sprite-map("logo/*.png");
         .views-field-title, .views-field-field-main-image-fid, .views-field-field-main-image-fid{
           margin: 0px 15px;
         }
+        .views-field-field-main-image-fid{
+          img{
+            width: auto;
+            height: auto;
+          }
+        }
       }
       li.views-row-last{
         border: 0px;

@@ -309,11 +309,16 @@
     margin: 0px 15px;
   }
   /* line 403, ../sass/mixins.scss */
+  .block-views .newslist.sak-7 ul li .views-field-field-main-image-fid img {
+    width: auto;
+    height: auto;
+  }
+  /* line 409, ../sass/mixins.scss */
   .block-views .newslist.sak-7 ul li.views-row-last {
     border: 0px;
   }
 
-  /* line 450, ../sass/mixins.scss */
+  /* line 456, ../sass/mixins.scss */
   div .ownsection {
     margin-top: 1em;
     margin-left: 3%;
