@@ -52,23 +52,23 @@ Hvem er de og hva er deres interesser?';
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'kr_2012_title_0';
+  $strongarm->name = 'kr_2012_tittel_0';
   $strongarm->value = 'Byer i Norge';
-  $export['kr_2012_title_0'] = $strongarm;
+  $export['kr_2012_tittel_0'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'kr_2012_title_1';
+  $strongarm->name = 'kr_2012_tittel_1';
   $strongarm->value = 'Ordførerleksikon';
-  $export['kr_2012_title_1'] = $strongarm;
+  $export['kr_2012_tittel_1'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'kr_2012_title_2';
+  $strongarm->name = 'kr_2012_tittel_2';
   $strongarm->value = 'Norske rådmenn';
-  $export['kr_2012_title_2'] = $strongarm;
+  $export['kr_2012_tittel_2'] = $strongarm;
 
   return $export;
 }
