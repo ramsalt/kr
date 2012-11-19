@@ -597,26 +597,26 @@ body.admin-menu {
   display: none;
 }
 /* line 253, ../sass/mixins.scss */
-.block-views .newslist.sak-7 ul {
+.block-views .newslist.fire ul {
   border-top: 1px solid #DDD;
 }
 /* line 256, ../sass/mixins.scss */
-.block-views .newslist.sak-7 .views-field-field-main-image-fid {
+.block-views .newslist.fire .views-field-field-main-image-fid {
   float: left;
 }
 /* line 258, ../sass/mixins.scss */
-.block-views .newslist.sak-7 .views-field-field-main-image-fid img {
+.block-views .newslist.fire .views-field-field-main-image-fid img {
   width: 86px;
   height: auto;
 }
 /* line 263, ../sass/mixins.scss */
-.block-views .newslist.sak-7 .views-field-title {
+.block-views .newslist.fire .views-field-title {
   float: left;
   margin: 0px;
   width: 59%;
 }
 /* line 268, ../sass/mixins.scss */
-.block-views .newslist.sak-7 .views-field-field-teaser-value {
+.block-views .newslist.fire .views-field-field-teaser-value {
   display: none;
 }
 

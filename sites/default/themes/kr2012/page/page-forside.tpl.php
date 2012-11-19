@@ -125,6 +125,20 @@
 					</div>	
 				</div>
 			</div><!-- /.grid -->
+			<div class="grid full nomargin">
+				<div class="five">
+					<div class="five-inner">
+						<?php print $five; ?>
+					</div>	
+				</div>
+			</div><!-- /.grid -->
+			<div class="grid full nomargin">
+				<div class="six">
+					<div class="six-inner">
+						<?php print $six; ?>
+					</div>	
+				</div>
+			</div><!-- /.grid -->
 		</div> <!-- /.inner-container -->
 	</div> <!-- /.container -->
   </div> <!-- /.wrapper -->

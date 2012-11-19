@@ -32,6 +32,8 @@ regions[one_three] = Front: One Three
 regions[two] = Front: Two
 regions[three] = Front: Three ad
 regions[four] = Front: Four
+regions[five] = Front: Five job
+regions[six] = Front: Six
 
     ; Layout: Default
     layouts[default][name] = "Default"
@@ -55,4 +57,5 @@ regions[four] = Front: Four
     layouts[columns][regions][] = "two"
     layouts[columns][regions][] = "three"
     layouts[columns][regions][] = "four"
-    
+    layouts[columns][regions][] = "five"
+    layouts[columns][regions][] = "six"

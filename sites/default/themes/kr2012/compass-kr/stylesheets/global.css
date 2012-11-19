@@ -851,26 +851,26 @@ body.admin-menu {
   display: none;
 }
 /* line 253, ../sass/mixins.scss */
-.block-views .newslist.sak-7 ul {
+.block-views .newslist.fire ul {
   border-top: 1px solid #DDD;
 }
 /* line 256, ../sass/mixins.scss */
-.block-views .newslist.sak-7 .views-field-field-main-image-fid {
+.block-views .newslist.fire .views-field-field-main-image-fid {
   float: left;
 }
 /* line 258, ../sass/mixins.scss */
-.block-views .newslist.sak-7 .views-field-field-main-image-fid img {
+.block-views .newslist.fire .views-field-field-main-image-fid img {
   width: 86px;
   height: auto;
 }
 /* line 263, ../sass/mixins.scss */
-.block-views .newslist.sak-7 .views-field-title {
+.block-views .newslist.fire .views-field-title {
   float: left;
   margin: 0px;
   width: 59%;
 }
 /* line 268, ../sass/mixins.scss */
-.block-views .newslist.sak-7 .views-field-field-teaser-value {
+.block-views .newslist.fire .views-field-field-teaser-value {
   display: none;
 }
 
@@ -1016,21 +1016,21 @@ div .ownsection .desc {
     border-right: 0px;
   }
   /* line 355, ../sass/mixins.scss */
-  .block-views .newslist.sak-7 .views-field-field-main-image-fid {
+  .block-views .newslist.fire .views-field-field-main-image-fid {
     float: left;
   }
   /* line 357, ../sass/mixins.scss */
-  .block-views .newslist.sak-7 .views-field-field-main-image-fid img {
+  .block-views .newslist.fire .views-field-field-main-image-fid img {
     width: 223px;
     height: auto;
   }
   /* line 362, ../sass/mixins.scss */
-  .block-views .newslist.sak-7 .views-field-title {
+  .block-views .newslist.fire .views-field-title {
     float: none;
     width: auto;
   }
   /* line 366, ../sass/mixins.scss */
-  .block-views .newslist.sak-7 .views-field-field-teaser-value {
+  .block-views .newslist.fire .views-field-field-teaser-value {
     display: block;
   }
 
@@ -1357,12 +1357,12 @@ div .ownsection .desc {
     padding-top: 0px;
   }
   /* line 392, ../sass/mixins.scss */
-  .block-views .newslist.sak-7 ul {
+  .block-views .newslist.fire ul {
     float: left;
     border-bottom: 1px solid #DDD;
   }
   /* line 395, ../sass/mixins.scss */
-  .block-views .newslist.sak-7 ul li {
+  .block-views .newslist.fire ul li {
     width: 24.8%;
     border-bottom: 0px;
     border-right: 1px solid #DDD;
@@ -1370,25 +1370,25 @@ div .ownsection .desc {
     padding: 1em 0px 0px 0px;
   }
   /* line 402, ../sass/mixins.scss */
-  .block-views .newslist.sak-7 ul li .views-field-field-teaser-value {
+  .block-views .newslist.fire ul li .views-field-field-teaser-value {
     margin: 0px 15px;
   }
   /* line 405, ../sass/mixins.scss */
-  .block-views .newslist.sak-7 ul li .views-field-title {
+  .block-views .newslist.fire ul li .views-field-title {
     width: 85%;
     margin: 0px 15px;
   }
   /* line 409, ../sass/mixins.scss */
-  .block-views .newslist.sak-7 ul li .views-field-field-main-image-fid {
+  .block-views .newslist.fire ul li .views-field-field-main-image-fid {
     margin: 0px 15px;
   }
   /* line 411, ../sass/mixins.scss */
-  .block-views .newslist.sak-7 ul li .views-field-field-main-image-fid img {
+  .block-views .newslist.fire ul li .views-field-field-main-image-fid img {
     width: 100%;
     height: auto;
   }
   /* line 417, ../sass/mixins.scss */
-  .block-views .newslist.sak-7 ul li.views-row-last {
+  .block-views .newslist.fire ul li.views-row-last {
     border: 0px;
   }
 
