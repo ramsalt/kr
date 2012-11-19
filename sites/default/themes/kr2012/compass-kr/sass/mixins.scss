@@ -372,6 +372,7 @@ $logos: sprite-map("logo/*.png");
   .newslist.sak-4{
     ul{
       border: none;
+      height: auto;
       li{
         border: none;
         width: 100%;
@@ -389,19 +390,26 @@ $logos: sprite-map("logo/*.png");
   }
   .newslist.sak-7{
     ul{
+      float: left;
       border-bottom: 1px solid #DDD;
       li{
         width: 24.8%;
         border-bottom: 0px;
         border-right: 1px solid #DDD;
         margin: 0px;
-        padding: 0px;
-        .views-field-title, .views-field-field-main-image-fid, .views-field-field-main-image-fid{
+        padding: 1em 0px 0px 0px;
+        
+        .views-field-field-teaser-value{
+          margin: 0px 15px;
+        }
+        .views-field-title{
+          width: 85%;
           margin: 0px 15px;
         }
         .views-field-field-main-image-fid{
+          margin: 0px 15px;
           img{
-            width: auto;
+            width: 100%;
             height: auto;
           }
         }

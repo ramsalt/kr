@@ -277,48 +277,59 @@
   /* line 373, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul {
     border: none;
+    height: auto;
   }
-  /* line 375, ../sass/mixins.scss */
+  /* line 376, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li {
     border: none;
     width: 100%;
     border-bottom: 1px solid #DDD;
   }
-  /* line 380, ../sass/mixins.scss */
+  /* line 381, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-last {
     border-bottom: 0px;
   }
-  /* line 384, ../sass/mixins.scss */
+  /* line 385, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-first .views-field-title {
     padding-top: 0px;
   }
-  /* line 391, ../sass/mixins.scss */
+  /* line 392, ../sass/mixins.scss */
   .block-views .newslist.sak-7 ul {
+    float: left;
     border-bottom: 1px solid #DDD;
   }
-  /* line 393, ../sass/mixins.scss */
+  /* line 395, ../sass/mixins.scss */
   .block-views .newslist.sak-7 ul li {
     width: 24.8%;
     border-bottom: 0px;
     border-right: 1px solid #DDD;
     margin: 0px;
-    padding: 0px;
+    padding: 1em 0px 0px 0px;
   }
-  /* line 399, ../sass/mixins.scss */
-  .block-views .newslist.sak-7 ul li .views-field-title, .block-views .newslist.sak-7 ul li .views-field-field-main-image-fid, .block-views .newslist.sak-7 ul li .views-field-field-main-image-fid {
+  /* line 402, ../sass/mixins.scss */
+  .block-views .newslist.sak-7 ul li .views-field-field-teaser-value {
     margin: 0px 15px;
   }
-  /* line 403, ../sass/mixins.scss */
-  .block-views .newslist.sak-7 ul li .views-field-field-main-image-fid img {
-    width: auto;
-    height: auto;
+  /* line 405, ../sass/mixins.scss */
+  .block-views .newslist.sak-7 ul li .views-field-title {
+    width: 85%;
+    margin: 0px 15px;
   }
   /* line 409, ../sass/mixins.scss */
+  .block-views .newslist.sak-7 ul li .views-field-field-main-image-fid {
+    margin: 0px 15px;
+  }
+  /* line 411, ../sass/mixins.scss */
+  .block-views .newslist.sak-7 ul li .views-field-field-main-image-fid img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 417, ../sass/mixins.scss */
   .block-views .newslist.sak-7 ul li.views-row-last {
     border: 0px;
   }
 
-  /* line 456, ../sass/mixins.scss */
+  /* line 464, ../sass/mixins.scss */
   div .ownsection {
     margin-top: 1em;
     margin-left: 3%;
