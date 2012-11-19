@@ -305,8 +305,8 @@
     padding: 0px;
   }
   /* line 399, ../sass/mixins.scss */
-  .block-views .newslist.sak-7 ul li .views-field-title {
-    margin: 0px 20px;
+  .block-views .newslist.sak-7 ul li .views-field-title, .block-views .newslist.sak-7 ul li .views-field-field-main-image-fid, .block-views .newslist.sak-7 ul li .views-field-field-main-image-fid {
+    margin: 0px 15px;
   }
   /* line 403, ../sass/mixins.scss */
   .block-views .newslist.sak-7 ul li.views-row-last {
