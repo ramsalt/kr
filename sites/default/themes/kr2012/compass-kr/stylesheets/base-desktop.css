@@ -328,8 +328,43 @@
   .block-views .newslist.fire ul li.views-row-last {
     border: 0px;
   }
+  /* line 425, ../sass/mixins.scss */
+  .block-views .newslist.fem ul {
+    float: left;
+    border-bottom: 1px solid #DDD;
+  }
+  /* line 428, ../sass/mixins.scss */
+  .block-views .newslist.fem ul li {
+    width: 24.8%;
+    border-bottom: 0px;
+    border-right: 1px solid #DDD;
+    margin: 0px;
+    padding: 1em 0px 0px 0px;
+  }
+  /* line 435, ../sass/mixins.scss */
+  .block-views .newslist.fem ul li .views-field-field-teaser-value {
+    margin: 0px 15px;
+  }
+  /* line 438, ../sass/mixins.scss */
+  .block-views .newslist.fem ul li .views-field-title {
+    width: 85%;
+    margin: 0px 15px;
+  }
+  /* line 442, ../sass/mixins.scss */
+  .block-views .newslist.fem ul li .views-field-field-main-image-fid {
+    margin: 0px 15px;
+  }
+  /* line 444, ../sass/mixins.scss */
+  .block-views .newslist.fem ul li .views-field-field-main-image-fid img {
+    width: 100%;
+    height: auto;
+  }
+  /* line 450, ../sass/mixins.scss */
+  .block-views .newslist.fem ul li.views-row-last {
+    border: 0px;
+  }
 
-  /* line 466, ../sass/mixins.scss */
+  /* line 497, ../sass/mixins.scss */
   div .ownsection {
     margin-top: 1em;
     margin-left: 3%;
