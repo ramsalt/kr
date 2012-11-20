@@ -62,3 +62,13 @@ function kr_2012_pathauto_alias_alter(&$alias, $context) {
 	//&#173;
 	
 }
+function kr_2012_form_alter(&$form, &$form_state, $form_id){
+	if($form_id == 'article_node_form'){
+		$theme = variable_get('theme_default', '');
+		if($theme == 'kr2012'){
+			$form['title']['#description'] .= 'Legg inn '.htmlentities('&#173;').' for å bryte ord, om de ikke får plass på en linje.';
+		}
+	}
+	
+	
+}
