@@ -31,6 +31,8 @@ function kr2012_byline($node){
 function kr2012_preprocess_node(&$vars){
 	$byline = kr2012_byline($vars['node']);
 	$vars['byline'] = $byline;
+	
+	$vars['title'] = check_plain(strip_tags($vars['node']->title));
 	if($vars['type']=='Article'){
 		if(strlen($vars['field_article_fakta'][0]['value'])>4){
 			$vars['fakta']=$vars['field_article_fakta'][0]['safe'];

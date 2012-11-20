@@ -30,6 +30,13 @@ body{
   p{
     margin: 1em 0em;
   }
+  .views-field-title{
+    @include hyphenation;
+    a{
+      @include hyphenation;
+    }
+  }
+  
 }
 body.admin-menu{
   margin-top: 40px !important;
