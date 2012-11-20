@@ -31,9 +31,12 @@ body{
     margin: 1em 0em;
   }
   .views-field-title{
+    
     @include hyphens(manual);
+    -ms-hyphens: manual;
     a{
       @include hyphens(manual);
+      -ms-hyphens: manual;
     }
   }
   
