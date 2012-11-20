@@ -56,4 +56,5 @@ function _kr_2012_block_content($delta){
 
 function kr_2012_pathauto_alias_alter(&$alias, $context) {
 	$alias = str_replace('wbr', '', $alias);
+	$alias = str_replace('&hyphen;', '', $alias);
 }
