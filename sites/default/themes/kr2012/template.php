@@ -32,7 +32,7 @@ function kr2012_preprocess_node(&$vars){
 	$byline = kr2012_byline($vars['node']);
 	$vars['byline'] = $byline;
 	
-	$vars['title'] = check_plain(strip_tags(str_replace('&hyphen;', '', $vars['node']->title)));
+	$vars['title'] = check_plain(strip_tags(str_replace('&#173;', '', $vars['node']->title)));
 	//$vars['title'] = str_replace('&hyphen;', '', $vars['title']);
 	if($vars['type']=='Article'){
 		if(strlen($vars['field_article_fakta'][0]['value'])>4){
