@@ -312,5 +312,44 @@ function kr_2012_context_default_contexts() {
   $context->condition_mode = 1;
   $export['ny_forside'] = $context;
 
+  $context = new stdClass;
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'ny_sitewide';
+  $context->description = '';
+  $context->tag = '';
+  $context->conditions = array(
+    'context_condition_theme' => array(
+      'values' => array(
+        'kr2012' => 'kr2012',
+      ),
+    ),
+    'sitewide' => array(
+      'values' => array(
+        1 => 1,
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'openx-8' => array(
+          'module' => 'openx',
+          'delta' => 8,
+          'region' => 'toparea',
+          'weight' => 0,
+        ),
+        'openx-7' => array(
+          'module' => 'openx',
+          'delta' => 7,
+          'region' => 'toparea',
+          'weight' => 1,
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+  $export['ny_sitewide'] = $context;
+
   return $export;
 }

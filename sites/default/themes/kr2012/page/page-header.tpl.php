@@ -39,20 +39,19 @@
   <div id="outer-wrapper"> 
   <div id="wrapper">    	
   <header>  
-  <?php if (menu_tree('menu-top-menu')): ?>
-    <div id="top-menu" class="clearfix">
-      <ul id="login-menu">
-        <?php if (user_is_logged_in()) : ?>
-          <li><?php print t('Hello'); ?> <?php print l($GLOBALS['user']->name, 'user') ?></li>
-          <li><?php print l(t('Log Out'), 'logout'); ?></li>
-        <?php else : ?>
-          <li class="hello"><?php print t('Hello Visitor!'); ?></li>
-          <li><?php print l(t('Log In'), 'user') ?> <?php print t('or'); ?> <?php print l(t('Register'),'user/register'); ?></li>
-        <?php endif; ?>
-      </ul>
-      <?php print menu_tree('menu-top-menu'); ?>
-    </div>
-  <?php endif; ?>		
+  <div id="top-area" class="area">
+  	<div class="wrapper">
+  		<div class="container container-16 clearfix">
+  			<div class="inner-container">
+	  			<div class="grid grid-16">
+	  				<div class="inner">
+	  					<?php print $toparea; ?>
+		  			</div>
+	  			</div>
+  			</div>
+  		</div>
+  	</div>
+  </div>
   <div id="login-area" class="area">
   	<div class="wrapper">
   		<div class="container container-16 clearfix">

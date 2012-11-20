@@ -9,17 +9,17 @@
     display: block;
   }
 
-  /* line 13, ../sass/base-tablet.scss */
+  /* line 14, ../sass/base-tablet.scss */
   #logo-area .wrapper .container .grid {
     width: 728px;
     margin: 0px 20px;
   }
-  /* line 17, ../sass/base-tablet.scss */
+  /* line 18, ../sass/base-tablet.scss */
   #logo-area .wrapper .container #logo {
     margin-left: 0px;
   }
 
-  /* line 26, ../sass/base-tablet.scss */
+  /* line 27, ../sass/base-tablet.scss */
   #content-area .wrapper .container .inner-container {
     padding-top: 2%;
   }
