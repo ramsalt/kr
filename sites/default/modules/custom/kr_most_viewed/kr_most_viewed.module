@@ -42,7 +42,7 @@ function _most_viewd_last_week(){
 	
 		$i = 0;
 		while($result = db_fetch_object($query)){
-			$items[] = l($result->title, 'node/'.$result->nid);
+			$items[] = l(str_replace('&#173;', '', $result->title), 'node/'.$result->nid);
 			$i++;
 		}
 		if($i == 0){
@@ -60,6 +60,6 @@ function _most_viewd_last_week(){
 
 function kr_most_viewed_cron(){
 	$expiredate = strtotime('-30 days');
-	dsm($expiredate);
+
 	db_query('DELETE FROM {node_counter} WHERE timestamp < %d AND', $expiredate);
 }
