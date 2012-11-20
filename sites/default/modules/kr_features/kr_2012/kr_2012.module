@@ -53,3 +53,7 @@ function _kr_2012_block_content($delta){
 	$html .= '<div class="desc">'.variable_get('kr_2012_text_'.$delta, '').'</div>';
 	return $html;
 }
+
+function kr_2012_pathauto_alias_alter(&$alias, $context) {
+	$alias = str_replace('wbr', '', $alias);
+}

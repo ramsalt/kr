@@ -1,0 +1,9 @@
+name = Html title
+description = Enables html to be used in node titles.
+core = 6.x
+; Information added by drupal.org packaging script on 2012-08-03
+version = "6.x-1.4"
+core = "6.x"
+project = "html_title"
+datestamp = "1344006125"
+

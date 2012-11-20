@@ -1,0 +1,125 @@
+<?php
+
+/**
+ * @file
+ * This module enables some HTML to be used in node titles but filters all other
+ * markup to prevent XSS vulnerablities. It strips markup from RSS and views
+ * JSON display output to eliminate unsightly encoded markup.
+ */
+
+/**
+ * Implementation of hook_menu()
+ */
+function html_title_menu() {
+  $items['admin/settings/html_title'] = array(
+    'title'            => 'HTML Title settings',
+    'description'      => 'Configure HTML tags used in node titles.',
+    'access arguments' => array('administer site configuration'),
+    'page callback'    => 'drupal_get_form',
+    'page arguments'   => array('html_title_admin_settings'),
+    'type'             => MENU_NORMAL_ITEM,
+    'file'             => 'html_title.admin.inc',
+  );
+  return $items;
+}
+
+/**
+ * Implementation of hook_theme()
+ */
+function html_title_theme() {
+  return array(
+    'views_view_field__title' => array(
+      'function' => 'html_title_views_view_field__title',
+    ),
+  );
+}
+
+/**
+ * Implementation of hook_preprocess_page()
+ */
+function html_title_preprocess_page(&$vars) {
+  if (array_key_exists('node', $vars)) {
+    $elements = variable_get('html_title_allowed_elements', array('em', 'sub', 'sup'));
+    // Reset title to allow safe HTML
+    $vars['title'] = filter_xss($vars['node']->title, $elements);
+    // Strip HTML from head title
+    $vars['head_title'] = strip_tags($vars['node']->title);
+    drupal_set_title($vars['head_title']);
+  }
+}
+
+/**
+ * Implementation of hook_preprocess_node()
+ */
+function html_title_preprocess_node(&$node) {
+  if (isset($node['html_title_raw'])) {
+    $elements = variable_get('html_title_allowed_elements', array('em', 'sub', 'sup'));
+    $node['title'] = filter_xss($node['html_title_raw'], $elements);
+  }
+}
+
+/**
+ * Implementation of hook_nodeapi().
+ */
+function html_title_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
+  switch ($op) {
+    case 'load':
+      // Capture original title for use in hook_preprocess_node
+      return array('html_title_raw' => $node->title);
+      break;
+    case 'rss item':
+      // Strip html from titles
+      $node->title = strip_tags($node->title);
+      break;
+  }
+}
+
+/**
+ * Implementation of hook_views_pre_render
+ */
+function html_title_views_pre_render(&$view) {
+  // Override views_json handling of node titles because it encodes markup
+  // and we'll assume that the handler does not want markup
+  if ($view->plugin_name == 'views_json') {
+    foreach ($view->result as $k => $result) {
+      if (property_exists($result, 'node_title')) {
+        $view->result[$k]->node_title = strip_tags($result->node_title);
+      }
+    }
+  }
+}
+
+/**
+ * Theme title fields for all views which have the "field" row style.
+ *
+ * This function uses a placeholder to revert the title after it has been
+ * rendered by the views field handler. Another solution might have been to
+ * add a render_item() method to the field handler to bypass the default
+ * render method where the plain text filtering occurs but this solution is
+ * simpler.
+ *
+ * TODO: Implement a less fragile solution. This one seems likely to miss
+ * cases depending on which views plugin is being used. Nodereference
+ * autocomplete fields are an example.
+ */
+function html_title_views_view_field__title($view, $field, $row) {
+  // Strip tags instead of rendering for some types of views plugins
+  if ($view->plugin_name == 'content_php_array_autocomplete') {
+    return strip_tags($row->node_title);
+  }
+
+  // Store title and do XSS filtering
+  $elements = variable_get('html_title_allowed_elements', array('em', 'sub', 'sup'));
+  $title = filter_xss($row->node_title, $elements);
+
+  // Replace title with our placeholder
+  $row->node_title = '%%%HTML_TITLE_PLACEHOLDER%%%';
+
+  // Pass rendering on to the default rendering
+  $output = $view->field['title']->advanced_render($row);
+
+  // Restore our filtered title
+  $output = str_replace('%%%HTML_TITLE_PLACEHOLDER%%%', $title, $output);
+
+  return $output;
+}
