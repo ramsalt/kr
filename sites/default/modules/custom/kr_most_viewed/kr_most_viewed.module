@@ -34,7 +34,7 @@ function _most_viewd_last_week(){
 	{
     	$lastweek_start = strtotime('last week');
 		$lastweek_end = strtotime('last week +7 days');
-		$query = db_query('SELECT  n.title, c.nid, SUM(c.daycount) FROM {node_counter} c
+		$query = db_query('SELECT  n.title, c.nid, SUM(c.daycount) FROM {node_counter_old} c
 		LEFT JOIN node n ON n.nid = c.nid
 		WHERE c.timestamp > %d AND c.timestamp < %d AND c.nid > 1 AND n.status LIKE 1
 		GROUP BY c.nid ORDER BY SUM(c.daycount) DESC
@@ -61,5 +61,6 @@ function _most_viewd_last_week(){
 function kr_most_viewed_cron(){
 	$expiredate = strtotime('-30 days');
 
-	db_query('DELETE FROM {node_counter} WHERE timestamp < %d AND', $expiredate);
+	db_query('DELETE FROM {node_counter_old} WHERE timestamp < %d AND', $expiredate);
+	
 }

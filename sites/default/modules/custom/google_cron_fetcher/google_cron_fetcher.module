@@ -34,12 +34,17 @@ function gc_daily_visits(){
       $nid = google_path_to_nid($item['pagePath']);
       if($nid){
       	$ni++;
-        db_query('UPDATE {node_counter} SET daycount = %d WHERE timestamp = %d AND nid = %d', $views, strtotime('today'), $nid);
+        db_query('UPDATE {node_counter} SET daycount = %d, timestamp = %d WHERE nid = %d', $views, strtotime('today'), $nid);		
         // If we affected 0 rows, this is the first time viewing the node.
         if (!db_affected_rows()) {
           // We must create a new row to store counters for the new node.cd 
           db_query('INSERT INTO {node_counter} (nid, daycount, totalcount, timestamp) VALUES (%d, %d, %d, %d)', $nid, $views, $views, strtotime('today'));
-        }        
+        }
+		db_query('UPDATE {node_counter_old} SET daycount = %d WHERE timestamp = %d AND nid = %d', $views, strtotime('today'), $nid);
+        if (!db_affected_rows()) {
+          // We must create a new row to store counters for the new node.cd 
+          db_query('INSERT INTO {node_counter_old} (nid, daycount, totalcount, timestamp) VALUES (%d, %d, %d, %d)', $nid, $views, $views, strtotime('today'));
+        }
       }
     }
 
@@ -79,11 +84,17 @@ function gc_global_visits(){
       $nid = google_path_to_nid($item['pagePath']);
       if($nid){
       	$ni++;
-        db_query('UPDATE {node_counter} SET totalcount = %d WHERE timestamp = %d AND nid = %d', $views, strtotime('today'), $nid);
+        db_query('UPDATE {node_counter} SET totalcount = %d, timestamp = %d WHERE  nid = %d', $views, strtotime('today'), $nid);
         // If we affected 0 rows, this is the first time viewing the node.
         if (!db_affected_rows()) {
           // We must create a new row to store counters for the new node.
           db_query('INSERT INTO {node_counter} (nid, daycount, totalcount, timestamp) VALUES (%d, 0, %d, %d)', $nid, $views, strtotime('today'));
+        }
+        db_query('UPDATE {node_counter_old} SET totalcount = %d WHERE timestamp = %d AND nid = %d', $views, strtotime('today'), $nid);
+        // If we affected 0 rows, this is the first time viewing the node.
+        if (!db_affected_rows()) {
+          // We must create a new row to store counters for the new node.
+          db_query('INSERT INTO {node_counter_old} (nid, daycount, totalcount, timestamp) VALUES (%d, 0, %d, %d)', $nid, $views, strtotime('today'));
         }
       }
     }
