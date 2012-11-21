@@ -36,6 +36,11 @@ $logos: sprite-map("logo/*.png");
           text-decoration: none;
           font-family: 'MerriweatherRegular', serif;
         }
+        .views-field-field-teaser-value{
+          font-size: 0.8em;
+          font-family: Arial;
+          color: #333;
+        }
       }
     }
     ul.lenker{
@@ -43,6 +48,95 @@ $logos: sprite-map("logo/*.png");
         a{
           color: #2c91c5;
           font-size: 1em;
+        }
+      }
+    }
+  }
+  .rammeboks.red{
+    h3{
+      padding: 0px;
+      color: #d71111;
+      border-bottom: 2px solid #d71111;
+      font-size: 0.9em;
+      font-family: Arial;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  .rammeboks.leder{
+    .views-field-field-main-image-fid{
+      float: right;
+      border: 1px solid #dcdcdb;
+      padding: 2px;
+      background: #fff;
+      img{
+        float: left;
+      }
+    }
+    li{
+      padding-top: 1em;
+      border-bottom: 0px;
+      .views-field-title{
+        a{
+          font-size: 1.5em;
+          font-weight: bold;
+          color: #333333;
+        }
+      }
+      .views-field-view-node{
+        a{
+          font-family: Arial;
+          color: #333333;
+          font-weight: bold;
+          background: sprite($logos, mobpilhoy) no-repeat;
+          padding-left: 20px;
+          height: 13px;
+        }
+      }
+    }
+  }
+  .rammeboks.eco{
+    h3{
+      color: #78a21e;
+      font-size: 0.9em;
+      font-family: Arial;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-bottom: 2px solid #78a21e;
+      margin-bottom: 0px;
+    }
+    .view-header{
+      display: none
+    }
+    .pretext{
+      background: #d7e1c2;
+      padding: 5px;
+      color: #333333;
+      font-family: Arial;
+      font-size: 0.8em;
+    }
+    a{
+        font-family: Arial;
+        color: #333333;
+    }
+    li{
+      border-bottom: 0px;
+      .views-field-field-teaser-value{
+          font-family: Arial;
+          color: #333333;
+      }
+      .views-field-title{
+        a{
+          font-size: 1.5em;
+          font-weight: bold;
+        }
+      }
+      .views-field-view-node{
+        a{
+          font-weight: bold;
+          background: sprite($logos, mobpilhoy) no-repeat;
+          padding-left: 20px;
+          height: 13px;
         }
       }
     }
@@ -112,6 +206,24 @@ $logos: sprite-map("logo/*.png");
     border-bottom: 2px solid #c1bfb9;
     background: #f1f2ee;
     float: left;
+    ul{
+      li{
+        .views-field-field-teaser-value{
+          font-size: 1em;
+          font-family: Arial;
+          color: #333;
+        }
+      }
+    }
+  }
+  .rammeboks.eco{
+    ul{
+      li{
+        .views-field-title{
+          padding-top: 0.7em;
+        }
+      }
+    }
   }
 }
 @mixin listeboks{
@@ -302,10 +414,11 @@ $logos: sprite-map("logo/*.png");
   }
   .newslist.sak-2{
     li{
-      border-bottom: 0px;
-    }
-    li.views-row-first{
+      
       border-bottom: 1px solid #DDD;
+    }
+    li.views-row-last{
+      border-bottom: 0px;
     }
     .views-field-field-main-image-fid{
       .field-content{

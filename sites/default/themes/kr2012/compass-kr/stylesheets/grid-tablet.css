@@ -58,4 +58,21 @@
     width: 292px;
     left: 0px;
   }
+  /* line 49, ../sass/grid-tablet.scss */
+  .front-page .seven {
+    float: left;
+    position: relative;
+  }
+  /* line 53, ../sass/grid-tablet.scss */
+  .front-page .seven_one {
+    width: 100%;
+  }
+  /* line 56, ../sass/grid-tablet.scss */
+  .front-page .seven_two {
+    width: 475px;
+  }
+  /* line 59, ../sass/grid-tablet.scss */
+  .front-page .seven_three {
+    width: 292px;
+  }
 }

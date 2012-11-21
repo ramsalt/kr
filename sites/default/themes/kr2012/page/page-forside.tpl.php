@@ -139,6 +139,25 @@
 					</div>	
 				</div>
 			</div><!-- /.grid -->
+			<div class="grid full nomargin">
+				<div class="seven_one_two">
+					<div class="seven seven_one">
+						<div class="seven-inner">
+							<?php print $seven_one; ?>
+						</div>	
+					</div>
+					<div class="seven seven_two">
+						<div class="seven-inner">
+							<?php print $seven_two; ?>
+						</div>	
+					</div>
+				</div>
+				<div class="seven seven_three">
+					<div class="seven-inner">
+						<?php print $seven_three; ?>
+					</div>	
+				</div>
+			</div><!-- /.grid -->
 		</div> <!-- /.inner-container -->
 	</div> <!-- /.container -->
   </div> <!-- /.wrapper -->

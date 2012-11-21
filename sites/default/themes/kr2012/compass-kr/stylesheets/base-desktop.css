@@ -260,60 +260,60 @@
     font-size: 0.8em;
   }
 
-  /* line 155, ../sass/mixins.scss */
+  /* line 267, ../sass/mixins.scss */
   .listeboks h3, .listeboks .item-list h3 {
     margin-bottom: 0px;
   }
-  /* line 159, ../sass/mixins.scss */
+  /* line 271, ../sass/mixins.scss */
   .listeboks ul, .listeboks .item-list ul {
     padding: 0px 3% 15px 3%;
     background: #f1f2ee;
     float: left;
     border-bottom: 2px solid #c1bfb9;
   }
-  /* line 165, ../sass/mixins.scss */
+  /* line 277, ../sass/mixins.scss */
   .listeboks ul li, .listeboks .item-list ul li {
     float: left;
     width: 100%;
     padding: 9px 0px 9px 0px;
     margin: 0px;
   }
-  /* line 170, ../sass/mixins.scss */
+  /* line 282, ../sass/mixins.scss */
   .listeboks ul li a, .listeboks .item-list ul li a {
     color: #333333;
     font-size: 1.2em;
   }
-  /* line 175, ../sass/mixins.scss */
+  /* line 287, ../sass/mixins.scss */
   .listeboks ul li:last-child, .listeboks .item-list ul li:last-child {
     border: none;
     padding-bottom: 0px;
   }
 
-  /* line 378, ../sass/mixins.scss */
+  /* line 491, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul {
     border: none;
     height: auto;
   }
-  /* line 381, ../sass/mixins.scss */
+  /* line 494, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li {
     border: none;
     width: 100%;
     border-bottom: 1px solid #DDD;
   }
-  /* line 386, ../sass/mixins.scss */
+  /* line 499, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-last {
     border-bottom: 0px;
   }
-  /* line 390, ../sass/mixins.scss */
+  /* line 503, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-first .views-field-title {
     padding-top: 0px;
   }
-  /* line 397, ../sass/mixins.scss */
+  /* line 510, ../sass/mixins.scss */
   .block-views .newslist.fire ul, .block-views .newslist.fem ul {
     float: left;
     border-bottom: 1px solid #DDD;
   }
-  /* line 400, ../sass/mixins.scss */
+  /* line 513, ../sass/mixins.scss */
   .block-views .newslist.fire ul li, .block-views .newslist.fem ul li {
     width: 24.8%;
     border-bottom: 0px;
@@ -321,34 +321,34 @@
     margin: 0px;
     padding: 1em 0px 0px 0px;
   }
-  /* line 407, ../sass/mixins.scss */
+  /* line 520, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-field-teaser-value, .block-views .newslist.fem ul li .views-field-field-teaser-value {
     margin: 0px 15px;
   }
-  /* line 410, ../sass/mixins.scss */
+  /* line 523, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-title, .block-views .newslist.fem ul li .views-field-title {
     width: 85%;
     margin: 0px 15px;
   }
-  /* line 414, ../sass/mixins.scss */
+  /* line 527, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-field-main-image-fid, .block-views .newslist.fem ul li .views-field-field-main-image-fid {
     margin: 0px 15px;
   }
-  /* line 416, ../sass/mixins.scss */
+  /* line 529, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-field-main-image-fid img, .block-views .newslist.fem ul li .views-field-field-main-image-fid img {
     width: 100%;
     height: auto;
   }
-  /* line 422, ../sass/mixins.scss */
+  /* line 535, ../sass/mixins.scss */
   .block-views .newslist.fire ul li.views-row-last, .block-views .newslist.fem ul li.views-row-last {
     border: 0px;
   }
-  /* line 428, ../sass/mixins.scss */
+  /* line 541, ../sass/mixins.scss */
   .block-views .newslist.fem .item-list ul li.views-row {
     width: 19.8%;
   }
 
-  /* line 474, ../sass/mixins.scss */
+  /* line 587, ../sass/mixins.scss */
   div .ownsection {
     margin-top: 1em;
     margin-left: 3%;
