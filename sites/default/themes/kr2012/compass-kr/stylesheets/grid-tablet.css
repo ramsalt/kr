@@ -71,7 +71,11 @@
   .front-page .seven_two {
     width: 475px;
   }
-  /* line 59, ../sass/grid-tablet.scss */
+  /* line 58, ../sass/grid-tablet.scss */
+  .front-page .seven_two .seven-inner {
+    margin-right: 20px;
+  }
+  /* line 62, ../sass/grid-tablet.scss */
   .front-page .seven_three {
     width: 292px;
   }

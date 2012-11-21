@@ -77,12 +77,16 @@
     width: 100%;
     position: relative;
   }
-  /* line 68, ../sass/grid-desktop.scss */
+  /* line 69, ../sass/grid-desktop.scss */
+  .front-page .seven_two .seven-inner {
+    margin-right: 20px;
+  }
+  /* line 73, ../sass/grid-desktop.scss */
   .front-page .seven_one_two {
     float: left;
     width: 58%;
   }
-  /* line 72, ../sass/grid-desktop.scss */
+  /* line 77, ../sass/grid-desktop.scss */
   .front-page .seven_three {
     width: 42%;
   }

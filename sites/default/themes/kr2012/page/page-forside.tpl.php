@@ -158,6 +158,13 @@
 					</div>	
 				</div>
 			</div><!-- /.grid -->
+			<div class="grid full nomargin">
+				<div class="eight">
+					<div class="eight-inner">
+						<?php print $eight; ?>
+					</div>	
+				</div>
+			</div><!-- /.grid -->			
 		</div> <!-- /.inner-container -->
 	</div> <!-- /.container -->
   </div> <!-- /.wrapper -->

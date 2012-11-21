@@ -141,6 +141,63 @@ $logos: sprite-map("logo/*.png");
       }
     }
   }
+  .rammeboks.blogger{
+    h3{
+      border-bottom: 2px solid #78a21e;
+      padding: 0px;
+      a{
+        padding: 0px;
+        color: #78a21e;        
+        font-size: 0.7em;
+        font-family: Arial;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+    }
+    .views-field-field-blogg-bilde-fid{
+      float: left;
+      margin-right: 1em;
+      margin-bottom: 0.1em;
+      border: 1px solid #b2afa8;
+      img{
+        width: 50px;
+        height: auto;
+        float: left;
+      }
+    }
+    .views-field-title-1{
+      a{
+        font-family: Arial;
+        color: #333333;
+        font-size: 0.8em;
+        font-weight: bold;
+      }
+    }
+    .views-field-title{
+      a{
+        font-family: Arial;
+        color: #333333;
+        font-size: 0.8em;
+      }
+    }
+    .views-field-body{
+      display: none;
+    }
+    .more-link{
+      a{
+        background: sprite($logos, mobpilhoy) no-repeat;
+        padding-left: 20px;
+        float: left;
+        color: #333333;
+        font-family: Arial;
+        font-size: 0.8em;
+        text-decoration: none;
+        font-weight: bold;
+      } 
+
+    }
+  }
   .kommentar-liste{
     h2{
       color: #78a21e;
@@ -222,6 +279,33 @@ $logos: sprite-map("logo/*.png");
         .views-field-title{
           padding-top: 0.7em;
         }
+      }
+    }
+  }
+  .rammeboks.blogger{
+    .more-link{
+      a{
+        font-size: 1em;
+      }
+    }
+    .views-field-field-blogg-bilde-fid{
+      display: none;
+    }
+  }
+}
+@mixin rammeboks-desktop{
+  .rammeboks.blogger{
+    .views-field-field-blogg-bilde-fid{
+      display: block;
+    }
+    .views-field-title-1{
+      a{
+        font-size: 1em;
+      }
+    }
+    .views-field-title{
+      a{
+        font-size: 1.1em;
       }
     }
   }

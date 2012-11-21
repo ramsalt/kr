@@ -38,6 +38,7 @@ regions[six] = Front: Six
 regions[seven_one] = Front: Seven one ad
 regions[seven_two] = Front: Seven two
 regions[seven_three] = Front: Seven three
+regions[eight] = Front: Eight
 
     ; Layout: Default
     layouts[default][name] = "Default"
@@ -69,3 +70,4 @@ regions[seven_three] = Front: Seven three
     layouts[columns][regions][] = "seven_one"
     layouts[columns][regions][] = "seven_two"
     layouts[columns][regions][] = "seven_three"
+    layouts[columns][regions][] = "eight"

@@ -377,3 +377,13 @@ div {
 
   }
 }
+.layout-mobile{
+  .block-views  .newslist.sak-2.sak-16{
+    .views-field-field-main-image-fid{
+      float: left;
+    }
+    .views-field-field-teaser-value{
+      display: none;
+    }
+  }
+}
