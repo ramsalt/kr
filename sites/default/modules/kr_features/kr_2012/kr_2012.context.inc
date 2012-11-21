@@ -224,6 +224,24 @@ function kr_2012_context_default_contexts() {
           'region' => 'six',
           'weight' => 0,
         ),
+        'views-forside-block_6' => array(
+          'module' => 'views',
+          'delta' => 'forside-block_6',
+          'region' => 'seven_two',
+          'weight' => 0,
+        ),
+        'views-economic_blogg-block_1' => array(
+          'module' => 'views',
+          'delta' => 'economic_blogg-block_1',
+          'region' => 'seven_three',
+          'weight' => 0,
+        ),
+        'views-lederlogg-block_1' => array(
+          'module' => 'views',
+          'delta' => 'lederlogg-block_1',
+          'region' => 'seven_three',
+          'weight' => 1,
+        ),
       ),
       'layout' => 'columns',
     ),
@@ -241,6 +259,9 @@ function kr_2012_context_default_contexts() {
         'class' => '',
       ),
       'footer' => array(
+        'class' => '',
+      ),
+      'toparea' => array(
         'class' => '',
       ),
       'one_one' => array(
@@ -306,6 +327,36 @@ function kr_2012_context_default_contexts() {
       ),
       'six' => array(
         'class' => '',
+        'blocks' => array(
+          'views-forside-block_5' => array(
+            'class' => '',
+          ),
+        ),
+      ),
+      'seven_one' => array(
+        'class' => '',
+      ),
+      'seven_two' => array(
+        'class' => '',
+        'blocks' => array(
+          'views-forside-block_6' => array(
+            'class' => '',
+          ),
+        ),
+      ),
+      'seven_three' => array(
+        'class' => '',
+        'blocks' => array(
+          'views-economic_blogg-block_1' => array(
+            'class' => 'rammeboks eco',
+          ),
+          'views-lederlogg-block_1' => array(
+            'class' => 'rammeboks red leder',
+          ),
+          'views-Blogger-block_2' => array(
+            'class' => 'rammeboks blogg',
+          ),
+        ),
       ),
     ),
   );

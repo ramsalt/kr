@@ -36,6 +36,20 @@ function kr_2012_imagecache_default_presets() {
         ),
       ),
     ),
+    'v2_forside_b120' => array(
+      'presetname' => 'v2_forside_b120',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale_and_crop',
+          'data' => array(
+            'width' => '120',
+            'height' => '120',
+          ),
+        ),
+      ),
+    ),
     'v2_forside_b170' => array(
       'presetname' => 'v2_forside_b170',
       'actions' => array(
