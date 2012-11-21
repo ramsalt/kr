@@ -242,6 +242,18 @@ function kr_2012_context_default_contexts() {
           'region' => 'seven_three',
           'weight' => 1,
         ),
+        'views-Blogger-block_2' => array(
+          'module' => 'views',
+          'delta' => 'Blogger-block_2',
+          'region' => 'seven_three',
+          'weight' => 2,
+        ),
+        'views-forside-block_7' => array(
+          'module' => 'views',
+          'delta' => 'forside-block_7',
+          'region' => 'eight',
+          'weight' => 0,
+        ),
       ),
       'layout' => 'columns',
     ),
@@ -354,9 +366,12 @@ function kr_2012_context_default_contexts() {
             'class' => 'rammeboks red leder',
           ),
           'views-Blogger-block_2' => array(
-            'class' => 'rammeboks blogg',
+            'class' => 'rammeboks blogger',
           ),
         ),
+      ),
+      'eight' => array(
+        'class' => '',
       ),
     ),
   );
