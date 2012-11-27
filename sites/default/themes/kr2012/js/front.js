@@ -34,6 +34,7 @@
 		}
 	}
 	$(document).ready(function() {
+
 		$('body').bind('layoutset', function(event, layout) {
 			equal_height('.newslist.sak-4 li.views-row');
 			

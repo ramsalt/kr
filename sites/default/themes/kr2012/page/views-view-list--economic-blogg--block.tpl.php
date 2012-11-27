@@ -13,7 +13,7 @@
   <?php if (!empty($title)) : ?>
     <h3><?php print $title; ?></h3>
   <?php endif; ?>
-  <div class="pretext"><?php print $view->display['default']->display_options['header']; ?></div>
+  <div class="pretext"><?php print $view->display['default']->display_options['header']['text']['content']; ?></div>
   <<?php print $options['type']; ?>>
     <?php foreach ($rows as $id => $row): ?>
       <li class="<?php print $classes[$id]; ?>"><?php print $row; ?></li>

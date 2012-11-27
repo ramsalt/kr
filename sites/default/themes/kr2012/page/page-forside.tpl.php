@@ -164,6 +164,20 @@
 						<?php print $eight; ?>
 					</div>	
 				</div>
+			</div><!-- /.grid -->		
+			<div class="grid full nomargin">
+				<div class="nine">
+					<div class="nine-inner">
+						<?php print $nine; ?>
+					</div>	
+				</div>
+			</div><!-- /.grid -->		
+			<div class="grid full nomargin">
+				<div class="ten">
+					<div class="ten-inner">
+						<?php print $ten; ?>
+					</div>	
+				</div>
 			</div><!-- /.grid -->			
 		</div> <!-- /.inner-container -->
 	</div> <!-- /.container -->
