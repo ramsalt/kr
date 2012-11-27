@@ -113,6 +113,6 @@ function kr_2012_imagecache_default_presets() {
  */
 function kr_2012_views_api() {
   return array(
-    'api' => '2',
+    'api' => '3.0',
   );
 }

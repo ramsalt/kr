@@ -254,6 +254,12 @@ function kr_2012_context_default_contexts() {
           'region' => 'eight',
           'weight' => 0,
         ),
+        'views-scroll_bilder-bilde_scroller' => array(
+          'module' => 'views',
+          'delta' => 'scroll_bilder-bilde_scroller',
+          'region' => 'nine',
+          'weight' => 0,
+        ),
       ),
       'layout' => 'columns',
     ),
@@ -371,6 +377,17 @@ function kr_2012_context_default_contexts() {
         ),
       ),
       'eight' => array(
+        'class' => '',
+        'blocks' => array(
+          'views-forside-block_7' => array(
+            'class' => '',
+          ),
+        ),
+      ),
+      'nine' => array(
+        'class' => '',
+      ),
+      'ten' => array(
         'class' => '',
       ),
     ),
