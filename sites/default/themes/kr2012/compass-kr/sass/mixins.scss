@@ -753,3 +753,106 @@ $logos: sprite-map("logo/*.png");
     }
   }
 }
+@mixin premium-msg-mob{
+  .nopremium-message{
+    background: #eff3f6;
+    @include border-radius(4px, 4px);
+    float: left;
+    color: #2d2d2d;
+    font-family: Arial;
+    margin: 10px 0px;
+    .msg{
+     padding: 20px;
+     p{
+       display: inline;
+     }
+    }
+    form{
+      padding: 20px;
+      float: left;
+    }
+    div.hr{
+      clear: both;
+      width: 100%;
+      border-top: 1px solid #c3d2dc;
+      border-bottom: 1px solid #ffffff;
+  
+    }
+    a.registerhere{
+      span{
+        background: sprite($logos, mobpilhoy) no-repeat;
+        padding-left: 20px;
+        float: left;
+      }
+      float: right;
+      color: #333333;
+      font-family: Arial;
+      font-size: 0.8em;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .form-item{
+      label{
+        text-align: left;
+        font-size: 0.7em;
+      }
+      input{
+        height: 27px;
+        width: 160px;
+        @include border-radius(4px, 4px);
+        font-size: 1.2em;
+      }
+      float: left;
+      margin: 0px;
+    }
+    .form-submit{
+      clear: both;
+      float: left;
+      margin-top: 20px;
+      background: #3090c0;
+      @include border-radius(4px, 4px);
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      color: #fff;
+      border-bottom: 2px solid #1d5774;
+      height: 27px;
+      width: 65px;
+    }
+    .item-list{
+      float: left;
+      clear: both;
+      ul{
+        margin: 0px;
+        li{
+          margin: 0px;
+          list-style: none;
+        }
+        li.first{
+          display: none;
+        }
+        li.last{
+          a{
+            color: #3090c0;
+            text-decoration: none;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+  }
+}
+@mixin premium-msg-desktop{
+  .nopremium-message{
+    .form-item{
+      
+    }
+    #edit-pass-wrapper{
+      margin: 0px 10px;
+    }
+    .form-submit{
+      clear: none;
+    }
+  }
+}

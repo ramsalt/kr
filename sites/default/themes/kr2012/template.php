@@ -62,14 +62,14 @@ function kr2012_preprocess_node(&$vars){
 	}
   elseif($vars['type']=='bildegalleri'){
 
-    drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery.min.js');
-    drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery-noconflict.js');
-    drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery.flexslider.js', 'theme', 'header');
-    drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/jquery.colorbox.js', 'theme', 'header');    
-    drupal_add_css(drupal_get_path('theme', 'kr2011').'/flex/flexslider.css');
-    drupal_add_css(drupal_get_path('theme', 'kr2011').'/flex/kr-flex.css');
-    drupal_add_css(drupal_get_path('theme', 'kr2011').'/flex/colorbox.css');
-    drupal_add_js(drupal_get_path('theme', 'kr2011').'/flex/bilde.js', 'theme', 'header');
+    drupal_add_js(drupal_get_path('theme', 'kr2012').'/flex/jquery.min.js');
+    drupal_add_js(drupal_get_path('theme', 'kr2012').'/flex/jquery-noconflict.js');
+    drupal_add_js(drupal_get_path('theme', 'kr2012').'/flex/jquery.flexslider.js', 'theme', 'header');
+    drupal_add_js(drupal_get_path('theme', 'kr2012').'/flex/jquery.colorbox.js', 'theme', 'header');    
+    drupal_add_css(drupal_get_path('theme', 'kr2012').'/flex/flexslider.css');
+    drupal_add_css(drupal_get_path('theme', 'kr2012').'/flex/kr-flex.css');
+    drupal_add_css(drupal_get_path('theme', 'kr2012').'/flex/colorbox.css');
+    drupal_add_js(drupal_get_path('theme', 'kr2012').'/flex/bilde.js', 'theme', 'header');
     
     $hidden = '<div class="colorbox-images-container">';
     $html = '<div class="flexslider">
@@ -124,5 +124,28 @@ function kr2012_preprocess_page(&$vars){
 	}
 	$byline = kr2012_byline($vars['node']);
 	$vars['byline'] = $byline;
+}
+function kr2012_nopremium_message($node){
+	global $user;
+
+	  // Check if this is a free account disabled or has just authenticated role
+	if (isset($user->roles[2]) && $user->sms_user['status'] != 2) {
+		$block = module_invoke('boxes', 'block', 'view', 'premium_box_non_authenticated');
+	} else if (isset($user->roles[12]) || !(count($user->roles) && isset($user->roles[1])) ) {
+        $block = module_invoke('boxes', 'block', 'view', 'premium_box_disabled_user');
+	} else {
+		$html ='<div class="msg">';
+	    $html.=check_markup(t(nopremium_get_message($node->type)));
+		//$html .= 'Logg inn | ';
+		$html .= l('<span>Registrere deg her</span>', 'user/register', array('html' => true, 'attributes' => array('class' => 'registerhere'),'query' => array('destination' => 'node/'.$node->nid)));
+		$html .='</div>';
+		$html .= '<div class="hr"></div>';
+		// $html .= l(t('Login'), 'user',array('query' => array('destination' => 'node/'.$node->nid))).' | ';
+		//$html .= l(t('Request new password'), 'user/password',array('query' => array('destination' => 'node/'.$node->nid)));
+		$block = module_invoke('user', 'block', 'view', '0');
+	}
+  
+  $html .= $block['content'];
+  return $html;
 }
 ?>

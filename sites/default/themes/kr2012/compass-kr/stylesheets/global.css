@@ -1249,23 +1249,190 @@ div .seksjonsside .views-separator {
   width: 100%;
   clear: both;
 }
+/* line 757, ../sass/mixins.scss */
+div .nopremium-message {
+  background: #eff3f6;
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px / 4px;
+  border-radius: 4px / 4px;
+  float: left;
+  color: #2d2d2d;
+  font-family: Arial;
+  margin: 10px 0px;
+}
+/* line 764, ../sass/mixins.scss */
+div .nopremium-message .msg {
+  padding: 20px;
+}
+/* line 766, ../sass/mixins.scss */
+div .nopremium-message .msg p {
+  display: inline;
+}
+/* line 770, ../sass/mixins.scss */
+div .nopremium-message form {
+  padding: 20px;
+  float: left;
+}
+/* line 774, ../sass/mixins.scss */
+div .nopremium-message div.hr {
+  clear: both;
+  width: 100%;
+  border-top: 1px solid #c3d2dc;
+  border-bottom: 1px solid #ffffff;
+}
+/* line 781, ../sass/mixins.scss */
+div .nopremium-message a.registerhere {
+  float: right;
+  color: #333333;
+  font-family: Arial;
+  font-size: 0.8em;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* line 782, ../sass/mixins.scss */
+div .nopremium-message a.registerhere span {
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sd7831aea6f.png') 0 -319px no-repeat;
+  padding-left: 20px;
+  float: left;
+}
+/* line 794, ../sass/mixins.scss */
+div .nopremium-message .form-item {
+  float: left;
+  margin: 0px;
+}
+/* line 795, ../sass/mixins.scss */
+div .nopremium-message .form-item label {
+  text-align: left;
+  font-size: 0.7em;
+}
+/* line 799, ../sass/mixins.scss */
+div .nopremium-message .form-item input {
+  height: 27px;
+  width: 160px;
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px / 4px;
+  border-radius: 4px / 4px;
+  font-size: 1.2em;
+}
+/* line 808, ../sass/mixins.scss */
+div .nopremium-message .form-submit {
+  clear: both;
+  float: left;
+  margin-top: 20px;
+  background: #3090c0;
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px / 4px;
+  border-radius: 4px / 4px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: #fff;
+  border-bottom: 2px solid #1d5774;
+  height: 27px;
+  width: 65px;
+}
+/* line 822, ../sass/mixins.scss */
+div .nopremium-message .item-list {
+  float: left;
+  clear: both;
+}
+/* line 825, ../sass/mixins.scss */
+div .nopremium-message .item-list ul {
+  margin: 0px;
+}
+/* line 827, ../sass/mixins.scss */
+div .nopremium-message .item-list ul li {
+  margin: 0px;
+  list-style: none;
+}
+/* line 831, ../sass/mixins.scss */
+div .nopremium-message .item-list ul li.first {
+  display: none;
+}
+/* line 835, ../sass/mixins.scss */
+div .nopremium-message .item-list ul li.last a {
+  color: #3090c0;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-/* line 406, ../sass/base.scss */
+/* line 407, ../sass/base.scss */
 .block {
   margin-bottom: 15px;
 }
-/* line 410, ../sass/base.scss */
+/* line 411, ../sass/base.scss */
 .block .siste-saker .views-field-field-main-image-fid {
   display: none;
 }
 
-/* line 420, ../sass/base.scss */
+/* line 421, ../sass/base.scss */
 .layout-mobile .block-views .newslist.sak-2.sak-16 .views-field-field-main-image-fid {
   float: left;
 }
-/* line 423, ../sass/base.scss */
+/* line 424, ../sass/base.scss */
 .layout-mobile .block-views .newslist.sak-2.sak-16 .views-field-field-teaser-value {
   display: none;
+}
+
+/* line 429, ../sass/base.scss */
+.node-content {
+  float: left;
+  width: 100%;
+}
+
+/* line 435, ../sass/base.scss */
+.galleriside ul li {
+  float: left;
+  margin: 0px 4px 8px 0px;
+  padding: 0;
+  width: 245px;
+  height: 170px;
+  position: relative;
+  list-style: none;
+}
+/* line 443, ../sass/base.scss */
+.galleriside ul li .views-field-created {
+  color: #EEE;
+}
+/* line 446, ../sass/base.scss */
+.galleriside ul li .views-field-created {
+  background: none repeat scroll 0 0 #111;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 600;
+}
+/* line 453, ../sass/base.scss */
+.galleriside ul li .views-field-title {
+  background: none repeat scroll 0 0 #111;
+  bottom: 0;
+  left: 0;
+  opacity: 0.8;
+  padding: 4px 2px 3px 4px;
+  position: absolute;
+  right: 0;
+  z-index: 300;
+  text-decoration: none;
+}
+/* line 464, ../sass/base.scss */
+.galleriside ul li .views-field-title a {
+  color: #EEE;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+/* line 470, ../sass/base.scss */
+.galleriside ul li .views-field-field-galleri-bilde-fid a {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+}
+/* line 477, ../sass/base.scss */
+.galleriside ul li .views-field-field-galleri-bilde-fid a img {
+  padding: 0px;
+  margin: 0px;
 }
 
 @media all and (min-width: 740px) {
@@ -1800,6 +1967,14 @@ div .seksjonsside .views-separator {
     color: #333;
     text-decoration: none;
   }
+  /* line 851, ../sass/mixins.scss */
+  div .nopremium-message #edit-pass-wrapper {
+    margin: 0px 10px;
+  }
+  /* line 854, ../sass/mixins.scss */
+  div .nopremium-message .form-submit {
+    clear: none;
+  }
 
   /* line 318, ../sass/mixins.scss */
   .rammeboks.blogger .views-field-field-blogg-bilde-fid {
@@ -1814,34 +1989,34 @@ div .seksjonsside .views-separator {
     font-size: 1.1em;
   }
 
-  /* line 255, ../sass/base-desktop.scss */
+  /* line 256, ../sass/base-desktop.scss */
   .one.one_one .one-inner {
     border-right: 1px solid #DDD;
     height: 100%;
   }
 
-  /* line 259, ../sass/base-desktop.scss */
+  /* line 260, ../sass/base-desktop.scss */
   .one.one_two .one-inner {
     margin-right: 1em;
   }
 
-  /* line 262, ../sass/base-desktop.scss */
+  /* line 263, ../sass/base-desktop.scss */
   .deskbordertop {
     border-top: 1px solid #dddddd;
   }
 
-  /* line 267, ../sass/base-desktop.scss */
+  /* line 268, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-field-main-image-fid {
     display: inline;
     float: left;
     margin-right: 10px;
   }
-  /* line 271, ../sass/base-desktop.scss */
+  /* line 272, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-field-main-image-fid .field-content {
     width: 78px;
     float: left;
   }
-  /* line 276, ../sass/base-desktop.scss */
+  /* line 277, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-title {
     padding: 0px;
     margin-top: 6px;

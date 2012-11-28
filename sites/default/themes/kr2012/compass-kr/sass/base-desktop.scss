@@ -250,6 +250,7 @@ $logos: sprite-map("logo/*.png");
   div{
     @include ownsection-desktop;
     @include seksjonsside-desktop;
+    @include premium-msg-desktop;
   }
   @include rammeboks-desktop;
   .one.one_one .one-inner{

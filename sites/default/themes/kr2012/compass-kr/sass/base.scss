@@ -401,6 +401,7 @@ body.admin-menu{
 div {
   @include ownsection-mob;
   @include seksjonsside-mob;
+  @include premium-msg-mob;
 }
 
 .block {
@@ -422,6 +423,62 @@ div {
     }
     .views-field-field-teaser-value{
       display: none;
+    }
+  }
+}
+.node-content{
+  float: left;
+  width: 100%;
+}
+.galleriside{ 
+  ul{
+    li {
+      float: left;
+      margin: 0px 4px 8px 0px;
+      padding: 0;
+      width: 245px;
+      height: 170px;
+      position: relative;
+      list-style: none;
+      .views-field-created{
+        color: #EEE;
+      }
+      .views-field-created {
+        background: none repeat scroll 0 0 #111;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 600;
+      }
+      .views-field-title {
+        background: none repeat scroll 0 0 #111;
+        bottom: 0;
+        
+        left: 0;
+        opacity: 0.8;
+        padding: 4px 2px 3px 4px;
+        position: absolute;
+        right: 0;
+        z-index: 300;
+        text-decoration: none;
+        a{
+          color: #EEE;
+          text-decoration: none;
+          font-size: 0.8em;
+        }
+      }
+      .views-field-field-galleri-bilde-fid a {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
+        img {
+          padding: 0px;
+          margin: 0px;
+        }
+      }
     }
   }
 }
