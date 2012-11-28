@@ -9,22 +9,21 @@
  * @ingroup page
  */
 ?>
-
     </div> <!-- /#wrapper -->
- 
-        <div class="clear"></div>	
-         	
-        <div id="footer" class="clearfix clear">
-        <div id="footer-links-wrapper">
-          <div id="footer-menu-primary"><?php print menu_tree('menu-footer-primary'); ?></div>
-          <div id="footer-feed-icon"><a href="<?php print url('rss/articles/all'); ?>"><img src="/misc/feed.png" width="16" height="16" alt="<?php print t('Get the main site RSS feed'); ?>"/></a></div>
-          <div id="footer-menu-secondary"><?php print menu_tree('menu-footer-secondary'); ?></div>
-        </div><!--/footer-links-wrapper-->
-          
-          <?php print $footer_message . $footer ?>          
-        </div> <!-- /#footer -->
- 
   </div> <!-- /#outer-wrapper -->
+        <div class="clear"></div>	
+        <div id="footer-wrapper" class="clearfix">
+        	<div id="footer">
+        		<div id="footer-inner">
+        			<div class="container container-16">
+        				<div class="grid-16">
+          					<?php print $footer_message . $footer ?>
+          				</div>
+          			</div>
+          		</div>
+          </div><!-- /#footer -->          
+        </div> 
+  
   <!-- /layout -->
   <?php print $closure ?>
 </body>

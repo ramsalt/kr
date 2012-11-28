@@ -91,6 +91,14 @@ body.admin-menu{
     text-transform: Uppercase;
   }
 }
+#fb-root {
+  display: none;
+}
+
+/* To fill the container and nothing else */
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+  width: 100% !important;
+}
 #logo-area{
   @include background-image(linear-gradient(top, #225a84, #083e6b));
   background-color: #225A84;
@@ -268,6 +276,28 @@ body.admin-menu{
     border-bottom: 1px solid #c1bfb9;
   }
 }
+#footer-wrapper{
+  border-top: 1px solid #c1bfb9;
+  background: #f1f2ee;
+  #footer{
+    border-top: 1px solid #d2d1cb;
+    #footer-inner{
+      border-top: 1px solid #e0e0dc;
+      font-family: Helvetica;
+      color: #333333;
+      font-size: 0.8em;
+      a{
+        font-family: Helvetica;
+        text-decoration: none;  
+      }
+      .container{
+        .grid{
+          
+        }
+      }
+    }
+  }
+}
 .ingress{
   font-family: Arial;
   font-weight: bold;
@@ -355,7 +385,13 @@ body.admin-menu{
 }
 
 @include rammeboks-mob;
-
+.front{
+  #block-kr_most_viewed-0{
+    h2{
+      display: none;
+    }
+  }
+}
 .listeboks{
   @include listeboks;
 }

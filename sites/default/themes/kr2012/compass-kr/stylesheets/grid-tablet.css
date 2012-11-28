@@ -79,4 +79,20 @@
   .front-page .seven_three {
     width: 292px;
   }
+  /* line 65, ../sass/grid-tablet.scss */
+  .front-page .ten.ten_one {
+    width: 48%;
+    margin-right: 4%;
+    float: left;
+  }
+  /* line 70, ../sass/grid-tablet.scss */
+  .front-page .ten.ten_two {
+    width: 48%;
+    float: left;
+    display: block;
+  }
+  /* line 75, ../sass/grid-tablet.scss */
+  .front-page .ten.ten_three {
+    display: none;
+  }
 }

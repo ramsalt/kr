@@ -63,6 +63,26 @@ $logos: sprite-map("logo/*.png");
       text-transform: uppercase;
     }
   }
+  .rammeboks.quiz{
+    .views-field-title{
+      a{
+        color: #d71111;
+        text-decoration: none;
+      }
+    }
+    .views-field-view-node{
+      a{
+        background: sprite($logos, mobpilhoy) no-repeat;
+        padding-left: 20px;
+        float: left;
+        color: #333333;
+        font-family: Arial;
+        font-size: 0.8em;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+  }
   .rammeboks.leder{
     .views-field-field-main-image-fid{
       float: right;

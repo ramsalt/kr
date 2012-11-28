@@ -90,4 +90,23 @@
   .front-page .seven_three {
     width: 42%;
   }
+  /* line 80, ../sass/grid-desktop.scss */
+  .front-page .ten {
+    margin: 0px 1%;
+    width: 31%;
+  }
+  /* line 84, ../sass/grid-desktop.scss */
+  .front-page .ten.ten_one {
+    float: left;
+  }
+  /* line 87, ../sass/grid-desktop.scss */
+  .front-page .ten.ten_two {
+    float: left;
+    display: block;
+  }
+  /* line 91, ../sass/grid-desktop.scss */
+  .front-page .ten.ten_three {
+    float: left;
+    display: block;
+  }
 }

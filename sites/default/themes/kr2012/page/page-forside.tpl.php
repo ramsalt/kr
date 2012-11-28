@@ -173,11 +173,21 @@
 				</div>
 			</div><!-- /.grid -->		
 			<div class="grid full nomargin">
-				<div class="ten">
+				<div class="ten ten_one">
 					<div class="ten-inner">
-						<?php print $ten; ?>
+						<?php print $ten_one; ?>
 					</div>	
 				</div>
+				<div class="ten ten_two">
+					<div class="ten-inner">
+						<?php print $ten_two; ?>
+					</div>	
+				</div>
+				<div class="ten ten_three">
+					<div class="ten-inner">
+						<?php print $ten_three; ?>
+					</div>	
+				</div>								
 			</div><!-- /.grid -->			
 		</div> <!-- /.inner-container -->
 	</div> <!-- /.container -->

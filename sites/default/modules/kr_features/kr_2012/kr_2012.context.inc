@@ -260,6 +260,24 @@ function kr_2012_context_default_contexts() {
           'region' => 'nine',
           'weight' => 0,
         ),
+        'views-kr_quizen-block_1' => array(
+          'module' => 'views',
+          'delta' => 'kr_quizen-block_1',
+          'region' => 'ten_one',
+          'weight' => 0,
+        ),
+        'kr_most_viewed-0' => array(
+          'module' => 'kr_most_viewed',
+          'delta' => 0,
+          'region' => 'ten_two',
+          'weight' => 0,
+        ),
+        'block-7' => array(
+          'module' => 'block',
+          'delta' => 7,
+          'region' => 'ten_three',
+          'weight' => 0,
+        ),
       ),
       'layout' => 'columns',
     ),
@@ -386,9 +404,38 @@ function kr_2012_context_default_contexts() {
       ),
       'nine' => array(
         'class' => '',
+        'blocks' => array(
+          'views-scroll_bilder-bilde_scroller' => array(
+            'class' => '',
+          ),
+        ),
       ),
-      'ten' => array(
+      'ten_one' => array(
         'class' => '',
+        'blocks' => array(
+          'views-kr_quizen-block_1' => array(
+            'class' => 'rammeboks red quiz',
+          ),
+        ),
+      ),
+      'ten_two' => array(
+        'class' => '',
+        'blocks' => array(
+          'kr_most_viewed-0' => array(
+            'class' => 'rammeboks red',
+          ),
+        ),
+      ),
+      'ten_three' => array(
+        'class' => '',
+        'blocks' => array(
+          'block-7' => array(
+            'class' => 'rammeboks red',
+          ),
+          'fb_social-activityfeed' => array(
+            'class' => '',
+          ),
+        ),
       ),
     ),
   );

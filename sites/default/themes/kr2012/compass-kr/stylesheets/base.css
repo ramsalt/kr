@@ -94,7 +94,7 @@ body.admin-menu {
 }
 /* line 74, ../sass/base.scss */
 #login-area .wrapper .inner #search-content a span.icon {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -291px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sd7831aea6f.png') 0 -351px no-repeat;
   width: 12px;
   height: 13px;
   margin-left: 4px;
@@ -110,6 +110,17 @@ body.admin-menu {
 }
 
 /* line 94, ../sass/base.scss */
+#fb-root {
+  display: none;
+}
+
+/* To fill the container and nothing else */
+/* line 99, ../sass/base.scss */
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+  width: 100% !important;
+}
+
+/* line 102, ../sass/base.scss */
 #logo-area {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #225a84), color-stop(100%, #083e6b));
   background-image: -webkit-linear-gradient(top, #225a84, #083e6b);
@@ -120,22 +131,22 @@ body.admin-menu {
   border-top: 1px solid #073e6a;
   border-bottom: 1px solid #174a73;
 }
-/* line 99, ../sass/base.scss */
+/* line 107, ../sass/base.scss */
 #logo-area .wrapper {
   border-top: 1px solid #34668f;
 }
-/* line 102, ../sass/base.scss */
+/* line 110, ../sass/base.scss */
 #logo-area .wrapper .container .grid {
   width: 320px;
   margin: 0px;
 }
-/* line 107, ../sass/base.scss */
+/* line 115, ../sass/base.scss */
 #logo-area .wrapper #logo {
   margin-left: 15px;
   height: 62px;
   float: left;
 }
-/* line 111, ../sass/base.scss */
+/* line 119, ../sass/base.scss */
 #logo-area .wrapper #logo a {
   text-indent: -9999px;
   display: block;
@@ -145,36 +156,36 @@ body.admin-menu {
   height: 28px;
   width: 220px;
 }
-/* line 119, ../sass/base.scss */
+/* line 127, ../sass/base.scss */
 #logo-area .wrapper #logo a span {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -60px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sd7831aea6f.png') 0 -60px no-repeat;
   width: 219px;
   height: 23px;
   float: left;
 }
-/* line 128, ../sass/base.scss */
+/* line 136, ../sass/base.scss */
 #logo-area #nav-button {
   margin-right: 15px;
   float: right;
 }
-/* line 131, ../sass/base.scss */
+/* line 139, ../sass/base.scss */
 #logo-area #nav-button a {
   float: left;
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -164px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sd7831aea6f.png') 0 -164px no-repeat;
   width: 38px;
   height: 39px;
   text-indent: -9999px;
   margin: 10px 0px 0px 0px;
 }
-/* line 141, ../sass/base.scss */
+/* line 149, ../sass/base.scss */
 #logo-area #nav-button.open a {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -125px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sd7831aea6f.png') 0 -125px no-repeat;
 }
-/* line 145, ../sass/base.scss */
+/* line 153, ../sass/base.scss */
 #logo-area #nav.open {
   display: block;
 }
-/* line 148, ../sass/base.scss */
+/* line 156, ../sass/base.scss */
 #logo-area #nav {
   float: left;
   display: none;
@@ -183,18 +194,18 @@ body.admin-menu {
   margin: 0px;
   padding: 0px;
 }
-/* line 155, ../sass/base.scss */
+/* line 163, ../sass/base.scss */
 #logo-area #nav ul {
   background: transparent;
 }
-/* line 157, ../sass/base.scss */
+/* line 165, ../sass/base.scss */
 #logo-area #nav ul li {
   border-top: 1px solid #6e8697;
   padding: 0px;
   width: 100%;
   clear: both;
 }
-/* line 162, ../sass/base.scss */
+/* line 170, ../sass/base.scss */
 #logo-area #nav ul li a {
   font-size: 0.85em;
   padding: 15px;
@@ -205,30 +216,30 @@ body.admin-menu {
   float: left;
   width: 290px;
 }
-/* line 171, ../sass/base.scss */
+/* line 179, ../sass/base.scss */
 #logo-area #nav ul li a span {
   float: left;
 }
-/* line 175, ../sass/base.scss */
+/* line 183, ../sass/base.scss */
 #logo-area #nav ul li a:hover {
   background: transparent;
 }
-/* line 179, ../sass/base.scss */
+/* line 187, ../sass/base.scss */
 #logo-area #nav ul li.on {
   background: transparent;
 }
-/* line 183, ../sass/base.scss */
+/* line 191, ../sass/base.scss */
 #logo-area #nav ul li.multilevel.open ul {
   display: block;
 }
-/* line 189, ../sass/base.scss */
+/* line 197, ../sass/base.scss */
 #logo-area #nav ul li.multilevel a span.level {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -304px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sd7831aea6f.png') 0 -364px no-repeat;
   width: 7px;
   height: 7px;
   margin: 3px 0px 0px 10px;
 }
-/* line 196, ../sass/base.scss */
+/* line 204, ../sass/base.scss */
 #logo-area #nav ul li.multilevel ul {
   border-left: 30px solid #0F3554;
   position: relative;
@@ -239,56 +250,56 @@ body.admin-menu {
   height: auto;
   top: 0px;
 }
-/* line 205, ../sass/base.scss */
+/* line 213, ../sass/base.scss */
 #logo-area #nav ul li.multilevel ul li {
   width: auto;
   float: left;
 }
-/* line 208, ../sass/base.scss */
+/* line 216, ../sass/base.scss */
 #logo-area #nav ul li.multilevel ul li a {
   width: 260px;
   font-weight: normal;
   text-transform: none;
 }
-/* line 217, ../sass/base.scss */
+/* line 225, ../sass/base.scss */
 #logo-area #nav ul li:hover a {
   background: transparent;
 }
 
-/* line 224, ../sass/base.scss */
+/* line 232, ../sass/base.scss */
 #pre-area {
   border-top: 1px solid #a3a19b;
   border-bottom: 1px solid #c1bfb9;
   height: 40px;
   background: #f1f2ee;
 }
-/* line 229, ../sass/base.scss */
+/* line 237, ../sass/base.scss */
 #pre-area .wrapper {
   border-top: 1px solid #cac9c6;
   background: #f1f2ee;
 }
 
-/* line 244, ../sass/base.scss */
+/* line 252, ../sass/base.scss */
 #content-area .wrapper .container .inner-container {
   padding-top: 2%;
 }
 
-/* line 251, ../sass/base.scss */
+/* line 259, ../sass/base.scss */
 .view-bilde-slider-node .views-slideshow-controls-bottom {
   display: none;
 }
-/* line 254, ../sass/base.scss */
+/* line 262, ../sass/base.scss */
 .view-bilde-slider-node .views-field-field-main-image-fid {
   float: left;
   width: 100%;
   height: auto;
 }
-/* line 258, ../sass/base.scss */
+/* line 266, ../sass/base.scss */
 .view-bilde-slider-node .views-field-field-main-image-fid img {
   width: 100%;
   height: auto;
 }
-/* line 263, ../sass/base.scss */
+/* line 271, ../sass/base.scss */
 .view-bilde-slider-node .views-field-field-main-image-data {
   font-family: Arial;
   font-size: 0.8em;
@@ -297,7 +308,29 @@ body.admin-menu {
   border-bottom: 1px solid #c1bfb9;
 }
 
-/* line 271, ../sass/base.scss */
+/* line 279, ../sass/base.scss */
+#footer-wrapper {
+  border-top: 1px solid #c1bfb9;
+  background: #f1f2ee;
+}
+/* line 282, ../sass/base.scss */
+#footer-wrapper #footer {
+  border-top: 1px solid #d2d1cb;
+}
+/* line 284, ../sass/base.scss */
+#footer-wrapper #footer #footer-inner {
+  border-top: 1px solid #e0e0dc;
+  font-family: Helvetica;
+  color: #333333;
+  font-size: 0.8em;
+}
+/* line 289, ../sass/base.scss */
+#footer-wrapper #footer #footer-inner a {
+  font-family: Helvetica;
+  text-decoration: none;
+}
+
+/* line 301, ../sass/base.scss */
 .ingress {
   font-family: Arial;
   font-weight: bold;
@@ -306,7 +339,7 @@ body.admin-menu {
   margin: 15px 0px;
 }
 
-/* line 278, ../sass/base.scss */
+/* line 308, ../sass/base.scss */
 .byline {
   font-family: Arial;
   font-size: 0.8em;
@@ -317,27 +350,27 @@ body.admin-menu {
   float: left;
   width: 100%;
 }
-/* line 290, ../sass/base.scss */
+/* line 320, ../sass/base.scss */
 .byline .forfatter {
   float: left;
   font-weight: bold;
   margin-right: 5px;
 }
-/* line 295, ../sass/base.scss */
+/* line 325, ../sass/base.scss */
 .byline .created {
   float: left;
 }
-/* line 298, ../sass/base.scss */
+/* line 328, ../sass/base.scss */
 .byline .updated {
   clear: both;
 }
-/* line 301, ../sass/base.scss */
+/* line 331, ../sass/base.scss */
 .byline a {
   color: #333333;
   text-decoration: none;
 }
 
-/* line 306, ../sass/base.scss */
+/* line 336, ../sass/base.scss */
 .fakta-mobil {
   background: #f1f2ee;
   border-bottom: 2px solid #c1bfb9;
@@ -346,7 +379,7 @@ body.admin-menu {
   border-right: 1px solid #d9d9d9;
   margin: 10px 0px 20px 0px;
 }
-/* line 313, ../sass/base.scss */
+/* line 343, ../sass/base.scss */
 .fakta-mobil .faktatittel a {
   color: #d71010;
   font-family: Arial;
@@ -355,37 +388,37 @@ body.admin-menu {
   display: block;
   padding: 7px;
 }
-/* line 320, ../sass/base.scss */
+/* line 350, ../sass/base.scss */
 .fakta-mobil .faktatittel a .icon {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -241px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sd7831aea6f.png') 0 -301px no-repeat;
   width: 19px;
   height: 18px;
   float: right;
 }
-/* line 328, ../sass/base.scss */
+/* line 358, ../sass/base.scss */
 .fakta-mobil .innhold {
   padding: 7px;
   display: none;
 }
 
-/* line 335, ../sass/base.scss */
+/* line 365, ../sass/base.scss */
 .fakta-mobil.open .faktatittel a .icon {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -223px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sd7831aea6f.png') 0 -283px no-repeat;
 }
-/* line 339, ../sass/base.scss */
+/* line 369, ../sass/base.scss */
 .fakta-mobil.open .innhold {
   display: block;
 }
 
-/* line 343, ../sass/base.scss */
+/* line 373, ../sass/base.scss */
 .tiltoppen {
   width: 100%;
   clear: both;
   margin: 20px 0px;
 }
-/* line 347, ../sass/base.scss */
+/* line 377, ../sass/base.scss */
 .tiltoppen a {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -83px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sd7831aea6f.png') 0 -83px no-repeat;
   width: 174px;
   height: 42px;
   display: block;
@@ -459,39 +492,56 @@ body.admin-menu {
   text-transform: uppercase;
 }
 
-/* line 67, ../sass/mixins.scss */
+/* line 68, ../sass/mixins.scss */
+.rammeboks.quiz .views-field-title a {
+  color: #d71111;
+  text-decoration: none;
+}
+/* line 74, ../sass/mixins.scss */
+.rammeboks.quiz .views-field-view-node a {
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sd7831aea6f.png') 0 -319px no-repeat;
+  padding-left: 20px;
+  float: left;
+  color: #333333;
+  font-family: Arial;
+  font-size: 0.8em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* line 87, ../sass/mixins.scss */
 .rammeboks.leder .views-field-field-main-image-fid {
   float: right;
   border: 1px solid #dcdcdb;
   padding: 2px;
   background: #fff;
 }
-/* line 72, ../sass/mixins.scss */
+/* line 92, ../sass/mixins.scss */
 .rammeboks.leder .views-field-field-main-image-fid img {
   float: left;
 }
-/* line 76, ../sass/mixins.scss */
+/* line 96, ../sass/mixins.scss */
 .rammeboks.leder li {
   padding-top: 1em;
   border-bottom: 0px;
 }
-/* line 80, ../sass/mixins.scss */
+/* line 100, ../sass/mixins.scss */
 .rammeboks.leder li .views-field-title a {
   font-size: 1.5em;
   font-weight: bold;
   color: #333333;
 }
-/* line 87, ../sass/mixins.scss */
+/* line 107, ../sass/mixins.scss */
 .rammeboks.leder li .views-field-view-node a {
   font-family: Arial;
   color: #333333;
   font-weight: bold;
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -259px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sd7831aea6f.png') 0 -319px no-repeat;
   padding-left: 20px;
   height: 13px;
 }
 
-/* line 99, ../sass/mixins.scss */
+/* line 119, ../sass/mixins.scss */
 .rammeboks.eco h3 {
   color: #78a21e;
   font-size: 0.9em;
@@ -501,11 +551,11 @@ body.admin-menu {
   border-bottom: 2px solid #78a21e;
   margin-bottom: 0px;
 }
-/* line 108, ../sass/mixins.scss */
+/* line 128, ../sass/mixins.scss */
 .rammeboks.eco .view-header {
   display: none;
 }
-/* line 111, ../sass/mixins.scss */
+/* line 131, ../sass/mixins.scss */
 .rammeboks.eco .pretext {
   background: #d7e1c2;
   padding: 5px;
@@ -513,39 +563,39 @@ body.admin-menu {
   font-family: Arial;
   font-size: 0.8em;
 }
-/* line 118, ../sass/mixins.scss */
+/* line 138, ../sass/mixins.scss */
 .rammeboks.eco a {
   font-family: Arial;
   color: #333333;
 }
-/* line 122, ../sass/mixins.scss */
+/* line 142, ../sass/mixins.scss */
 .rammeboks.eco li {
   border-bottom: 0px;
 }
-/* line 124, ../sass/mixins.scss */
+/* line 144, ../sass/mixins.scss */
 .rammeboks.eco li .views-field-field-teaser-value {
   font-family: Arial;
   color: #333333;
 }
-/* line 129, ../sass/mixins.scss */
+/* line 149, ../sass/mixins.scss */
 .rammeboks.eco li .views-field-title a {
   font-size: 1.5em;
   font-weight: bold;
 }
-/* line 135, ../sass/mixins.scss */
+/* line 155, ../sass/mixins.scss */
 .rammeboks.eco li .views-field-view-node a {
   font-weight: bold;
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -259px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sd7831aea6f.png') 0 -319px no-repeat;
   padding-left: 20px;
   height: 13px;
 }
 
-/* line 145, ../sass/mixins.scss */
+/* line 165, ../sass/mixins.scss */
 .rammeboks.blogger h3 {
   border-bottom: 2px solid #78a21e;
   padding: 0px;
 }
-/* line 148, ../sass/mixins.scss */
+/* line 168, ../sass/mixins.scss */
 .rammeboks.blogger h3 a {
   padding: 0px;
   color: #78a21e;
@@ -555,39 +605,39 @@ body.admin-menu {
   text-transform: uppercase;
   text-decoration: none;
 }
-/* line 158, ../sass/mixins.scss */
+/* line 178, ../sass/mixins.scss */
 .rammeboks.blogger .views-field-field-blogg-bilde-fid {
   float: left;
   margin-right: 1em;
   margin-bottom: 0.1em;
   border: 1px solid #b2afa8;
 }
-/* line 163, ../sass/mixins.scss */
+/* line 183, ../sass/mixins.scss */
 .rammeboks.blogger .views-field-field-blogg-bilde-fid img {
   width: 50px;
   height: auto;
   float: left;
 }
-/* line 170, ../sass/mixins.scss */
+/* line 190, ../sass/mixins.scss */
 .rammeboks.blogger .views-field-title-1 a {
   font-family: Arial;
   color: #333333;
   font-size: 0.8em;
   font-weight: bold;
 }
-/* line 178, ../sass/mixins.scss */
+/* line 198, ../sass/mixins.scss */
 .rammeboks.blogger .views-field-title a {
   font-family: Arial;
   color: #333333;
   font-size: 0.8em;
 }
-/* line 184, ../sass/mixins.scss */
+/* line 204, ../sass/mixins.scss */
 .rammeboks.blogger .views-field-body {
   display: none;
 }
-/* line 188, ../sass/mixins.scss */
+/* line 208, ../sass/mixins.scss */
 .rammeboks.blogger .more-link a {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -259px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sd7831aea6f.png') 0 -319px no-repeat;
   padding-left: 20px;
   float: left;
   color: #333333;
@@ -597,12 +647,12 @@ body.admin-menu {
   font-weight: bold;
 }
 
-/* line 202, ../sass/mixins.scss */
+/* line 222, ../sass/mixins.scss */
 .kommentar-liste h2 {
   color: #78a21e;
   border-bottom: 1px solid #78a21e;
 }
-/* line 206, ../sass/mixins.scss */
+/* line 226, ../sass/mixins.scss */
 .kommentar-liste .views-field-field-sitat-value:before {
   content: '“';
   float: left;
@@ -611,14 +661,14 @@ body.admin-menu {
   font-size: 1.7em;
   font-family: 'MerriweatherRegular', serif;
 }
-/* line 215, ../sass/mixins.scss */
+/* line 235, ../sass/mixins.scss */
 .kommentar-liste .views-field-field-sitat-value a {
   text-decoration: none;
   color: #333333;
   font-family: 'MerriweatherRegular', serif;
   font-size: 1.1em;
 }
-/* line 222, ../sass/mixins.scss */
+/* line 242, ../sass/mixins.scss */
 .kommentar-liste .views-field-view-node {
   border-top: 1px solid #c1bfb9;
   margin-top: 10px;
@@ -626,7 +676,7 @@ body.admin-menu {
   float: left;
   width: 50%;
 }
-/* line 228, ../sass/mixins.scss */
+/* line 248, ../sass/mixins.scss */
 .kommentar-liste .views-field-view-node a {
   height: 13px;
   padding-top: 4px;
@@ -634,12 +684,12 @@ body.admin-menu {
   font-size: 0.7em;
   line-height: 1em;
   padding-left: 20px;
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -259px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sd7831aea6f.png') 0 -319px no-repeat;
   font-family: Arial;
   color: #333333;
   text-decoration: none;
 }
-/* line 241, ../sass/mixins.scss */
+/* line 261, ../sass/mixins.scss */
 .kommentar-liste .views-field-field-op-author-nid {
   border-top: 1px solid #c1bfb9;
   margin-top: 10px;
@@ -647,7 +697,7 @@ body.admin-menu {
   float: left;
   width: 50%;
 }
-/* line 247, ../sass/mixins.scss */
+/* line 267, ../sass/mixins.scss */
 .kommentar-liste .views-field-field-op-author-nid a {
   font-size: 0.8em;
   font-family: Arial;
@@ -655,22 +705,27 @@ body.admin-menu {
   text-decoration: none;
 }
 
-/* line 359, ../sass/base.scss */
+/* line 390, ../sass/base.scss */
+.front #block-kr_most_viewed-0 h2 {
+  display: none;
+}
+
+/* line 395, ../sass/base.scss */
 .listeboks {
   margin-bottom: 15px;
 }
-/* line 316, ../sass/mixins.scss */
+/* line 336, ../sass/mixins.scss */
 .listeboks .item-list h3 {
   border-bottom: 2px solid #333;
   padding: 4px 0px;
   margin-bottom: 5px;
 }
-/* line 321, ../sass/mixins.scss */
+/* line 341, ../sass/mixins.scss */
 .listeboks .item-list ul {
   padding: 0px;
   margin: 0px;
 }
-/* line 324, ../sass/mixins.scss */
+/* line 344, ../sass/mixins.scss */
 .listeboks .item-list ul li {
   clear: both;
   float: left;
@@ -680,33 +735,33 @@ body.admin-menu {
   margin: 0px 0px 7px 0px;
   border-bottom: 1px solid #dddddd;
 }
-/* line 332, ../sass/mixins.scss */
+/* line 352, ../sass/mixins.scss */
 .listeboks .item-list ul li a {
   color: #2c91c5;
   text-decoration: none;
   font-family: 'MerriweatherRegular', serif;
 }
-/* line 342, ../sass/mixins.scss */
+/* line 362, ../sass/mixins.scss */
 .listeboks .item-list ul.lenker li a {
   color: #2c91c5;
   font-size: 1em;
 }
 
-/* line 379, ../sass/mixins.scss */
+/* line 399, ../sass/mixins.scss */
 .block-views .newslist .views-field-title, .block-views .newslist .views-field-field-main-image-fid, .block-views .newslist .views-field-field-teaser-value {
   margin: 0px 15px;
 }
-/* line 382, ../sass/mixins.scss */
+/* line 402, ../sass/mixins.scss */
 .block-views .newslist p {
   margin: 0px;
 }
-/* line 385, ../sass/mixins.scss */
+/* line 405, ../sass/mixins.scss */
 .block-views .newslist ul {
   margin: 0px;
   padding: 0px;
   list-style: none;
 }
-/* line 389, ../sass/mixins.scss */
+/* line 409, ../sass/mixins.scss */
 .block-views .newslist ul li {
   float: left;
   width: 100%;
@@ -715,82 +770,82 @@ body.admin-menu {
   list-style: none;
   border-bottom: 1px solid #dddddd;
 }
-/* line 398, ../sass/mixins.scss */
+/* line 418, ../sass/mixins.scss */
 .block-views .newslist a {
   text-decoration: none;
   color: #333333;
   font-size: 1.2em;
 }
-/* line 403, ../sass/mixins.scss */
+/* line 423, ../sass/mixins.scss */
 .block-views .newslist .views-field-field-teaser-value {
   font-family: Arial;
   font-size: 0.95em;
 }
-/* line 412, ../sass/mixins.scss */
+/* line 432, ../sass/mixins.scss */
 .block-views .newslist.sak-1 .views-field-title {
   line-height: 2em;
 }
-/* line 414, ../sass/mixins.scss */
+/* line 434, ../sass/mixins.scss */
 .block-views .newslist.sak-1 .views-field-title a {
   font-size: 1.8em;
 }
-/* line 418, ../sass/mixins.scss */
+/* line 438, ../sass/mixins.scss */
 .block-views .newslist.sak-1 .views-field-field-teaser-value {
   font-weight: bold;
 }
-/* line 421, ../sass/mixins.scss */
+/* line 441, ../sass/mixins.scss */
 .block-views .newslist.sak-1 img {
   width: 100%;
   height: auto;
 }
-/* line 427, ../sass/mixins.scss */
+/* line 447, ../sass/mixins.scss */
 .block-views .newslist.sak-2 .views-row-1 {
   margin-top: 0px;
 }
-/* line 430, ../sass/mixins.scss */
+/* line 450, ../sass/mixins.scss */
 .block-views .newslist.sak-2 .views-field-field-main-image-fid {
   float: right;
 }
-/* line 434, ../sass/mixins.scss */
+/* line 454, ../sass/mixins.scss */
 .block-views .newslist.sak-2 .views-field-field-main-image-fid .field-content a img {
   width: 84px;
   height: auto;
   border: 1px solid #d1d1d1;
 }
-/* line 444, ../sass/mixins.scss */
+/* line 464, ../sass/mixins.scss */
 .block-views .newslist.sak-4 .views-field-field-main-image-fid {
   float: left;
 }
-/* line 447, ../sass/mixins.scss */
+/* line 467, ../sass/mixins.scss */
 .block-views .newslist.sak-4 .views-field-field-teaser-value {
   display: none;
 }
-/* line 452, ../sass/mixins.scss */
+/* line 472, ../sass/mixins.scss */
 .block-views .newslist.fire ul, .block-views .newslist.fem ul {
   border-top: 1px solid #DDD;
 }
-/* line 455, ../sass/mixins.scss */
+/* line 475, ../sass/mixins.scss */
 .block-views .newslist.fire .views-field-field-main-image-fid, .block-views .newslist.fem .views-field-field-main-image-fid {
   float: left;
   margin: 0px 0px 0px 15px;
 }
-/* line 458, ../sass/mixins.scss */
+/* line 478, ../sass/mixins.scss */
 .block-views .newslist.fire .views-field-field-main-image-fid img, .block-views .newslist.fem .views-field-field-main-image-fid img {
   width: 86px;
   height: auto;
 }
-/* line 463, ../sass/mixins.scss */
+/* line 483, ../sass/mixins.scss */
 .block-views .newslist.fire .views-field-title, .block-views .newslist.fem .views-field-title {
   float: left;
   margin: 0px 0px 0px 15px;
   width: 59%;
 }
-/* line 468, ../sass/mixins.scss */
+/* line 488, ../sass/mixins.scss */
 .block-views .newslist.fire .views-field-field-teaser-value, .block-views .newslist.fem .views-field-field-teaser-value {
   display: none;
 }
 
-/* line 631, ../sass/mixins.scss */
+/* line 651, ../sass/mixins.scss */
 div .ownsection {
   -webkit-border-radius: 4px 4px;
   -moz-border-radius: 4px / 4px;
@@ -802,39 +857,39 @@ div .ownsection {
   background: #dce4eb;
   padding: 1em;
 }
-/* line 639, ../sass/mixins.scss */
+/* line 659, ../sass/mixins.scss */
 div .ownsection h2 {
   font-size: 1.4em;
   font-family: Arial;
   float: left;
 }
-/* line 644, ../sass/mixins.scss */
+/* line 664, ../sass/mixins.scss */
 div .ownsection .link {
   float: right;
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sa99c75ef1f.png') 0 -203px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sd7831aea6f.png') 0 -263px no-repeat;
   text-indent: -9999px;
   height: 20px;
   width: 20px;
 }
-/* line 651, ../sass/mixins.scss */
+/* line 671, ../sass/mixins.scss */
 div .ownsection .desc {
   display: none;
 }
 
-/* line 368, ../sass/base.scss */
+/* line 404, ../sass/base.scss */
 .block {
   margin-bottom: 15px;
 }
-/* line 372, ../sass/base.scss */
+/* line 408, ../sass/base.scss */
 .block .siste-saker .views-field-field-main-image-fid {
   display: none;
 }
 
-/* line 382, ../sass/base.scss */
+/* line 418, ../sass/base.scss */
 .layout-mobile .block-views .newslist.sak-2.sak-16 .views-field-field-main-image-fid {
   float: left;
 }
-/* line 385, ../sass/base.scss */
+/* line 421, ../sass/base.scss */
 .layout-mobile .block-views .newslist.sak-2.sak-16 .views-field-field-teaser-value {
   display: none;
 }

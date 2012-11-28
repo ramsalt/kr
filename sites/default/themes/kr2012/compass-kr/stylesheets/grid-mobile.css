@@ -18,8 +18,16 @@
   width: 320px;
   margin: 0px;
 }
+/* line 18, ../sass/grid-mobile.scss */
+.container .front-page .ten.ten_two {
+  display: none;
+}
+/* line 21, ../sass/grid-mobile.scss */
+.container .front-page .ten.ten_three {
+  display: none;
+}
 
-/* line 19, ../sass/grid-mobile.scss */
+/* line 27, ../sass/grid-mobile.scss */
 .clear {
   clear: both;
   display: block;
@@ -29,7 +37,7 @@
   height: 0;
 }
 
-/* line 28, ../sass/grid-mobile.scss */
+/* line 36, ../sass/grid-mobile.scss */
 .clearfix:before,
 .clearfix:after {
   content: '.';
@@ -42,12 +50,12 @@
   height: 0;
 }
 
-/* line 39, ../sass/grid-mobile.scss */
+/* line 47, ../sass/grid-mobile.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 42, ../sass/grid-mobile.scss */
+/* line 50, ../sass/grid-mobile.scss */
 .clearfix {
   zoom: 1;
 }

@@ -40,7 +40,9 @@ regions[seven_two] = Front: Seven two
 regions[seven_three] = Front: Seven three
 regions[eight] = Front: Eight
 regions[nine] = Front: Nine
-regions[ten] = Front: Ten
+regions[ten_one] = Front: Ten one
+regions[ten_two] = Front: Ten two
+regions[ten_three] = Front: Ten three
 
     ; Layout: Default
     layouts[default][name] = "Default"
@@ -74,4 +76,6 @@ regions[ten] = Front: Ten
     layouts[columns][regions][] = "seven_three"
     layouts[columns][regions][] = "eight"
     layouts[columns][regions][] = "nine"
-    layouts[columns][regions][] = "ten"
+    layouts[columns][regions][] = "ten_one"
+    layouts[columns][regions][] = "ten_two"
+    layouts[columns][regions][] = "ten_three"
