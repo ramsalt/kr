@@ -37,5 +37,6 @@
   @include rammeboks-brett; 
   div {
     @include ownsection-brett;
+    @include seksjonsside-brett;
   }
 }

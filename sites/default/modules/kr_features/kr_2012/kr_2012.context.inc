@@ -140,6 +140,113 @@ function kr_2012_context_default_contexts() {
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'kr_kategori';
+  $context->description = '';
+  $context->tag = '';
+  $context->conditions = array(
+    'context_condition_theme' => array(
+      'values' => array(
+        'kr2012' => 'kr2012',
+      ),
+    ),
+    'views' => array(
+      'values' => array(
+        'taxonomy_term:page' => 'taxonomy_term:page',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'kr_most_viewed-0' => array(
+          'module' => 'kr_most_viewed',
+          'delta' => 0,
+          'region' => 'right',
+          'weight' => 0,
+        ),
+      ),
+      'layout' => 'default',
+    ),
+    'block_class' => array(
+      'right' => array(
+        'class' => '',
+        'blocks' => array(
+          'kr_most_viewed-0' => array(
+            'class' => 'listeboks',
+          ),
+        ),
+      ),
+      'over_content' => array(
+        'class' => '',
+      ),
+      'under_content' => array(
+        'class' => '',
+      ),
+      'header' => array(
+        'class' => '',
+      ),
+      'footer' => array(
+        'class' => '',
+      ),
+      'toparea' => array(
+        'class' => '',
+      ),
+      'one_one' => array(
+        'class' => '',
+      ),
+      'one_two' => array(
+        'class' => '',
+      ),
+      'one_three' => array(
+        'class' => '',
+      ),
+      'two' => array(
+        'class' => '',
+      ),
+      'three' => array(
+        'class' => '',
+      ),
+      'four' => array(
+        'class' => '',
+      ),
+      'five' => array(
+        'class' => '',
+      ),
+      'six' => array(
+        'class' => '',
+      ),
+      'seven_one' => array(
+        'class' => '',
+      ),
+      'seven_two' => array(
+        'class' => '',
+      ),
+      'seven_three' => array(
+        'class' => '',
+      ),
+      'eight' => array(
+        'class' => '',
+      ),
+      'nine' => array(
+        'class' => '',
+      ),
+      'ten_one' => array(
+        'class' => '',
+      ),
+      'ten_two' => array(
+        'class' => '',
+      ),
+      'ten_three' => array(
+        'class' => '',
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+  $export['kr_kategori'] = $context;
+
+  $context = new stdClass;
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'ny_forside';
   $context->description = '';
   $context->tag = '';

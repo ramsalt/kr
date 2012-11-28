@@ -113,7 +113,9 @@
 				  <div id="op-over-content">
 				    <?php  print $over_content; ?>    
 				  </div>
-				 
+				  <?php if (!isset($node)): ?>
+				  <h1 property="dc:title"><?php print $title; ?></h1>
+				  <?php endif; ?>
 				  <div id="op-content" typeof="dcmitype:Text">
 				    <?php print $content ?>
 				  </div>			  
@@ -122,11 +124,13 @@
 				  </div>
 				  
 			</div><!-- /.grid -->
+			<?php if($right): ?>
 			<div class="grid art-side">
 				  <div id="sidebar-right" class="sidebar">
 				  	<?php print $right ?>
 				  </div> <!-- /#sidebar-right -->
 			</div><!-- /.grid -->
+			<?php endif; ?>
 		</div> <!-- /.inner-container -->
 	</div> <!-- /.container -->
   </div> <!-- /.wrapper -->

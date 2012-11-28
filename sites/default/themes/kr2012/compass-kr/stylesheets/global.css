@@ -1212,21 +1212,58 @@ div .ownsection .link {
 div .ownsection .desc {
   display: none;
 }
+/* line 700, ../sass/mixins.scss */
+div .seksjonsside .views-field-title a {
+  font-family: 'MerriweatherRegular', Arial, serif;
+  font-size: 1.2em;
+  color: #333;
+  text-decoration: none;
+}
+/* line 707, ../sass/mixins.scss */
+div .seksjonsside .views-field-created {
+  color: #666666;
+  font-family: Arial;
+  font-size: 0.8em;
+}
+/* line 713, ../sass/mixins.scss */
+div .seksjonsside .views-field-comment-count {
+  display: none;
+}
+/* line 716, ../sass/mixins.scss */
+div .seksjonsside .views-field-field-main-image-fid {
+  float: right;
+}
+/* line 719, ../sass/mixins.scss */
+div .seksjonsside .views-field-field-teaser-value {
+  font-family: Arial;
+}
+/* line 722, ../sass/mixins.scss */
+div .seksjonsside .views-field-view-node {
+  display: none;
+}
+/* line 728, ../sass/mixins.scss */
+div .seksjonsside .views-separator {
+  border-top: 1px solid #dddddd;
+  margin: 10px 0px;
+  float: left;
+  width: 100%;
+  clear: both;
+}
 
-/* line 404, ../sass/base.scss */
+/* line 406, ../sass/base.scss */
 .block {
   margin-bottom: 15px;
 }
-/* line 408, ../sass/base.scss */
+/* line 410, ../sass/base.scss */
 .block .siste-saker .views-field-field-main-image-fid {
   display: none;
 }
 
-/* line 418, ../sass/base.scss */
+/* line 420, ../sass/base.scss */
 .layout-mobile .block-views .newslist.sak-2.sak-16 .views-field-field-main-image-fid {
   float: left;
 }
-/* line 421, ../sass/base.scss */
+/* line 423, ../sass/base.scss */
 .layout-mobile .block-views .newslist.sak-2.sak-16 .views-field-field-teaser-value {
   display: none;
 }
@@ -1755,6 +1792,14 @@ div .ownsection .desc {
     margin-left: 3%;
     width: 26%;
   }
+  /* line 746, ../sass/mixins.scss */
+  div .seksjonsside .views-field-title a {
+    font-family: 'MerriweatherRegular', Arial, serif;
+    font-size: 1.5em;
+    line-height: 1.3em;
+    color: #333;
+    text-decoration: none;
+  }
 
   /* line 318, ../sass/mixins.scss */
   .rammeboks.blogger .views-field-field-blogg-bilde-fid {
@@ -1769,34 +1814,34 @@ div .ownsection .desc {
     font-size: 1.1em;
   }
 
-  /* line 254, ../sass/base-desktop.scss */
+  /* line 255, ../sass/base-desktop.scss */
   .one.one_one .one-inner {
     border-right: 1px solid #DDD;
     height: 100%;
   }
 
-  /* line 258, ../sass/base-desktop.scss */
+  /* line 259, ../sass/base-desktop.scss */
   .one.one_two .one-inner {
     margin-right: 1em;
   }
 
-  /* line 261, ../sass/base-desktop.scss */
+  /* line 262, ../sass/base-desktop.scss */
   .deskbordertop {
     border-top: 1px solid #dddddd;
   }
 
-  /* line 266, ../sass/base-desktop.scss */
+  /* line 267, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-field-main-image-fid {
     display: inline;
     float: left;
     margin-right: 10px;
   }
-  /* line 270, ../sass/base-desktop.scss */
+  /* line 271, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-field-main-image-fid .field-content {
     width: 78px;
     float: left;
   }
-  /* line 275, ../sass/base-desktop.scss */
+  /* line 276, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-title {
     padding: 0px;
     margin-top: 6px;

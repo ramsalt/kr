@@ -694,3 +694,62 @@ $logos: sprite-map("logo/*.png");
     width: 26%; // 100  78 22
   }
 }
+@mixin seksjonsside-mob{
+  .seksjonsside{
+    .views-field-title{
+      a{
+        font-family: 'MerriweatherRegular', Arial, serif;
+        font-size: 1.2em;
+        color: #333;
+        text-decoration: none;
+      }
+    }
+    .views-field-created{
+      color: #666666;
+      font-family: Arial;
+      font-size: 0.8em; 
+     
+    }
+    .views-field-comment-count{
+      display: none;
+    }
+    .views-field-field-main-image-fid{
+      float: right;
+    }
+    .views-field-field-teaser-value{
+      font-family: Arial;
+    }
+    .views-field-view-node{
+      display: none;
+    }
+    .featured-view-item{
+      
+    }
+    .views-separator{
+      border-top: 1px solid #dddddd;
+      margin: 10px 0px;
+      float: left;
+      width: 100%;
+      clear: both;
+    }
+    .views-row{
+      
+    }
+  }
+}
+@mixin seksjonsside-brett{
+  
+}
+@mixin seksjonsside-desktop{
+  .seksjonsside{
+    .views-field-title{
+      a{
+        font-family: 'MerriweatherRegular', Arial, serif;
+        font-size: 1.5em;
+        line-height: 1.3em;
+        color: #333;
+        text-decoration: none;
+      }
+    }
+  }
+}

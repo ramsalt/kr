@@ -29,8 +29,8 @@
  */
 ?>
 
-  <div class="visible-desktop">	
-  	<h1 property="dc:title" class="visible-desktop"><?php print $title; ?></h1>
+  <div>	
+  	<h1 property="dc:title"><?php print $title; ?></h1>
   </div>
 
 <?php if ($ingress): ?>
@@ -38,7 +38,7 @@
             <?php print $ingress_value; ?>
         </div><!-- /.ingress -->
 <?php endif; ?>
-  <div class="visible-desktop">	
+  <div>	
   	<div class="byline"><?php print $byline; ?></div>
   </div>
 <div class="body-content">
