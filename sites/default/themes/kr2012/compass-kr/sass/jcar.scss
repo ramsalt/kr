@@ -1,6 +1,4 @@
 @import "compass/css3";
-
-
 $logos: sprite-map("logo/*.png");
 
 .jcar {
@@ -11,7 +9,14 @@ $logos: sprite-map("logo/*.png");
   background: #3d3d3d;
   border-bottom: 2px solid #000;
 }
-
+.jcar.jobber{
+  background: #f1f2ee;
+  border-bottom: 2px solid #c1bfb9;
+  border-top: 1px solid #d9d9d9;
+}
+.jcar.jobber .jcarousel-container{
+  width: auto;
+}
 .jcar .jcarousel-container-horizontal {
    padding: 20px;
 }
@@ -30,7 +35,10 @@ $logos: sprite-map("logo/*.png");
   padding: 0px;
   border-bottom: 2px solid #fff;
 }
-
+.jcar.jobber h3{
+  border-bottom: 2px solid #ff9000;
+  color: #ff9000;
+}
 .jcar .jcarousel-item {
   padding: 0;
   list-style: none;
@@ -51,7 +59,63 @@ $logos: sprite-map("logo/*.png");
     
   }
 }
-
+.jcar.jobber{
+  .mer{
+    text-align: center;
+    a{
+      text-decoration: none;
+      color: #2C91C5;
+      font-size: 0.9em;
+    }
+  }
+  .jcarousel-item{
+    text-align: left;
+    background: #ffffff;
+    width: auto;
+    height: 70px;
+    padding: 20px;
+    color: #333333;
+    border-top: 2px solid #d8d9d6;  
+    border-left: 2px solid #d8d9d6;
+    border-right: 1px solid #d8d9d6;
+    border-bottom: 1px solid #d8d9d6;
+    @include border-radius(4px);
+    .views-field{
+  
+    }
+    .bilde{
+      float: left;
+      padding-right: 10px;
+    }
+    .andre{
+      float: left;
+    }
+    .views-field.views-field-field-main-image-fid{
+      float: left;
+    }
+    .views-field.views-field-title{
+      margin: 0px;
+      padding: 0px;
+      height: auto;
+      a{
+        font-family: Arial;      
+        color: #333333;
+        font-size: 1.3em;
+        font-weight: bold;
+      }
+    }
+    .views-field.views-field-field-job-date-value{
+      font-size: 0.8em;
+    }
+    .views-field.views-field-field-job-utlyser-value{
+      font-weight: bold;
+      font-size: 0.8em;
+    }
+    a {
+      color: #333333;
+    }
+  }
+}
 .jcar .jcarousel-item-horizontal {
   margin: 0 4px;
 }
@@ -75,6 +139,12 @@ $logos: sprite-map("logo/*.png");
   height: 30px;
   margin: 10px 0px;
   float: right;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.jcar.jobber .jcarousel-next{
+  background: sprite($logos, jobberright) no-repeat;
 }
 .jcar .jcarousel-prev {
   background: sprite($logos, jcarleft) no-repeat;
@@ -83,8 +153,13 @@ $logos: sprite-map("logo/*.png");
   height: 30px;
   float: left;
   margin: 10px 0px;
+  position: relative;
+  top: 0px;
+  left: 0px;
 }
-
+.jcar.jobber .jcarousel-prev{
+  background: sprite($logos, jobberleft) no-repeat;
+}
 .jcar .jcarousel-navigation {
   margin: 0;
   padding: 0;

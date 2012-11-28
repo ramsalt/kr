@@ -325,6 +325,12 @@ function kr_2012_context_default_contexts() {
           'region' => 'four',
           'weight' => 0,
         ),
+        'views-jobbmarkede-block_1' => array(
+          'module' => 'views',
+          'delta' => 'jobbmarkede-block_1',
+          'region' => 'five',
+          'weight' => 0,
+        ),
         'views-forside-block_5' => array(
           'module' => 'views',
           'delta' => 'forside-block_5',
@@ -538,9 +544,6 @@ function kr_2012_context_default_contexts() {
         'blocks' => array(
           'block-7' => array(
             'class' => 'rammeboks red',
-          ),
-          'fb_social-activityfeed' => array(
-            'class' => '',
           ),
         ),
       ),

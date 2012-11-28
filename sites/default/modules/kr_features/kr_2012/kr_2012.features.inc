@@ -78,6 +78,21 @@ function kr_2012_imagecache_default_presets() {
         ),
       ),
     ),
+    'v2_forside_h60' => array(
+      'presetname' => 'v2_forside_h60',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '',
+            'height' => '60',
+            'upscale' => 0,
+          ),
+        ),
+      ),
+    ),
     'v2_forside_stor' => array(
       'presetname' => 'v2_forside_stor',
       'actions' => array(
