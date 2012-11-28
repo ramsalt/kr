@@ -622,7 +622,7 @@ function kr_2012_views_default_views() {
   $handler->display->display_options['css_class'] = 'newslist sak-7 fire';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '6';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Felt: Innhold: Main Image (field_main_image) */
