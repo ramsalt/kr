@@ -334,6 +334,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     float: left;
     display: block;
   }
+
+  /* line 96, ../sass/grid-desktop.scss */
+  .page-stillinger .container-16 .inner-container .art-main {
+    width: 100%;
+    margin: 0px;
+  }
+  /* line 99, ../sass/grid-desktop.scss */
+  .page-stillinger .container-16 .inner-container .art-main .panels-flexible-region-3-top {
+    width: 100%;
+  }
 }
 /* line 6, ../sass/base.scss */
 body {
@@ -1355,32 +1365,70 @@ div .nopremium-message .item-list ul li.last a {
   text-decoration: none;
   font-weight: bold;
 }
+/* line 862, ../sass/mixins.scss */
+div .jobbliste ul li {
+  margin: 0px;
+  list-style: none;
+  float: left;
+  margin-bottom: 1em;
+  width: 100%;
+}
+/* line 868, ../sass/mixins.scss */
+div .jobbliste ul li .bilde {
+  float: left;
+  width: 30%;
+  text-align: center;
+}
+/* line 873, ../sass/mixins.scss */
+div .jobbliste ul li .andre {
+  float: left;
+  width: 68%;
+  margin-left: 2%;
+  font-family: Arial;
+  font-size: 0.7em;
+}
+/* line 879, ../sass/mixins.scss */
+div .jobbliste ul li .andre a {
+  text-decoration: none;
+  color: #333333;
+}
+/* line 883, ../sass/mixins.scss */
+div .jobbliste ul li .andre .views-field-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+/* line 888, ../sass/mixins.scss */
+div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
+  font-weight: bold;
+  line-height: 1em;
+}
 
-/* line 407, ../sass/base.scss */
+/* line 408, ../sass/base.scss */
 .block {
   margin-bottom: 15px;
 }
-/* line 411, ../sass/base.scss */
+/* line 412, ../sass/base.scss */
 .block .siste-saker .views-field-field-main-image-fid {
   display: none;
 }
 
-/* line 421, ../sass/base.scss */
+/* line 422, ../sass/base.scss */
 .layout-mobile .block-views .newslist.sak-2.sak-16 .views-field-field-main-image-fid {
   float: left;
 }
-/* line 424, ../sass/base.scss */
+/* line 425, ../sass/base.scss */
 .layout-mobile .block-views .newslist.sak-2.sak-16 .views-field-field-teaser-value {
   display: none;
 }
 
-/* line 429, ../sass/base.scss */
+/* line 430, ../sass/base.scss */
 .node-content {
   float: left;
   width: 100%;
 }
 
-/* line 435, ../sass/base.scss */
+/* line 436, ../sass/base.scss */
 .galleriside ul li {
   float: left;
   margin: 0px 4px 8px 0px;
@@ -1390,11 +1438,11 @@ div .nopremium-message .item-list ul li.last a {
   position: relative;
   list-style: none;
 }
-/* line 443, ../sass/base.scss */
+/* line 444, ../sass/base.scss */
 .galleriside ul li .views-field-created {
   color: #EEE;
 }
-/* line 446, ../sass/base.scss */
+/* line 447, ../sass/base.scss */
 .galleriside ul li .views-field-created {
   background: none repeat scroll 0 0 #111;
   position: absolute;
@@ -1402,7 +1450,7 @@ div .nopremium-message .item-list ul li.last a {
   top: 0;
   z-index: 600;
 }
-/* line 453, ../sass/base.scss */
+/* line 454, ../sass/base.scss */
 .galleriside ul li .views-field-title {
   background: none repeat scroll 0 0 #111;
   bottom: 0;
@@ -1414,13 +1462,13 @@ div .nopremium-message .item-list ul li.last a {
   z-index: 300;
   text-decoration: none;
 }
-/* line 464, ../sass/base.scss */
+/* line 465, ../sass/base.scss */
 .galleriside ul li .views-field-title a {
   color: #EEE;
   text-decoration: none;
   font-size: 0.8em;
 }
-/* line 470, ../sass/base.scss */
+/* line 471, ../sass/base.scss */
 .galleriside ul li .views-field-field-galleri-bilde-fid a {
   bottom: 0;
   left: 0;
@@ -1429,7 +1477,7 @@ div .nopremium-message .item-list ul li.last a {
   text-align: center;
   top: 0;
 }
-/* line 477, ../sass/base.scss */
+/* line 478, ../sass/base.scss */
 .galleriside ul li .views-field-field-galleri-bilde-fid a img {
   padding: 0px;
   margin: 0px;

@@ -12,87 +12,68 @@ function kr_job_views_default_views() {
   $view->description = '';
   $view->tag = '';
   $view->base_table = 'term_data';
+  $view->human_name = '';
   $view->core = 6;
-  $view->api_version = '2';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Standardverdier */
   $handler = $view->new_display('default', 'Standardverdier', 'default');
-  $handler->override_option('fields', array(
-    'name' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'absolute' => 0,
-        'link_class' => '',
-        'alt' => '',
-        'rel' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'hide_alter_empty' => 1,
-      'link_to_taxonomy' => 1,
-      'exclude' => 0,
-      'id' => 'name',
-      'table' => 'term_data',
-      'field' => 'name',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('sorts', array(
-    'name' => array(
-      'order' => 'ASC',
-      'id' => 'name',
-      'table' => 'term_data',
-      'field' => 'name',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('filters', array(
-    'vid' => array(
-      'operator' => 'in',
-      'value' => array(
-        46 => '46',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'vid',
-      'table' => 'term_data',
-      'field' => 'vid',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('access', array(
-    'type' => 'none',
-  ));
-  $handler->override_option('cache', array(
-    'type' => 'none',
-  ));
-  $handler->override_option('title', 'Stillingskategorier');
-  $handler->override_option('style_plugin', 'list');
-  $handler->override_option('style_options', array(
-    'grouping' => '',
-    'type' => 'ul',
-  ));
+  $handler->display->display_options['title'] = 'Stillingskategorier';
+  $handler->display->display_options['use_more_text'] = 'mer';
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Søk';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Nullstill';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sortér på';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Felt: Taksonomi: Term */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['name']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['name']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['name']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['name']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = 1;
+  /* Sorteringskriterium: Taksonomi: Term */
+  $handler->display->display_options['sorts']['name']['id'] = 'name';
+  $handler->display->display_options['sorts']['name']['table'] = 'term_data';
+  $handler->display->display_options['sorts']['name']['field'] = 'name';
+  /* Filtrer: Taksonomi: Vokabular */
+  $handler->display->display_options['filters']['vid']['id'] = 'vid';
+  $handler->display->display_options['filters']['vid']['table'] = 'term_data';
+  $handler->display->display_options['filters']['vid']['field'] = 'vid';
+  $handler->display->display_options['filters']['vid']['value'] = array(
+    46 => '46',
+  );
+  $handler->display->display_options['filters']['vid']['expose']['operator'] = FALSE;
+
+  /* Display: Alle stillingskategorier */
   $handler = $view->new_display('block', 'Alle stillingskategorier', 'block_1');
-  $handler->override_option('block_description', '');
-  $handler->override_option('block_caching', -1);
+  $translatables['alle_stillingskategorier'] = array(
+    t('Standardverdier'),
+    t('Stillingskategorier'),
+    t('mer'),
+    t('Søk'),
+    t('Nullstill'),
+    t('Sortér på'),
+    t('Asc'),
+    t('Desc'),
+    t('Alle stillingskategorier'),
+  );
 
   $views[$view->name] = $view;
 
@@ -102,76 +83,60 @@ function kr_job_views_default_views() {
   $view->description = 'Stillingslister';
   $view->tag = '';
   $view->base_table = 'node';
+  $view->human_name = '';
   $view->core = 0;
-  $view->api_version = '2';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Standardverdier */
   $handler = $view->new_display('default', 'Standardverdier', 'default');
-  $handler->override_option('fields', array(
-    'field_main_image_fid' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'kr_jobs_block_linked',
-      'multiple' => array(
-        'group' => 1,
-        'multiple_number' => '1',
-        'multiple_from' => '0',
-        'multiple_reversed' => 0,
-      ),
-      'exclude' => 0,
-      'id' => 'field_main_image_fid',
-      'table' => 'node_data_field_main_image',
-      'field' => 'field_main_image_fid',
-      'override' => array(
-        'button' => 'Overstyr',
-      ),
-      'relationship' => 'none',
-    ),
-    'phpcode' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'value' => '<?php
+  $handler->display->display_options['use_more_text'] = 'mer';
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Søk';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Nullstill';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sortér på';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Felt: Innhold: Main Image (field_main_image) */
+  $handler->display->display_options['fields']['field_main_image_fid']['id'] = 'field_main_image_fid';
+  $handler->display->display_options['fields']['field_main_image_fid']['table'] = 'node_data_field_main_image';
+  $handler->display->display_options['fields']['field_main_image_fid']['field'] = 'field_main_image_fid';
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['label_type'] = 'none';
+  $handler->display->display_options['fields']['field_main_image_fid']['format'] = 'kr_jobs_block_linked';
+  $handler->display->display_options['fields']['field_main_image_fid']['multiple']['group'] = 1;
+  $handler->display->display_options['fields']['field_main_image_fid']['multiple']['multiple_number'] = '1';
+  $handler->display->display_options['fields']['field_main_image_fid']['multiple']['multiple_from'] = '0';
+  $handler->display->display_options['fields']['field_main_image_fid']['multiple']['multiple_reversed'] = 0;
+  /* Felt: Customfield: PHP-kode */
+  $handler->display->display_options['fields']['phpcode']['id'] = 'phpcode';
+  $handler->display->display_options['fields']['phpcode']['table'] = 'customfield';
+  $handler->display->display_options['fields']['phpcode']['field'] = 'phpcode';
+  $handler->display->display_options['fields']['phpcode']['label'] = '';
+  $handler->display->display_options['fields']['phpcode']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['phpcode']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['phpcode']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['phpcode']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['phpcode']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['phpcode']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['phpcode']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['phpcode']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['phpcode']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['phpcode']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['phpcode']['value'] = '<?php
 
 $words = explode(\' \', $data->node_title);
 
@@ -183,285 +148,134 @@ $new_title.=\' \';
 }
 print trim($new_title);
 
-?>',
-      'exclude' => 1,
-      'id' => 'phpcode',
-      'table' => 'customfield',
-      'field' => 'phpcode',
-      'override' => array(
-        'button' => 'Overstyr',
-      ),
-      'relationship' => 'none',
-    ),
-    'title' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 1,
-        'text' => '[phpcode]',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 1,
-      'exclude' => 0,
-      'id' => 'title',
-      'table' => 'node',
-      'field' => 'title',
-      'relationship' => 'none',
-      'override' => array(
-        'button' => 'Overstyr',
-      ),
-    ),
-    'field_job_utlyser_value' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'default',
-      'multiple' => array(
-        'group' => TRUE,
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_reversed' => FALSE,
-      ),
-      'exclude' => 0,
-      'id' => 'field_job_utlyser_value',
-      'table' => 'node_data_field_job_utlyser',
-      'field' => 'field_job_utlyser_value',
-      'override' => array(
-        'button' => 'Overstyr',
-      ),
-      'relationship' => 'none',
-    ),
-    'field_job_date_value' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'default',
-      'multiple' => array(
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_to' => '',
-        'group' => '',
-      ),
-      'repeat' => array(
-        'show_repeat_rule' => '',
-      ),
-      'fromto' => array(
-        'fromto' => 'both',
-      ),
-      'exclude' => 0,
-      'id' => 'field_job_date_value',
-      'table' => 'node_data_field_job_date',
-      'field' => 'field_job_date_value',
-      'override' => array(
-        'button' => 'Overstyr',
-      ),
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('sorts', array(
-    'field_job_date_value' => array(
-      'order' => 'ASC',
-      'delta' => -1,
-      'id' => 'field_job_date_value',
-      'table' => 'node_data_field_job_date',
-      'field' => 'field_job_date_value',
-      'relationship' => 'none',
-      'override' => array(
-        'button' => 'Overstyr',
-      ),
-    ),
-  ));
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'job' => 'job',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-    ),
-    'status' => array(
-      'operator' => '=',
-      'value' => '1',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'status',
-      'table' => 'node',
-      'field' => 'status',
-      'relationship' => 'none',
-    ),
-    'field_job_date_value' => array(
-      'operator' => '>=',
-      'value' => array(
-        'value' => NULL,
-        'min' => NULL,
-        'max' => NULL,
-        'default_date' => 'now',
-        'default_to_date' => '',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'date_fields' => array(
-        'node_data_field_job_date.field_job_date_value' => 'node_data_field_job_date.field_job_date_value',
-      ),
-      'date_method' => 'OR',
-      'granularity' => 'day',
-      'form_type' => 'date_select',
-      'default_date' => 'now',
-      'default_to_date' => '',
-      'year_range' => '-3:+3',
-      'id' => 'field_job_date_value',
-      'table' => 'node_data_field_job_date',
-      'field' => 'field_job_date_value',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('access', array(
-    'type' => 'none',
-  ));
-  $handler->override_option('cache', array(
-    'type' => 'none',
-  ));
+?>';
+  /* Felt: Node: Tittel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '[phpcode]';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  /* Felt: Innhold: Utlyser (field_job_utlyser) */
+  $handler->display->display_options['fields']['field_job_utlyser_value']['id'] = 'field_job_utlyser_value';
+  $handler->display->display_options['fields']['field_job_utlyser_value']['table'] = 'node_data_field_job_utlyser';
+  $handler->display->display_options['fields']['field_job_utlyser_value']['field'] = 'field_job_utlyser_value';
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['label_type'] = 'none';
+  /* Felt: Innhold: Søknadsfrist (field_job_date) */
+  $handler->display->display_options['fields']['field_job_date_value']['id'] = 'field_job_date_value';
+  $handler->display->display_options['fields']['field_job_date_value']['table'] = 'node_data_field_job_date';
+  $handler->display->display_options['fields']['field_job_date_value']['field'] = 'field_job_date_value';
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['label_type'] = 'none';
+  /* Sorteringskriterium: Innhold: Søknadsfrist (field_job_date) */
+  $handler->display->display_options['sorts']['field_job_date_value']['id'] = 'field_job_date_value';
+  $handler->display->display_options['sorts']['field_job_date_value']['table'] = 'node_data_field_job_date';
+  $handler->display->display_options['sorts']['field_job_date_value']['field'] = 'field_job_date_value';
+  /* Filtrer: Node: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'job' => 'job',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
+  /* Filtrer: Node: Publisert */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filtrer: Innhold: Søknadsfrist (field_job_date) */
+  $handler->display->display_options['filters']['field_job_date_value']['id'] = 'field_job_date_value';
+  $handler->display->display_options['filters']['field_job_date_value']['table'] = 'node_data_field_job_date';
+  $handler->display->display_options['filters']['field_job_date_value']['field'] = 'field_job_date_value';
+  $handler->display->display_options['filters']['field_job_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_job_date_value']['expose']['operator'] = FALSE;
+  $handler->display->display_options['filters']['field_job_date_value']['date_fields'] = array(
+    'node_data_field_job_date.field_job_date_value' => 'node_data_field_job_date.field_job_date_value',
+  );
+  $handler->display->display_options['filters']['field_job_date_value']['default_date'] = 'now';
+
+  /* Display: Blokk */
   $handler = $view->new_display('block', 'Blokk', 'block_1');
-  $handler->override_option('fields', array(
-    'field_main_image_fid' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 1,
-      'label_type' => 'none',
-      'format' => 'kr_jobs_block_linked',
-      'multiple' => array(
-        'group' => 1,
-        'multiple_number' => '1',
-        'multiple_from' => '0',
-        'multiple_reversed' => 0,
-      ),
-      'exclude' => 0,
-      'id' => 'field_main_image_fid',
-      'table' => 'node_data_field_main_image',
-      'field' => 'field_main_image_fid',
-      'override' => array(
-        'button' => 'Bruk standard',
-      ),
-      'relationship' => 'none',
-    ),
-    'phpcode' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'value' => '<?php
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Ledige stillinger';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'field_job_utlyser_value' => 'field_job_utlyser_value',
+    'field_job_date_value' => 'field_job_date_value',
+  );
+  $handler->display->display_options['row_options']['hide_empty'] = 0;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Innhold: Main Image (field_main_image) */
+  $handler->display->display_options['fields']['field_main_image_fid']['id'] = 'field_main_image_fid';
+  $handler->display->display_options['fields']['field_main_image_fid']['table'] = 'node_data_field_main_image';
+  $handler->display->display_options['fields']['field_main_image_fid']['field'] = 'field_main_image_fid';
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['link_to_node'] = 1;
+  $handler->display->display_options['fields']['field_main_image_fid']['label_type'] = 'none';
+  $handler->display->display_options['fields']['field_main_image_fid']['format'] = 'kr_jobs_block_linked';
+  $handler->display->display_options['fields']['field_main_image_fid']['multiple']['group'] = 1;
+  $handler->display->display_options['fields']['field_main_image_fid']['multiple']['multiple_number'] = '1';
+  $handler->display->display_options['fields']['field_main_image_fid']['multiple']['multiple_from'] = '0';
+  $handler->display->display_options['fields']['field_main_image_fid']['multiple']['multiple_reversed'] = 0;
+  /* Felt: Customfield: PHP-kode */
+  $handler->display->display_options['fields']['phpcode']['id'] = 'phpcode';
+  $handler->display->display_options['fields']['phpcode']['table'] = 'customfield';
+  $handler->display->display_options['fields']['phpcode']['field'] = 'phpcode';
+  $handler->display->display_options['fields']['phpcode']['label'] = '';
+  $handler->display->display_options['fields']['phpcode']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['phpcode']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['phpcode']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['phpcode']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['phpcode']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['phpcode']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['phpcode']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['phpcode']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['phpcode']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['phpcode']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['phpcode']['value'] = '<?php
 
 $words = explode(\' \', $data->node_title);
 
@@ -477,177 +291,74 @@ $new_title.=\' \';
 }
 print trim($new_title);
 
-?>',
-      'exclude' => 1,
-      'id' => 'phpcode',
-      'table' => 'customfield',
-      'field' => 'phpcode',
-      'override' => array(
-        'button' => 'Bruk standard',
-      ),
-      'relationship' => 'none',
-    ),
-    'title' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 1,
-        'text' => '[phpcode]',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 1,
-      'exclude' => 0,
-      'id' => 'title',
-      'table' => 'node',
-      'field' => 'title',
-      'relationship' => 'none',
-      'override' => array(
-        'button' => 'Bruk standard',
-      ),
-    ),
-    'field_job_utlyser_value' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 1,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'default',
-      'multiple' => array(
-        'group' => TRUE,
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_reversed' => FALSE,
-      ),
-      'exclude' => 0,
-      'id' => 'field_job_utlyser_value',
-      'table' => 'node_data_field_job_utlyser',
-      'field' => 'field_job_utlyser_value',
-      'override' => array(
-        'button' => 'Bruk standard',
-      ),
-      'relationship' => 'none',
-    ),
-    'field_job_date_value' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'short',
-      'multiple' => array(
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_to' => '',
-        'group' => '',
-      ),
-      'repeat' => array(
-        'show_repeat_rule' => '',
-      ),
-      'fromto' => array(
-        'fromto' => 'both',
-      ),
-      'exclude' => 0,
-      'id' => 'field_job_date_value',
-      'table' => 'node_data_field_job_date',
-      'field' => 'field_job_date_value',
-      'override' => array(
-        'button' => 'Bruk standard',
-      ),
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('title', 'Ledige stillinger');
-  $handler->override_option('items_per_page', 0);
-  $handler->override_option('style_plugin', 'list');
-  $handler->override_option('row_options', array(
-    'inline' => array(
-      'field_job_utlyser_value' => 'field_job_utlyser_value',
-      'field_job_date_value' => 'field_job_date_value',
-    ),
-    'separator' => '',
-    'hide_empty' => 0,
-  ));
-  $handler->override_option('block_description', '');
-  $handler->override_option('block_caching', -1);
+?>';
+  /* Felt: Node: Tittel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '[phpcode]';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  /* Felt: Innhold: Utlyser (field_job_utlyser) */
+  $handler->display->display_options['fields']['field_job_utlyser_value']['id'] = 'field_job_utlyser_value';
+  $handler->display->display_options['fields']['field_job_utlyser_value']['table'] = 'node_data_field_job_utlyser';
+  $handler->display->display_options['fields']['field_job_utlyser_value']['field'] = 'field_job_utlyser_value';
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['strip_tags'] = 1;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['label_type'] = 'none';
+  /* Felt: Innhold: Søknadsfrist (field_job_date) */
+  $handler->display->display_options['fields']['field_job_date_value']['id'] = 'field_job_date_value';
+  $handler->display->display_options['fields']['field_job_date_value']['table'] = 'node_data_field_job_date';
+  $handler->display->display_options['fields']['field_job_date_value']['field'] = 'field_job_date_value';
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['label_type'] = 'none';
+  $handler->display->display_options['fields']['field_job_date_value']['format'] = 'short';
+
+  /* Display: Nyhetsbrev Blokk */
   $handler = $view->new_display('block', 'Nyhetsbrev Blokk', 'block_2');
-  $handler->override_option('fields', array(
-    'phpcode' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'value' => '<?php
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Customfield: PHP-kode */
+  $handler->display->display_options['fields']['phpcode']['id'] = 'phpcode';
+  $handler->display->display_options['fields']['phpcode']['table'] = 'customfield';
+  $handler->display->display_options['fields']['phpcode']['field'] = 'phpcode';
+  $handler->display->display_options['fields']['phpcode']['label'] = '';
+  $handler->display->display_options['fields']['phpcode']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['phpcode']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['phpcode']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['phpcode']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['phpcode']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['phpcode']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['phpcode']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['phpcode']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['phpcode']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['phpcode']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['phpcode']['value'] = '<?php
 
 $words = explode(\' \', $data->node_title);
 
@@ -663,158 +374,75 @@ $new_title.=\' \';
 }
 print trim($new_title);
 
-?>',
-      'exclude' => 1,
-      'id' => 'phpcode',
-      'table' => 'customfield',
-      'field' => 'phpcode',
-      'override' => array(
-        'button' => 'Bruk standard',
-      ),
-      'relationship' => 'none',
-    ),
-    'title' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 1,
-        'text' => '[phpcode]',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 1,
-      'exclude' => 0,
-      'id' => 'title',
-      'table' => 'node',
-      'field' => 'title',
-      'relationship' => 'none',
-      'override' => array(
-        'button' => 'Bruk standard',
-      ),
-    ),
-    'field_job_utlyser_value' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'default',
-      'multiple' => array(
-        'group' => TRUE,
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_reversed' => FALSE,
-      ),
-      'exclude' => 0,
-      'id' => 'field_job_utlyser_value',
-      'table' => 'node_data_field_job_utlyser',
-      'field' => 'field_job_utlyser_value',
-      'override' => array(
-        'button' => 'Bruk standard',
-      ),
-      'relationship' => 'none',
-    ),
-    'field_job_date_value' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'default',
-      'multiple' => array(
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_to' => '',
-        'group' => '',
-      ),
-      'repeat' => array(
-        'show_repeat_rule' => '',
-      ),
-      'fromto' => array(
-        'fromto' => 'both',
-      ),
-      'exclude' => 0,
-      'id' => 'field_job_date_value',
-      'table' => 'node_data_field_job_date',
-      'field' => 'field_job_date_value',
-      'override' => array(
-        'button' => 'Bruk standard',
-      ),
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('items_per_page', 0);
-  $handler->override_option('block_description', '');
-  $handler->override_option('block_caching', -1);
+?>';
+  /* Felt: Node: Tittel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '[phpcode]';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  /* Felt: Innhold: Utlyser (field_job_utlyser) */
+  $handler->display->display_options['fields']['field_job_utlyser_value']['id'] = 'field_job_utlyser_value';
+  $handler->display->display_options['fields']['field_job_utlyser_value']['table'] = 'node_data_field_job_utlyser';
+  $handler->display->display_options['fields']['field_job_utlyser_value']['field'] = 'field_job_utlyser_value';
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['label_type'] = 'none';
+  /* Felt: Innhold: Søknadsfrist (field_job_date) */
+  $handler->display->display_options['fields']['field_job_date_value']['id'] = 'field_job_date_value';
+  $handler->display->display_options['fields']['field_job_date_value']['table'] = 'node_data_field_job_date';
+  $handler->display->display_options['fields']['field_job_date_value']['field'] = 'field_job_date_value';
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['label_type'] = 'none';
+
+  /* Display: Nettside */
   $handler = $view->new_display('page', 'Nettside', 'page_1');
-  $handler->override_option('items_per_page', 0);
-  $handler->override_option('path', 'stilling');
-  $handler->override_option('menu', array(
-    'type' => 'normal',
-    'title' => 'Nye jobber',
-    'description' => '',
-    'weight' => '-10',
-    'name' => 'primary-links',
-  ));
-  $handler->override_option('tab_options', array(
-    'type' => 'none',
-    'title' => '',
-    'description' => '',
-    'weight' => 0,
-    'name' => 'navigation',
-  ));
+  $handler->display->display_options['path'] = 'stilling';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'Nye jobber';
+  $handler->display->display_options['menu']['weight'] = '-10';
+  $handler->display->display_options['menu']['name'] = 'primary-links';
+  $translatables['jobs'] = array(
+    t('Standardverdier'),
+    t('mer'),
+    t('Søk'),
+    t('Nullstill'),
+    t('Sortér på'),
+    t('Asc'),
+    t('Desc'),
+    t('[phpcode]'),
+    t('Blokk'),
+    t('Ledige stillinger'),
+    t('Nyhetsbrev Blokk'),
+    t('Nettside'),
+  );
 
   $views[$view->name] = $view;
 
@@ -824,424 +452,173 @@ print trim($new_title);
   $view->description = '';
   $view->tag = '';
   $view->base_table = 'node';
+  $view->human_name = '';
   $view->core = 6;
-  $view->api_version = '2';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Standardverdier */
   $handler = $view->new_display('default', 'Standardverdier', 'default');
-  $handler->override_option('fields', array(
-    'field_main_image_fid' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'absolute' => 0,
-        'link_class' => '',
-        'alt' => '',
-        'rel' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'hide_alter_empty' => 1,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'kr_jobs_block_linked',
-      'multiple' => array(
-        'group' => 1,
-        'multiple_number' => '1',
-        'multiple_from' => '0',
-        'multiple_reversed' => 0,
-      ),
-      'exclude' => 0,
-      'id' => 'field_main_image_fid',
-      'table' => 'node_data_field_main_image',
-      'field' => 'field_main_image_fid',
-      'relationship' => 'none',
-    ),
-    'title' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'absolute' => 0,
-        'link_class' => '',
-        'alt' => '',
-        'rel' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'hide_alter_empty' => 1,
-      'link_to_node' => 1,
-      'exclude' => 0,
-      'id' => 'title',
-      'table' => 'node',
-      'field' => 'title',
-      'relationship' => 'none',
-    ),
-    'field_job_utlyser_value' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'absolute' => 0,
-        'link_class' => '',
-        'alt' => '',
-        'rel' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'hide_alter_empty' => 1,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'default',
-      'multiple' => array(
-        'group' => TRUE,
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_reversed' => FALSE,
-      ),
-      'exclude' => 0,
-      'id' => 'field_job_utlyser_value',
-      'table' => 'node_data_field_job_utlyser',
-      'field' => 'field_job_utlyser_value',
-      'relationship' => 'none',
-    ),
-    'field_job_date_value' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'absolute' => 0,
-        'link_class' => '',
-        'alt' => '',
-        'rel' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'hide_alter_empty' => 1,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'default',
-      'multiple' => array(
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_to' => '',
-        'group' => '',
-      ),
-      'repeat' => array(
-        'show_repeat_rule' => '',
-      ),
-      'fromto' => array(
-        'fromto' => 'both',
-      ),
-      'exclude' => 0,
-      'id' => 'field_job_date_value',
-      'table' => 'node_data_field_job_date',
-      'field' => 'field_job_date_value',
-      'relationship' => 'none',
-    ),
-    'field_stilling_premium_value' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'absolute' => 0,
-        'link_class' => '',
-        'alt' => '',
-        'rel' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'hide_alter_empty' => 0,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'default',
-      'multiple' => array(
-        'group' => TRUE,
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_reversed' => FALSE,
-      ),
-      'exclude' => 1,
-      'id' => 'field_stilling_premium_value',
-      'table' => 'node_data_field_stilling_premium',
-      'field' => 'field_stilling_premium_value',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('sorts', array(
-    'field_stilling_premium_value' => array(
-      'order' => 'DESC',
-      'delta' => -1,
-      'id' => 'field_stilling_premium_value',
-      'table' => 'node_data_field_stilling_premium',
-      'field' => 'field_stilling_premium_value',
-      'relationship' => 'none',
-    ),
-    'field_job_date_value' => array(
-      'order' => 'ASC',
-      'delta' => -1,
-      'id' => 'field_job_date_value',
-      'table' => 'node_data_field_job_date',
-      'field' => 'field_job_date_value',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('arguments', array(
-    'name' => array(
-      'default_action' => 'ignore',
-      'style_plugin' => 'default_summary',
-      'style_options' => array(),
-      'wildcard' => 'all',
-      'wildcard_substitution' => 'Siste nytt',
-      'title' => '',
-      'breadcrumb' => '',
-      'default_argument_type' => 'fixed',
-      'default_argument' => '',
-      'validate_type' => 'taxonomy_term',
-      'validate_fail' => 'not found',
-      'glossary' => 0,
-      'ignorecase' => 0,
-      'limit' => '0',
-      'case' => 'none',
-      'path_case' => 'none',
-      'transform_dash' => 0,
-      'add_table' => 0,
-      'require_value' => 0,
-      'id' => 'name',
-      'table' => 'term_data',
-      'field' => 'name',
-      'validate_user_argument_type' => 'uid',
-      'validate_user_roles' => array(
-        2 => 0,
-        11 => 0,
-        12 => 0,
-        3 => 0,
-        5 => 0,
-        4 => 0,
-        10 => 0,
-        9 => 0,
-        13 => 0,
-        8 => 0,
-        7 => 0,
-        6 => 0,
-      ),
-      'me_redirect' => 0,
-      'me_validate_user_argument_type' => 'uid',
-      'me_validate_user_roles' => array(
-        2 => 0,
-        11 => 0,
-        12 => 0,
-        3 => 0,
-        5 => 0,
-        4 => 0,
-        10 => 0,
-        9 => 0,
-        13 => 0,
-        8 => 0,
-        7 => 0,
-        6 => 0,
-      ),
-      'relationship' => 'none',
-      'default_options_div_prefix' => '',
-      'default_taxonomy_tid_term_page' => 0,
-      'default_taxonomy_tid_node' => 0,
-      'default_taxonomy_tid_limit' => 0,
-      'default_taxonomy_tid_vids' => array(
-        43 => 0,
-        44 => 0,
-        45 => 0,
-        46 => 0,
-      ),
-      'default_argument_user' => 0,
-      'default_argument_fixed' => '',
-      'default_argument_php' => '',
-      'validate_argument_node_type' => array(
-        'blog' => 0,
-        'poll' => 0,
-        'article' => 0,
-        'author' => 0,
-        'op_image' => 0,
-        'resource' => 0,
-        'barometer' => 0,
-        'simplenews' => 0,
-        'chart' => 0,
-        'table' => 0,
-        'tema' => 0,
-        'bildegalleri' => 0,
-        'job' => 0,
-        'multichoice' => 0,
-        'quiz' => 0,
-        'panel' => 0,
-        'book' => 0,
-        'eksternt_blogginnlegg' => 0,
-        'ekstern_blogg' => 0,
-        'kommune' => 0,
-        'ordforer' => 0,
-        'page' => 0,
-        'topichub' => 0,
-        'webform' => 0,
-      ),
-      'validate_argument_node_access' => 0,
-      'validate_argument_nid_type' => 'nid',
-      'validate_argument_vocabulary' => array(
-        46 => 46,
-        43 => 0,
-        44 => 0,
-        45 => 0,
-      ),
-      'validate_argument_type' => 'name',
-      'validate_argument_transform' => 0,
-      'validate_user_restrict_roles' => 0,
-      'validate_argument_php' => '',
-      'me_validate_user_restrict_roles' => 0,
-    ),
-  ));
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'job' => 'job',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-    ),
-    'field_job_date_value' => array(
-      'operator' => '>=',
-      'value' => array(
-        'value' => NULL,
-        'min' => NULL,
-        'max' => NULL,
-        'default_date' => 'now',
-        'default_to_date' => '',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'date_fields' => array(
-        'node_data_field_job_date.field_job_date_value' => 'node_data_field_job_date.field_job_date_value',
-      ),
-      'date_method' => 'OR',
-      'granularity' => 'day',
-      'form_type' => 'date_select',
-      'default_date' => 'now',
-      'default_to_date' => '',
-      'year_range' => '-3:+3',
-      'id' => 'field_job_date_value',
-      'table' => 'node_data_field_job_date',
-      'field' => 'field_job_date_value',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('access', array(
-    'type' => 'none',
-  ));
-  $handler->override_option('cache', array(
-    'type' => 'none',
-  ));
-  $handler->override_option('title', 'Ledige stillinger');
-  $handler->override_option('css_class', 'stillinger');
-  $handler->override_option('items_per_page', 20);
-  $handler->override_option('use_pager', 'mini');
-  $handler->override_option('style_plugin', 'list');
-  $handler->override_option('style_options', array(
-    'grouping' => '',
-    'type' => 'ul',
-  ));
+  $handler->display->display_options['title'] = 'Ledige stillinger';
+  $handler->display->display_options['css_class'] = 'stillinger';
+  $handler->display->display_options['use_more_text'] = 'mer';
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Søk';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Nullstill';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sortér på';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = 20;
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Elementer per side';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Alle -';
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Felt: Innhold: Main Image (field_main_image) */
+  $handler->display->display_options['fields']['field_main_image_fid']['id'] = 'field_main_image_fid';
+  $handler->display->display_options['fields']['field_main_image_fid']['table'] = 'node_data_field_main_image';
+  $handler->display->display_options['fields']['field_main_image_fid']['field'] = 'field_main_image_fid';
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_main_image_fid']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['label_type'] = 'none';
+  $handler->display->display_options['fields']['field_main_image_fid']['format'] = 'kr_jobs_block_linked';
+  $handler->display->display_options['fields']['field_main_image_fid']['multiple']['group'] = 1;
+  $handler->display->display_options['fields']['field_main_image_fid']['multiple']['multiple_number'] = '1';
+  $handler->display->display_options['fields']['field_main_image_fid']['multiple']['multiple_from'] = '0';
+  $handler->display->display_options['fields']['field_main_image_fid']['multiple']['multiple_reversed'] = 0;
+  /* Felt: Node: Tittel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  /* Felt: Innhold: Utlyser (field_job_utlyser) */
+  $handler->display->display_options['fields']['field_job_utlyser_value']['id'] = 'field_job_utlyser_value';
+  $handler->display->display_options['fields']['field_job_utlyser_value']['table'] = 'node_data_field_job_utlyser';
+  $handler->display->display_options['fields']['field_job_utlyser_value']['field'] = 'field_job_utlyser_value';
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['label_type'] = 'none';
+  /* Felt: Innhold: Søknadsfrist (field_job_date) */
+  $handler->display->display_options['fields']['field_job_date_value']['id'] = 'field_job_date_value';
+  $handler->display->display_options['fields']['field_job_date_value']['table'] = 'node_data_field_job_date';
+  $handler->display->display_options['fields']['field_job_date_value']['field'] = 'field_job_date_value';
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_job_date_value']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_job_date_value']['label_type'] = 'none';
+  /* Felt: Innhold: Er en premium utlysning (field_stilling_premium) */
+  $handler->display->display_options['fields']['field_stilling_premium_value']['id'] = 'field_stilling_premium_value';
+  $handler->display->display_options['fields']['field_stilling_premium_value']['table'] = 'node_data_field_stilling_premium';
+  $handler->display->display_options['fields']['field_stilling_premium_value']['field'] = 'field_stilling_premium_value';
+  $handler->display->display_options['fields']['field_stilling_premium_value']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_stilling_premium_value']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_stilling_premium_value']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_stilling_premium_value']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_stilling_premium_value']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_stilling_premium_value']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_stilling_premium_value']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_stilling_premium_value']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_stilling_premium_value']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_stilling_premium_value']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_stilling_premium_value']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_stilling_premium_value']['hide_alter_empty'] = 0;
+  $handler->display->display_options['fields']['field_stilling_premium_value']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_stilling_premium_value']['label_type'] = 'none';
+  /* Sorteringskriterium: Innhold: Er en premium utlysning (field_stilling_premium) */
+  $handler->display->display_options['sorts']['field_stilling_premium_value']['id'] = 'field_stilling_premium_value';
+  $handler->display->display_options['sorts']['field_stilling_premium_value']['table'] = 'node_data_field_stilling_premium';
+  $handler->display->display_options['sorts']['field_stilling_premium_value']['field'] = 'field_stilling_premium_value';
+  $handler->display->display_options['sorts']['field_stilling_premium_value']['order'] = 'DESC';
+  /* Sorteringskriterium: Innhold: Søknadsfrist (field_job_date) */
+  $handler->display->display_options['sorts']['field_job_date_value']['id'] = 'field_job_date_value';
+  $handler->display->display_options['sorts']['field_job_date_value']['table'] = 'node_data_field_job_date';
+  $handler->display->display_options['sorts']['field_job_date_value']['field'] = 'field_job_date_value';
+  /* Argument: Taksonomi: Term */
+  $handler->display->display_options['arguments']['name']['id'] = 'name';
+  $handler->display->display_options['arguments']['name']['table'] = 'term_data';
+  $handler->display->display_options['arguments']['name']['field'] = 'name';
+  $handler->display->display_options['arguments']['name']['style_plugin'] = 'default_summary';
+  $handler->display->display_options['arguments']['name']['wildcard_substitution'] = 'Siste nytt';
+  $handler->display->display_options['arguments']['name']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['name']['validate_type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['name']['validate_options']['vids'] = array(
+    46 => 46,
+    43 => 0,
+    44 => 0,
+    45 => 0,
+  );
+  $handler->display->display_options['arguments']['name']['validate_options']['type'] = 'name';
+  $handler->display->display_options['arguments']['name']['validate_options']['transform'] = 0;
+  $handler->display->display_options['arguments']['name']['glossary'] = 0;
+  $handler->display->display_options['arguments']['name']['ignorecase'] = 0;
+  $handler->display->display_options['arguments']['name']['limit'] = '0';
+  $handler->display->display_options['arguments']['name']['transform_dash'] = 0;
+  $handler->display->display_options['arguments']['name']['add_table'] = 0;
+  $handler->display->display_options['arguments']['name']['require_value'] = 0;
+  /* Filtrer: Node: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'job' => 'job',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
+  /* Filtrer: Innhold: Søknadsfrist (field_job_date) */
+  $handler->display->display_options['filters']['field_job_date_value']['id'] = 'field_job_date_value';
+  $handler->display->display_options['filters']['field_job_date_value']['table'] = 'node_data_field_job_date';
+  $handler->display->display_options['filters']['field_job_date_value']['field'] = 'field_job_date_value';
+  $handler->display->display_options['filters']['field_job_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_job_date_value']['expose']['operator'] = FALSE;
+  $handler->display->display_options['filters']['field_job_date_value']['date_fields'] = array(
+    'node_data_field_job_date.field_job_date_value' => 'node_data_field_job_date.field_job_date_value',
+  );
+  $handler->display->display_options['filters']['field_job_date_value']['default_date'] = 'now';
+
+  /* Display: Ledige stillinger */
   $handler = $view->new_display('panel_pane', 'Ledige stillinger', 'panel_pane_1');
-  $handler->override_option('pane_title', '');
-  $handler->override_option('pane_description', '');
-  $handler->override_option('pane_category', array(
-    'name' => 'View panes',
-    'weight' => 0,
-  ));
-  $handler->override_option('allow', array(
-    'use_pager' => FALSE,
-    'items_per_page' => FALSE,
-    'offset' => FALSE,
-    'link_to_view' => FALSE,
-    'more_link' => FALSE,
-    'path_override' => FALSE,
-    'title_override' => FALSE,
-    'exposed_form' => FALSE,
-    'fields_override' => FALSE,
-  ));
-  $handler->override_option('argument_input', array(
+  $handler->display->display_options['argument_input'] = array(
     'name' => array(
       'type' => 'context',
       'context' => 'term.name',
@@ -1250,9 +627,22 @@ print trim($new_title);
       'fixed' => '',
       'label' => 'Stillingsterm',
     ),
-  ));
-  $handler->override_option('link_to_view', 0);
-  $handler->override_option('inherit_panels_path', 0);
+  );
+  $translatables['ledige_stillinger'] = array(
+    t('Standardverdier'),
+    t('Ledige stillinger'),
+    t('mer'),
+    t('Søk'),
+    t('Nullstill'),
+    t('Sortér på'),
+    t('Asc'),
+    t('Desc'),
+    t('Elementer per side'),
+    t('- Alle -'),
+    t('Offset'),
+    t('Siste nytt'),
+    t('View panes'),
+  );
 
   $views[$view->name] = $view;
 
@@ -1262,222 +652,126 @@ print trim($new_title);
   $view->description = '';
   $view->tag = '';
   $view->base_table = 'node';
+  $view->human_name = '';
   $view->core = 6;
-  $view->api_version = '2';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Standardverdier */
   $handler = $view->new_display('default', 'Standardverdier', 'default');
-  $handler->override_option('fields', array(
-    'field_main_image_fid' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'absolute' => 0,
-        'link_class' => '',
-        'alt' => '',
-        'rel' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'hide_alter_empty' => 1,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'premium_stilling_liste_linked',
-      'multiple' => array(
-        'group' => 1,
-        'multiple_number' => '1',
-        'multiple_from' => '0',
-        'multiple_reversed' => 0,
-      ),
-      'exclude' => 0,
-      'id' => 'field_main_image_fid',
-      'table' => 'node_data_field_main_image',
-      'field' => 'field_main_image_fid',
-      'relationship' => 'none',
-    ),
-    'title' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'absolute' => 0,
-        'link_class' => '',
-        'alt' => '',
-        'rel' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'hide_alter_empty' => 1,
-      'link_to_node' => 1,
-      'exclude' => 0,
-      'id' => 'title',
-      'table' => 'node',
-      'field' => 'title',
-      'relationship' => 'none',
-    ),
-    'field_job_utlyser_value' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'absolute' => 0,
-        'link_class' => '',
-        'alt' => '',
-        'rel' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'hide_alter_empty' => 1,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'default',
-      'multiple' => array(
-        'group' => TRUE,
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_reversed' => FALSE,
-      ),
-      'exclude' => 0,
-      'id' => 'field_job_utlyser_value',
-      'table' => 'node_data_field_job_utlyser',
-      'field' => 'field_job_utlyser_value',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('sorts', array(
-    'field_job_date_value' => array(
-      'order' => 'DESC',
-      'delta' => -1,
-      'id' => 'field_job_date_value',
-      'table' => 'node_data_field_job_date',
-      'field' => 'field_job_date_value',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'job' => 'job',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-    ),
-    'field_job_date_value' => array(
-      'operator' => '>=',
-      'value' => array(
-        'value' => NULL,
-        'min' => NULL,
-        'max' => NULL,
-        'default_date' => 'now',
-        'default_to_date' => '',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'date_fields' => array(
-        'node_data_field_job_date.field_job_date_value' => 'node_data_field_job_date.field_job_date_value',
-      ),
-      'date_method' => 'OR',
-      'granularity' => 'day',
-      'form_type' => 'date_select',
-      'default_date' => 'now',
-      'default_to_date' => '',
-      'year_range' => '-3:+3',
-      'id' => 'field_job_date_value',
-      'table' => 'node_data_field_job_date',
-      'field' => 'field_job_date_value',
-      'relationship' => 'none',
-    ),
-    'field_stilling_premium_value' => array(
-      'operator' => '=',
-      'value' => array(
-        'value' => '1',
-        'min' => '',
-        'max' => '',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'field_stilling_premium_value',
-      'table' => 'node_data_field_stilling_premium',
-      'field' => 'field_stilling_premium_value',
-      'override' => array(
-        'button' => 'Overstyr',
-      ),
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('access', array(
-    'type' => 'none',
-  ));
-  $handler->override_option('cache', array(
-    'type' => 'none',
-  ));
-  $handler->override_option('title', 'Fremhevede utlysninger');
-  $handler->override_option('css_class', 'premiumstillingsblock');
-  $handler->override_option('items_per_page', 4);
-  $handler->override_option('style_plugin', 'list');
-  $handler->override_option('style_options', array(
-    'grouping' => '',
-    'type' => 'ul',
-  ));
+  $handler->display->display_options['title'] = 'Fremhevede utlysninger';
+  $handler->display->display_options['css_class'] = 'premiumstillingsblock';
+  $handler->display->display_options['use_more_text'] = 'mer';
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Søk';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Nullstill';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sortér på';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = 4;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Felt: Innhold: Main Image (field_main_image) */
+  $handler->display->display_options['fields']['field_main_image_fid']['id'] = 'field_main_image_fid';
+  $handler->display->display_options['fields']['field_main_image_fid']['table'] = 'node_data_field_main_image';
+  $handler->display->display_options['fields']['field_main_image_fid']['field'] = 'field_main_image_fid';
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_main_image_fid']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['label_type'] = 'none';
+  $handler->display->display_options['fields']['field_main_image_fid']['format'] = 'premium_stilling_liste_linked';
+  $handler->display->display_options['fields']['field_main_image_fid']['multiple']['group'] = 1;
+  $handler->display->display_options['fields']['field_main_image_fid']['multiple']['multiple_number'] = '1';
+  $handler->display->display_options['fields']['field_main_image_fid']['multiple']['multiple_from'] = '0';
+  $handler->display->display_options['fields']['field_main_image_fid']['multiple']['multiple_reversed'] = 0;
+  /* Felt: Node: Tittel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  /* Felt: Innhold: Utlyser (field_job_utlyser) */
+  $handler->display->display_options['fields']['field_job_utlyser_value']['id'] = 'field_job_utlyser_value';
+  $handler->display->display_options['fields']['field_job_utlyser_value']['table'] = 'node_data_field_job_utlyser';
+  $handler->display->display_options['fields']['field_job_utlyser_value']['field'] = 'field_job_utlyser_value';
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_job_utlyser_value']['label_type'] = 'none';
+  /* Sorteringskriterium: Innhold: Søknadsfrist (field_job_date) */
+  $handler->display->display_options['sorts']['field_job_date_value']['id'] = 'field_job_date_value';
+  $handler->display->display_options['sorts']['field_job_date_value']['table'] = 'node_data_field_job_date';
+  $handler->display->display_options['sorts']['field_job_date_value']['field'] = 'field_job_date_value';
+  $handler->display->display_options['sorts']['field_job_date_value']['order'] = 'DESC';
+  /* Filtrer: Node: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'job' => 'job',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
+  /* Filtrer: Innhold: Søknadsfrist (field_job_date) */
+  $handler->display->display_options['filters']['field_job_date_value']['id'] = 'field_job_date_value';
+  $handler->display->display_options['filters']['field_job_date_value']['table'] = 'node_data_field_job_date';
+  $handler->display->display_options['filters']['field_job_date_value']['field'] = 'field_job_date_value';
+  $handler->display->display_options['filters']['field_job_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_job_date_value']['expose']['operator'] = FALSE;
+  $handler->display->display_options['filters']['field_job_date_value']['date_fields'] = array(
+    'node_data_field_job_date.field_job_date_value' => 'node_data_field_job_date.field_job_date_value',
+  );
+  $handler->display->display_options['filters']['field_job_date_value']['default_date'] = 'now';
+  /* Filtrer: Innhold: Er en premium utlysning (field_stilling_premium) */
+  $handler->display->display_options['filters']['field_stilling_premium_value']['id'] = 'field_stilling_premium_value';
+  $handler->display->display_options['filters']['field_stilling_premium_value']['table'] = 'node_data_field_stilling_premium';
+  $handler->display->display_options['filters']['field_stilling_premium_value']['field'] = 'field_stilling_premium_value';
+  $handler->display->display_options['filters']['field_stilling_premium_value']['value']['value'] = '1';
+  $handler->display->display_options['filters']['field_stilling_premium_value']['expose']['operator'] = FALSE;
+
+  /* Display: Premium stillinger */
   $handler = $view->new_display('block', 'Premium stillinger', 'block_1');
-  $handler->override_option('block_description', '');
-  $handler->override_option('block_caching', -1);
+  $translatables['premium_stillinger'] = array(
+    t('Standardverdier'),
+    t('Fremhevede utlysninger'),
+    t('mer'),
+    t('Søk'),
+    t('Nullstill'),
+    t('Sortér på'),
+    t('Asc'),
+    t('Desc'),
+    t('Premium stillinger'),
+  );
 
   $views[$view->name] = $view;
 
@@ -1487,315 +781,179 @@ print trim($new_title);
   $view->description = '';
   $view->tag = '';
   $view->base_table = 'node';
+  $view->human_name = '';
   $view->core = 6;
-  $view->api_version = '2';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Standardverdier */
   $handler = $view->new_display('default', 'Standardverdier', 'default');
-  $handler->override_option('fields', array(
-    'field_stilling_geopos_openlayers_wkt' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'absolute' => 0,
-        'link_class' => '',
-        'alt' => '',
-        'rel' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'hide_alter_empty' => 1,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'openlayers_wkt',
-      'multiple' => array(
-        'group' => TRUE,
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_reversed' => FALSE,
-      ),
-      'exclude' => 0,
-      'id' => 'field_stilling_geopos_openlayers_wkt',
-      'table' => 'node_data_field_stilling_geopos',
-      'field' => 'field_stilling_geopos_openlayers_wkt',
-      'relationship' => 'none',
-    ),
-    'title' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'absolute' => 0,
-        'link_class' => '',
-        'alt' => '',
-        'rel' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'hide_alter_empty' => 1,
-      'link_to_node' => 1,
-      'exclude' => 0,
-      'id' => 'title',
-      'table' => 'node',
-      'field' => 'title',
-      'override' => array(
-        'button' => 'Overstyr',
-      ),
-      'relationship' => 'none',
-    ),
-    'field_rel_kommune_nid' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'absolute' => 0,
-        'link_class' => '',
-        'alt' => '',
-        'rel' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'hide_alter_empty' => 1,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'default',
-      'multiple' => array(
-        'group' => TRUE,
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_reversed' => FALSE,
-      ),
-      'exclude' => 0,
-      'id' => 'field_rel_kommune_nid',
-      'table' => 'node_data_field_rel_kommune',
-      'field' => 'field_rel_kommune_nid',
-      'relationship' => 'none',
-      'override' => array(
-        'button' => 'Overstyr',
-      ),
-    ),
-  ));
-  $handler->override_option('arguments', array(
-    'name' => array(
-      'default_action' => 'ignore',
-      'style_plugin' => 'default_summary',
-      'style_options' => array(),
-      'wildcard' => 'all',
-      'wildcard_substitution' => 'Siste nytt',
-      'title' => '',
-      'breadcrumb' => '',
-      'default_argument_type' => 'taxonomy_tid',
-      'default_argument' => '',
-      'validate_type' => 'taxonomy_term',
-      'validate_fail' => 'not found',
-      'glossary' => 0,
-      'ignorecase' => 0,
-      'limit' => '0',
-      'case' => 'none',
-      'path_case' => 'none',
-      'transform_dash' => 0,
-      'add_table' => 0,
-      'require_value' => 0,
-      'id' => 'name',
-      'table' => 'term_data',
-      'field' => 'name',
-      'validate_user_argument_type' => 'uid',
-      'validate_user_roles' => array(
-        2 => 0,
-        11 => 0,
-        12 => 0,
-        3 => 0,
-        5 => 0,
-        4 => 0,
-        10 => 0,
-        9 => 0,
-        13 => 0,
-        8 => 0,
-        7 => 0,
-        6 => 0,
-      ),
-      'me_redirect' => 0,
-      'me_validate_user_argument_type' => 'uid',
-      'me_validate_user_roles' => array(
-        2 => 0,
-        11 => 0,
-        12 => 0,
-        3 => 0,
-        5 => 0,
-        4 => 0,
-        10 => 0,
-        9 => 0,
-        13 => 0,
-        8 => 0,
-        7 => 0,
-        6 => 0,
-      ),
-      'override' => array(
-        'button' => 'Overstyr',
-      ),
-      'relationship' => 'none',
-      'default_options_div_prefix' => '',
-      'default_taxonomy_tid_term_page' => 0,
-      'default_taxonomy_tid_node' => 0,
-      'default_taxonomy_tid_limit' => 0,
-      'default_taxonomy_tid_vids' => array(
-        43 => 0,
-        44 => 0,
-        45 => 0,
-        46 => 0,
-      ),
-      'default_argument_user' => 0,
-      'default_argument_fixed' => '',
-      'default_argument_php' => '',
-      'validate_argument_node_type' => array(
-        'blog' => 0,
-        'poll' => 0,
-        'article' => 0,
-        'author' => 0,
-        'op_image' => 0,
-        'resource' => 0,
-        'barometer' => 0,
-        'simplenews' => 0,
-        'chart' => 0,
-        'table' => 0,
-        'tema' => 0,
-        'bildegalleri' => 0,
-        'job' => 0,
-        'multichoice' => 0,
-        'quiz' => 0,
-        'panel' => 0,
-        'book' => 0,
-        'eksternt_blogginnlegg' => 0,
-        'ekstern_blogg' => 0,
-        'kommune' => 0,
-        'ordforer' => 0,
-        'page' => 0,
-        'topichub' => 0,
-        'webform' => 0,
-      ),
-      'validate_argument_node_access' => 0,
-      'validate_argument_nid_type' => 'nid',
-      'validate_argument_vocabulary' => array(
-        46 => 46,
-        43 => 0,
-        44 => 0,
-        45 => 0,
-      ),
-      'validate_argument_type' => 'name',
-      'validate_argument_transform' => 0,
-      'validate_user_restrict_roles' => 0,
-      'validate_argument_php' => '',
-      'me_validate_user_restrict_roles' => 0,
-    ),
-  ));
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'job' => 'job',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-    ),
-    'field_stilling_geopos_openlayers_wkt' => array(
-      'operator' => 'not empty',
-      'value' => '',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-        'optional' => FALSE,
-      ),
-      'case' => 0,
-      'id' => 'field_stilling_geopos_openlayers_wkt',
-      'table' => 'node_data_field_stilling_geopos',
-      'field' => 'field_stilling_geopos_openlayers_wkt',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('access', array(
-    'type' => 'none',
-  ));
-  $handler->override_option('cache', array(
-    'type' => 'none',
-  ));
-  $handler->override_option('items_per_page', 0);
-  $handler->override_option('style_plugin', 'openlayers_data');
-  $handler->override_option('style_options', array(
-    'grouping' => '',
-    'data_source' => array(
-      'value' => 'openlayers_wkt',
-      'other_lat' => 'field_stilling_geopos_openlayers_wkt',
-      'other_lon' => 'field_stilling_geopos_openlayers_wkt',
-      'openlayers_wkt' => 'field_stilling_geopos_openlayers_wkt',
-      'other_top' => 'field_stilling_geopos_openlayers_wkt',
-      'other_right' => 'field_stilling_geopos_openlayers_wkt',
-      'other_bottom' => 'field_stilling_geopos_openlayers_wkt',
-      'other_left' => 'field_stilling_geopos_openlayers_wkt',
-      'name_field' => 'title',
-      'keep_orig_name_field' => 1,
-      'description_field' => 'field_rel_kommune_nid',
-      'keep_orig_desc_field' => 1,
-    ),
-  ));
+  $handler->display->display_options['use_more_text'] = 'mer';
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Søk';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Nullstill';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sortér på';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['style_plugin'] = 'openlayers_data';
+  $handler->display->display_options['style_options']['data_source'] = array(
+    'value' => 'openlayers_wkt',
+    'other_lat' => 'field_stilling_geopos_openlayers_wkt',
+    'other_lon' => 'field_stilling_geopos_openlayers_wkt',
+    'openlayers_wkt' => 'field_stilling_geopos_openlayers_wkt',
+    'other_top' => 'field_stilling_geopos_openlayers_wkt',
+    'other_right' => 'field_stilling_geopos_openlayers_wkt',
+    'other_bottom' => 'field_stilling_geopos_openlayers_wkt',
+    'other_left' => 'field_stilling_geopos_openlayers_wkt',
+    'name_field' => 'title',
+    'keep_orig_name_field' => 1,
+    'description_field' => 'field_rel_kommune_nid',
+    'keep_orig_desc_field' => 1,
+  );
+  /* Felt: Innhold: Hvor er dette (field_stilling_geopos) */
+  $handler->display->display_options['fields']['field_stilling_geopos_openlayers_wkt']['id'] = 'field_stilling_geopos_openlayers_wkt';
+  $handler->display->display_options['fields']['field_stilling_geopos_openlayers_wkt']['table'] = 'node_data_field_stilling_geopos';
+  $handler->display->display_options['fields']['field_stilling_geopos_openlayers_wkt']['field'] = 'field_stilling_geopos_openlayers_wkt';
+  $handler->display->display_options['fields']['field_stilling_geopos_openlayers_wkt']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_stilling_geopos_openlayers_wkt']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_stilling_geopos_openlayers_wkt']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_stilling_geopos_openlayers_wkt']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_stilling_geopos_openlayers_wkt']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_stilling_geopos_openlayers_wkt']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_stilling_geopos_openlayers_wkt']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_stilling_geopos_openlayers_wkt']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_stilling_geopos_openlayers_wkt']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_stilling_geopos_openlayers_wkt']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_stilling_geopos_openlayers_wkt']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_stilling_geopos_openlayers_wkt']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_stilling_geopos_openlayers_wkt']['label_type'] = 'none';
+  $handler->display->display_options['fields']['field_stilling_geopos_openlayers_wkt']['format'] = 'openlayers_wkt';
+  /* Felt: Node: Tittel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  /* Felt: Innhold: Kommune (field_rel_kommune) */
+  $handler->display->display_options['fields']['field_rel_kommune_nid']['id'] = 'field_rel_kommune_nid';
+  $handler->display->display_options['fields']['field_rel_kommune_nid']['table'] = 'node_data_field_rel_kommune';
+  $handler->display->display_options['fields']['field_rel_kommune_nid']['field'] = 'field_rel_kommune_nid';
+  $handler->display->display_options['fields']['field_rel_kommune_nid']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_rel_kommune_nid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_rel_kommune_nid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_rel_kommune_nid']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_rel_kommune_nid']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_rel_kommune_nid']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_rel_kommune_nid']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_rel_kommune_nid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_rel_kommune_nid']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_rel_kommune_nid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_rel_kommune_nid']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_rel_kommune_nid']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_rel_kommune_nid']['label_type'] = 'none';
+  /* Argument: Taksonomi: Term */
+  $handler->display->display_options['arguments']['name']['id'] = 'name';
+  $handler->display->display_options['arguments']['name']['table'] = 'term_data';
+  $handler->display->display_options['arguments']['name']['field'] = 'name';
+  $handler->display->display_options['arguments']['name']['style_plugin'] = 'default_summary';
+  $handler->display->display_options['arguments']['name']['wildcard_substitution'] = 'Siste nytt';
+  $handler->display->display_options['arguments']['name']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['name']['default_argument_options']['term_page'] = 0;
+  $handler->display->display_options['arguments']['name']['default_argument_options']['node'] = 0;
+  $handler->display->display_options['arguments']['name']['default_argument_options']['limit'] = 0;
+  $handler->display->display_options['arguments']['name']['default_argument_options']['vids'] = array(
+    43 => 0,
+    44 => 0,
+    45 => 0,
+    46 => 0,
+  );
+  $handler->display->display_options['arguments']['name']['validate_type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['name']['validate_options']['vids'] = array(
+    46 => 46,
+    43 => 0,
+    44 => 0,
+    45 => 0,
+  );
+  $handler->display->display_options['arguments']['name']['validate_options']['type'] = 'name';
+  $handler->display->display_options['arguments']['name']['validate_options']['transform'] = 0;
+  $handler->display->display_options['arguments']['name']['glossary'] = 0;
+  $handler->display->display_options['arguments']['name']['ignorecase'] = 0;
+  $handler->display->display_options['arguments']['name']['limit'] = '0';
+  $handler->display->display_options['arguments']['name']['transform_dash'] = 0;
+  $handler->display->display_options['arguments']['name']['add_table'] = 0;
+  $handler->display->display_options['arguments']['name']['require_value'] = 0;
+  /* Filtrer: Node: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'job' => 'job',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
+  /* Filtrer: Innhold: Hvor er dette (field_stilling_geopos) */
+  $handler->display->display_options['filters']['field_stilling_geopos_openlayers_wkt']['id'] = 'field_stilling_geopos_openlayers_wkt';
+  $handler->display->display_options['filters']['field_stilling_geopos_openlayers_wkt']['table'] = 'node_data_field_stilling_geopos';
+  $handler->display->display_options['filters']['field_stilling_geopos_openlayers_wkt']['field'] = 'field_stilling_geopos_openlayers_wkt';
+  $handler->display->display_options['filters']['field_stilling_geopos_openlayers_wkt']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_stilling_geopos_openlayers_wkt']['expose']['operator'] = FALSE;
+  $handler->display->display_options['filters']['field_stilling_geopos_openlayers_wkt']['case'] = 0;
+
+  /* Display: OpenLayers Data */
   $handler = $view->new_display('openlayers', 'OpenLayers Data', 'openlayers_1');
-  $handler->override_option('row_plugin', '');
-  $handler->override_option('displays', array());
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'openlayers_data';
+  $handler->display->display_options['style_options']['data_source'] = array(
+    'value' => 'openlayers_wkt',
+    'other_lat' => 'field_stilling_geopos_openlayers_wkt',
+    'other_lon' => 'field_stilling_geopos_openlayers_wkt',
+    'openlayers_wkt' => 'field_stilling_geopos_openlayers_wkt',
+    'other_top' => 'field_stilling_geopos_openlayers_wkt',
+    'other_right' => 'field_stilling_geopos_openlayers_wkt',
+    'other_bottom' => 'field_stilling_geopos_openlayers_wkt',
+    'other_left' => 'field_stilling_geopos_openlayers_wkt',
+    'name_field' => 'title',
+    'keep_orig_name_field' => 1,
+    'description_field' => 'field_rel_kommune_nid',
+    'keep_orig_desc_field' => 1,
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+
+  /* Display: Blokk */
   $handler = $view->new_display('block', 'Blokk', 'block_1');
-  $handler->override_option('style_plugin', 'openlayers_map');
-  $handler->override_option('style_options', array(
-    'preset' => 'stillingskartpreset',
-  ));
-  $handler->override_option('block_description', '');
-  $handler->override_option('block_caching', -1);
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'openlayers_map';
+  $handler->display->display_options['style_options']['preset'] = 'stillingskartpreset';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $translatables['stillinger_kartlayer'] = array(
+    t('Standardverdier'),
+    t('mer'),
+    t('Søk'),
+    t('Nullstill'),
+    t('Sortér på'),
+    t('Asc'),
+    t('Desc'),
+    t('Siste nytt'),
+    t('OpenLayers Data'),
+    t('Blokk'),
+  );
 
   $views[$view->name] = $view;
 
@@ -1805,239 +963,141 @@ print trim($new_title);
   $view->description = '';
   $view->tag = '';
   $view->base_table = 'node';
+  $view->human_name = '';
   $view->core = 6;
-  $view->api_version = '2';
+  $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Standardverdier */
   $handler = $view->new_display('default', 'Standardverdier', 'default');
-  $handler->override_option('relationships', array(
-    'term_node_tid' => array(
-      'label' => 'ord',
-      'required' => 1,
-      'vids' => array(
-        46 => 46,
-        43 => 0,
-        44 => 0,
-        45 => 0,
-      ),
-      'id' => 'term_node_tid',
-      'table' => 'node',
-      'field' => 'term_node_tid',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('fields', array(
-    'name' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 1,
-        'text' => '<a href="/stillinger/[name]">[name]</a>',
-        'make_link' => 0,
-        'path' => '',
-        'absolute' => 0,
-        'link_class' => '',
-        'alt' => '',
-        'rel' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'hide_alter_empty' => 1,
-      'link_to_taxonomy' => 0,
-      'exclude' => 0,
-      'id' => 'name',
-      'table' => 'term_data',
-      'field' => 'name',
-      'relationship' => 'term_node_tid',
-      'override' => array(
-        'button' => 'Overstyr',
-      ),
-    ),
-    'name_1' => array(
-      'label' => 'Vokabularets navn',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '<a href="/stillinger/[name_1]">[name]</a>',
-        'make_link' => 0,
-        'path' => '',
-        'absolute' => 0,
-        'link_class' => '',
-        'alt' => '',
-        'rel' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'hide_alter_empty' => 1,
-      'exclude' => 1,
-      'id' => 'name_1',
-      'table' => 'vocabulary',
-      'field' => 'name',
-      'relationship' => 'none',
-      'override' => array(
-        'button' => 'Overstyr',
-      ),
-    ),
-    'nid' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 1,
-        'text' => ' ([nid])',
-        'make_link' => 0,
-        'path' => '',
-        'absolute' => 0,
-        'link_class' => '',
-        'alt' => '',
-        'rel' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'hide_alter_empty' => 1,
-      'link_to_node' => 0,
-      'exclude' => 0,
-      'id' => 'nid',
-      'table' => 'node',
-      'field' => 'nid',
-      'relationship' => 'none',
-    ),
-    'views_sql_groupedfields' => array(
-      'label' => 'Group By Fields',
-      'alter' => array(
-        'alter_text' => FALSE,
-        'text' => '',
-        'make_link' => FALSE,
-        'path' => '',
-        'absolute' => '',
-        'alt' => '',
-        'rel' => '',
-        'link_class' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'trim' => FALSE,
-        'max_length' => '',
-        'word_boundary' => TRUE,
-        'ellipsis' => TRUE,
-        'strip_tags' => FALSE,
-        'html' => FALSE,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'hide_alter_empty' => 1,
-      'exclude' => '1',
-      'id' => 'views_sql_groupedfields',
-      'table' => 'views_groupby',
-      'field' => 'views_sql_groupedfields',
-      'relationship' => 'none',
-      'views_groupby_fields_to_group' => array(
-        'name' => 'name',
-        'name_1' => 'name_1',
-      ),
-      'views_groupby_sql_function' => 'count',
-      'views_groupby_fields_to_aggregate' => array(
-        'nid' => 'nid',
-      ),
-      'views_groupby_field_sortby' => 'name',
-      'views_groupby_sortby_direction' => 'asc',
-    ),
-  ));
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'job' => 'job',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-    ),
-    'field_job_date_value' => array(
-      'operator' => '>=',
-      'value' => array(
-        'value' => NULL,
-        'min' => NULL,
-        'max' => NULL,
-        'default_date' => 'now',
-        'default_to_date' => '',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'date_fields' => array(
-        'node_data_field_job_date.field_job_date_value' => 'node_data_field_job_date.field_job_date_value',
-      ),
-      'date_method' => 'OR',
-      'granularity' => 'day',
-      'form_type' => 'date_select',
-      'default_date' => 'now',
-      'default_to_date' => '',
-      'year_range' => '-3:+3',
-      'id' => 'field_job_date_value',
-      'table' => 'node_data_field_job_date',
-      'field' => 'field_job_date_value',
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('access', array(
-    'type' => 'none',
-  ));
-  $handler->override_option('cache', array(
-    'type' => 'none',
-  ));
-  $handler->override_option('title', 'Stillingskategorier');
-  $handler->override_option('style_plugin', 'list');
-  $handler->override_option('row_options', array(
-    'inline' => array(
-      'name' => 'name',
-      'nid' => 'nid',
-    ),
-    'separator' => '',
-    'hide_empty' => 0,
-  ));
+  $handler->display->display_options['title'] = 'Stillingskategorier';
+  $handler->display->display_options['use_more_text'] = 'mer';
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Søk';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Nullstill';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sortér på';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'name' => 'name',
+    'nid' => 'nid',
+  );
+  $handler->display->display_options['row_options']['hide_empty'] = 0;
+  /* Relasjon: Taksonomi: Terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['required'] = 1;
+  $handler->display->display_options['relationships']['term_node_tid']['vids'] = array(
+    46 => 46,
+    43 => 0,
+    44 => 0,
+    45 => 0,
+  );
+  /* Felt: Taksonomi: Term */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['relationship'] = 'term_node_tid';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['alter_text'] = 1;
+  $handler->display->display_options['fields']['name']['alter']['text'] = '<a href="/stillinger/[name]">[name]</a>';
+  $handler->display->display_options['fields']['name']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['name']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['name']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['name']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['name']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = 0;
+  /* Felt: Taksonomi: Vokabularets navn */
+  $handler->display->display_options['fields']['name_1']['id'] = 'name_1';
+  $handler->display->display_options['fields']['name_1']['table'] = 'vocabulary';
+  $handler->display->display_options['fields']['name_1']['field'] = 'name';
+  $handler->display->display_options['fields']['name_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['name_1']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['name_1']['alter']['text'] = '<a href="/stillinger/[name_1]">[name]</a>';
+  $handler->display->display_options['fields']['name_1']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['name_1']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['name_1']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['name_1']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['name_1']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['name_1']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['name_1']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['name_1']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['name_1']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['name_1']['hide_alter_empty'] = 1;
+  /* Felt: Node: NID */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['alter']['alter_text'] = 1;
+  $handler->display->display_options['fields']['nid']['alter']['text'] = ' ([nid])';
+  $handler->display->display_options['fields']['nid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['nid']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['nid']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['nid']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['nid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['nid']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['nid']['link_to_node'] = 0;
+  /* Felt: SQL Aggregation: Group By Fields */
+  $handler->display->display_options['fields']['views_sql_groupedfields']['id'] = 'views_sql_groupedfields';
+  $handler->display->display_options['fields']['views_sql_groupedfields']['table'] = 'views_groupby';
+  $handler->display->display_options['fields']['views_sql_groupedfields']['field'] = 'views_sql_groupedfields';
+  $handler->display->display_options['fields']['views_sql_groupedfields']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['views_sql_groupedfields']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['views_sql_groupedfields']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['views_sql_groupedfields']['hide_alter_empty'] = 1;
+  /* Filtrer: Node: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'job' => 'job',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
+  /* Filtrer: Innhold: Søknadsfrist (field_job_date) */
+  $handler->display->display_options['filters']['field_job_date_value']['id'] = 'field_job_date_value';
+  $handler->display->display_options['filters']['field_job_date_value']['table'] = 'node_data_field_job_date';
+  $handler->display->display_options['filters']['field_job_date_value']['field'] = 'field_job_date_value';
+  $handler->display->display_options['filters']['field_job_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_job_date_value']['expose']['operator'] = FALSE;
+  $handler->display->display_options['filters']['field_job_date_value']['date_fields'] = array(
+    'node_data_field_job_date.field_job_date_value' => 'node_data_field_job_date.field_job_date_value',
+  );
+  $handler->display->display_options['filters']['field_job_date_value']['default_date'] = 'now';
+
+  /* Display: Blokk */
   $handler = $view->new_display('block', 'Blokk', 'block_1');
-  $handler->override_option('block_description', '');
-  $handler->override_option('block_caching', -1);
+  $translatables['stillingskategorier_med_teller'] = array(
+    t('Standardverdier'),
+    t('Stillingskategorier'),
+    t('mer'),
+    t('Søk'),
+    t('Nullstill'),
+    t('Sortér på'),
+    t('Asc'),
+    t('Desc'),
+    t('ord'),
+    t('<a href="/stillinger/[name]">[name]</a>'),
+    t('Vokabularets navn'),
+    t('<a href="/stillinger/[name_1]">[name]</a>'),
+    t(' ([nid])'),
+    t('Group By Fields'),
+    t('Blokk'),
+  );
 
   $views[$view->name] = $view;
 

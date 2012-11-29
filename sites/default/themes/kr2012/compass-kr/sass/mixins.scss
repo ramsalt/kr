@@ -856,3 +856,41 @@ $logos: sprite-map("logo/*.png");
     }
   }
 }
+@mixin jobbliste{
+  .jobbliste{
+    ul{
+      li{
+        margin: 0px;
+        list-style: none;
+        float: left;
+        margin-bottom: 1em;
+        width: 100%;
+        .bilde{
+          float: left;
+          width: 30%;
+          text-align: center;
+        }
+        .andre{
+          float: left;
+          width: 68%;
+          margin-left: 2%;
+          font-family: Arial;
+          font-size: 0.7em;
+          a{
+            text-decoration: none;
+            color: #333333;
+          }
+          .views-field-title{
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 0.2em;
+          }
+          .views-field-field-job-utlyser-value{
+            font-weight: bold;
+            line-height: 1em;
+          }
+        }
+      }
+    }
+  }
+}

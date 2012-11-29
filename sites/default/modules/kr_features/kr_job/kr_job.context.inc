@@ -5,6 +5,7 @@
  */
 function kr_job_context_default_contexts() {
   $export = array();
+
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
@@ -34,7 +35,7 @@ function kr_job_context_default_contexts() {
     ),
   );
   $context->condition_mode = 0;
-
   $export['kr-listing_pages-job'] = $context;
+
   return $export;
 }

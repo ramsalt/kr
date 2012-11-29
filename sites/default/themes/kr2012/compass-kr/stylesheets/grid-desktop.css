@@ -109,4 +109,14 @@
     float: left;
     display: block;
   }
+
+  /* line 96, ../sass/grid-desktop.scss */
+  .page-stillinger .container-16 .inner-container .art-main {
+    width: 100%;
+    margin: 0px;
+  }
+  /* line 99, ../sass/grid-desktop.scss */
+  .page-stillinger .container-16 .inner-container .art-main .panels-flexible-region-3-top {
+    width: 100%;
+  }
 }

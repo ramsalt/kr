@@ -67,6 +67,21 @@ function kr_job_imagecache_default_presets() {
         ),
       ),
     ),
+    'v2_stilling_thumb' => array(
+      'presetname' => 'v2_stilling_thumb',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '50',
+            'height' => '',
+            'upscale' => 0,
+          ),
+        ),
+      ),
+    ),
   );
   return $items;
 }
@@ -96,6 +111,6 @@ function kr_job_node_info() {
  */
 function kr_job_views_api() {
   return array(
-    'api' => '2',
+    'api' => '3.0',
   );
 }

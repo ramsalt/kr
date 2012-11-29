@@ -5,6 +5,7 @@
  */
 function kr_job_openlayers_styles() {
   $export = array();
+
   $openlayers_styles = new stdClass;
   $openlayers_styles->disabled = FALSE; /* Edit this to true to make a default openlayers_styles disabled initially */
   $openlayers_styles->api_version = 1;
@@ -27,8 +28,8 @@ function kr_job_openlayers_styles() {
     'graphicYOffset' => -37,
     'labelAlign' => 'cm',
   );
-
   $export['arbeidsicon'] = $openlayers_styles;
+
   $openlayers_styles = new stdClass;
   $openlayers_styles->disabled = FALSE; /* Edit this to true to make a default openlayers_styles disabled initially */
   $openlayers_styles->api_version = 1;
@@ -47,7 +48,7 @@ function kr_job_openlayers_styles() {
     'graphicOpacity' => 1,
     'labelAlign' => 'cm',
   );
-
   $export['stillingskartstyle'] = $openlayers_styles;
+
   return $export;
 }
