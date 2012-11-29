@@ -1,5 +1,4 @@
 <?php
-// $Id: draggableviews.inc,v 1.7.2.37 2009/09/07 19:14:47 sevi Exp $
 
 /**
  * @file
@@ -677,14 +676,6 @@ function _draggableviews_save_hierarchy($info) {
     $value   = $prop['order'][0];
     $handler = $info['order']['field']['handler'];
     $handler->save($nid, $value);
-    
-    if(function_exists('expire_cache_derivative')){
-      $paths['front'] = '<front>';
-      expire_cache_derivative($paths);
-    }
-    $node->nid = $nid;
-    $node->type = 'article';
-    views_content_cache_update_set($node, 'article');
   }
 }
 

@@ -1,5 +1,4 @@
 <?php
-// $Id: draggableviews-view-draggabletable.tpl.php,v 1.6.2.11 2010/08/27 14:08:25 sevi Exp $
 /**
  * This file is a modified version of: views-view-table.tpl.php,v 1.8 2009/01/28 00:43:43 merlinofchaos.
  * 

@@ -1,5 +1,4 @@
 <?php
-// $Id: draggableviews_handler_book.inc,v 1.1.2.3 2009/10/15 21:39:50 sevi Exp $
 
 /**
  * @file

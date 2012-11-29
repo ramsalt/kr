@@ -1,4 +1,3 @@
-// $Id: draggableviews.js,v 1.3.2.10 2010/08/27 09:16:56 sevi Exp $
 /**
  * @file draggableviews.js
  *

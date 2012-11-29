@@ -1,5 +1,4 @@
 <?php
-// $Id: draggableviews_plugin_style_draggabletable.inc,v 1.1.2.36 2010/10/19 21:10:03 dixon Exp $
 
 /**
  * @file
@@ -259,7 +258,7 @@ class draggableviews_plugin_style_draggabletable extends views_plugin_style_tabl
       '#options' => array('repair' => t('Repair broken structures.')),
       '#description' => t('Uncheck this option if you don\'t want DraggableViews to repair broken structures.'),
       '#title' => t('Structure'),
-      '#default_value' => $current['draggableviews_repair'],
+      '#default_value' => !empty($current['draggableviews_repair']['repair']) ? array('repair') : array(),
     );
 
     if (strcmp($this->view->base_table, 'node') == 0) {

@@ -1,5 +1,4 @@
 <?php
-// $Id: draggableviews-view-draggabletable-form.tpl.php,v 1.6.2.3 2009/08/19 12:28:38 sevi Exp $
 
 /**
  * @file

@@ -1,5 +1,4 @@
 <?php
-// $Id: draggableviews_book.views.inc,v 1.1.2.1 2009/09/06 16:27:24 sevi Exp $
 /**
  * @file
  * Provide special views data and handlers for book.module

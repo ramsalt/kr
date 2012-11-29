@@ -1,5 +1,4 @@
 <?php
-// $Id: views_handler_argument_draggableviews_book.inc,v 1.1.2.1 2009/09/06 16:27:24 sevi Exp $
 
 /**
  * Argument that refers to a certain book page.
