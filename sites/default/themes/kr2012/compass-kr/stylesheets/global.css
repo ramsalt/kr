@@ -1428,7 +1428,52 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   width: 100%;
 }
 
-/* line 436, ../sass/base.scss */
+/* line 435, ../sass/base.scss */
+.node-type-job .job-title {
+  margin-bottom: 1em;
+}
+/* line 437, ../sass/base.scss */
+.node-type-job .job-title h2 {
+  color: #333333;
+  font-weight: normal;
+  font-size: 1.75em;
+}
+/* line 443, ../sass/base.scss */
+.node-type-job .body-content {
+  color: #333333;
+}
+/* line 445, ../sass/base.scss */
+.node-type-job .body-content a {
+  color: #2C91C5;
+}
+/* line 449, ../sass/base.scss */
+.node-type-job .field-field-job-utlyser {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+/* line 453, ../sass/base.scss */
+.node-type-job .field-field-teaser {
+  font-size: 1.05em;
+}
+/* line 456, ../sass/base.scss */
+.node-type-job .field-field-job-date {
+  font-family: Helvetica;
+  font-size: 1.25em;
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+}
+/* line 462, ../sass/base.scss */
+.node-type-job .field-field-job-date .field-label-inline-first {
+  font-weight: bold;
+}
+/* line 469, ../sass/base.scss */
+.node-type-job .field-field-main-image {
+  float: left;
+  padding: 0 1em 1em 0;
+}
+
+/* line 476, ../sass/base.scss */
 .galleriside ul li {
   float: left;
   margin: 0px 4px 8px 0px;
@@ -1438,11 +1483,11 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   position: relative;
   list-style: none;
 }
-/* line 444, ../sass/base.scss */
+/* line 484, ../sass/base.scss */
 .galleriside ul li .views-field-created {
   color: #EEE;
 }
-/* line 447, ../sass/base.scss */
+/* line 487, ../sass/base.scss */
 .galleriside ul li .views-field-created {
   background: none repeat scroll 0 0 #111;
   position: absolute;
@@ -1450,7 +1495,7 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   top: 0;
   z-index: 600;
 }
-/* line 454, ../sass/base.scss */
+/* line 494, ../sass/base.scss */
 .galleriside ul li .views-field-title {
   background: none repeat scroll 0 0 #111;
   bottom: 0;
@@ -1462,13 +1507,13 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   z-index: 300;
   text-decoration: none;
 }
-/* line 465, ../sass/base.scss */
+/* line 505, ../sass/base.scss */
 .galleriside ul li .views-field-title a {
   color: #EEE;
   text-decoration: none;
   font-size: 0.8em;
 }
-/* line 471, ../sass/base.scss */
+/* line 511, ../sass/base.scss */
 .galleriside ul li .views-field-field-galleri-bilde-fid a {
   bottom: 0;
   left: 0;
@@ -1477,7 +1522,7 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   text-align: center;
   top: 0;
 }
-/* line 478, ../sass/base.scss */
+/* line 518, ../sass/base.scss */
 .galleriside ul li .views-field-field-galleri-bilde-fid a img {
   padding: 0px;
   margin: 0px;

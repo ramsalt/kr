@@ -85,6 +85,15 @@
 <section>
   <div id="content-area" class="area">
   	<div class="wrapper">
+	<?php if($node->type == 'job'): ?>
+  	  <div class="container container-16 clearfix job">
+  	  	<div class="inner-container clearfix">
+  	  		<div class="grid full">
+  	  			<h1 property="dc:title">Jobbmarked</h1>
+  	  		</div>
+  	  	</div>
+  	  </div>  		
+	<?php endif; ?>
   	  <div class="container container-16 clearfix">
   	  	<div class="inner-container clearfix">
 	  	  	<div class="grid art-main">
@@ -100,7 +109,6 @@
 				      <?php endif; ?>
 				    
 				    <?php if ($tabs): print '</div><!--/ #tabs-wrapper -->'; endif; ?>    
-				
 				  
 				  <?php if ($show_messages && $messages): print $messages; endif; ?>
 				  <?php print $help; ?>

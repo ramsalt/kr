@@ -24,6 +24,10 @@ function kr_job_content_default_fields() {
         'format' => 'medium',
         'exclude' => 0,
       ),
+      'cck_blocks' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       '4' => array(
         'format' => 'default',
         'exclude' => 0,
@@ -95,6 +99,10 @@ function kr_job_content_default_fields() {
         'format' => 'default',
         'exclude' => 0,
       ),
+      'cck_blocks' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       '4' => array(
         'format' => 'default',
         'exclude' => 0,
@@ -156,6 +164,10 @@ function kr_job_content_default_fields() {
       ),
       'full' => array(
         'format' => 'thumbnail_default',
+        'exclude' => 0,
+      ),
+      'cck_blocks' => array(
+        'format' => 'default',
         'exclude' => 0,
       ),
       '4' => array(
@@ -244,6 +256,10 @@ function kr_job_content_default_fields() {
         'format' => 'hidden',
         'exclude' => 1,
       ),
+      'cck_blocks' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       '4' => array(
         'format' => 'default',
         'exclude' => 0,
@@ -326,7 +342,7 @@ function kr_job_content_default_fields() {
       'weight' => '15',
       'parent' => '',
       'label' => array(
-        'format' => 'above',
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'default',
@@ -335,6 +351,10 @@ function kr_job_content_default_fields() {
       'full' => array(
         'format' => 'default',
         'exclude' => 1,
+      ),
+      'cck_blocks' => array(
+        'format' => 'openlayers_map_kart_pa_stilling',
+        'exclude' => 0,
       ),
       '4' => array(
         'format' => 'default',
@@ -373,7 +393,7 @@ function kr_job_content_default_fields() {
       'polygon' => 0,
     ),
     'widget' => array(
-      'openlayers_cck_preset_map' => 'stillingskartpreset',
+      'openlayers_cck_preset_map' => 'kart_pa_stilling',
       'openlayers_behaviors' => array(
         'openlayers_behavior_zoomtolayer' => array(
           'enabled' => 0,
@@ -420,6 +440,10 @@ function kr_job_content_default_fields() {
       'full' => array(
         'format' => 'hidden',
         'exclude' => 1,
+      ),
+      'cck_blocks' => array(
+        'format' => 'default',
+        'exclude' => 0,
       ),
       '4' => array(
         'format' => 'default',
@@ -489,6 +513,10 @@ function kr_job_content_default_fields() {
         'exclude' => 1,
       ),
       'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'cck_blocks' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
