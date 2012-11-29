@@ -148,4 +148,5 @@ function kr2012_nopremium_message($node){
   $html .= $block['content'];
   return $html;
 }
+
 ?>
