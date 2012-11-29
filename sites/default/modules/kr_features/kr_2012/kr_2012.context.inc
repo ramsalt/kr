@@ -319,6 +319,12 @@ function kr_2012_context_default_contexts() {
           'region' => 'two',
           'weight' => 2,
         ),
+        'openx-3' => array(
+          'module' => 'openx',
+          'delta' => 3,
+          'region' => 'three',
+          'weight' => 0,
+        ),
         'views-forside-block_4' => array(
           'module' => 'views',
           'delta' => 'forside-block_4',
@@ -335,6 +341,12 @@ function kr_2012_context_default_contexts() {
           'module' => 'views',
           'delta' => 'forside-block_5',
           'region' => 'six',
+          'weight' => 0,
+        ),
+        'openx-1' => array(
+          'module' => 'openx',
+          'delta' => 1,
+          'region' => 'seven_one',
           'weight' => 0,
         ),
         'views-forside-block_6' => array(
@@ -462,6 +474,11 @@ function kr_2012_context_default_contexts() {
       ),
       'three' => array(
         'class' => '',
+        'blocks' => array(
+          'openx-3' => array(
+            'class' => '',
+          ),
+        ),
       ),
       'four' => array(
         'class' => '',
@@ -473,6 +490,11 @@ function kr_2012_context_default_contexts() {
       ),
       'five' => array(
         'class' => '',
+        'blocks' => array(
+          'views-jobbmarkede-block_1' => array(
+            'class' => '',
+          ),
+        ),
       ),
       'six' => array(
         'class' => '',
@@ -484,6 +506,11 @@ function kr_2012_context_default_contexts() {
       ),
       'seven_one' => array(
         'class' => '',
+        'blocks' => array(
+          'openx-1' => array(
+            'class' => '',
+          ),
+        ),
       ),
       'seven_two' => array(
         'class' => '',

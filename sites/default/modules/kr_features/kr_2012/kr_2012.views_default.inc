@@ -904,7 +904,6 @@ function kr_2012_views_default_views() {
 
   $views[$view->name] = $view;
 
-
   // Exported view: kr_quizen
   $view = new view;
   $view->name = 'kr_quizen';

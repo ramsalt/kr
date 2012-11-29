@@ -27,6 +27,9 @@ body{
     color: #333333;
     font-size: 1.4em;
   }
+  a{
+    color: #2C91C5;
+  }
   p{
     margin: 1em 0em;
   }
@@ -38,7 +41,14 @@ body{
       -ms-hyphens: manual;
     }
   }
-  
+  a.adtext{
+    color: #333333;
+    text-decoration: none;
+    font-size: 0.8em;
+    clear: both;
+    float: left;
+    width: 100%;
+  }  
 }
 body.admin-menu{
   margin-top: 40px !important;
@@ -432,12 +442,17 @@ div {
   width: 100%;
 }
 .node-type-job{
+  h1{
+    font-family: Helvetica;
+    font-weight: bold;
+  }
   .job-title{
     margin-bottom: 1em;
     h2{
       color: #333333;
       font-weight: normal;
       font-size: 1.75em;
+      line-height: 1.1em;
     }
   }
   .body-content{
@@ -522,4 +537,12 @@ div {
       }
     }
   }
+}
+.three .three-inner{
+  border-top: 1px solid #DDD;
+  text-align: center;
+}
+.seven.seven_one{
+  border-bottom: 1px solid #DDD;
+  margin-bottom: 1em;
 }
