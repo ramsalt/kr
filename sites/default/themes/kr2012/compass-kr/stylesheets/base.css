@@ -1239,3 +1239,8 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
 .node-type-eksternt-blogginnlegg .bloginfo {
   border-bottom: 1px solid #ddd;
 }
+
+/* line 566, ../sass/base.scss */
+.ad-right {
+  position: absolute;
+}

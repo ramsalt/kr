@@ -85,6 +85,11 @@
 <section>
   <div id="content-area" class="area">
   	<div class="wrapper">
+	  <?php if($ad_right): ?>
+  	  	<div id="ad-right" class="ad-right visible-desktop" style="left: 2000px;">
+  	  		<?php print $ad_right; ?>
+  	  	</div>
+  	  <?php endif; ?>
   	  <div class="container container-16 clearfix">
   	  	<div class="inner-container clearfix">
 	  	  	<div class="grid full">

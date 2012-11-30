@@ -27,6 +27,8 @@ regions[header] = Header
 regions[footer] = Footer
 regions[toparea] = Toparea
 
+regions[ad_right] = Ad right
+
 regions[one_one] = Front: One one
 regions[one_two] = Front: One two
 regions[one_three] = Front: One Three
@@ -44,11 +46,13 @@ regions[ten_one] = Front: Ten one
 regions[ten_two] = Front: Ten two
 regions[ten_three] = Front: Ten three
 
+
     ; Layout: Default
     layouts[default][name] = "Default"
     layouts[default][description] = "Simple two column page."
     layouts[default][template] = "page-node"
     layouts[default][regions][] = "header"
+    layouts[default][regions][] = "ad_right"
     layouts[default][regions][] = "toparea"
     layouts[default][regions][] = "over_content"
     layouts[default][regions][] = "content"
@@ -63,6 +67,7 @@ regions[ten_three] = Front: Ten three
     layouts[columns][template] = "page-forside"
     layouts[columns][regions][] = "header"
     layouts[columns][regions][] = "toparea"
+    layouts[columns][regions][] = "ad_right"
     layouts[columns][regions][] = "one_one"
     layouts[columns][regions][] = "one_two"
     layouts[columns][regions][] = "one_three"

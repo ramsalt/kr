@@ -1587,6 +1587,11 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   border-bottom: 1px solid #ddd;
 }
 
+/* line 566, ../sass/base.scss */
+.ad-right {
+  position: absolute;
+}
+
 @media all and (min-width: 740px) {
   /* line 4, ../sass/base-tablet.scss */
   .visible-mobile, .visible-desktop {

@@ -425,6 +425,17 @@ function kr_2012_context_default_contexts() {
       'toparea' => array(
         'class' => '',
       ),
+      'ad_right' => array(
+        'class' => '',
+        'blocks' => array(
+          'openx-2' => array(
+            'class' => '',
+          ),
+          'openx-6' => array(
+            'class' => '',
+          ),
+        ),
+      ),
       'one_one' => array(
         'class' => '',
         'blocks' => array(
@@ -578,6 +589,45 @@ function kr_2012_context_default_contexts() {
   );
   $context->condition_mode = 1;
   $export['ny_forside'] = $context;
+
+  $context = new stdClass;
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'ny_global';
+  $context->description = '';
+  $context->tag = '';
+  $context->conditions = array(
+    'context_condition_theme' => array(
+      'values' => array(
+        'kr2012' => 'kr2012',
+      ),
+    ),
+    'sitewide' => array(
+      'values' => array(
+        1 => 1,
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'openx-2' => array(
+          'module' => 'openx',
+          'delta' => 2,
+          'region' => 'ad_right',
+          'weight' => 0,
+        ),
+        'openx-6' => array(
+          'module' => 'openx',
+          'delta' => 6,
+          'region' => 'ad_right',
+          'weight' => 1,
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+  $export['ny_global'] = $context;
 
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
