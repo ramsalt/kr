@@ -112,12 +112,7 @@
 				  
 				  <?php if ($show_messages && $messages): print $messages; endif; ?>
 				  <?php print $help; ?>
-				  <?php if($node->type == 'article'): ?>
-				  <div class="visible-mobile">	
-				  	<h1 property="dc:title" class="visible-mobile"><?php print $title; ?></h1>
-				  	<div class="byline"><?php print $byline; ?></div>
-				  </div>
-				  <?php endif; ?>
+
 				  <div id="op-over-content">
 				    <?php  print $over_content; ?>    
 				  </div>

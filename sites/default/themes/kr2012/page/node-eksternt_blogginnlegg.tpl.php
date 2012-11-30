@@ -12,7 +12,6 @@
             <?php print $ingress_value; ?>
     </div><!-- /.ingress -->
   <?php endif; ?>
-  <div class="byline"><?php print $byline; ?></div>
 
   <div class="node-content">
     <?php print $content ?>
