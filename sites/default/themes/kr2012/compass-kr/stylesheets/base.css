@@ -909,15 +909,16 @@ div .seksjonsside .views-field-comment-count {
 div .seksjonsside .views-field-field-main-image-fid {
   float: right;
 }
-/* line 719, ../sass/mixins.scss */
-div .seksjonsside .views-field-field-teaser-value {
+/* line 720, ../sass/mixins.scss */
+div .seksjonsside .views-field-field-teaser-value,
+div .seksjonsside .views-field-body {
   font-family: Arial;
 }
-/* line 722, ../sass/mixins.scss */
+/* line 723, ../sass/mixins.scss */
 div .seksjonsside .views-field-view-node {
   display: none;
 }
-/* line 728, ../sass/mixins.scss */
+/* line 729, ../sass/mixins.scss */
 div .seksjonsside .views-separator {
   border-top: 1px solid #dddddd;
   margin: 10px 0px;
@@ -925,7 +926,16 @@ div .seksjonsside .views-separator {
   width: 100%;
   clear: both;
 }
-/* line 757, ../sass/mixins.scss */
+/* line 739, ../sass/mixins.scss */
+div .seksjonsside .views-field-field-blogg-bilde-fid {
+  float: left;
+  margin: 0px 1em 1em 0px;
+}
+/* line 746, ../sass/mixins.scss */
+div .seksjonsside.blogger .views-field-title-1 a {
+  text-decoration: none;
+}
+/* line 769, ../sass/mixins.scss */
 div .nopremium-message {
   background: #eff3f6;
   -webkit-border-radius: 4px 4px;
@@ -936,27 +946,27 @@ div .nopremium-message {
   font-family: Arial;
   margin: 10px 0px;
 }
-/* line 764, ../sass/mixins.scss */
+/* line 776, ../sass/mixins.scss */
 div .nopremium-message .msg {
   padding: 20px;
 }
-/* line 766, ../sass/mixins.scss */
+/* line 778, ../sass/mixins.scss */
 div .nopremium-message .msg p {
   display: inline;
 }
-/* line 770, ../sass/mixins.scss */
+/* line 782, ../sass/mixins.scss */
 div .nopremium-message form {
   padding: 20px;
   float: left;
 }
-/* line 774, ../sass/mixins.scss */
+/* line 786, ../sass/mixins.scss */
 div .nopremium-message div.hr {
   clear: both;
   width: 100%;
   border-top: 1px solid #c3d2dc;
   border-bottom: 1px solid #ffffff;
 }
-/* line 781, ../sass/mixins.scss */
+/* line 793, ../sass/mixins.scss */
 div .nopremium-message a.registerhere {
   float: right;
   color: #333333;
@@ -965,23 +975,23 @@ div .nopremium-message a.registerhere {
   text-decoration: none;
   font-weight: bold;
 }
-/* line 782, ../sass/mixins.scss */
+/* line 794, ../sass/mixins.scss */
 div .nopremium-message a.registerhere span {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s3abc5716f4.png') 0 -379px no-repeat;
   padding-left: 20px;
   float: left;
 }
-/* line 794, ../sass/mixins.scss */
+/* line 806, ../sass/mixins.scss */
 div .nopremium-message .form-item {
   float: left;
   margin: 0px;
 }
-/* line 795, ../sass/mixins.scss */
+/* line 807, ../sass/mixins.scss */
 div .nopremium-message .form-item label {
   text-align: left;
   font-size: 0.7em;
 }
-/* line 799, ../sass/mixins.scss */
+/* line 811, ../sass/mixins.scss */
 div .nopremium-message .form-item input {
   height: 27px;
   width: 160px;
@@ -990,7 +1000,7 @@ div .nopremium-message .form-item input {
   border-radius: 4px / 4px;
   font-size: 1.2em;
 }
-/* line 808, ../sass/mixins.scss */
+/* line 820, ../sass/mixins.scss */
 div .nopremium-message .form-submit {
   clear: both;
   float: left;
@@ -1007,31 +1017,31 @@ div .nopremium-message .form-submit {
   height: 27px;
   width: 65px;
 }
-/* line 822, ../sass/mixins.scss */
+/* line 834, ../sass/mixins.scss */
 div .nopremium-message .item-list {
   float: left;
   clear: both;
 }
-/* line 825, ../sass/mixins.scss */
+/* line 837, ../sass/mixins.scss */
 div .nopremium-message .item-list ul {
   margin: 0px;
 }
-/* line 827, ../sass/mixins.scss */
+/* line 839, ../sass/mixins.scss */
 div .nopremium-message .item-list ul li {
   margin: 0px;
   list-style: none;
 }
-/* line 831, ../sass/mixins.scss */
+/* line 843, ../sass/mixins.scss */
 div .nopremium-message .item-list ul li.first {
   display: none;
 }
-/* line 835, ../sass/mixins.scss */
+/* line 847, ../sass/mixins.scss */
 div .nopremium-message .item-list ul li.last a {
   color: #3090c0;
   text-decoration: none;
   font-weight: bold;
 }
-/* line 862, ../sass/mixins.scss */
+/* line 874, ../sass/mixins.scss */
 div .jobbliste ul li {
   margin: 0px;
   list-style: none;
@@ -1039,13 +1049,13 @@ div .jobbliste ul li {
   margin-bottom: 1em;
   width: 100%;
 }
-/* line 868, ../sass/mixins.scss */
+/* line 880, ../sass/mixins.scss */
 div .jobbliste ul li .bilde {
   float: left;
   width: 30%;
   text-align: center;
 }
-/* line 873, ../sass/mixins.scss */
+/* line 885, ../sass/mixins.scss */
 div .jobbliste ul li .andre {
   float: left;
   width: 68%;
@@ -1053,18 +1063,18 @@ div .jobbliste ul li .andre {
   font-family: Arial;
   font-size: 0.7em;
 }
-/* line 879, ../sass/mixins.scss */
+/* line 891, ../sass/mixins.scss */
 div .jobbliste ul li .andre a {
   text-decoration: none;
   color: #333333;
 }
-/* line 883, ../sass/mixins.scss */
+/* line 895, ../sass/mixins.scss */
 div .jobbliste ul li .andre .views-field-title {
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 0.2em;
 }
-/* line 888, ../sass/mixins.scss */
+/* line 900, ../sass/mixins.scss */
 div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   font-weight: bold;
   line-height: 1em;

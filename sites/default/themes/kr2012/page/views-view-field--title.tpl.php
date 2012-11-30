@@ -19,9 +19,11 @@
   * the view is modified.
   */
 
-  	$q = db_query("SELECT title FROM {node} WHERE nid LIKE '".$row->nid_1."'");
-	$r = db_fetch_object($q);
-	$output = l($r->title, 'node/'.$row->nid_1, array('html' => true));
-  
+	$nid = $row->nid;
+	if($nid>0){
+  		$q = db_query("SELECT title FROM {node} WHERE nid LIKE '".$nid."'");
+		$r = db_fetch_object($q);
+		$output = l($r->title, 'node/'.$row->nid, array('html' => true));
+	}
 ?>
 <?php print $output; ?>

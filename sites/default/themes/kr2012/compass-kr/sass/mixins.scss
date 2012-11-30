@@ -716,7 +716,8 @@ $logos: sprite-map("logo/*.png");
     .views-field-field-main-image-fid{
       float: right;
     }
-    .views-field-field-teaser-value{
+    .views-field-field-teaser-value,
+    .views-field-body{
       font-family: Arial;
     }
     .views-field-view-node{
@@ -734,6 +735,17 @@ $logos: sprite-map("logo/*.png");
     }
     .views-row{
       
+    }
+    .views-field-field-blogg-bilde-fid{
+      float: left;
+      margin: 0px 1em 1em 0px;
+    }
+  }
+  .seksjonsside.blogger{
+    .views-field-title-1{
+      a{
+        text-decoration: none;
+      }
     }
   }
 }

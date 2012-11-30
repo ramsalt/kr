@@ -354,7 +354,7 @@
     margin-left: 3%;
     width: 26%;
   }
-  /* line 746, ../sass/mixins.scss */
+  /* line 758, ../sass/mixins.scss */
   div .seksjonsside .views-field-title a {
     font-family: 'MerriweatherRegular', Arial, serif;
     font-size: 1.5em;
@@ -362,11 +362,11 @@
     color: #333;
     text-decoration: none;
   }
-  /* line 851, ../sass/mixins.scss */
+  /* line 863, ../sass/mixins.scss */
   div .nopremium-message #edit-pass-wrapper {
     margin: 0px 10px;
   }
-  /* line 854, ../sass/mixins.scss */
+  /* line 866, ../sass/mixins.scss */
   div .nopremium-message .form-submit {
     clear: none;
   }
