@@ -1221,3 +1221,21 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   border-bottom: 1px solid #DDD;
   margin-bottom: 1em;
 }
+
+/* line 550, ../sass/base.scss */
+.node-type-ekstern-blogg .field-field-blogg-bilde {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+/* line 554, ../sass/base.scss */
+.node-type-ekstern-blogg .field-field-compu-blogginnlegg {
+  clear: both;
+  margin-top: 2em;
+  border-top: 1px solid #ddd;
+  padding-top: 1em;
+}
+
+/* line 562, ../sass/base.scss */
+.node-type-eksternt-blogginnlegg .bloginfo {
+  border-bottom: 1px solid #ddd;
+}
