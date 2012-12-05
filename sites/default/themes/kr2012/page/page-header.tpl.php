@@ -22,7 +22,7 @@
      dir="<?php print $language->dir; ?>"
      version="XHTML+RDFa 1.0" >
 <head>
-  <title><?php print $head_title ?></title>
+  <title><?php print str_replace('&amp;','', str_replace('&#173;', '', $head_title)) ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <meta property="fb:admins" content="637922720,100002054981502,1517137300,705756604,1566145296,686475782"/>
   <link href='/sites/default/themes/kr2012/css/font.css' rel='stylesheet' type='text/css'>
