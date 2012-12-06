@@ -24,55 +24,55 @@
     padding-top: 2%;
   }
 
-  /* line 495, ../sass/mixins.scss */
+  /* line 504, ../sass/mixins.scss */
   .block-views .newslist .views-field-title, .block-views .newslist .views-field-field-main-image-fid, .block-views .newslist .views-field-field-teaser-value {
     margin: 0px 20px;
   }
-  /* line 498, ../sass/mixins.scss */
+  /* line 507, ../sass/mixins.scss */
   .block-views .newslist a {
     font-size: 1.8em;
     line-height: 1.1em;
   }
-  /* line 502, ../sass/mixins.scss */
+  /* line 511, ../sass/mixins.scss */
   .block-views .newslist .views-field-title {
     padding-bottom: 10px;
   }
-  /* line 508, ../sass/mixins.scss */
+  /* line 517, ../sass/mixins.scss */
   .block-views .newslist.sak-1 .views-field-title a {
     font-size: 2.2em;
     line-height: 1.2em;
   }
-  /* line 514, ../sass/mixins.scss */
+  /* line 523, ../sass/mixins.scss */
   .block-views .newslist.sak-1 ul li {
     margin-top: 0px;
   }
-  /* line 520, ../sass/mixins.scss */
+  /* line 529, ../sass/mixins.scss */
   .block-views .newslist.sak-2 li {
     border-bottom: 1px solid #DDD;
   }
-  /* line 524, ../sass/mixins.scss */
+  /* line 533, ../sass/mixins.scss */
   .block-views .newslist.sak-2 li.views-row-last {
     border-bottom: 0px;
   }
-  /* line 530, ../sass/mixins.scss */
+  /* line 539, ../sass/mixins.scss */
   .block-views .newslist.sak-2 .views-field-field-main-image-fid .field-content a img {
     width: 170px;
     height: auto;
     border: 1px solid #d1d1d1;
   }
-  /* line 539, ../sass/mixins.scss */
+  /* line 548, ../sass/mixins.scss */
   .block-views .newslist.sak-2 .views-field-title a {
     font-size: 1.8em;
     line-height: 1.1em;
   }
-  /* line 546, ../sass/mixins.scss */
+  /* line 555, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul {
     width: 100%;
     float: left;
     border-top: 1px solid #DDD;
     border-bottom: 1px solid #DDD;
   }
-  /* line 551, ../sass/mixins.scss */
+  /* line 560, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li {
     float: left;
     width: 253px;
@@ -81,45 +81,45 @@
     margin: 0px;
     padding: 0px;
   }
-  /* line 558, ../sass/mixins.scss */
+  /* line 567, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li .views-field-field-main-image-fid {
     float: left;
     display: none;
   }
-  /* line 562, ../sass/mixins.scss */
+  /* line 571, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li .views-field-title {
     padding-top: 25px;
   }
-  /* line 565, ../sass/mixins.scss */
+  /* line 574, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li .views-field-field-teaser-value {
     display: block;
     padding-bottom: 25px;
   }
-  /* line 570, ../sass/mixins.scss */
+  /* line 579, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-last {
     border-right: 0px;
   }
-  /* line 576, ../sass/mixins.scss */
+  /* line 585, ../sass/mixins.scss */
   .block-views .newslist.fire .views-field-field-main-image-fid, .block-views .newslist.fem .views-field-field-main-image-fid {
     float: left;
     margin-right: 10px;
   }
-  /* line 579, ../sass/mixins.scss */
+  /* line 588, ../sass/mixins.scss */
   .block-views .newslist.fire .views-field-field-main-image-fid img, .block-views .newslist.fem .views-field-field-main-image-fid img {
     width: 223px;
     height: auto;
   }
-  /* line 584, ../sass/mixins.scss */
+  /* line 593, ../sass/mixins.scss */
   .block-views .newslist.fire .views-field-title, .block-views .newslist.fem .views-field-title {
     float: none;
     width: auto;
   }
-  /* line 588, ../sass/mixins.scss */
+  /* line 597, ../sass/mixins.scss */
   .block-views .newslist.fire .views-field-field-teaser-value, .block-views .newslist.fem .views-field-field-teaser-value {
     display: block;
   }
 
-  /* line 277, ../sass/mixins.scss */
+  /* line 281, ../sass/mixins.scss */
   .rammeboks {
     padding: 5%;
     width: 90%;
@@ -130,34 +130,34 @@
     background: #f1f2ee;
     float: left;
   }
-  /* line 288, ../sass/mixins.scss */
+  /* line 292, ../sass/mixins.scss */
   .rammeboks ul li .views-field-field-teaser-value {
     font-size: 1em;
     font-family: Arial;
     color: #333;
   }
 
-  /* line 299, ../sass/mixins.scss */
+  /* line 303, ../sass/mixins.scss */
   .rammeboks.eco ul li .views-field-title {
     padding-top: 0.7em;
   }
 
-  /* line 307, ../sass/mixins.scss */
+  /* line 311, ../sass/mixins.scss */
   .rammeboks.blogger .more-link a {
     font-size: 1em;
   }
-  /* line 311, ../sass/mixins.scss */
+  /* line 315, ../sass/mixins.scss */
   .rammeboks.blogger .views-field-field-blogg-bilde-fid {
     display: none;
   }
 
-  /* line 677, ../sass/mixins.scss */
+  /* line 686, ../sass/mixins.scss */
   div .ownsection {
     float: left;
     width: 197px;
     margin-left: 20px;
   }
-  /* line 681, ../sass/mixins.scss */
+  /* line 690, ../sass/mixins.scss */
   div .ownsection .desc {
     padding-top: 1em;
     display: block;

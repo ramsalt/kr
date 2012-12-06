@@ -43,7 +43,7 @@ $logos: sprite-map("logo/*.png");
   padding: 0;
   list-style: none;
   background: #000;
-  width: 170px;
+  
   @include border-bottom-radius(5px);
   color: #fff;
   font-family: Arial;
