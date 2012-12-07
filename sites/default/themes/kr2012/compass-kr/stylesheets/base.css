@@ -395,7 +395,7 @@ body .body-content h2, body .body-content p h2 {
 }
 /* line 353, ../sass/base.scss */
 body .body-content em, body .body-content p em {
-  font-weight: bold;
+  font-style: italic;
 }
 
 /* line 357, ../sass/base.scss */
