@@ -85,6 +85,11 @@
 <section>
   <div id="content-area" class="area">
   	<div class="wrapper">
+	  <?php if($ad_right): ?>
+  	  	<div id="ad-right" class="ad-right visible-desktop" style="left: 2000px;">
+  	  		<?php print $ad_right; ?>
+  	  	</div>
+  	  <?php endif; ?>
 	<?php if($node->type == 'job'): ?>
   	  <div class="container container-16 clearfix job">
   	  	<div class="inner-container clearfix">
