@@ -384,6 +384,13 @@ body.admin-menu {
 }
 
 /* line 346, ../sass/base.scss */
+body .body-content, body .body-content p {
+  font-size: 1.02em;
+  line-height: 1.6em;
+  color: #333;
+}
+
+/* line 351, ../sass/base.scss */
 .fakta-mobil {
   background: #f1f2ee;
   border-bottom: 2px solid #c1bfb9;
@@ -392,7 +399,7 @@ body.admin-menu {
   border-right: 1px solid #d9d9d9;
   margin: 10px 0px 20px 0px;
 }
-/* line 353, ../sass/base.scss */
+/* line 358, ../sass/base.scss */
 .fakta-mobil .faktatittel a {
   color: #d71010;
   font-family: Arial;
@@ -401,35 +408,35 @@ body.admin-menu {
   display: block;
   padding: 7px;
 }
-/* line 360, ../sass/base.scss */
+/* line 365, ../sass/base.scss */
 .fakta-mobil .faktatittel a .icon {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2854409345.png') 0 -447px no-repeat;
   width: 19px;
   height: 18px;
   float: right;
 }
-/* line 368, ../sass/base.scss */
+/* line 373, ../sass/base.scss */
 .fakta-mobil .innhold {
   padding: 7px;
   display: none;
 }
 
-/* line 375, ../sass/base.scss */
+/* line 380, ../sass/base.scss */
 .fakta-mobil.open .faktatittel a .icon {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2854409345.png') 0 -429px no-repeat;
 }
-/* line 379, ../sass/base.scss */
+/* line 384, ../sass/base.scss */
 .fakta-mobil.open .innhold {
   display: block;
 }
 
-/* line 383, ../sass/base.scss */
+/* line 388, ../sass/base.scss */
 .tiltoppen {
   width: 100%;
   clear: both;
   margin: 20px 0px;
 }
-/* line 387, ../sass/base.scss */
+/* line 392, ../sass/base.scss */
 .tiltoppen a {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2854409345.png') 0 -169px no-repeat;
   width: 174px;
@@ -724,12 +731,12 @@ body.admin-menu {
   text-decoration: none;
 }
 
-/* line 400, ../sass/base.scss */
+/* line 405, ../sass/base.scss */
 .front #block-kr_most_viewed-0 h2 {
   display: none;
 }
 
-/* line 405, ../sass/base.scss */
+/* line 410, ../sass/base.scss */
 .listeboks {
   margin-bottom: 15px;
 }
@@ -1091,64 +1098,64 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   line-height: 1em;
 }
 
-/* line 418, ../sass/base.scss */
+/* line 423, ../sass/base.scss */
 .block {
   margin-bottom: 15px;
 }
-/* line 422, ../sass/base.scss */
+/* line 427, ../sass/base.scss */
 .block .siste-saker .views-field-field-main-image-fid {
   display: none;
 }
 
-/* line 432, ../sass/base.scss */
+/* line 437, ../sass/base.scss */
 .layout-mobile .block-views .newslist.sak-2.sak-16 .views-field-field-main-image-fid {
   float: left;
 }
-/* line 435, ../sass/base.scss */
+/* line 440, ../sass/base.scss */
 .layout-mobile .block-views .newslist.sak-2.sak-16 .views-field-field-teaser-value {
   display: none;
 }
 
-/* line 440, ../sass/base.scss */
+/* line 445, ../sass/base.scss */
 .node-content {
   float: left;
   width: 100%;
 }
 
-/* line 445, ../sass/base.scss */
+/* line 450, ../sass/base.scss */
 .node-type-job h1 {
   font-family: Helvetica;
   font-weight: bold;
 }
-/* line 449, ../sass/base.scss */
+/* line 454, ../sass/base.scss */
 .node-type-job .job-title {
   margin-bottom: 1em;
 }
-/* line 451, ../sass/base.scss */
+/* line 456, ../sass/base.scss */
 .node-type-job .job-title h2 {
   color: #333333;
   font-weight: normal;
   font-size: 1.75em;
   line-height: 1.1em;
 }
-/* line 458, ../sass/base.scss */
+/* line 463, ../sass/base.scss */
 .node-type-job .body-content {
   color: #333333;
 }
-/* line 460, ../sass/base.scss */
+/* line 465, ../sass/base.scss */
 .node-type-job .body-content a {
   color: #2C91C5;
 }
-/* line 464, ../sass/base.scss */
+/* line 469, ../sass/base.scss */
 .node-type-job .field-field-job-utlyser {
   font-size: 1.2em;
   font-weight: bold;
 }
-/* line 468, ../sass/base.scss */
+/* line 473, ../sass/base.scss */
 .node-type-job .field-field-teaser {
   font-size: 1.05em;
 }
-/* line 471, ../sass/base.scss */
+/* line 476, ../sass/base.scss */
 .node-type-job .field-field-job-date {
   font-family: Helvetica;
   font-size: 1.25em;
@@ -1156,17 +1163,17 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   margin-bottom: 1em;
   padding-bottom: 0.5em;
 }
-/* line 477, ../sass/base.scss */
+/* line 482, ../sass/base.scss */
 .node-type-job .field-field-job-date .field-label-inline-first {
   font-weight: bold;
 }
-/* line 484, ../sass/base.scss */
+/* line 489, ../sass/base.scss */
 .node-type-job .field-field-main-image {
   float: left;
   padding: 0 1em 1em 0;
 }
 
-/* line 491, ../sass/base.scss */
+/* line 496, ../sass/base.scss */
 .galleriside ul li {
   float: left;
   margin: 0px 4px 8px 0px;
@@ -1176,11 +1183,11 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   position: relative;
   list-style: none;
 }
-/* line 499, ../sass/base.scss */
+/* line 504, ../sass/base.scss */
 .galleriside ul li .views-field-created {
   color: #EEE;
 }
-/* line 502, ../sass/base.scss */
+/* line 507, ../sass/base.scss */
 .galleriside ul li .views-field-created {
   background: none repeat scroll 0 0 #111;
   position: absolute;
@@ -1188,7 +1195,7 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   top: 0;
   z-index: 600;
 }
-/* line 509, ../sass/base.scss */
+/* line 514, ../sass/base.scss */
 .galleriside ul li .views-field-title {
   background: none repeat scroll 0 0 #111;
   bottom: 0;
@@ -1200,13 +1207,13 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   z-index: 300;
   text-decoration: none;
 }
-/* line 520, ../sass/base.scss */
+/* line 525, ../sass/base.scss */
 .galleriside ul li .views-field-title a {
   color: #EEE;
   text-decoration: none;
   font-size: 0.8em;
 }
-/* line 526, ../sass/base.scss */
+/* line 531, ../sass/base.scss */
 .galleriside ul li .views-field-field-galleri-bilde-fid a {
   bottom: 0;
   left: 0;
@@ -1215,30 +1222,30 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   text-align: center;
   top: 0;
 }
-/* line 533, ../sass/base.scss */
+/* line 538, ../sass/base.scss */
 .galleriside ul li .views-field-field-galleri-bilde-fid a img {
   padding: 0px;
   margin: 0px;
 }
 
-/* line 541, ../sass/base.scss */
+/* line 546, ../sass/base.scss */
 .three .three-inner {
   border-top: 1px solid #DDD;
   text-align: center;
 }
 
-/* line 545, ../sass/base.scss */
+/* line 550, ../sass/base.scss */
 .seven.seven_one {
   border-bottom: 1px solid #DDD;
   margin-bottom: 1em;
 }
 
-/* line 550, ../sass/base.scss */
+/* line 555, ../sass/base.scss */
 .node-type-ekstern-blogg .field-field-blogg-bilde {
   float: left;
   margin: 0 1em 1em 0;
 }
-/* line 554, ../sass/base.scss */
+/* line 559, ../sass/base.scss */
 .node-type-ekstern-blogg .field-field-compu-blogginnlegg {
   clear: both;
   margin-top: 2em;
@@ -1246,12 +1253,12 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   padding-top: 1em;
 }
 
-/* line 562, ../sass/base.scss */
+/* line 567, ../sass/base.scss */
 .node-type-eksternt-blogginnlegg .bloginfo {
   border-bottom: 1px solid #ddd;
 }
 
-/* line 566, ../sass/base.scss */
+/* line 571, ../sass/base.scss */
 .ad-right {
   position: absolute;
 }
