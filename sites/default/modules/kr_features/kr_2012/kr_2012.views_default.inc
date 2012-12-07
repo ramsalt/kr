@@ -1081,7 +1081,7 @@ function kr_2012_views_default_views() {
 
   /* Display: Standardverdier */
   $handler = $view->new_display('default', 'Standardverdier', 'default');
-  $handler->display->display_options['title'] = 'Lederportrettet';
+  $handler->display->display_options['title'] = 'Lederloggen';
   $handler->display->display_options['use_more_text'] = 'mer';
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -1211,7 +1211,7 @@ function kr_2012_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $translatables['lederlogg'] = array(
     t('Standardverdier'),
-    t('Lederportrettet'),
+    t('Lederloggen'),
     t('mer'),
     t('Søk'),
     t('Nullstill'),
@@ -1220,6 +1220,168 @@ function kr_2012_views_default_views() {
     t('Desc'),
     t('Les intervjuet'),
     t('Siste i lederloggen'),
+  );
+
+  $views[$view->name] = $view;
+
+  // Exported view: lederspalten
+  $view = new view;
+  $view->name = 'lederspalten';
+  $view->description = '';
+  $view->tag = '';
+  $view->base_table = 'node';
+  $view->human_name = '';
+  $view->core = 6;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Standardverdier */
+  $handler = $view->new_display('default', 'Standardverdier', 'default');
+  $handler->display->display_options['title'] = 'Lederspalten';
+  $handler->display->display_options['use_more_text'] = 'mer';
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Søk';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Nullstill';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sortér på';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Felt: Innhold: Main Image (field_main_image) */
+  $handler->display->display_options['fields']['field_main_image_fid']['id'] = 'field_main_image_fid';
+  $handler->display->display_options['fields']['field_main_image_fid']['table'] = 'node_data_field_main_image';
+  $handler->display->display_options['fields']['field_main_image_fid']['field'] = 'field_main_image_fid';
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_main_image_fid']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_main_image_fid']['label_type'] = 'none';
+  $handler->display->display_options['fields']['field_main_image_fid']['format'] = 'v2_forside_b120_linked';
+  $handler->display->display_options['fields']['field_main_image_fid']['multiple']['group'] = 1;
+  $handler->display->display_options['fields']['field_main_image_fid']['multiple']['multiple_number'] = '1';
+  $handler->display->display_options['fields']['field_main_image_fid']['multiple']['multiple_from'] = '0';
+  $handler->display->display_options['fields']['field_main_image_fid']['multiple']['multiple_reversed'] = 0;
+  /* Felt: Node: Tittel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  /* Felt: Innhold: Info om utlyseren (field_teaser) */
+  $handler->display->display_options['fields']['field_teaser_value']['id'] = 'field_teaser_value';
+  $handler->display->display_options['fields']['field_teaser_value']['table'] = 'node_data_field_teaser';
+  $handler->display->display_options['fields']['field_teaser_value']['field'] = 'field_teaser_value';
+  $handler->display->display_options['fields']['field_teaser_value']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_teaser_value']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_teaser_value']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_teaser_value']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_teaser_value']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_teaser_value']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_teaser_value']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_teaser_value']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_teaser_value']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_teaser_value']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_teaser_value']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_teaser_value']['link_to_node'] = 0;
+  $handler->display->display_options['fields']['field_teaser_value']['label_type'] = 'none';
+  /* Felt: Node: Lenke */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['view_node']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['view_node']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['view_node']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['view_node']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['view_node']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['view_node']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['view_node']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['view_node']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['view_node']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['view_node']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['view_node']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['view_node']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['view_node']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['view_node']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['view_node']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['view_node']['text'] = 'Les mer';
+  /* Sorteringskriterium: Node: Klistret */
+  $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['table'] = 'node';
+  $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
+  $handler->display->display_options['sorts']['sticky']['order'] = 'DESC';
+  /* Sorteringskriterium: Node: Innleggsdato */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Filtrer: Node: Publisert */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filtrer: Node: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'article' => 'article',
+    'blog' => 'blog',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator'] = FALSE;
+  /* Filtrer: Taksonomi: Term ID (with depth) */
+  $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['value'] = array(
+    0 => '1970',
+  );
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['operator'] = FALSE;
+  $handler->display->display_options['filters']['term_node_tid_depth']['reduce_duplicates'] = 0;
+  $handler->display->display_options['filters']['term_node_tid_depth']['vid'] = '43';
+  $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '0';
+
+  /* Display: Siste i lederspalten */
+  $handler = $view->new_display('block', 'Siste i lederspalten', 'block_1');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $translatables['lederspalten'] = array(
+    t('Standardverdier'),
+    t('Lederspalten'),
+    t('mer'),
+    t('Søk'),
+    t('Nullstill'),
+    t('Sortér på'),
+    t('Asc'),
+    t('Desc'),
+    t('Les mer'),
+    t('Siste i lederspalten'),
   );
 
   $views[$view->name] = $view;
