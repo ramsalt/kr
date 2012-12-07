@@ -24,55 +24,55 @@
     padding-top: 2%;
   }
 
-  /* line 505, ../sass/mixins.scss */
+  /* line 506, ../sass/mixins.scss */
   .block-views .newslist .views-field-title, .block-views .newslist .views-field-field-main-image-fid, .block-views .newslist .views-field-field-teaser-value {
     margin: 0px 20px;
   }
-  /* line 508, ../sass/mixins.scss */
+  /* line 509, ../sass/mixins.scss */
   .block-views .newslist a {
     font-size: 1.8em;
     line-height: 1.1em;
   }
-  /* line 512, ../sass/mixins.scss */
+  /* line 513, ../sass/mixins.scss */
   .block-views .newslist .views-field-title {
     padding-bottom: 10px;
   }
-  /* line 518, ../sass/mixins.scss */
+  /* line 519, ../sass/mixins.scss */
   .block-views .newslist.sak-1 .views-field-title a {
     font-size: 2.2em;
     line-height: 1.2em;
   }
-  /* line 524, ../sass/mixins.scss */
+  /* line 525, ../sass/mixins.scss */
   .block-views .newslist.sak-1 ul li {
     margin-top: 0px;
   }
-  /* line 530, ../sass/mixins.scss */
+  /* line 531, ../sass/mixins.scss */
   .block-views .newslist.sak-2 li {
     border-bottom: 1px solid #DDD;
   }
-  /* line 534, ../sass/mixins.scss */
+  /* line 535, ../sass/mixins.scss */
   .block-views .newslist.sak-2 li.views-row-last {
     border-bottom: 0px;
   }
-  /* line 540, ../sass/mixins.scss */
+  /* line 541, ../sass/mixins.scss */
   .block-views .newslist.sak-2 .views-field-field-main-image-fid .field-content a img {
     width: 170px;
     height: auto;
     border: 1px solid #d1d1d1;
   }
-  /* line 549, ../sass/mixins.scss */
+  /* line 550, ../sass/mixins.scss */
   .block-views .newslist.sak-2 .views-field-title a {
     font-size: 1.8em;
     line-height: 1.1em;
   }
-  /* line 556, ../sass/mixins.scss */
+  /* line 557, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul {
     width: 100%;
     float: left;
     border-top: 1px solid #DDD;
     border-bottom: 1px solid #DDD;
   }
-  /* line 561, ../sass/mixins.scss */
+  /* line 562, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li {
     float: left;
     width: 253px;
@@ -81,40 +81,40 @@
     margin: 0px;
     padding: 0px;
   }
-  /* line 568, ../sass/mixins.scss */
+  /* line 569, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li .views-field-field-main-image-fid {
     float: left;
     display: none;
   }
-  /* line 572, ../sass/mixins.scss */
+  /* line 573, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li .views-field-title {
     padding-top: 25px;
   }
-  /* line 575, ../sass/mixins.scss */
+  /* line 576, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li .views-field-field-teaser-value {
     display: block;
     padding-bottom: 25px;
   }
-  /* line 580, ../sass/mixins.scss */
+  /* line 581, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-last {
     border-right: 0px;
   }
-  /* line 586, ../sass/mixins.scss */
+  /* line 587, ../sass/mixins.scss */
   .block-views .newslist.fire .views-field-field-main-image-fid, .block-views .newslist.fem .views-field-field-main-image-fid {
     float: left;
     margin-right: 10px;
   }
-  /* line 589, ../sass/mixins.scss */
+  /* line 590, ../sass/mixins.scss */
   .block-views .newslist.fire .views-field-field-main-image-fid img, .block-views .newslist.fem .views-field-field-main-image-fid img {
     width: 223px;
     height: auto;
   }
-  /* line 594, ../sass/mixins.scss */
+  /* line 595, ../sass/mixins.scss */
   .block-views .newslist.fire .views-field-title, .block-views .newslist.fem .views-field-title {
     float: none;
     width: auto;
   }
-  /* line 598, ../sass/mixins.scss */
+  /* line 599, ../sass/mixins.scss */
   .block-views .newslist.fire .views-field-field-teaser-value, .block-views .newslist.fem .views-field-field-teaser-value {
     display: block;
   }
@@ -151,13 +151,13 @@
     display: none;
   }
 
-  /* line 687, ../sass/mixins.scss */
+  /* line 688, ../sass/mixins.scss */
   div .ownsection {
     float: left;
     width: 197px;
     margin-left: 20px;
   }
-  /* line 691, ../sass/mixins.scss */
+  /* line 692, ../sass/mixins.scss */
   div .ownsection .desc {
     padding-top: 1em;
     display: block;

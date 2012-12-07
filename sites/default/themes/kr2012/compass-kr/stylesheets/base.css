@@ -786,21 +786,21 @@ body .body-content em, body .body-content p em {
   font-size: 1em;
 }
 
-/* line 409, ../sass/mixins.scss */
+/* line 410, ../sass/mixins.scss */
 .block-views .newslist .views-field-title, .block-views .newslist .views-field-field-main-image-fid, .block-views .newslist .views-field-field-teaser-value {
   margin: 0px 15px;
 }
-/* line 412, ../sass/mixins.scss */
+/* line 413, ../sass/mixins.scss */
 .block-views .newslist p {
   margin: 0px;
 }
-/* line 415, ../sass/mixins.scss */
+/* line 416, ../sass/mixins.scss */
 .block-views .newslist ul {
   margin: 0px;
   padding: 0px;
   list-style: none;
 }
-/* line 419, ../sass/mixins.scss */
+/* line 420, ../sass/mixins.scss */
 .block-views .newslist ul li {
   float: left;
   width: 100%;
@@ -809,82 +809,82 @@ body .body-content em, body .body-content p em {
   list-style: none;
   border-bottom: 1px solid #dddddd;
 }
-/* line 428, ../sass/mixins.scss */
+/* line 429, ../sass/mixins.scss */
 .block-views .newslist a {
   text-decoration: none;
   color: #333333;
   font-size: 1.2em;
 }
-/* line 433, ../sass/mixins.scss */
+/* line 434, ../sass/mixins.scss */
 .block-views .newslist .views-field-field-teaser-value {
   font-family: Arial;
   font-size: 0.95em;
 }
-/* line 442, ../sass/mixins.scss */
+/* line 443, ../sass/mixins.scss */
 .block-views .newslist.sak-1 .views-field-title {
   line-height: 2em;
 }
-/* line 444, ../sass/mixins.scss */
+/* line 445, ../sass/mixins.scss */
 .block-views .newslist.sak-1 .views-field-title a {
   font-size: 1.8em;
 }
-/* line 448, ../sass/mixins.scss */
+/* line 449, ../sass/mixins.scss */
 .block-views .newslist.sak-1 .views-field-field-teaser-value {
   font-weight: bold;
 }
-/* line 451, ../sass/mixins.scss */
+/* line 452, ../sass/mixins.scss */
 .block-views .newslist.sak-1 img {
   width: 100%;
   height: auto;
 }
-/* line 457, ../sass/mixins.scss */
+/* line 458, ../sass/mixins.scss */
 .block-views .newslist.sak-2 .views-row-1 {
   margin-top: 0px;
 }
-/* line 460, ../sass/mixins.scss */
+/* line 461, ../sass/mixins.scss */
 .block-views .newslist.sak-2 .views-field-field-main-image-fid {
   float: right;
 }
-/* line 464, ../sass/mixins.scss */
+/* line 465, ../sass/mixins.scss */
 .block-views .newslist.sak-2 .views-field-field-main-image-fid .field-content a img {
   width: 84px;
   height: auto;
   border: 1px solid #d1d1d1;
 }
-/* line 474, ../sass/mixins.scss */
+/* line 475, ../sass/mixins.scss */
 .block-views .newslist.sak-4 .views-field-field-main-image-fid {
   float: left;
 }
-/* line 477, ../sass/mixins.scss */
+/* line 478, ../sass/mixins.scss */
 .block-views .newslist.sak-4 .views-field-field-teaser-value {
   display: none;
 }
-/* line 482, ../sass/mixins.scss */
+/* line 483, ../sass/mixins.scss */
 .block-views .newslist.fire ul, .block-views .newslist.fem ul {
   border-top: 1px solid #DDD;
 }
-/* line 485, ../sass/mixins.scss */
+/* line 486, ../sass/mixins.scss */
 .block-views .newslist.fire .views-field-field-main-image-fid, .block-views .newslist.fem .views-field-field-main-image-fid {
   float: left;
   margin: 0px 0px 0px 15px;
 }
-/* line 488, ../sass/mixins.scss */
+/* line 489, ../sass/mixins.scss */
 .block-views .newslist.fire .views-field-field-main-image-fid img, .block-views .newslist.fem .views-field-field-main-image-fid img {
   width: 86px;
   height: auto;
 }
-/* line 493, ../sass/mixins.scss */
+/* line 494, ../sass/mixins.scss */
 .block-views .newslist.fire .views-field-title, .block-views .newslist.fem .views-field-title {
   float: left;
   margin: 0px 0px 0px 15px;
   width: 59%;
 }
-/* line 498, ../sass/mixins.scss */
+/* line 499, ../sass/mixins.scss */
 .block-views .newslist.fire .views-field-field-teaser-value, .block-views .newslist.fem .views-field-field-teaser-value {
   display: none;
 }
 
-/* line 661, ../sass/mixins.scss */
+/* line 662, ../sass/mixins.scss */
 div .ownsection {
   -webkit-border-radius: 4px 4px;
   -moz-border-radius: 4px / 4px;
@@ -896,13 +896,13 @@ div .ownsection {
   background: #dce4eb;
   padding: 1em;
 }
-/* line 669, ../sass/mixins.scss */
+/* line 670, ../sass/mixins.scss */
 div .ownsection h2 {
   font-size: 1.4em;
   font-family: Arial;
   float: left;
 }
-/* line 674, ../sass/mixins.scss */
+/* line 675, ../sass/mixins.scss */
 div .ownsection .link {
   float: right;
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2854409345.png') 0 -409px no-repeat;
@@ -910,41 +910,41 @@ div .ownsection .link {
   height: 20px;
   width: 20px;
 }
-/* line 681, ../sass/mixins.scss */
+/* line 682, ../sass/mixins.scss */
 div .ownsection .desc {
   display: none;
 }
-/* line 710, ../sass/mixins.scss */
+/* line 711, ../sass/mixins.scss */
 div .seksjonsside .views-field-title a {
   font-family: 'MerriweatherRegular', Arial, serif;
   font-size: 1.2em;
   color: #333;
   text-decoration: none;
 }
-/* line 717, ../sass/mixins.scss */
+/* line 718, ../sass/mixins.scss */
 div .seksjonsside .views-field-created {
   color: #666666;
   font-family: Arial;
   font-size: 0.8em;
 }
-/* line 723, ../sass/mixins.scss */
+/* line 724, ../sass/mixins.scss */
 div .seksjonsside .views-field-comment-count {
   display: none;
 }
-/* line 726, ../sass/mixins.scss */
+/* line 727, ../sass/mixins.scss */
 div .seksjonsside .views-field-field-main-image-fid {
   float: right;
 }
-/* line 730, ../sass/mixins.scss */
+/* line 731, ../sass/mixins.scss */
 div .seksjonsside .views-field-field-teaser-value,
 div .seksjonsside .views-field-body {
   font-family: Arial;
 }
-/* line 733, ../sass/mixins.scss */
+/* line 734, ../sass/mixins.scss */
 div .seksjonsside .views-field-view-node {
   display: none;
 }
-/* line 739, ../sass/mixins.scss */
+/* line 740, ../sass/mixins.scss */
 div .seksjonsside .views-separator {
   border-top: 1px solid #dddddd;
   margin: 10px 0px;
@@ -952,16 +952,16 @@ div .seksjonsside .views-separator {
   width: 100%;
   clear: both;
 }
-/* line 749, ../sass/mixins.scss */
+/* line 750, ../sass/mixins.scss */
 div .seksjonsside .views-field-field-blogg-bilde-fid {
   float: left;
   margin: 0px 1em 1em 0px;
 }
-/* line 756, ../sass/mixins.scss */
+/* line 757, ../sass/mixins.scss */
 div .seksjonsside.blogger .views-field-title-1 a {
   text-decoration: none;
 }
-/* line 779, ../sass/mixins.scss */
+/* line 780, ../sass/mixins.scss */
 div .nopremium-message {
   background: #eff3f6;
   -webkit-border-radius: 4px 4px;
@@ -972,27 +972,27 @@ div .nopremium-message {
   font-family: Arial;
   margin: 10px 0px;
 }
-/* line 786, ../sass/mixins.scss */
+/* line 787, ../sass/mixins.scss */
 div .nopremium-message .msg {
   padding: 20px;
 }
-/* line 788, ../sass/mixins.scss */
+/* line 789, ../sass/mixins.scss */
 div .nopremium-message .msg p {
   display: inline;
 }
-/* line 792, ../sass/mixins.scss */
+/* line 793, ../sass/mixins.scss */
 div .nopremium-message form {
   padding: 20px;
   float: left;
 }
-/* line 796, ../sass/mixins.scss */
+/* line 797, ../sass/mixins.scss */
 div .nopremium-message div.hr {
   clear: both;
   width: 100%;
   border-top: 1px solid #c3d2dc;
   border-bottom: 1px solid #ffffff;
 }
-/* line 803, ../sass/mixins.scss */
+/* line 804, ../sass/mixins.scss */
 div .nopremium-message a.registerhere {
   float: right;
   color: #333333;
@@ -1001,23 +1001,23 @@ div .nopremium-message a.registerhere {
   text-decoration: none;
   font-weight: bold;
 }
-/* line 804, ../sass/mixins.scss */
+/* line 805, ../sass/mixins.scss */
 div .nopremium-message a.registerhere span {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2854409345.png') 0 -465px no-repeat;
   padding-left: 20px;
   float: left;
 }
-/* line 816, ../sass/mixins.scss */
+/* line 817, ../sass/mixins.scss */
 div .nopremium-message .form-item {
   float: left;
   margin: 0px;
 }
-/* line 817, ../sass/mixins.scss */
+/* line 818, ../sass/mixins.scss */
 div .nopremium-message .form-item label {
   text-align: left;
   font-size: 0.7em;
 }
-/* line 821, ../sass/mixins.scss */
+/* line 822, ../sass/mixins.scss */
 div .nopremium-message .form-item input {
   height: 27px;
   width: 160px;
@@ -1026,7 +1026,7 @@ div .nopremium-message .form-item input {
   border-radius: 4px / 4px;
   font-size: 1.2em;
 }
-/* line 830, ../sass/mixins.scss */
+/* line 831, ../sass/mixins.scss */
 div .nopremium-message .form-submit {
   clear: both;
   float: left;
@@ -1043,31 +1043,31 @@ div .nopremium-message .form-submit {
   height: 27px;
   width: 65px;
 }
-/* line 844, ../sass/mixins.scss */
+/* line 845, ../sass/mixins.scss */
 div .nopremium-message .item-list {
   float: left;
   clear: both;
 }
-/* line 847, ../sass/mixins.scss */
+/* line 848, ../sass/mixins.scss */
 div .nopremium-message .item-list ul {
   margin: 0px;
 }
-/* line 849, ../sass/mixins.scss */
+/* line 850, ../sass/mixins.scss */
 div .nopremium-message .item-list ul li {
   margin: 0px;
   list-style: none;
 }
-/* line 853, ../sass/mixins.scss */
+/* line 854, ../sass/mixins.scss */
 div .nopremium-message .item-list ul li.first {
   display: none;
 }
-/* line 857, ../sass/mixins.scss */
+/* line 858, ../sass/mixins.scss */
 div .nopremium-message .item-list ul li.last a {
   color: #3090c0;
   text-decoration: none;
   font-weight: bold;
 }
-/* line 884, ../sass/mixins.scss */
+/* line 885, ../sass/mixins.scss */
 div .jobbliste ul li {
   margin: 0px;
   list-style: none;
@@ -1075,13 +1075,13 @@ div .jobbliste ul li {
   margin-bottom: 1em;
   width: 100%;
 }
-/* line 890, ../sass/mixins.scss */
+/* line 891, ../sass/mixins.scss */
 div .jobbliste ul li .bilde {
   float: left;
   width: 30%;
   text-align: center;
 }
-/* line 895, ../sass/mixins.scss */
+/* line 896, ../sass/mixins.scss */
 div .jobbliste ul li .andre {
   float: left;
   width: 68%;
@@ -1089,18 +1089,18 @@ div .jobbliste ul li .andre {
   font-family: Arial;
   font-size: 0.7em;
 }
-/* line 901, ../sass/mixins.scss */
+/* line 902, ../sass/mixins.scss */
 div .jobbliste ul li .andre a {
   text-decoration: none;
   color: #333333;
 }
-/* line 905, ../sass/mixins.scss */
+/* line 906, ../sass/mixins.scss */
 div .jobbliste ul li .andre .views-field-title {
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 0.2em;
 }
-/* line 910, ../sass/mixins.scss */
+/* line 911, ../sass/mixins.scss */
 div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   font-weight: bold;
   line-height: 1em;

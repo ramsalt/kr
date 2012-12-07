@@ -283,38 +283,39 @@
     color: #333333;
     text-decoration: none;
     font-size: 1.2em;
+    line-height: 1.3em;
   }
-  /* line 401, ../sass/mixins.scss */
+  /* line 402, ../sass/mixins.scss */
   .listeboks ul li:last-child, .listeboks .item-list ul li:last-child {
     border: none;
     padding-bottom: 0px;
   }
 
-  /* line 605, ../sass/mixins.scss */
+  /* line 606, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul {
     border: none;
     height: auto;
   }
-  /* line 608, ../sass/mixins.scss */
+  /* line 609, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li {
     border: none;
     width: 100%;
     border-bottom: 1px solid #DDD;
   }
-  /* line 613, ../sass/mixins.scss */
+  /* line 614, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-last {
     border-bottom: 0px;
   }
-  /* line 617, ../sass/mixins.scss */
+  /* line 618, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-first .views-field-title {
     padding-top: 0px;
   }
-  /* line 624, ../sass/mixins.scss */
+  /* line 625, ../sass/mixins.scss */
   .block-views .newslist.fire ul, .block-views .newslist.fem ul {
     float: left;
     border-bottom: 1px solid #DDD;
   }
-  /* line 627, ../sass/mixins.scss */
+  /* line 628, ../sass/mixins.scss */
   .block-views .newslist.fire ul li, .block-views .newslist.fem ul li {
     width: 24.8%;
     border-bottom: 0px;
@@ -322,40 +323,40 @@
     margin: 0px;
     padding: 1em 0px 0px 0px;
   }
-  /* line 634, ../sass/mixins.scss */
+  /* line 635, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-field-teaser-value, .block-views .newslist.fem ul li .views-field-field-teaser-value {
     margin: 0px 15px;
   }
-  /* line 637, ../sass/mixins.scss */
+  /* line 638, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-title, .block-views .newslist.fem ul li .views-field-title {
     width: 85%;
     margin: 0px 15px;
   }
-  /* line 641, ../sass/mixins.scss */
+  /* line 642, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-field-main-image-fid, .block-views .newslist.fem ul li .views-field-field-main-image-fid {
     margin: 0px 15px;
   }
-  /* line 643, ../sass/mixins.scss */
+  /* line 644, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-field-main-image-fid img, .block-views .newslist.fem ul li .views-field-field-main-image-fid img {
     width: 100%;
     height: auto;
   }
-  /* line 649, ../sass/mixins.scss */
+  /* line 650, ../sass/mixins.scss */
   .block-views .newslist.fire ul li.views-row-last, .block-views .newslist.fem ul li.views-row-last {
     border: 0px;
   }
-  /* line 655, ../sass/mixins.scss */
+  /* line 656, ../sass/mixins.scss */
   .block-views .newslist.fem .item-list ul li.views-row {
     width: 19.8%;
   }
 
-  /* line 701, ../sass/mixins.scss */
+  /* line 702, ../sass/mixins.scss */
   div .ownsection {
     margin-top: 1em;
     margin-left: 3%;
     width: 26%;
   }
-  /* line 768, ../sass/mixins.scss */
+  /* line 769, ../sass/mixins.scss */
   div .seksjonsside .views-field-title a {
     font-family: 'MerriweatherRegular', Arial, serif;
     font-size: 1.5em;
@@ -363,11 +364,11 @@
     color: #333;
     text-decoration: none;
   }
-  /* line 873, ../sass/mixins.scss */
+  /* line 874, ../sass/mixins.scss */
   div .nopremium-message #edit-pass-wrapper {
     margin: 0px 10px;
   }
-  /* line 876, ../sass/mixins.scss */
+  /* line 877, ../sass/mixins.scss */
   div .nopremium-message .form-submit {
     clear: none;
   }
