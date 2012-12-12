@@ -41,7 +41,7 @@ function ajax_preprocess_page(&$variables) {
  * @return Bool
  */
 function ajax_form_alter(&$form, $form_state, $form_id) {
-  ajax_form_configure($form, $form_state, $form_id);drupal_set_message('ole');
+  ajax_form_configure($form, $form_state, $form_id);
   if (ajax_is_enabled($form) && !$form['#programmed']) {
   	
     $found = array('submitter' => FALSE);
