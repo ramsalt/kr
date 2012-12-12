@@ -1,0 +1,166 @@
+$farge-knapp: #00669c;
+$farge-knapp-link: #fff;
+$farge-knapp-border: #004e7e;
+$farge-knapp-aktiv: #004e7e;
+$farge-mob-content: #ffffff;
+$farge-mob-menu-link: #000000;
+$farge-list-bottom: #cccccc;
+$logos: sprite-map("logo/*.png");
+
+@mixin nav-mob{
+  .wrapper{
+    background: $farge-knapp;
+  }
+  #nav{
+    display: none;
+    position: relative;
+    background: $farge-knapp-aktiv;
+    float: left;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    ul{
+      padding: 10px;
+      li{
+        background: $farge-mob-content;
+        padding: 0px;
+        margin: 0px;
+        float: left;
+        clear: both;
+        width: 100%;
+        overflow: hidden;
+        border-bottom: 1px solid $farge-list-bottom;
+        a{
+          color: $farge-mob-menu-link;
+          padding: 10px;
+          float: left;
+          width: 100%;
+          span{
+            float: left;
+          }
+        }
+        a:hover{
+          background: $farge-list-bottom;
+        }
+        ul{
+          display: none;
+          background: transparent;
+          position: relative;
+          top: 0;
+          float: left;
+          height: auto;
+          width: 100%;;
+          li{
+            padding: 0px;
+            border-bottom: 3px solid transparent;
+            background: transparent;
+            a{
+              background: $farge-list-bottom;
+            }
+            a:hover{
+              background: transparent;
+            }        
+          }
+        }
+        
+      }
+      li.open{
+        ul{
+          display: block;
+        }
+      }
+      li:hover{
+        a{
+          background: $farge-list-bottom;
+        }
+      }
+      li.multilevel{
+        span.level{
+          background: sprite($logos, menumobilpilnedsort) no-repeat;
+          width: 8px;
+          height: 6px;
+          margin: 3px 0px 0px 10px;
+        }
+      }
+    }
+  }
+  #nav.open{
+    display: block;
+  }
+  
+  .navbuttun{
+    width: 32%;
+    float: left;
+    background: $farge-knapp;
+    border-left: 1px solid $farge-knapp-border;
+    border-right: 1px solid $farge-knapp-border;
+    a{
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      font-weight: bold;
+      color: $farge-knapp-link;
+    }
+  }
+  .navbuttun.active, .navbuttun.open{
+    background: $farge-knapp-aktiv;
+  }
+  .navbuttun.middle{
+    border: none;
+  }
+  #search-mob{
+    form{
+      padding: 10px;
+      .views-exposed-widget{
+        padding: 0px;
+      }
+      input{
+        margin: 0px;
+        padding: 0px;
+        height: 30px;
+        font-size: 19px;          
+      }
+      .form-submit{
+        background: $farge-knapp;
+        color: $farge-knapp-link;
+        margin: 0px;        
+        border: none;
+        height: 34px;
+        font-size: 14px;
+        padding: 8px;
+        width: 42px;
+      }
+    }
+  }
+  #user-login-mob{
+    form{
+      padding: 10px;
+      input{
+        width: 70%;
+      }
+      .description{
+        display: block !important;
+      }
+    }
+    .bt-wrapper{
+      display: none !important;
+    }
+    
+  }
+  .mobhead{
+    display: none;
+    position: relative;
+    background: $farge-knapp-aktiv;
+    float: left;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    .inner{
+      margin: 10px;
+      background: $farge-mob-content;
+    }
+  }
+  .mobhead.open{
+    display: block;
+  }
+}

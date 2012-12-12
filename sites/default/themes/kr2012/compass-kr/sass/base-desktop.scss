@@ -51,56 +51,7 @@ $logos: sprite-map("logo/*.png");
     }
   }
   #login-area{
-    margin-top: 10px;
-    background: transparent;
-    border: none;
-    .wrapper{
-      border: none;
-      .container{
-        //background: url('/sites/default/themes/kr2012/compass-kr/images/desktop-top-wrapper-bg.png') repeat-x 0 33px #F1F2EE;
-        .inner-container{
-          @include border-top-radius(4px);
-          background: url('/sites/default/themes/kr2012/compass-kr/images/backxrepeat.png') 0px -75px repeat-x;
-          height: 38px;
-          border-top: 1px solid #d9d9d9;
-          border-left: 1px solid #d9d9d9;
-          border-right: 1px solid #d9d9d9;
-          border-bottom: 1px solid #a1a1a1;
-          .art-main{
-            width: 962px;
-          }
-        }
-      }
-      .inner{
-        float: right;
-        width: auto;
-        #login-content{
-          float: left;
-        }
-        #search-content{
-          float: left;
-          margin-top: 0px;
-          padding-left: 25px;
-          a{
-            span.icon{
-              background: sprite($logos, searchblack) no-repeat;
-              width: 14px;
-              height: 15px;
-              margin-left: 4px;
-              maring-top: 1px;
-            }
-          }
-        }
-      }
-    }
-    a{
-      font-size: 1em;
-      font-family: Arial;
-      font-weight: bold;
-      text-decoration: none;
-      color: #333333;
-      text-transform: Uppercase;
-    }
+
   }
   #logo-area{
     background: transparent;
@@ -139,40 +90,7 @@ $logos: sprite-map("logo/*.png");
             float: left;
           }
         }
-      }
-      #nav-button{
-        display: none; 
-      }
-      #nav{
-        display: block;
-        margin-left: 291px;
-        width: auto;
-        height: 60px;
-        overflow: hidden;
-        ul{
-          padding: 6px 0px;
-          li{
-            border: none;
-            width: auto;
-            clear: none;
-            a{
-              font-family: "Helvetica Neue", Helvetica;
-              font-size: 1.05em;
-              font-weight: bold;
-              color: #ffffff;
-              text-transform: none;
-              width: auto;
-            }
-          }
-          li.multilevel{
-            a{
-              span.level{
-                margin: 7px 0px 0px 4px;
-              }
-            }
-          }
-        }
-      }
+      }      
     }
   }
   #pre-area{

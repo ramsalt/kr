@@ -1,4 +1,4 @@
-/* line 6, ../sass/base.scss */
+/* line 7, ../sass/base.scss */
 body {
   font-family: 'MerriweatherRegular', Arial, serif;
   font-size: 0.9em;
@@ -9,47 +9,47 @@ body {
   text-rendering: optimizeLegibility;
   font-smooth: always;
 }
-/* line 15, ../sass/base.scss */
+/* line 16, ../sass/base.scss */
 body h1 {
   font-size: 2.05em;
   line-height: 1.2em;
   margin: 12px 0px;
 }
-/* line 20, ../sass/base.scss */
+/* line 21, ../sass/base.scss */
 body h2 {
   font-family: 'Helvetica Neue', helvetica;
   font-weight: bold;
 }
-/* line 24, ../sass/base.scss */
+/* line 25, ../sass/base.scss */
 body h3 {
   font-family: helvetica;
   font-weight: normal;
   color: #333333;
   font-size: 1.4em;
 }
-/* line 30, ../sass/base.scss */
+/* line 31, ../sass/base.scss */
 body a {
   color: #2C91C5;
 }
-/* line 33, ../sass/base.scss */
+/* line 34, ../sass/base.scss */
 body p {
   margin: 1em 0em;
 }
-/* line 36, ../sass/base.scss */
+/* line 37, ../sass/base.scss */
 body .views-field-title {
   -webkit-hyphens: manual;
   -moz-hyphens: manual;
   hyphens: manual;
   -ms-hyphens: manual;
 }
-/* line 39, ../sass/base.scss */
+/* line 40, ../sass/base.scss */
 body .views-field-title a {
   -webkit-hyphens: manual;
   -moz-hyphens: manual;
   hyphens: manual;
   -ms-hyphens: manual;
 }
-/* line 44, ../sass/base.scss */
+/* line 45, ../sass/base.scss */
 body a.adtext {
   color: #333333;
   text-decoration: none;
@@ -59,81 +59,33 @@ body a.adtext {
   width: 100%;
 }
 
-/* line 53, ../sass/base.scss */
+/* line 54, ../sass/base.scss */
 body.admin-menu {
   margin-top: 40px !important;
 }
 
-/* line 56, ../sass/base.scss */
+/* line 57, ../sass/base.scss */
 .visible-desktop, .visible-tablet {
   display: none;
 }
 
-/* line 59, ../sass/base.scss */
+/* line 60, ../sass/base.scss */
 .visible-mobile {
   display: block;
 }
 
-/* line 62, ../sass/base.scss */
-#login-area {
-  background: #333333;
-  border-bottom: 1px solid #262626;
-}
-/* line 65, ../sass/base.scss */
-#login-area .wrapper {
-  border-bottom: 1px solid #2b2b2b;
-}
-/* line 67, ../sass/base.scss */
-#login-area .wrapper .inner {
-  width: 100%;
-  margin: 10px 0px;
-  float: left;
-}
-/* line 71, ../sass/base.scss */
-#login-area .wrapper .inner #login-content {
-  float: left;
-  height: 16px;
-}
-/* line 75, ../sass/base.scss */
-#login-area .wrapper .inner #search-content {
-  height: 16px;
-  float: right;
-  margin-top: 3px;
-}
-/* line 80, ../sass/base.scss */
-#login-area .wrapper .inner #search-content a span {
-  display: block;
-  float: left;
-}
-/* line 84, ../sass/base.scss */
-#login-area .wrapper .inner #search-content a span.icon {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2854409345.png') 0 -497px no-repeat;
-  width: 12px;
-  height: 13px;
-  margin-left: 4px;
-}
-/* line 95, ../sass/base.scss */
-#login-area a {
-  font-size: 0.75em;
-  font-family: Arial;
-  font-weight: bold;
-  text-decoration: none;
-  color: #ffffff;
-  text-transform: Uppercase;
-}
-
-/* line 104, ../sass/base.scss */
+/* line 66, ../sass/base.scss */
 #fb-root {
   display: none;
 }
 
 /* To fill the container and nothing else */
-/* line 109, ../sass/base.scss */
+/* line 71, ../sass/base.scss */
 .fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
   width: 100% !important;
 }
 
-/* line 112, ../sass/base.scss */
+/* line 74, ../sass/base.scss */
 #logo-area {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #225a84), color-stop(100%, #083e6b));
   background-image: -webkit-linear-gradient(top, #225a84, #083e6b);
@@ -144,22 +96,22 @@ body.admin-menu {
   border-top: 1px solid #073e6a;
   border-bottom: 1px solid #174a73;
 }
-/* line 117, ../sass/base.scss */
+/* line 79, ../sass/base.scss */
 #logo-area .wrapper {
   border-top: 1px solid #34668f;
 }
-/* line 120, ../sass/base.scss */
+/* line 82, ../sass/base.scss */
 #logo-area .wrapper .container .grid {
   width: 320px;
   margin: 0px;
 }
-/* line 125, ../sass/base.scss */
+/* line 87, ../sass/base.scss */
 #logo-area .wrapper #logo {
   margin-left: 15px;
   height: 62px;
   float: left;
 }
-/* line 129, ../sass/base.scss */
+/* line 91, ../sass/base.scss */
 #logo-area .wrapper #logo a {
   text-indent: -9999px;
   display: block;
@@ -169,150 +121,221 @@ body.admin-menu {
   height: 28px;
   width: 220px;
 }
-/* line 137, ../sass/base.scss */
+/* line 99, ../sass/base.scss */
 #logo-area .wrapper #logo a span {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2854409345.png') 0 -60px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sae43b2d101.png') 0 -60px no-repeat;
   width: 219px;
   height: 23px;
   float: left;
 }
-/* line 146, ../sass/base.scss */
-#logo-area #nav-button {
-  margin-right: 15px;
-  float: right;
+
+/* line 11, ../sass/nav.scss */
+#login-area .wrapper {
+  background: #00669c;
 }
-/* line 149, ../sass/base.scss */
-#logo-area #nav-button a {
-  float: left;
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2854409345.png') 0 -250px no-repeat;
-  width: 38px;
-  height: 39px;
-  text-indent: -9999px;
-  margin: 10px 0px 0px 0px;
-}
-/* line 159, ../sass/base.scss */
-#logo-area #nav-button.open a {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2854409345.png') 0 -211px no-repeat;
-}
-/* line 163, ../sass/base.scss */
-#logo-area #nav.open {
-  display: block;
-}
-/* line 166, ../sass/base.scss */
-#logo-area #nav {
-  float: left;
+/* line 14, ../sass/nav.scss */
+#login-area #nav {
   display: none;
-  background: transparent;
+  position: relative;
+  background: #004e7e;
+  float: left;
   width: 100%;
   margin: 0px;
   padding: 0px;
 }
-/* line 173, ../sass/base.scss */
-#logo-area #nav ul {
-  background: transparent;
+/* line 22, ../sass/nav.scss */
+#login-area #nav ul {
+  padding: 10px;
 }
-/* line 175, ../sass/base.scss */
-#logo-area #nav ul li {
-  border-top: 1px solid #6e8697;
+/* line 24, ../sass/nav.scss */
+#login-area #nav ul li {
+  background: white;
   padding: 0px;
-  width: 100%;
-  clear: both;
-}
-/* line 180, ../sass/base.scss */
-#logo-area #nav ul li a {
-  font-size: 0.85em;
-  padding: 15px;
-  font-weight: bold;
-  font-family: Arial;
-  color: #ffffff;
-  text-transform: uppercase;
+  margin: 0px;
   float: left;
-  width: 290px;
+  clear: both;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #cccccc;
 }
-/* line 189, ../sass/base.scss */
-#logo-area #nav ul li a span {
+/* line 33, ../sass/nav.scss */
+#login-area #nav ul li a {
+  color: black;
+  padding: 10px;
+  float: left;
+  width: 100%;
+}
+/* line 38, ../sass/nav.scss */
+#login-area #nav ul li a span {
   float: left;
 }
-/* line 193, ../sass/base.scss */
-#logo-area #nav ul li a:hover {
-  background: transparent;
+/* line 42, ../sass/nav.scss */
+#login-area #nav ul li a:hover {
+  background: #cccccc;
 }
-/* line 197, ../sass/base.scss */
-#logo-area #nav ul li.on {
-  background: transparent;
-}
-/* line 201, ../sass/base.scss */
-#logo-area #nav ul li.multilevel.open ul {
-  display: block;
-}
-/* line 207, ../sass/base.scss */
-#logo-area #nav ul li.multilevel a span.level {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2854409345.png') 0 -510px no-repeat;
-  width: 7px;
-  height: 7px;
-  margin: 3px 0px 0px 10px;
-}
-/* line 214, ../sass/base.scss */
-#logo-area #nav ul li.multilevel ul {
-  border-left: 30px solid #0F3554;
-  position: relative;
-  width: 100%;
-  clear: both;
+/* line 45, ../sass/nav.scss */
+#login-area #nav ul li ul {
   display: none;
+  background: transparent;
+  position: relative;
+  top: 0;
   float: left;
   height: auto;
-  top: 0px;
+  width: 100%;
 }
-/* line 223, ../sass/base.scss */
-#logo-area #nav ul li.multilevel ul li {
-  width: auto;
-  float: left;
-}
-/* line 226, ../sass/base.scss */
-#logo-area #nav ul li.multilevel ul li a {
-  width: 260px;
-  font-weight: normal;
-  text-transform: none;
-}
-/* line 235, ../sass/base.scss */
-#logo-area #nav ul li:hover a {
+/* line 53, ../sass/nav.scss */
+#login-area #nav ul li ul li {
+  padding: 0px;
+  border-bottom: 3px solid transparent;
   background: transparent;
 }
+/* line 57, ../sass/nav.scss */
+#login-area #nav ul li ul li a {
+  background: #cccccc;
+}
+/* line 60, ../sass/nav.scss */
+#login-area #nav ul li ul li a:hover {
+  background: transparent;
+}
+/* line 68, ../sass/nav.scss */
+#login-area #nav ul li.open ul {
+  display: block;
+}
+/* line 73, ../sass/nav.scss */
+#login-area #nav ul li:hover a {
+  background: #cccccc;
+}
+/* line 78, ../sass/nav.scss */
+#login-area #nav ul li.multilevel span.level {
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sae43b2d101.png') 0 -510px no-repeat;
+  width: 8px;
+  height: 6px;
+  margin: 3px 0px 0px 10px;
+}
+/* line 87, ../sass/nav.scss */
+#login-area #nav.open {
+  display: block;
+}
+/* line 91, ../sass/nav.scss */
+#login-area .navbuttun {
+  width: 32%;
+  float: left;
+  background: #00669c;
+  border-left: 1px solid #004e7e;
+  border-right: 1px solid #004e7e;
+}
+/* line 97, ../sass/nav.scss */
+#login-area .navbuttun a {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  font-weight: bold;
+  color: white;
+}
+/* line 105, ../sass/nav.scss */
+#login-area .navbuttun.active, #login-area .navbuttun.open {
+  background: #004e7e;
+}
+/* line 108, ../sass/nav.scss */
+#login-area .navbuttun.middle {
+  border: none;
+}
+/* line 112, ../sass/nav.scss */
+#login-area #search-mob form {
+  padding: 10px;
+}
+/* line 114, ../sass/nav.scss */
+#login-area #search-mob form .views-exposed-widget {
+  padding: 0px;
+}
+/* line 117, ../sass/nav.scss */
+#login-area #search-mob form input {
+  margin: 0px;
+  padding: 0px;
+  height: 30px;
+  font-size: 19px;
+}
+/* line 123, ../sass/nav.scss */
+#login-area #search-mob form .form-submit {
+  background: #00669c;
+  color: white;
+  margin: 0px;
+  border: none;
+  height: 34px;
+  font-size: 14px;
+  padding: 8px;
+  width: 42px;
+}
+/* line 136, ../sass/nav.scss */
+#login-area #user-login-mob form {
+  padding: 10px;
+}
+/* line 138, ../sass/nav.scss */
+#login-area #user-login-mob form input {
+  width: 70%;
+}
+/* line 141, ../sass/nav.scss */
+#login-area #user-login-mob form .description {
+  display: block !important;
+}
+/* line 145, ../sass/nav.scss */
+#login-area #user-login-mob .bt-wrapper {
+  display: none !important;
+}
+/* line 150, ../sass/nav.scss */
+#login-area .mobhead {
+  display: none;
+  position: relative;
+  background: #004e7e;
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 158, ../sass/nav.scss */
+#login-area .mobhead .inner {
+  margin: 10px;
+  background: white;
+}
+/* line 163, ../sass/nav.scss */
+#login-area .mobhead.open {
+  display: block;
+}
 
-/* line 242, ../sass/base.scss */
+/* line 112, ../sass/base.scss */
 #pre-area {
   border-top: 1px solid #a3a19b;
   border-bottom: 1px solid #c1bfb9;
   height: 40px;
   background: #f1f2ee;
 }
-/* line 247, ../sass/base.scss */
+/* line 117, ../sass/base.scss */
 #pre-area .wrapper {
   border-top: 1px solid #cac9c6;
   background: #f1f2ee;
 }
 
-/* line 262, ../sass/base.scss */
+/* line 132, ../sass/base.scss */
 #content-area .wrapper .container .inner-container {
   padding-top: 2%;
 }
 
-/* line 269, ../sass/base.scss */
+/* line 139, ../sass/base.scss */
 .view-bilde-slider-node .views-slideshow-controls-bottom {
   display: none;
 }
-/* line 272, ../sass/base.scss */
+/* line 142, ../sass/base.scss */
 .view-bilde-slider-node .views-field-field-main-image-fid {
   float: left;
   width: 100%;
   height: auto;
 }
-/* line 276, ../sass/base.scss */
+/* line 146, ../sass/base.scss */
 .view-bilde-slider-node .views-field-field-main-image-fid img {
   width: 100%;
   height: auto;
 }
-/* line 281, ../sass/base.scss */
+/* line 151, ../sass/base.scss */
 .view-bilde-slider-node .views-field-field-main-image-data {
   font-family: Arial;
   font-size: 0.8em;
@@ -321,29 +344,29 @@ body.admin-menu {
   border-bottom: 1px solid #c1bfb9;
 }
 
-/* line 289, ../sass/base.scss */
+/* line 159, ../sass/base.scss */
 #footer-wrapper {
   border-top: 1px solid #c1bfb9;
   background: #f1f2ee;
 }
-/* line 292, ../sass/base.scss */
+/* line 162, ../sass/base.scss */
 #footer-wrapper #footer {
   border-top: 1px solid #d2d1cb;
 }
-/* line 294, ../sass/base.scss */
+/* line 164, ../sass/base.scss */
 #footer-wrapper #footer #footer-inner {
   border-top: 1px solid #e0e0dc;
   font-family: Helvetica;
   color: #333333;
   font-size: 0.8em;
 }
-/* line 299, ../sass/base.scss */
+/* line 169, ../sass/base.scss */
 #footer-wrapper #footer #footer-inner a {
   font-family: Helvetica;
   text-decoration: none;
 }
 
-/* line 311, ../sass/base.scss */
+/* line 181, ../sass/base.scss */
 .ingress {
   font-family: Arial;
   font-weight: bold;
@@ -352,7 +375,7 @@ body.admin-menu {
   margin: 15px 0px;
 }
 
-/* line 318, ../sass/base.scss */
+/* line 188, ../sass/base.scss */
 .byline {
   font-family: Arial;
   font-size: 0.8em;
@@ -363,42 +386,42 @@ body.admin-menu {
   float: left;
   width: 100%;
 }
-/* line 330, ../sass/base.scss */
+/* line 200, ../sass/base.scss */
 .byline .forfatter {
   float: left;
   font-weight: bold;
   margin-right: 5px;
 }
-/* line 335, ../sass/base.scss */
+/* line 205, ../sass/base.scss */
 .byline .created {
   float: left;
 }
-/* line 338, ../sass/base.scss */
+/* line 208, ../sass/base.scss */
 .byline .updated {
   clear: both;
 }
-/* line 341, ../sass/base.scss */
+/* line 211, ../sass/base.scss */
 .byline a {
   color: #333333;
   text-decoration: none;
 }
 
-/* line 346, ../sass/base.scss */
+/* line 216, ../sass/base.scss */
 body .body-content, body .body-content p {
   font-size: 1.02em;
   line-height: 1.6em;
   color: #333;
 }
-/* line 350, ../sass/base.scss */
+/* line 220, ../sass/base.scss */
 body .body-content h2, body .body-content p h2 {
   font-size: 1.2em;
 }
-/* line 353, ../sass/base.scss */
+/* line 223, ../sass/base.scss */
 body .body-content em, body .body-content p em {
   font-style: italic;
 }
 
-/* line 357, ../sass/base.scss */
+/* line 227, ../sass/base.scss */
 .fakta-mobil {
   background: #f1f2ee;
   border-bottom: 2px solid #c1bfb9;
@@ -407,7 +430,7 @@ body .body-content em, body .body-content p em {
   border-right: 1px solid #d9d9d9;
   margin: 10px 0px 20px 0px;
 }
-/* line 364, ../sass/base.scss */
+/* line 234, ../sass/base.scss */
 .fakta-mobil .faktatittel a {
   color: #d71010;
   font-family: Arial;
@@ -416,37 +439,37 @@ body .body-content em, body .body-content p em {
   display: block;
   padding: 7px;
 }
-/* line 371, ../sass/base.scss */
+/* line 241, ../sass/base.scss */
 .fakta-mobil .faktatittel a .icon {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2854409345.png') 0 -447px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sae43b2d101.png') 0 -447px no-repeat;
   width: 19px;
   height: 18px;
   float: right;
 }
-/* line 379, ../sass/base.scss */
+/* line 249, ../sass/base.scss */
 .fakta-mobil .innhold {
   padding: 7px;
   display: none;
 }
 
-/* line 386, ../sass/base.scss */
+/* line 256, ../sass/base.scss */
 .fakta-mobil.open .faktatittel a .icon {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2854409345.png') 0 -429px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sae43b2d101.png') 0 -429px no-repeat;
 }
-/* line 390, ../sass/base.scss */
+/* line 260, ../sass/base.scss */
 .fakta-mobil.open .innhold {
   display: block;
 }
 
-/* line 394, ../sass/base.scss */
+/* line 264, ../sass/base.scss */
 .tiltoppen {
   width: 100%;
   clear: both;
   margin: 20px 0px;
 }
-/* line 398, ../sass/base.scss */
+/* line 268, ../sass/base.scss */
 .tiltoppen a {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2854409345.png') 0 -169px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sae43b2d101.png') 0 -169px no-repeat;
   width: 174px;
   height: 42px;
   display: block;
@@ -532,7 +555,7 @@ body .body-content em, body .body-content p em {
 }
 /* line 78, ../sass/mixins.scss */
 .rammeboks.quiz .views-field-view-node a {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2854409345.png') 0 -465px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sae43b2d101.png') 0 -465px no-repeat;
   padding-left: 20px;
   float: left;
   color: #333333;
@@ -570,7 +593,7 @@ body .body-content em, body .body-content p em {
   font-family: Arial;
   color: #333333;
   font-weight: bold;
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2854409345.png') 0 -465px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sae43b2d101.png') 0 -465px no-repeat;
   padding-left: 20px;
   height: 13px;
 }
@@ -619,7 +642,7 @@ body .body-content em, body .body-content p em {
 /* line 160, ../sass/mixins.scss */
 .rammeboks.eco li .views-field-view-node a {
   font-weight: bold;
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2854409345.png') 0 -465px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sae43b2d101.png') 0 -465px no-repeat;
   padding-left: 20px;
   height: 13px;
 }
@@ -671,7 +694,7 @@ body .body-content em, body .body-content p em {
 }
 /* line 213, ../sass/mixins.scss */
 .rammeboks.blogger .more-link a {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2854409345.png') 0 -465px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sae43b2d101.png') 0 -465px no-repeat;
   padding-left: 20px;
   float: left;
   color: #333333;
@@ -718,7 +741,7 @@ body .body-content em, body .body-content p em {
   font-size: 0.7em;
   line-height: 1em;
   padding-left: 20px;
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2854409345.png') 0 -465px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sae43b2d101.png') 0 -465px no-repeat;
   font-family: Arial;
   color: #333333;
   text-decoration: none;
@@ -739,12 +762,12 @@ body .body-content em, body .body-content p em {
   text-decoration: none;
 }
 
-/* line 411, ../sass/base.scss */
+/* line 281, ../sass/base.scss */
 .front #block-kr_most_viewed-0 h2 {
   display: none;
 }
 
-/* line 416, ../sass/base.scss */
+/* line 286, ../sass/base.scss */
 .listeboks {
   margin-bottom: 15px;
 }
@@ -905,7 +928,7 @@ div .ownsection h2 {
 /* line 675, ../sass/mixins.scss */
 div .ownsection .link {
   float: right;
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2854409345.png') 0 -409px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sae43b2d101.png') 0 -409px no-repeat;
   text-indent: -9999px;
   height: 20px;
   width: 20px;
@@ -1003,7 +1026,7 @@ div .nopremium-message a.registerhere {
 }
 /* line 805, ../sass/mixins.scss */
 div .nopremium-message a.registerhere span {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2854409345.png') 0 -465px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-sae43b2d101.png') 0 -465px no-repeat;
   padding-left: 20px;
   float: left;
 }
@@ -1106,64 +1129,64 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   line-height: 1em;
 }
 
-/* line 429, ../sass/base.scss */
+/* line 299, ../sass/base.scss */
 .block {
   margin-bottom: 15px;
 }
-/* line 433, ../sass/base.scss */
+/* line 303, ../sass/base.scss */
 .block .siste-saker .views-field-field-main-image-fid {
   display: none;
 }
 
-/* line 443, ../sass/base.scss */
+/* line 313, ../sass/base.scss */
 .layout-mobile .block-views .newslist.sak-2.sak-16 .views-field-field-main-image-fid {
   float: left;
 }
-/* line 446, ../sass/base.scss */
+/* line 316, ../sass/base.scss */
 .layout-mobile .block-views .newslist.sak-2.sak-16 .views-field-field-teaser-value {
   display: none;
 }
 
-/* line 451, ../sass/base.scss */
+/* line 321, ../sass/base.scss */
 .node-content {
   float: left;
   width: 100%;
 }
 
-/* line 456, ../sass/base.scss */
+/* line 326, ../sass/base.scss */
 .node-type-job h1 {
   font-family: Helvetica;
   font-weight: bold;
 }
-/* line 460, ../sass/base.scss */
+/* line 330, ../sass/base.scss */
 .node-type-job .job-title {
   margin-bottom: 1em;
 }
-/* line 462, ../sass/base.scss */
+/* line 332, ../sass/base.scss */
 .node-type-job .job-title h2 {
   color: #333333;
   font-weight: normal;
   font-size: 1.75em;
   line-height: 1.1em;
 }
-/* line 469, ../sass/base.scss */
+/* line 339, ../sass/base.scss */
 .node-type-job .body-content {
   color: #333333;
 }
-/* line 471, ../sass/base.scss */
+/* line 341, ../sass/base.scss */
 .node-type-job .body-content a {
   color: #2C91C5;
 }
-/* line 475, ../sass/base.scss */
+/* line 345, ../sass/base.scss */
 .node-type-job .field-field-job-utlyser {
   font-size: 1.2em;
   font-weight: bold;
 }
-/* line 479, ../sass/base.scss */
+/* line 349, ../sass/base.scss */
 .node-type-job .field-field-teaser {
   font-size: 1.05em;
 }
-/* line 482, ../sass/base.scss */
+/* line 352, ../sass/base.scss */
 .node-type-job .field-field-job-date {
   font-family: Helvetica;
   font-size: 1.25em;
@@ -1171,17 +1194,17 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   margin-bottom: 1em;
   padding-bottom: 0.5em;
 }
-/* line 488, ../sass/base.scss */
+/* line 358, ../sass/base.scss */
 .node-type-job .field-field-job-date .field-label-inline-first {
   font-weight: bold;
 }
-/* line 495, ../sass/base.scss */
+/* line 365, ../sass/base.scss */
 .node-type-job .field-field-main-image {
   float: left;
   padding: 0 1em 1em 0;
 }
 
-/* line 502, ../sass/base.scss */
+/* line 372, ../sass/base.scss */
 .galleriside ul li {
   float: left;
   margin: 0px 4px 8px 0px;
@@ -1191,11 +1214,11 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   position: relative;
   list-style: none;
 }
-/* line 510, ../sass/base.scss */
+/* line 380, ../sass/base.scss */
 .galleriside ul li .views-field-created {
   color: #EEE;
 }
-/* line 513, ../sass/base.scss */
+/* line 383, ../sass/base.scss */
 .galleriside ul li .views-field-created {
   background: none repeat scroll 0 0 #111;
   position: absolute;
@@ -1203,7 +1226,7 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   top: 0;
   z-index: 600;
 }
-/* line 520, ../sass/base.scss */
+/* line 390, ../sass/base.scss */
 .galleriside ul li .views-field-title {
   background: none repeat scroll 0 0 #111;
   bottom: 0;
@@ -1215,13 +1238,13 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   z-index: 300;
   text-decoration: none;
 }
-/* line 531, ../sass/base.scss */
+/* line 401, ../sass/base.scss */
 .galleriside ul li .views-field-title a {
   color: #EEE;
   text-decoration: none;
   font-size: 0.8em;
 }
-/* line 537, ../sass/base.scss */
+/* line 407, ../sass/base.scss */
 .galleriside ul li .views-field-field-galleri-bilde-fid a {
   bottom: 0;
   left: 0;
@@ -1230,30 +1253,30 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   text-align: center;
   top: 0;
 }
-/* line 544, ../sass/base.scss */
+/* line 414, ../sass/base.scss */
 .galleriside ul li .views-field-field-galleri-bilde-fid a img {
   padding: 0px;
   margin: 0px;
 }
 
-/* line 552, ../sass/base.scss */
+/* line 422, ../sass/base.scss */
 .three .three-inner {
   border-top: 1px solid #DDD;
   text-align: center;
 }
 
-/* line 556, ../sass/base.scss */
+/* line 426, ../sass/base.scss */
 .seven.seven_one {
   border-bottom: 1px solid #DDD;
   margin-bottom: 1em;
 }
 
-/* line 561, ../sass/base.scss */
+/* line 431, ../sass/base.scss */
 .node-type-ekstern-blogg .field-field-blogg-bilde {
   float: left;
   margin: 0 1em 1em 0;
 }
-/* line 565, ../sass/base.scss */
+/* line 435, ../sass/base.scss */
 .node-type-ekstern-blogg .field-field-compu-blogginnlegg {
   clear: both;
   margin-top: 2em;
@@ -1261,12 +1284,12 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   padding-top: 1em;
 }
 
-/* line 573, ../sass/base.scss */
+/* line 443, ../sass/base.scss */
 .node-type-eksternt-blogginnlegg .bloginfo {
   border-bottom: 1px solid #ddd;
 }
 
-/* line 577, ../sass/base.scss */
+/* line 447, ../sass/base.scss */
 .ad-right {
   position: absolute;
 }

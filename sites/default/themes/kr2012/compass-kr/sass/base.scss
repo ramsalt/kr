@@ -1,5 +1,6 @@
 @import "compass";
 @import "mixins.scss";
+@import "nav.scss";
 $icons: sprite-map("backgrounds/*.png");
 $logos: sprite-map("logo/*.png");
 
@@ -60,46 +61,7 @@ body.admin-menu{
     display: block;
 }
 #login-area{
-  background: #333333;
-  border-bottom: 1px solid #262626;
-  .wrapper{
-    border-bottom: 1px solid #2b2b2b;
-    .inner{
-      width: 100%;
-      margin: 10px 0px;
-      float: left;
-      #login-content{
-        float: left;
-        height: 16px;
-      }
-      #search-content{
-        height: 16px;
-        float: right;
-        margin-top: 3px;
-        a{
-          span{
-            display: block;
-            float: left;
-          }
-          span.icon{
-            
-            background: sprite($logos, search) no-repeat;
-            width: 12px;
-            height: 13px;
-            margin-left: 4px;
-          }
-        }
-      }
-    }
-  }
-  a{
-    font-size: 0.75em;
-    font-family: Arial;
-    font-weight: bold;
-    text-decoration: none;
-    color: #ffffff;
-    text-transform: Uppercase;
-  }
+
 }
 #fb-root {
   display: none;
@@ -143,101 +105,9 @@ body.admin-menu{
       }
     }
   }
-  #nav-button{
-    margin-right: 15px;
-    float: right;
-    a{
-      float: left;
-      background: sprite($logos, menumobil) no-repeat;
-      width: 38px;
-      height: 39px;
-      text-indent: -9999px;
-      margin: 10px 0px 0px 0px;
-    }
-  }
-  #nav-button.open{
-    a{
-      background: sprite($logos, menumobilclose) no-repeat;
-    }
-  }
-  #nav.open{
-    display: block;
-  }
-  #nav{
-    float: left;
-    display: none;
-    background: transparent;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    ul{
-        background: transparent;
-      li{
-        border-top: 1px solid #6e8697;
-        padding: 0px;
-        width: 100%;
-        clear: both;
-        a{
-          font-size: 0.85em;
-          padding: 15px;
-          font-weight: bold;
-          font-family: Arial;
-          color: #ffffff;
-          text-transform: uppercase;
-          float: left;
-          width: 290px;
-          span{
-            float: left;
-          }
-        }
-        a:hover{
-          background: transparent;
-        }
-      }
-      li.on{
-        background: transparent;
-      }
-      li.multilevel.open{
-        ul{
-          display: block;
-        }
-      }
-      li.multilevel{
-        a{ 
-          span.level{
-            background: sprite($logos, menumobilpilned) no-repeat;
-            width: 7px;
-            height: 7px;
-            margin: 3px 0px 0px 10px;
-          }
-        }
-        ul{
-          border-left: 30px solid #0F3554;
-          position: relative;
-          width: 100%;
-          clear: both;
-          display: none;
-          float: left;
-          height: auto;
-          top: 0px;
-          li{
-            width: auto;
-            float: left;
-            a{
-              width: 260px;
-              font-weight: normal;
-              text-transform: none;
-            }
-          }
-        }
-      }
-      li:hover{
-        a{
-          background: transparent;
-        }
-      }
-    }
-  }
+}
+#login-area{
+  @include nav-mob;
 }
 #pre-area{
   border-top: 1px solid #a3a19b;
