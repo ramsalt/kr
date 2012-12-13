@@ -74,6 +74,8 @@ body.admin-menu{
   background-color: #225A84;
   border-top: 1px solid #073e6a;
   border-bottom: 1px solid #122435;
+  height: 48px;
+  overflow: hidden;
   .inner-wrapper{
     border-bottom: 1px solid #294472;
   }
@@ -92,7 +94,7 @@ body.admin-menu{
       a{
         text-indent: -9999px;
         display: block;
-        padding: 17px 0px;
+        padding: 11px 0px;
         float: left;
         position: relative;
         height: 28px;

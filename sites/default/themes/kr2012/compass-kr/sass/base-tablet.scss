@@ -9,7 +9,8 @@ $logos: sprite-map("logo/*.png");
     display: block;
   }
 
-  #logo-area{ 
+  #logo-area{
+    height: 57px; 
     .wrapper {
       .container {
         .inner-container{
