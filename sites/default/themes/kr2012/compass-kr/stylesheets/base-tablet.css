@@ -1,34 +1,12 @@
 /*
-Syntax error: Undefined mixin 'border-radius'.
-        on line 48 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss, in `border-radius'
-        from line 48 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss
+Syntax error: Undefined mixin 'border-top-radius'.
+        on line 16 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss, in `border-top-radius'
+        from line 16 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss
 
 Backtrace:
-/Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss:48:in `border-radius'
-/Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss:48
+/Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss:16:in `border-top-radius'
+/Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss:16
 /opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:249:in `visit_mixin'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:107:in `visit_children'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:106:in `visit_children'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:316:in `visit_rule'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:107:in `visit_children'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:106:in `visit_children'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:316:in `visit_rule'
 /opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
 /opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
 /opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
@@ -145,4 +123,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'border-radius'.\A         on line 48 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss, in `border-radius'\A         from line 48 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss"; }
+  content: "Syntax error: Undefined mixin 'border-top-radius'.\A         on line 16 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss, in `border-top-radius'\A         from line 16 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss"; }

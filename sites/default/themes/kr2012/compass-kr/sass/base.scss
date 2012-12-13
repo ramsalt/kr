@@ -60,9 +60,7 @@ body.admin-menu{
 .visible-mobile{
     display: block;
 }
-#login-area{
 
-}
 #fb-root {
   display: none;
 }
@@ -75,7 +73,10 @@ body.admin-menu{
   @include background-image(linear-gradient(top, #225a84, #083e6b));
   background-color: #225A84;
   border-top: 1px solid #073e6a;
-  border-bottom: 1px solid #174a73;
+  border-bottom: 1px solid #122435;
+  .inner-wrapper{
+    border-bottom: 1px solid #294472;
+  }
   .wrapper{
     border-top: 1px solid #34668f;
     .container{

@@ -1,4 +1,4 @@
-$farge-knapp: #00669c;
+$farge-knapp: #336699;
 $farge-knapp-link: #fff;
 $farge-knapp-border: #004e7e;
 $farge-knapp-aktiv: #004e7e;
@@ -6,12 +6,17 @@ $farge-mob-content: #ffffff;
 $farge-mob-menu-link: #000000;
 $farge-list-bottom: #cccccc;
 $farge-menu-dropdown-link: #313131;
+$farge-menu-desktop: #336699;
 $logos: sprite-map("logo/*.png");
 $menu-font: Helvetica;
 
 @mixin nav-mob{
   .wrapper{
     background: $farge-knapp;
+    border-bottom: 1px solid #234f7c;
+    .inner-wrapper{
+      border-bottom: 1px solid #4876a3;
+    }
   }
   #nav{
     display: none;
@@ -183,9 +188,11 @@ $menu-font: Helvetica;
 @mixin nav-brett{
   .wrapper{
     .container{
-      .grid{
-        overflow: visible;
-        height: 38px;
+      .inner-container{             
+        .grid{
+          overflow: visible;
+          height: 38px;
+        }
       }
     }
   }
@@ -271,8 +278,20 @@ $menu-font: Helvetica;
 @mixin nav-desktop{
   .wrapper{
     background: transparent;
+    border-bottom: none;
+    .inner-wrapper{
+      border-bottom: none;
+    }
     .container{
       background: $farge-knapp;
+      border-top: 1px solid #214264;
+      border-bottom: 1px solid #234f7c;
+      .inner-container{
+        border-top: 1px solid #2b5782;
+        border-bottom: 1px solid #4876A3;
+        float: left;
+        width: 100%;
+      }
     }
   }
 }

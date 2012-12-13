@@ -11,7 +11,10 @@ $logos: sprite-map("logo/*.png");
 
   #logo-area{ 
     .wrapper {
-      .container { 
+      .container {
+        .inner-container{
+          @include border-top-radius(3px);
+        } 
         .grid{
           width: 728px;      
           margin: 0px 20px;
