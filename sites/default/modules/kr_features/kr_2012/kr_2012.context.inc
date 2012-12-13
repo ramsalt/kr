@@ -612,6 +612,12 @@ function kr_2012_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'kr_diverse-2' => array(
+          'module' => 'kr_diverse',
+          'delta' => 2,
+          'region' => 'prearea',
+          'weight' => 0,
+        ),
         'openx-2' => array(
           'module' => 'openx',
           'delta' => 2,

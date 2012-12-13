@@ -162,14 +162,17 @@
   		</div>
   	</div>
   </div><! -- #login-area -->
+  <?php if($prearea): ?>
     <div id="pre-area" class="area">
-  	<div class="wrapper">
-  		<div class="container container-16 clearfix">
-  			<div class="inner-container">
-  	  			<div class="grid pre full">
-  	  			</div>  				
-  			</div>
-  		</div>
-  	</div>
-  </div><!-- #pre-area -->    
+	  	<div class="wrapper">
+	  		<div class="container container-16 clearfix">
+	  			<div class="inner-container">
+	  	  			<div class="grid pre full">
+	  	  				<?php print $prearea; ?>
+	  	  			</div>  				
+	  			</div>
+	  		</div>
+	  	</div>
+  	</div><!-- #pre-area -->
+  <?php endif; ?> 
   </header>

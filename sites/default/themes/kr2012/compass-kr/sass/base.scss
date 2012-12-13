@@ -1,5 +1,6 @@
 @import "compass";
 @import "mixins.scss";
+@import "ticker.scss";
 @import "nav.scss";
 $icons: sprite-map("backgrounds/*.png");
 $logos: sprite-map("logo/*.png");
@@ -116,6 +117,7 @@ body.admin-menu{
   border-top: 1px solid #a3a19b;
   border-bottom: 1px solid #c1bfb9;
   height: 40px;
+  overflow: hidden;
   background: #f1f2ee;
   .wrapper{
     border-top: 1px solid #cac9c6;
@@ -297,6 +299,7 @@ div {
   @include seksjonsside-mob;
   @include premium-msg-mob;
   @include jobbliste;
+  @include ticker;
 }
 
 .block {
@@ -462,3 +465,4 @@ div {
 .views-exposed-form .views-exposed-widget .form-submit{
   margin-top: 3px;
 }
+

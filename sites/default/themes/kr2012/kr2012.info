@@ -26,7 +26,7 @@ regions[under_content] = Underneath the Content
 regions[header] = Header
 regions[footer] = Footer
 regions[toparea] = Toparea
-
+regions[prearea] = Prearea
 regions[ad_right] = Ad right
 
 regions[one_one] = Front: One one
@@ -52,6 +52,7 @@ regions[ten_three] = Front: Ten three
     layouts[default][description] = "Simple two column page."
     layouts[default][template] = "page-node"
     layouts[default][regions][] = "header"
+    layouts[default][regions][] = "prearea"
     layouts[default][regions][] = "ad_right"
     layouts[default][regions][] = "toparea"
     layouts[default][regions][] = "over_content"
@@ -66,6 +67,7 @@ regions[ten_three] = Front: Ten three
     layouts[columns][stylesheet] = "front.css"
     layouts[columns][template] = "page-forside"
     layouts[columns][regions][] = "header"
+    layouts[columns][regions][] = "prearea"
     layouts[columns][regions][] = "toparea"
     layouts[columns][regions][] = "ad_right"
     layouts[columns][regions][] = "one_one"

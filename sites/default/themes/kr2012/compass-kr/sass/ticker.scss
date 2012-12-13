@@ -1,0 +1,63 @@
+$logos: sprite-map("logo/*.png");
+
+@mixin ticker{
+  .ticker {
+    line-height: 30px;
+    padding: 2px;
+    font-size: 16px;
+    position: relative;
+  }
+  .ticker-label{
+    float: left;
+    display: block;
+    margin-left: 30px;
+    margin-top: 2px;
+  }
+  .ticker-news {
+
+  }
+  .ticker-news{
+    overflow: hidden;
+    margin-top: 2px;
+    ul{ 
+      float: left;
+      height: 18px;
+      width: 20000px;
+      li{
+        float: left;
+        margin-right: 10px;
+        a{
+          color: #5990c2;
+          text-decoration: none;
+          font-size: 1em;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+  .ticker-prev {
+    width: 10px;
+    height: 15px;
+    left: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    float: left;
+    position: absolute;
+    top: 9px;
+    
+    background: sprite($logos, tickerprev) no-repeat;
+  }
+  .ticker-next {
+    width: 10px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    float: left;
+    position: absolute;
+    right: 10px;
+    top: 9px;
+    background: sprite($logos, tickernext) no-repeat;
+  }
+}
