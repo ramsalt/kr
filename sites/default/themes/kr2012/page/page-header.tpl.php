@@ -63,7 +63,13 @@
 	    				<div id="logo"><a href="<?php print check_url($front_page); ?>" title="<?php print check_plain($site_name); ?>"><span><?php print check_plain($site_name); ?></span></a></div><!--/ #logo -->
 	    					<div class="logo-item-wrapper">
 			    				<div class="login-wrapper">
-			    					<a href="/user"><span>Logg inn</span></a>
+			    					<?php if($user->uid == 0){
+			    						print '<a href="/user"><span>Logg inn</span></a>';	
+			    					}else{
+			    						print '<a href="/logout"><span>Logg ut</span></a>';
+			    					}
+			    					?>
+			    					
 			    				</div>
 			    				<div class="search-wrapper">
 							        <form id="views-exposed-form-search-sorted-by-time-page-0" method="get" accept-charset="UTF-8" action="/sok">

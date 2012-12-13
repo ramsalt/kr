@@ -1727,6 +1727,26 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   #logo-area .wrapper .container .logo-item-wrapper .search-wrapper {
     float: left;
   }
+  /* line 45, ../sass/base-tablet.scss */
+  #logo-area .wrapper .container .logo-item-wrapper .search-wrapper input.form-text {
+    height: 20px;
+    width: 150px;
+    -webkit-border-radius: 4px 4px;
+    -moz-border-radius: 4px / 4px;
+    border-radius: 4px / 4px;
+  }
+  /* line 50, ../sass/base-tablet.scss */
+  #logo-area .wrapper .container .logo-item-wrapper .search-wrapper .form-submit {
+    position: absolute;
+    right: 16px;
+    text-indent: -999px;
+    background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s7861d55ebf.png') 0 -510px no-repeat;
+    width: 14px;
+    height: 15px;
+    border: none;
+    padding: 0px;
+    margin: 5px 4px 0px 0px;
+  }
 
   /* line 186, ../sass/nav.scss */
   #login-area .wrapper .container .grid {
@@ -1816,7 +1836,7 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
     margin: 6px 0px 0px 4px;
   }
 
-  /* line 56, ../sass/base-tablet.scss */
+  /* line 72, ../sass/base-tablet.scss */
   #content-area .wrapper .container .inner-container {
     padding-top: 2%;
   }
@@ -1963,7 +1983,7 @@ div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
     color: #333333;
   }
 
-  /* line 71, ../sass/base-tablet.scss */
+  /* line 87, ../sass/base-tablet.scss */
   #logo-area .login-wrapper, #logo-area .search-wrapper {
     display: block;
   }
