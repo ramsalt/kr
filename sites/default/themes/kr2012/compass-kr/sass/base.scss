@@ -447,3 +447,15 @@ div {
 .ad-right{
   position: absolute;
 }
+.block-openx{
+  display: none;
+}
+#logo-area .login-wrapper, #logo-area .search-wrapper{
+  display: none;
+}
+.views-exposed-form .views-exposed-widget{
+  padding: 0px;
+}
+.views-exposed-form .views-exposed-widget .form-submit{
+  margin-top: 3px;
+}

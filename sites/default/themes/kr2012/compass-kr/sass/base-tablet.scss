@@ -1,4 +1,5 @@
 @import "mixins.scss";
+$logos: sprite-map("logo/*.png");
 
 @media all and (min-width: 740px)  {
   .visible-mobile, .visible-desktop{
@@ -17,6 +18,31 @@
         }
         #logo{
           margin-left: 0px;
+        }
+        .logo-item-wrapper{
+          position: absolute;
+          right: 0px;
+          padding: 15px;
+          .login-wrapper{
+            float: left;
+            margin-right: 15px;
+            a{
+              background: sprite($logos, nokkelhull) no-repeat;
+              font-weight: bold;
+              height: 28px;
+              float: left;
+              text-decoration: none;
+              font-family: Helvetica;
+              color: #fff;
+              span{
+                padding: 3px 0px 0px 34px;
+                float: left;
+              }
+            }
+          }
+          .search-wrapper{
+            float: left;
+          }
         }
       }
     }
@@ -41,5 +67,8 @@
   div {
     @include ownsection-brett;
     @include seksjonsside-brett;
+  }
+  #logo-area .login-wrapper, #logo-area .search-wrapper{
+    display: block;
   }
 }

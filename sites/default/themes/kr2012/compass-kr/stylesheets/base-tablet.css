@@ -1,11 +1,11 @@
 /*
 Syntax error: Undefined mixin 'nav-brett'.
-        on line 25 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss, in `nav-brett'
-        from line 25 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss
+        on line 51 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss, in `nav-brett'
+        from line 51 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss
 
 Backtrace:
-/Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss:25:in `nav-brett'
-/Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss:25
+/Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss:51:in `nav-brett'
+/Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss:51
 /opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:249:in `visit_mixin'
 /opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
 /opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
@@ -90,4 +90,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'nav-brett'.\A         on line 25 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss, in `nav-brett'\A         from line 25 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss"; }
+  content: "Syntax error: Undefined mixin 'nav-brett'.\A         on line 51 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss, in `nav-brett'\A         from line 51 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss"; }

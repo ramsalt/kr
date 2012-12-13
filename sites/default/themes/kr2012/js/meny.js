@@ -52,6 +52,7 @@
 		});
 		meny_mob_menu_fix();
 		$('#nav .multilevel a.first-level').bind('click.multilevel', function(){
+			$('#nav .multilevel').not($(this).parent()).removeClass('open');
 			$(this).parent().toggleClass('open');
 			return false;
 		});

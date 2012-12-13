@@ -62,6 +62,7 @@ $logos: sprite-map("logo/*.png");
         .inner-container{
           height: 74px;
           background: url('/sites/default/themes/kr2012/compass-kr/images/backxrepeat.png') 0px 0px repeat-x;
+          position: relative;
           .grid{
             width: 96%;
             margin: 0px 2% 0px 2%;
@@ -197,6 +198,9 @@ $logos: sprite-map("logo/*.png");
         margin-top: 6px;
       }
     }
+  }
+  .block-openx{
+    display: block;
   }
 }
 

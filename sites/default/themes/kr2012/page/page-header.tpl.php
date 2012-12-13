@@ -8,6 +8,7 @@
  *
  * @ingroup page
  */
+ global $user;
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
 <html 
@@ -60,6 +61,30 @@
 	  			<div class="grid grid-16">
 	  				<div class="inner">
 	    				<div id="logo"><a href="<?php print check_url($front_page); ?>" title="<?php print check_plain($site_name); ?>"><span><?php print check_plain($site_name); ?></span></a></div><!--/ #logo -->
+	    					<div class="logo-item-wrapper">
+			    				<div class="login-wrapper">
+			    					<a href="/user"><span>Logg inn</span></a>
+			    				</div>
+			    				<div class="search-wrapper">
+							        <form id="views-exposed-form-search-sorted-by-time-page-0" method="get" accept-charset="UTF-8" action="/sok">
+								        <div><div class="view-search-sorted-by-time views-exposed-form">
+								          <div class="views-exposed-widgets clear-block">
+								                  <div class="views-exposed-widget">
+								                                <div class="views-widget">
+								                  <div id="edit-keys-wrapper" class="form-item">
+								         <input type="text" class="form-text" title="Skriv inn ønskede søkekriterier." value="" size="15" id="edit-keys" name="keys" maxlength="128" />
+								        </div>
+								                </div>
+								              </div>
+								                <div class="views-exposed-widget">
+								              <input type="submit" class="form-submit" value="Søk" id="edit-submit-search-sorted-by-time" />
+								            </div>
+								          </div>
+								        </div>
+								        </div>
+							        </form>
+								</div>
+							</div>
 	    			</div>
 	    		</div>
 	    	</div>
@@ -73,7 +98,11 @@
 	  			<div class="grid grid-16">
 	  				<div class="inner">
     					<div id="nav-button" class="visible-mobile navbuttun"><a href="">Meny</a></div>
-		  				<div id="login-content" class="visible-mobile navbuttun middle"><a href="/user">Logg inn</a></div>
+    					<?php if($user->uid == 0){
+    						print '<div id="login-content" class="visible-mobile navbuttun middle"><a href="/user">Logg inn</a></div>';
+    					}else{
+    						print '<div id="logout-content" class="visible-mobile navbuttun middle"><a href="/logout">Logg ut</a></div>';
+    					} ?>		  				
 		  				<div id="search-content" class="visible-mobile navbuttun"><a href="/sok"><span>Søk</span><span class="icon"></span></a></div>
 					  	<div id="nav">
 						    <?php if (isset($expanded_primary_links)): ?>
