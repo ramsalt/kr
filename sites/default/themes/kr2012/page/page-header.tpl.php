@@ -110,7 +110,11 @@
 						</div><!-- /#search-mob -->
 						<div id="user-login-mob" class="mobhead">
 							<div class="inner">
-								<?php print drupal_get_form('user_login');  ?>
+								<?php global $user;
+								if($user->uid == 0){
+									print drupal_get_form('user_login');
+								}  
+								?>
 							</div>
 						</div>
 		  			</div>
