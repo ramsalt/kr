@@ -5,7 +5,9 @@ $farge-knapp-aktiv: #004e7e;
 $farge-mob-content: #ffffff;
 $farge-mob-menu-link: #000000;
 $farge-list-bottom: #cccccc;
+$farge-menu-dropdown-link: #313131;
 $logos: sprite-map("logo/*.png");
+$menu-font: Helvetica;
 
 @mixin nav-mob{
   .wrapper{
@@ -89,7 +91,7 @@ $logos: sprite-map("logo/*.png");
   }
   
   .navbuttun{
-    width: 32%;
+    width: 32%;    
     float: left;
     background: $farge-knapp;
     border-left: 1px solid $farge-knapp-border;
@@ -98,6 +100,7 @@ $logos: sprite-map("logo/*.png");
       text-decoration: none;
       display: block;
       padding: 10px;
+      height: 18px;
       font-weight: bold;
       color: $farge-knapp-link;
     }
@@ -147,6 +150,19 @@ $logos: sprite-map("logo/*.png");
     }
     
   }
+  #search-content{
+    a{
+      span{
+        float: left;
+      }
+      .icon{
+        background: sprite($logos, hvitlupe) no-repeat;
+        width: 14px;
+        height: 15px;
+        margin: 1px 0px 0px 7px;
+      }
+    }
+  }
   .mobhead{
     display: none;
     position: relative;
@@ -162,5 +178,100 @@ $logos: sprite-map("logo/*.png");
   }
   .mobhead.open{
     display: block;
+  }
+}
+@mixin nav-brett{
+  .wrapper{
+    .container{
+      .grid{
+        overflow: visible;
+        height: 38px;
+      }
+    }
+  }
+  #nav{
+    display: block;
+    background: transparent;
+    ul{
+      margin-left: -10px;
+      padding: 0px;
+      li{
+        width: auto;
+        clear: none;
+        background: transparent;
+        border: none;
+        position: relative;
+        overflow: visible;
+        a{
+          width: auto;
+          font-family: $menu-font;
+          color: $farge-knapp-link;
+        }
+        ul{
+          top: 38px;
+          background: $farge-knapp-aktiv;
+          position: absolute;
+          width: auto;
+          padding: 10px;
+          margin: 0px;
+          li{
+            float: left;
+            clear: both;
+            margin: 0px;
+            width: 100%;
+            border-bottom: 1px solid transparent;
+            a{
+              padding: 6px 0px 6px 10px;
+              font-weight: bold;
+              color: $farge-menu-dropdown-link;
+              background: $farge-mob-content;
+              width: 200px;
+              span{
+                padding: 0px;
+              }
+            }
+          }
+        }
+      }
+      li.on{
+        a{
+          background: $farge-knapp-aktiv;
+        }
+      }
+      li.open{
+        a{
+          background: $farge-knapp-aktiv;
+        }
+        li{
+          a{
+            background: $farge-mob-content;
+          }
+        }
+        ul{
+          display: block;
+        }
+      }
+      li:hover{
+        a{
+          background: $farge-knapp-aktiv;
+        }
+      }
+      li.multilevel{
+        span.level{
+          background: sprite($logos, menupilnedhvit) no-repeat;
+          width: 8px;
+          height: 6px;
+          margin: 6px 0px 0px 4px;
+        }
+      }
+    }
+  }
+}
+@mixin nav-desktop{
+  .wrapper{
+    background: transparent;
+    .container{
+      background: $farge-knapp;
+    }
   }
 }

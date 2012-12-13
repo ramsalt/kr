@@ -51,7 +51,7 @@ $logos: sprite-map("logo/*.png");
     }
   }
   #login-area{
-
+    @include nav-desktop;
   }
   #logo-area{
     background: transparent;

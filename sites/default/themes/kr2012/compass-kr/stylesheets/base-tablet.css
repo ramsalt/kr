@@ -1,168 +1,93 @@
-@media all and (min-width: 740px) {
-  /* line 4, ../sass/base-tablet.scss */
-  .visible-mobile, .visible-desktop {
-    display: none;
-  }
+/*
+Syntax error: Undefined mixin 'nav-brett'.
+        on line 25 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss, in `nav-brett'
+        from line 25 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss
 
-  /* line 7, ../sass/base-tablet.scss */
-  .visible-tablet {
-    display: block;
-  }
-
-  /* line 14, ../sass/base-tablet.scss */
-  #logo-area .wrapper .container .grid {
-    width: 728px;
-    margin: 0px 20px;
-  }
-  /* line 18, ../sass/base-tablet.scss */
-  #logo-area .wrapper .container #logo {
-    margin-left: 0px;
-  }
-
-  /* line 27, ../sass/base-tablet.scss */
-  #content-area .wrapper .container .inner-container {
-    padding-top: 2%;
-  }
-
-  /* line 506, ../sass/mixins.scss */
-  .block-views .newslist .views-field-title, .block-views .newslist .views-field-field-main-image-fid, .block-views .newslist .views-field-field-teaser-value {
-    margin: 0px 20px;
-  }
-  /* line 509, ../sass/mixins.scss */
-  .block-views .newslist a {
-    font-size: 1.8em;
-    line-height: 1.1em;
-  }
-  /* line 513, ../sass/mixins.scss */
-  .block-views .newslist .views-field-title {
-    padding-bottom: 10px;
-  }
-  /* line 519, ../sass/mixins.scss */
-  .block-views .newslist.sak-1 .views-field-title a {
-    font-size: 2.2em;
-    line-height: 1.2em;
-  }
-  /* line 525, ../sass/mixins.scss */
-  .block-views .newslist.sak-1 ul li {
-    margin-top: 0px;
-  }
-  /* line 531, ../sass/mixins.scss */
-  .block-views .newslist.sak-2 li {
-    border-bottom: 1px solid #DDD;
-  }
-  /* line 535, ../sass/mixins.scss */
-  .block-views .newslist.sak-2 li.views-row-last {
-    border-bottom: 0px;
-  }
-  /* line 541, ../sass/mixins.scss */
-  .block-views .newslist.sak-2 .views-field-field-main-image-fid .field-content a img {
-    width: 170px;
-    height: auto;
-    border: 1px solid #d1d1d1;
-  }
-  /* line 550, ../sass/mixins.scss */
-  .block-views .newslist.sak-2 .views-field-title a {
-    font-size: 1.8em;
-    line-height: 1.1em;
-  }
-  /* line 557, ../sass/mixins.scss */
-  .block-views .newslist.sak-4 ul {
-    width: 100%;
-    float: left;
-    border-top: 1px solid #DDD;
-    border-bottom: 1px solid #DDD;
-  }
-  /* line 562, ../sass/mixins.scss */
-  .block-views .newslist.sak-4 ul li {
-    float: left;
-    width: 253px;
-    border-bottom: 0px;
-    border-right: 1px solid #DDD;
-    margin: 0px;
-    padding: 0px;
-  }
-  /* line 569, ../sass/mixins.scss */
-  .block-views .newslist.sak-4 ul li .views-field-field-main-image-fid {
-    float: left;
-    display: none;
-  }
-  /* line 573, ../sass/mixins.scss */
-  .block-views .newslist.sak-4 ul li .views-field-title {
-    padding-top: 25px;
-  }
-  /* line 576, ../sass/mixins.scss */
-  .block-views .newslist.sak-4 ul li .views-field-field-teaser-value {
-    display: block;
-    padding-bottom: 25px;
-  }
-  /* line 581, ../sass/mixins.scss */
-  .block-views .newslist.sak-4 ul li.views-row-last {
-    border-right: 0px;
-  }
-  /* line 587, ../sass/mixins.scss */
-  .block-views .newslist.fire .views-field-field-main-image-fid, .block-views .newslist.fem .views-field-field-main-image-fid {
-    float: left;
-    margin-right: 10px;
-  }
-  /* line 590, ../sass/mixins.scss */
-  .block-views .newslist.fire .views-field-field-main-image-fid img, .block-views .newslist.fem .views-field-field-main-image-fid img {
-    width: 223px;
-    height: auto;
-  }
-  /* line 595, ../sass/mixins.scss */
-  .block-views .newslist.fire .views-field-title, .block-views .newslist.fem .views-field-title {
-    float: none;
-    width: auto;
-  }
-  /* line 599, ../sass/mixins.scss */
-  .block-views .newslist.fire .views-field-field-teaser-value, .block-views .newslist.fem .views-field-field-teaser-value {
-    display: block;
-  }
-
-  /* line 282, ../sass/mixins.scss */
-  .rammeboks {
-    padding: 5%;
-    width: 90%;
-    border-top: 1px solid #d9d9d9;
-    border-left: 1px solid #d9d9d9;
-    border-right: 1px solid #d9d9d9;
-    border-bottom: 2px solid #c1bfb9;
-    background: #f1f2ee;
-    float: left;
-  }
-  /* line 293, ../sass/mixins.scss */
-  .rammeboks ul li .views-field-field-teaser-value {
-    font-size: 1em;
-    font-family: Arial;
-    color: #333;
-  }
-
-  /* line 304, ../sass/mixins.scss */
-  .rammeboks.eco ul li .views-field-title {
-    padding-top: 0.7em;
-  }
-
-  /* line 312, ../sass/mixins.scss */
-  .rammeboks.blogger .more-link a {
-    font-size: 1em;
-  }
-  /* line 316, ../sass/mixins.scss */
-  .rammeboks.blogger .views-field-field-blogg-bilde-fid {
-    display: none;
-  }
-
-  /* line 688, ../sass/mixins.scss */
-  div .ownsection {
-    float: left;
-    width: 197px;
-    margin-left: 20px;
-  }
-  /* line 692, ../sass/mixins.scss */
-  div .ownsection .desc {
-    padding-top: 1em;
-    display: block;
-    clear: both;
-    font-family: Arial;
-    color: #333333;
-  }
-}
+Backtrace:
+/Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss:25:in `nav-brett'
+/Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss:25
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:249:in `visit_mixin'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:107:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:106:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:316:in `visit_rule'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:107:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:106:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:360:in `visit_media'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:107:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:106:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:126:in `visit_root'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/root_node.rb:20:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/engine.rb:315:in `_render'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/engine.rb:262:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `to_proc'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `run_callback'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:55:in `callback_action'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:35:in `update'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/state/directory.rb:39:in `modified'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/state/directory.rb:37:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/state/directory.rb:37:in `modified'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/state/directory.rb:18:in `refresh'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:15:in `loop'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:15:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/monitor.rb:26:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm.rb:70:in `monitor'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:87:in `perform'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/bin/compass:30
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/bin/compass:44:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/bin/compass:44
+/opt/local/bin/compass:23:in `load'
+/opt/local/bin/compass:23
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'nav-brett'.\A         on line 25 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss, in `nav-brett'\A         from line 25 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss"; }
