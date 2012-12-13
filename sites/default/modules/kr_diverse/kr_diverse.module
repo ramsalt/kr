@@ -86,7 +86,7 @@ function _kr_aktuelle(){
 	}else{
 		$query = db_query('SELECT * FROM term_node t
 		LEFT JOIN node n ON t.vid = n.vid
-		WHERE t.tid = '.$number.' AND n.status = 1
+		WHERE t.tid = '.$tax.' AND n.status = 1
 		ORDER BY n.created DESC
 		LIMIT '.$number);
 		$taxonomy = taxonomy_get_term($tax);
