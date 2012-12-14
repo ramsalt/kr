@@ -47,22 +47,22 @@
     overflow: hidden;
   }
 
-  /* line 279, ../sass/nav.scss */
+  /* line 285, ../sass/nav.scss */
   #login-area .wrapper {
     background: transparent;
     border-bottom: none;
   }
-  /* line 282, ../sass/nav.scss */
+  /* line 288, ../sass/nav.scss */
   #login-area .wrapper .inner-wrapper {
     border-bottom: none;
   }
-  /* line 285, ../sass/nav.scss */
+  /* line 291, ../sass/nav.scss */
   #login-area .wrapper .container {
     background: #336699;
     border-top: 1px solid #214264;
     border-bottom: 1px solid #234f7c;
   }
-  /* line 289, ../sass/nav.scss */
+  /* line 295, ../sass/nav.scss */
   #login-area .wrapper .container .inner-container {
     border-top: 1px solid #2b5782;
     border-bottom: 1px solid #4876A3;
@@ -115,7 +115,7 @@
   }
   /* line 92, ../sass/base-desktop.scss */
   #logo-area .wrapper #logo a span {
-    background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s6835930c50.png') 0 0 no-repeat;
+    background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2391debb5d.png') 0 -30px no-repeat;
     width: 291px;
     height: 31px;
     float: left;

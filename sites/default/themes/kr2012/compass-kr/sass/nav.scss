@@ -103,9 +103,11 @@ $menu-font: Helvetica;
     border-right: 1px solid $farge-knapp-border;
     a{
       text-decoration: none;
+      text-align: center;
       display: block;
       padding: 10px;
       height: 18px;
+      font-family: Helvetica;
       font-weight: bold;
       color: $farge-knapp-link;
     }
@@ -158,7 +160,11 @@ $menu-font: Helvetica;
   #search-content{
     a{
       span{
-        float: left;
+        display: inline-table;
+      }
+      .text{
+        height: 15px;
+        vertical-align: top;
       }
       .icon{
         background: sprite($logos, hvitlupe) no-repeat;

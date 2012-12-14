@@ -112,7 +112,7 @@
 							}else{
 								print '<div id="logout-content" class="visible-mobile navbuttun middle"><a href="/logout">Logg ut</a></div>';
 							} ?>		  				
-			  				<div id="search-content" class="visible-mobile navbuttun"><a href="/sok"><span>Søk</span><span class="icon"></span></a></div>
+			  				<div id="search-content" class="visible-mobile navbuttun"><a href="/sok"><span class="text">Søk</span><span class="icon"></span></a></div>
 						  	<div id="nav">
 							    <?php if (isset($expanded_primary_links)): ?>
 							      <?php print theme('openpublish_menu', $expanded_primary_links); ?>
