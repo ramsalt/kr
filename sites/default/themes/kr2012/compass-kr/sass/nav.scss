@@ -16,6 +16,9 @@ $menu-font: Helvetica;
     border-bottom: 1px solid #234f7c;
     .inner-wrapper{
       border-bottom: 1px solid #4876a3;
+      .grid{
+        margin: 0px;
+      }
     }
   }
   #nav{
@@ -198,6 +201,8 @@ $menu-font: Helvetica;
         .grid{
           overflow: visible;
           height: 38px;
+          margin-left: 15px;
+          margin-right: 15px;
         }
       }
     }

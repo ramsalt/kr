@@ -504,7 +504,11 @@ body.admin-menu {
 #login-area .wrapper .inner-wrapper {
   border-bottom: 1px solid #4876a3;
 }
-/* line 21, ../sass/nav.scss */
+/* line 19, ../sass/nav.scss */
+#login-area .wrapper .inner-wrapper .grid {
+  margin: 0px;
+}
+/* line 24, ../sass/nav.scss */
 #login-area #nav {
   display: none;
   position: relative;
@@ -514,11 +518,11 @@ body.admin-menu {
   margin: 0px;
   padding: 0px;
 }
-/* line 29, ../sass/nav.scss */
+/* line 32, ../sass/nav.scss */
 #login-area #nav ul {
   padding: 10px;
 }
-/* line 31, ../sass/nav.scss */
+/* line 34, ../sass/nav.scss */
 #login-area #nav ul li {
   background: white;
   padding: 0px;
@@ -529,22 +533,22 @@ body.admin-menu {
   overflow: hidden;
   border-bottom: 1px solid #cccccc;
 }
-/* line 40, ../sass/nav.scss */
+/* line 43, ../sass/nav.scss */
 #login-area #nav ul li a {
   color: black;
   padding: 10px;
   float: left;
   width: 100%;
 }
-/* line 45, ../sass/nav.scss */
+/* line 48, ../sass/nav.scss */
 #login-area #nav ul li a span {
   float: left;
 }
-/* line 49, ../sass/nav.scss */
+/* line 52, ../sass/nav.scss */
 #login-area #nav ul li a:hover {
   background: #cccccc;
 }
-/* line 52, ../sass/nav.scss */
+/* line 55, ../sass/nav.scss */
 #login-area #nav ul li ul {
   display: none;
   background: transparent;
@@ -554,40 +558,40 @@ body.admin-menu {
   height: auto;
   width: 100%;
 }
-/* line 60, ../sass/nav.scss */
+/* line 63, ../sass/nav.scss */
 #login-area #nav ul li ul li {
   padding: 0px;
   border-bottom: 3px solid transparent;
   background: transparent;
 }
-/* line 64, ../sass/nav.scss */
+/* line 67, ../sass/nav.scss */
 #login-area #nav ul li ul li a {
   background: #cccccc;
 }
-/* line 67, ../sass/nav.scss */
+/* line 70, ../sass/nav.scss */
 #login-area #nav ul li ul li a:hover {
   background: transparent;
 }
-/* line 75, ../sass/nav.scss */
+/* line 78, ../sass/nav.scss */
 #login-area #nav ul li.open ul {
   display: block;
 }
-/* line 80, ../sass/nav.scss */
+/* line 83, ../sass/nav.scss */
 #login-area #nav ul li:hover a {
   background: #cccccc;
 }
-/* line 85, ../sass/nav.scss */
+/* line 88, ../sass/nav.scss */
 #login-area #nav ul li.multilevel span.level {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2391debb5d.png') 0 -590px no-repeat;
   width: 8px;
   height: 6px;
   margin: 3px 0px 0px 10px;
 }
-/* line 94, ../sass/nav.scss */
+/* line 97, ../sass/nav.scss */
 #login-area #nav.open {
   display: block;
 }
-/* line 98, ../sass/nav.scss */
+/* line 101, ../sass/nav.scss */
 #login-area .navbuttun {
   width: 32%;
   float: left;
@@ -595,7 +599,7 @@ body.admin-menu {
   border-left: 1px solid #004e7e;
   border-right: 1px solid #004e7e;
 }
-/* line 104, ../sass/nav.scss */
+/* line 107, ../sass/nav.scss */
 #login-area .navbuttun a {
   text-decoration: none;
   text-align: center;
@@ -606,30 +610,30 @@ body.admin-menu {
   font-weight: bold;
   color: white;
 }
-/* line 115, ../sass/nav.scss */
+/* line 118, ../sass/nav.scss */
 #login-area .navbuttun.active, #login-area .navbuttun.open {
   background: #004e7e;
 }
-/* line 118, ../sass/nav.scss */
+/* line 121, ../sass/nav.scss */
 #login-area .navbuttun.middle {
   border: none;
 }
-/* line 122, ../sass/nav.scss */
+/* line 125, ../sass/nav.scss */
 #login-area #search-mob form {
   padding: 10px;
 }
-/* line 124, ../sass/nav.scss */
+/* line 127, ../sass/nav.scss */
 #login-area #search-mob form .views-exposed-widget {
   padding: 0px;
 }
-/* line 127, ../sass/nav.scss */
+/* line 130, ../sass/nav.scss */
 #login-area #search-mob form input {
   margin: 0px;
   padding: 0px;
   height: 30px;
   font-size: 19px;
 }
-/* line 133, ../sass/nav.scss */
+/* line 136, ../sass/nav.scss */
 #login-area #search-mob form .form-submit {
   background: #336699;
   color: white;
@@ -640,39 +644,39 @@ body.admin-menu {
   padding: 8px;
   width: 42px;
 }
-/* line 146, ../sass/nav.scss */
+/* line 149, ../sass/nav.scss */
 #login-area #user-login-mob form {
   padding: 10px;
 }
-/* line 148, ../sass/nav.scss */
+/* line 151, ../sass/nav.scss */
 #login-area #user-login-mob form input {
   width: 70%;
 }
-/* line 151, ../sass/nav.scss */
+/* line 154, ../sass/nav.scss */
 #login-area #user-login-mob form .description {
   display: block !important;
 }
-/* line 155, ../sass/nav.scss */
+/* line 158, ../sass/nav.scss */
 #login-area #user-login-mob .bt-wrapper {
   display: none !important;
 }
-/* line 162, ../sass/nav.scss */
+/* line 165, ../sass/nav.scss */
 #login-area #search-content a span {
   display: inline-table;
 }
-/* line 165, ../sass/nav.scss */
+/* line 168, ../sass/nav.scss */
 #login-area #search-content a .text {
   height: 15px;
   vertical-align: top;
 }
-/* line 169, ../sass/nav.scss */
+/* line 172, ../sass/nav.scss */
 #login-area #search-content a .icon {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2391debb5d.png') 0 -532px no-repeat;
   width: 14px;
   height: 15px;
   margin: 1px 0px 0px 7px;
 }
-/* line 177, ../sass/nav.scss */
+/* line 180, ../sass/nav.scss */
 #login-area .mobhead {
   display: none;
   position: relative;
@@ -682,12 +686,12 @@ body.admin-menu {
   margin: 0px;
   padding: 0px;
 }
-/* line 185, ../sass/nav.scss */
+/* line 188, ../sass/nav.scss */
 #login-area .mobhead .inner {
   margin: 10px;
   background: white;
 }
-/* line 190, ../sass/nav.scss */
+/* line 193, ../sass/nav.scss */
 #login-area .mobhead.open {
   display: block;
 }
@@ -1860,22 +1864,24 @@ div .ticker-next {
     margin: 5px 4px 0px 0px;
   }
 
-  /* line 198, ../sass/nav.scss */
+  /* line 201, ../sass/nav.scss */
   #login-area .wrapper .container .inner-container .grid {
     overflow: visible;
     height: 38px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
-  /* line 205, ../sass/nav.scss */
+  /* line 210, ../sass/nav.scss */
   #login-area #nav {
     display: block;
     background: transparent;
   }
-  /* line 208, ../sass/nav.scss */
+  /* line 213, ../sass/nav.scss */
   #login-area #nav ul {
     margin-left: -10px;
     padding: 0px;
   }
-  /* line 211, ../sass/nav.scss */
+  /* line 216, ../sass/nav.scss */
   #login-area #nav ul li {
     width: auto;
     clear: none;
@@ -1884,13 +1890,13 @@ div .ticker-next {
     position: relative;
     overflow: visible;
   }
-  /* line 218, ../sass/nav.scss */
+  /* line 223, ../sass/nav.scss */
   #login-area #nav ul li a {
     width: auto;
     font-family: Helvetica;
     color: white;
   }
-  /* line 223, ../sass/nav.scss */
+  /* line 228, ../sass/nav.scss */
   #login-area #nav ul li ul {
     top: 38px;
     background: #004e7e;
@@ -1900,7 +1906,7 @@ div .ticker-next {
     margin: 0px;
     z-index: 999;
   }
-  /* line 231, ../sass/nav.scss */
+  /* line 236, ../sass/nav.scss */
   #login-area #nav ul li ul li {
     float: left;
     clear: both;
@@ -1908,7 +1914,7 @@ div .ticker-next {
     width: 100%;
     border-bottom: 1px solid transparent;
   }
-  /* line 237, ../sass/nav.scss */
+  /* line 242, ../sass/nav.scss */
   #login-area #nav ul li ul li a {
     padding: 6px 0px 6px 10px;
     font-weight: bold;
@@ -1916,31 +1922,31 @@ div .ticker-next {
     background: white;
     width: 200px;
   }
-  /* line 243, ../sass/nav.scss */
+  /* line 248, ../sass/nav.scss */
   #login-area #nav ul li ul li a span {
     padding: 0px;
   }
-  /* line 251, ../sass/nav.scss */
+  /* line 256, ../sass/nav.scss */
   #login-area #nav ul li.on a {
     background: #004e7e;
   }
-  /* line 256, ../sass/nav.scss */
+  /* line 261, ../sass/nav.scss */
   #login-area #nav ul li.open a {
     background: #004e7e;
   }
-  /* line 260, ../sass/nav.scss */
+  /* line 265, ../sass/nav.scss */
   #login-area #nav ul li.open li a {
     background: white;
   }
-  /* line 264, ../sass/nav.scss */
+  /* line 269, ../sass/nav.scss */
   #login-area #nav ul li.open ul {
     display: block;
   }
-  /* line 269, ../sass/nav.scss */
+  /* line 274, ../sass/nav.scss */
   #login-area #nav ul li:hover a {
     background: #004e7e;
   }
-  /* line 274, ../sass/nav.scss */
+  /* line 279, ../sass/nav.scss */
   #login-area #nav ul li.multilevel span.level {
     background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s2391debb5d.png') 0 -596px no-repeat;
     width: 8px;
@@ -2161,22 +2167,22 @@ div .ticker-next {
     overflow: hidden;
   }
 
-  /* line 285, ../sass/nav.scss */
+  /* line 290, ../sass/nav.scss */
   #login-area .wrapper {
     background: transparent;
     border-bottom: none;
   }
-  /* line 288, ../sass/nav.scss */
+  /* line 293, ../sass/nav.scss */
   #login-area .wrapper .inner-wrapper {
     border-bottom: none;
   }
-  /* line 291, ../sass/nav.scss */
+  /* line 296, ../sass/nav.scss */
   #login-area .wrapper .container {
     background: #336699;
     border-top: 1px solid #214264;
     border-bottom: 1px solid #234f7c;
   }
-  /* line 295, ../sass/nav.scss */
+  /* line 300, ../sass/nav.scss */
   #login-area .wrapper .container .inner-container {
     border-top: 1px solid #2b5782;
     border-bottom: 1px solid #4876A3;
