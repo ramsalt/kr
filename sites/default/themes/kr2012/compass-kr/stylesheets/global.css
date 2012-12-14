@@ -260,99 +260,98 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   .container-16 {
     width: 100%;
     max-width: 1004px;
-    min-width: 800px;
     margin: 0 auto;
   }
-  /* line 29, ../sass/grid-desktop.scss */
+  /* line 28, ../sass/grid-desktop.scss */
   .container-16 .inner-container .grid-16 {
     width: 96%;
   }
-  /* line 32, ../sass/grid-desktop.scss */
+  /* line 31, ../sass/grid-desktop.scss */
   .container-16 .inner-container .art-main {
     width: 60%;
   }
-  /* line 35, ../sass/grid-desktop.scss */
+  /* line 34, ../sass/grid-desktop.scss */
   .container-16 .inner-container .art-side {
     width: 30%;
   }
-  /* line 38, ../sass/grid-desktop.scss */
+  /* line 37, ../sass/grid-desktop.scss */
   .container-16 .inner-container .full.pre {
     width: 100%;
   }
-  /* line 41, ../sass/grid-desktop.scss */
+  /* line 40, ../sass/grid-desktop.scss */
   .container-16 .inner-container .full {
     width: 96%;
   }
-  /* line 44, ../sass/grid-desktop.scss */
+  /* line 43, ../sass/grid-desktop.scss */
   .container-16 .inner-container .full.nomargin {
     width: 100%;
     margin: 0px;
   }
 
-  /* line 51, ../sass/grid-desktop.scss */
+  /* line 50, ../sass/grid-desktop.scss */
   .front-page .one {
     float: left;
     position: relative;
   }
-  /* line 55, ../sass/grid-desktop.scss */
+  /* line 54, ../sass/grid-desktop.scss */
   .front-page .one_one {
     width: 52%;
   }
-  /* line 58, ../sass/grid-desktop.scss */
+  /* line 57, ../sass/grid-desktop.scss */
   .front-page .one_two {
     width: 25%;
     left: -23%;
   }
-  /* line 62, ../sass/grid-desktop.scss */
+  /* line 61, ../sass/grid-desktop.scss */
   .front-page .one_three {
     width: 23%;
     left: 25%;
   }
-  /* line 66, ../sass/grid-desktop.scss */
+  /* line 65, ../sass/grid-desktop.scss */
   .front-page .seven {
     float: left;
     width: 100%;
     position: relative;
   }
-  /* line 72, ../sass/grid-desktop.scss */
+  /* line 71, ../sass/grid-desktop.scss */
   .front-page .seven_two .seven-inner {
     margin-right: 20px;
   }
-  /* line 76, ../sass/grid-desktop.scss */
+  /* line 75, ../sass/grid-desktop.scss */
   .front-page .seven_one_two {
     float: left;
     width: 58%;
   }
-  /* line 80, ../sass/grid-desktop.scss */
+  /* line 79, ../sass/grid-desktop.scss */
   .front-page .seven_three {
     width: 42%;
   }
-  /* line 83, ../sass/grid-desktop.scss */
+  /* line 82, ../sass/grid-desktop.scss */
   .front-page .ten {
     margin: 0px 1%;
     width: 31%;
   }
-  /* line 87, ../sass/grid-desktop.scss */
+  /* line 86, ../sass/grid-desktop.scss */
   .front-page .ten.ten_one {
     float: left;
   }
-  /* line 90, ../sass/grid-desktop.scss */
+  /* line 89, ../sass/grid-desktop.scss */
   .front-page .ten.ten_two {
     float: left;
     display: block;
   }
-  /* line 94, ../sass/grid-desktop.scss */
+  /* line 93, ../sass/grid-desktop.scss */
   .front-page .ten.ten_three {
     float: left;
     display: block;
   }
 
-  /* line 99, ../sass/grid-desktop.scss */
+  /* line 98, ../sass/grid-desktop.scss */
   .page-stillinger .container-16 .inner-container .art-main {
     width: 100%;
     margin: 0px;
   }
-  /* line 102, ../sass/grid-desktop.scss */
+  /* line 101, ../sass/grid-desktop.scss */
   .page-stillinger .container-16 .inner-container .art-main .panels-flexible-region-3-top {
     width: 100%;
   }
@@ -656,10 +655,8 @@ body.admin-menu {
   width: 32%;
   float: left;
   background: #336699;
-  border-left: 1px solid #004e7e;
-  border-right: 1px solid #004e7e;
 }
-/* line 108, ../sass/nav.scss */
+/* line 107, ../sass/nav.scss */
 #login-area .navbuttun a {
   text-decoration: none;
   text-align: center;
@@ -670,13 +667,14 @@ body.admin-menu {
   font-weight: bold;
   color: white;
 }
-/* line 119, ../sass/nav.scss */
+/* line 118, ../sass/nav.scss */
 #login-area .navbuttun.active, #login-area .navbuttun.open {
   background: #004e7e;
 }
-/* line 122, ../sass/nav.scss */
+/* line 121, ../sass/nav.scss */
 #login-area .navbuttun.middle {
-  border: none;
+  border-left: 1px solid #004e7e;
+  border-right: 1px solid #004e7e;
 }
 /* line 126, ../sass/nav.scss */
 #login-area #search-mob form {
@@ -2336,7 +2334,6 @@ div .form-submit {
     height: 62px;
     float: left;
     width: 291px;
-    position: absolute;
   }
   /* line 84, ../sass/base-desktop.scss */
   #logo-area .wrapper #logo a {

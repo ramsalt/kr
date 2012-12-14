@@ -297,10 +297,8 @@ body.admin-menu {
   width: 32%;
   float: left;
   background: #336699;
-  border-left: 1px solid #004e7e;
-  border-right: 1px solid #004e7e;
 }
-/* line 108, ../sass/nav.scss */
+/* line 107, ../sass/nav.scss */
 #login-area .navbuttun a {
   text-decoration: none;
   text-align: center;
@@ -311,13 +309,14 @@ body.admin-menu {
   font-weight: bold;
   color: white;
 }
-/* line 119, ../sass/nav.scss */
+/* line 118, ../sass/nav.scss */
 #login-area .navbuttun.active, #login-area .navbuttun.open {
   background: #004e7e;
 }
-/* line 122, ../sass/nav.scss */
+/* line 121, ../sass/nav.scss */
 #login-area .navbuttun.middle {
-  border: none;
+  border-left: 1px solid #004e7e;
+  border-right: 1px solid #004e7e;
 }
 /* line 126, ../sass/nav.scss */
 #login-area #search-mob form {

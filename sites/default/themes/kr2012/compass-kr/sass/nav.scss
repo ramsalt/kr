@@ -103,8 +103,7 @@ $menu-font: Helvetica;
     width: 32%;    
     float: left;
     background: $farge-knapp;
-    border-left: 1px solid $farge-knapp-border;
-    border-right: 1px solid $farge-knapp-border;
+
     a{
       text-decoration: none;
       text-align: center;
@@ -120,7 +119,8 @@ $menu-font: Helvetica;
     background: $farge-knapp-aktiv;
   }
   .navbuttun.middle{
-    border: none;
+    border-left: 1px solid $farge-knapp-border;
+    border-right: 1px solid $farge-knapp-border;
   }
   #search-mob{
     form{
