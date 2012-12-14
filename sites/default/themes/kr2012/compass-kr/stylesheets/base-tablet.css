@@ -1,324 +1,93 @@
-@media all and (min-width: 740px) {
-  /* line 7, ../sass/base-tablet.scss */
-  .visible-mobile, .visible-desktop {
-    display: none;
-  }
+/*
+Syntax error: Undefined mixin 'ticker-brett'.
+        on line 92 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss, in `ticker-brett'
+        from line 92 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss
 
-  /* line 10, ../sass/base-tablet.scss */
-  .visible-tablet {
-    display: block;
-  }
-
-  /* line 14, ../sass/base-tablet.scss */
-  #logo-area {
-    height: 57px;
-  }
-  /* line 18, ../sass/base-tablet.scss */
-  #logo-area .wrapper .container .inner-container {
-    -moz-border-radius-topleft: 3px;
-    -webkit-border-top-left-radius: 3px;
-    border-top-left-radius: 3px;
-    -moz-border-radius-topright: 3px;
-    -webkit-border-top-right-radius: 3px;
-    border-top-right-radius: 3px;
-  }
-  /* line 21, ../sass/base-tablet.scss */
-  #logo-area .wrapper .container .grid {
-    width: 728px;
-    margin: 0px 20px;
-  }
-  /* line 25, ../sass/base-tablet.scss */
-  #logo-area .wrapper .container #logo {
-    margin-left: 0px;
-  }
-  /* line 28, ../sass/base-tablet.scss */
-  #logo-area .wrapper .container .logo-item-wrapper {
-    position: absolute;
-    right: 0px;
-    padding: 15px;
-  }
-  /* line 32, ../sass/base-tablet.scss */
-  #logo-area .wrapper .container .logo-item-wrapper .login-wrapper {
-    float: left;
-    margin-right: 15px;
-  }
-  /* line 35, ../sass/base-tablet.scss */
-  #logo-area .wrapper .container .logo-item-wrapper .login-wrapper a {
-    background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s825cfc6be1.png') 0 -289px no-repeat;
-    font-weight: bold;
-    height: 28px;
-    float: left;
-    text-decoration: none;
-    font-family: Helvetica;
-    color: #fff;
-  }
-  /* line 43, ../sass/base-tablet.scss */
-  #logo-area .wrapper .container .logo-item-wrapper .login-wrapper a span {
-    padding: 3px 0px 0px 34px;
-    float: left;
-  }
-  /* line 49, ../sass/base-tablet.scss */
-  #logo-area .wrapper .container .logo-item-wrapper .search-wrapper {
-    float: left;
-  }
-  /* line 51, ../sass/base-tablet.scss */
-  #logo-area .wrapper .container .logo-item-wrapper .search-wrapper input.form-text {
-    height: 20px;
-    width: 150px;
-    -webkit-border-radius: 4px 4px;
-    -moz-border-radius: 4px / 4px;
-    border-radius: 4px / 4px;
-  }
-  /* line 56, ../sass/base-tablet.scss */
-  #logo-area .wrapper .container .logo-item-wrapper .search-wrapper .form-submit {
-    position: absolute;
-    right: 16px;
-    text-indent: -999px;
-    background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s825cfc6be1.png') 0 -510px no-repeat;
-    width: 14px;
-    height: 15px;
-    border: none;
-    padding: 0px;
-    margin: 5px 4px 0px 0px;
-  }
-
-  /* line 192, ../sass/nav.scss */
-  #login-area .wrapper .container .inner-container .grid {
-    overflow: visible;
-    height: 38px;
-  }
-  /* line 199, ../sass/nav.scss */
-  #login-area #nav {
-    display: block;
-    background: transparent;
-  }
-  /* line 202, ../sass/nav.scss */
-  #login-area #nav ul {
-    margin-left: -10px;
-    padding: 0px;
-  }
-  /* line 205, ../sass/nav.scss */
-  #login-area #nav ul li {
-    width: auto;
-    clear: none;
-    background: transparent;
-    border: none;
-    position: relative;
-    overflow: visible;
-  }
-  /* line 212, ../sass/nav.scss */
-  #login-area #nav ul li a {
-    width: auto;
-    font-family: Helvetica;
-    color: white;
-  }
-  /* line 217, ../sass/nav.scss */
-  #login-area #nav ul li ul {
-    top: 38px;
-    background: #004e7e;
-    position: absolute;
-    width: auto;
-    padding: 10px;
-    margin: 0px;
-    z-index: 999;
-  }
-  /* line 225, ../sass/nav.scss */
-  #login-area #nav ul li ul li {
-    float: left;
-    clear: both;
-    margin: 0px;
-    width: 100%;
-    border-bottom: 1px solid transparent;
-  }
-  /* line 231, ../sass/nav.scss */
-  #login-area #nav ul li ul li a {
-    padding: 6px 0px 6px 10px;
-    font-weight: bold;
-    color: #313131;
-    background: white;
-    width: 200px;
-  }
-  /* line 237, ../sass/nav.scss */
-  #login-area #nav ul li ul li a span {
-    padding: 0px;
-  }
-  /* line 245, ../sass/nav.scss */
-  #login-area #nav ul li.on a {
-    background: #004e7e;
-  }
-  /* line 250, ../sass/nav.scss */
-  #login-area #nav ul li.open a {
-    background: #004e7e;
-  }
-  /* line 254, ../sass/nav.scss */
-  #login-area #nav ul li.open li a {
-    background: white;
-  }
-  /* line 258, ../sass/nav.scss */
-  #login-area #nav ul li.open ul {
-    display: block;
-  }
-  /* line 263, ../sass/nav.scss */
-  #login-area #nav ul li:hover a {
-    background: #004e7e;
-  }
-  /* line 268, ../sass/nav.scss */
-  #login-area #nav ul li.multilevel span.level {
-    background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s825cfc6be1.png') 0 -589px no-repeat;
-    width: 8px;
-    height: 6px;
-    margin: 6px 0px 0px 4px;
-  }
-
-  /* line 78, ../sass/base-tablet.scss */
-  #content-area .wrapper .container .inner-container {
-    padding-top: 2%;
-  }
-
-  /* line 507, ../sass/mixins.scss */
-  .block-views .newslist .views-field-title, .block-views .newslist .views-field-field-main-image-fid, .block-views .newslist .views-field-field-teaser-value {
-    margin: 0px 20px;
-  }
-  /* line 510, ../sass/mixins.scss */
-  .block-views .newslist a {
-    font-size: 1.8em;
-    line-height: 1.1em;
-  }
-  /* line 514, ../sass/mixins.scss */
-  .block-views .newslist .views-field-title {
-    padding-bottom: 10px;
-  }
-  /* line 520, ../sass/mixins.scss */
-  .block-views .newslist.sak-1 .views-field-title a {
-    font-size: 2.2em;
-    line-height: 1.2em;
-  }
-  /* line 526, ../sass/mixins.scss */
-  .block-views .newslist.sak-1 ul li {
-    margin-top: 0px;
-  }
-  /* line 532, ../sass/mixins.scss */
-  .block-views .newslist.sak-2 li {
-    border-bottom: 1px solid #DDD;
-  }
-  /* line 536, ../sass/mixins.scss */
-  .block-views .newslist.sak-2 li.views-row-last {
-    border-bottom: 0px;
-  }
-  /* line 542, ../sass/mixins.scss */
-  .block-views .newslist.sak-2 .views-field-field-main-image-fid .field-content a img {
-    width: 170px;
-    height: auto;
-    border: 1px solid #d1d1d1;
-  }
-  /* line 551, ../sass/mixins.scss */
-  .block-views .newslist.sak-2 .views-field-title a {
-    font-size: 1.8em;
-    line-height: 1.1em;
-  }
-  /* line 558, ../sass/mixins.scss */
-  .block-views .newslist.sak-4 ul {
-    width: 100%;
-    float: left;
-    border-top: 1px solid #DDD;
-    border-bottom: 1px solid #DDD;
-  }
-  /* line 563, ../sass/mixins.scss */
-  .block-views .newslist.sak-4 ul li {
-    float: left;
-    width: 253px;
-    border-bottom: 0px;
-    border-right: 1px solid #DDD;
-    margin: 0px;
-    padding: 0px;
-  }
-  /* line 570, ../sass/mixins.scss */
-  .block-views .newslist.sak-4 ul li .views-field-field-main-image-fid {
-    float: left;
-    display: none;
-  }
-  /* line 574, ../sass/mixins.scss */
-  .block-views .newslist.sak-4 ul li .views-field-title {
-    padding-top: 25px;
-  }
-  /* line 577, ../sass/mixins.scss */
-  .block-views .newslist.sak-4 ul li .views-field-field-teaser-value {
-    display: block;
-    padding-bottom: 25px;
-  }
-  /* line 582, ../sass/mixins.scss */
-  .block-views .newslist.sak-4 ul li.views-row-last {
-    border-right: 0px;
-  }
-  /* line 588, ../sass/mixins.scss */
-  .block-views .newslist.fire .views-field-field-main-image-fid, .block-views .newslist.fem .views-field-field-main-image-fid {
-    float: left;
-    margin-right: 10px;
-  }
-  /* line 591, ../sass/mixins.scss */
-  .block-views .newslist.fire .views-field-field-main-image-fid img, .block-views .newslist.fem .views-field-field-main-image-fid img {
-    width: 223px;
-    height: auto;
-  }
-  /* line 596, ../sass/mixins.scss */
-  .block-views .newslist.fire .views-field-title, .block-views .newslist.fem .views-field-title {
-    float: none;
-    width: auto;
-  }
-  /* line 600, ../sass/mixins.scss */
-  .block-views .newslist.fire .views-field-field-teaser-value, .block-views .newslist.fem .views-field-field-teaser-value {
-    display: block;
-  }
-
-  /* line 283, ../sass/mixins.scss */
-  .rammeboks {
-    padding: 5%;
-    width: 90%;
-    border-top: 1px solid #d9d9d9;
-    border-left: 1px solid #d9d9d9;
-    border-right: 1px solid #d9d9d9;
-    border-bottom: 2px solid #c1bfb9;
-    background: #f1f2ee;
-    float: left;
-  }
-  /* line 294, ../sass/mixins.scss */
-  .rammeboks ul li .views-field-field-teaser-value {
-    font-size: 1em;
-    font-family: Arial;
-    color: #333;
-  }
-
-  /* line 305, ../sass/mixins.scss */
-  .rammeboks.eco ul li .views-field-title {
-    padding-top: 0.7em;
-  }
-
-  /* line 313, ../sass/mixins.scss */
-  .rammeboks.blogger .more-link a {
-    font-size: 1em;
-  }
-  /* line 317, ../sass/mixins.scss */
-  .rammeboks.blogger .views-field-field-blogg-bilde-fid {
-    display: none;
-  }
-
-  /* line 689, ../sass/mixins.scss */
-  div .ownsection {
-    float: left;
-    width: 197px;
-    margin-left: 20px;
-  }
-  /* line 693, ../sass/mixins.scss */
-  div .ownsection .desc {
-    padding-top: 1em;
-    display: block;
-    clear: both;
-    font-family: Arial;
-    color: #333333;
-  }
-
-  /* line 93, ../sass/base-tablet.scss */
-  #logo-area .login-wrapper, #logo-area .search-wrapper {
-    display: block;
-  }
-}
+Backtrace:
+/Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss:92:in `ticker-brett'
+/Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss:92
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:249:in `visit_mixin'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:107:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:106:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:316:in `visit_rule'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:107:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:106:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:360:in `visit_media'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:107:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:106:in `visit_children'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:126:in `visit_root'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/tree/root_node.rb:20:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/engine.rb:315:in `_render'
+/opt/local/lib/ruby/gems/1.8/gems/sass-3.2.1/lib/sass/../sass/engine.rb:262:in `render'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:36:in `to_proc'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `run_callback'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:55:in `callback_action'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:35:in `update'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/state/directory.rb:39:in `modified'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/state/directory.rb:37:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/state/directory.rb:37:in `modified'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/state/directory.rb:18:in `refresh'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:15:in `loop'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:15:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm/monitor.rb:26:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/fssm-0.2.9/lib/fssm.rb:70:in `monitor'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:87:in `perform'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/bin/compass:30
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/bin/compass:44:in `call'
+/opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/bin/compass:44
+/opt/local/bin/compass:23:in `load'
+/opt/local/bin/compass:23
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'ticker-brett'.\A         on line 92 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss, in `ticker-brett'\A         from line 92 of /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/base-tablet.scss"; }

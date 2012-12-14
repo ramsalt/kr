@@ -39,7 +39,7 @@ function kr_diverse_block($op = 'list', $delta = 0, $edit = array()) {
         drupal_add_js(drupal_get_path('module', 'kr_diverse') . '/kr_div.js');
 		drupal_add_js('(function ($) {
 			$(document).ready(function() {
-				/* $(".ticker1").modernTicker({effect: "slide",slideDistance: 10,transitionTime: 200,autoplay: false}); */
+				
 			});
 		}(jQuery));', 'inline');
         $block = array(
@@ -96,7 +96,7 @@ function _kr_aktuelle(){
 		}
 		$html = '
 		<div class="ticker">
-			<div class="ticker-label">'.$taxonomy->name.':</div>
+			<div class="ticker-label">'.l($taxonomy->name.':', 'taxonomy/term/'.$taxonomy->tid).'</div>
 			<div class="ticker-news">
 				<ul>
 					'.$lis.'

@@ -1,6 +1,6 @@
 $logos: sprite-map("logo/*.png");
 
-@mixin ticker{
+@mixin ticker-mob{
   .ticker {
     line-height: 30px;
     padding: 2px;
@@ -10,18 +10,23 @@ $logos: sprite-map("logo/*.png");
   .ticker-label{
     float: left;
     display: block;
-    margin-left: 30px;
+    margin-left: 12px;
     margin-top: 2px;
-  }
-  .ticker-news {
-
+    margin-right: 5px;
+    a{
+      text-decoration: none;
+      color: #363636;
+      font-size: 0.8em;
+      font-family: Arial;
+    }
   }
   .ticker-news{
     overflow: hidden;
     margin-top: 2px;
     ul{ 
       float: left;
-      height: 18px;
+      height: 22px;
+      padding: 0px;
       width: 20000px;
       li{
         float: left;
@@ -38,14 +43,13 @@ $logos: sprite-map("logo/*.png");
   .ticker-prev {
     width: 10px;
     height: 15px;
-    left: 15px;
+    left: 0px;
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
     float: left;
     position: absolute;
-    top: 9px;
-    
+    top: 11px;
     background: sprite($logos, tickerprev) no-repeat;
   }
   .ticker-next {
@@ -56,8 +60,21 @@ $logos: sprite-map("logo/*.png");
     cursor: pointer;
     float: left;
     position: absolute;
-    right: 10px;
-    top: 9px;
+    right: 0px;
+    top: 11px;
     background: sprite($logos, tickernext) no-repeat;
+  }
+}
+@mixin ticker-brett{
+  .ticker{
+    .ticker-label{
+      margin-left: 34px;
+    }
+    .ticker-prev {
+      left: 20px;
+    }
+    .ticker-next{
+      right: 20px;
+    }
   }
 }

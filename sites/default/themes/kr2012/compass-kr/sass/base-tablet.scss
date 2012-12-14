@@ -89,6 +89,7 @@ $logos: sprite-map("logo/*.png");
   div {
     @include ownsection-brett;
     @include seksjonsside-brett;
+    @include ticker-brett;
   }
   #logo-area .login-wrapper, #logo-area .search-wrapper{
     display: block;
