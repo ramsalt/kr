@@ -42,6 +42,7 @@ $menu-font: Helvetica;
         border-bottom: 1px solid $farge-list-bottom;
         a{
           color: $farge-mob-menu-link;
+          font-family: $menu-font;
           padding: 10px;
           float: left;
           width: 100%;
@@ -148,6 +149,7 @@ $menu-font: Helvetica;
   #user-login-mob{
     form{
       padding: 10px;
+      font-family: $menu-font;
       input{
         width: 70%;
       }

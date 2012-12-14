@@ -2,6 +2,7 @@
 @import "mixins.scss";
 @import "ticker.scss";
 @import "nav.scss";
+@import "forms.scss";
 $icons: sprite-map("backgrounds/*.png");
 $logos: sprite-map("logo/*.png");
 
@@ -301,6 +302,7 @@ div {
   @include premium-msg-mob;
   @include jobbliste;
   @include ticker-mob;
+  @include forms;
 }
 
 .block {
@@ -467,3 +469,6 @@ div {
   margin-top: 3px;
 }
 
+#op-content{
+  padding-bottom: 20px;
+}

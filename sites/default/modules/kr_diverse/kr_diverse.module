@@ -237,6 +237,10 @@ function kr_diverse_form_alter(&$form, &$form_state, $form_id) {
     }
   }
 
+	if($form_id == 'user_login'){
+		$form['#attributes']['class'] = 'form-label-alter';
+	}
+
   //$("#edit-field-op-author-0-nid-nid").value(22);
 }
 function kr_diverse_nodeapi(&$node, $op, $teaser, $page) {

@@ -9,6 +9,7 @@ scripts[] = js/respond.min.js
 scripts[] = js/base.js 
 scripts[] = js/meny.js 
 scripts[] = js/article.js
+scripts[] = js/forms.js
 
  
 ; SubTheme-Specific CSS

@@ -1,0 +1,54 @@
+@import "blueprint/reset";
+@import "blueprint";
+@import "compass/css3/box-shadow";
+
+@mixin forms{
+  .form-label-alter{
+    .form-item{
+      position: relative;
+      label{
+        position: absolute;
+        top: 14px;
+        left: 10px;
+        color: #989898;
+      }
+      .description{
+        color: #b2b2b2;
+      }
+      input{
+        border: 1px solid #b2b2b2;
+        @include border-radius(4px, 4px);
+        height: 40px;
+        box-shadow: inset 0 5px 5px rgba(178, 178,178,.5);
+        text-indent: 5px;
+        font-family: Arial;
+        font-size: 1.1em;
+      }
+      input:focus{
+        outline-offset: 0;
+        outline: -webkit-focus-ring-color auto 0px;
+        box-shadow: inset 0 5px 5px rgba(42, 42, 42,.5);
+      }
+    }
+    .form-required{
+      color: #b2b2b2;
+    }
+  }
+  .form-submit{
+    background: #568ebf;
+    color: #fff;
+    padding: 10px 20px;
+    font-family: Arial;
+    border: 1px solid transparent;
+    @include border-radius(4px, 4px);
+    cursor: pointer;
+  }
+}
+
+
+@mixin box-shadow($shadow-1: default, $shadow-2: false, $shadow-3: false, $shadow-4: false, $shadow-5: false, $shadow-6: false, $shadow-7: false, $shadow-8: false, $shadow-9: false, $shadow-10: false) {
+  @if $shadow-1 == default {
+    $shadow-1: -compass-space-list(compact(if($default-box-shadow-inset, inset, false), $default-box-shadow-h-offset, $default-box-shadow-v-offset, $default-box-shadow-blur, $default-box-shadow-spread, $default-box-shadow-color)); }
+  $shadow: compact($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10);
+  @include experimental(box-shadow, $shadow, -moz, -webkit, not -o, not -ms, not -khtml, official); 
+}
