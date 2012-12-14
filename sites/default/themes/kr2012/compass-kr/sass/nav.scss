@@ -125,25 +125,6 @@ $menu-font: Helvetica;
   #search-mob{
     form{
       padding: 10px;
-      .views-exposed-widget{
-        padding: 0px;
-      }
-      input{
-        margin: 0px;
-        padding: 0px;
-        height: 30px;
-        font-size: 19px;          
-      }
-      .form-submit{
-        background: $farge-knapp;
-        color: $farge-knapp-link;
-        margin: 0px;        
-        border: none;
-        height: 34px;
-        font-size: 14px;
-        padding: 8px;
-        width: 42px;
-      }
     }
   }
   #user-login-mob{

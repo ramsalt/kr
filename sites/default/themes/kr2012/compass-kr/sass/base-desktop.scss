@@ -57,6 +57,7 @@ $logos: sprite-map("logo/*.png");
   #logo-area{
     background: transparent;
     border: none;
+    height: 74px;
     .wrapper{
       border-top: none;
       .inner-wrapper{
@@ -64,7 +65,7 @@ $logos: sprite-map("logo/*.png");
       }
       .container{
         .inner-container{
-          height: 57px;
+          height: 74px;          
           background: url('/sites/default/themes/kr2012/compass-kr/images/backxrepeat.png') 0px 0px repeat-x;
           border-bottom: 1px solid #122435;
           position: relative;
@@ -91,8 +92,8 @@ $logos: sprite-map("logo/*.png");
           width: 291px;
           span{
             background: sprite($logos, desktop) no-repeat;
-            width: 291px;
-            height: 31px;
+            width: 340px;
+            height: 38px;
             float: left;
           }
         }

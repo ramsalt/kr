@@ -35,6 +35,7 @@
     }
   }
   .form-submit{
+    -webkit-appearance: none;
     background: #568ebf;
     color: #fff;
     padding: 10px 20px;
@@ -42,6 +43,50 @@
     border: 1px solid transparent;
     @include border-radius(4px, 4px);
     cursor: pointer;
+  }
+  #search-mob{
+    .views-exposed-widget{
+      padding: 0px;
+      width: 93%;
+    }
+    .views-exposed-widgets{
+      border: 1px solid #b2b2b2;
+      @include border-radius(4px, 4px);
+      height: 40px;
+      box-shadow: inset 0 5px 5px rgba(178, 178,178,.5);
+      text-indent: 5px;
+      font-family: Arial;
+      font-size: 1.1em;
+      position: relative;
+      input{
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        height: 40px;
+        font-size: 19px;
+        background: transparent;
+        width: 100%;
+      }
+      input:focus{
+        outline-offset: 0;
+        outline: -webkit-focus-ring-color auto 0px;        
+      }
+      .form-submit{
+        background: $farge-knapp;
+        color: $farge-knapp-link;
+        margin: 0px;        
+        border: none;
+        height: 40px;
+        font-size: 14px;
+        padding: 8px;
+        width: 42px;
+        @include border-radius(0px);
+        position: absolute;
+        right: 0px;
+        top: 0px;
+      }
+
+    }
   }
 }
 

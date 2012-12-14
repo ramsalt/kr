@@ -5,8 +5,11 @@
 			$('label',form_item).hide();
 		});
 		$('.form-label-alter .form-item input').bind('focusout.forms', function(){
-			form_item = $(this).parent();
-			$('label',form_item).show();
+			console.log($(this).val().length + ' ole');
+			if($(this).val().length == 0){
+				form_item = $(this).parent();
+				$('label',form_item).show();
+			}
 		});
 
 	});
