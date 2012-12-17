@@ -103,14 +103,16 @@ $logos: sprite-map("logo/*.png");
       }
     }
     li{
-      padding-top: 1em;
+      padding: 10px 0px 0px 0px;
+      margin: 0px;
       border-bottom: 0px;
       .views-field-title{
         a{
+          font-family: Arial;
           font-size: 1.5em;
           font-weight: bold;
           color: #333333;
-          line-height: 1.2em;
+          line-height: 1.3em;
         }
       }
       .views-field-view-node{
@@ -157,8 +159,10 @@ $logos: sprite-map("logo/*.png");
       }
       .views-field-title{
         a{
+          font-family: Arial;
           font-size: 1.5em;
           font-weight: bold;
+          line-height: 1.3em;
         }
       }
       .views-field-view-node{
@@ -172,9 +176,13 @@ $logos: sprite-map("logo/*.png");
     }
   }
   .rammeboks.blogger{
+    .view-header{
+      display: none;
+    }
     h3{
       border-bottom: 2px solid #78a21e;
       padding: 0px;
+      margin-bottom: 0px;
       a{
         padding: 0px;
         color: #78a21e;        
@@ -184,6 +192,13 @@ $logos: sprite-map("logo/*.png");
         text-transform: uppercase;
         text-decoration: none;
       }
+    }
+    .pretext{
+      background: #d7e1c2;
+      padding: 5px;
+      color: #333333;
+      font-family: Arial;
+      font-size: 0.8em;
     }
     .views-field-field-blogg-bilde-fid{
       float: left;
@@ -215,6 +230,8 @@ $logos: sprite-map("logo/*.png");
       display: none;
     }
     .more-link{
+      float: left;
+      margin-top: 10px;
       a{
         background: sprite($logos, mobpilhoy) no-repeat;
         padding-left: 20px;
@@ -295,9 +312,15 @@ $logos: sprite-map("logo/*.png");
   }
 }
 @mixin rammeboks-brett{
-  .rammeboks{
+  #block-views-Kommentarutdrag-block_1,
+  #block-boxes-box-4bb00d6c,
+  #block-simplenews-22{
     padding: 5%;
     width: 90%;
+  }
+  .rammeboks{
+    padding: 3%;
+    width: 94%;
     border-top: 1px solid #d9d9d9;
     border-left: 1px solid #d9d9d9;
     border-right: 1px solid #d9d9d9;
@@ -599,7 +622,7 @@ $logos: sprite-map("logo/*.png");
       }
     }
   }
-  .newslist.sak-12{
+  .newslist.sak-12, .newslist.sak-23{
     ul{
       li{
         .views-field-title{
@@ -814,7 +837,7 @@ $logos: sprite-map("logo/*.png");
     .msg{
      padding: 20px;
      p{
-       display: inline;
+       
      }
     }
     form{
@@ -833,8 +856,10 @@ $logos: sprite-map("logo/*.png");
         background: sprite($logos, mobpilhoy) no-repeat;
         padding-left: 20px;
         float: left;
+        height: 17px;
       }
-      float: right;
+      float: left;
+      padding: 0px 0px 15px 0px;
       color: #333333;
       font-family: Arial;
       font-size: 0.8em;
@@ -849,25 +874,23 @@ $logos: sprite-map("logo/*.png");
       input{
         height: 27px;
         width: 160px;
+        border: 1px solid #b2b2b2;
         @include border-radius(4px, 4px);
-        font-size: 1.2em;
+        height: 40px;
+        box-shadow: inset 0 5px 5px rgba(178, 178,178,.5);
+        text-indent: 5px;
+        font-family: Arial;
+        font-size: 1.1em;
       }
       float: left;
       margin: 0px;
     }
+    #edit-pass-wrapper{
+      margin-left: 14px;
+    }
     .form-submit{
-      clear: both;
-      float: left;
-      margin-top: 20px;
-      background: #3090c0;
-      @include border-radius(4px, 4px);
-      border-top: none;
-      border-left: none;
-      border-right: none;
-      color: #fff;
-      border-bottom: 2px solid #1d5774;
-      height: 27px;
-      width: 65px;
+      margin-top: 10px;
+
     }
     .item-list{
       float: left;
@@ -882,7 +905,9 @@ $logos: sprite-map("logo/*.png");
           display: none;
         }
         li.last{
+          margin-top: 10px;
           a{
+            font-size: 0.8em;
             color: #3090c0;
             text-decoration: none;
             font-weight: bold;
@@ -891,6 +916,15 @@ $logos: sprite-map("logo/*.png");
       }
     }
 
+  }
+}
+@mixin premium-msg-brett{
+  .nopremium-message{
+    .form-submit{
+      margin-top: 22px;
+      height: 44px;
+      
+    }
   }
 }
 @mixin premium-msg-desktop{

@@ -101,6 +101,9 @@
 	<?php endif; ?>
   	  <div class="container container-16 clearfix">
   	  	<div class="inner-container clearfix">
+  	  		<?php if(arg(0) == 'taxonomy'): ?>
+  	  			<div class="tax-title"><h1><?php print $title; ?></h1></div>
+  	  		<?php endif; ?>
 	  	  	<div class="grid art-main">
 				  <?php// print $breadcrumb; ?>
 				    <?php if ($tabs): print '<div id="tabs-wrapper" class="clear-block">'; endif; ?>

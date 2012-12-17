@@ -10,7 +10,7 @@ $logos: sprite-map("logo/*.png");
   .ticker-label{
     float: left;
     display: block;
-    margin-left: 12px;
+    margin-left: 34px;
     margin-top: 2px;
     margin-right: 5px;
     a{
@@ -92,11 +92,5 @@ $logos: sprite-map("logo/*.png");
   }
 }
 @mixin ticker-brett{
-  .ticker{
-    .ticker-label{
-      margin-left: 34px;
-    }
 
-
-  }
 }

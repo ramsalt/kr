@@ -278,7 +278,7 @@ body .body-content, body .body-content p{
     height: 42px;
     display: block;
     text-indent: -999px;
-    
+    margin: auto;
   }
 }
 
@@ -471,4 +471,29 @@ div {
 
 #op-content{
   padding-bottom: 20px;
+}
+.addthis{
+  .addthis_button_facebook_like.at300b{
+    width: 50px;
+    height: 22px;
+  }
+  .addthis_button_tweet.at300b{
+    width: 106px;
+    height: 25px;
+  }
+}
+body.page-taxonomy .grid.art-main h1{
+  display: none;
+}
+.tax-title{
+  border-bottom: 1px solid #DDD;
+}
+.tax-title h1{
+  padding: 0px 15px;
+}
+body.page-taxonomy #content-area .grid{
+  padding-top: 15px;
+}
+body.page-taxonomy #content-area .grid #sidebar-right{
+  padding-top: 15px;
 }

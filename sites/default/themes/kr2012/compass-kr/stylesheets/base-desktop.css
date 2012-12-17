@@ -14,33 +14,41 @@
     margin-top: 20px;
   }
 
-  /* line 21, ../sass/base-desktop.scss */
+  /* line 18, ../sass/base-desktop.scss */
+  body h1 {
+    font-size: 2.75em;
+    color: #333333;
+    line-height: 1.2em;
+    margin: 12px 0px;
+  }
+
+  /* line 27, ../sass/base-desktop.scss */
   #top-area .container .grid .block {
     clear: none;
     float: left;
     overflow: hidden;
   }
-  /* line 26, ../sass/base-desktop.scss */
+  /* line 32, ../sass/base-desktop.scss */
   #top-area .container .grid #block-openx-8 {
     width: 18.7%;
   }
-  /* line 29, ../sass/base-desktop.scss */
+  /* line 35, ../sass/base-desktop.scss */
   #top-area .container .grid #block-openx-7 {
     width: 81.3%;
   }
 
-  /* line 36, ../sass/base-desktop.scss */
+  /* line 42, ../sass/base-desktop.scss */
   .byline .forfatter {
     float: none;
     padding-right: 5px;
   }
-  /* line 40, ../sass/base-desktop.scss */
+  /* line 46, ../sass/base-desktop.scss */
   .byline .updated {
     clear: none;
     float: left;
     padding-right: 5px;
   }
-  /* line 45, ../sass/base-desktop.scss */
+  /* line 51, ../sass/base-desktop.scss */
   .byline .addthis {
     height: 25px;
     min-width: 191px;
@@ -70,21 +78,21 @@
     width: 100%;
   }
 
-  /* line 57, ../sass/base-desktop.scss */
+  /* line 63, ../sass/base-desktop.scss */
   #logo-area {
     background: transparent;
     border: none;
     height: 74px;
   }
-  /* line 61, ../sass/base-desktop.scss */
+  /* line 67, ../sass/base-desktop.scss */
   #logo-area .wrapper {
     border-top: none;
   }
-  /* line 63, ../sass/base-desktop.scss */
+  /* line 69, ../sass/base-desktop.scss */
   #logo-area .wrapper .inner-wrapper {
     border-bottom: none;
   }
-  /* line 67, ../sass/base-desktop.scss */
+  /* line 73, ../sass/base-desktop.scss */
   #logo-area .wrapper .container .inner-container {
     height: 73px;
     width: 100%;
@@ -93,19 +101,19 @@
     border-bottom: 1px solid #122435;
     position: relative;
   }
-  /* line 74, ../sass/base-desktop.scss */
+  /* line 80, ../sass/base-desktop.scss */
   #logo-area .wrapper .container .inner-container .grid {
     width: 96%;
     margin: 0px 2% 0px 2%;
   }
-  /* line 81, ../sass/base-desktop.scss */
+  /* line 87, ../sass/base-desktop.scss */
   #logo-area .wrapper #logo {
     margin-left: 0px;
     height: 62px;
     float: left;
     width: 291px;
   }
-  /* line 87, ../sass/base-desktop.scss */
+  /* line 93, ../sass/base-desktop.scss */
   #logo-area .wrapper #logo a {
     text-indent: -9999px;
     display: block;
@@ -115,7 +123,7 @@
     height: 31px;
     width: 291px;
   }
-  /* line 95, ../sass/base-desktop.scss */
+  /* line 101, ../sass/base-desktop.scss */
   #logo-area .wrapper #logo a span {
     background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 0 no-repeat;
     width: 340px;
@@ -123,26 +131,26 @@
     float: left;
   }
 
-  /* line 105, ../sass/base-desktop.scss */
+  /* line 111, ../sass/base-desktop.scss */
   #pre-area {
     border-top: none;
     border-bottom: none;
     background: transparent;
   }
-  /* line 109, ../sass/base-desktop.scss */
+  /* line 115, ../sass/base-desktop.scss */
   #pre-area .wrapper {
     background: transparent;
     border-top: none;
   }
-  /* line 112, ../sass/base-desktop.scss */
+  /* line 118, ../sass/base-desktop.scss */
   #pre-area .wrapper .container {
     border-top: 1px solid #a3a19b;
   }
-  /* line 114, ../sass/base-desktop.scss */
+  /* line 120, ../sass/base-desktop.scss */
   #pre-area .wrapper .container .inner-container {
     border-top: 1px solid #cac9c6;
   }
-  /* line 116, ../sass/base-desktop.scss */
+  /* line 122, ../sass/base-desktop.scss */
   #pre-area .wrapper .container .inner-container .grid.pre.full {
     border-top: 1px solid #dadad8;
     margin: 0px;
@@ -150,27 +158,31 @@
     height: 37px;
   }
 
-  /* line 129, ../sass/base-desktop.scss */
+  /* line 134, ../sass/base-desktop.scss */
+  #content-area .wrapper .container {
+    border-top: 1px solid #c1bfb9;
+  }
+  /* line 136, ../sass/base-desktop.scss */
   #content-area .wrapper .container .inner-container {
     border-top: 1px solid #dddddd;
     border-left: 1px solid #dddddd;
     border-right: 1px solid #dddddd;
     padding-top: 2%;
   }
-  /* line 134, ../sass/base-desktop.scss */
+  /* line 141, ../sass/base-desktop.scss */
   #content-area .wrapper .container .inner-container .grid.art-side {
     margin: 0px;
     padding: 0px;
     width: 36%;
   }
-  /* line 139, ../sass/base-desktop.scss */
+  /* line 146, ../sass/base-desktop.scss */
   #content-area .wrapper .container .inner-container .sidebar {
-    padding: 4% 4% 5% 4%;
+    padding: 0% 4% 2% 4%;
     border-left: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
   }
 
-  /* line 150, ../sass/base-desktop.scss */
+  /* line 157, ../sass/base-desktop.scss */
   .fakta {
     width: 40%;
     float: right;
@@ -182,74 +194,74 @@
     background: #f1f2ee;
     font-family: Arial;
   }
-  /* line 160, ../sass/base-desktop.scss */
+  /* line 167, ../sass/base-desktop.scss */
   .fakta .faktatittel {
     color: #d71010;
     font-weight: bold;
     text-transform: uppercase;
     border-bottom: 2px solid #D71010;
   }
-  /* line 166, ../sass/base-desktop.scss */
+  /* line 173, ../sass/base-desktop.scss */
   .fakta .content {
     font-size: 0.9em;
   }
 
-  /* line 396, ../sass/mixins.scss */
+  /* line 419, ../sass/mixins.scss */
   .listeboks h3, .listeboks .item-list h3 {
     margin-bottom: 0px;
   }
-  /* line 400, ../sass/mixins.scss */
+  /* line 423, ../sass/mixins.scss */
   .listeboks ul, .listeboks .item-list ul {
     padding: 0px 3% 15px 3%;
     background: #f1f2ee;
     float: left;
     border-bottom: 2px solid #c1bfb9;
   }
-  /* line 406, ../sass/mixins.scss */
+  /* line 429, ../sass/mixins.scss */
   .listeboks ul li, .listeboks .item-list ul li {
     float: left;
     width: 100%;
     padding: 9px 0px 9px 0px;
     margin: 0px;
   }
-  /* line 411, ../sass/mixins.scss */
+  /* line 434, ../sass/mixins.scss */
   .listeboks ul li a, .listeboks .item-list ul li a {
     color: #333333;
     text-decoration: none;
     font-size: 1.2em;
     line-height: 1.3em;
   }
-  /* line 418, ../sass/mixins.scss */
+  /* line 441, ../sass/mixins.scss */
   .listeboks ul li:last-child, .listeboks .item-list ul li:last-child {
     border: none;
     padding-bottom: 0px;
   }
 
-  /* line 633, ../sass/mixins.scss */
+  /* line 656, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul {
     border: none;
     height: auto;
   }
-  /* line 636, ../sass/mixins.scss */
+  /* line 659, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li {
     border: none;
     width: 100%;
     border-bottom: 1px solid #DDD;
   }
-  /* line 641, ../sass/mixins.scss */
+  /* line 664, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-last {
     border-bottom: 0px;
   }
-  /* line 645, ../sass/mixins.scss */
+  /* line 668, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-first .views-field-title {
     padding-top: 0px;
   }
-  /* line 652, ../sass/mixins.scss */
+  /* line 675, ../sass/mixins.scss */
   .block-views .newslist.fire ul, .block-views .newslist.fem ul {
     float: left;
     border-bottom: 1px solid #DDD;
   }
-  /* line 655, ../sass/mixins.scss */
+  /* line 678, ../sass/mixins.scss */
   .block-views .newslist.fire ul li, .block-views .newslist.fem ul li {
     width: 24.8%;
     border-bottom: 0px;
@@ -257,40 +269,40 @@
     margin: 0px;
     padding: 1em 0px 0px 0px;
   }
-  /* line 662, ../sass/mixins.scss */
+  /* line 685, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-field-teaser-value, .block-views .newslist.fem ul li .views-field-field-teaser-value {
     margin: 0px 15px;
   }
-  /* line 665, ../sass/mixins.scss */
+  /* line 688, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-title, .block-views .newslist.fem ul li .views-field-title {
     width: 85%;
     margin: 0px 15px;
   }
-  /* line 669, ../sass/mixins.scss */
+  /* line 692, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-field-main-image-fid, .block-views .newslist.fem ul li .views-field-field-main-image-fid {
     margin: 0px 15px;
   }
-  /* line 671, ../sass/mixins.scss */
+  /* line 694, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-field-main-image-fid img, .block-views .newslist.fem ul li .views-field-field-main-image-fid img {
     width: 100%;
     height: auto;
   }
-  /* line 677, ../sass/mixins.scss */
+  /* line 700, ../sass/mixins.scss */
   .block-views .newslist.fire ul li.views-row-last, .block-views .newslist.fem ul li.views-row-last {
     border: 0px;
   }
-  /* line 683, ../sass/mixins.scss */
+  /* line 706, ../sass/mixins.scss */
   .block-views .newslist.fem .item-list ul li.views-row {
     width: 19.8%;
   }
 
-  /* line 729, ../sass/mixins.scss */
+  /* line 752, ../sass/mixins.scss */
   div .ownsection {
     margin-top: 1em;
     margin-left: 3%;
     width: 26%;
   }
-  /* line 796, ../sass/mixins.scss */
+  /* line 819, ../sass/mixins.scss */
   div .seksjonsside .views-field-title a {
     font-family: 'MerriweatherRegular', Arial, serif;
     font-size: 1.5em;
@@ -298,62 +310,62 @@
     color: #333;
     text-decoration: none;
   }
-  /* line 901, ../sass/mixins.scss */
+  /* line 935, ../sass/mixins.scss */
   div .nopremium-message #edit-pass-wrapper {
     margin: 0px 10px;
   }
-  /* line 904, ../sass/mixins.scss */
+  /* line 938, ../sass/mixins.scss */
   div .nopremium-message .form-submit {
     clear: none;
   }
 
-  /* line 339, ../sass/mixins.scss */
+  /* line 362, ../sass/mixins.scss */
   .rammeboks.blogger .views-field-field-blogg-bilde-fid {
     display: block;
   }
-  /* line 343, ../sass/mixins.scss */
+  /* line 366, ../sass/mixins.scss */
   .rammeboks.blogger .views-field-title-1 a {
     font-size: 1em;
   }
-  /* line 348, ../sass/mixins.scss */
+  /* line 371, ../sass/mixins.scss */
   .rammeboks.blogger .views-field-title a {
     font-size: 1.1em;
   }
 
-  /* line 183, ../sass/base-desktop.scss */
+  /* line 190, ../sass/base-desktop.scss */
   .one.one_one .one-inner {
     border-right: 1px solid #DDD;
     height: 100%;
   }
 
-  /* line 187, ../sass/base-desktop.scss */
+  /* line 194, ../sass/base-desktop.scss */
   .one.one_two .one-inner {
     margin-right: 1em;
   }
 
-  /* line 190, ../sass/base-desktop.scss */
+  /* line 197, ../sass/base-desktop.scss */
   .deskbordertop {
     border-top: 1px solid #dddddd;
   }
 
-  /* line 195, ../sass/base-desktop.scss */
+  /* line 202, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-field-main-image-fid {
     display: inline;
     float: left;
     margin-right: 10px;
   }
-  /* line 199, ../sass/base-desktop.scss */
+  /* line 206, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-field-main-image-fid .field-content {
     width: 78px;
     float: left;
   }
-  /* line 204, ../sass/base-desktop.scss */
+  /* line 211, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-title {
     padding: 0px;
     margin-top: 6px;
   }
 
-  /* line 210, ../sass/base-desktop.scss */
+  /* line 217, ../sass/base-desktop.scss */
   .block-openx {
     display: block;
   }

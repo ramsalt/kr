@@ -89,6 +89,15 @@ $logos: sprite-map("logo/*.png");
       }
     }
   }
+  .view-bilde-slider-node{
+    .views-field-field-main-image-data{
+      font-family: Arial;
+      font-size: 1em;
+      padding: 8px;
+      background: #f1f2ee;
+      border-bottom: 1px solid #c1bfb9;
+    }
+  }
   .block-views{
     @include newslist-brett;
   }
@@ -98,6 +107,7 @@ $logos: sprite-map("logo/*.png");
     @include ownsection-brett;
     @include seksjonsside-brett;
     @include ticker-brett;
+    @include premium-msg-brett;
   }
   #logo-area .login-wrapper, #logo-area .search-wrapper{
     display: block;

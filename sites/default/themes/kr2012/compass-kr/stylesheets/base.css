@@ -548,6 +548,7 @@ body .body-content em, body .body-content p em {
   height: 42px;
   display: block;
   text-indent: -999px;
+  margin: auto;
 }
 
 /* line 5, ../sass/mixins.scss */
@@ -658,17 +659,19 @@ body .body-content em, body .body-content p em {
 }
 /* line 105, ../sass/mixins.scss */
 .rammeboks.leder li {
-  padding-top: 1em;
+  padding: 10px 0px 0px 0px;
+  margin: 0px;
   border-bottom: 0px;
 }
-/* line 109, ../sass/mixins.scss */
+/* line 110, ../sass/mixins.scss */
 .rammeboks.leder li .views-field-title a {
+  font-family: Arial;
   font-size: 1.5em;
   font-weight: bold;
   color: #333333;
-  line-height: 1.2em;
+  line-height: 1.3em;
 }
-/* line 117, ../sass/mixins.scss */
+/* line 119, ../sass/mixins.scss */
 .rammeboks.leder li .views-field-view-node a {
   font-family: Arial;
   color: #333333;
@@ -678,7 +681,7 @@ body .body-content em, body .body-content p em {
   height: 13px;
 }
 
-/* line 129, ../sass/mixins.scss */
+/* line 131, ../sass/mixins.scss */
 .rammeboks.eco h3 {
   color: #78a21e;
   font-size: 0.9em;
@@ -688,11 +691,11 @@ body .body-content em, body .body-content p em {
   border-bottom: 2px solid #78a21e;
   margin-bottom: 0px;
 }
-/* line 138, ../sass/mixins.scss */
+/* line 140, ../sass/mixins.scss */
 .rammeboks.eco .view-header {
   display: none;
 }
-/* line 141, ../sass/mixins.scss */
+/* line 143, ../sass/mixins.scss */
 .rammeboks.eco .pretext {
   background: #d7e1c2;
   padding: 5px;
@@ -700,26 +703,28 @@ body .body-content em, body .body-content p em {
   font-family: Arial;
   font-size: 0.8em;
 }
-/* line 148, ../sass/mixins.scss */
+/* line 150, ../sass/mixins.scss */
 .rammeboks.eco a {
   font-family: Arial;
   color: #333333;
 }
-/* line 152, ../sass/mixins.scss */
+/* line 154, ../sass/mixins.scss */
 .rammeboks.eco li {
   border-bottom: 0px;
 }
-/* line 154, ../sass/mixins.scss */
+/* line 156, ../sass/mixins.scss */
 .rammeboks.eco li .views-field-field-teaser-value {
   font-family: Arial;
   color: #333333;
 }
-/* line 159, ../sass/mixins.scss */
+/* line 161, ../sass/mixins.scss */
 .rammeboks.eco li .views-field-title a {
+  font-family: Arial;
   font-size: 1.5em;
   font-weight: bold;
+  line-height: 1.3em;
 }
-/* line 165, ../sass/mixins.scss */
+/* line 169, ../sass/mixins.scss */
 .rammeboks.eco li .views-field-view-node a {
   font-weight: bold;
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -545px no-repeat;
@@ -727,12 +732,17 @@ body .body-content em, body .body-content p em {
   height: 13px;
 }
 
-/* line 175, ../sass/mixins.scss */
+/* line 179, ../sass/mixins.scss */
+.rammeboks.blogger .view-header {
+  display: none;
+}
+/* line 182, ../sass/mixins.scss */
 .rammeboks.blogger h3 {
   border-bottom: 2px solid #78a21e;
   padding: 0px;
+  margin-bottom: 0px;
 }
-/* line 178, ../sass/mixins.scss */
+/* line 186, ../sass/mixins.scss */
 .rammeboks.blogger h3 a {
   padding: 0px;
   color: #78a21e;
@@ -742,37 +752,50 @@ body .body-content em, body .body-content p em {
   text-transform: uppercase;
   text-decoration: none;
 }
-/* line 188, ../sass/mixins.scss */
+/* line 196, ../sass/mixins.scss */
+.rammeboks.blogger .pretext {
+  background: #d7e1c2;
+  padding: 5px;
+  color: #333333;
+  font-family: Arial;
+  font-size: 0.8em;
+}
+/* line 203, ../sass/mixins.scss */
 .rammeboks.blogger .views-field-field-blogg-bilde-fid {
   float: left;
   margin-right: 1em;
   margin-bottom: 0.1em;
   border: 1px solid #b2afa8;
 }
-/* line 193, ../sass/mixins.scss */
+/* line 208, ../sass/mixins.scss */
 .rammeboks.blogger .views-field-field-blogg-bilde-fid img {
   width: 50px;
   height: auto;
   float: left;
 }
-/* line 200, ../sass/mixins.scss */
+/* line 215, ../sass/mixins.scss */
 .rammeboks.blogger .views-field-title-1 a {
   font-family: Arial;
   color: #333333;
   font-size: 0.8em;
   font-weight: bold;
 }
-/* line 208, ../sass/mixins.scss */
+/* line 223, ../sass/mixins.scss */
 .rammeboks.blogger .views-field-title a {
   font-family: Arial;
   color: #333333;
   font-size: 0.8em;
 }
-/* line 214, ../sass/mixins.scss */
+/* line 229, ../sass/mixins.scss */
 .rammeboks.blogger .views-field-body {
   display: none;
 }
-/* line 218, ../sass/mixins.scss */
+/* line 232, ../sass/mixins.scss */
+.rammeboks.blogger .more-link {
+  float: left;
+  margin-top: 10px;
+}
+/* line 235, ../sass/mixins.scss */
 .rammeboks.blogger .more-link a {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -545px no-repeat;
   padding-left: 20px;
@@ -784,7 +807,7 @@ body .body-content em, body .body-content p em {
   font-weight: bold;
 }
 
-/* line 231, ../sass/mixins.scss */
+/* line 248, ../sass/mixins.scss */
 .kommentar-liste {
   /*
   .views-field-field-sitat-value:before{
@@ -797,12 +820,12 @@ body .body-content em, body .body-content p em {
   }
   */
 }
-/* line 232, ../sass/mixins.scss */
+/* line 249, ../sass/mixins.scss */
 .kommentar-liste h2 {
   color: #78a21e;
   border-bottom: 2px solid #78a21e;
 }
-/* line 247, ../sass/mixins.scss */
+/* line 264, ../sass/mixins.scss */
 .kommentar-liste .views-field-field-sitat-value span {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -408px no-repeat;
   float: left;
@@ -810,7 +833,7 @@ body .body-content em, body .body-content p em {
   height: 21px;
   margin: -5px 8px 0px 0px;
 }
-/* line 254, ../sass/mixins.scss */
+/* line 271, ../sass/mixins.scss */
 .kommentar-liste .views-field-field-sitat-value a {
   text-decoration: none;
   color: #333333;
@@ -819,13 +842,13 @@ body .body-content em, body .body-content p em {
   font-weight: bold;
   line-height: 1.3em;
 }
-/* line 263, ../sass/mixins.scss */
+/* line 280, ../sass/mixins.scss */
 .kommentar-liste .views-field-view-node {
   margin-top: 10px;
   padding-top: 6px;
   clear: both;
 }
-/* line 267, ../sass/mixins.scss */
+/* line 284, ../sass/mixins.scss */
 .kommentar-liste .views-field-view-node a {
   height: 13px;
   padding-top: 1px;
@@ -840,14 +863,14 @@ body .body-content em, body .body-content p em {
   color: #333333;
   text-decoration: none;
 }
-/* line 282, ../sass/mixins.scss */
+/* line 299, ../sass/mixins.scss */
 .kommentar-liste .views-field-field-op-author-nid {
   border-top: 1px solid #c1bfb9;
   margin-top: 10px;
   padding-top: 6px;
   width: 100%;
 }
-/* line 287, ../sass/mixins.scss */
+/* line 304, ../sass/mixins.scss */
 .kommentar-liste .views-field-field-op-author-nid a {
   float: right;
   font-size: 0.8em;
@@ -865,18 +888,18 @@ body .body-content em, body .body-content p em {
 .listeboks {
   margin-bottom: 15px;
 }
-/* line 357, ../sass/mixins.scss */
+/* line 380, ../sass/mixins.scss */
 .listeboks .item-list h3 {
   border-bottom: 2px solid #333;
   padding: 4px 0px;
   margin-bottom: 5px;
 }
-/* line 362, ../sass/mixins.scss */
+/* line 385, ../sass/mixins.scss */
 .listeboks .item-list ul {
   padding: 0px;
   margin: 0px;
 }
-/* line 365, ../sass/mixins.scss */
+/* line 388, ../sass/mixins.scss */
 .listeboks .item-list ul li {
   clear: both;
   float: left;
@@ -886,39 +909,39 @@ body .body-content em, body .body-content p em {
   margin: 0px 0px 7px 0px;
   border-bottom: 1px solid #dddddd;
 }
-/* line 373, ../sass/mixins.scss */
+/* line 396, ../sass/mixins.scss */
 .listeboks .item-list ul li a {
   color: #2c91c5;
   text-decoration: none;
   font-family: 'MerriweatherRegular', serif;
 }
-/* line 378, ../sass/mixins.scss */
+/* line 401, ../sass/mixins.scss */
 .listeboks .item-list ul li .views-field-field-main-image-fid {
   float: left;
   padding-right: 0.7em;
 }
-/* line 387, ../sass/mixins.scss */
+/* line 410, ../sass/mixins.scss */
 .listeboks .item-list ul.lenker li a {
   color: #2c91c5;
   font-size: 1em;
 }
 
-/* line 426, ../sass/mixins.scss */
+/* line 449, ../sass/mixins.scss */
 .block-views .newslist .views-field-title, .block-views .newslist .views-field-field-main-image-fid, .block-views .newslist .views-field-field-teaser-value {
   margin: 0px 15px;
 }
-/* line 429, ../sass/mixins.scss */
+/* line 452, ../sass/mixins.scss */
 .block-views .newslist p {
   margin: 0px;
   line-height: 1.4em;
 }
-/* line 433, ../sass/mixins.scss */
+/* line 456, ../sass/mixins.scss */
 .block-views .newslist ul {
   margin: 0px;
   padding: 0px;
   list-style: none;
 }
-/* line 437, ../sass/mixins.scss */
+/* line 460, ../sass/mixins.scss */
 .block-views .newslist ul li {
   float: left;
   width: 100%;
@@ -927,82 +950,82 @@ body .body-content em, body .body-content p em {
   list-style: none;
   border-bottom: 1px solid #dddddd;
 }
-/* line 446, ../sass/mixins.scss */
+/* line 469, ../sass/mixins.scss */
 .block-views .newslist a {
   text-decoration: none;
   color: #333333;
   font-size: 1.2em;
 }
-/* line 451, ../sass/mixins.scss */
+/* line 474, ../sass/mixins.scss */
 .block-views .newslist .views-field-field-teaser-value {
   font-family: Arial;
   font-size: 0.95em;
 }
-/* line 460, ../sass/mixins.scss */
+/* line 483, ../sass/mixins.scss */
 .block-views .newslist.sak-1 .views-field-title {
   line-height: 2em;
 }
-/* line 462, ../sass/mixins.scss */
+/* line 485, ../sass/mixins.scss */
 .block-views .newslist.sak-1 .views-field-title a {
   font-size: 1.8em;
 }
-/* line 466, ../sass/mixins.scss */
+/* line 489, ../sass/mixins.scss */
 .block-views .newslist.sak-1 .views-field-field-teaser-value {
   font-weight: bold;
 }
-/* line 469, ../sass/mixins.scss */
+/* line 492, ../sass/mixins.scss */
 .block-views .newslist.sak-1 img {
   width: 100%;
   height: auto;
 }
-/* line 475, ../sass/mixins.scss */
+/* line 498, ../sass/mixins.scss */
 .block-views .newslist.sak-2 .views-row-1 {
   margin-top: 0px;
 }
-/* line 478, ../sass/mixins.scss */
+/* line 501, ../sass/mixins.scss */
 .block-views .newslist.sak-2 .views-field-field-main-image-fid {
   float: right;
 }
-/* line 482, ../sass/mixins.scss */
+/* line 505, ../sass/mixins.scss */
 .block-views .newslist.sak-2 .views-field-field-main-image-fid .field-content a img {
   width: 84px;
   height: auto;
   border: 1px solid #d1d1d1;
 }
-/* line 492, ../sass/mixins.scss */
+/* line 515, ../sass/mixins.scss */
 .block-views .newslist.sak-4 .views-field-field-main-image-fid {
   float: left;
 }
-/* line 495, ../sass/mixins.scss */
+/* line 518, ../sass/mixins.scss */
 .block-views .newslist.sak-4 .views-field-field-teaser-value {
   display: none;
 }
-/* line 500, ../sass/mixins.scss */
+/* line 523, ../sass/mixins.scss */
 .block-views .newslist.fire ul, .block-views .newslist.fem ul {
   border-top: 1px solid #DDD;
 }
-/* line 503, ../sass/mixins.scss */
+/* line 526, ../sass/mixins.scss */
 .block-views .newslist.fire .views-field-field-main-image-fid, .block-views .newslist.fem .views-field-field-main-image-fid {
   float: left;
   margin: 0px 0px 0px 15px;
 }
-/* line 506, ../sass/mixins.scss */
+/* line 529, ../sass/mixins.scss */
 .block-views .newslist.fire .views-field-field-main-image-fid img, .block-views .newslist.fem .views-field-field-main-image-fid img {
   width: 86px;
   height: auto;
 }
-/* line 511, ../sass/mixins.scss */
+/* line 534, ../sass/mixins.scss */
 .block-views .newslist.fire .views-field-title, .block-views .newslist.fem .views-field-title {
   float: left;
   margin: 0px 0px 0px 15px;
   width: 59%;
 }
-/* line 516, ../sass/mixins.scss */
+/* line 539, ../sass/mixins.scss */
 .block-views .newslist.fire .views-field-field-teaser-value, .block-views .newslist.fem .views-field-field-teaser-value {
   display: none;
 }
 
-/* line 689, ../sass/mixins.scss */
+/* line 712, ../sass/mixins.scss */
 div .ownsection {
   -webkit-border-radius: 4px 4px;
   -moz-border-radius: 4px / 4px;
@@ -1014,13 +1037,13 @@ div .ownsection {
   background: #dce4eb;
   padding: 1em;
 }
-/* line 697, ../sass/mixins.scss */
+/* line 720, ../sass/mixins.scss */
 div .ownsection h2 {
   font-size: 1.4em;
   font-family: Arial;
   float: left;
 }
-/* line 702, ../sass/mixins.scss */
+/* line 725, ../sass/mixins.scss */
 div .ownsection .link {
   float: right;
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -489px no-repeat;
@@ -1028,41 +1051,41 @@ div .ownsection .link {
   height: 20px;
   width: 20px;
 }
-/* line 709, ../sass/mixins.scss */
+/* line 732, ../sass/mixins.scss */
 div .ownsection .desc {
   display: none;
 }
-/* line 738, ../sass/mixins.scss */
+/* line 761, ../sass/mixins.scss */
 div .seksjonsside .views-field-title a {
   font-family: 'MerriweatherRegular', Arial, serif;
   font-size: 1.2em;
   color: #333;
   text-decoration: none;
 }
-/* line 745, ../sass/mixins.scss */
+/* line 768, ../sass/mixins.scss */
 div .seksjonsside .views-field-created {
   color: #666666;
   font-family: Arial;
   font-size: 0.8em;
 }
-/* line 751, ../sass/mixins.scss */
+/* line 774, ../sass/mixins.scss */
 div .seksjonsside .views-field-comment-count {
   display: none;
 }
-/* line 754, ../sass/mixins.scss */
+/* line 777, ../sass/mixins.scss */
 div .seksjonsside .views-field-field-main-image-fid {
   float: right;
 }
-/* line 758, ../sass/mixins.scss */
+/* line 781, ../sass/mixins.scss */
 div .seksjonsside .views-field-field-teaser-value,
 div .seksjonsside .views-field-body {
   font-family: Arial;
 }
-/* line 761, ../sass/mixins.scss */
+/* line 784, ../sass/mixins.scss */
 div .seksjonsside .views-field-view-node {
   display: none;
 }
-/* line 767, ../sass/mixins.scss */
+/* line 790, ../sass/mixins.scss */
 div .seksjonsside .views-separator {
   border-top: 1px solid #dddddd;
   margin: 10px 0px;
@@ -1070,16 +1093,16 @@ div .seksjonsside .views-separator {
   width: 100%;
   clear: both;
 }
-/* line 777, ../sass/mixins.scss */
+/* line 800, ../sass/mixins.scss */
 div .seksjonsside .views-field-field-blogg-bilde-fid {
   float: left;
   margin: 0px 1em 1em 0px;
 }
-/* line 784, ../sass/mixins.scss */
+/* line 807, ../sass/mixins.scss */
 div .seksjonsside.blogger .views-field-title-1 a {
   text-decoration: none;
 }
-/* line 807, ../sass/mixins.scss */
+/* line 830, ../sass/mixins.scss */
 div .nopremium-message {
   background: #eff3f6;
   -webkit-border-radius: 4px 4px;
@@ -1090,102 +1113,101 @@ div .nopremium-message {
   font-family: Arial;
   margin: 10px 0px;
 }
-/* line 814, ../sass/mixins.scss */
+/* line 837, ../sass/mixins.scss */
 div .nopremium-message .msg {
   padding: 20px;
 }
-/* line 816, ../sass/mixins.scss */
-div .nopremium-message .msg p {
-  display: inline;
-}
-/* line 820, ../sass/mixins.scss */
+/* line 843, ../sass/mixins.scss */
 div .nopremium-message form {
   padding: 20px;
   float: left;
 }
-/* line 824, ../sass/mixins.scss */
+/* line 847, ../sass/mixins.scss */
 div .nopremium-message div.hr {
   clear: both;
   width: 100%;
   border-top: 1px solid #c3d2dc;
   border-bottom: 1px solid #ffffff;
 }
-/* line 831, ../sass/mixins.scss */
+/* line 854, ../sass/mixins.scss */
 div .nopremium-message a.registerhere {
-  float: right;
+  float: left;
+  padding: 0px 0px 15px 0px;
   color: #333333;
   font-family: Arial;
   font-size: 0.8em;
   text-decoration: none;
   font-weight: bold;
 }
-/* line 832, ../sass/mixins.scss */
+/* line 855, ../sass/mixins.scss */
 div .nopremium-message a.registerhere span {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -545px no-repeat;
   padding-left: 20px;
   float: left;
+  height: 17px;
 }
-/* line 844, ../sass/mixins.scss */
+/* line 869, ../sass/mixins.scss */
 div .nopremium-message .form-item {
   float: left;
   margin: 0px;
 }
-/* line 845, ../sass/mixins.scss */
+/* line 870, ../sass/mixins.scss */
 div .nopremium-message .form-item label {
   text-align: left;
   font-size: 0.7em;
 }
-/* line 849, ../sass/mixins.scss */
+/* line 874, ../sass/mixins.scss */
 div .nopremium-message .form-item input {
   height: 27px;
   width: 160px;
+  border: 1px solid #b2b2b2;
   -webkit-border-radius: 4px 4px;
   -moz-border-radius: 4px / 4px;
   border-radius: 4px / 4px;
-  font-size: 1.2em;
+  height: 40px;
+  box-shadow: inset 0 5px 5px rgba(178, 178, 178, 0.5);
+  text-indent: 5px;
+  font-family: Arial;
+  font-size: 1.1em;
 }
-/* line 858, ../sass/mixins.scss */
+/* line 888, ../sass/mixins.scss */
+div .nopremium-message #edit-pass-wrapper {
+  margin-left: 14px;
+}
+/* line 891, ../sass/mixins.scss */
 div .nopremium-message .form-submit {
-  clear: both;
-  float: left;
-  margin-top: 20px;
-  background: #3090c0;
-  -webkit-border-radius: 4px 4px;
-  -moz-border-radius: 4px / 4px;
-  border-radius: 4px / 4px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  color: #fff;
-  border-bottom: 2px solid #1d5774;
-  height: 27px;
-  width: 65px;
+  margin-top: 10px;
 }
-/* line 872, ../sass/mixins.scss */
+/* line 895, ../sass/mixins.scss */
 div .nopremium-message .item-list {
   float: left;
   clear: both;
 }
-/* line 875, ../sass/mixins.scss */
+/* line 898, ../sass/mixins.scss */
 div .nopremium-message .item-list ul {
   margin: 0px;
 }
-/* line 877, ../sass/mixins.scss */
+/* line 900, ../sass/mixins.scss */
 div .nopremium-message .item-list ul li {
   margin: 0px;
   list-style: none;
 }
-/* line 881, ../sass/mixins.scss */
+/* line 904, ../sass/mixins.scss */
 div .nopremium-message .item-list ul li.first {
   display: none;
 }
-/* line 885, ../sass/mixins.scss */
+/* line 907, ../sass/mixins.scss */
+div .nopremium-message .item-list ul li.last {
+  margin-top: 10px;
+}
+/* line 909, ../sass/mixins.scss */
 div .nopremium-message .item-list ul li.last a {
+  font-size: 0.8em;
   color: #3090c0;
   text-decoration: none;
   font-weight: bold;
 }
-/* line 912, ../sass/mixins.scss */
+/* line 946, ../sass/mixins.scss */
 div .jobbliste ul li {
   margin: 0px;
   list-style: none;
@@ -1193,13 +1215,13 @@ div .jobbliste ul li {
   margin-bottom: 1em;
   width: 100%;
 }
-/* line 918, ../sass/mixins.scss */
+/* line 952, ../sass/mixins.scss */
 div .jobbliste ul li .bilde {
   float: left;
   width: 30%;
   text-align: center;
 }
-/* line 923, ../sass/mixins.scss */
+/* line 957, ../sass/mixins.scss */
 div .jobbliste ul li .andre {
   float: left;
   width: 68%;
@@ -1207,18 +1229,18 @@ div .jobbliste ul li .andre {
   font-family: Arial;
   font-size: 0.7em;
 }
-/* line 929, ../sass/mixins.scss */
+/* line 963, ../sass/mixins.scss */
 div .jobbliste ul li .andre a {
   text-decoration: none;
   color: #333333;
 }
-/* line 933, ../sass/mixins.scss */
+/* line 967, ../sass/mixins.scss */
 div .jobbliste ul li .andre .views-field-title {
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 0.2em;
 }
-/* line 938, ../sass/mixins.scss */
+/* line 972, ../sass/mixins.scss */
 div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   font-weight: bold;
   line-height: 1em;
@@ -1234,7 +1256,7 @@ div .ticker {
 div .ticker-label {
   float: left;
   display: block;
-  margin-left: 12px;
+  margin-left: 34px;
   margin-top: 2px;
   margin-right: 5px;
 }
@@ -1626,4 +1648,40 @@ div #search-mob .views-exposed-widgets .form-submit {
 /* line 472, ../sass/base.scss */
 #op-content {
   padding-bottom: 20px;
+}
+
+/* line 476, ../sass/base.scss */
+.addthis .addthis_button_facebook_like.at300b {
+  width: 50px;
+  height: 22px;
+}
+/* line 480, ../sass/base.scss */
+.addthis .addthis_button_tweet.at300b {
+  width: 106px;
+  height: 25px;
+}
+
+/* line 485, ../sass/base.scss */
+body.page-taxonomy .grid.art-main h1 {
+  display: none;
+}
+
+/* line 488, ../sass/base.scss */
+.tax-title {
+  border-bottom: 1px solid #DDD;
+}
+
+/* line 491, ../sass/base.scss */
+.tax-title h1 {
+  padding: 0px 15px;
+}
+
+/* line 494, ../sass/base.scss */
+body.page-taxonomy #content-area .grid {
+  padding-top: 15px;
+}
+
+/* line 497, ../sass/base.scss */
+body.page-taxonomy #content-area .grid #sidebar-right {
+  padding-top: 15px;
 }
