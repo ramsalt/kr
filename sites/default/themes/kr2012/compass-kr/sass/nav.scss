@@ -10,6 +10,8 @@ $farge-menu-desktop: #336699;
 $logos: sprite-map("logo/*.png");
 $menu-font: Helvetica;
 
+@import "compass/css3/box-shadow";
+
 @mixin nav-mob{
   .wrapper{
     background: $farge-knapp;
@@ -277,7 +279,9 @@ $menu-font: Helvetica;
       border-bottom: none;
     }
     .container{
-      background: $farge-knapp;
+      
+      //border-top: 1px solid #214264;
+      background: $farge-menu-desktop;
       border-top: 1px solid #214264;
       border-bottom: 1px solid #234f7c;
       .inner-container{

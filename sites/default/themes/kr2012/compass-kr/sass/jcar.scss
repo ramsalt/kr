@@ -18,7 +18,7 @@ $logos: sprite-map("logo/*.png");
   width: auto;
 }
 .jcar .jcarousel-container-horizontal {
-   padding: 20px;
+   padding: 10px 20px;
 }
 
 .jcar .jcarousel-clip-horizontal {
@@ -31,8 +31,9 @@ $logos: sprite-map("logo/*.png");
   color: #fff;
   font-weight: bold;
   font-size: 0.8em;
-  margin: 7px 20px 0px 23px;
+  margin: 14px 20px 0px 24px;
   padding: 0px;
+  text-transform: uppercase;
   border-bottom: 2px solid #fff;
 }
 .jcar.jobber h3{
@@ -43,8 +44,8 @@ $logos: sprite-map("logo/*.png");
   padding: 0;
   list-style: none;
   background: #000;
-  
   @include border-bottom-radius(5px);
+  border-bottom: 1px solid #5a5a5a;
   color: #fff;
   font-family: Arial;
   a {
@@ -64,7 +65,9 @@ $logos: sprite-map("logo/*.png");
     text-align: center;
     a{
       text-decoration: none;
-      color: #2C91C5;
+      color: #333333;
+      font-family: Arial;
+      
       font-size: 0.9em;
     }
   }
@@ -117,7 +120,7 @@ $logos: sprite-map("logo/*.png");
   }
 }
 .jcar .jcarousel-item-horizontal {
-  margin: 0 4px;
+  margin: 0 8px 0px 4px;
 }
 
 .jcar .jcarousel-item-vertical {

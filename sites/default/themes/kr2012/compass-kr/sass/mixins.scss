@@ -13,7 +13,7 @@ $logos: sprite-map("logo/*.png");
       color: #d71010;
       font-size: 0.8em;
       text-transform: Uppercase;
-      border-bottom: 1px solid #d71010;
+      border-bottom: 2px solid #d71010;
       margin-bottom: 10px;
     }
     h3{
@@ -52,6 +52,10 @@ $logos: sprite-map("logo/*.png");
         }
       }
     }
+  }
+  .content{
+    font-family: Arial;
+    color: #333333;
   }
   .rammeboks.red{
     h3{
@@ -227,35 +231,46 @@ $logos: sprite-map("logo/*.png");
   .kommentar-liste{
     h2{
       color: #78a21e;
-      border-bottom: 1px solid #78a21e;
+      border-bottom: 2px solid #78a21e;
     }
+    /*
     .views-field-field-sitat-value:before{
       content: '“';
       float: left;
       color: #78a21e;
       font-weight: bold;
-      font-size: 1.7em;
+      font-size: 1.7em;      
       font-family: 'MerriweatherRegular', serif;
     }
+    */
     .views-field-field-sitat-value{
+      span{
+        background: sprite($logos, quote) no-repeat;
+        float: left; 
+        width: 23px;
+        height: 21px;
+        margin: -5px 8px 0px 0px;
+      }
       a{
         text-decoration: none;
         color: #333333;
         font-family: 'MerriweatherRegular', serif;
         font-size: 1.1em;
+        font-weight: bold;
+        line-height: 1.3em;
       }
     }
-    .views-field-view-node{
-      border-top: 1px solid #c1bfb9;
+    .views-field-view-node{      
       margin-top: 10px;
       padding-top: 6px;
-      float: left;
-      width: 50%;
+      clear: both;      
       a{
         height: 13px;
-        padding-top: 4px;
+        padding-top: 1px;
+        padding-bottom: 3px;
         float: left;
-        font-size: 0.7em;
+        font-size: 1em;
+        font-weight: bold;
         line-height: 1em;
         padding-left: 20px;
         background: sprite($logos, mobpilhoy) no-repeat;
@@ -268,9 +283,9 @@ $logos: sprite-map("logo/*.png");
       border-top: 1px solid #c1bfb9;
       margin-top: 10px;
       padding-top: 6px;
-      float: left;
-      width: 50%;
+      width: 100%;
       a{
+        float: right;
         font-size: 0.8em;
         font-family: Arial;
         color: #333333;
@@ -413,6 +428,7 @@ $logos: sprite-map("logo/*.png");
     }
     p{
       margin: 0px;
+      line-height: 1.4em;
     }
     ul{
       margin: 0px;
@@ -508,7 +524,7 @@ $logos: sprite-map("logo/*.png");
       margin: 0px 20px;
     }
     a{
-      font-size: 1.8em;
+      font-size: 1.7em;
       line-height: 1.1em;
     }
     .views-field-title{
@@ -529,8 +545,7 @@ $logos: sprite-map("logo/*.png");
     }
   }
   .newslist.sak-2{
-    li{
-      
+    li{      
       border-bottom: 1px solid #DDD;
     }
     li.views-row-last{
@@ -581,6 +596,17 @@ $logos: sprite-map("logo/*.png");
       }
       li.views-row-last{
         border-right: 0px;
+      }
+    }
+  }
+  .newslist.sak-12{
+    ul{
+      li{
+        .views-field-title{
+          a{
+            font-size: 1.4em;
+          }
+        }
       }
     }
   }

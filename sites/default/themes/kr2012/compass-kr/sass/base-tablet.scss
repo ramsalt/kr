@@ -32,7 +32,8 @@ $logos: sprite-map("logo/*.png");
           padding: 15px;
           .login-wrapper{
             float: left;
-            margin-right: 15px;
+            margin-right: 25px;
+            margin-top: 6px;
             a{
               background: sprite($logos, nokkelhull) no-repeat;
               font-weight: bold;
@@ -50,20 +51,26 @@ $logos: sprite-map("logo/*.png");
           .search-wrapper{
             float: left;
             input.form-text{
-              height: 20px;
+              height: 34px;
               width: 150px;
               @include border-radius(4px, 4px);
+              border: 1px solid #223e6b;
+              -webkit-box-shadow: inset 1px 2px 3px 0px rgba(0, 0, 0, 0.7);
+              box-shadow: inset 1px 2px 3px 0px rgba(0, 0, 0, 0.7);
+              text-indent: 5px;
+              font-family: Arial;
+              font-size: 1em;
             }
             .form-submit{
               position: absolute;
-              right: 16px;
+              right: 21px;
               text-indent: -999px;
-              background: sprite($logos, searchblack) no-repeat;
-              width: 14px;
-              height: 15px;
+              background: sprite($logos, blalupe) no-repeat;
+              width: 16px;
+              height: 17px;
               border: none;
               padding: 0px;
-              margin: 5px 4px 0px 0px;
+              margin: 11px 4px 0px 0px;
             }
           }
         }
