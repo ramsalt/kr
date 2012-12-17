@@ -24,7 +24,7 @@ function kr_most_viewed_block($op = 'list', $delta = 0, $edit = array()) {
   
 function _most_viewd_last_week(){
 	$sid = 'mest_lest_forrige_uke';
-	if (($cache = cache_get($sid, 'cache') && FALSE)
+	if (($cache = cache_get($sid, 'cache'))
       && !empty($cache->data)
       && (time() < $cache->expire)) //check expiration manually
 	{
