@@ -2048,6 +2048,11 @@ body.page-taxonomy #content-area .grid #sidebar-right {
   padding-top: 15px;
 }
 
+/* line 500, ../sass/base.scss */
+strong {
+  font-weight: bold;
+}
+
 @media all and (min-width: 740px) {
   /* line 8, ../sass/base-tablet.scss */
   .visible-mobile, .visible-desktop {

@@ -1,7 +1,7 @@
 <?php
 function kr2012_byline($node){
 	$antall_forfattere = count($node->field_op_author);
-	if($antall_forfattere > 0){
+	if($antall_forfattere > 0 && $node->field_op_author[0]['nid'] != NULL){
 		$nummer = 1;
 		$forfattere_html = '<div class="forfatter">Av ';
 		foreach($node->field_op_author as $delta => $author){
@@ -148,5 +148,9 @@ function kr2012_nopremium_message($node){
   $html .= $block['content'];
   return $html;
 }
-
+function kr2012_nopremium_body($node) {
+  $output  = $node->teaser;
+  $output .= '<div class="nopremium-message clearfix">'. $node->nopremium_message .'</div>';
+  return $output;
+}
 ?>
