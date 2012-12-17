@@ -181,9 +181,10 @@
     border-left: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
     float: left;
+    width: 92%;
   }
 
-  /* line 157, ../sass/base-desktop.scss */
+  /* line 158, ../sass/base-desktop.scss */
   .fakta {
     width: 40%;
     float: right;
@@ -195,14 +196,14 @@
     background: #f1f2ee;
     font-family: Arial;
   }
-  /* line 167, ../sass/base-desktop.scss */
+  /* line 168, ../sass/base-desktop.scss */
   .fakta .faktatittel {
     color: #d71010;
     font-weight: bold;
     text-transform: uppercase;
     border-bottom: 2px solid #D71010;
   }
-  /* line 173, ../sass/base-desktop.scss */
+  /* line 174, ../sass/base-desktop.scss */
   .fakta .content {
     font-size: 0.9em;
   }
@@ -333,40 +334,40 @@
     font-size: 1.1em;
   }
 
-  /* line 190, ../sass/base-desktop.scss */
+  /* line 191, ../sass/base-desktop.scss */
   .one.one_one .one-inner {
     border-right: 1px solid #DDD;
     height: 100%;
   }
 
-  /* line 194, ../sass/base-desktop.scss */
+  /* line 195, ../sass/base-desktop.scss */
   .one.one_two .one-inner {
     margin-right: 1em;
   }
 
-  /* line 197, ../sass/base-desktop.scss */
+  /* line 198, ../sass/base-desktop.scss */
   .deskbordertop {
     border-top: 1px solid #dddddd;
   }
 
-  /* line 202, ../sass/base-desktop.scss */
+  /* line 203, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-field-main-image-fid {
     display: inline;
     float: left;
     margin-right: 10px;
   }
-  /* line 206, ../sass/base-desktop.scss */
+  /* line 207, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-field-main-image-fid .field-content {
     width: 78px;
     float: left;
   }
-  /* line 211, ../sass/base-desktop.scss */
+  /* line 212, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-title {
     padding: 0px;
     margin-top: 6px;
   }
 
-  /* line 217, ../sass/base-desktop.scss */
+  /* line 218, ../sass/base-desktop.scss */
   .block-openx {
     display: block;
   }

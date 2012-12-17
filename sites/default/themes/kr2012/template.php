@@ -153,4 +153,19 @@ function kr2012_nopremium_body($node) {
   $output .= '<div class="nopremium-message clearfix">'. $node->nopremium_message .'</div>';
   return $output;
 }
+function kr2012_preprocess_block(&$variables, $hook){
+	//print_r($variables);
+	if($variables['block']->module == 'cck_blocks' && $variables['block']->bid == 'cck_blocks-field_stilling_geopos'){
+		$nid = arg(1);
+		if(is_numeric($nid)){
+			$node = node_load($nid);
+			if(strlen($node->field_stilling_geopos[0]['openlayers_wkt'])>0){
+				
+			}else{
+				unset($variables['block']->content);
+				unset($variables['block']->subject);
+			}
+		}
+  	}
+}
 ?>
