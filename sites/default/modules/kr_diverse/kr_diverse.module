@@ -103,8 +103,8 @@ function _kr_aktuelle(){
 				</ul>
 			</div>
 			<div class="ticker-controls">
-				<div class="ticker-prev"></div>				
-				<div class="ticker-next"></div>
+				<div class="ticker-prev"><span></span></div>				
+				<div class="ticker-next"><span></span></div>
 			</div>
 		</div>';
 		return $html;
