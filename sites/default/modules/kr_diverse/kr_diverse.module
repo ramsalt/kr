@@ -1,5 +1,13 @@
 <?php
 
+function copy_front_page_to_new_theme(){
+	db_query('DELETE FROM {draggableviews_structure} WHERE view_name = "forside"');
+	db_query('INSERT INTO {draggableviews_structure} ( view_name, nid, delta, args, value )
+SELECT  \'forside\', d.nid, d.delta, d.args, d.value
+FROM    draggableviews_structure d
+WHERE   d.view_name = \'articles\'');
+}
+
 function kr_diverse_block($op = 'list', $delta = 0, $edit = array()) {
 
   if ($op == 'list') {
@@ -36,15 +44,18 @@ function kr_diverse_block($op = 'list', $delta = 0, $edit = array()) {
         break;
       case 2:
         // Your module will need to define this function to render the block.
-        drupal_add_js(drupal_get_path('module', 'kr_diverse') . '/kr_div.js');
-		drupal_add_js('(function ($) {
-			$(document).ready(function() {
-				
-			});
-		}(jQuery));', 'inline');
+        $html = _kr_aktuelle();
+		if(strlen($html)>0){
+	        drupal_add_js(drupal_get_path('module', 'kr_diverse') . '/kr_div.js');
+			drupal_add_js('(function ($) {
+				$(document).ready(function() {
+					
+				});
+			}(jQuery));', 'inline');
+		}
         $block = array(
           'subject' => '', 
-          'content' => _kr_aktuelle(),
+          'content' => $html,
         );
         break;
     }
