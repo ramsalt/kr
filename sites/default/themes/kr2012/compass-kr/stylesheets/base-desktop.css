@@ -180,6 +180,7 @@
     padding: 0% 4% 2% 4%;
     border-left: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
+    float: left;
   }
 
   /* line 157, ../sass/base-desktop.scss */
@@ -206,62 +207,62 @@
     font-size: 0.9em;
   }
 
-  /* line 420, ../sass/mixins.scss */
+  /* line 425, ../sass/mixins.scss */
   .listeboks h3, .listeboks .item-list h3 {
     margin-bottom: 0px;
   }
-  /* line 424, ../sass/mixins.scss */
+  /* line 429, ../sass/mixins.scss */
   .listeboks ul, .listeboks .item-list ul {
     padding: 0px 3% 15px 3%;
     background: #f1f2ee;
     float: left;
     border-bottom: 2px solid #c1bfb9;
   }
-  /* line 430, ../sass/mixins.scss */
+  /* line 435, ../sass/mixins.scss */
   .listeboks ul li, .listeboks .item-list ul li {
     float: left;
     width: 100%;
     padding: 9px 0px 9px 0px;
     margin: 0px;
   }
-  /* line 435, ../sass/mixins.scss */
+  /* line 440, ../sass/mixins.scss */
   .listeboks ul li a, .listeboks .item-list ul li a {
     color: #333333;
     text-decoration: none;
     font-size: 1.2em;
     line-height: 1.3em;
   }
-  /* line 442, ../sass/mixins.scss */
+  /* line 447, ../sass/mixins.scss */
   .listeboks ul li:last-child, .listeboks .item-list ul li:last-child {
     border: none;
     padding-bottom: 0px;
   }
 
-  /* line 657, ../sass/mixins.scss */
+  /* line 662, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul {
     border: none;
     height: auto;
   }
-  /* line 660, ../sass/mixins.scss */
+  /* line 665, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li {
     border: none;
     width: 100%;
     border-bottom: 1px solid #DDD;
   }
-  /* line 665, ../sass/mixins.scss */
+  /* line 670, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-last {
     border-bottom: 0px;
   }
-  /* line 669, ../sass/mixins.scss */
+  /* line 674, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-first .views-field-title {
     padding-top: 0px;
   }
-  /* line 676, ../sass/mixins.scss */
+  /* line 681, ../sass/mixins.scss */
   .block-views .newslist.fire ul, .block-views .newslist.fem ul {
     float: left;
     border-bottom: 1px solid #DDD;
   }
-  /* line 679, ../sass/mixins.scss */
+  /* line 684, ../sass/mixins.scss */
   .block-views .newslist.fire ul li, .block-views .newslist.fem ul li {
     width: 24.8%;
     border-bottom: 0px;
@@ -269,40 +270,40 @@
     margin: 0px;
     padding: 1em 0px 0px 0px;
   }
-  /* line 686, ../sass/mixins.scss */
+  /* line 691, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-field-teaser-value, .block-views .newslist.fem ul li .views-field-field-teaser-value {
     margin: 0px 15px;
   }
-  /* line 689, ../sass/mixins.scss */
+  /* line 694, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-title, .block-views .newslist.fem ul li .views-field-title {
     width: 85%;
     margin: 0px 15px;
   }
-  /* line 693, ../sass/mixins.scss */
+  /* line 698, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-field-main-image-fid, .block-views .newslist.fem ul li .views-field-field-main-image-fid {
     margin: 0px 15px;
   }
-  /* line 695, ../sass/mixins.scss */
+  /* line 700, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-field-main-image-fid img, .block-views .newslist.fem ul li .views-field-field-main-image-fid img {
     width: 100%;
     height: auto;
   }
-  /* line 701, ../sass/mixins.scss */
+  /* line 706, ../sass/mixins.scss */
   .block-views .newslist.fire ul li.views-row-last, .block-views .newslist.fem ul li.views-row-last {
     border: 0px;
   }
-  /* line 707, ../sass/mixins.scss */
+  /* line 712, ../sass/mixins.scss */
   .block-views .newslist.fem .item-list ul li.views-row {
     width: 19.8%;
   }
 
-  /* line 753, ../sass/mixins.scss */
+  /* line 758, ../sass/mixins.scss */
   div .ownsection {
     margin-top: 1em;
     margin-left: 3%;
     width: 26%;
   }
-  /* line 820, ../sass/mixins.scss */
+  /* line 825, ../sass/mixins.scss */
   div .seksjonsside .views-field-title a {
     font-family: 'MerriweatherRegular', Arial, serif;
     font-size: 1.5em;
@@ -310,11 +311,11 @@
     color: #333;
     text-decoration: none;
   }
-  /* line 936, ../sass/mixins.scss */
+  /* line 941, ../sass/mixins.scss */
   div .nopremium-message #edit-pass-wrapper {
     margin: 0px 10px;
   }
-  /* line 939, ../sass/mixins.scss */
+  /* line 944, ../sass/mixins.scss */
   div .nopremium-message .form-submit {
     clear: none;
   }
