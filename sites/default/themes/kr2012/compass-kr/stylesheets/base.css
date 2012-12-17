@@ -1690,3 +1690,10 @@ body.page-taxonomy #content-area .grid #sidebar-right {
 strong {
   font-weight: bold;
 }
+
+/* line 503, ../sass/base.scss */
+#block-disqus-disqus_comments {
+  float: left;
+  width: 100%;
+  clear: both;
+}
