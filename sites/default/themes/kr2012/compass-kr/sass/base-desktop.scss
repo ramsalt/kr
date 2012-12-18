@@ -195,6 +195,14 @@ $logos: sprite-map("logo/*.png");
   .one.one_two .one-inner{
     margin-right: 1em;
   }
+  .three-art{
+    border-left: 1px solid #DDD;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    .block{
+      margin-bottom: 0px;
+    }
+  }
   .deskbordertop{
     border-top: 1px solid #dddddd;
   }

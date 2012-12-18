@@ -239,31 +239,31 @@
     padding-bottom: 0px;
   }
 
-  /* line 662, ../sass/mixins.scss */
+  /* line 676, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul {
     border: none;
     height: auto;
   }
-  /* line 665, ../sass/mixins.scss */
+  /* line 679, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li {
     border: none;
     width: 100%;
     border-bottom: 1px solid #DDD;
   }
-  /* line 670, ../sass/mixins.scss */
+  /* line 684, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-last {
     border-bottom: 0px;
   }
-  /* line 674, ../sass/mixins.scss */
+  /* line 688, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-first .views-field-title {
     padding-top: 0px;
   }
-  /* line 681, ../sass/mixins.scss */
+  /* line 695, ../sass/mixins.scss */
   .block-views .newslist.fire ul, .block-views .newslist.fem ul {
     float: left;
     border-bottom: 1px solid #DDD;
   }
-  /* line 684, ../sass/mixins.scss */
+  /* line 698, ../sass/mixins.scss */
   .block-views .newslist.fire ul li, .block-views .newslist.fem ul li {
     width: 24.8%;
     border-bottom: 0px;
@@ -271,40 +271,40 @@
     margin: 0px;
     padding: 1em 0px 0px 0px;
   }
-  /* line 691, ../sass/mixins.scss */
+  /* line 705, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-field-teaser-value, .block-views .newslist.fem ul li .views-field-field-teaser-value {
     margin: 0px 15px;
   }
-  /* line 694, ../sass/mixins.scss */
+  /* line 708, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-title, .block-views .newslist.fem ul li .views-field-title {
     width: 85%;
     margin: 0px 15px;
   }
-  /* line 698, ../sass/mixins.scss */
+  /* line 712, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-field-main-image-fid, .block-views .newslist.fem ul li .views-field-field-main-image-fid {
     margin: 0px 15px;
   }
-  /* line 700, ../sass/mixins.scss */
+  /* line 714, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-field-main-image-fid img, .block-views .newslist.fem ul li .views-field-field-main-image-fid img {
     width: 100%;
     height: auto;
   }
-  /* line 706, ../sass/mixins.scss */
+  /* line 720, ../sass/mixins.scss */
   .block-views .newslist.fire ul li.views-row-last, .block-views .newslist.fem ul li.views-row-last {
     border: 0px;
   }
-  /* line 712, ../sass/mixins.scss */
+  /* line 726, ../sass/mixins.scss */
   .block-views .newslist.fem .item-list ul li.views-row {
     width: 19.8%;
   }
 
-  /* line 758, ../sass/mixins.scss */
+  /* line 772, ../sass/mixins.scss */
   div .ownsection {
     margin-top: 1em;
     margin-left: 3%;
     width: 26%;
   }
-  /* line 825, ../sass/mixins.scss */
+  /* line 839, ../sass/mixins.scss */
   div .seksjonsside .views-field-title a {
     font-family: 'MerriweatherRegular', Arial, serif;
     font-size: 1.5em;
@@ -312,11 +312,11 @@
     color: #333;
     text-decoration: none;
   }
-  /* line 941, ../sass/mixins.scss */
+  /* line 955, ../sass/mixins.scss */
   div .nopremium-message #edit-pass-wrapper {
     margin: 0px 10px;
   }
-  /* line 944, ../sass/mixins.scss */
+  /* line 958, ../sass/mixins.scss */
   div .nopremium-message .form-submit {
     clear: none;
   }
@@ -346,28 +346,39 @@
   }
 
   /* line 198, ../sass/base-desktop.scss */
+  .three-art {
+    border-left: 1px solid #DDD;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  /* line 202, ../sass/base-desktop.scss */
+  .three-art .block {
+    margin-bottom: 0px;
+  }
+
+  /* line 206, ../sass/base-desktop.scss */
   .deskbordertop {
     border-top: 1px solid #dddddd;
   }
 
-  /* line 203, ../sass/base-desktop.scss */
+  /* line 211, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-field-main-image-fid {
     display: inline;
     float: left;
     margin-right: 10px;
   }
-  /* line 207, ../sass/base-desktop.scss */
+  /* line 215, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-field-main-image-fid .field-content {
     width: 78px;
     float: left;
   }
-  /* line 212, ../sass/base-desktop.scss */
+  /* line 220, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-title {
     padding: 0px;
     margin-top: 6px;
   }
 
-  /* line 218, ../sass/base-desktop.scss */
+  /* line 226, ../sass/base-desktop.scss */
   .block-openx {
     display: block;
   }

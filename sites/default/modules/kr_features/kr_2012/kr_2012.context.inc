@@ -325,6 +325,12 @@ function kr_2012_context_default_contexts() {
           'region' => 'three',
           'weight' => 0,
         ),
+        'views-forside-block_8' => array(
+          'module' => 'views',
+          'delta' => 'forside-block_8',
+          'region' => 'three_art',
+          'weight' => 0,
+        ),
         'views-forside-block_4' => array(
           'module' => 'views',
           'delta' => 'forside-block_4',
@@ -431,6 +437,9 @@ function kr_2012_context_default_contexts() {
       'toparea' => array(
         'class' => '',
       ),
+      'prearea' => array(
+        'class' => '',
+      ),
       'ad_right' => array(
         'class' => '',
       ),
@@ -488,6 +497,9 @@ function kr_2012_context_default_contexts() {
             'class' => '',
           ),
         ),
+      ),
+      'three_art' => array(
+        'class' => '',
       ),
       'four' => array(
         'class' => '',

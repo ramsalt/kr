@@ -116,10 +116,15 @@
 					</div>	
 				</div>
 			</div><!-- /.grid -->
-			<div class="grid full nomargin ">
+			<div class="grid full nomargin threeart">
 				<div class="three">
 					<div class="three-inner">
 						<?php print $three; ?>
+					</div>	
+				</div>
+				<div class="three-art">
+					<div class="three-art-inner">
+						<?php print $three_art; ?>
 					</div>	
 				</div>
 			</div><!-- /.grid -->

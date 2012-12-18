@@ -546,6 +546,11 @@ $logos: sprite-map("logo/*.png");
       display: none;
     }
   }
+  .newslist.adart{
+    .views-field-field-teaser-value{
+      display: none;
+    }
+  }
 }
 @mixin newslist-brett{
   .newslist{
@@ -655,6 +660,15 @@ $logos: sprite-map("logo/*.png");
     .views-field-field-teaser-value{
       display: block;
     }
+  }
+  .newslist.adart{
+    .views-row-last{
+      border-bottom: none;
+    }
+    .views-field-field-teaser-value{
+      display: block;
+    }
+  
   }
 }
 @mixin newslist-desktop{

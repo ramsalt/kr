@@ -56,6 +56,7 @@ body{
 body.admin-menu{
   margin-top: 40px !important;
 }
+
 .visible-desktop, .visible-tablet{
     display: none;
 }
@@ -317,6 +318,9 @@ div {
 
   }
 }
+.seven .block{
+  padding: 0px 10px;
+}
 .layout-mobile{
   .block-views  .newslist.sak-2.sak-16{
     .views-field-field-main-image-fid{
@@ -428,8 +432,10 @@ div {
     }
   }
 }
-.three .three-inner{
+.threeart{
   border-top: 1px solid #DDD;
+}
+.three .three-inner{
   text-align: center;
 }
 .seven.seven_one{
@@ -505,4 +511,12 @@ strong{
   float: left;
   width: 100%;
   clear: both;
+}
+#block-views-forside-block_7{
+  float: left;
+}
+#block-views-scroll_bilder-bilde_scroller{
+  width: 100%;
+  float: left;
+  position: relative;
 }
