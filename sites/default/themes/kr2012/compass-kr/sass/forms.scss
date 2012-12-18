@@ -3,6 +3,9 @@
 @import "compass/css3/box-shadow";
 
 @mixin forms{
+  form{
+    font-family: Arial;
+  }
   .form-label-alter{
     .form-item{
       position: relative;

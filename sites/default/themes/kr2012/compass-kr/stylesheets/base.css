@@ -1353,22 +1353,26 @@ div .ticker-next span {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -620px no-repeat;
   display: block;
 }
-/* line 7, ../sass/forms.scss */
+/* line 6, ../sass/forms.scss */
+div form {
+  font-family: Arial;
+}
+/* line 10, ../sass/forms.scss */
 div .form-label-alter .form-item {
   position: relative;
 }
-/* line 9, ../sass/forms.scss */
+/* line 12, ../sass/forms.scss */
 div .form-label-alter .form-item label {
   position: absolute;
   top: 14px;
   left: 10px;
   color: #989898;
 }
-/* line 15, ../sass/forms.scss */
+/* line 18, ../sass/forms.scss */
 div .form-label-alter .form-item .description {
   color: #b2b2b2;
 }
-/* line 18, ../sass/forms.scss */
+/* line 21, ../sass/forms.scss */
 div .form-label-alter .form-item input {
   border: 1px solid #b2b2b2;
   -webkit-border-radius: 4px 4px;
@@ -1380,31 +1384,31 @@ div .form-label-alter .form-item input {
   font-family: Arial;
   font-size: 1.1em;
 }
-/* line 27, ../sass/forms.scss */
+/* line 30, ../sass/forms.scss */
 div .form-label-alter .form-item input:focus {
   outline-offset: 0;
   outline: -webkit-focus-ring-color auto 0px;
   box-shadow: inset 0 5px 5px rgba(178, 178, 178, 0.8);
 }
-/* line 33, ../sass/forms.scss */
+/* line 36, ../sass/forms.scss */
 div .form-label-alter .form-required {
   color: #b2b2b2;
 }
-/* line 36, ../sass/forms.scss */
+/* line 39, ../sass/forms.scss */
 div .form-label-alter .form-radios {
   position: relative;
 }
-/* line 39, ../sass/forms.scss */
+/* line 42, ../sass/forms.scss */
 div .form-label-alter .form-radios .form-item label {
   position: relative;
   top: 0;
   left: 0;
 }
-/* line 44, ../sass/forms.scss */
+/* line 47, ../sass/forms.scss */
 div .form-label-alter .form-radios .form-item input {
   height: auto;
 }
-/* line 50, ../sass/forms.scss */
+/* line 53, ../sass/forms.scss */
 div .form-submit {
   -webkit-appearance: none;
   background: #568ebf;
@@ -1417,12 +1421,12 @@ div .form-submit {
   border-radius: 4px / 4px;
   cursor: pointer;
 }
-/* line 61, ../sass/forms.scss */
+/* line 64, ../sass/forms.scss */
 div #search-mob .views-exposed-widget {
   padding: 0px;
   width: 93%;
 }
-/* line 65, ../sass/forms.scss */
+/* line 68, ../sass/forms.scss */
 div #search-mob .views-exposed-widgets {
   border: 1px solid #b2b2b2;
   -webkit-border-radius: 4px 4px;
@@ -1435,7 +1439,7 @@ div #search-mob .views-exposed-widgets {
   font-size: 1.1em;
   position: relative;
 }
-/* line 74, ../sass/forms.scss */
+/* line 77, ../sass/forms.scss */
 div #search-mob .views-exposed-widgets input {
   border: none;
   margin: 0px;
@@ -1445,12 +1449,12 @@ div #search-mob .views-exposed-widgets input {
   background: transparent;
   width: 100%;
 }
-/* line 83, ../sass/forms.scss */
+/* line 86, ../sass/forms.scss */
 div #search-mob .views-exposed-widgets input:focus {
   outline-offset: 0;
   outline: -webkit-focus-ring-color auto 0px;
 }
-/* line 87, ../sass/forms.scss */
+/* line 90, ../sass/forms.scss */
 div #search-mob .views-exposed-widgets .form-submit {
   background: #336699;
   color: white;
