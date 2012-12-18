@@ -349,9 +349,9 @@ function kr_2012_context_default_contexts() {
           'region' => 'six',
           'weight' => 0,
         ),
-        'openx-1' => array(
+        'openx-9' => array(
           'module' => 'openx',
-          'delta' => 1,
+          'delta' => 9,
           'region' => 'seven_one',
           'weight' => 0,
         ),
@@ -500,6 +500,11 @@ function kr_2012_context_default_contexts() {
       ),
       'three_art' => array(
         'class' => '',
+        'blocks' => array(
+          'views-forside-block_8' => array(
+            'class' => '',
+          ),
+        ),
       ),
       'four' => array(
         'class' => '',
