@@ -297,14 +297,18 @@
   .block-views .newslist.fem .item-list ul li.views-row {
     width: 19.8%;
   }
+  /* line 731, ../sass/mixins.scss */
+  .block-views .newslist.adart .views-row-last {
+    border-bottom: 1px solid #DDD;
+  }
 
-  /* line 772, ../sass/mixins.scss */
+  /* line 777, ../sass/mixins.scss */
   div .ownsection {
     margin-top: 1em;
     margin-left: 3%;
     width: 26%;
   }
-  /* line 839, ../sass/mixins.scss */
+  /* line 844, ../sass/mixins.scss */
   div .seksjonsside .views-field-title a {
     font-family: 'MerriweatherRegular', Arial, serif;
     font-size: 1.5em;
@@ -312,11 +316,11 @@
     color: #333;
     text-decoration: none;
   }
-  /* line 955, ../sass/mixins.scss */
+  /* line 960, ../sass/mixins.scss */
   div .nopremium-message #edit-pass-wrapper {
     margin: 0px 10px;
   }
-  /* line 958, ../sass/mixins.scss */
+  /* line 963, ../sass/mixins.scss */
   div .nopremium-message .form-submit {
     clear: none;
   }

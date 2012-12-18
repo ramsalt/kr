@@ -727,6 +727,11 @@ $logos: sprite-map("logo/*.png");
       width: 19.8%;
     }
   }
+  .newslist.adart{
+    .views-row-last{
+      border-bottom: 1px solid #DDD;
+    }
+  }
 }
 @mixin ownsection-mob{
   .ownsection{

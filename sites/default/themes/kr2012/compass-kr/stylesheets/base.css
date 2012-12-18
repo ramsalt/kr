@@ -1,11 +1,11 @@
-/* line 4, ../../../../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 4, /opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 html {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-/* line 18, ../../../../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 18, /opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 .bp-reset-element, body, h1, h2, h3, h4, h5, h6, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, blockquote, q, th, td, caption, table,
 div, span, object, iframe, p,
 pre, a, abbr, acronym, address,
@@ -23,21 +23,21 @@ caption, tbody, tfoot, thead, tr {
   vertical-align: baseline;
 }
 
-/* line 20, ../../../../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 20, /opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
-/* line 21, ../../../../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 21, /opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 blockquote, q {
   quotes: "" "";
 }
-/* line 67, ../../../../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 67, /opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 blockquote:before, blockquote:after, q:before, q:after {
   content: "";
 }
 
-/* line 22, ../../../../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 22, /opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 th, td, caption {
   float: none !important;
   text-align: left;
@@ -45,14 +45,14 @@ th, td, caption {
   vertical-align: middle;
 }
 
-/* line 23, ../../../../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 23, /opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 table {
   border-collapse: separate;
   border-spacing: 0;
   vertical-align: middle;
 }
 
-/* line 24, ../../../../../../../../../../opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 24, /opt/local/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 a img {
   border: none;
 }
@@ -195,20 +195,20 @@ body.admin-menu {
   float: left;
 }
 
-/* line 16, ../sass/nav.scss */
+/* line 16, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area .wrapper {
   background: #336699;
   border-bottom: 1px solid #234f7c;
 }
-/* line 19, ../sass/nav.scss */
+/* line 19, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area .wrapper .inner-wrapper {
   border-bottom: 1px solid #4876a3;
 }
-/* line 21, ../sass/nav.scss */
+/* line 21, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area .wrapper .inner-wrapper .grid {
   margin: 0px;
 }
-/* line 26, ../sass/nav.scss */
+/* line 26, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area #nav {
   display: none;
   position: relative;
@@ -218,11 +218,11 @@ body.admin-menu {
   margin: 0px;
   padding: 0px;
 }
-/* line 34, ../sass/nav.scss */
+/* line 34, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area #nav ul {
   padding: 10px;
 }
-/* line 36, ../sass/nav.scss */
+/* line 36, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area #nav ul li {
   background: white;
   padding: 0px;
@@ -233,7 +233,7 @@ body.admin-menu {
   overflow: hidden;
   border-bottom: 1px solid #cccccc;
 }
-/* line 45, ../sass/nav.scss */
+/* line 45, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area #nav ul li a {
   color: black;
   font-family: Helvetica;
@@ -241,15 +241,15 @@ body.admin-menu {
   float: left;
   width: 100%;
 }
-/* line 51, ../sass/nav.scss */
+/* line 51, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area #nav ul li a span {
   float: left;
 }
-/* line 55, ../sass/nav.scss */
+/* line 55, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area #nav ul li a:hover {
   background: #cccccc;
 }
-/* line 58, ../sass/nav.scss */
+/* line 58, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area #nav ul li ul {
   display: none;
   background: transparent;
@@ -259,46 +259,46 @@ body.admin-menu {
   height: auto;
   width: 100%;
 }
-/* line 66, ../sass/nav.scss */
+/* line 66, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area #nav ul li ul li {
   padding: 0px;
   border-bottom: 3px solid transparent;
   background: transparent;
 }
-/* line 70, ../sass/nav.scss */
+/* line 70, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area #nav ul li ul li a {
   background: #cccccc;
 }
-/* line 73, ../sass/nav.scss */
+/* line 73, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area #nav ul li ul li a:hover {
   background: transparent;
 }
-/* line 81, ../sass/nav.scss */
+/* line 81, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area #nav ul li.open ul {
   display: block;
 }
-/* line 86, ../sass/nav.scss */
+/* line 86, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area #nav ul li:hover a {
   background: #cccccc;
 }
-/* line 91, ../sass/nav.scss */
+/* line 91, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area #nav ul li.multilevel span.level {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -635px no-repeat;
   width: 8px;
   height: 6px;
   margin: 3px 0px 0px 10px;
 }
-/* line 100, ../sass/nav.scss */
+/* line 100, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area #nav.open {
   display: block;
 }
-/* line 104, ../sass/nav.scss */
+/* line 104, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area .navbuttun {
   width: 32%;
   float: left;
   background: #336699;
 }
-/* line 109, ../sass/nav.scss */
+/* line 109, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area .navbuttun a {
   text-decoration: none;
   text-align: center;
@@ -309,53 +309,53 @@ body.admin-menu {
   font-weight: bold;
   color: white;
 }
-/* line 120, ../sass/nav.scss */
+/* line 120, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area .navbuttun.active, #login-area .navbuttun.open {
   background: #004e7e;
 }
-/* line 123, ../sass/nav.scss */
+/* line 123, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area .navbuttun.middle {
   border-left: 1px solid #004e7e;
   border-right: 1px solid #004e7e;
 }
-/* line 128, ../sass/nav.scss */
+/* line 128, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area #search-mob form {
   padding: 10px;
 }
-/* line 133, ../sass/nav.scss */
+/* line 133, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area #user-login-mob form {
   padding: 10px;
   font-family: Helvetica;
 }
-/* line 136, ../sass/nav.scss */
+/* line 136, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area #user-login-mob form input {
   width: 70%;
 }
-/* line 139, ../sass/nav.scss */
+/* line 139, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area #user-login-mob form .description {
   display: block !important;
 }
-/* line 143, ../sass/nav.scss */
+/* line 143, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area #user-login-mob .bt-wrapper {
   display: none !important;
 }
-/* line 150, ../sass/nav.scss */
+/* line 150, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area #search-content a span {
   display: inline-table;
 }
-/* line 153, ../sass/nav.scss */
+/* line 153, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area #search-content a .text {
   height: 15px;
   vertical-align: top;
 }
-/* line 157, ../sass/nav.scss */
+/* line 157, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area #search-content a .icon {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -577px no-repeat;
   width: 14px;
   height: 15px;
   margin: 1px 0px 0px 7px;
 }
-/* line 165, ../sass/nav.scss */
+/* line 165, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area .mobhead {
   display: none;
   position: relative;
@@ -365,12 +365,12 @@ body.admin-menu {
   margin: 0px;
   padding: 0px;
 }
-/* line 173, ../sass/nav.scss */
+/* line 173, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area .mobhead .inner {
   margin: 10px;
   background: white;
 }
-/* line 178, ../sass/nav.scss */
+/* line 178, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
 #login-area .mobhead.open {
   display: block;
 }
@@ -555,7 +555,7 @@ body .body-content em, body .body-content p em {
   margin: auto;
 }
 
-/* line 5, ../sass/mixins.scss */
+/* line 5, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks {
   padding: 5%;
   width: 90%;
@@ -564,7 +564,7 @@ body .body-content em, body .body-content p em {
   background: #f1f2ee;
   float: left;
 }
-/* line 12, ../sass/mixins.scss */
+/* line 12, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks h2 {
   color: #d71010;
   font-size: 0.8em;
@@ -572,18 +572,18 @@ body .body-content em, body .body-content p em {
   border-bottom: 2px solid #d71010;
   margin-bottom: 10px;
 }
-/* line 19, ../sass/mixins.scss */
+/* line 19, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks h3 {
   border-bottom: 2px solid #333;
   padding: 4px 0px;
   margin-bottom: 5px;
 }
-/* line 24, ../sass/mixins.scss */
+/* line 24, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks ul {
   padding: 0px;
   margin: 0px;
 }
-/* line 27, ../sass/mixins.scss */
+/* line 27, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks ul li {
   float: left;
   width: 100%;
@@ -593,31 +593,31 @@ body .body-content em, body .body-content p em {
   margin: 0px 0px 7px 0px;
   border-bottom: 1px solid #dddddd;
 }
-/* line 35, ../sass/mixins.scss */
+/* line 35, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks ul li a {
   color: #2c91c5;
   text-decoration: none;
   font-family: 'MerriweatherRegular', serif;
 }
-/* line 40, ../sass/mixins.scss */
+/* line 40, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks ul li .views-field-field-teaser-value {
   font-size: 0.8em;
   font-family: Arial;
   color: #333;
 }
-/* line 49, ../sass/mixins.scss */
+/* line 49, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks ul.lenker li a {
   color: #2c91c5;
   font-size: 1em;
 }
 
-/* line 56, ../sass/mixins.scss */
+/* line 56, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .content {
   font-family: Arial;
   color: #333333;
 }
 
-/* line 61, ../sass/mixins.scss */
+/* line 61, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.red h3 {
   padding: 0px;
   color: #d71111;
@@ -628,17 +628,17 @@ body .body-content em, body .body-content p em {
   text-transform: uppercase;
 }
 
-/* line 73, ../sass/mixins.scss */
+/* line 73, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.quiz .views-field-title a {
   color: #d71111;
   text-decoration: none;
 }
-/* line 78, ../sass/mixins.scss */
+/* line 78, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.quiz .views-field-nothing {
   float: right;
   padding: 0px 0px 10px 10px;
 }
-/* line 83, ../sass/mixins.scss */
+/* line 83, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.quiz .views-field-view-node a {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -545px no-repeat;
   padding-left: 20px;
@@ -651,24 +651,24 @@ body .body-content em, body .body-content p em {
   height: 17px;
 }
 
-/* line 97, ../sass/mixins.scss */
+/* line 97, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.leder .views-field-field-main-image-fid {
   float: right;
   border: 1px solid #dcdcdb;
   padding: 2px;
   background: #fff;
 }
-/* line 102, ../sass/mixins.scss */
+/* line 102, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.leder .views-field-field-main-image-fid img {
   float: left;
 }
-/* line 106, ../sass/mixins.scss */
+/* line 106, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.leder li {
   padding: 10px 0px 0px 0px;
   margin: 0px;
   border-bottom: 0px;
 }
-/* line 111, ../sass/mixins.scss */
+/* line 111, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.leder li .views-field-title a {
   font-family: Arial;
   font-size: 1.5em;
@@ -676,7 +676,7 @@ body .body-content em, body .body-content p em {
   color: #333333;
   line-height: 1.3em;
 }
-/* line 120, ../sass/mixins.scss */
+/* line 120, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.leder li .views-field-view-node a {
   font-family: Arial;
   color: #333333;
@@ -686,7 +686,7 @@ body .body-content em, body .body-content p em {
   height: 13px;
 }
 
-/* line 132, ../sass/mixins.scss */
+/* line 132, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.eco h3 {
   color: #78a21e;
   font-size: 0.9em;
@@ -696,11 +696,11 @@ body .body-content em, body .body-content p em {
   border-bottom: 2px solid #78a21e;
   margin-bottom: 0px;
 }
-/* line 141, ../sass/mixins.scss */
+/* line 141, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.eco .view-header {
   display: none;
 }
-/* line 144, ../sass/mixins.scss */
+/* line 144, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.eco .pretext {
   background: #d7e1c2;
   padding: 5px;
@@ -708,28 +708,28 @@ body .body-content em, body .body-content p em {
   font-family: Arial;
   font-size: 0.8em;
 }
-/* line 151, ../sass/mixins.scss */
+/* line 151, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.eco a {
   font-family: Arial;
   color: #333333;
 }
-/* line 155, ../sass/mixins.scss */
+/* line 155, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.eco li {
   border-bottom: 0px;
 }
-/* line 157, ../sass/mixins.scss */
+/* line 157, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.eco li .views-field-field-teaser-value {
   font-family: Arial;
   color: #333333;
 }
-/* line 162, ../sass/mixins.scss */
+/* line 162, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.eco li .views-field-title a {
   font-family: Arial;
   font-size: 1.5em;
   font-weight: bold;
   line-height: 1.3em;
 }
-/* line 170, ../sass/mixins.scss */
+/* line 170, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.eco li .views-field-view-node a {
   font-weight: bold;
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -545px no-repeat;
@@ -737,17 +737,17 @@ body .body-content em, body .body-content p em {
   height: 13px;
 }
 
-/* line 180, ../sass/mixins.scss */
+/* line 180, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.blogger .view-header {
   display: none;
 }
-/* line 183, ../sass/mixins.scss */
+/* line 183, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.blogger h3 {
   border-bottom: 2px solid #78a21e;
   padding: 0px;
   margin-bottom: 0px;
 }
-/* line 187, ../sass/mixins.scss */
+/* line 187, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.blogger h3 a {
   padding: 0px;
   color: #78a21e;
@@ -757,7 +757,7 @@ body .body-content em, body .body-content p em {
   text-transform: uppercase;
   text-decoration: none;
 }
-/* line 197, ../sass/mixins.scss */
+/* line 197, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.blogger .pretext {
   background: #d7e1c2;
   padding: 5px;
@@ -765,42 +765,42 @@ body .body-content em, body .body-content p em {
   font-family: Arial;
   font-size: 0.8em;
 }
-/* line 204, ../sass/mixins.scss */
+/* line 204, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.blogger .views-field-field-blogg-bilde-fid {
   float: left;
   margin-right: 1em;
   margin-bottom: 0.1em;
   border: 1px solid #b2afa8;
 }
-/* line 209, ../sass/mixins.scss */
+/* line 209, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.blogger .views-field-field-blogg-bilde-fid img {
   width: 50px;
   height: auto;
   float: left;
 }
-/* line 216, ../sass/mixins.scss */
+/* line 216, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.blogger .views-field-title-1 a {
   font-family: Arial;
   color: #333333;
   font-size: 0.8em;
   font-weight: bold;
 }
-/* line 224, ../sass/mixins.scss */
+/* line 224, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.blogger .views-field-title a {
   font-family: Arial;
   color: #333333;
   font-size: 0.8em;
 }
-/* line 230, ../sass/mixins.scss */
+/* line 230, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.blogger .views-field-body {
   display: none;
 }
-/* line 233, ../sass/mixins.scss */
+/* line 233, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.blogger .more-link {
   float: left;
   margin-top: 10px;
 }
-/* line 236, ../sass/mixins.scss */
+/* line 236, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .rammeboks.blogger .more-link a {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -545px no-repeat;
   padding-left: 20px;
@@ -812,7 +812,7 @@ body .body-content em, body .body-content p em {
   font-weight: bold;
 }
 
-/* line 249, ../sass/mixins.scss */
+/* line 249, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .kommentar-liste {
   /*
   .views-field-field-sitat-value:before{
@@ -825,12 +825,12 @@ body .body-content em, body .body-content p em {
   }
   */
 }
-/* line 250, ../sass/mixins.scss */
+/* line 250, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .kommentar-liste h2 {
   color: #78a21e;
   border-bottom: 2px solid #78a21e;
 }
-/* line 265, ../sass/mixins.scss */
+/* line 265, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .kommentar-liste .views-field-field-sitat-value span {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -408px no-repeat;
   float: left;
@@ -838,7 +838,7 @@ body .body-content em, body .body-content p em {
   height: 21px;
   margin: -5px 8px 0px 0px;
 }
-/* line 272, ../sass/mixins.scss */
+/* line 272, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .kommentar-liste .views-field-field-sitat-value a {
   text-decoration: none;
   color: #333333;
@@ -847,13 +847,13 @@ body .body-content em, body .body-content p em {
   font-weight: bold;
   line-height: 1.3em;
 }
-/* line 281, ../sass/mixins.scss */
+/* line 281, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .kommentar-liste .views-field-view-node {
   margin-top: 10px;
   padding-top: 6px;
   clear: both;
 }
-/* line 285, ../sass/mixins.scss */
+/* line 285, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .kommentar-liste .views-field-view-node a {
   height: 13px;
   padding-top: 1px;
@@ -868,14 +868,14 @@ body .body-content em, body .body-content p em {
   color: #333333;
   text-decoration: none;
 }
-/* line 300, ../sass/mixins.scss */
+/* line 300, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .kommentar-liste .views-field-field-op-author-nid {
   border-top: 1px solid #c1bfb9;
   margin-top: 10px;
   padding-top: 6px;
   width: 100%;
 }
-/* line 305, ../sass/mixins.scss */
+/* line 305, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .kommentar-liste .views-field-field-op-author-nid a {
   float: right;
   font-size: 0.8em;
@@ -893,23 +893,23 @@ body .body-content em, body .body-content p em {
 .listeboks {
   margin-bottom: 15px;
 }
-/* line 382, ../sass/mixins.scss */
+/* line 382, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .listeboks .item-list h3 {
   border-bottom: 2px solid #333;
   padding: 4px 0px;
   margin-bottom: 5px;
 }
-/* line 386, ../sass/mixins.scss */
+/* line 386, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .listeboks .item-list h3 a {
   color: #333;
   text-decoration: none;
 }
-/* line 391, ../sass/mixins.scss */
+/* line 391, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .listeboks .item-list ul {
   padding: 0px;
   margin: 0px;
 }
-/* line 394, ../sass/mixins.scss */
+/* line 394, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .listeboks .item-list ul li {
   clear: both;
   float: left;
@@ -919,39 +919,39 @@ body .body-content em, body .body-content p em {
   margin: 0px 0px 7px 0px;
   border-bottom: 1px solid #dddddd;
 }
-/* line 402, ../sass/mixins.scss */
+/* line 402, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .listeboks .item-list ul li a {
   color: #2c91c5;
   text-decoration: none;
   font-family: 'MerriweatherRegular', serif;
 }
-/* line 407, ../sass/mixins.scss */
+/* line 407, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .listeboks .item-list ul li .views-field-field-main-image-fid {
   float: left;
   padding-right: 0.7em;
 }
-/* line 416, ../sass/mixins.scss */
+/* line 416, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .listeboks .item-list ul.lenker li a {
   color: #2c91c5;
   font-size: 1em;
 }
 
-/* line 455, ../sass/mixins.scss */
+/* line 455, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist .views-field-title, .block-views .newslist .views-field-field-main-image-fid, .block-views .newslist .views-field-field-teaser-value {
   margin: 0px 15px;
 }
-/* line 458, ../sass/mixins.scss */
+/* line 458, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist p {
   margin: 0px;
   line-height: 1.4em;
 }
-/* line 462, ../sass/mixins.scss */
+/* line 462, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist ul {
   margin: 0px;
   padding: 0px;
   list-style: none;
 }
-/* line 466, ../sass/mixins.scss */
+/* line 466, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist ul li {
   float: left;
   width: 100%;
@@ -960,86 +960,86 @@ body .body-content em, body .body-content p em {
   list-style: none;
   border-bottom: 1px solid #dddddd;
 }
-/* line 475, ../sass/mixins.scss */
+/* line 475, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist a {
   text-decoration: none;
   color: #333333;
   font-size: 1.2em;
 }
-/* line 480, ../sass/mixins.scss */
+/* line 480, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist .views-field-field-teaser-value {
   font-family: Arial;
   font-size: 0.95em;
 }
-/* line 489, ../sass/mixins.scss */
+/* line 489, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.sak-1 .views-field-title {
   line-height: 2em;
 }
-/* line 491, ../sass/mixins.scss */
+/* line 491, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.sak-1 .views-field-title a {
   font-size: 1.8em;
 }
-/* line 495, ../sass/mixins.scss */
+/* line 495, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.sak-1 .views-field-field-teaser-value {
   font-weight: bold;
 }
-/* line 498, ../sass/mixins.scss */
+/* line 498, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.sak-1 img {
   width: 100%;
   height: auto;
 }
-/* line 504, ../sass/mixins.scss */
+/* line 504, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.sak-2 .views-row-1 {
   margin-top: 0px;
 }
-/* line 507, ../sass/mixins.scss */
+/* line 507, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.sak-2 .views-field-field-main-image-fid {
   float: right;
 }
-/* line 511, ../sass/mixins.scss */
+/* line 511, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.sak-2 .views-field-field-main-image-fid .field-content a img {
   width: 84px;
   height: auto;
   border: 1px solid #d1d1d1;
 }
-/* line 521, ../sass/mixins.scss */
+/* line 521, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.sak-4 .views-field-field-main-image-fid {
   float: left;
 }
-/* line 524, ../sass/mixins.scss */
+/* line 524, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.sak-4 .views-field-field-teaser-value {
   display: none;
 }
-/* line 529, ../sass/mixins.scss */
+/* line 529, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.fire ul, .block-views .newslist.fem ul {
   border-top: 1px solid #DDD;
 }
-/* line 532, ../sass/mixins.scss */
+/* line 532, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.fire .views-field-field-main-image-fid, .block-views .newslist.fem .views-field-field-main-image-fid {
   float: left;
   margin: 0px 0px 0px 15px;
 }
-/* line 535, ../sass/mixins.scss */
+/* line 535, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.fire .views-field-field-main-image-fid img, .block-views .newslist.fem .views-field-field-main-image-fid img {
   width: 86px;
   height: auto;
 }
-/* line 540, ../sass/mixins.scss */
+/* line 540, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.fire .views-field-title, .block-views .newslist.fem .views-field-title {
   float: left;
   margin: 0px 0px 0px 15px;
   width: 59%;
 }
-/* line 545, ../sass/mixins.scss */
+/* line 545, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.fire .views-field-field-teaser-value, .block-views .newslist.fem .views-field-field-teaser-value {
   display: none;
 }
-/* line 550, ../sass/mixins.scss */
+/* line 550, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 .block-views .newslist.adart .views-field-field-teaser-value {
   display: none;
 }
 
-/* line 732, ../sass/mixins.scss */
+/* line 737, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .ownsection {
   -webkit-border-radius: 4px 4px;
   -moz-border-radius: 4px / 4px;
@@ -1051,13 +1051,13 @@ div .ownsection {
   background: #dce4eb;
   padding: 1em;
 }
-/* line 740, ../sass/mixins.scss */
+/* line 745, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .ownsection h2 {
   font-size: 1.4em;
   font-family: Arial;
   float: left;
 }
-/* line 745, ../sass/mixins.scss */
+/* line 750, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .ownsection .link {
   float: right;
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -489px no-repeat;
@@ -1065,41 +1065,41 @@ div .ownsection .link {
   height: 20px;
   width: 20px;
 }
-/* line 752, ../sass/mixins.scss */
+/* line 757, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .ownsection .desc {
   display: none;
 }
-/* line 781, ../sass/mixins.scss */
+/* line 786, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .seksjonsside .views-field-title a {
   font-family: 'MerriweatherRegular', Arial, serif;
   font-size: 1.2em;
   color: #333;
   text-decoration: none;
 }
-/* line 788, ../sass/mixins.scss */
+/* line 793, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .seksjonsside .views-field-created {
   color: #666666;
   font-family: Arial;
   font-size: 0.8em;
 }
-/* line 794, ../sass/mixins.scss */
+/* line 799, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .seksjonsside .views-field-comment-count {
   display: none;
 }
-/* line 797, ../sass/mixins.scss */
+/* line 802, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .seksjonsside .views-field-field-main-image-fid {
   float: right;
 }
-/* line 801, ../sass/mixins.scss */
+/* line 806, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .seksjonsside .views-field-field-teaser-value,
 div .seksjonsside .views-field-body {
   font-family: Arial;
 }
-/* line 804, ../sass/mixins.scss */
+/* line 809, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .seksjonsside .views-field-view-node {
   display: none;
 }
-/* line 810, ../sass/mixins.scss */
+/* line 815, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .seksjonsside .views-separator {
   border-top: 1px solid #dddddd;
   margin: 10px 0px;
@@ -1107,16 +1107,16 @@ div .seksjonsside .views-separator {
   width: 100%;
   clear: both;
 }
-/* line 820, ../sass/mixins.scss */
+/* line 825, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .seksjonsside .views-field-field-blogg-bilde-fid {
   float: left;
   margin: 0px 1em 1em 0px;
 }
-/* line 827, ../sass/mixins.scss */
+/* line 832, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .seksjonsside.blogger .views-field-title-1 a {
   text-decoration: none;
 }
-/* line 850, ../sass/mixins.scss */
+/* line 855, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .nopremium-message {
   background: #eff3f6;
   -webkit-border-radius: 4px 4px;
@@ -1127,23 +1127,23 @@ div .nopremium-message {
   font-family: Arial;
   margin: 10px 0px;
 }
-/* line 857, ../sass/mixins.scss */
+/* line 862, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .nopremium-message .msg {
   padding: 20px;
 }
-/* line 863, ../sass/mixins.scss */
+/* line 868, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .nopremium-message form {
   padding: 20px;
   float: left;
 }
-/* line 867, ../sass/mixins.scss */
+/* line 872, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .nopremium-message div.hr {
   clear: both;
   width: 100%;
   border-top: 1px solid #c3d2dc;
   border-bottom: 1px solid #ffffff;
 }
-/* line 874, ../sass/mixins.scss */
+/* line 879, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .nopremium-message a.registerhere {
   float: left;
   padding: 0px 0px 15px 0px;
@@ -1153,24 +1153,24 @@ div .nopremium-message a.registerhere {
   text-decoration: none;
   font-weight: bold;
 }
-/* line 875, ../sass/mixins.scss */
+/* line 880, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .nopremium-message a.registerhere span {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -545px no-repeat;
   padding-left: 20px;
   float: left;
   height: 17px;
 }
-/* line 889, ../sass/mixins.scss */
+/* line 894, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .nopremium-message .form-item {
   float: left;
   margin: 0px;
 }
-/* line 890, ../sass/mixins.scss */
+/* line 895, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .nopremium-message .form-item label {
   text-align: left;
   font-size: 0.7em;
 }
-/* line 894, ../sass/mixins.scss */
+/* line 899, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .nopremium-message .form-item input {
   height: 27px;
   width: 160px;
@@ -1184,44 +1184,44 @@ div .nopremium-message .form-item input {
   font-family: Arial;
   font-size: 1.1em;
 }
-/* line 908, ../sass/mixins.scss */
+/* line 913, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .nopremium-message #edit-pass-wrapper {
   margin-left: 14px;
 }
-/* line 911, ../sass/mixins.scss */
+/* line 916, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .nopremium-message .form-submit {
   margin-top: 10px;
 }
-/* line 915, ../sass/mixins.scss */
+/* line 920, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .nopremium-message .item-list {
   float: left;
   clear: both;
 }
-/* line 918, ../sass/mixins.scss */
+/* line 923, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .nopremium-message .item-list ul {
   margin: 0px;
 }
-/* line 920, ../sass/mixins.scss */
+/* line 925, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .nopremium-message .item-list ul li {
   margin: 0px;
   list-style: none;
 }
-/* line 924, ../sass/mixins.scss */
+/* line 929, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .nopremium-message .item-list ul li.first {
   display: none;
 }
-/* line 927, ../sass/mixins.scss */
+/* line 932, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .nopremium-message .item-list ul li.last {
   margin-top: 10px;
 }
-/* line 929, ../sass/mixins.scss */
+/* line 934, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .nopremium-message .item-list ul li.last a {
   font-size: 0.8em;
   color: #3090c0;
   text-decoration: none;
   font-weight: bold;
 }
-/* line 966, ../sass/mixins.scss */
+/* line 971, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .jobbliste ul li {
   margin: 0px;
   list-style: none;
@@ -1229,13 +1229,13 @@ div .jobbliste ul li {
   margin-bottom: 1em;
   width: 100%;
 }
-/* line 972, ../sass/mixins.scss */
+/* line 977, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .jobbliste ul li .bilde {
   float: left;
   width: 30%;
   text-align: center;
 }
-/* line 977, ../sass/mixins.scss */
+/* line 982, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .jobbliste ul li .andre {
   float: left;
   width: 68%;
@@ -1243,30 +1243,30 @@ div .jobbliste ul li .andre {
   font-family: Arial;
   font-size: 0.7em;
 }
-/* line 983, ../sass/mixins.scss */
+/* line 988, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .jobbliste ul li .andre a {
   text-decoration: none;
   color: #333333;
 }
-/* line 987, ../sass/mixins.scss */
+/* line 992, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .jobbliste ul li .andre .views-field-title {
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 0.2em;
 }
-/* line 992, ../sass/mixins.scss */
+/* line 997, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
 div .jobbliste ul li .andre .views-field-field-job-utlyser-value {
   font-weight: bold;
   line-height: 1em;
 }
-/* line 4, ../sass/ticker.scss */
+/* line 4, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/ticker.scss */
 div .ticker {
   line-height: 30px;
   padding: 2px;
   font-size: 16px;
   position: relative;
 }
-/* line 10, ../sass/ticker.scss */
+/* line 10, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/ticker.scss */
 div .ticker-label {
   float: left;
   display: block;
@@ -1274,30 +1274,30 @@ div .ticker-label {
   margin-top: 2px;
   margin-right: 5px;
 }
-/* line 16, ../sass/ticker.scss */
+/* line 16, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/ticker.scss */
 div .ticker-label a {
   text-decoration: none;
   color: #363636;
   font-size: 0.8em;
   font-family: Arial;
 }
-/* line 23, ../sass/ticker.scss */
+/* line 23, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/ticker.scss */
 div .ticker-news {
   overflow: hidden;
   margin-top: 2px;
 }
-/* line 26, ../sass/ticker.scss */
+/* line 26, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/ticker.scss */
 div .ticker-news ul {
   float: left;
   height: 22px;
   padding: 0px;
 }
-/* line 31, ../sass/ticker.scss */
+/* line 31, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/ticker.scss */
 div .ticker-news ul li {
   float: left;
   margin-right: 10px;
 }
-/* line 34, ../sass/ticker.scss */
+/* line 34, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/ticker.scss */
 div .ticker-news ul li a {
   color: #5990c2;
   font-family: Arial;
@@ -1305,7 +1305,7 @@ div .ticker-news ul li a {
   font-size: 0.8em;
   font-weight: normal;
 }
-/* line 44, ../sass/ticker.scss */
+/* line 44, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/ticker.scss */
 div .ticker-prev {
   left: 0px;
   width: 38px;
@@ -1323,7 +1323,7 @@ div .ticker-prev {
   -ms-user-select: none;
   user-select: none;
 }
-/* line 60, ../sass/ticker.scss */
+/* line 60, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/ticker.scss */
 div .ticker-prev span {
   width: 10px;
   height: 15px;
@@ -1331,7 +1331,7 @@ div .ticker-prev span {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -605px no-repeat;
   display: block;
 }
-/* line 69, ../sass/ticker.scss */
+/* line 69, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/ticker.scss */
 div .ticker-next {
   background-repeat: no-repeat;
   background-position: center;
@@ -1349,7 +1349,7 @@ div .ticker-next {
   -ms-user-select: none;
   user-select: none;
 }
-/* line 85, ../sass/ticker.scss */
+/* line 85, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/ticker.scss */
 div .ticker-next span {
   width: 10px;
   height: 15px;
@@ -1357,26 +1357,26 @@ div .ticker-next span {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -620px no-repeat;
   display: block;
 }
-/* line 6, ../sass/forms.scss */
+/* line 6, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/forms.scss */
 div form {
   font-family: Arial;
 }
-/* line 10, ../sass/forms.scss */
+/* line 10, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/forms.scss */
 div .form-label-alter .form-item {
   position: relative;
 }
-/* line 12, ../sass/forms.scss */
+/* line 12, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/forms.scss */
 div .form-label-alter .form-item label {
   position: absolute;
   top: 14px;
   left: 10px;
   color: #989898;
 }
-/* line 18, ../sass/forms.scss */
+/* line 18, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/forms.scss */
 div .form-label-alter .form-item .description {
   color: #b2b2b2;
 }
-/* line 21, ../sass/forms.scss */
+/* line 21, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/forms.scss */
 div .form-label-alter .form-item input {
   border: 1px solid #b2b2b2;
   -webkit-border-radius: 4px 4px;
@@ -1388,31 +1388,31 @@ div .form-label-alter .form-item input {
   font-family: Arial;
   font-size: 1.1em;
 }
-/* line 30, ../sass/forms.scss */
+/* line 30, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/forms.scss */
 div .form-label-alter .form-item input:focus {
   outline-offset: 0;
   outline: -webkit-focus-ring-color auto 0px;
   box-shadow: inset 0 5px 5px rgba(178, 178, 178, 0.8);
 }
-/* line 36, ../sass/forms.scss */
+/* line 36, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/forms.scss */
 div .form-label-alter .form-required {
   color: #b2b2b2;
 }
-/* line 39, ../sass/forms.scss */
+/* line 39, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/forms.scss */
 div .form-label-alter .form-radios {
   position: relative;
 }
-/* line 42, ../sass/forms.scss */
+/* line 42, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/forms.scss */
 div .form-label-alter .form-radios .form-item label {
   position: relative;
   top: 0;
   left: 0;
 }
-/* line 47, ../sass/forms.scss */
+/* line 47, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/forms.scss */
 div .form-label-alter .form-radios .form-item input {
   height: auto;
 }
-/* line 53, ../sass/forms.scss */
+/* line 53, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/forms.scss */
 div .form-submit {
   -webkit-appearance: none;
   background: #568ebf;
@@ -1425,12 +1425,12 @@ div .form-submit {
   border-radius: 4px / 4px;
   cursor: pointer;
 }
-/* line 64, ../sass/forms.scss */
+/* line 64, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/forms.scss */
 div #search-mob .views-exposed-widget {
   padding: 0px;
   width: 93%;
 }
-/* line 68, ../sass/forms.scss */
+/* line 68, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/forms.scss */
 div #search-mob .views-exposed-widgets {
   border: 1px solid #b2b2b2;
   -webkit-border-radius: 4px 4px;
@@ -1443,7 +1443,7 @@ div #search-mob .views-exposed-widgets {
   font-size: 1.1em;
   position: relative;
 }
-/* line 77, ../sass/forms.scss */
+/* line 77, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/forms.scss */
 div #search-mob .views-exposed-widgets input {
   border: none;
   margin: 0px;
@@ -1453,12 +1453,12 @@ div #search-mob .views-exposed-widgets input {
   background: transparent;
   width: 100%;
 }
-/* line 86, ../sass/forms.scss */
+/* line 86, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/forms.scss */
 div #search-mob .views-exposed-widgets input:focus {
   outline-offset: 0;
   outline: -webkit-focus-ring-color auto 0px;
 }
-/* line 90, ../sass/forms.scss */
+/* line 90, /Users/ole/git/kr/sites/default/themes/kr2012/compass-kr/sass/forms.scss */
 div #search-mob .views-exposed-widgets .form-submit {
   background: #336699;
   color: white;

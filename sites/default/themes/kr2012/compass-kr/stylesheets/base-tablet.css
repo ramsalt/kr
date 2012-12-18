@@ -340,13 +340,13 @@
     display: none;
   }
 
-  /* line 758, ../sass/mixins.scss */
+  /* line 763, ../sass/mixins.scss */
   div .ownsection {
     float: left;
     width: 197px;
     margin-left: 20px;
   }
-  /* line 762, ../sass/mixins.scss */
+  /* line 767, ../sass/mixins.scss */
   div .ownsection .desc {
     padding-top: 1em;
     display: block;
@@ -354,7 +354,7 @@
     font-family: Arial;
     color: #333333;
   }
-  /* line 943, ../sass/mixins.scss */
+  /* line 948, ../sass/mixins.scss */
   div .nopremium-message .form-submit {
     margin-top: 22px;
     height: 44px;
