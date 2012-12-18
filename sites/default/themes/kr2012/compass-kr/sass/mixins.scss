@@ -1,5 +1,6 @@
 $logos: sprite-map("logo/*.png");
 
+
 @mixin rammeboks-mob{
   .rammeboks{
     padding: 5%;
@@ -12,7 +13,7 @@ $logos: sprite-map("logo/*.png");
       color: #d71010;
       font-size: 0.8em;
       text-transform: Uppercase;
-      border-bottom: 1px solid #d71010;
+      border-bottom: 2px solid #d71010;
       margin-bottom: 10px;
     }
     h3{
@@ -52,6 +53,10 @@ $logos: sprite-map("logo/*.png");
       }
     }
   }
+  .content{
+    font-family: Arial;
+    color: #333333;
+  }
   .rammeboks.red{
     h3{
       padding: 0px;
@@ -70,6 +75,10 @@ $logos: sprite-map("logo/*.png");
         text-decoration: none;
       }
     }
+    .views-field-nothing{
+      float: right;
+      padding: 0px 0px 10px 10px;
+    }
     .views-field-view-node{
       a{
         background: sprite($logos, mobpilhoy) no-repeat;
@@ -80,6 +89,7 @@ $logos: sprite-map("logo/*.png");
         font-size: 0.8em;
         text-decoration: none;
         font-weight: bold;
+        height: 17px;
       }
     }
   }
@@ -94,13 +104,16 @@ $logos: sprite-map("logo/*.png");
       }
     }
     li{
-      padding-top: 1em;
+      padding: 10px 0px 0px 0px;
+      margin: 0px;
       border-bottom: 0px;
       .views-field-title{
         a{
+          font-family: Arial;
           font-size: 1.5em;
           font-weight: bold;
           color: #333333;
+          line-height: 1.3em;
         }
       }
       .views-field-view-node{
@@ -147,8 +160,10 @@ $logos: sprite-map("logo/*.png");
       }
       .views-field-title{
         a{
+          font-family: Arial;
           font-size: 1.5em;
           font-weight: bold;
+          line-height: 1.3em;
         }
       }
       .views-field-view-node{
@@ -162,9 +177,13 @@ $logos: sprite-map("logo/*.png");
     }
   }
   .rammeboks.blogger{
+    .view-header{
+      display: none;
+    }
     h3{
       border-bottom: 2px solid #78a21e;
       padding: 0px;
+      margin-bottom: 0px;
       a{
         padding: 0px;
         color: #78a21e;        
@@ -174,6 +193,13 @@ $logos: sprite-map("logo/*.png");
         text-transform: uppercase;
         text-decoration: none;
       }
+    }
+    .pretext{
+      background: #d7e1c2;
+      padding: 5px;
+      color: #333333;
+      font-family: Arial;
+      font-size: 0.8em;
     }
     .views-field-field-blogg-bilde-fid{
       float: left;
@@ -205,6 +231,8 @@ $logos: sprite-map("logo/*.png");
       display: none;
     }
     .more-link{
+      float: left;
+      margin-top: 10px;
       a{
         background: sprite($logos, mobpilhoy) no-repeat;
         padding-left: 20px;
@@ -221,35 +249,46 @@ $logos: sprite-map("logo/*.png");
   .kommentar-liste{
     h2{
       color: #78a21e;
-      border-bottom: 1px solid #78a21e;
+      border-bottom: 2px solid #78a21e;
     }
+    /*
     .views-field-field-sitat-value:before{
       content: '“';
       float: left;
       color: #78a21e;
       font-weight: bold;
-      font-size: 1.7em;
+      font-size: 1.7em;      
       font-family: 'MerriweatherRegular', serif;
     }
+    */
     .views-field-field-sitat-value{
+      span{
+        background: sprite($logos, quote) no-repeat;
+        float: left; 
+        width: 23px;
+        height: 21px;
+        margin: -5px 8px 0px 0px;
+      }
       a{
         text-decoration: none;
         color: #333333;
         font-family: 'MerriweatherRegular', serif;
         font-size: 1.1em;
+        font-weight: bold;
+        line-height: 1.3em;
       }
     }
-    .views-field-view-node{
-      border-top: 1px solid #c1bfb9;
+    .views-field-view-node{      
       margin-top: 10px;
       padding-top: 6px;
-      float: left;
-      width: 50%;
+      clear: both;      
       a{
         height: 13px;
-        padding-top: 4px;
+        padding-top: 1px;
+        padding-bottom: 3px;
         float: left;
-        font-size: 0.7em;
+        font-size: 1em;
+        font-weight: bold;
         line-height: 1em;
         padding-left: 20px;
         background: sprite($logos, mobpilhoy) no-repeat;
@@ -262,9 +301,9 @@ $logos: sprite-map("logo/*.png");
       border-top: 1px solid #c1bfb9;
       margin-top: 10px;
       padding-top: 6px;
-      float: left;
-      width: 50%;
+      width: 100%;
       a{
+        float: right;
         font-size: 0.8em;
         font-family: Arial;
         color: #333333;
@@ -274,9 +313,15 @@ $logos: sprite-map("logo/*.png");
   }
 }
 @mixin rammeboks-brett{
-  .rammeboks{
+  #block-views-Kommentarutdrag-block_1,
+  #block-boxes-box-4bb00d6c,
+  #block-simplenews-22{
     padding: 5%;
     width: 90%;
+  }
+  .rammeboks{
+    padding: 3%;
+    width: 94%;
     border-top: 1px solid #d9d9d9;
     border-left: 1px solid #d9d9d9;
     border-right: 1px solid #d9d9d9;
@@ -332,11 +377,16 @@ $logos: sprite-map("logo/*.png");
 }
 @mixin listeboks{
   margin-bottom: 15px;
+
   .item-list{
     h3{
       border-bottom: 2px solid #333;
       padding: 4px 0px;
       margin-bottom: 5px;
+      a{
+        color: #333;
+        text-decoration: none;
+      }
     }
     ul{
       padding: 0px;
@@ -353,6 +403,10 @@ $logos: sprite-map("logo/*.png");
           color: #2c91c5;
           text-decoration: none;
           font-family: 'MerriweatherRegular', serif;
+        }
+        .views-field-field-main-image-fid{
+          float: left;
+          padding-right: 0.7em;
         }
 
       }
@@ -385,7 +439,9 @@ $logos: sprite-map("logo/*.png");
       margin: 0px;
       a{
         color: #333333;
+        text-decoration: none;
         font-size: 1.2em;
+        line-height: 1.3em;
       }
     }
     li:last-child{
@@ -401,6 +457,7 @@ $logos: sprite-map("logo/*.png");
     }
     p{
       margin: 0px;
+      line-height: 1.4em;
     }
     ul{
       margin: 0px;
@@ -496,7 +553,7 @@ $logos: sprite-map("logo/*.png");
       margin: 0px 20px;
     }
     a{
-      font-size: 1.8em;
+      font-size: 1.7em;
       line-height: 1.1em;
     }
     .views-field-title{
@@ -517,8 +574,7 @@ $logos: sprite-map("logo/*.png");
     }
   }
   .newslist.sak-2{
-    li{
-      
+    li{      
       border-bottom: 1px solid #DDD;
     }
     li.views-row-last{
@@ -569,6 +625,17 @@ $logos: sprite-map("logo/*.png");
       }
       li.views-row-last{
         border-right: 0px;
+      }
+    }
+  }
+  .newslist.sak-12, .newslist.sak-23{
+    ul{
+      li{
+        .views-field-title{
+          a{
+            font-size: 1.4em;
+          }
+        }
       }
     }
   }
@@ -776,7 +843,7 @@ $logos: sprite-map("logo/*.png");
     .msg{
      padding: 20px;
      p{
-       display: inline;
+       
      }
     }
     form{
@@ -795,8 +862,10 @@ $logos: sprite-map("logo/*.png");
         background: sprite($logos, mobpilhoy) no-repeat;
         padding-left: 20px;
         float: left;
+        height: 17px;
       }
-      float: right;
+      float: left;
+      padding: 0px 0px 15px 0px;
       color: #333333;
       font-family: Arial;
       font-size: 0.8em;
@@ -811,25 +880,23 @@ $logos: sprite-map("logo/*.png");
       input{
         height: 27px;
         width: 160px;
+        border: 1px solid #b2b2b2;
         @include border-radius(4px, 4px);
-        font-size: 1.2em;
+        height: 40px;
+        box-shadow: inset 0 5px 5px rgba(178, 178,178,.5);
+        text-indent: 5px;
+        font-family: Arial;
+        font-size: 1.1em;
       }
       float: left;
       margin: 0px;
     }
+    #edit-pass-wrapper{
+      margin-left: 14px;
+    }
     .form-submit{
-      clear: both;
-      float: left;
-      margin-top: 20px;
-      background: #3090c0;
-      @include border-radius(4px, 4px);
-      border-top: none;
-      border-left: none;
-      border-right: none;
-      color: #fff;
-      border-bottom: 2px solid #1d5774;
-      height: 27px;
-      width: 65px;
+      margin-top: 10px;
+
     }
     .item-list{
       float: left;
@@ -844,7 +911,9 @@ $logos: sprite-map("logo/*.png");
           display: none;
         }
         li.last{
+          margin-top: 10px;
           a{
+            font-size: 0.8em;
             color: #3090c0;
             text-decoration: none;
             font-weight: bold;
@@ -853,6 +922,15 @@ $logos: sprite-map("logo/*.png");
       }
     }
 
+  }
+}
+@mixin premium-msg-brett{
+  .nopremium-message{
+    .form-submit{
+      margin-top: 22px;
+      height: 44px;
+      
+    }
   }
 }
 @mixin premium-msg-desktop{

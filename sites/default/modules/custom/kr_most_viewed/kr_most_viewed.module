@@ -34,15 +34,23 @@ function _most_viewd_last_week(){
 	{
     	$lastweek_start = strtotime('last week');
 		$lastweek_end = strtotime('last week +7 days');
-		$query = db_query('SELECT  n.title, c.nid, SUM(c.daycount) FROM {node_counter_old} c
-		LEFT JOIN node n ON n.nid = c.nid
+		$query = db_query('SELECT  n.title, c.nid, SUM(c.daycount), f.filepath FROM {node_counter_old} c
+		LEFT JOIN {node} n ON n.nid = c.nid
+		LEFT JOIN {content_field_main_image} i ON i.vid = n.vid
+		LEFT JOIN {files} f ON f.fid = i.field_main_image_fid
 		WHERE c.timestamp > %d AND c.timestamp < %d AND c.nid > 1 AND n.status LIKE 1
 		GROUP BY c.nid ORDER BY SUM(c.daycount) DESC
 		LIMIT 5', $lastweek_start, $lastweek_end);
 	
 		$i = 0;
 		while($result = db_fetch_object($query)){
-			$items[] = l(str_replace('&#173;', '', $result->title), 'node/'.$result->nid);
+			//imagecache_create_url('sistesaker', $result->filepath)
+			$html = '';
+			if(is_string($result->filepath)){
+				$html .= '<span class="views-field views-field-field-main-image-fid"><div class="field-content"><a href="'.url('node/'.$result->nid).'" class="imagecache imagecache-siste_saker imagecache-linked imagecache-siste_saker_linked"><img src="'.imagecache_create_url('siste_saker', $result->filepath).'" alt="" ></a></div>  </span>';
+			}
+			$html .= l(str_replace('&#173;', '', $result->title), 'node/'.$result->nid);
+			$items[] = $html;
 			$i++;
 		}
 		if($i == 0){
@@ -50,8 +58,8 @@ function _most_viewd_last_week(){
 		}
 		$type = 'ul';
 		$attributes = array('class' => 'lenker');
+		$attributes = array();
 		$title = 'Mest lest forrige uke';
-		$html = 'sss';
 		$data = theme('item_list', $items, $title, $type, $attributes);
 		cache_set($sid, $data, 'cache', time()+3600);
 	}

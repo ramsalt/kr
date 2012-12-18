@@ -1,4 +1,8 @@
 @import "mixins.scss";
+@import "nav.scss";
+@import "ticker.scss";
+@import "compass/css3/border-radius";
+$logos: sprite-map("logo/*.png");
 
 @media all and (min-width: 740px)  {
   .visible-mobile, .visible-desktop{
@@ -8,9 +12,13 @@
     display: block;
   }
 
-  #logo-area{ 
+  #logo-area{
+    height: 76px; 
     .wrapper {
-      .container { 
+      .container {
+        .inner-container{
+          @include border-top-radius(3px);
+        } 
         .grid{
           width: 728px;      
           margin: 0px 20px;
@@ -18,8 +26,59 @@
         #logo{
           margin-left: 0px;
         }
+        .logo-item-wrapper{
+          position: absolute;
+          right: 0px;
+          padding: 15px;
+          .login-wrapper{
+            float: left;
+            margin-right: 25px;
+            margin-top: 6px;
+            a{
+              background: sprite($logos, nokkelhull) no-repeat;
+              font-weight: bold;
+              height: 28px;
+              float: left;
+              text-decoration: none;
+              font-family: Helvetica;
+              color: #fff;
+              span{
+                padding: 3px 0px 0px 34px;
+                float: left;
+              }
+            }
+          }
+          .search-wrapper{
+            float: left;
+            input.form-text{
+              height: 34px;
+              width: 150px;
+              @include border-radius(4px, 4px);
+              border: 1px solid #223e6b;
+              -webkit-box-shadow: inset 1px 2px 3px 0px rgba(0, 0, 0, 0.7);
+              box-shadow: inset 1px 2px 3px 0px rgba(0, 0, 0, 0.7);
+              text-indent: 5px;
+              font-family: Arial;
+              font-size: 1em;
+            }
+            .form-submit{
+              position: absolute;
+              right: 21px;
+              text-indent: -999px;
+              background: sprite($logos, blalupe) no-repeat;
+              width: 16px;
+              height: 17px;
+              border: none;
+              padding: 0px;
+              margin: 11px 4px 0px 0px;
+            }
+          }
+        }
       }
     }
+  }
+  #login-area{
+    @include nav-brett;
   }
   #content-area{
     .wrapper{
@@ -30,6 +89,15 @@
       }
     }
   }
+  .view-bilde-slider-node{
+    .views-field-field-main-image-data{
+      font-family: Arial;
+      font-size: 1em;
+      padding: 8px;
+      background: #f1f2ee;
+      border-bottom: 1px solid #c1bfb9;
+    }
+  }
   .block-views{
     @include newslist-brett;
   }
@@ -38,5 +106,10 @@
   div {
     @include ownsection-brett;
     @include seksjonsside-brett;
+    @include ticker-brett;
+    @include premium-msg-brett;
+  }
+  #logo-area .login-wrapper, #logo-area .search-wrapper{
+    display: block;
   }
 }

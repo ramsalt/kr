@@ -1,5 +1,6 @@
 @import "compass/css3/border-radius";
 @import "mixins.scss";
+@import "nav.scss";
 $icons: sprite-map("backgrounds/*.png");
 $logos: sprite-map("logo/*.png");
 
@@ -13,6 +14,12 @@ $logos: sprite-map("logo/*.png");
   }
   body{
     margin-top: 20px;
+  }
+  body h1 {
+    font-size: 2.75em;
+    color: #333333;
+    line-height: 1.2em;
+    margin: 12px 0px;
   }
   #top-area{
     .container{
@@ -51,66 +58,25 @@ $logos: sprite-map("logo/*.png");
     }
   }
   #login-area{
-    margin-top: 10px;
-    background: transparent;
-    border: none;
-    .wrapper{
-      border: none;
-      .container{
-        //background: url('/sites/default/themes/kr2012/compass-kr/images/desktop-top-wrapper-bg.png') repeat-x 0 33px #F1F2EE;
-        .inner-container{
-          @include border-top-radius(4px);
-          background: url('/sites/default/themes/kr2012/compass-kr/images/backxrepeat.png') 0px -75px repeat-x;
-          height: 38px;
-          border-top: 1px solid #d9d9d9;
-          border-left: 1px solid #d9d9d9;
-          border-right: 1px solid #d9d9d9;
-          border-bottom: 1px solid #a1a1a1;
-          .art-main{
-            width: 962px;
-          }
-        }
-      }
-      .inner{
-        float: right;
-        width: auto;
-        #login-content{
-          float: left;
-        }
-        #search-content{
-          float: left;
-          margin-top: 0px;
-          padding-left: 25px;
-          a{
-            span.icon{
-              background: sprite($logos, searchblack) no-repeat;
-              width: 14px;
-              height: 15px;
-              margin-left: 4px;
-              maring-top: 1px;
-            }
-          }
-        }
-      }
-    }
-    a{
-      font-size: 1em;
-      font-family: Arial;
-      font-weight: bold;
-      text-decoration: none;
-      color: #333333;
-      text-transform: Uppercase;
-    }
+    @include nav-desktop;
   }
   #logo-area{
     background: transparent;
     border: none;
+    height: 74px;
     .wrapper{
       border-top: none;
+      .inner-wrapper{
+        border-bottom: none;
+      }
       .container{
         .inner-container{
-          height: 74px;
+          height: 73px;
+          width: 100%;
+          float: left;          
           background: url('/sites/default/themes/kr2012/compass-kr/images/backxrepeat.png') 0px 0px repeat-x;
+          border-bottom: 1px solid #122435;
+          position: relative;
           .grid{
             width: 96%;
             margin: 0px 2% 0px 2%;
@@ -123,7 +89,7 @@ $logos: sprite-map("logo/*.png");
         height: 62px;
         float: left;
         width: 291px;
-        position: absolute;
+        
         a{
           text-indent: -9999px;
           display: block;
@@ -134,45 +100,12 @@ $logos: sprite-map("logo/*.png");
           width: 291px;
           span{
             background: sprite($logos, desktop) no-repeat;
-            width: 291px;
-            height: 31px;
+            width: 340px;
+            height: 38px;
             float: left;
           }
         }
-      }
-      #nav-button{
-        display: none; 
-      }
-      #nav{
-        display: block;
-        margin-left: 291px;
-        width: auto;
-        height: 60px;
-        overflow: hidden;
-        ul{
-          padding: 6px 0px;
-          li{
-            border: none;
-            width: auto;
-            clear: none;
-            a{
-              font-family: "Helvetica Neue", Helvetica;
-              font-size: 1.05em;
-              font-weight: bold;
-              color: #ffffff;
-              text-transform: none;
-              width: auto;
-            }
-          }
-          li.multilevel{
-            a{
-              span.level{
-                margin: 7px 0px 0px 4px;
-              }
-            }
-          }
-        }
-      }
+      }      
     }
   }
   #pre-area{
@@ -197,8 +130,9 @@ $logos: sprite-map("logo/*.png");
     }
   }
   #content-area{
-    .wrapper{
+    .wrapper{      
       .container{
+        border-top: 1px solid #c1bfb9;
         .inner-container{
           border-top: 1px solid #dddddd;
           border-left: 1px solid #dddddd;
@@ -210,10 +144,11 @@ $logos: sprite-map("logo/*.png");
             width: 36%;
           }
           .sidebar{
-            padding: 4% 4% 5% 4%;
+            padding: 0% 4% 2% 4%;
             border-left: 1px solid #dddddd;
             border-bottom: 1px solid #dddddd;
-
+            float: left;
+            width: 92%;
           }
         }
       }
@@ -221,7 +156,7 @@ $logos: sprite-map("logo/*.png");
   }
   
   .fakta{
-    width: 200px;
+    width: 40%;
     float: right;
     padding: 7px;
     border-bottom: 2px solid #c1bfb9;
@@ -237,7 +172,7 @@ $logos: sprite-map("logo/*.png");
       border-bottom: 2px solid #D71010;
     }
     .content{
-      font-size: 0.8em;
+      font-size: 0.9em;
     }
   }
 
@@ -279,6 +214,9 @@ $logos: sprite-map("logo/*.png");
         margin-top: 6px;
       }
     }
+  }
+  .block-openx{
+    display: block;
   }
 }
 

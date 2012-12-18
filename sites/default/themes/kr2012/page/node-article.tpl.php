@@ -99,4 +99,3 @@
 <?php print $related_terms_links; ?>
 <?php endif; ?>
 <?php print $themed_links; ?>
-<div class="tiltoppen visible-mobile"><a href="#top">Til toppen</a></div>

@@ -16,11 +16,13 @@
       overflow: hidden;
       
     }
+    .grid.toplinje{
+      overflow: visible;
+    }
 }
 .container-16{
   width: 100%;
   max-width: 1004px;
-  min-width: 800px;
   margin: 0 auto;
   .inner-container{
     .grid-16{
@@ -53,12 +55,12 @@
     width: 52%;
   }
   .one_two{
-    width: 23%;
-    left: -25%;
+    width: 25%;
+    left: -23%;
   }
   .one_three{
-    width: 25%;
-    left: 23%;
+    width: 23%;
+    left: 25%;
   }
   .seven{
     float:left;

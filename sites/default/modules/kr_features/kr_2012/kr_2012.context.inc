@@ -361,17 +361,23 @@ function kr_2012_context_default_contexts() {
           'region' => 'seven_three',
           'weight' => 0,
         ),
+        'views-lederspalten-block_1' => array(
+          'module' => 'views',
+          'delta' => 'lederspalten-block_1',
+          'region' => 'seven_three',
+          'weight' => 1,
+        ),
         'views-lederlogg-block_1' => array(
           'module' => 'views',
           'delta' => 'lederlogg-block_1',
           'region' => 'seven_three',
-          'weight' => 1,
+          'weight' => 2,
         ),
         'views-Blogger-block_2' => array(
           'module' => 'views',
           'delta' => 'Blogger-block_2',
           'region' => 'seven_three',
-          'weight' => 2,
+          'weight' => 3,
         ),
         'views-forside-block_7' => array(
           'module' => 'views',
@@ -427,14 +433,6 @@ function kr_2012_context_default_contexts() {
       ),
       'ad_right' => array(
         'class' => '',
-        'blocks' => array(
-          'openx-2' => array(
-            'class' => '',
-          ),
-          'openx-6' => array(
-            'class' => '',
-          ),
-        ),
       ),
       'one_one' => array(
         'class' => '',
@@ -537,6 +535,9 @@ function kr_2012_context_default_contexts() {
           'views-economic_blogg-block_1' => array(
             'class' => 'rammeboks eco',
           ),
+          'views-lederspalten-block_1' => array(
+            'class' => 'rammeboks red leder',
+          ),
           'views-lederlogg-block_1' => array(
             'class' => 'rammeboks red leder',
           ),
@@ -611,6 +612,12 @@ function kr_2012_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'kr_diverse-2' => array(
+          'module' => 'kr_diverse',
+          'delta' => 2,
+          'region' => 'prearea',
+          'weight' => 0,
+        ),
         'openx-2' => array(
           'module' => 'openx',
           'delta' => 2,

@@ -92,7 +92,7 @@
   	  <?php endif; ?>
   	  <div class="container container-16 clearfix">
   	  	<div class="inner-container clearfix">
-	  	  	<div class="grid full nomargin">
+	  	  	<div class="grid full nomargin toplinje">
 	  	  		<div class="one one_one">
 	  	  			<div class="one-inner">
 						<?php print $one_one; ?>

@@ -1,0 +1,53 @@
+/* line 3, ../sass/drupal.scss */
+#outer-wrapper #wrapper div.view div.views-admin-links {
+  font-size: xx-small;
+  margin-right: 1em;
+  margin-top: 1em;
+  /*  width: 95%; */
+}
+/* line 10, ../sass/drupal.scss */
+#outer-wrapper #wrapper .block div.view div.views-admin-links {
+  margin-top: 0;
+}
+/* line 14, ../sass/drupal.scss */
+#outer-wrapper #wrapper div.view div.views-admin-links ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 19, ../sass/drupal.scss */
+#outer-wrapper #wrapper div.view div.views-admin-links li {
+  margin: 0;
+  padding: 0 0 2px 0;
+  z-index: 201;
+  width: auto;
+  border: none;
+}
+/* line 27, ../sass/drupal.scss */
+#outer-wrapper #wrapper div.view div.views-admin-links li a {
+  padding: 0;
+  margin: 0;
+  color: #ccc;
+}
+/* line 33, ../sass/drupal.scss */
+#outer-wrapper #wrapper div.view div.views-admin-links li a:before {
+  content: "[";
+}
+/* line 36, ../sass/drupal.scss */
+#outer-wrapper #wrapper div.view div.views-admin-links li a:after {
+  content: "]";
+}
+/* line 41, ../sass/drupal.scss */
+#outer-wrapper #wrapper div.view div.views-admin-links-hover a,
+#outer-wrapper #wrapper div.view div.views-admin-links:hover a {
+  color: #000;
+}
+/* line 46, ../sass/drupal.scss */
+#outer-wrapper #wrapper div.view div.views-admin-links-hover,
+#outer-wrapper #wrapper div.view div.views-admin-links:hover {
+  background: transparent;
+}
+
+/* line 53, ../sass/drupal.scss */
+.item-list ul.pager li {
+  margin: 0px;
+}

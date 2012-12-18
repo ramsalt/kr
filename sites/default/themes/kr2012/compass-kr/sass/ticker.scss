@@ -1,0 +1,96 @@
+$logos: sprite-map("logo/*.png");
+
+@mixin ticker-mob{
+  .ticker {
+    line-height: 30px;
+    padding: 2px;
+    font-size: 16px;
+    position: relative;
+  }
+  .ticker-label{
+    float: left;
+    display: block;
+    margin-left: 34px;
+    margin-top: 2px;
+    margin-right: 5px;
+    a{
+      text-decoration: none;
+      color: #363636;
+      font-size: 0.8em;
+      font-family: Arial;
+    }
+  }
+  .ticker-news{
+    overflow: hidden;
+    margin-top: 2px;
+    ul{ 
+      float: left;
+      height: 22px;
+      padding: 0px;
+
+      li{
+        float: left;
+        margin-right: 10px;
+        a{
+          color: #5990c2;
+          font-family: Arial;
+          text-decoration: none;
+          font-size: 0.8em;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+  .ticker-prev {
+    left: 0px;
+    width: 38px;
+    height: 40px;
+    top: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    float: left;
+    position: absolute;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    span{
+      width: 10px;
+      height: 15px;
+      margin: 11px 0px 0px 15px;
+      background: sprite($logos, tickerprev) no-repeat; 
+      display: block;
+    }
+    
+  }
+  .ticker-next {
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    float: left;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 40px;
+    width: 20px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    span{
+      width: 10px;
+      height: 15px;
+      margin: 11px 15px 0px 0px;
+      background: sprite($logos, tickernext) no-repeat;
+      display: block;
+    }
+  }
+}
+@mixin ticker-brett{
+
+}

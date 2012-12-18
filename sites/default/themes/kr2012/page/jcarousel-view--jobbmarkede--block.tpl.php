@@ -11,4 +11,4 @@
     <li class="<?php print $classes[$id]; ?>"><?php print $row; ?></li>
   <?php endforeach; ?>
 </ul>
-<div class="mer"><a href="/stillinger">Se flere stillinger</a></div>
+<div class="mer"><a href="/stillinger">Flere stillinger</a></div>

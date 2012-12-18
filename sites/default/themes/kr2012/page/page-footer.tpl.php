@@ -9,6 +9,7 @@
  * @ingroup page
  */
 ?>
+	 <div class="tiltoppen visible-mobile"><a href="#top">Til toppen</a></div>
     </div> <!-- /#wrapper -->
   </div> <!-- /#outer-wrapper -->
         <div class="clear"></div>	

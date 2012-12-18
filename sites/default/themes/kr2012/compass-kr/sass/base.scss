@@ -1,5 +1,8 @@
 @import "compass";
 @import "mixins.scss";
+@import "ticker.scss";
+@import "nav.scss";
+@import "forms.scss";
 $icons: sprite-map("backgrounds/*.png");
 $logos: sprite-map("logo/*.png");
 
@@ -59,48 +62,7 @@ body.admin-menu{
 .visible-mobile{
     display: block;
 }
-#login-area{
-  background: #333333;
-  border-bottom: 1px solid #262626;
-  .wrapper{
-    border-bottom: 1px solid #2b2b2b;
-    .inner{
-      width: 100%;
-      margin: 10px 0px;
-      float: left;
-      #login-content{
-        float: left;
-        height: 16px;
-      }
-      #search-content{
-        height: 16px;
-        float: right;
-        margin-top: 3px;
-        a{
-          span{
-            display: block;
-            float: left;
-          }
-          span.icon{
-            
-            background: sprite($logos, search) no-repeat;
-            width: 12px;
-            height: 13px;
-            margin-left: 4px;
-          }
-        }
-      }
-    }
-  }
-  a{
-    font-size: 0.75em;
-    font-family: Arial;
-    font-weight: bold;
-    text-decoration: none;
-    color: #ffffff;
-    text-transform: Uppercase;
-  }
-}
+
 #fb-root {
   display: none;
 }
@@ -113,7 +75,12 @@ body.admin-menu{
   @include background-image(linear-gradient(top, #225a84, #083e6b));
   background-color: #225A84;
   border-top: 1px solid #073e6a;
-  border-bottom: 1px solid #174a73;
+  border-bottom: 1px solid #122435;
+  height: 65px;
+  overflow: hidden;
+  .inner-wrapper{
+    border-bottom: 1px solid #294472;
+  }
   .wrapper{
     border-top: 1px solid #34668f;
     .container{
@@ -132,117 +99,27 @@ body.admin-menu{
         padding: 17px 0px;
         float: left;
         position: relative;
-        height: 28px;
-        width: 220px;
+        height: 30px;
+        width: 273px;
+        font-family: Helvetica;
         span{
           background: sprite($logos, mobil) no-repeat;
-          width: 219px;
-          height: 23px;
+          width: 273px;
+          height: 30px;
           float: left;
-        }
-      }
-    }
-  }
-  #nav-button{
-    margin-right: 15px;
-    float: right;
-    a{
-      float: left;
-      background: sprite($logos, menumobil) no-repeat;
-      width: 38px;
-      height: 39px;
-      text-indent: -9999px;
-      margin: 10px 0px 0px 0px;
-    }
-  }
-  #nav-button.open{
-    a{
-      background: sprite($logos, menumobilclose) no-repeat;
-    }
-  }
-  #nav.open{
-    display: block;
-  }
-  #nav{
-    float: left;
-    display: none;
-    background: transparent;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    ul{
-        background: transparent;
-      li{
-        border-top: 1px solid #6e8697;
-        padding: 0px;
-        width: 100%;
-        clear: both;
-        a{
-          font-size: 0.85em;
-          padding: 15px;
-          font-weight: bold;
-          font-family: Arial;
-          color: #ffffff;
-          text-transform: uppercase;
-          float: left;
-          width: 290px;
-          span{
-            float: left;
-          }
-        }
-        a:hover{
-          background: transparent;
-        }
-      }
-      li.on{
-        background: transparent;
-      }
-      li.multilevel.open{
-        ul{
-          display: block;
-        }
-      }
-      li.multilevel{
-        a{ 
-          span.level{
-            background: sprite($logos, menumobilpilned) no-repeat;
-            width: 7px;
-            height: 7px;
-            margin: 3px 0px 0px 10px;
-          }
-        }
-        ul{
-          border-left: 30px solid #0F3554;
-          position: relative;
-          width: 100%;
-          clear: both;
-          display: none;
-          float: left;
-          height: auto;
-          top: 0px;
-          li{
-            width: auto;
-            float: left;
-            a{
-              width: 260px;
-              font-weight: normal;
-              text-transform: none;
-            }
-          }
-        }
-      }
-      li:hover{
-        a{
-          background: transparent;
         }
       }
     }
   }
 }
+#login-area{
+  @include nav-mob;
+}
 #pre-area{
   border-top: 1px solid #a3a19b;
   border-bottom: 1px solid #c1bfb9;
   height: 40px;
+  overflow: hidden;
   background: #f1f2ee;
   .wrapper{
     border-top: 1px solid #cac9c6;
@@ -301,8 +178,8 @@ body.admin-menu{
         text-decoration: none;  
       }
       .container{
-        .grid{
-          
+        .grid-16{
+          margin: 0px 15px;
         }
       }
     }
@@ -341,6 +218,17 @@ body.admin-menu{
   a{
     color: #333333;
     text-decoration: none;
+  }
+}
+body .body-content, body .body-content p{
+  font-size: 1.02em;
+  line-height: 1.6em;
+  color: #333;
+  h2{
+    font-size: 1.2em;
+  }
+  em{
+    font-style: italic;
   }
 }
 .fakta-mobil{
@@ -390,7 +278,7 @@ body.admin-menu{
     height: 42px;
     display: block;
     text-indent: -999px;
-    
+    margin: auto;
   }
 }
 
@@ -413,6 +301,8 @@ div {
   @include seksjonsside-mob;
   @include premium-msg-mob;
   @include jobbliste;
+  @include ticker-mob;
+  @include forms;
 }
 
 .block {
@@ -565,4 +455,54 @@ div {
 }
 .ad-right{
   position: absolute;
+}
+.block-openx{
+  display: none;
+}
+#logo-area .login-wrapper, #logo-area .search-wrapper{
+  display: none;
+}
+.views-exposed-form .views-exposed-widget{
+  padding: 0px;
+}
+.views-exposed-form .views-exposed-widget .form-submit{
+  margin-top: 3px;
+}
+
+#op-content{
+  padding-bottom: 20px;
+  float: left;
+}
+.addthis{
+  .addthis_button_facebook_like.at300b{
+    width: 97px;
+    height: 22px;
+  }
+  .addthis_button_tweet.at300b{
+    width: 106px;
+    height: 25px;
+  }
+}
+body.page-taxonomy .grid.art-main h1{
+  display: none;
+}
+.tax-title{
+  border-bottom: 1px solid #DDD;
+}
+.tax-title h1{
+  padding: 0px 15px;
+}
+body.page-taxonomy #content-area .grid{
+  padding-top: 15px;
+}
+body.page-taxonomy #content-area .grid #sidebar-right{
+  padding-top: 15px;
+}
+strong{
+  font-weight: bold;
+}
+#block-disqus-disqus_comments{
+  float: left;
+  width: 100%;
+  clear: both;
 }

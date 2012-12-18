@@ -22,7 +22,7 @@
 
 /* line 20, ../sass/jcar.scss */
 .jcar .jcarousel-container-horizontal {
-  padding: 20px;
+  padding: 10px 20px;
 }
 
 /* line 24, ../sass/jcar.scss */
@@ -38,56 +38,59 @@
   color: #fff;
   font-weight: bold;
   font-size: 0.8em;
-  margin: 7px 20px 0px 23px;
+  margin: 14px 20px 0px 24px;
   padding: 0px;
+  text-transform: uppercase;
   border-bottom: 2px solid #fff;
 }
 
-/* line 38, ../sass/jcar.scss */
+/* line 39, ../sass/jcar.scss */
 .jcar.jobber h3 {
   border-bottom: 2px solid #ff9000;
   color: #ff9000;
 }
 
-/* line 42, ../sass/jcar.scss */
+/* line 43, ../sass/jcar.scss */
 .jcar .jcarousel-item {
   padding: 0;
   list-style: none;
   background: #000;
-  width: 170px;
   -moz-border-radius-bottomleft: 5px;
   -webkit-border-bottom-left-radius: 5px;
   border-bottom-left-radius: 5px;
   -moz-border-radius-bottomright: 5px;
   -webkit-border-bottom-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  border-bottom: 1px solid #5a5a5a;
   color: #fff;
   font-family: Arial;
 }
-/* line 50, ../sass/jcar.scss */
+/* line 51, ../sass/jcar.scss */
 .jcar .jcarousel-item a {
   color: #fff;
   font-family: Arial;
   text-decoration: none;
 }
-/* line 55, ../sass/jcar.scss */
+/* line 56, ../sass/jcar.scss */
 .jcar .jcarousel-item .views-field-title {
   height: 3em;
   font-size: 0.8em;
   padding: 0.4em;
 }
 
-/* line 63, ../sass/jcar.scss */
+/* line 64, ../sass/jcar.scss */
 .jcar.jobber .mer {
   text-align: center;
+  margin-top: 20px;
 }
-/* line 65, ../sass/jcar.scss */
+/* line 67, ../sass/jcar.scss */
 .jcar.jobber .mer a {
   text-decoration: none;
-  color: #2C91C5;
+  color: #333333;
+  font-family: Arial;
   font-size: 0.9em;
 }
-/* line 71, ../sass/jcar.scss */
+/* line 75, ../sass/jcar.scss */
 .jcar.jobber .jcarousel-item {
   text-align: left;
   background: #ffffff;
@@ -105,57 +108,57 @@
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 86, ../sass/jcar.scss */
+/* line 90, ../sass/jcar.scss */
 .jcar.jobber .jcarousel-item .bilde {
   float: left;
   padding-right: 10px;
 }
-/* line 90, ../sass/jcar.scss */
+/* line 94, ../sass/jcar.scss */
 .jcar.jobber .jcarousel-item .andre {
   float: left;
 }
-/* line 93, ../sass/jcar.scss */
+/* line 97, ../sass/jcar.scss */
 .jcar.jobber .jcarousel-item .views-field.views-field-field-main-image-fid {
   float: left;
 }
-/* line 96, ../sass/jcar.scss */
+/* line 100, ../sass/jcar.scss */
 .jcar.jobber .jcarousel-item .views-field.views-field-title {
   margin: 0px;
   padding: 0px;
   height: auto;
 }
-/* line 100, ../sass/jcar.scss */
+/* line 104, ../sass/jcar.scss */
 .jcar.jobber .jcarousel-item .views-field.views-field-title a {
   font-family: Arial;
   color: #333333;
   font-size: 1.3em;
   font-weight: bold;
 }
-/* line 107, ../sass/jcar.scss */
+/* line 111, ../sass/jcar.scss */
 .jcar.jobber .jcarousel-item .views-field.views-field-field-job-date-value {
   font-size: 0.8em;
 }
-/* line 110, ../sass/jcar.scss */
+/* line 114, ../sass/jcar.scss */
 .jcar.jobber .jcarousel-item .views-field.views-field-field-job-utlyser-value {
   font-weight: bold;
   font-size: 0.8em;
 }
-/* line 114, ../sass/jcar.scss */
+/* line 118, ../sass/jcar.scss */
 .jcar.jobber .jcarousel-item a {
   color: #333333;
 }
 
-/* line 119, ../sass/jcar.scss */
+/* line 123, ../sass/jcar.scss */
 .jcar .jcarousel-item-horizontal {
-  margin: 0 4px;
+  margin: 0 8px 0px 4px;
 }
 
-/* line 123, ../sass/jcar.scss */
+/* line 127, ../sass/jcar.scss */
 .jcar .jcarousel-item-vertical {
   margin: 4px 0;
 }
 
-/* line 127, ../sass/jcar.scss */
+/* line 131, ../sass/jcar.scss */
 .jcar .jcarousel-item-placeholder {
   background: white url(throbber.gif) no-repeat center center;
   color: #000;
@@ -164,9 +167,9 @@
 /**
  * Buttons
  */
-/* line 135, ../sass/jcar.scss */
+/* line 139, ../sass/jcar.scss */
 .jcar .jcarousel-next {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s3abc5716f4.png') 0 -263px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -429px no-repeat;
   display: block;
   width: 30px;
   height: 30px;
@@ -177,14 +180,14 @@
   left: 0px;
 }
 
-/* line 146, ../sass/jcar.scss */
+/* line 150, ../sass/jcar.scss */
 .jcar.jobber .jcarousel-next {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s3abc5716f4.png') 0 -233px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -378px no-repeat;
 }
 
-/* line 149, ../sass/jcar.scss */
+/* line 153, ../sass/jcar.scss */
 .jcar .jcarousel-prev {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s3abc5716f4.png') 0 -293px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -459px no-repeat;
   display: block;
   width: 30px;
   height: 30px;
@@ -195,18 +198,18 @@
   left: 0px;
 }
 
-/* line 160, ../sass/jcar.scss */
+/* line 164, ../sass/jcar.scss */
 .jcar.jobber .jcarousel-prev {
-  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s3abc5716f4.png') 0 -203px no-repeat;
+  background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -348px no-repeat;
 }
 
-/* line 163, ../sass/jcar.scss */
+/* line 167, ../sass/jcar.scss */
 .jcar .jcarousel-navigation {
   margin: 0;
   padding: 0;
 }
 
-/* line 168, ../sass/jcar.scss */
+/* line 172, ../sass/jcar.scss */
 .jcar .jcarousel-navigation li {
   display: inline;
   margin: 0 2px 0 0;
@@ -214,7 +217,7 @@
   background: none;
 }
 
-/* line 175, ../sass/jcar.scss */
+/* line 179, ../sass/jcar.scss */
 .jcar .jcarousel-navigation li.active a {
   font-weight: bold;
   text-decoration: none;

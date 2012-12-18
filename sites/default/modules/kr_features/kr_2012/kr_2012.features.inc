@@ -21,6 +21,20 @@ function kr_2012_ctools_plugin_api() {
  */
 function kr_2012_imagecache_default_presets() {
   $items = array(
+    'bildegalleri_forside' => array(
+      'presetname' => 'bildegalleri_forside',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale_and_crop',
+          'data' => array(
+            'width' => '275',
+            'height' => '183',
+          ),
+        ),
+      ),
+    ),
     'siste_saker' => array(
       'presetname' => 'siste_saker',
       'actions' => array(

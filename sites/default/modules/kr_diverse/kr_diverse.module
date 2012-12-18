@@ -1,5 +1,13 @@
 <?php
 
+function copy_front_page_to_new_theme(){
+	db_query('DELETE FROM {draggableviews_structure} WHERE view_name = "forside"');
+	db_query('INSERT INTO {draggableviews_structure} ( view_name, nid, delta, args, value )
+SELECT  \'forside\', d.nid, d.delta, d.args, d.value
+FROM    draggableviews_structure d
+WHERE   d.view_name = \'articles\'');
+}
+
 function kr_diverse_block($op = 'list', $delta = 0, $edit = array()) {
 
   if ($op == 'list') {
@@ -9,6 +17,10 @@ function kr_diverse_block($op = 'list', $delta = 0, $edit = array()) {
     );
     $blocks[1] = array(
       'info' => 'KR bildegalleri', 
+      'cache' => BLOCK_CACHE_PER_PAGE,
+    );
+    $blocks[2] = array(
+      'info' => 'KR aktuell', 
       'cache' => BLOCK_CACHE_PER_PAGE,
     );
     return $blocks;
@@ -30,9 +42,84 @@ function kr_diverse_block($op = 'list', $delta = 0, $edit = array()) {
           'content' => _kr_bildegalleriet(),
         );
         break;
+      case 2:
+        // Your module will need to define this function to render the block.
+        $html = _kr_aktuelle();
+		if(strlen($html)>0){
+	        drupal_add_js(drupal_get_path('module', 'kr_diverse') . '/kr_div.js');
+			drupal_add_js('(function ($) {
+				$(document).ready(function() {
+					
+				});
+			}(jQuery));', 'inline');
+		}
+        $block = array(
+          'subject' => '', 
+          'content' => $html,
+        );
+        break;
     }
     return $block;
   }
+  else if ($op == 'configure' && $delta == 2) {
+  	$terms = taxonomy_get_tree(43);
+	$options[0] = 'Ingen valgt';
+	foreach($terms as $delta => $term){
+		$options[$term->tid] = $term->name;
+	}
+  	$form['tax'] = array(
+		'#type' => 'select', 	
+  		'#title' => t('Choose category'), 	
+  		'#default_value' => variable_get('kr_diverse_aktuell_tax', 10),
+		'#options' => $options,   		
+	);
+	$form['number'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Number of items shown'),
+		'#default_value' => variable_get('kr_diverse_aktuell_number', 10)
+	);
+  	return $form;
+  }
+  else if ($op == 'save' && $delta == 2) {
+    variable_set('kr_diverse_aktuell_tax', $edit['tax']);
+    variable_set('kr_diverse_aktuell_number', $edit['number']);
+  }
+}
+function _kr_aktuelle(){
+	$tax = variable_get('kr_diverse_aktuell_tax', 0);
+	$number = variable_get('kr_diverse_aktuell_number', 10);
+	if(!is_numeric($number)){
+		$number = 10;
+	}
+
+	if($tax == 0){
+		return;
+	}else{
+		$query = db_query('SELECT * FROM term_node t
+		LEFT JOIN node n ON t.vid = n.vid
+		WHERE t.tid = '.$tax.' AND n.status = 1
+		ORDER BY n.created DESC
+		LIMIT '.$number);
+		$taxonomy = taxonomy_get_term($tax);
+		
+		while($result = db_fetch_object($query)){
+			$lis .= '<li><a href="'.url('node/'.$result->nid).'">'.$result->title.'</a></li>';
+		}
+		$html = '
+		<div class="ticker">
+			<div class="ticker-label">'.l($taxonomy->name.':', 'taxonomy/term/'.$taxonomy->tid).'</div>
+			<div class="ticker-news">
+				<ul>
+					'.$lis.'
+				</ul>
+			</div>
+			<div class="ticker-controls">
+				<div class="ticker-prev"><span></span></div>				
+				<div class="ticker-next"><span></span></div>
+			</div>
+		</div>';
+		return $html;
+	}	
 }
 function _kr_bildegalleriet(){
   $nid = arg(1);
@@ -109,6 +196,17 @@ function _kr_bildegalleriet(){
   }
 }
 function _kr_div_addthis(){
+  return '<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ramsalt"></script>
+<!-- AddThis Button END -->';	
+	
+	
   if(arg(2) == 'edit' || arg(1) =='add'){
     return;
   }
@@ -149,6 +247,10 @@ function kr_diverse_form_alter(&$form, &$form_state, $form_id) {
       drupal_add_js($js, 'inline');
     }
   }
+
+	if($form_id == 'user_login'){
+		$form['#attributes']['class'] = 'form-label-alter';
+	}
 
   //$("#edit-field-op-author-0-nid-nid").value(22);
 }

@@ -66,9 +66,25 @@ function kr_2012_form_alter(&$form, &$form_state, $form_id){
 	if($form_id == 'article_node_form'){
 		$theme = variable_get('theme_default', '');
 		if($theme == 'kr2012'){
-			$form['title']['#description'] .= 'Legg inn '.htmlentities('&#173;').' for å bryte ord, om de ikke får plass på en linje.';
+			$form['title']['#description'] .= 'Legg inn '.htmlentities('#').' for å bryte ord, om de ikke får plass på en linje.';
 		}
 	}
-	
-	
+}
+
+function kr_2012_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL){
+	switch ($op) {
+    	case 'presave':
+			$pattern = '/(?<!\&)\\#/';
+			$replacement = '&#173;';
+			$ny_tittel = preg_replace($pattern, $replacement, $node->title);
+			$node->title = $ny_tittel;
+			break;
+		case 'prepare':
+			$pattern = '/&#173;/';
+			$replacement = '#';
+			$ny_tittel = preg_replace($pattern, $replacement, $node->title);
+			$node->title = $ny_tittel;
+			
+			break;
+	}
 }
