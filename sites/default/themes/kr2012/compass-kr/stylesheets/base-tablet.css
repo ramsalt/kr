@@ -9,11 +9,16 @@
     display: block;
   }
 
-  /* line 15, ../sass/base-tablet.scss */
+  /* line 14, ../sass/base-tablet.scss */
+  .hide-mobile {
+    display: block;
+  }
+
+  /* line 18, ../sass/base-tablet.scss */
   #logo-area {
     height: 76px;
   }
-  /* line 19, ../sass/base-tablet.scss */
+  /* line 22, ../sass/base-tablet.scss */
   #logo-area .wrapper .container .inner-container {
     -moz-border-radius-topleft: 3px;
     -webkit-border-top-left-radius: 3px;
@@ -22,28 +27,28 @@
     -webkit-border-top-right-radius: 3px;
     border-top-right-radius: 3px;
   }
-  /* line 22, ../sass/base-tablet.scss */
+  /* line 25, ../sass/base-tablet.scss */
   #logo-area .wrapper .container .grid {
     width: 728px;
     margin: 0px 20px;
   }
-  /* line 26, ../sass/base-tablet.scss */
+  /* line 29, ../sass/base-tablet.scss */
   #logo-area .wrapper .container #logo {
     margin-left: 0px;
   }
-  /* line 29, ../sass/base-tablet.scss */
+  /* line 32, ../sass/base-tablet.scss */
   #logo-area .wrapper .container .logo-item-wrapper {
     position: absolute;
     right: 0px;
     padding: 15px;
   }
-  /* line 33, ../sass/base-tablet.scss */
+  /* line 36, ../sass/base-tablet.scss */
   #logo-area .wrapper .container .logo-item-wrapper .login-wrapper {
     float: left;
     margin-right: 25px;
     margin-top: 6px;
   }
-  /* line 37, ../sass/base-tablet.scss */
+  /* line 40, ../sass/base-tablet.scss */
   #logo-area .wrapper .container .logo-item-wrapper .login-wrapper a {
     background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -303px no-repeat;
     font-weight: bold;
@@ -53,16 +58,16 @@
     font-family: Helvetica;
     color: #fff;
   }
-  /* line 45, ../sass/base-tablet.scss */
+  /* line 48, ../sass/base-tablet.scss */
   #logo-area .wrapper .container .logo-item-wrapper .login-wrapper a span {
     padding: 3px 0px 0px 34px;
     float: left;
   }
-  /* line 51, ../sass/base-tablet.scss */
+  /* line 54, ../sass/base-tablet.scss */
   #logo-area .wrapper .container .logo-item-wrapper .search-wrapper {
     float: left;
   }
-  /* line 53, ../sass/base-tablet.scss */
+  /* line 56, ../sass/base-tablet.scss */
   #logo-area .wrapper .container .logo-item-wrapper .search-wrapper input.form-text {
     height: 34px;
     width: 150px;
@@ -76,7 +81,7 @@
     font-family: Arial;
     font-size: 1em;
   }
-  /* line 64, ../sass/base-tablet.scss */
+  /* line 67, ../sass/base-tablet.scss */
   #logo-area .wrapper .container .logo-item-wrapper .search-wrapper .form-submit {
     position: absolute;
     right: 21px;
@@ -179,12 +184,12 @@
     margin: 6px 0px 0px 4px;
   }
 
-  /* line 86, ../sass/base-tablet.scss */
+  /* line 89, ../sass/base-tablet.scss */
   #content-area .wrapper .container .inner-container {
     padding-top: 2%;
   }
 
-  /* line 93, ../sass/base-tablet.scss */
+  /* line 96, ../sass/base-tablet.scss */
   .view-bilde-slider-node .views-field-field-main-image-data {
     font-family: Arial;
     font-size: 1em;
@@ -360,7 +365,7 @@
     height: 44px;
   }
 
-  /* line 112, ../sass/base-tablet.scss */
+  /* line 115, ../sass/base-tablet.scss */
   #logo-area .login-wrapper, #logo-area .search-wrapper {
     display: block;
   }

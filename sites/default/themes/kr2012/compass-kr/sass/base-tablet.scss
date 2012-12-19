@@ -11,6 +11,9 @@ $logos: sprite-map("logo/*.png");
   .visible-tablet{
     display: block;
   }
+  .hide-mobile{
+    display: block;
+  }
 
   #logo-area{
     height: 76px; 

@@ -469,7 +469,7 @@ function kr_2012_context_default_contexts() {
             'class' => 'rammeboks',
           ),
           'boxes-box-4bb00d6c' => array(
-            'class' => 'rammeboks',
+            'class' => 'rammeboks hide-mobile',
           ),
           'simplenews-22' => array(
             'class' => 'rammeboks',
@@ -533,7 +533,7 @@ function kr_2012_context_default_contexts() {
       'seven_one' => array(
         'class' => '',
         'blocks' => array(
-          'openx-1' => array(
+          'openx-9' => array(
             'class' => '',
           ),
         ),

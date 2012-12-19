@@ -1,0 +1,68 @@
+/* line 1, ../sass/node.scss */
+.node-type-ordforer .field {
+  margin-bottom: 0.5em;
+}
+
+/* line 4, ../sass/node.scss */
+.node-type-ordforer .field-label {
+  text-transform: none;
+}
+
+/* line 7, ../sass/node.scss */
+.node-type-ordforer div.fieldgroup .content, .node-type-ordforer .field-items .field-item {
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+/* line 11, ../sass/node.scss */
+.node-type-ordforer .fieldgroup.group-perioder {
+  margin: 0px;
+}
+
+/* line 17, ../sass/node.scss */
+.node-type-ordforer .pane-ordforer-group-perioder,
+.node-type-ordforer .pane-ordforer-group-perioder div.fieldgroup,
+.node-type-ordforer #op-content .content {
+  margin-bottom: 0px;
+}
+
+/* line 20, ../sass/node.scss */
+.node-type-ordforer .pane-ordforer-group-perioder h2 {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 0.9em;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* line 26, ../sass/node.scss */
+.node-type-ordforer .pane-ordforer-group-perioder thead {
+  display: none;
+}
+
+/* line 29, ../sass/node.scss */
+.node-type-ordforer .pane-ordforer-group-perioder tbody {
+  border-top: none;
+}
+
+/* line 32, ../sass/node.scss */
+.node-type-ordforer .pane-ordforer-group-perioder tbody tr {
+  padding: 0px;
+  border-bottom: none;
+  background: transparent;
+}
+
+/* line 37, ../sass/node.scss */
+.node-type-ordforer .field-items .field-item {
+  background: none;
+}
+
+/* line 40, ../sass/node.scss */
+.node-type-ordforer .pane-field-ordf-bilde {
+  float: right;
+  margin-left: 15px;
+}
+
+/* line 44, ../sass/node.scss */
+.node-type-ordforer #op-content {
+  padding-top: 20px;
+}

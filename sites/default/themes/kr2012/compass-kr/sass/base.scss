@@ -60,6 +60,9 @@ body.admin-menu{
 .visible-desktop, .visible-tablet{
     display: none;
 }
+.hide-mobile{
+  display: none;
+}
 .visible-mobile{
     display: block;
 }
@@ -239,6 +242,8 @@ body .body-content, body .body-content p{
   border-left: 1px solid #d9d9d9;
   border-right: 1px solid #d9d9d9;
   margin: 10px 0px 20px 0px;
+  float: left;
+  width: 100%;
   .faktatittel a{
     color: #d71010;
     font-family: Arial;
@@ -503,6 +508,9 @@ body.page-taxonomy #content-area .grid{
 }
 body.page-taxonomy #content-area .grid #sidebar-right{
   padding-top: 15px;
+}
+#sidebar-right{
+  float: left;
 }
 strong{
   font-weight: bold;

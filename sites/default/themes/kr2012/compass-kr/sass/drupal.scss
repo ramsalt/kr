@@ -1,3 +1,4 @@
+@import "compass/css3/border-radius";
 #outer-wrapper{
   #wrapper{
     div.view div.views-admin-links {
@@ -54,4 +55,29 @@
       margin: 0px;
     }
   }
+}
+body.page-user #tabs-wrapper #drupal-control-bar{
+  position: relative;
+  top: 0;
+  background: transparent;
+}
+body.page-user #tabs-wrapper #drupal-control-bar a{
+  color: #333;
+  @include border-radius(4px, 4px);  
+  background: #f4faff;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+}
+body.page-user #tabs-wrapper #drupal-control-bar a.active{
+  color: #000;
+  background: #d7ecff;
+  border: 1px solid #c0e2ff;
+}
+body.page-user #tabs-wrapper #drupal-control-bar a:hover{
+  color: #000;
+  background: #d7ecff;
+  border: 1px solid #c0e2ff;
+}
+body.page-user #tabs-wrapper #drupal-control-bar ul li{
+  margin: 0px 12px 0px 0px;
 }

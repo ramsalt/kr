@@ -1,4 +1,6 @@
-
+.node-type-ordforer .field{
+  margin-bottom: 0.5em;
+}
 .node-type-ordforer .field-label{
   text-transform: none;
 }
@@ -6,7 +8,7 @@
   padding-left: 0px;
   margin-left: 0px;
 }
-.node-type-ordforer .field-type-nodereference{
+.node-type-ordforer .fieldgroup.group-perioder{
   margin: 0px;
 }
 .node-type-ordforer .pane-ordforer-group-perioder,
@@ -38,4 +40,7 @@
 .node-type-ordforer .pane-field-ordf-bilde{
   float: right;
   margin-left: 15px;
+}
+.node-type-ordforer #op-content{
+  padding-top: 20px;
 }
