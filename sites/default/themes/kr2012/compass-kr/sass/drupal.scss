@@ -81,3 +81,32 @@ body.page-user #tabs-wrapper #drupal-control-bar a:hover{
 body.page-user #tabs-wrapper #drupal-control-bar ul li{
   margin: 0px 12px 0px 0px;
 }
+.block{
+  ul.adminliste{
+    padding: 0px;
+    margin: 0px 20px;
+    float: left;
+    li{
+      float: left;
+      margin: 0px 10px 0px 0px;
+      padding: 0px;
+      list-style: none;
+      a{
+        text-decoration: none;
+        -webkit-appearance: none;
+        background: #568ebf;
+        color: #fff;
+        padding: 10px 20px;
+        font-family: Arial;
+        border: 1px solid transparent;
+        @include border-radius(4px, 4px);
+        border: 1px solid transparent;
+      }
+      a:hover{
+        color: #000;
+        background: #d7ecff;
+        border: 1px solid #c0e2ff;
+      }
+    }
+  }
+}

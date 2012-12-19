@@ -455,6 +455,9 @@ $logos: sprite-map("logo/*.png");
     .views-field-title, .views-field-field-main-image-fid, .views-field-field-teaser-value{
       margin: 0px 15px;
     }
+    .views-field-title a{
+      font-family: 'MerriweatherRegular', Arial, serif;
+    }
     p{
       margin: 0px;
       line-height: 1.4em;
@@ -743,9 +746,13 @@ $logos: sprite-map("logo/*.png");
     background: #dce4eb;
     padding: 1em;
     h2{
-      font-size: 1.4em;
-      font-family: Arial;
-      float: left;
+      a{
+        font-size: 1.4em;
+        font-family: Arial;
+        float: left;
+        text-decoration: none;
+        color: #333;
+      }
     }
     .link{
       float: right;

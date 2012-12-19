@@ -41,7 +41,7 @@ function kr_2012_block($op = 'list', $delta = 0, $edit = array()) {
   }
   else if ($op == 'view') {
   	$block = array(
-		'subject' => variable_get('kr_2012_tittel_'.$delta, ''),
+		'subject' => l(variable_get('kr_2012_tittel_'.$delta), variable_get('kr_2012_link_'.$delta, '')),
 		'content' => _kr_2012_block_content($delta)
 	);
 

@@ -623,7 +623,7 @@ function kr_2012_views_default_views() {
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
-  $handler->display->display_options['pager']['options']['offset'] = '9';
+  $handler->display->display_options['pager']['options']['offset'] = '10';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Felt: Innhold: Main Image (field_main_image) */
   $handler->display->display_options['fields']['field_main_image_fid']['id'] = 'field_main_image_fid';
@@ -689,7 +689,7 @@ function kr_2012_views_default_views() {
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
-  $handler->display->display_options['pager']['options']['offset'] = '13';
+  $handler->display->display_options['pager']['options']['offset'] = '14';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Felt: Innhold: Main Image (field_main_image) */
   $handler->display->display_options['fields']['field_main_image_fid']['id'] = 'field_main_image_fid';
@@ -755,7 +755,7 @@ function kr_2012_views_default_views() {
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '7';
-  $handler->display->display_options['pager']['options']['offset'] = '18';
+  $handler->display->display_options['pager']['options']['offset'] = '19';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Felt: Innhold: Main Image (field_main_image) */
   $handler->display->display_options['fields']['field_main_image_fid']['id'] = 'field_main_image_fid';
@@ -821,7 +821,7 @@ function kr_2012_views_default_views() {
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
-  $handler->display->display_options['pager']['options']['offset'] = '25';
+  $handler->display->display_options['pager']['options']['offset'] = '26';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Felt: Innhold: Main Image (field_main_image) */
   $handler->display->display_options['fields']['field_main_image_fid']['id'] = 'field_main_image_fid';
@@ -887,7 +887,7 @@ function kr_2012_views_default_views() {
   $handler->display->display_options['css_class'] = 'newslist adart';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '6';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Felt: Node: Tittel */
