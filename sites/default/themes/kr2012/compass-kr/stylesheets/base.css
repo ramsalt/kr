@@ -1749,3 +1749,10 @@ strong {
   float: left;
   position: relative;
 }
+
+/* line 531, ../sass/base.scss */
+.view-id-Blogger .views-row {
+  float: left;
+  width: 100%;
+  clear: both;
+}
