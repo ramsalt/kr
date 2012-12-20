@@ -66,3 +66,19 @@
 .node-type-ordforer #op-content {
   padding-top: 20px;
 }
+
+/* line 47, ../sass/node.scss */
+body .body-content, body .body-content p {
+  font-size: 1.02em;
+  line-height: 1.6em;
+  color: #333;
+}
+/* line 51, ../sass/node.scss */
+body .body-content h2, body .body-content p h2 {
+  font-size: 1.2em;
+  padding-top: 1em;
+}
+/* line 55, ../sass/node.scss */
+body .body-content em, body .body-content p em {
+  font-style: italic;
+}
