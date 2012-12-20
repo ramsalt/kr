@@ -1,7 +1,7 @@
 <?php
 function kr2012_byline($node){
 	$antall_forfattere = count($node->field_op_author);
-	if($antall_forfattere > 0){
+	if($antall_forfattere > 0 && $node->field_op_author[0]['nid'] != NULL){
 		$nummer = 1;
 		$forfattere_html = '<div class="forfatter">Av ';
 		foreach($node->field_op_author as $delta => $author){
@@ -148,5 +148,24 @@ function kr2012_nopremium_message($node){
   $html .= $block['content'];
   return $html;
 }
-
+function kr2012_nopremium_body($node) {
+  $output  = $node->teaser;
+  $output .= '<div class="nopremium-message clearfix">'. $node->nopremium_message .'</div>';
+  return $output;
+}
+function kr2012_preprocess_block(&$variables, $hook){
+	//print_r($variables);
+	if($variables['block']->module == 'cck_blocks' && $variables['block']->bid == 'cck_blocks-field_stilling_geopos'){
+		$nid = arg(1);
+		if(is_numeric($nid)){
+			$node = node_load($nid);
+			if(strlen($node->field_stilling_geopos[0]['openlayers_wkt'])>0){
+				
+			}else{
+				unset($variables['block']->content);
+				unset($variables['block']->subject);
+			}
+		}
+  	}
+}
 ?>

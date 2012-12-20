@@ -89,6 +89,7 @@ $logos: sprite-map("logo/*.png");
         font-size: 0.8em;
         text-decoration: none;
         font-weight: bold;
+        height: 17px;
       }
     }
   }
@@ -376,11 +377,16 @@ $logos: sprite-map("logo/*.png");
 }
 @mixin listeboks{
   margin-bottom: 15px;
+
   .item-list{
     h3{
       border-bottom: 2px solid #333;
       padding: 4px 0px;
       margin-bottom: 5px;
+      a{
+        color: #333;
+        text-decoration: none;
+      }
     }
     ul{
       padding: 0px;
@@ -448,6 +454,9 @@ $logos: sprite-map("logo/*.png");
   .newslist{
     .views-field-title, .views-field-field-main-image-fid, .views-field-field-teaser-value{
       margin: 0px 15px;
+    }
+    .views-field-title a{
+      font-family: 'MerriweatherRegular', Arial, serif;
     }
     p{
       margin: 0px;
@@ -536,6 +545,11 @@ $logos: sprite-map("logo/*.png");
         margin: 0px 0px 0px 15px;
         width: 59%;
     }
+    .views-field-field-teaser-value{
+      display: none;
+    }
+  }
+  .newslist.adart{
     .views-field-field-teaser-value{
       display: none;
     }
@@ -650,6 +664,15 @@ $logos: sprite-map("logo/*.png");
       display: block;
     }
   }
+  .newslist.adart{
+    .views-row-last{
+      border-bottom: none;
+    }
+    .views-field-field-teaser-value{
+      display: block;
+    }
+  
+  }
 }
 @mixin newslist-desktop{
   .newslist.sak-4{
@@ -707,6 +730,11 @@ $logos: sprite-map("logo/*.png");
       width: 19.8%;
     }
   }
+  .newslist.adart{
+    .views-row-last{
+      border-bottom: 1px solid #DDD;
+    }
+  }
 }
 @mixin ownsection-mob{
   .ownsection{
@@ -718,9 +746,13 @@ $logos: sprite-map("logo/*.png");
     background: #dce4eb;
     padding: 1em;
     h2{
-      font-size: 1.4em;
-      font-family: Arial;
-      float: left;
+      a{
+        font-size: 1.4em;
+        font-family: Arial;
+        float: left;
+        text-decoration: none;
+        color: #333;
+      }
     }
     .link{
       float: right;
@@ -885,8 +917,8 @@ $logos: sprite-map("logo/*.png");
       float: left;
       margin: 0px;
     }
-    #edit-pass-wrapper{
-      margin-left: 14px;
+    #edit-name-wrapper{
+      margin-right: 14px;
     }
     .form-submit{
       margin-top: 10px;

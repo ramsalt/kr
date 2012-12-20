@@ -1,3 +1,7 @@
+.flexslider{
+	padding-bottom: 15px;
+}
+
 .page-node .flexslider ul.slides li{
   padding: 0px;
   margin: 0px;
@@ -46,22 +50,17 @@
     color: #FFFFFF;
     font-size: 12px;
     height: 13px;
-    padding: 4px 0;
+    padding: 4px 0 8px 0;
     text-indent: 0;
     width: 25px;
 }
 .page-node .flex-control-nav li a.active {
-    background: none repeat scroll 0 0 #94021C;
-    box-shadow: 0 1px 1px 0 #D4616A inset;
-    color: #D1555E;
+    background: none repeat scroll 0 0 #369;
+    box-shadow: 0 1px 1px 0 #4876A3 inset;
+    color: #000;
     text-decoration: none;
 }
-.page-node .flex-control-nav li a:hover {
-    background: none repeat scroll 0 0 #5D5D5D;
-    box-shadow: 0 1px 1px 0 #333333 inset;
-    color: #FFFFFF;
-    text-decoration: none;
-}
+
 
 .page-node .content .flex-direction-nav li{
     margin: 0px;

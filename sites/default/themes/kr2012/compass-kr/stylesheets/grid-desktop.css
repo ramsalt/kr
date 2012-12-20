@@ -75,50 +75,60 @@
     left: 25%;
   }
   /* line 65, ../sass/grid-desktop.scss */
+  .front-page .three {
+    width: 580px;
+    float: left;
+  }
+  /* line 69, ../sass/grid-desktop.scss */
+  .front-page .three-art {
+    float: left;
+    width: 411px;
+  }
+  /* line 73, ../sass/grid-desktop.scss */
   .front-page .seven {
     float: left;
     width: 100%;
     position: relative;
   }
-  /* line 71, ../sass/grid-desktop.scss */
+  /* line 79, ../sass/grid-desktop.scss */
   .front-page .seven_two .seven-inner {
     margin-right: 20px;
   }
-  /* line 75, ../sass/grid-desktop.scss */
+  /* line 83, ../sass/grid-desktop.scss */
   .front-page .seven_one_two {
     float: left;
     width: 58%;
   }
-  /* line 79, ../sass/grid-desktop.scss */
+  /* line 87, ../sass/grid-desktop.scss */
   .front-page .seven_three {
     width: 42%;
   }
-  /* line 82, ../sass/grid-desktop.scss */
+  /* line 90, ../sass/grid-desktop.scss */
   .front-page .ten {
     margin: 0px 1%;
     width: 31%;
   }
-  /* line 86, ../sass/grid-desktop.scss */
+  /* line 94, ../sass/grid-desktop.scss */
   .front-page .ten.ten_one {
     float: left;
   }
-  /* line 89, ../sass/grid-desktop.scss */
+  /* line 97, ../sass/grid-desktop.scss */
   .front-page .ten.ten_two {
     float: left;
     display: block;
   }
-  /* line 93, ../sass/grid-desktop.scss */
+  /* line 101, ../sass/grid-desktop.scss */
   .front-page .ten.ten_three {
     float: left;
     display: block;
   }
 
-  /* line 98, ../sass/grid-desktop.scss */
+  /* line 106, ../sass/grid-desktop.scss */
   .page-stillinger .container-16 .inner-container .art-main {
     width: 100%;
     margin: 0px;
   }
-  /* line 101, ../sass/grid-desktop.scss */
+  /* line 109, ../sass/grid-desktop.scss */
   .page-stillinger .container-16 .inner-container .art-main .panels-flexible-region-3-top {
     width: 100%;
   }

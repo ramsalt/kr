@@ -1,0 +1,112 @@
+@import "compass/css3/border-radius";
+#outer-wrapper{
+  #wrapper{
+    div.view div.views-admin-links {
+      font-size: xx-small;
+      margin-right: 1em;
+      margin-top: 1em;
+    /*  width: 95%; */
+    }
+    
+    .block div.view div.views-admin-links {
+      margin-top: 0;
+    }
+    
+    div.view div.views-admin-links ul {
+      margin: 0;
+      padding: 0;
+    }
+    
+    div.view div.views-admin-links li {
+      margin: 0;
+      padding: 0 0 2px 0;
+      z-index: 201;
+      width: auto;
+      border: none;
+    }
+    
+    div.view div.views-admin-links li a {
+      padding: 0;
+      margin: 0;
+      color: #ccc;
+    }
+    
+    div.view div.views-admin-links li a:before {
+      content: "[";
+    }
+    div.view div.views-admin-links li a:after {
+      content: "]";
+    }
+    
+    div.view div.views-admin-links-hover a,
+    div.view div.views-admin-links:hover a {
+      color: #000;
+    }
+    
+    div.view div.views-admin-links-hover,
+    div.view div.views-admin-links:hover {
+      background: transparent;
+    }
+  }
+}
+.item-list{
+  ul.pager{
+    li{
+      margin: 0px;
+    }
+  }
+}
+body.page-user #tabs-wrapper #drupal-control-bar{
+  position: relative;
+  top: 0;
+  background: transparent;
+}
+body.page-user #tabs-wrapper #drupal-control-bar a{
+  color: #333;
+  @include border-radius(4px, 4px);  
+  background: #f4faff;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+}
+body.page-user #tabs-wrapper #drupal-control-bar a.active{
+  color: #000;
+  background: #d7ecff;
+  border: 1px solid #c0e2ff;
+}
+body.page-user #tabs-wrapper #drupal-control-bar a:hover{
+  color: #000;
+  background: #d7ecff;
+  border: 1px solid #c0e2ff;
+}
+body.page-user #tabs-wrapper #drupal-control-bar ul li{
+  margin: 0px 12px 0px 0px;
+}
+.block{
+  ul.adminliste{
+    padding: 0px;
+    margin: 0px 20px;
+    float: left;
+    li{
+      float: left;
+      margin: 0px 10px 0px 0px;
+      padding: 0px;
+      list-style: none;
+      a{
+        text-decoration: none;
+        -webkit-appearance: none;
+        background: #568ebf;
+        color: #fff;
+        padding: 10px 20px;
+        font-family: Arial;
+        border: 1px solid transparent;
+        @include border-radius(4px, 4px);
+        border: 1px solid transparent;
+      }
+      a:hover{
+        color: #000;
+        background: #d7ecff;
+        border: 1px solid #c0e2ff;
+      }
+    }
+  }
+}

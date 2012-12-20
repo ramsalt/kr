@@ -24,7 +24,7 @@ function kr_most_viewed_block($op = 'list', $delta = 0, $edit = array()) {
   
 function _most_viewd_last_week(){
 	$sid = 'mest_lest_forrige_uke';
-	if (($cache = cache_get($sid, 'cache') && FALSE)
+	if (($cache = cache_get($sid, 'cache'))
       && !empty($cache->data)
       && (time() < $cache->expire)) //check expiration manually
 	{
@@ -45,7 +45,10 @@ function _most_viewd_last_week(){
 		$i = 0;
 		while($result = db_fetch_object($query)){
 			//imagecache_create_url('sistesaker', $result->filepath)
-			$html = '<span class="views-field views-field-field-main-image-fid"><div class="field-content"><a href="'.url('node/'.$result->nid).'" class="imagecache imagecache-siste_saker imagecache-linked imagecache-siste_saker_linked"><img src="'.imagecache_create_url('siste_saker', $result->filepath).'" alt="" ></a></div>  </span>';
+			$html = '';
+			if(is_string($result->filepath)){
+				$html .= '<span class="views-field views-field-field-main-image-fid"><div class="field-content"><a href="'.url('node/'.$result->nid).'" class="imagecache imagecache-siste_saker imagecache-linked imagecache-siste_saker_linked"><img src="'.imagecache_create_url('siste_saker', $result->filepath).'" alt="" ></a></div>  </span>';
+			}
 			$html .= l(str_replace('&#173;', '', $result->title), 'node/'.$result->nid);
 			$items[] = $html;
 			$i++;
@@ -57,7 +60,6 @@ function _most_viewd_last_week(){
 		$attributes = array('class' => 'lenker');
 		$attributes = array();
 		$title = 'Mest lest forrige uke';
-		$html = 'sss';
 		$data = theme('item_list', $items, $title, $type, $attributes);
 		cache_set($sid, $data, 'cache', time()+3600);
 	}

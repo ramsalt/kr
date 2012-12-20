@@ -265,17 +265,23 @@ function kr_2012_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'kr_diverse-3' => array(
+          'module' => 'kr_diverse',
+          'delta' => 3,
+          'region' => 'one_one',
+          'weight' => 0,
+        ),
         'views-forside-block_1' => array(
           'module' => 'views',
           'delta' => 'forside-block_1',
           'region' => 'one_one',
-          'weight' => 0,
+          'weight' => 1,
         ),
         'views-forside-block_2' => array(
           'module' => 'views',
           'delta' => 'forside-block_2',
           'region' => 'one_one',
-          'weight' => 1,
+          'weight' => 2,
         ),
         'views-forside-block_3' => array(
           'module' => 'views',
@@ -301,28 +307,40 @@ function kr_2012_context_default_contexts() {
           'region' => 'one_three',
           'weight' => 2,
         ),
+        'block-10' => array(
+          'module' => 'block',
+          'delta' => 10,
+          'region' => 'two',
+          'weight' => 0,
+        ),
         'kr_2012-0' => array(
           'module' => 'kr_2012',
           'delta' => 0,
           'region' => 'two',
-          'weight' => 0,
+          'weight' => 1,
         ),
         'kr_2012-1' => array(
           'module' => 'kr_2012',
           'delta' => 1,
           'region' => 'two',
-          'weight' => 1,
+          'weight' => 2,
         ),
         'kr_2012-2' => array(
           'module' => 'kr_2012',
           'delta' => 2,
           'region' => 'two',
-          'weight' => 2,
+          'weight' => 3,
         ),
         'openx-3' => array(
           'module' => 'openx',
           'delta' => 3,
           'region' => 'three',
+          'weight' => 0,
+        ),
+        'views-forside-block_8' => array(
+          'module' => 'views',
+          'delta' => 'forside-block_8',
+          'region' => 'three_art',
           'weight' => 0,
         ),
         'views-forside-block_4' => array(
@@ -343,9 +361,9 @@ function kr_2012_context_default_contexts() {
           'region' => 'six',
           'weight' => 0,
         ),
-        'openx-1' => array(
+        'openx-9' => array(
           'module' => 'openx',
-          'delta' => 1,
+          'delta' => 9,
           'region' => 'seven_one',
           'weight' => 0,
         ),
@@ -431,12 +449,18 @@ function kr_2012_context_default_contexts() {
       'toparea' => array(
         'class' => '',
       ),
+      'prearea' => array(
+        'class' => '',
+      ),
       'ad_right' => array(
         'class' => '',
       ),
       'one_one' => array(
         'class' => '',
         'blocks' => array(
+          'kr_diverse-3' => array(
+            'class' => '',
+          ),
           'views-forside-block_1' => array(
             'class' => '',
           ),
@@ -460,7 +484,7 @@ function kr_2012_context_default_contexts() {
             'class' => 'rammeboks',
           ),
           'boxes-box-4bb00d6c' => array(
-            'class' => 'rammeboks',
+            'class' => 'rammeboks hide-mobile',
           ),
           'simplenews-22' => array(
             'class' => 'rammeboks',
@@ -485,6 +509,14 @@ function kr_2012_context_default_contexts() {
         'class' => '',
         'blocks' => array(
           'openx-3' => array(
+            'class' => '',
+          ),
+        ),
+      ),
+      'three_art' => array(
+        'class' => '',
+        'blocks' => array(
+          'views-forside-block_8' => array(
             'class' => '',
           ),
         ),
@@ -516,7 +548,7 @@ function kr_2012_context_default_contexts() {
       'seven_one' => array(
         'class' => '',
         'blocks' => array(
-          'openx-1' => array(
+          'openx-9' => array(
             'class' => '',
           ),
         ),

@@ -104,9 +104,10 @@ Drupal.Ajax.go = function(formObj, submitter) {
     },
     dataType : 'json',
     error: function (XMLHttpRequest, textStatus, errorThrown) {
-      window.alert(Drupal.t('ajax.module: An unknown error has occurred.'));
+      //window.alert(Drupal.t('ajax.module: An unknown error has occurred.'));
       if (window.console) {
-        console.log('error', arguments);
+        //console.log('error', arguments);
+        document.location.reload();
       }
       return true;
     },

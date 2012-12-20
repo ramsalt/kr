@@ -1,0 +1,46 @@
+.node-type-ordforer .field{
+  margin-bottom: 0.5em;
+}
+.node-type-ordforer .field-label{
+  text-transform: none;
+}
+.node-type-ordforer div.fieldgroup .content, .node-type-ordforer .field-items .field-item{
+  padding-left: 0px;
+  margin-left: 0px;
+}
+.node-type-ordforer .fieldgroup.group-perioder{
+  margin: 0px;
+}
+.node-type-ordforer .pane-ordforer-group-perioder,
+.node-type-ordforer .pane-ordforer-group-perioder div.fieldgroup,
+.node-type-ordforer #op-content .content
+{
+  margin-bottom: 0px;
+}
+.node-type-ordforer .pane-ordforer-group-perioder h2{
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 0.9em;
+  padding: 0px;
+  margin: 0px;
+}
+.node-type-ordforer .pane-ordforer-group-perioder thead{
+  display: none;
+}
+.node-type-ordforer .pane-ordforer-group-perioder tbody{
+  border-top: none;
+}
+.node-type-ordforer .pane-ordforer-group-perioder tbody tr{
+  padding: 0px;
+  border-bottom: none;
+  background: transparent;
+}
+.node-type-ordforer .field-items .field-item{
+  background: none;
+}
+.node-type-ordforer .pane-field-ordf-bilde{
+  float: right;
+  margin-left: 15px;
+}
+.node-type-ordforer #op-content{
+  padding-top: 20px;
+}

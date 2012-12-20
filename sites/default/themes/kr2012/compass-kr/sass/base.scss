@@ -56,8 +56,12 @@ body{
 body.admin-menu{
   margin-top: 40px !important;
 }
+
 .visible-desktop, .visible-tablet{
     display: none;
+}
+.hide-mobile{
+  display: none;
 }
 .visible-mobile{
     display: block;
@@ -178,8 +182,8 @@ body.admin-menu{
         text-decoration: none;  
       }
       .container{
-        .grid{
-          
+        .grid-16{
+          margin: 0px 15px;
         }
       }
     }
@@ -238,6 +242,8 @@ body .body-content, body .body-content p{
   border-left: 1px solid #d9d9d9;
   border-right: 1px solid #d9d9d9;
   margin: 10px 0px 20px 0px;
+  float: left;
+  width: 100%;
   .faktatittel a{
     color: #d71010;
     font-family: Arial;
@@ -316,6 +322,9 @@ div {
   .newest-comment{
 
   }
+}
+.seven.seven_one .block{
+  padding: 0px 10px;
 }
 .layout-mobile{
   .block-views  .newslist.sak-2.sak-16{
@@ -428,8 +437,10 @@ div {
     }
   }
 }
-.three .three-inner{
+.threeart{
   border-top: 1px solid #DDD;
+}
+.three .three-inner{
   text-align: center;
 }
 .seven.seven_one{
@@ -471,10 +482,11 @@ div {
 
 #op-content{
   padding-bottom: 20px;
+  float: left;
 }
 .addthis{
   .addthis_button_facebook_like.at300b{
-    width: 50px;
+    width: 97px;
     height: 22px;
   }
   .addthis_button_tweet.at300b{
@@ -496,4 +508,36 @@ body.page-taxonomy #content-area .grid{
 }
 body.page-taxonomy #content-area .grid #sidebar-right{
   padding-top: 15px;
+}
+#sidebar-right{
+  float: left;
+}
+strong{
+  font-weight: bold;
+}
+#block-disqus-disqus_comments{
+  float: left;
+  width: 100%;
+  clear: both;
+}
+#block-views-forside-block_7{
+  float: left;
+}
+#block-views-scroll_bilder-bilde_scroller{
+  width: 100%;
+  float: left;
+  position: relative;
+}
+.view-id-Blogger .views-row{
+  float: left;
+  width: 100%;
+  clear: both;
+}
+#block-block-10{
+  margin: 10px 2% 10px 2%;
+  border-bottom: 2px solid #a5b7c5;
+  color: #a5b7c5;
+  .content{
+    display: none;
+  }
 }

@@ -33,6 +33,14 @@
 			$('.container-16 .grid.full.nomargin .one').height('auto');
 		}
 	}
+	function set_ad_art(){
+		if($('body').hasClass('layout-desktop')){
+			full_width = $('.threeart').width();
+			$('.three-art').width(full_width - (580+11));
+		}else{
+			$('.three-art').width('auto');
+		}
+	}
 	$(document).ready(function() {
 
 		$('body').bind('layoutset', function(event, layout) {
@@ -43,9 +51,14 @@
 			eq_desk();
 		});
 		equal_height('.newslist.sak-4 li.views-row');
+		set_ad_art();
 
 	});
 	$(window).load(function() {
 		eq_desk();
+	});
+	$(window).resize(function(){
+		set_ad_art();
+
 	});
 }(jQuery));
