@@ -1,6 +1,6 @@
 <?php print $page_header; ?>
 <?php
-print "Dummy text for testing.(page-node-nid)";
+print "Dummy text for testing.(node-nid)";
 ?>
 <section>
 <html>
