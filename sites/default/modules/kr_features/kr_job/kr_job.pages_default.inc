@@ -233,14 +233,14 @@ function kr_job_default_page_manager_pages() {
       'center' => array(
         'type' => 'region',
         'title' => 'Midtstille',
-        'width' => '75.04120704957525',
+        'width' => '67.83809220096782',
         'width_type' => '%',
         'parent' => 'main-row',
       ),
       'left' => array(
         'type' => 'region',
         'title' => 'left',
-        'width' => '24.95879295042475',
+        'width' => '32.161907799032186',
         'width_type' => '%',
         'parent' => 'main-row',
         'class' => '',
@@ -255,32 +255,11 @@ function kr_job_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Stillinger %term:name';
+  $display->title = 'Stillinger innen %term:name';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass;
     $pane->pid = 'new-1';
-    $pane->panel = 'center';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'ledige_stillinger-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'context' => array(
-        0 => 'argument_term_1',
-      ),
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $display->content['new-1'] = $pane;
-    $display->panels['center'][0] = 'new-1';
-    $pane = new stdClass;
-    $pane->pid = 'new-2';
     $pane->panel = 'center';
     $pane->type = 'views';
     $pane->subtype = 'stillinger_kartlayer';
@@ -311,11 +290,11 @@ function kr_job_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
-    $display->content['new-2'] = $pane;
-    $display->panels['center'][1] = 'new-2';
+    $pane->position = 0;
+    $display->content['new-1'] = $pane;
+    $display->panels['center'][0] = 'new-1';
     $pane = new stdClass;
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-2';
     $pane->panel = 'left';
     $pane->type = 'views';
     $pane->subtype = 'stillingskategorier_med_teller';
@@ -344,8 +323,29 @@ function kr_job_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
+    $display->content['new-2'] = $pane;
+    $display->panels['left'][0] = 'new-2';
+    $pane = new stdClass;
+    $pane->pid = 'new-3';
+    $pane->panel = 'left';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ledige_stillinger-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(
+        0 => 'argument_term_1',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
     $display->content['new-3'] = $pane;
-    $display->panels['left'][0] = 'new-3';
+    $display->panels['left'][1] = 'new-3';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -362,7 +362,7 @@ function kr_job_default_page_manager_pages() {
     'title' => 'Panel',
     'no_blocks' => 0,
     'pipeline' => 'standard',
-    'css_id' => 'fullbredde',
+    'css_id' => '',
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
@@ -378,23 +378,13 @@ function kr_job_default_page_manager_pages() {
           0 => 'main',
         ),
         'parent' => NULL,
-        'class' => '',
-        'column_class' => '',
-        'row_class' => '',
-        'region_class' => '',
-        'no_scale' => FALSE,
-        'fixed_width' => '',
-        'column_separation' => '0',
-        'region_separation' => '0',
-        'row_separation' => '0',
       ),
       'main' => array(
         'type' => 'column',
         'width' => 100,
         'width_type' => '%',
         'children' => array(
-          0 => 1,
-          1 => 'main-row',
+          0 => 'main-row',
         ),
         'parent' => 'canvas',
       ),
@@ -410,35 +400,17 @@ function kr_job_default_page_manager_pages() {
       'center' => array(
         'type' => 'region',
         'title' => 'Midtstille',
-        'width' => '75.0065590974682',
+        'width' => '67.88835423800937',
         'width_type' => '%',
         'parent' => 'main-row',
-        'class' => 'right',
       ),
       'left' => array(
         'type' => 'region',
         'title' => 'left',
-        'width' => '24.993440902531812',
+        'width' => '32.11164576199064',
         'width_type' => '%',
         'parent' => 'main-row',
-        'class' => 'left',
-      ),
-      1 => array(
-        'type' => 'row',
-        'contains' => 'region',
-        'children' => array(
-          0 => 'top',
-        ),
-        'parent' => 'main',
-        'class' => 'top',
-      ),
-      'top' => array(
-        'type' => 'region',
-        'title' => 'top',
-        'width' => 100,
-        'width_type' => '%',
-        'parent' => '1',
-        'class' => 'top',
+        'class' => '',
       ),
     ),
   );
@@ -447,11 +419,10 @@ function kr_job_default_page_manager_pages() {
       'default' => NULL,
       'center' => NULL,
       'left' => NULL,
-      'top' => NULL,
     ),
   );
   $display->cache = array();
-  $display->title = 'Ledige stilling';
+  $display->title = 'Ledige stillinger';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass;
@@ -477,23 +448,11 @@ function kr_job_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-2';
     $pane->panel = 'left';
-    $pane->type = 'views';
-    $pane->subtype = 'jobbmarkede';
+    $pane->type = 'block';
+    $pane->subtype = 'views-f0338d2fb1025432cc11cb57fdb17163';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 1,
-      'nodes_per_page' => '0',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'block_2',
       'override_title' => 1,
       'override_title_text' => '<none>',
     );
@@ -508,24 +467,12 @@ function kr_job_default_page_manager_pages() {
     $display->panels['left'][0] = 'new-2';
     $pane = new stdClass;
     $pane->pid = 'new-3';
-    $pane->panel = 'top';
-    $pane->type = 'views';
-    $pane->subtype = 'jobbmarkede';
+    $pane->panel = 'left';
+    $pane->type = 'block';
+    $pane->subtype = 'views-premium_stillinger-block_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '40',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'block_1',
       'override_title' => 1,
       'override_title_text' => '<none>',
     );
@@ -535,9 +482,9 @@ function kr_job_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $display->content['new-3'] = $pane;
-    $display->panels['top'][0] = 'new-3';
+    $display->panels['left'][1] = 'new-3';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
