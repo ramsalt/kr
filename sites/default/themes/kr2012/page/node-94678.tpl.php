@@ -14,6 +14,8 @@ print "Dummy text for testing.(node-nid)";
   <link rel="stylesheet" href="http://service.utdanning.no/finn/fancybox/jquery.fancybox-1.3.4.css">
   <link rel="stylesheet" href="http://service.utdanning.no/finn/theme.css">
   <link rel="stylesheet" href="http://service.utdanning.no/finn/ajax-solr.css">
+   <link type="text/css" rel="stylesheet" media="all" href="http://www.kommunal-rapport.no/sites/default/files/css/css_31965bcaf0982507861587fc96e10d6b.css" />
+<link type="text/css" rel="stylesheet" media="screen" href="http://www.kommunal-rapport.no/sites/default/files/css/css_7fd0a90a0227366f56bd90f64ee9dfdb.css" />
 </head>
 
 <body>
@@ -29,6 +31,7 @@ print "Dummy text for testing.(node-nid)";
       <div id="sublevel">
         <h2>Nivå</h2>
       </div>
+         <div id="pace"></div>
       <div id="fagomrade"></div>
      
    
@@ -59,15 +62,18 @@ print "Dummy text for testing.(node-nid)";
   (function($) {
     $(function() {
       $.search({
-        filter : {fq : '(collection:utdanning AND (termEvu:ja OR labelGeouavhengig:Ja OR termGeouavhengig:ja)) OR collection:course'},
-        per_page : 25,
-        collection : 'dismax',
+         filter : {fq : '(collection:utdanning AND (termEvu:ja OR labelEvu:Ja OR labelGeouavhengig:Nettbasert OR termGeouavhengig:ja)) OR collection:course'},
+         per_page : 25,
         show_facet_numbers : true,
         show_selected_facets : true,
+        style : 'table',
         fields : [
-          {label : 'Nivå', field : 'niva'},
-          {label : 'Fylke', field : 'fylke'},
-          {label : 'Undervisningssted', field : 'undervisningssted'}
+            {label : 'Tittel', field : 'title'},
+            {label : 'Nivå', field : 'niva'},
+            {label : 'Fylke', field : 'fylke'},
+            {label : 'Undervisningssted', field : 'undervisningssted', href :'linkRelHttp_x003A__x002F__x002F_utdanning.no_x002F_org_x0023_teachingOrg' }
+           // {label : tableLabels.studiested, field : 'labelOrgName', href : 'linkRelHttp_x003A__x002F__x002F_utdanning.no_x002F_org_x0023_teachingOrg'},
+
         ]
       });
 
@@ -79,9 +85,9 @@ print "Dummy text for testing.(node-nid)";
       $('#sublevel').facet('underniva');
       $('#fagomrade').facet('fagomrade');
       $('#undervisningsform').facet('undervisningsform');
-      <?php // $('#pace').facet('pace'); //heltid-deltid kan være interesant for EVU?>
+      $('#pace').facet('pace');
       $('#adminarea').facet('fylke');
-      <?php // $('#org').facet('undervisningssted'); ?>
+      $('#org').facet('undervisningssted'); 
 
       // Search box
       $('#search').searchBox();
@@ -101,5 +107,6 @@ print "Dummy text for testing.(node-nid)";
   })(jQuery);
   </script>
 </body>
-</html></section>
+</html>
+</section>
 <?php print $page_footer;
