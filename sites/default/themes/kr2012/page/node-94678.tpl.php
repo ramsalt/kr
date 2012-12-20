@@ -3,6 +3,10 @@
 print "Dummy text for testing.(node-nid)";
 ?>
 <section>
+<h1 property="dc:title"><?php print $title; ?></h1>
+<div class="node-content">
+  <?php print $content ?>
+</div>
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -97,6 +101,5 @@ print "Dummy text for testing.(node-nid)";
   })(jQuery);
   </script>
 </body>
-</html>
-</section>
+</html></section>
 <?php print $page_footer;
