@@ -2355,7 +2355,7 @@ body.page-user #tabs-wrapper #drupal-control-bar ul li {
   padding-bottom: 10px;
 }
 /* line 10, ../sass/stillinger.scss */
-.page-stillinger .panels-flexible-region-first .panels-flexible-region-inside-first .view h3 {
+.page-stillinger .panels-flexible-region-first .panels-flexible-region-inside-first .view h2, .page-stillinger .panels-flexible-region-first .panels-flexible-region-inside-first .view h3 {
   margin-bottom: 10px;
   font-family: Arial;
   font-size: 1.2em;

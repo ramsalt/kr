@@ -396,10 +396,10 @@ function kr_job_content_default_fields() {
       'openlayers_cck_preset_map' => 'kart_pa_stilling',
       'openlayers_behaviors' => array(
         'openlayers_behavior_zoomtolayer' => array(
-          'enabled' => 0,
+          'enabled' => 1,
           'options' => array(
             'zoomtolayer' => 'openlayers_cck_vector_layer',
-            'point_zoom_level' => '',
+            'point_zoom_level' => '7',
           ),
         ),
       ),

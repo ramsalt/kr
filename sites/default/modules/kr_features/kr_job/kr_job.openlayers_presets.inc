@@ -41,6 +41,10 @@ function kr_job_openlayers_presets() {
         'zoomWheelEnabled' => 1,
       ),
       'openlayers_behavior_panzoombar' => array(),
+      'openlayers_behavior_zoomtolayer' => array(
+        'zoomtolayer' => 'google_normal',
+        'point_zoom_level' => '7',
+      ),
     ),
     'default_layer' => 'google_normal',
     'layers' => array(
