@@ -968,7 +968,7 @@ print trim($new_title);
 
   /* Display: Standardverdier */
   $handler = $view->new_display('default', 'Standardverdier', 'default');
-  $handler->display->display_options['title'] = 'Fremhevede utlysninger';
+  $handler->display->display_options['title'] = 'Utlyste stillinger';
   $handler->display->display_options['css_class'] = 'premiumstillingsblock';
   $handler->display->display_options['use_more_text'] = 'mer';
   $handler->display->display_options['access']['type'] = 'none';
@@ -1061,25 +1061,20 @@ print trim($new_title);
     'node_data_field_job_date.field_job_date_value' => 'node_data_field_job_date.field_job_date_value',
   );
   $handler->display->display_options['filters']['field_job_date_value']['default_date'] = 'now';
-  /* Filtrer: Innhold: Er en premium utlysning (field_stilling_premium) */
-  $handler->display->display_options['filters']['field_stilling_premium_value']['id'] = 'field_stilling_premium_value';
-  $handler->display->display_options['filters']['field_stilling_premium_value']['table'] = 'node_data_field_stilling_premium';
-  $handler->display->display_options['filters']['field_stilling_premium_value']['field'] = 'field_stilling_premium_value';
-  $handler->display->display_options['filters']['field_stilling_premium_value']['value']['value'] = '1';
-  $handler->display->display_options['filters']['field_stilling_premium_value']['expose']['operator'] = FALSE;
 
-  /* Display: Premium stillinger */
-  $handler = $view->new_display('block', 'Premium stillinger', 'block_1');
+  /* Display: Utlyste stillinger */
+  $handler = $view->new_display('block', 'Utlyste stillinger', 'block_1');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'premiumstillingsblock stillinger';
   $translatables['premium_stillinger'] = array(
     t('Standardverdier'),
-    t('Fremhevede utlysninger'),
+    t('Utlyste stillinger'),
     t('mer'),
     t('Søk'),
     t('Nullstill'),
     t('Sortér på'),
     t('Asc'),
     t('Desc'),
-    t('Premium stillinger'),
   );
 
   $views[$view->name] = $view;
@@ -1219,6 +1214,16 @@ print trim($new_title);
   $handler->display->display_options['filters']['field_stilling_geopos_openlayers_wkt']['operator'] = 'not empty';
   $handler->display->display_options['filters']['field_stilling_geopos_openlayers_wkt']['expose']['operator'] = FALSE;
   $handler->display->display_options['filters']['field_stilling_geopos_openlayers_wkt']['case'] = 0;
+  /* Filtrer: Innhold: Søknadsfrist (field_job_date) */
+  $handler->display->display_options['filters']['field_job_date_value']['id'] = 'field_job_date_value';
+  $handler->display->display_options['filters']['field_job_date_value']['table'] = 'node_data_field_job_date';
+  $handler->display->display_options['filters']['field_job_date_value']['field'] = 'field_job_date_value';
+  $handler->display->display_options['filters']['field_job_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_job_date_value']['allow_null'] = 1;
+  $handler->display->display_options['filters']['field_job_date_value']['date_fields'] = array(
+    'node_data_field_job_date.field_job_date_value' => 'node_data_field_job_date.field_job_date_value',
+  );
+  $handler->display->display_options['filters']['field_job_date_value']['default_date'] = 'now';
 
   /* Display: OpenLayers Data */
   $handler = $view->new_display('openlayers', 'OpenLayers Data', 'openlayers_1');
@@ -1281,6 +1286,7 @@ print trim($new_title);
   $handler = $view->new_display('default', 'Standardverdier', 'default');
   $handler->display->display_options['title'] = 'Stillingskategorier';
   $handler->display->display_options['use_more_text'] = 'mer';
+  $handler->display->display_options['group_by'] = TRUE;
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -1296,17 +1302,6 @@ print trim($new_title);
     'nid' => 'nid',
   );
   $handler->display->display_options['row_options']['hide_empty'] = 0;
-  /* Relasjon: Taksonomi: Terms on node */
-  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
-  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
-  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
-  $handler->display->display_options['relationships']['term_node_tid']['required'] = 1;
-  $handler->display->display_options['relationships']['term_node_tid']['vids'] = array(
-    46 => 46,
-    43 => 0,
-    44 => 0,
-    45 => 0,
-  );
   /* Felt: Taksonomi: Term */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'term_data';
@@ -1326,49 +1321,31 @@ print trim($new_title);
   $handler->display->display_options['fields']['name']['empty_zero'] = 0;
   $handler->display->display_options['fields']['name']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['name']['link_to_taxonomy'] = 0;
-  /* Felt: Taksonomi: Vokabularets navn */
-  $handler->display->display_options['fields']['name_1']['id'] = 'name_1';
-  $handler->display->display_options['fields']['name_1']['table'] = 'vocabulary';
-  $handler->display->display_options['fields']['name_1']['field'] = 'name';
-  $handler->display->display_options['fields']['name_1']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['name_1']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['name_1']['alter']['text'] = '<a href="/stillinger/[name_1]">[name]</a>';
-  $handler->display->display_options['fields']['name_1']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['name_1']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['name_1']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['name_1']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['name_1']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['name_1']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['name_1']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['name_1']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['name_1']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['name_1']['hide_alter_empty'] = 1;
   /* Felt: Node: NID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['group_type'] = 'count';
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['alter']['alter_text'] = 1;
   $handler->display->display_options['fields']['nid']['alter']['text'] = ' ([nid])';
   $handler->display->display_options['fields']['nid']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['nid']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['nid']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['nid']['alter']['word_boundary'] = 1;
   $handler->display->display_options['fields']['nid']['alter']['ellipsis'] = 1;
   $handler->display->display_options['fields']['nid']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['nid']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['nid']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['nid']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['nid']['hide_empty'] = 0;
   $handler->display->display_options['fields']['nid']['empty_zero'] = 0;
   $handler->display->display_options['fields']['nid']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['nid']['link_to_node'] = 0;
-  /* Felt: SQL Aggregation: Group By Fields */
-  $handler->display->display_options['fields']['views_sql_groupedfields']['id'] = 'views_sql_groupedfields';
-  $handler->display->display_options['fields']['views_sql_groupedfields']['table'] = 'views_groupby';
-  $handler->display->display_options['fields']['views_sql_groupedfields']['field'] = 'views_sql_groupedfields';
-  $handler->display->display_options['fields']['views_sql_groupedfields']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['views_sql_groupedfields']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['views_sql_groupedfields']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['views_sql_groupedfields']['hide_alter_empty'] = 1;
   /* Filtrer: Node: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -1387,6 +1364,13 @@ print trim($new_title);
     'node_data_field_job_date.field_job_date_value' => 'node_data_field_job_date.field_job_date_value',
   );
   $handler->display->display_options['filters']['field_job_date_value']['default_date'] = 'now';
+  /* Filtrer: Taksonomi: Vokabular */
+  $handler->display->display_options['filters']['vid']['id'] = 'vid';
+  $handler->display->display_options['filters']['vid']['table'] = 'term_data';
+  $handler->display->display_options['filters']['vid']['field'] = 'vid';
+  $handler->display->display_options['filters']['vid']['value'] = array(
+    46 => '46',
+  );
 
   /* Display: Blokk */
   $handler = $view->new_display('block', 'Blokk', 'block_1');
@@ -1399,12 +1383,8 @@ print trim($new_title);
     t('Sortér på'),
     t('Asc'),
     t('Desc'),
-    t('ord'),
     t('<a href="/stillinger/[name]">[name]</a>'),
-    t('Vokabularets navn'),
-    t('<a href="/stillinger/[name_1]">[name]</a>'),
     t(' ([nid])'),
-    t('Group By Fields'),
     t('Blokk'),
   );
 
