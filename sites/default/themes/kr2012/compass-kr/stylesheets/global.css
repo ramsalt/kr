@@ -1447,7 +1447,7 @@ div .seksjonsside .views-field-title a {
   text-decoration: none;
 }
 /* line 800, ../sass/mixins.scss */
-div .seksjonsside .views-field-created {
+div .seksjonsside .views-field-created, div .seksjonsside .views-field-changed {
   color: #666666;
   font-family: Arial;
   font-size: 0.8em;
