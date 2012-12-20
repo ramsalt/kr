@@ -83,6 +83,11 @@
 
 <?php print $page_header; ?>
 <section>
+<?php
+print "This text
+spans multiple
+lines.";
+?>
   <div id="content-area" class="area">
   	<div class="wrapper">
 	  <?php if($ad_right): ?>
