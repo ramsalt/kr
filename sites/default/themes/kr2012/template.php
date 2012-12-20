@@ -1,4 +1,8 @@
 <?php
+function phptemplate_preprocess_node(&$vars, $hook) {
+  $node = $vars['node'];
+  $vars['template_file'] = 'node-'. $node->nid;
+}
 function kr2012_byline($node){
 	$antall_forfattere = count($node->field_op_author);
 	if($antall_forfattere > 0 && $node->field_op_author[0]['nid'] != NULL){
