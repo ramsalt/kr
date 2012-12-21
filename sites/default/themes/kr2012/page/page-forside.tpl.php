@@ -83,6 +83,20 @@
 
 <?php print $page_header; ?>
 <section>
+  <?php if ($show_messages && $messages): ?>
+  	<div id="msg" class="area frontpage">
+  		<div class="wrapper">
+			<div class="container container-16 clearfix">
+  	  			<div class="inner-container clearfix">  	  		
+	  	  			<div class="grid full nomargin">
+  						<?php print $messages; ?>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  <?php endif; ?>	
+  	  
   <div id="content-area" class="area frontpage">
   	<div class="wrapper">
 	  <?php if($ad_right): ?>
@@ -92,6 +106,7 @@
   	  <?php endif; ?>
   	  <div class="container container-16 clearfix">
   	  	<div class="inner-container clearfix">
+  	  		
 	  	  	<div class="grid full nomargin toplinje">
 	  	  		<div class="one one_one">
 	  	  			<div class="one-inner">
