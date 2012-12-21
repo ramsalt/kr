@@ -463,6 +463,9 @@ div {
 .ad-right{
   position: absolute;
 }
+.admin-expanded .ad-right{
+  display: none;
+}
 .block-openx{
   display: none;
 }
