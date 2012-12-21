@@ -122,7 +122,6 @@ function kr2012_preprocess_node(&$vars){
 
 function kr2012_preprocess_page(&$vars){
 	if(drupal_is_front_page()){
-		drupal_set_message("test");
 		drupal_add_js(drupal_get_path('theme', 'kr2012').'/js/front.js', 'theme', 'header');		
 		drupal_add_css(drupal_get_path('theme', 'kr2012').'/css/jcar.css');
 		

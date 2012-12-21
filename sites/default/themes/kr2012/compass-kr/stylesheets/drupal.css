@@ -122,3 +122,20 @@ body.page-user #tabs-wrapper #drupal-control-bar ul li {
   background: #d7ecff;
   border: 1px solid #c0e2ff;
 }
+
+/* line 113, ../sass/drupal.scss */
+.messages {
+  background-color: #fff;
+  border: 1px solid #b8d3e5;
+}
+
+/* line 117, ../sass/drupal.scss */
+.messages {
+  margin: .75em 0 .75em;
+  padding: .5em 1em;
+}
+
+/* line 122, ../sass/drupal.scss */
+.messages ul {
+  margin: 0;
+}

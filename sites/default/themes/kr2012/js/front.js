@@ -48,14 +48,14 @@
 			
 		});
 		$(window).resize(function(){
-			eq_desk();
+			/* eq_desk(); */
 		});
 		equal_height('.newslist.sak-4 li.views-row');
 		set_ad_art();
 
 	});
 	$(window).load(function() {
-		eq_desk();
+		/* eq_desk(); */
 	});
 	$(window).resize(function(){
 		set_ad_art();
