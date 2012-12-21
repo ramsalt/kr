@@ -20,8 +20,12 @@ function kr_diverse_block($op = 'list', $delta = 0, $edit = array()) {
       'cache' => BLOCK_CACHE_PER_PAGE,
     );
     $blocks[2] = array(
-      'info' => 'KR aktuell', 
+      'info' => 'KR breaking', 
       'cache' => BLOCK_CACHE_PER_PAGE,
+    );
+    $blocks[3] = array(
+      'info' => 'Admin lenker', 
+      'cache' => BLOCK_CACHE_PER_ROLE,
     );
     return $blocks;
   }
@@ -58,6 +62,12 @@ function kr_diverse_block($op = 'list', $delta = 0, $edit = array()) {
           'content' => $html,
         );
         break;
+	  case 3:
+	  	$block = array(
+	  		'subject' => '',
+	  		'content' => _kr_div_admin_links()
+		);
+		  break;
     }
     return $block;
   }
@@ -84,6 +94,24 @@ function kr_diverse_block($op = 'list', $delta = 0, $edit = array()) {
     variable_set('kr_diverse_aktuell_tax', $edit['tax']);
     variable_set('kr_diverse_aktuell_number', $edit['number']);
   }
+}
+function _kr_div_admin_links(){
+	global $user;
+	$title = '';
+	$type = 'ul';
+	$attributes = array('class' => 'adminliste');
+	$items = array();
+	if(in_array('editor', $user->roles) || in_array('web editor', $user->roles) || in_array('administrator', $user->roles)){
+		$items[] = l('Rediger forside', 'redigerforside');
+	}
+	if(user_access('administer block')){
+		$items[] = l('Endre "breaking" liste', 'admin/build/block/configure/kr_diverse/2');
+	}
+	if(count($items)>0){
+		return theme('item_list', $items, $title, $type, $attributes);;
+	}else{
+		return '';
+	}
 }
 function _kr_aktuelle(){
 	$tax = variable_get('kr_diverse_aktuell_tax', 0);
