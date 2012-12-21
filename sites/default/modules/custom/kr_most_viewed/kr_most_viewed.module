@@ -38,7 +38,7 @@ function _most_viewd_last_week(){
 		LEFT JOIN {node} n ON n.nid = c.nid
 		LEFT JOIN {content_field_main_image} i ON i.vid = n.vid
 		LEFT JOIN {files} f ON f.fid = i.field_main_image_fid
-		WHERE c.timestamp > %d AND c.timestamp < %d AND c.nid > 1 AND n.status LIKE 1
+		WHERE c.timestamp > %d AND c.timestamp < %d AND c.nid > 1 AND n.status LIKE 1 AND n.type LIKE "article"
 		GROUP BY c.nid ORDER BY SUM(c.daycount) DESC
 		LIMIT 5', $lastweek_start, $lastweek_end);
 	
