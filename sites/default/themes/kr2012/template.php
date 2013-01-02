@@ -127,9 +127,9 @@ function kr2012_preprocess_page(&$vars){
 		
 	}
 	if($vars['node']->nid == 94892){
-		drupal_set_html_head('<script src="http://service.utdanning.no/finn/scripts/ajax-solr-complete.min.js"></script>');
+		$vars['head'] .= '<script src="http://service.utdanning.no/finn/scripts/ajax-solr-complete.min.js"></script>';
 		drupal_add_js(drupal_get_path('theme', 'kr2012').'/js/utdanning.js', 'theme', 'header');	
-		$vars['head'] = drupal_get_html_head();
+		
 	}
 	$byline = kr2012_byline($vars['node']);
 	$vars['byline'] = $byline;
