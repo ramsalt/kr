@@ -23,12 +23,10 @@
     <?php if (!empty($print['message'])) {
       print '<div class="print-message">'. $print['message'] .'</div><p />';
     } ?>
-    <div class="print-logo"><?php print $print['logo']; ?></div>
     <div class="print-site_name"><?php print $print['site_name']; ?></div>
     <p />
     <div class="print-breadcrumb"><?php print $print['breadcrumb']; ?></div>
     <hr class="print-hr" />
-    
     <div class="print-content"><?php print $print['content']; ?></div>
     <div class="print-footer"><?php print $print['footer_message']; ?></div>
     <hr class="print-hr" />
