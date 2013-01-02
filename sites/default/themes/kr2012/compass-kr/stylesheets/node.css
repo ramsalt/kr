@@ -87,3 +87,8 @@ body .body-content h2, body .body-content p h2 {
 body .body-content em, body .body-content p em {
   font-style: italic;
 }
+/* line 61, ../sass/node.scss */
+body .body-content ul, body .body-content p ul {
+  list-style: square;
+  list-style-position: inside;
+}
