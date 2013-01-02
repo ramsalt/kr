@@ -39,3 +39,4 @@ print "Dummy text for testing.(node-nid)";
       </div>
     </div>
   </div>
+  <script src="http://service.utdanning.no/finn/scripts/ajax-solr-complete.min.js"></script>
