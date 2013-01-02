@@ -1,4 +1,64 @@
 <?php
+
+
+/**
+ * Theme a complete newsletter.
+ */
+function kr2012_scs_newsletter_output($nodes, $toc) {
+  $addedAd2 = FALSE;
+  $body = '';
+  $titles = array();
+  $i = 0;
+  $ad1 = "<div style='text-align: center'><a href='http://openx.dev.ramsalt.com/delivery/ck.php?zoneid=4' target='_blank'><img src='http://openx.dev.ramsalt.com/delivery/avw.php?zoneid=4' border='0' alt='' /></a></div>";
+  $ad2 = "<div style='text-align: center'><a href='http://openx.dev.ramsalt.com/delivery/ck.php?zoneid=5' target='_blank'><img src='http://openx.dev.ramsalt.com/delivery/avw.php?zoneid=5' border='0' alt='' /></a></div>";
+
+  // Node information
+  foreach ($nodes as $node) {
+    if ($toc) {
+      if (variable_get('scs_format', 'plain') == 'plain') {
+        $titles[] = $node->title;
+      }
+      else {
+        $titles[] = '<a href="#node_' . $node->nid . '">' . $node->title . '</a>';
+      }
+    }
+    if ($i == 3) {
+        $body .= $ad1;
+    } elseif ($i == 7) {
+        $body .= $ad2;
+        $addedAd2 = TRUE;
+    }
+    $body .= theme('scs_node_output', $node);
+    $i++;
+  }
+  if (!$addedAd2) {
+      $body .= $ad2;
+  }
+
+  // ToC (if required)
+  if ($toc) {
+    $body = theme('scs_node_titles', $titles) . $body;
+  }
+
+  // Complete newsletter body
+  return $body;
+}
+
+/**
+ * Each selected node goes true this function to create a nice body
+ */
+function kr2012_scs_node_output($node) {
+  $output = '';
+    
+  $output = '<div id="node_' . $node->nid . '" style="padding:10px 3px 0 3px;border-bottom:1px solid #cfcfcf">';
+    $output .= '<h2 style="font-size:21px;margin:0 0 10px;font-family:Helvetica, sans-serif">' . $node->title . '</h2>';
+    //$output .= '<p>' . node_teaser($node->body) . '</p>';
+    $output .= '<p>' . l(t('Read more'), 'node/' . $node->nid, array('attributes' => array('style' => 'color:#0a2339;font-weight:700;text-decoration:none;font-family:Helvetica, sans-serif'))) . ' <span style="color:gray">' . format_date($node->created) .'</span></p>';
+  $output .= '</div>';
+  
+  return $output;
+}
+
 function phptemplate_preprocess_node(&$vars, $hook) {
   $node = $vars['node'];
   $vars['template_file'] = 'node-'. $node->nid;
