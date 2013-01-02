@@ -87,7 +87,7 @@ function kr2012_byline($node){
 	$created_html = '<div class="created">'._openpublish_get_rdfa_date($node->created, $created).'</div>';
 	$updated_html = '';
     if($node->changed != $node->created){
-      $updated_html = '<div class="updated">(Oppdatert: '._openpublish_get_rdfa_date($node->changed, $updated).')</div>';
+      $updated_html = '<div class="updated"> (Oppdatert: '._openpublish_get_rdfa_date($node->changed, $updated).')</div>';
     }
 	$html .= $forfattere_html. $created_html.$updated_html .'<div class="addthis">'.theme(variable_get('addthis_widget_type', 'addthis_button')).'</div>';
 	return $html;
