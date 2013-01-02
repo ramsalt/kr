@@ -25,7 +25,7 @@
     } ?>
     <div class="print-site_name"><?php print $print['site_name']; ?></div>
     <p />
-    <div class="print-breadcrumb"><?php print $print['breadcrumb']; ?></div>
+    
     <hr class="print-hr" />
     <div class="print-content"><?php print $print['content']; ?></div>
     
