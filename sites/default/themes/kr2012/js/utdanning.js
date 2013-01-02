@@ -1,5 +1,5 @@
 (function ($) {
-    $(function() {
+	$(document).ready(function() {
         $.search({
           filter : {collection : 'utdanning'},
           per_page : 25,
