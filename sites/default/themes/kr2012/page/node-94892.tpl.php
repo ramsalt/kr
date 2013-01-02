@@ -1,11 +1,7 @@
-
-<?php
-print "Dummy text for testing.(node-nid)";
-?>
-
   <div id="search_wrapper">
     <div class="left">
       <div id="currentsearch">
+       <div id="currentsearch"> </div>
         <h2>Dine valg</h2>
       </div>
       <div id="level">
@@ -14,21 +10,15 @@ print "Dummy text for testing.(node-nid)";
       <div id="sublevel">
         <h2>Nivå</h2>
       </div>
-         <div id="pace"></div>
       <div id="fagomrade"></div>
-     
-   
       <div id="adminarea">
         <h2>Fylke</h2>
-      </div>
-    
+      </div>    
     </div>
     <div class="main_content">
       <div class="main_content_inner">
         <div id="logo"></div>
-        <form onSubmit="alert('BØ!!')">
-          <div id="search"></div>
-        </form>
+        <div id="search"></div>
         <div id="pager-header"></div>
         <div id="result"></div>
         <div id="pager"></div>
@@ -40,3 +30,36 @@ print "Dummy text for testing.(node-nid)";
     </div>
   </div>
   <script src="http://service.utdanning.no/finn/scripts/ajax-solr-complete.min.js"></script>
+  
+  <script>
+  (function($) {
+    $(document).ready(function() {
+      $.search({
+        filter : {collection : 'utdanning'},
+        per_page : 25,
+        collection : 'dismax',
+        use_lightbox : false,
+        show_facet_numbers : true,
+      });
+      // Current search
+      $('#currentsearch').currentSearch();
+      // Facets
+      $('#level').facet('niva');
+      $('#sublevel').facet('underniva');
+      $('#fagomrade').facet('fagomrade');
+      $('#undervisningsform').facet('undervisningsform');
+      $('#adminarea').facet('fylke');
+      // Search box
+      $('#search').searchBox();
+      // Search results
+      $('#pager-header').searchRows();
+      $('#result').searchResult();
+      // Pager
+      $('#pager').searchPager();
+      $('#per_page').searchPerPage();
+      $('#sorting').searchSort();
+      $.doRequest();
+console.log('doh');
+    });
+  })(jQuery);
+  </script>
