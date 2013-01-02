@@ -193,6 +193,10 @@ function kr2012_preprocess_page(&$vars){
 	}
 	$byline = kr2012_byline($vars['node']);
 	$vars['byline'] = $byline;
+	if($vars['node']){
+		$vars['body_classes'] .= node_class($vars['node']);
+	}
+	
 }
 function kr2012_nopremium_message($node){
 	global $user;

@@ -79,6 +79,7 @@
           <?php print openpublish_addthis_widget($head_title); ?>
       	</div>
   */
+
  ?>
 
 <?php print $page_header; ?>
