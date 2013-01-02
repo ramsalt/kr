@@ -1,25 +1,8 @@
-<?php print $page_header; ?>
+
 <?php
 print "Dummy text for testing.(node-nid)";
 ?>
-<section>
-<h1 property="dc:title"><?php print $title; ?></h1>
-<div class="node-content">
-  <?php print $content ?>
-</div>
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Søk i utdanninger - utdanning.no</title>
-  <link rel="stylesheet" href="http://service.utdanning.no/finn/fancybox/jquery.fancybox-1.3.4.css">
-  <link rel="stylesheet" href="http://service.utdanning.no/finn/theme.css">
-  <link rel="stylesheet" href="http://service.utdanning.no/finn/ajax-solr.css">
-   <link type="text/css" rel="stylesheet" media="all" href="http://www.kommunal-rapport.no/sites/default/files/css/css_31965bcaf0982507861587fc96e10d6b.css" />
-<link type="text/css" rel="stylesheet" media="screen" href="http://www.kommunal-rapport.no/sites/default/files/css/css_7fd0a90a0227366f56bd90f64ee9dfdb.css" />
-</head>
 
-<body>
-  <h1>Søk i utdanninger - utdanning.no</h1>
   <div id="search_wrapper">
     <div class="left">
       <div id="currentsearch">
@@ -56,7 +39,6 @@ print "Dummy text for testing.(node-nid)";
       </div>
     </div>
   </div>
-  <script src="http://service.utdanning.no/finn/scripts/jquery.js"></script>
     <script src="http://service.utdanning.no/finn/scripts/ajax-solr-complete.min.js"></script>
   <script>
   (function($) {
@@ -106,7 +88,3 @@ print "Dummy text for testing.(node-nid)";
     });
   })(jQuery);
   </script>
-</body>
-</html>
-</section>
-<?php print $page_footer;
