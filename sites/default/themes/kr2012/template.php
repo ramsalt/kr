@@ -116,7 +116,7 @@ function kr2012_preprocess_node(&$vars){
     $html2 = '<div class="bloggfooter">Dette blogginnlegget er hentet fra: '.l($blogcontent->feeds_node_item->url, $blogcontent->feeds_node_item->url).'</div>';
     $vars['content'] = $html.$vars['content'].$html2;
   }
-   
+  
   
 }
 
@@ -125,6 +125,10 @@ function kr2012_preprocess_page(&$vars){
 		drupal_add_js(drupal_get_path('theme', 'kr2012').'/js/front.js', 'theme', 'header');		
 		drupal_add_css(drupal_get_path('theme', 'kr2012').'/css/jcar.css');
 		
+	}
+	if($vars['node']->nid == 94892){
+		drupal_add_js(drupal_get_path('theme', 'kr2012').'/js/ajax-solr-complete.min.js', 'theme', 'header');	
+		drupal_add_js(drupal_get_path('theme', 'kr2012').'/js/utdanning.js', 'theme', 'header');	
 	}
 	$byline = kr2012_byline($vars['node']);
 	$vars['byline'] = $byline;
