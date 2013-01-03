@@ -6,7 +6,7 @@
         $title_link = l('<span>'.$html_title.'</span><span class="level"></span>', $top_item->href, array('html' => TRUE, 
                                     'attributes' => array('class' => "first-level")));
       ?>
-      <li class="first-level <?php print ($top_item->active ? $top_item->active : "off"); ?> <?php if ($top_item->position_class) print $top_item->position_class; if (is_array($top_item->sublinks) && sizeof($top_item->sublinks) > 0) print "multilevel"; ?>">
+      <li class="first-level <?php print ($top_item->active ? $top_item->active : "off"); ?> <?php if ($top_item->position_class) print $top_item->position_class; if (is_array($top_item->sublinks) && sizeof($top_item->sublinks) > 0) print " multilevel"; ?>">
         <?php print $title_link; ?>
                 
         <?php if (is_array($top_item->sublinks) && sizeof($top_item->sublinks) > 0): ?>
