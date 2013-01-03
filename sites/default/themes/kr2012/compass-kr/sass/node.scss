@@ -47,6 +47,12 @@
 em{
   font-style: italic;
 }
+.cke_contents {
+  ul{
+    list-style: square;
+    list-style-position: inside;
+  }
+}
 body .body-content, body .body-content p{
   font-size: 1.02em;
   line-height: 1.6em;
