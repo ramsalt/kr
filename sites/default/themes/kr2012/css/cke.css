@@ -1,0 +1,28 @@
+body{
+	font-family: 'MerriweatherRegular',Arial,serif;
+	font-size: 0.9em;
+	line-height: 1.3em;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	font-smooth: always;
+}
+ul{
+	padding: 0px;
+	margin: 0px;
+	list-style: square;
+	list-style-position: inside;
+}
+ul li{
+	padding: 0px;
+	margin: 0px;
+}
+em{
+	font-style: italic;
+}
+p{
+	font-size: 1.02em;
+	line-height: 1.6em;
+	color: #333;
+}
