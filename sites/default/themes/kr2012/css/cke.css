@@ -14,6 +14,12 @@ ul{
 	list-style: square;
 	list-style-position: inside;
 }
+h2{
+	font-size: 1.2em;
+	padding-top: 1em;
+	font-family: 'Helvetica Neue',helvetica;
+	font-weight: bold;
+}
 ul li{
 	padding: 0px;
 	margin: 0px;
