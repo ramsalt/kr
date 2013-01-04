@@ -174,9 +174,11 @@ $logos: sprite-map("logo/*.png");
       .mark{background: sprite($logos, quote) no-repeat;
       height:27px;
       width:23px;
+      float:left;
+      margin:-5px 8px 0px 0px;
       }
       span{
-        padding-left: 27px;
+        
         font-weight: bold;
       }
     }
