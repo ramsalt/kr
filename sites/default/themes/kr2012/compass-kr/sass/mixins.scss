@@ -2,6 +2,9 @@ $logos: sprite-map("logo/*.png");
 
 
 @mixin rammeboks-mob{
+  .front-page .rammeboks ul li .views-field-field-main-image-fid{
+    display: none;
+  }
   .rammeboks{
     padding: 5%;
     width: 90%;
