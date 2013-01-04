@@ -73,7 +73,7 @@
   /* line 287, ../sass/nav.scss */
   #login-area .wrapper .container .inner-container {
     border-top: 1px solid #2b5782;
-    border-bottom: 1px solid #4876A3;
+    border-bottom: 1px solid #4876a3;
     float: left;
     width: 100%;
   }
@@ -202,17 +202,19 @@
     margin-left: 7px;
     margin-bottom: 20px;
   }
-  /* line 172, ../sass/base-desktop.scss */
-  .sitat-wrapper .sitat-line {
-    background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -408px no-repeat;
-  }
   /* line 174, ../sass/base-desktop.scss */
+  .sitat-wrapper .sitat-line .mark {
+    background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -408px no-repeat;
+    height: 27px;
+    width: 23px;
+  }
+  /* line 178, ../sass/base-desktop.scss */
   .sitat-wrapper .sitat-line span {
     padding-left: 27px;
     font-weight: bold;
   }
 
-  /* line 180, ../sass/base-desktop.scss */
+  /* line 184, ../sass/base-desktop.scss */
   .fakta {
     width: 40%;
     float: right;
@@ -226,14 +228,14 @@
     margin-left: 7px;
     margin-bottom: 20px;
   }
-  /* line 192, ../sass/base-desktop.scss */
+  /* line 196, ../sass/base-desktop.scss */
   .fakta .faktatittel {
     color: #d71010;
     font-weight: bold;
     text-transform: uppercase;
-    border-bottom: 2px solid #D71010;
+    border-bottom: 2px solid #d71010;
   }
-  /* line 198, ../sass/base-desktop.scss */
+  /* line 202, ../sass/base-desktop.scss */
   .fakta .content {
     font-size: 0.9em;
   }
@@ -278,7 +280,7 @@
   .block-views .newslist.sak-4 ul li {
     border: none;
     width: 100%;
-    border-bottom: 1px solid #DDD;
+    border-bottom: 1px solid #dddddd;
   }
   /* line 694, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-last {
@@ -291,13 +293,13 @@
   /* line 705, ../sass/mixins.scss */
   .block-views .newslist.fire ul, .block-views .newslist.fem ul {
     float: left;
-    border-bottom: 1px solid #DDD;
+    border-bottom: 1px solid #dddddd;
   }
   /* line 708, ../sass/mixins.scss */
   .block-views .newslist.fire ul li, .block-views .newslist.fem ul li {
     width: 24.8%;
     border-bottom: 0px;
-    border-right: 1px solid #DDD;
+    border-right: 1px solid #dddddd;
     margin: 0px;
     padding: 1em 0px 0px 0px;
   }
@@ -329,7 +331,7 @@
   }
   /* line 741, ../sass/mixins.scss */
   .block-views .newslist.adart .views-row-last {
-    border-bottom: 1px solid #DDD;
+    border-bottom: 1px solid #dddddd;
   }
 
   /* line 791, ../sass/mixins.scss */
@@ -340,7 +342,7 @@
   }
   /* line 858, ../sass/mixins.scss */
   div .seksjonsside .views-field-title a {
-    font-family: 'MerriweatherRegular', Arial, serif;
+    font-family: "MerriweatherRegular", Arial, serif;
     font-size: 1.5em;
     line-height: 1.3em;
     color: #333;
@@ -368,51 +370,51 @@
     font-size: 1.1em;
   }
 
-  /* line 215, ../sass/base-desktop.scss */
+  /* line 219, ../sass/base-desktop.scss */
   .one.one_one .one-inner {
-    border-right: 1px solid #DDD;
+    border-right: 1px solid #dddddd;
     height: 100%;
   }
 
-  /* line 219, ../sass/base-desktop.scss */
+  /* line 223, ../sass/base-desktop.scss */
   .one.one_two .one-inner {
     margin-right: 1em;
   }
 
-  /* line 222, ../sass/base-desktop.scss */
+  /* line 226, ../sass/base-desktop.scss */
   .three-art {
-    border-left: 1px solid #DDD;
+    border-left: 1px solid #dddddd;
     margin-left: 10px;
     margin-bottom: 10px;
   }
-  /* line 226, ../sass/base-desktop.scss */
+  /* line 230, ../sass/base-desktop.scss */
   .three-art .block {
     margin-bottom: 0px;
   }
 
-  /* line 230, ../sass/base-desktop.scss */
+  /* line 234, ../sass/base-desktop.scss */
   .deskbordertop {
     border-top: 1px solid #dddddd;
   }
 
-  /* line 235, ../sass/base-desktop.scss */
+  /* line 239, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-field-main-image-fid {
     display: inline;
     float: left;
     margin-right: 10px;
   }
-  /* line 239, ../sass/base-desktop.scss */
+  /* line 243, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-field-main-image-fid .field-content {
     width: 78px;
     float: left;
   }
-  /* line 244, ../sass/base-desktop.scss */
+  /* line 248, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-title {
     padding: 0px;
     margin-top: 6px;
   }
 
-  /* line 250, ../sass/base-desktop.scss */
+  /* line 254, ../sass/base-desktop.scss */
   .block-openx {
     display: block;
   }

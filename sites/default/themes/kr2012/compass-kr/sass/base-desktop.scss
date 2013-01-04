@@ -170,7 +170,11 @@ $logos: sprite-map("logo/*.png");
     margin-left: 7px;
     margin-bottom: 20px;
     .sitat-line{
-      background: sprite($logos, quote) no-repeat;
+      
+      .mark{background: sprite($logos, quote) no-repeat;
+      height:27px;
+      width:23px;
+      }
       span{
         padding-left: 27px;
         font-weight: bold;

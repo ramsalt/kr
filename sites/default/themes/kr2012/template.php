@@ -107,7 +107,7 @@ function kr2012_preprocess_node(&$vars){
 			$vars['ingress_value']=$vars['field_teaser'][0]['safe'];
 		}
     foreach($vars['field_sitat'] as $sitatlinje){
-      $sitater .= '<div class="sitat-line"><span>'.$sitatlinje['value'].'</span></div>';
+      $sitater .= '<div class="sitat-line"><div class="mark"></div><span>'.$sitatlinje['value'].'</span></div>';
       if(strlen($sitatlinje['value'])>2){
         $vars['sitat']=1;
       }
