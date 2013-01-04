@@ -55,11 +55,12 @@
   
 
   
-  <?php if ($sitat && !isset($user->roles[1])) { print $sitat_content; } ?>
+  
   
   <div property="dc:description">
       <?php if (isset($node->taxonomy[80])) print '<div class="kommentar">KOMMENTAR:</div>' ?>
       <?php if ($fakta ): ?><div class="fakta visible-desktop"><div class="faktatittel">Fakta</div><div class="content"><?php print $fakta; ?></div></div><?php endif; ?>
+      <?php if ($sitat) { print $sitat_content; } ?>
       <?php print $body; ?>
       <?php if ($fakta): ?><div class="fakta-mobil visible-mobile"><div class="faktatittel"><a href=""><span>Fakta</span><span class="icon"></span></a></div><div class="innhold"><?php print $fakta; ?></div></div><?php endif; ?>
   </div>
