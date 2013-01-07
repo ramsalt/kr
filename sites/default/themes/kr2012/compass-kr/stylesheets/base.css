@@ -1782,3 +1782,20 @@ strong {
 #block-block-10 .content {
   display: none;
 }
+
+/* line 547, ../sass/base.scss */
+.node-type-article {
+  border-bottom: 1px solid #dddddd;
+}
+/* line 550, ../sass/base.scss */
+.node-type-article .relaterte-artikler h2 {
+  font-family: arial;
+  border-bottom: 2px solid black;
+}
+/* line 554, ../sass/base.scss */
+.node-type-article .relaterte-artikler .views-row {
+  width: 30%;
+  display: inline;
+  float: left;
+  border-right: 1px solid #dddddd;
+}

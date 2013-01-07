@@ -1,7 +1,7 @@
 3.2.4 (Media Mark)
-f5798f98f1ea3facffa8d3b11f26af45a4cee181
+4d03fdf5152a7f66f25c805b05937e972f22328e
 o:Sass::Tree::RootNode
-:@template"q%@import "compass";
+:@template"]&@import "compass";
 @import "mixins.scss";
 @import "ticker.scss";
 @import "nav.scss";
@@ -546,7 +546,24 @@ strong{
     display: none;
   }
 }
-:@has_childrenT:@options{ :@children[Do:Sass::Tree::ImportNode;0:@imported_filename"compass;@;	[ :@imported_file0:
+
+.node-type-article{
+	border-bottom:1px solid #DDD;
+	.relaterte-artikler{
+		h2{
+		font-family:arial;
+		border-bottom:2px solid #000;
+		}
+	.views-row{
+		width:30%;
+		display:inline;
+		float: left;
+		border-right:1px solid #DDD;
+	}
+	}
+}
+
+:@has_childrenT:@options{ :@children[Eo:Sass::Tree::ImportNode;0:@imported_filename"compass;@;	[ :@imported_file0:
 @lineio;
 ;0;"mixins.scss;@;	[ ;0;io;
 ;0;"ticker.scss;@;	[ ;0;io;
@@ -900,4 +917,14 @@ clear;@;i ;	[ ;;;o;;;";@;"	both;i;([" .view-id-Blogger .views-r
 solid;io;=	;>{	;?i¥;@i;Ai·;BiÅ;@;0;i;i;io;;["
 color;@;i ;	[ ;;;o;;;";@;"#a5b7c5;io;;T;@;i ;	[o;;["display;@;i ;	[ ;;;o;;;";@;"	none;i;([".content;)o;*;+[o;,;+[o;-
 ;+[o;6;["content;/" ;i;1o;2;3{ ;40;/@M;i;/@M;i;i;(["#block-block-10;)o;*;+[o;,;+[o;-
-;+[o;7;["block-block-10;/" ;i;1o;2;3{ ;40;/@[;i;/@[;i;i;i
+;+[o;7;["block-block-10;/" ;i;1o;2;3{ ;40;/@[;i;/@[;i;io;;T;@;i ;	[o;;["border-bottom;@;i ;	[ ;;;o;	;@; ;#;[o;$;%["px;@;&"1px;i;'[ ;i$o;	;;";@;"
+solid;i$o;=	;>{	;?iÝ;@i;AiÝ;BiÝ;@;0;i$;i$;i$o;;T;@;i ;	[o;;T;@;i ;	[o;;["font-family;@;i ;	[ ;;;o;;;";@;"
+arial;i'o;;["border-bottom;@;i ;	[ ;;;o;	;@; ;#;[o;$;%["px;@;&"2px;i;'[ ;i(o;	;;";@;"
+solid;i(o;=	;>{	;?i ;@i;Ai ;Bi ;@;0;i(;i(;i(;(["h2;)o;*;+[o;,;+[o;-
+;+[o;.	;["h2;/" ;i&;00;1o;2;3{ ;40;/@“;i&;/@“;i&;i&o;;T;@;i ;	[	o;;["
+width;@;i ;	[ ;;;o;;;";@;"30%;i+o;;["display;@;i ;	[ ;;;o;;;";@;"inline;i,o;;["
+float;@;i ;	[ ;;;o;;;";@;"	left;i-o;;["border-right;@;i ;	[ ;;;o;	;@; ;#;[o;$;%["px;@;&"1px;i;'[ ;i.o;	;;";@;"
+solid;i.o;=	;>{	;?iÝ;@i;AiÝ;BiÝ;@;0;i.;i.;i.;([".views-row;)o;*;+[o;,;+[o;-
+;+[o;6;["views-row;/" ;i*;1o;2;3{ ;40;/@Ä;i*;/@Ä;i*;i*;([".relaterte-artikler;)o;*;+[o;,;+[o;-
+;+[o;6;["relaterte-artikler;/" ;i%;1o;2;3{ ;40;/@Ò;i%;/@Ò;i%;i%;([".node-type-article;)o;*;+[o;,;+[o;-
+;+[o;6;["node-type-article;/" ;i#;1o;2;3{ ;40;/@à;i#;/@à;i#;i#;i
