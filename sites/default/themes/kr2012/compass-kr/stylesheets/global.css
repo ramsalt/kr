@@ -2165,10 +2165,6 @@ strong {
   display: none;
 }
 
-/* line 547, ../sass/base.scss */
-.node-type-article {
-  border-bottom: 1px solid #dddddd;
-}
 /* line 550, ../sass/base.scss */
 .node-type-article .relaterte-artikler h2 {
   font-family: arial;
@@ -2181,32 +2177,36 @@ strong {
   display: inline;
   float: left;
   border-right: 1px solid #dddddd;
-  padding-top: 15px;
+  margin-top: 15px;
+  border-bottom: 1px solid #dddddd;
+  height: 250px;
+  overflow: hidden;
 }
-/* line 562, ../sass/base.scss */
-.node-type-article .relaterte-artikler .views-row .views-field-title {
+/* line 564, ../sass/base.scss */
+.node-type-article .relaterte-artikler .views-row .views-field-title a {
   font-family: "MerriweatherRegular",Arial,serif;
-  font-size: 1.5em;
+  font-size: 1.2em;
   line-height: 1.3em;
   color: #333;
   text-decoration: none;
+  padding-top: 10px;
 }
-/* line 570, ../sass/base.scss */
+/* line 573, ../sass/base.scss */
 .node-type-article .relaterte-artikler .views-row-last {
   border-right: 0px solid white;
 }
-/* line 573, ../sass/base.scss */
-.node-type-article .relaterte-artikler .views-row-1 {
-  padding-right: 15px;
-}
 /* line 576, ../sass/base.scss */
-.node-type-article .relaterte-artikler .views-row-2 {
-  padding-left: 15px;
-  padding-right: 15px;
+.node-type-article .relaterte-artikler .views-row-1 {
+  padding-right: 17px;
 }
-/* line 580, ../sass/base.scss */
+/* line 579, ../sass/base.scss */
+.node-type-article .relaterte-artikler .views-row-2 {
+  padding-left: 17px;
+  padding-right: 17px;
+}
+/* line 583, ../sass/base.scss */
 .node-type-article .relaterte-artikler .views-row-3 {
-  padding-left: 15px;
+  padding-left: 17px;
 }
 
 /* line 4, ../sass/drupal.scss */
