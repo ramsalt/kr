@@ -1,15 +1,15 @@
 .view-search-sorted-by-time{
 	.views-separator{
 		border-top: 1px solid #DDD;
-		margin: 10px 0px;
+		margin: 15px 0 10px;
 		float: left;
 		width: 100%;
 		clear: both;
 	}
 	.views-field-tid a{
-		color: #333;
+		color: #a9a9a9;
 		text-decoration:none;
-		font-style: italic;
+		font-weight: bold;
 	}
 	.views-field-field-main-image-fid{
 		float: right;
@@ -25,5 +25,11 @@
 	.views-field-teaser{
 		font-family: Arial;
 	}
+					
+				
+				
+				
+			
+		
 	
 }

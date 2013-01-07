@@ -3519,16 +3519,16 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
 /* line 2, ../sass/search.scss */
 .view-search-sorted-by-time .views-separator {
   border-top: 1px solid #dddddd;
-  margin: 10px 0px;
+  margin: 15px 0 10px;
   float: left;
   width: 100%;
   clear: both;
 }
 /* line 9, ../sass/search.scss */
 .view-search-sorted-by-time .views-field-tid a {
-  color: #333;
+  color: #a9a9a9;
   text-decoration: none;
-  font-style: italic;
+  font-weight: bold;
 }
 /* line 14, ../sass/search.scss */
 .view-search-sorted-by-time .views-field-field-main-image-fid {
