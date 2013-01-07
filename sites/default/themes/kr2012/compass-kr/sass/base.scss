@@ -548,13 +548,14 @@ strong{
 	
 	.relaterte-artikler{
 		h2{
-		font-family:arial;
-		border-bottom:1.5px solid #000;
-		font-size:1.2em;
+		font-family:helvetica;
+		border-bottom:2px solid #000;
+		font-size:1.4em;
 		font-weight: normal;
 		font-style: normal;
-		margin-bottom:5px;
-		color:#DDD;
+		padding-bottom:7px;
+		color:#333;
+		
 		}
 	.views-row{
 		width:170px;
@@ -574,7 +575,7 @@ strong{
 			padding-top:10px;
 		}
 		.views-field-created{
-			font-size:0.9em;
+			font-size:0.8em !important;
 			color: #636363;
 		}
 	}

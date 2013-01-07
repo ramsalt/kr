@@ -2167,15 +2167,15 @@ strong {
 
 /* line 550, ../sass/base.scss */
 .node-type-article .relaterte-artikler h2 {
-  font-family: arial;
-  border-bottom: 1.5px solid black;
-  font-size: 1.2em;
+  font-family: helvetica;
+  border-bottom: 2px solid black;
+  font-size: 1.4em;
   font-weight: normal;
   font-style: normal;
-  margin-bottom: 5px;
-  color: #DDD;
+  padding-bottom: 7px;
+  color: #333;
 }
-/* line 559, ../sass/base.scss */
+/* line 560, ../sass/base.scss */
 .node-type-article .relaterte-artikler .views-row {
   width: 170px;
   display: inline;
@@ -2186,7 +2186,7 @@ strong {
   height: 250px;
   overflow: hidden;
 }
-/* line 568, ../sass/base.scss */
+/* line 569, ../sass/base.scss */
 .node-type-article .relaterte-artikler .views-row .views-field-title a {
   font-family: "MerriweatherRegular",Arial,serif;
   font-size: 1.2em;
@@ -2195,25 +2195,25 @@ strong {
   text-decoration: none;
   padding-top: 10px;
 }
-/* line 576, ../sass/base.scss */
+/* line 577, ../sass/base.scss */
 .node-type-article .relaterte-artikler .views-row .views-field-created {
-  font-size: 0.9em;
+  font-size: 0.8em !important;
   color: #636363;
 }
-/* line 581, ../sass/base.scss */
+/* line 582, ../sass/base.scss */
 .node-type-article .relaterte-artikler .views-row-last {
   border-right: 0px solid white;
 }
-/* line 584, ../sass/base.scss */
+/* line 585, ../sass/base.scss */
 .node-type-article .relaterte-artikler .views-row-1 {
   padding-right: 22px;
 }
-/* line 587, ../sass/base.scss */
+/* line 588, ../sass/base.scss */
 .node-type-article .relaterte-artikler .views-row-2 {
   padding-left: 22px;
   padding-right: 22px;
 }
-/* line 591, ../sass/base.scss */
+/* line 592, ../sass/base.scss */
 .node-type-article .relaterte-artikler .views-row-3 {
   padding-left: 22px;
 }
