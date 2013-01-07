@@ -1809,14 +1809,14 @@ strong {
   font-family: "MerriweatherRegular",Arial,serif;
   font-size: 1.2em;
   line-height: 1.3em;
-  color: #636363;
+  color: #333;
   text-decoration: none;
   padding-top: 10px;
 }
 /* line 577, ../sass/base.scss */
 .node-type-article .relaterte-artikler .views-row .views-field-created {
   font-size: 0.8em !important;
-  color: #636363;
+  color: #333;
 }
 /* line 582, ../sass/base.scss */
 .node-type-article .relaterte-artikler .views-row-last {
