@@ -1,4 +1,5 @@
 /* line 2, ../sass/tema.scss */
 .block-tema img {
   width: 100%;
+  height: auto;
 }
