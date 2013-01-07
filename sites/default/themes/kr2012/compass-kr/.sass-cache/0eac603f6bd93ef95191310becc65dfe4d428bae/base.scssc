@@ -1,7 +1,7 @@
 3.2.4 (Media Mark)
-4d03fdf5152a7f66f25c805b05937e972f22328e
+a3ad3454b9e5a5eec54ca71a3f797a7df614a091
 o:Sass::Tree::RootNode
-:@template"]&@import "compass";
+:@template"Ï'@import "compass";
 @import "mixins.scss";
 @import "ticker.scss";
 @import "nav.scss";
@@ -553,12 +553,35 @@ strong{
 		h2{
 		font-family:arial;
 		border-bottom:2px solid #000;
+		font-size:1.2em;
 		}
 	.views-row{
-		width:30%;
+		width:170px;
 		display:inline;
 		float: left;
 		border-right:1px solid #DDD;
+		padding-top:15px;
+		
+		.views-field-title{
+			font-family: "MerriweatherRegular",Arial,serif;
+			font-size: 1.5em;
+			line-height: 1.3em;
+			color: #333;
+			text-decoration: none;
+		}
+	}
+	.views-row-last{
+		border-right:0px solid #fff;
+	}
+	.views-row-1{
+		padding-right:15px;
+	}
+	.views-row-2{
+		padding-left:15px;
+		padding-right:15px;
+	}
+	.views-row-3{
+		padding-left:15px;
 	}
 	}
 }
@@ -918,13 +941,25 @@ solid;io;=	;>{	;?i•;@i;Ai∑;Bi≈;@;0;i;i;io;;["
 color;@;i ;	[ ;;;o;;;";@;"#a5b7c5;io;;T;@;i ;	[o;;["display;@;i ;	[ ;;;o;;;";@;"	none;i;([".content;)o;*;+[o;,;+[o;-
 ;+[o;6;["content;/" ;i;1o;2;3{ ;40;/@M;i;/@M;i;i;(["#block-block-10;)o;*;+[o;,;+[o;-
 ;+[o;7;["block-block-10;/" ;i;1o;2;3{ ;40;/@[;i;/@[;i;io;;T;@;i ;	[o;;["border-bottom;@;i ;	[ ;;;o;	;@; ;#;[o;$;%["px;@;&"1px;i;'[ ;i$o;	;;";@;"
-solid;i$o;=	;>{	;?i›;@i;Ai›;Bi›;@;0;i$;i$;i$o;;T;@;i ;	[o;;T;@;i ;	[o;;["font-family;@;i ;	[ ;;;o;;;";@;"
+solid;i$o;=	;>{	;?i›;@i;Ai›;Bi›;@;0;i$;i$;i$o;;T;@;i ;	[o;;T;@;i ;	[o;;["font-family;@;i ;	[ ;;;o;;;";@;"
 arial;i'o;;["border-bottom;@;i ;	[ ;;;o;	;@; ;#;[o;$;%["px;@;&"2px;i;'[ ;i(o;	;;";@;"
-solid;i(o;=	;>{	;?i ;@i;Ai ;Bi ;@;0;i(;i(;i(;(["h2;)o;*;+[o;,;+[o;-
-;+[o;.	;["h2;/" ;i&;00;1o;2;3{ ;40;/@ì;i&;/@ì;i&;i&o;;T;@;i ;	[	o;;["
-width;@;i ;	[ ;;;o;;;";@;"30%;i+o;;["display;@;i ;	[ ;;;o;;;";@;"inline;i,o;;["
-float;@;i ;	[ ;;;o;;;";@;"	left;i-o;;["border-right;@;i ;	[ ;;;o;	;@; ;#;[o;$;%["px;@;&"1px;i;'[ ;i.o;	;;";@;"
-solid;i.o;=	;>{	;?i›;@i;Ai›;Bi›;@;0;i.;i.;i.;([".views-row;)o;*;+[o;,;+[o;-
-;+[o;6;["views-row;/" ;i*;1o;2;3{ ;40;/@ƒ;i*;/@ƒ;i*;i*;([".relaterte-artikler;)o;*;+[o;,;+[o;-
-;+[o;6;["relaterte-artikler;/" ;i%;1o;2;3{ ;40;/@“;i%;/@“;i%;i%;([".node-type-article;)o;*;+[o;,;+[o;-
-;+[o;6;["node-type-article;/" ;i#;1o;2;3{ ;40;/@‡;i#;/@‡;i#;i#;i
+solid;i(o;=	;>{	;?i ;@i;Ai ;Bi ;@;0;i(;i(;i(o;;["font-size;@;i ;	[ ;;;o;;;";@;"
+1.2em;i);(["h2;)o;*;+[o;,;+[o;-
+;+[o;.	;["h2;/" ;i&;00;1o;2;3{ ;40;/@ô;i&;/@ô;i&;i&o;;T;@;i ;	[o;;["
+width;@;i ;	[ ;;;o;;;";@;"
+170px;i,o;;["display;@;i ;	[ ;;;o;;;";@;"inline;i-o;;["
+float;@;i ;	[ ;;;o;;;";@;"	left;i.o;;["border-right;@;i ;	[ ;;;o;	;@; ;#;[o;$;%["px;@;&"1px;i;'[ ;i/o;	;;";@;"
+solid;i/o;=	;>{	;?i›;@i;Ai›;Bi›;@;0;i/;i/;i/o;;["padding-top;@;i ;	[ ;;;o;;;";@;"	15px;i0o;;T;@;i ;	[
+o;;["font-family;@;i ;	[ ;;;o;;;";@;"&"MerriweatherRegular",Arial,serif;i3o;;["font-size;@;i ;	[ ;;;o;;;";@;"
+1.5em;i4o;;["line-height;@;i ;	[ ;;;o;;;";@;"
+1.3em;i5o;;["
+color;@;i ;	[ ;;;o;;;";@;"	#333;i6o;;["text-decoration;@;i ;	[ ;;;o;;;";@;"	none;i7;([".views-field-title;)o;*;+[o;,;+[o;-
+;+[o;6;["views-field-title;/" ;i2;1o;2;3{ ;40;/@;i2;/@;i2;i2;([".views-row;)o;*;+[o;,;+[o;-
+;+[o;6;["views-row;/" ;i+;1o;2;3{ ;40;/@˛;i+;/@˛;i+;i+o;;T;@;i ;	[o;;["border-right;@;i ;	[ ;;;o;	;@; ;#;[o;$;%["px;@;&"0px;i ;'[ ;i;o;	;;";@;"
+solid;i;o;=	;>{	;?iˇ;@i;Aiˇ;Biˇ;@;0;i;;i;;i;;([".views-row-last;)o;*;+[o;,;+[o;-
+;+[o;6;["views-row-last;/" ;i:;1o;2;3{ ;40;/@;i:;/@;i:;i:o;;T;@;i ;	[o;;["padding-right;@;i ;	[ ;;;o;;;";@;"	15px;i>;([".views-row-1;)o;*;+[o;,;+[o;-
+;+[o;6;["views-row-1;/" ;i=;1o;2;3{ ;40;/@3;i=;/@3;i=;i=o;;T;@;i ;	[o;;["padding-left;@;i ;	[ ;;;o;;;";@;"	15px;iAo;;["padding-right;@;i ;	[ ;;;o;;;";@;"	15px;iB;([".views-row-2;)o;*;+[o;,;+[o;-
+;+[o;6;["views-row-2;/" ;i@;1o;2;3{ ;40;/@O;i@;/@O;i@;i@o;;T;@;i ;	[o;;["padding-left;@;i ;	[ ;;;o;;;";@;"	15px;iE;([".views-row-3;)o;*;+[o;,;+[o;-
+;+[o;6;["views-row-3;/" ;iD;1o;2;3{ ;40;/@e;iD;/@e;iD;iD;([".relaterte-artikler;)o;*;+[o;,;+[o;-
+;+[o;6;["relaterte-artikler;/" ;i%;1o;2;3{ ;40;/@s;i%;/@s;i%;i%;([".node-type-article;)o;*;+[o;,;+[o;-
+;+[o;6;["node-type-article;/" ;i#;1o;2;3{ ;40;/@Å;i#;/@Å;i#;i#;i

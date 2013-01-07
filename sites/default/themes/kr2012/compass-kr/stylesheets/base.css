@@ -1791,11 +1791,38 @@ strong {
 .node-type-article .relaterte-artikler h2 {
   font-family: arial;
   border-bottom: 2px solid black;
+  font-size: 1.2em;
 }
-/* line 554, ../sass/base.scss */
+/* line 555, ../sass/base.scss */
 .node-type-article .relaterte-artikler .views-row {
-  width: 30%;
+  width: 170px;
   display: inline;
   float: left;
   border-right: 1px solid #dddddd;
+  padding-top: 15px;
+}
+/* line 562, ../sass/base.scss */
+.node-type-article .relaterte-artikler .views-row .views-field-title {
+  font-family: "MerriweatherRegular",Arial,serif;
+  font-size: 1.5em;
+  line-height: 1.3em;
+  color: #333;
+  text-decoration: none;
+}
+/* line 570, ../sass/base.scss */
+.node-type-article .relaterte-artikler .views-row-last {
+  border-right: 0px solid white;
+}
+/* line 573, ../sass/base.scss */
+.node-type-article .relaterte-artikler .views-row-1 {
+  padding-right: 15px;
+}
+/* line 576, ../sass/base.scss */
+.node-type-article .relaterte-artikler .views-row-2 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* line 580, ../sass/base.scss */
+.node-type-article .relaterte-artikler .views-row-3 {
+  padding-left: 15px;
 }
