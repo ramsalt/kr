@@ -15,8 +15,9 @@
 /* line 14, ../sass/search.scss */
 .view-search-sorted-by-time .views-field-field-main-image-fid {
   float: right;
+  margin-left: 10px;
 }
-/* line 17, ../sass/search.scss */
+/* line 18, ../sass/search.scss */
 .view-search-sorted-by-time .views-field-title a {
   font-family: "MerriweatherRegular",Arial,serif;
   font-size: 1.5em;
@@ -24,7 +25,7 @@
   color: #333;
   text-decoration: none;
 }
-/* line 24, ../sass/search.scss */
+/* line 25, ../sass/search.scss */
 .view-search-sorted-by-time .views-field-teaser {
   font-family: Arial;
 }
