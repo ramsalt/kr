@@ -1,4 +1,16 @@
 .view-search-sorted-by-time{
+	.views-separator{
+		border-top: 1px solid #DDD;
+		margin: 10px 0px;
+		float: left;
+		width: 100%;
+		clear: both;
+	}
+	.views-field-tid a{
+		color: #333;
+		text-decoration:none;
+		font-style: italic;
+	}
 	.views-field-field-main-image-fid{
 		float: right;
 	}
@@ -9,7 +21,8 @@
 		color: #333;
 		text-decoration: none;
 	}
-	.views-field-field-teaser-value{
+	.views-field-teaser{
 		font-family: Arial;
 	}
+	
 }

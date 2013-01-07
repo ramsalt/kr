@@ -1,8 +1,22 @@
 /* line 2, ../sass/search.scss */
+.view-search-sorted-by-time .views-separator {
+  border-top: 1px solid #dddddd;
+  margin: 10px 0px;
+  float: left;
+  width: 100%;
+  clear: both;
+}
+/* line 9, ../sass/search.scss */
+.view-search-sorted-by-time .views-field-tid a {
+  color: #333;
+  text-decoration: none;
+  font-style: italic;
+}
+/* line 14, ../sass/search.scss */
 .view-search-sorted-by-time .views-field-field-main-image-fid {
   float: right;
 }
-/* line 5, ../sass/search.scss */
+/* line 17, ../sass/search.scss */
 .view-search-sorted-by-time .views-field-title a {
   font-family: "MerriweatherRegular",Arial,serif;
   font-size: 1.5em;
@@ -10,7 +24,7 @@
   color: #333;
   text-decoration: none;
 }
-/* line 12, ../sass/search.scss */
-.view-search-sorted-by-time .views-field-field-teaser-value {
+/* line 24, ../sass/search.scss */
+.view-search-sorted-by-time .views-field-teaser {
   font-family: Arial;
 }
