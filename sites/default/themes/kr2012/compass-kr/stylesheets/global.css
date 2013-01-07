@@ -3519,7 +3519,7 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
 /* line 2, ../sass/search.scss */
 .view-search-sorted-by-time .views-separator {
   border-top: 1px solid #dddddd;
-  margin: 15px 0 10px;
+  margin: 15px 0 15px;
   float: left;
   width: 100%;
   clear: both;
@@ -3546,4 +3546,5 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
 /* line 25, ../sass/search.scss */
 .view-search-sorted-by-time .views-field-teaser {
   font-family: Arial;
+  margin: 1em 0em;
 }
