@@ -64,7 +64,14 @@
 	float: right;
 	text-align: right;
 }
-
+/*Fix in Firefox*/
+@-moz-document url-prefix() {
+.dataTables_length,  .dataTables_filter{
+	position:relative;
+	top: -30px;
+}
+}
+/*Fix in Firefox - end*/
 .dataTables_info {
 	width: 60%;
 	float: left;
