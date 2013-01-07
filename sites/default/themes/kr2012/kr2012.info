@@ -48,6 +48,10 @@ regions[ten_one] = Front: Ten one
 regions[ten_two] = Front: Ten two
 regions[ten_three] = Front: Ten three
 
+    layouts[node_embed][name] = "Ckeditor node embed"
+    layouts[node_embed][description] = "Simple two column page."
+    layouts[node_embed][template] = "page-ckeditor-node-embed"
+    layouts[node_embed][regions][] = "content"
 
     ; Layout: Default
     layouts[default][name] = "Default"

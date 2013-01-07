@@ -41,7 +41,6 @@ function _tema_block($nid){
 	$cache = cache_get('tema_block_'.$nid);
 	
 	if (is_array($cache->data)) {
-		
 	  	$data = $cache->data;
 	}
 	else {
@@ -53,7 +52,7 @@ function _tema_block($nid){
 			$content .= _tema_layout_std($node);
 		}
 		$data = array(
-	  		'subject' => $node->title, 
+	  		'subject' => 'Tema: '. l($node->title, 'node/'.$node->title), 
 	  		'content' => $content,
 	  		'node_id' => $nid,
 	  		'layout' =>  $layout,
