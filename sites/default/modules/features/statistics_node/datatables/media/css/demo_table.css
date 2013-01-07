@@ -68,7 +68,7 @@
 @-moz-document url-prefix() {
 .dataTables_length,  .dataTables_filter{
 	position:relative;
-	top: -30px;
+	top: -10px;
 }
 }
 /*Fix in Firefox - end*/
