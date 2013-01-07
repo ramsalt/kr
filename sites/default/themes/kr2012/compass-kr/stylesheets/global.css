@@ -2868,8 +2868,9 @@ body .body-content ul, body .body-content p ul {
     clear: none;
     float: left;
     padding-right: 5px;
+    padding-left: 5px;
   }
-  /* line 51, ../sass/base-desktop.scss */
+  /* line 52, ../sass/base-desktop.scss */
   .byline .addthis {
     height: 25px;
     min-width: 191px;
@@ -2899,21 +2900,21 @@ body .body-content ul, body .body-content p ul {
     width: 100%;
   }
 
-  /* line 63, ../sass/base-desktop.scss */
+  /* line 64, ../sass/base-desktop.scss */
   #logo-area {
     background: transparent;
     border: none;
     height: 74px;
   }
-  /* line 67, ../sass/base-desktop.scss */
+  /* line 68, ../sass/base-desktop.scss */
   #logo-area .wrapper {
     border-top: none;
   }
-  /* line 69, ../sass/base-desktop.scss */
+  /* line 70, ../sass/base-desktop.scss */
   #logo-area .wrapper .inner-wrapper {
     border-bottom: none;
   }
-  /* line 73, ../sass/base-desktop.scss */
+  /* line 74, ../sass/base-desktop.scss */
   #logo-area .wrapper .container .inner-container {
     height: 73px;
     width: 100%;
@@ -2922,19 +2923,19 @@ body .body-content ul, body .body-content p ul {
     border-bottom: 1px solid #122435;
     position: relative;
   }
-  /* line 80, ../sass/base-desktop.scss */
+  /* line 81, ../sass/base-desktop.scss */
   #logo-area .wrapper .container .inner-container .grid {
     width: 96%;
     margin: 0px 2% 0px 2%;
   }
-  /* line 87, ../sass/base-desktop.scss */
+  /* line 88, ../sass/base-desktop.scss */
   #logo-area .wrapper #logo {
     margin-left: 0px;
     height: 62px;
     float: left;
     width: 291px;
   }
-  /* line 93, ../sass/base-desktop.scss */
+  /* line 94, ../sass/base-desktop.scss */
   #logo-area .wrapper #logo a {
     text-indent: -9999px;
     display: block;
@@ -2944,7 +2945,7 @@ body .body-content ul, body .body-content p ul {
     height: 31px;
     width: 291px;
   }
-  /* line 101, ../sass/base-desktop.scss */
+  /* line 102, ../sass/base-desktop.scss */
   #logo-area .wrapper #logo a span {
     background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 0 no-repeat;
     width: 340px;
@@ -2952,26 +2953,26 @@ body .body-content ul, body .body-content p ul {
     float: left;
   }
 
-  /* line 111, ../sass/base-desktop.scss */
+  /* line 112, ../sass/base-desktop.scss */
   #pre-area {
     border-top: none;
     border-bottom: none;
     background: transparent;
   }
-  /* line 115, ../sass/base-desktop.scss */
+  /* line 116, ../sass/base-desktop.scss */
   #pre-area .wrapper {
     background: transparent;
     border-top: none;
   }
-  /* line 118, ../sass/base-desktop.scss */
+  /* line 119, ../sass/base-desktop.scss */
   #pre-area .wrapper .container {
     border-top: 1px solid #a3a19b;
   }
-  /* line 120, ../sass/base-desktop.scss */
+  /* line 121, ../sass/base-desktop.scss */
   #pre-area .wrapper .container .inner-container {
     border-top: 1px solid #cac9c6;
   }
-  /* line 122, ../sass/base-desktop.scss */
+  /* line 123, ../sass/base-desktop.scss */
   #pre-area .wrapper .container .inner-container .grid.pre.full {
     border-top: 1px solid #dadad8;
     margin: 0px;
@@ -2979,34 +2980,34 @@ body .body-content ul, body .body-content p ul {
     height: 37px;
   }
 
-  /* line 133, ../sass/base-desktop.scss */
+  /* line 134, ../sass/base-desktop.scss */
   #msg .inner-container {
     border-left: 1px solid #dddddd;
     border-right: 1px solid #dddddd;
   }
-  /* line 136, ../sass/base-desktop.scss */
+  /* line 137, ../sass/base-desktop.scss */
   #msg .inner-container .grid {
     padding: 15px;
   }
 
-  /* line 143, ../sass/base-desktop.scss */
+  /* line 144, ../sass/base-desktop.scss */
   #content-area .wrapper .container {
     border-top: 1px solid #c1bfb9;
   }
-  /* line 145, ../sass/base-desktop.scss */
+  /* line 146, ../sass/base-desktop.scss */
   #content-area .wrapper .container .inner-container {
     border-top: 1px solid #dddddd;
     border-left: 1px solid #dddddd;
     border-right: 1px solid #dddddd;
     padding-top: 2%;
   }
-  /* line 150, ../sass/base-desktop.scss */
+  /* line 151, ../sass/base-desktop.scss */
   #content-area .wrapper .container .inner-container .grid.art-side {
     margin: 0px;
     padding: 0px;
     width: 36%;
   }
-  /* line 155, ../sass/base-desktop.scss */
+  /* line 156, ../sass/base-desktop.scss */
   #content-area .wrapper .container .inner-container .sidebar {
     padding: 0% 4% 2% 4%;
     border-left: 1px solid #dddddd;
@@ -3015,7 +3016,7 @@ body .body-content ul, body .body-content p ul {
     width: 92%;
   }
 
-  /* line 166, ../sass/base-desktop.scss */
+  /* line 167, ../sass/base-desktop.scss */
   .sitat-wrapper {
     width: 40%;
     float: right;
@@ -3023,7 +3024,7 @@ body .body-content ul, body .body-content p ul {
     margin-left: 7px;
     margin-bottom: 20px;
   }
-  /* line 174, ../sass/base-desktop.scss */
+  /* line 175, ../sass/base-desktop.scss */
   .sitat-wrapper .sitat-line .mark {
     background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -408px no-repeat;
     height: 27px;
@@ -3031,12 +3032,12 @@ body .body-content ul, body .body-content p ul {
     float: left;
     margin: -5px 8px 0px 0px;
   }
-  /* line 180, ../sass/base-desktop.scss */
+  /* line 181, ../sass/base-desktop.scss */
   .sitat-wrapper .sitat-line span {
     font-weight: bold;
   }
 
-  /* line 186, ../sass/base-desktop.scss */
+  /* line 187, ../sass/base-desktop.scss */
   .fakta {
     width: 40%;
     float: right;
@@ -3050,14 +3051,14 @@ body .body-content ul, body .body-content p ul {
     margin-left: 7px;
     margin-bottom: 20px;
   }
-  /* line 198, ../sass/base-desktop.scss */
+  /* line 199, ../sass/base-desktop.scss */
   .fakta .faktatittel {
     color: #d71010;
     font-weight: bold;
     text-transform: uppercase;
     border-bottom: 2px solid #d71010;
   }
-  /* line 204, ../sass/base-desktop.scss */
+  /* line 205, ../sass/base-desktop.scss */
   .fakta .content {
     font-size: 0.9em;
   }
@@ -3192,51 +3193,51 @@ body .body-content ul, body .body-content p ul {
     font-size: 1.1em;
   }
 
-  /* line 221, ../sass/base-desktop.scss */
+  /* line 222, ../sass/base-desktop.scss */
   .one.one_one .one-inner {
     border-right: 1px solid #dddddd;
     height: 100%;
   }
 
-  /* line 225, ../sass/base-desktop.scss */
+  /* line 226, ../sass/base-desktop.scss */
   .one.one_two .one-inner {
     margin-right: 1em;
   }
 
-  /* line 228, ../sass/base-desktop.scss */
+  /* line 229, ../sass/base-desktop.scss */
   .three-art {
     border-left: 1px solid #dddddd;
     margin-left: 10px;
     margin-bottom: 10px;
   }
-  /* line 232, ../sass/base-desktop.scss */
+  /* line 233, ../sass/base-desktop.scss */
   .three-art .block {
     margin-bottom: 0px;
   }
 
-  /* line 236, ../sass/base-desktop.scss */
+  /* line 237, ../sass/base-desktop.scss */
   .deskbordertop {
     border-top: 1px solid #dddddd;
   }
 
-  /* line 241, ../sass/base-desktop.scss */
+  /* line 242, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-field-main-image-fid {
     display: inline;
     float: left;
     margin-right: 10px;
   }
-  /* line 245, ../sass/base-desktop.scss */
+  /* line 246, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-field-main-image-fid .field-content {
     width: 78px;
     float: left;
   }
-  /* line 250, ../sass/base-desktop.scss */
+  /* line 251, ../sass/base-desktop.scss */
   .block .siste-saker .views-field-title {
     padding: 0px;
     margin-top: 6px;
   }
 
-  /* line 256, ../sass/base-desktop.scss */
+  /* line 257, ../sass/base-desktop.scss */
   .block-openx {
     display: block;
   }
