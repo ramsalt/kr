@@ -457,6 +457,18 @@ $logos: sprite-map("logo/*.png");
     }
   }
 }
+
+@-moz-document url-prefix() {
+	@mixin newslist-mob{
+		.newslist{
+			.views-field-title a{
+  			font-family: 'MerriweatherLight', Arial, serif;
+			}
+		}
+	}
+}
+
+
 @mixin newslist-mob{
   .newslist{
     .views-field-title, .views-field-field-main-image-fid, .views-field-field-teaser-value{
@@ -465,12 +477,7 @@ $logos: sprite-map("logo/*.png");
     .views-field-title a{
       font-family: 'MerriweatherRegular', Arial, serif;
     }
-    @-moz-document url-prefix() {
-    	.views-field-title a{
-      	font-family: 'MerriweatherLight', Arial, serif;
-    	}
     
-    }
     p{
       margin: 0px;
       line-height: 1.4em;
