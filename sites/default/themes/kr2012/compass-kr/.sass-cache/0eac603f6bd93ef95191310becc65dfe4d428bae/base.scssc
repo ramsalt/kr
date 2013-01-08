@@ -1,7 +1,7 @@
 3.2.4 (Media Mark)
-1228320be93531a82c66454cffa70f3e22a6f560
+9e1ecb7ca4cfaf77fd384ff59562462432ac8a54
 o:Sass::Tree::RootNode
-:@template"T)@import "compass";
+:@template"_)@import "compass";
 @import "mixins.scss";
 @import "ticker.scss";
 @import "nav.scss";
@@ -603,7 +603,7 @@ strong{
 	
 		.newslist{
 			.views-field-title a{
-  			font-family: 'MerriweatherLight', Arial, serif;
+  			font-family: 'MerriweatherLight', Arial, serif !important;
 			}
 		}
 	
@@ -990,8 +990,8 @@ solid;iGo;=	;>{	;?iÿ;@i;Aiÿ;Biÿ;@;0;iG;iG;iG;([".views-row-
 ;+[o;6;["relaterte-artikler;/" ;i%;1o;2;3{ ;40;/@È;i%;/@È;i%;i%;([".node-type-article;)o;*;+[o;,;+[o;-
 ;+[o;6;["node-type-article;/" ;i#;1o;2;3{ ;40;/@Ö;i#;/@Ö;i#;i#o:Sass::Tree::DirectiveNode
 ;T;@;	[o;;T;@;i ;	[o;;T;@;i ;	[o;;["font-family;@;i ;	[ ;;;o;	;@; ;!;[o;	;;;@;"MerriweatherLight;i[o;	;;";@;"
-Arial;i[o;	;;";@;"
-serif;i[;i[;i[;([".views-field-title a;)o;*;+[o;,;+[o;-
-;+[o;6;["views-field-title;/" ;iZ;1o;2;3{ ;40;/@ö;iZo;-
-;+[o;.	;["a;/@ö;iZ;00;1o;2;3{ ;40;/@ö;iZ;/@ö;iZ;iZ;([".newslist;)o;*;+[o;,;+[o;-
-;+[o;6;["newslist;/" ;iY;1o;2;3{ ;40;/@;iY;/@;iY;iY;["@-moz-document " "url-prefix();iW;i
+Arial;i[o;	;@; ;#;[o;	;;";@;"
+serif;i[o;	;;";@;"!important;i[;i[;i[;i[;([".views-field-title a;)o;*;+[o;,;+[o;-
+;+[o;6;["views-field-title;/" ;iZ;1o;2;3{ ;40;/@ú;iZo;-
+;+[o;.	;["a;/@ú;iZ;00;1o;2;3{ ;40;/@ú;iZ;/@ú;iZ;iZ;([".newslist;)o;*;+[o;,;+[o;-
+;+[o;6;["newslist;/" ;iY;1o;2;3{ ;40;/@;iY;/@;iY;iY;["@-moz-document " "url-prefix();iW;i

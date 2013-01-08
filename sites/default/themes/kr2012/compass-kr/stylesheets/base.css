@@ -1839,6 +1839,6 @@ strong {
 @-moz-document url-prefix() {
   /* line 602, ../sass/base.scss */
   .newslist .views-field-title a {
-    font-family: "MerriweatherLight", Arial, serif;
+    font-family: "MerriweatherLight", Arial, serif !important;
   }
 }
