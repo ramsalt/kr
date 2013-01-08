@@ -145,6 +145,6 @@
 
   /* line 127, ../sass/grid-desktop.scss */
   .ten .rammeboks {
-    height: 285px;
+    min-height: 285px;
   }
 }
