@@ -458,16 +458,6 @@ $logos: sprite-map("logo/*.png");
   }
 }
 
-@-moz-document url-prefix() {
-	@mixin newslist-mob{
-		.newslist{
-			.views-field-title a{
-  			font-family: 'MerriweatherLight', Arial, serif;
-			}
-		}
-	}
-}
-
 
 @mixin newslist-mob{
   .newslist{

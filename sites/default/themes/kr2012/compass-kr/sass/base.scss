@@ -596,4 +596,12 @@ strong{
 		
 	
 }
-
+@-moz-document url-prefix() {
+	
+		.newslist{
+			.views-field-title a{
+  			font-family: 'MerriweatherLight', Arial, serif;
+			}
+		}
+	
+}

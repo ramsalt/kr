@@ -1,7 +1,7 @@
 3.2.4 (Media Mark)
-94621ff2d4cebe893ec9b5c986263451ae225da7
+1228320be93531a82c66454cffa70f3e22a6f560
 o:Sass::Tree::RootNode
-:@template"Í(@import "compass";
+:@template"T)@import "compass";
 @import "mixins.scss";
 @import "ticker.scss";
 @import "nav.scss";
@@ -599,8 +599,16 @@ strong{
 		
 	
 }
-
-:@has_childrenT:@options{ :@children[Eo:Sass::Tree::ImportNode;0:@imported_filename"compass;@;	[ :@imported_file0:
+@-moz-document url-prefix() {
+	
+		.newslist{
+			.views-field-title a{
+  			font-family: 'MerriweatherLight', Arial, serif;
+			}
+		}
+	
+}
+:@has_childrenT:@options{ :@children[Fo:Sass::Tree::ImportNode;0:@imported_filename"compass;@;	[ :@imported_file0:
 @lineio;
 ;0;"mixins.scss;@;	[ ;0;io;
 ;0;"ticker.scss;@;	[ ;0;io;
@@ -980,4 +988,10 @@ solid;iGo;=	;>{	;?iÿ;@i;Aiÿ;Biÿ;@;0;iG;iG;iG;([".views-row-
 ;+[o;6;["views-row-2;/" ;iL;1o;2;3{ ;40;/@¤;iL;/@¤;iL;iLo;;T;@;i ;	[o;;["padding-left;@;i ;	[ ;;;o;;;";@;"	22px;iQ;([".views-row-3;)o;*;+[o;,;+[o;-
 ;+[o;6;["views-row-3;/" ;iP;1o;2;3{ ;40;/@º;iP;/@º;iP;iP;([".relaterte-artikler;)o;*;+[o;,;+[o;-
 ;+[o;6;["relaterte-artikler;/" ;i%;1o;2;3{ ;40;/@È;i%;/@È;i%;i%;([".node-type-article;)o;*;+[o;,;+[o;-
-;+[o;6;["node-type-article;/" ;i#;1o;2;3{ ;40;/@Ö;i#;/@Ö;i#;i#;i
+;+[o;6;["node-type-article;/" ;i#;1o;2;3{ ;40;/@Ö;i#;/@Ö;i#;i#o:Sass::Tree::DirectiveNode
+;T;@;	[o;;T;@;i ;	[o;;T;@;i ;	[o;;["font-family;@;i ;	[ ;;;o;	;@; ;!;[o;	;;;@;"MerriweatherLight;i[o;	;;";@;"
+Arial;i[o;	;;";@;"
+serif;i[;i[;i[;([".views-field-title a;)o;*;+[o;,;+[o;-
+;+[o;6;["views-field-title;/" ;iZ;1o;2;3{ ;40;/@ö;iZo;-
+;+[o;.	;["a;/@ö;iZ;00;1o;2;3{ ;40;/@ö;iZ;/@ö;iZ;iZ;([".newslist;)o;*;+[o;,;+[o;-
+;+[o;6;["newslist;/" ;iY;1o;2;3{ ;40;/@;iY;/@;iY;iY;["@-moz-document " "url-prefix();iW;i
