@@ -142,4 +142,9 @@
   .page-stillinger .container-16 .inner-container .art-main .panels-flexible-region-3-top {
     width: 100%;
   }
+
+  /* line 127, ../sass/grid-desktop.scss */
+  .ten .rammeboks {
+    height: 285px;
+  }
 }
