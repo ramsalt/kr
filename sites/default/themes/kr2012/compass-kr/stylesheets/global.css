@@ -2468,31 +2468,43 @@ body .body-content ul, body .body-content p ul {
   list-style-position: inside;
 }
 
-/* line 2, ../sass/stillinger.scss */
+/* line 3, ../sass/stillinger.scss */
+.page-stillinger .openlayers-views-map .openlayers-container-preset-stillingskartpreset {
+  height: 800px;
+}
+/* line 6, ../sass/stillinger.scss */
+.page-stillinger .openlayers-views-map .openlayers-preset-stillingskartpreset {
+  height: 800px;
+}
+/* line 9, ../sass/stillinger.scss */
+.page-stillinger .openlayers-views-map #OpenLayers.Layer.Vector.RootContainer_14_svgRoot {
+  height: 800px;
+}
+/* line 13, ../sass/stillinger.scss */
 .page-stillinger h1 {
   padding-left: 15px;
 }
-/* line 6, ../sass/stillinger.scss */
+/* line 17, ../sass/stillinger.scss */
 .page-stillinger .panels-flexible-region-first .panels-flexible-region-inside-first {
   padding-left: 15px;
 }
-/* line 8, ../sass/stillinger.scss */
+/* line 19, ../sass/stillinger.scss */
 .page-stillinger .panels-flexible-region-first .panels-flexible-region-inside-first .view {
   padding-bottom: 10px;
 }
-/* line 10, ../sass/stillinger.scss */
+/* line 21, ../sass/stillinger.scss */
 .page-stillinger .panels-flexible-region-first .panels-flexible-region-inside-first .view h2, .page-stillinger .panels-flexible-region-first .panels-flexible-region-inside-first .view h3 {
   margin-bottom: 10px;
   font-family: Arial;
   font-size: 1.2em;
   font-weight: bold;
 }
-/* line 18, ../sass/stillinger.scss */
+/* line 29, ../sass/stillinger.scss */
 .page-stillinger .panels-flexible-region-first .panels-flexible-region-inside-first .stillinger ul {
   margin: 0px;
   padding: 0px;
 }
-/* line 21, ../sass/stillinger.scss */
+/* line 32, ../sass/stillinger.scss */
 .page-stillinger .panels-flexible-region-first .panels-flexible-region-inside-first .stillinger ul li {
   list-style: none;
   margin: 0px 0px 10px;
@@ -2501,7 +2513,7 @@ body .body-content ul, body .body-content p ul {
   width: 100%;
   clear: both;
 }
-/* line 28, ../sass/stillinger.scss */
+/* line 39, ../sass/stillinger.scss */
 .page-stillinger .panels-flexible-region-first .panels-flexible-region-inside-first .stillinger ul li .views-field-field-main-image-fid {
   float: left;
   margin-right: 12px;
