@@ -1,71 +1,372 @@
-/*
-Syntax error: File to import not found or unreadable: compass/css3/box-shadow.
-              Load paths:
-                /Users/Falster/www/Kommunal-rapport/kr/sites/default/themes/kr2012/compass-kr
-                /Users/Falster/www/Kommunal-rapport/kr/sites/default/themes/kr2012/compass-kr/sass
-        on line 13 of sass/nav.scss
-        from line 2 of sass/base-tablet.scss
+@media all and (min-width: 740px) {
+  /* line 8, ../sass/base-tablet.scss */
+  .visible-mobile, .visible-desktop {
+    display: none;
+  }
 
-8:   .visible-mobile, .visible-desktop{
-9:     display: none;
-10:   }
-11:   .visible-tablet{
-12:     display: block;
-13:   }
-14:   .hide-mobile{
-15:     display: block;
-16:   }
-17: 
-18:   #logo-area{
+  /* line 11, ../sass/base-tablet.scss */
+  .visible-tablet {
+    display: block;
+  }
 
-Backtrace:
-sass/nav.scss:13
-sass/base-tablet.scss:2
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/import_node.rb:67:in `import'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/import_node.rb:28:in `imported_file'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/import_node.rb:37:in `css_import?'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/perform.rb:215:in `visit_import'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/perform.rb:225:in `visit_import'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/perform.rb:225:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/perform.rb:225:in `visit_import'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `map'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/perform.rb:107:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/perform.rb:106:in `visit_children'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/perform.rb:126:in `visit_root'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/tree/root_node.rb:20:in `render'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/engine.rb:315:in `_render'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/engine.rb:262:in `render'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/plugin/compiler.rb:341:in `update_stylesheet'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/plugin/compiler.rb:203:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/plugin/compiler.rb:201:in `each'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/plugin/compiler.rb:201:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/plugin/compiler.rb:235:in `watch'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/plugin.rb:107:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/plugin.rb:107:in `method_missing'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/exec.rb:444:in `watch_or_update'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/exec.rb:307:in `process_result'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/exec.rb:41:in `parse'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/../lib/sass/../sass/exec.rb:21:in `parse!'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.4/bin/sass:8
-/usr/bin/sass:19:in `load'
-/usr/bin/sass:19
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: File to import not found or unreadable: compass/css3/box-shadow.\A               Load paths:\A                 /Users/Falster/www/Kommunal-rapport/kr/sites/default/themes/kr2012/compass-kr\A                 /Users/Falster/www/Kommunal-rapport/kr/sites/default/themes/kr2012/compass-kr/sass\A         on line 13 of sass/nav.scss\A         from line 2 of sass/base-tablet.scss\A \A 8:   .visible-mobile, .visible-desktop{\A 9:     display: none;\A 10:   }\A 11:   .visible-tablet{\A 12:     display: block;\A 13:   }\A 14:   .hide-mobile{\A 15:     display: block;\A 16:   }\A 17: \A 18:   #logo-area{"; }
+  /* line 14, ../sass/base-tablet.scss */
+  .hide-mobile {
+    display: block;
+  }
+
+  /* line 18, ../sass/base-tablet.scss */
+  #logo-area {
+    height: 76px;
+  }
+  /* line 22, ../sass/base-tablet.scss */
+  #logo-area .wrapper .container .inner-container {
+    -moz-border-radius-topleft: 3px;
+    -webkit-border-top-left-radius: 3px;
+    border-top-left-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -webkit-border-top-right-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  /* line 25, ../sass/base-tablet.scss */
+  #logo-area .wrapper .container .grid {
+    width: 728px;
+    margin: 0px 20px;
+  }
+  /* line 29, ../sass/base-tablet.scss */
+  #logo-area .wrapper .container #logo {
+    margin-left: 0px;
+  }
+  /* line 32, ../sass/base-tablet.scss */
+  #logo-area .wrapper .container .logo-item-wrapper {
+    position: absolute;
+    right: 0px;
+    padding: 15px;
+  }
+  /* line 36, ../sass/base-tablet.scss */
+  #logo-area .wrapper .container .logo-item-wrapper .login-wrapper {
+    float: left;
+    margin-right: 25px;
+    margin-top: 6px;
+  }
+  /* line 40, ../sass/base-tablet.scss */
+  #logo-area .wrapper .container .logo-item-wrapper .login-wrapper a {
+    background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -303px no-repeat;
+    font-weight: bold;
+    height: 28px;
+    float: left;
+    text-decoration: none;
+    font-family: Helvetica;
+    color: #fff;
+  }
+  /* line 48, ../sass/base-tablet.scss */
+  #logo-area .wrapper .container .logo-item-wrapper .login-wrapper a span {
+    padding: 3px 0px 0px 34px;
+    float: left;
+  }
+  /* line 54, ../sass/base-tablet.scss */
+  #logo-area .wrapper .container .logo-item-wrapper .search-wrapper {
+    float: left;
+  }
+  /* line 56, ../sass/base-tablet.scss */
+  #logo-area .wrapper .container .logo-item-wrapper .search-wrapper input.form-text {
+    height: 34px;
+    width: 150px;
+    -webkit-border-radius: 4px 4px;
+    -moz-border-radius: 4px / 4px;
+    border-radius: 4px / 4px;
+    border: 1px solid #223e6b;
+    -webkit-box-shadow: inset 1px 2px 3px 0px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 1px 2px 3px 0px rgba(0, 0, 0, 0.7);
+    text-indent: 5px;
+    font-family: Arial;
+    font-size: 1em;
+  }
+  /* line 67, ../sass/base-tablet.scss */
+  #logo-area .wrapper .container .logo-item-wrapper .search-wrapper .form-submit {
+    position: absolute;
+    right: 21px;
+    text-indent: -999px;
+    background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -331px no-repeat;
+    width: 16px;
+    height: 17px;
+    border: none;
+    padding: 0px;
+    margin: 11px 4px 0px 0px;
+  }
+
+  /* line 186, ../sass/nav.scss */
+  #login-area .wrapper .container .inner-container .grid {
+    overflow: visible;
+    height: 38px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  /* line 195, ../sass/nav.scss */
+  #login-area #nav {
+    display: block;
+    background: transparent;
+  }
+  /* line 198, ../sass/nav.scss */
+  #login-area #nav ul {
+    margin-left: -10px;
+    padding: 0px;
+  }
+  /* line 201, ../sass/nav.scss */
+  #login-area #nav ul li {
+    width: auto;
+    clear: none;
+    background: transparent;
+    border: none;
+    position: relative;
+    overflow: visible;
+  }
+  /* line 208, ../sass/nav.scss */
+  #login-area #nav ul li a {
+    width: auto;
+    font-family: Helvetica;
+    color: white;
+  }
+  /* line 213, ../sass/nav.scss */
+  #login-area #nav ul li ul {
+    top: 38px;
+    background: #004e7e;
+    position: absolute;
+    width: auto;
+    padding: 10px;
+    margin: 0px;
+    z-index: 999;
+  }
+  /* line 221, ../sass/nav.scss */
+  #login-area #nav ul li ul li {
+    float: left;
+    clear: both;
+    margin: 0px;
+    width: 100%;
+    border-bottom: 1px solid transparent;
+  }
+  /* line 227, ../sass/nav.scss */
+  #login-area #nav ul li ul li a {
+    padding: 6px 0px 6px 10px;
+    font-weight: bold;
+    color: #313131;
+    background: white;
+    width: 200px;
+  }
+  /* line 233, ../sass/nav.scss */
+  #login-area #nav ul li ul li a span {
+    padding: 0px;
+  }
+  /* line 241, ../sass/nav.scss */
+  #login-area #nav ul li.on a {
+    background: #004e7e;
+  }
+  /* line 246, ../sass/nav.scss */
+  #login-area #nav ul li.open a {
+    background: #004e7e;
+  }
+  /* line 250, ../sass/nav.scss */
+  #login-area #nav ul li.open li a {
+    background: white;
+  }
+  /* line 254, ../sass/nav.scss */
+  #login-area #nav ul li.open ul {
+    display: block;
+  }
+  /* line 259, ../sass/nav.scss */
+  #login-area #nav ul li:hover a {
+    background: #004e7e;
+  }
+  /* line 264, ../sass/nav.scss */
+  #login-area #nav ul li.multilevel span.level {
+    background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -641px no-repeat;
+    width: 8px;
+    height: 6px;
+    margin: 6px 0px 0px 4px;
+  }
+
+  /* line 89, ../sass/base-tablet.scss */
+  #content-area .wrapper .container .inner-container {
+    padding-top: 2%;
+  }
+
+  /* line 96, ../sass/base-tablet.scss */
+  .view-bilde-slider-node .views-field-field-main-image-data {
+    font-family: Arial;
+    font-size: 1em;
+    padding: 8px;
+    background: #f1f2ee;
+    border-bottom: 1px solid #c1bfb9;
+  }
+
+  /* line 573, ../sass/mixins.scss */
+  .block-views .newslist .views-field-title, .block-views .newslist .views-field-field-main-image-fid, .block-views .newslist .views-field-field-teaser-value {
+    margin: 0px 20px;
+  }
+  /* line 576, ../sass/mixins.scss */
+  .block-views .newslist a {
+    font-size: 1.7em;
+    line-height: 1.1em;
+  }
+  /* line 580, ../sass/mixins.scss */
+  .block-views .newslist .views-field-title {
+    padding-bottom: 10px;
+  }
+  /* line 586, ../sass/mixins.scss */
+  .block-views .newslist.sak-1 .views-field-title a {
+    font-size: 2.2em;
+    line-height: 1.2em;
+  }
+  /* line 592, ../sass/mixins.scss */
+  .block-views .newslist.sak-1 ul li {
+    margin-top: 0px;
+  }
+  /* line 598, ../sass/mixins.scss */
+  .block-views .newslist.sak-2 li {
+    border-bottom: 1px solid #dddddd;
+  }
+  /* line 601, ../sass/mixins.scss */
+  .block-views .newslist.sak-2 li.views-row-last {
+    border-bottom: 0px;
+  }
+  /* line 607, ../sass/mixins.scss */
+  .block-views .newslist.sak-2 .views-field-field-main-image-fid .field-content a img {
+    width: 170px;
+    height: auto;
+    border: 1px solid #d1d1d1;
+  }
+  /* line 616, ../sass/mixins.scss */
+  .block-views .newslist.sak-2 .views-field-title a {
+    font-size: 1.8em;
+    line-height: 1.1em;
+  }
+  /* line 623, ../sass/mixins.scss */
+  .block-views .newslist.sak-4 ul {
+    width: 100%;
+    float: left;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+  }
+  /* line 628, ../sass/mixins.scss */
+  .block-views .newslist.sak-4 ul li {
+    float: left;
+    width: 253px;
+    border-bottom: 0px;
+    border-right: 1px solid #dddddd;
+    margin: 0px;
+    padding: 0px;
+  }
+  /* line 635, ../sass/mixins.scss */
+  .block-views .newslist.sak-4 ul li .views-field-field-main-image-fid {
+    float: left;
+    display: none;
+  }
+  /* line 639, ../sass/mixins.scss */
+  .block-views .newslist.sak-4 ul li .views-field-title {
+    padding-top: 25px;
+  }
+  /* line 642, ../sass/mixins.scss */
+  .block-views .newslist.sak-4 ul li .views-field-field-teaser-value {
+    display: block;
+    padding-bottom: 25px;
+  }
+  /* line 647, ../sass/mixins.scss */
+  .block-views .newslist.sak-4 ul li.views-row-last {
+    border-right: 0px;
+  }
+  /* line 656, ../sass/mixins.scss */
+  .block-views .newslist.sak-12 ul li .views-field-title a, .block-views .newslist.sak-23 ul li .views-field-title a {
+    font-size: 1.4em;
+  }
+  /* line 664, ../sass/mixins.scss */
+  .block-views .newslist.fire .views-field-field-main-image-fid, .block-views .newslist.fem .views-field-field-main-image-fid {
+    float: left;
+    margin-right: 10px;
+  }
+  /* line 667, ../sass/mixins.scss */
+  .block-views .newslist.fire .views-field-field-main-image-fid img, .block-views .newslist.fem .views-field-field-main-image-fid img {
+    width: 223px;
+    height: auto;
+  }
+  /* line 672, ../sass/mixins.scss */
+  .block-views .newslist.fire .views-field-title, .block-views .newslist.fem .views-field-title {
+    float: none;
+    width: auto;
+  }
+  /* line 676, ../sass/mixins.scss */
+  .block-views .newslist.fire .views-field-field-teaser-value, .block-views .newslist.fem .views-field-field-teaser-value {
+    display: block;
+  }
+  /* line 681, ../sass/mixins.scss */
+  .block-views .newslist.adart .views-row-last {
+    border-bottom: none;
+  }
+  /* line 684, ../sass/mixins.scss */
+  .block-views .newslist.adart .views-field-field-teaser-value {
+    display: block;
+  }
+
+  /* line 325, ../sass/mixins.scss */
+  #block-views-Kommentarutdrag-block_1,
+  #block-boxes-box-4bb00d6c,
+  #block-simplenews-22 {
+    padding: 5%;
+    width: 90%;
+  }
+
+  /* line 329, ../sass/mixins.scss */
+  .rammeboks {
+    padding: 3%;
+    width: 94%;
+    border-top: 1px solid #d9d9d9;
+    border-left: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;
+    border-bottom: 2px solid #c1bfb9;
+    background: #f1f2ee;
+    float: left;
+  }
+  /* line 340, ../sass/mixins.scss */
+  .rammeboks ul li .views-field-field-teaser-value {
+    font-size: 1em;
+    font-family: Arial;
+    color: #333;
+  }
+
+  /* line 351, ../sass/mixins.scss */
+  .rammeboks.eco ul li .views-field-title {
+    padding-top: 0.7em;
+  }
+
+  /* line 359, ../sass/mixins.scss */
+  .rammeboks.blogger .more-link a {
+    font-size: 1em;
+  }
+  /* line 363, ../sass/mixins.scss */
+  .rammeboks.blogger .views-field-field-blogg-bilde-fid {
+    display: none;
+  }
+
+  /* line 783, ../sass/mixins.scss */
+  div .ownsection {
+    float: left;
+    width: 197px;
+    margin-left: 20px;
+  }
+  /* line 787, ../sass/mixins.scss */
+  div .ownsection .desc {
+    padding-top: 1em;
+    display: block;
+    clear: both;
+    font-family: Arial;
+    color: #333333;
+  }
+  /* line 968, ../sass/mixins.scss */
+  div .nopremium-message .form-submit {
+    margin-top: 22px;
+    height: 44px;
+  }
+
+  /* line 115, ../sass/base-tablet.scss */
+  #logo-area .login-wrapper, #logo-area .search-wrapper {
+    display: block;
+  }
+}

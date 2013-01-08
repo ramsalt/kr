@@ -465,6 +465,12 @@ $logos: sprite-map("logo/*.png");
     .views-field-title a{
       font-family: 'MerriweatherRegular', Arial, serif;
     }
+    @-moz-document url-prefix() {
+    	.views-field-title a{
+      	font-family: 'MerriweatherLight', Arial, serif;
+    	}
+    
+    }
     p{
       margin: 0px;
       line-height: 1.4em;
