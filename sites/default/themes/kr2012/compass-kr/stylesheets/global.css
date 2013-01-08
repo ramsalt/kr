@@ -2470,15 +2470,15 @@ body .body-content ul, body .body-content p ul {
 
 /* line 3, ../sass/stillinger.scss */
 .page-stillinger .openlayers-views-map .openlayers-container-preset-stillingskartpreset {
-  height: 800px;
+  height: 800px!important;
 }
 /* line 6, ../sass/stillinger.scss */
 .page-stillinger .openlayers-views-map .openlayers-preset-stillingskartpreset {
-  height: 800px;
+  height: 800px!important;
 }
 /* line 9, ../sass/stillinger.scss */
 .page-stillinger .openlayers-views-map #OpenLayers.Layer.Vector.RootContainer_14_svgRoot {
-  height: 800px;
+  height: 800px!important;
 }
 /* line 13, ../sass/stillinger.scss */
 .page-stillinger h1 {
