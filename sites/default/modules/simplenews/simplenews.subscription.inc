@@ -14,30 +14,7 @@
  * @see simplenews_subscription_manager_form_validate()
  * @see simplenews_subscription_manager_form_submit()
  */
-function simplenews_subscription_manager_form(&$form_state, $snid = NULL) {
-  global $user;
 
-  if (isset($snid)) {
-    $account = new stdClass();
-    $account->snid = $snid;
-    $subscription = simplenews_get_subscription($account);
-  }
-  else {
-    $subscription = simplenews_get_subscription($user);
-  }
-
-  // If non-admin is trying to edit someone else's subscription, access denied.
-  if ($user->uid && $user->uid != $subscription->uid && !user_access('administer simplenews subscriptions')) {
-    drupal_access_denied();
-    return;
-  }
-  $form = _simplenews_subscription_manager_form($subscription);
-  $form['#validate'][] = 'simplenews_subscription_manager_form_validate';
-  $form['#submit'][] = 'simplenews_subscription_manager_form_submit';
-  $form['#redirect'] = '';  //Return to home page after (un)subscribe
-
-  return $form;
-}
 
 function simplenews_subscription_manager_form_validate($form, &$form_state) {
   $valid_email = valid_email_address($form_state['values']['mail']);
