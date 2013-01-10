@@ -1,3 +1,4 @@
+<?php print $page_header; ?>
   <div id="search_wrapper">
     <div class="left">
       <div id="currentsearch">

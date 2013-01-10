@@ -3633,3 +3633,17 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
   width: 100%;
   height: auto;
 }
+
+/* line 2, ../sass/videreutdanning.scss */
+.videreutdanning .art-main {
+  width: 100%;
+}
+/* line 5, ../sass/videreutdanning.scss */
+.videreutdanning .art-side {
+  display: none;
+}
+/* line 9, ../sass/videreutdanning.scss */
+.videreutdanning .facet_content li.facet_item {
+  list-style: none;
+  display: inline;
+}

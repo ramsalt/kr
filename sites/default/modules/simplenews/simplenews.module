@@ -1244,24 +1244,12 @@ function _simplenews_subscription_manager_form($subscription) {
   // If current user is logged in, just display email.
   // Anonymous users see an email box and will receive confirmations
   if ($subscription->mail) {
-    $form['subscriptions']['#title'] = t('Manage your newsletter subscriptions');
-    $form['subscriptions']['mail'] = array(
-      '#type' => 'textfield',
-      '#title' => t('email'),
-      '#size' => 20,
-      '#maxlength' => 128,
-      '#weight' => 10,
-      '#required' => TRUE,
-    );
-    $form['subscribe'] = array(
+    $form['subscriptions']['#title'] = t('Subscriptions for %mail', array('%mail' => $subscription->mail));
+    $form['subscriptions']['mail'] = array('#type' => 'value', '#value' => $subscription->mail);
+    $form['update'] = array(
       '#type' => 'submit',
-      '#value' => t('Subscribe'),
+      '#value' => t('Update'),
       '#weight' => 20,
-    );
-    $form['unsubscribe'] = array(
-      '#type' => 'submit',
-      '#value' => t('Unsubscribe'),
-      '#weight' => 30,
     );
   }
   else {
