@@ -1,4 +1,4 @@
-<?php print $page_header; ?>
+<h1 property="dc:title"><?php print $title; ?></h1>
   <div id="search_wrapper">
     <div class="left">
       <div id="currentsearch">

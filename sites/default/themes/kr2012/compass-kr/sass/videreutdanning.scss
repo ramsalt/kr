@@ -11,6 +11,7 @@
 			display:inline;
 			float: left;
 			margin-left:5px;
+			font-family: Arial;
 		}
 	}
 	#adminarea{
@@ -19,9 +20,10 @@
 	.search-result{
 		border-top: 1px solid #DDD;
 		margin-top:5px;
+		padding-top:10px;
 		h2 a{
 		font-family: "MerriweatherRegular",Arial,serif;
-		font-size: 1.5em;
+		font-size: 1.4em;
 		line-height: 1.3em;
 		color: #333;
 		text-decoration: none;
@@ -30,6 +32,9 @@
 		font-family: Arial;
 		margin: 1em 0em;
 		}
+	}
+	.search-result.first{
+		border-top: 0px solid;
 	}
 	#search{
 		

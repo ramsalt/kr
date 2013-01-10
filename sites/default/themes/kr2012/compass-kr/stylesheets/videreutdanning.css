@@ -13,30 +13,36 @@
   display: inline;
   float: left;
   margin-left: 5px;
+  font-family: Arial;
 }
-/* line 16, ../sass/videreutdanning.scss */
+/* line 17, ../sass/videreutdanning.scss */
 .videreutdanning #adminarea {
   clear: left;
 }
-/* line 19, ../sass/videreutdanning.scss */
+/* line 20, ../sass/videreutdanning.scss */
 .videreutdanning .search-result {
   border-top: 1px solid #dddddd;
   margin-top: 5px;
+  padding-top: 10px;
 }
-/* line 22, ../sass/videreutdanning.scss */
+/* line 24, ../sass/videreutdanning.scss */
 .videreutdanning .search-result h2 a {
   font-family: "MerriweatherRegular",Arial,serif;
-  font-size: 1.5em;
+  font-size: 1.4em;
   line-height: 1.3em;
   color: #333;
   text-decoration: none;
 }
-/* line 29, ../sass/videreutdanning.scss */
+/* line 31, ../sass/videreutdanning.scss */
 .videreutdanning .search-result p {
   font-family: Arial;
   margin: 1em 0em;
 }
-/* line 38, ../sass/videreutdanning.scss */
+/* line 36, ../sass/videreutdanning.scss */
+.videreutdanning .search-result.first {
+  border-top: 0px solid;
+}
+/* line 43, ../sass/videreutdanning.scss */
 .videreutdanning .pager li {
   display: inline;
 }
