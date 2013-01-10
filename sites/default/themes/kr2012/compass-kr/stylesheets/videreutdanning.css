@@ -1,10 +1,11 @@
-/* line 2, ../sass/videreutdanning.scss */
-.videreutdanning .art-main {
-  width: 100%;
-}
-/* line 5, ../sass/videreutdanning.scss */
-.videreutdanning .art-side {
-  display: none;
+/* line 1, ../sass/videreutdanning.scss */
+.videreutdanning {
+  /*.art-main{
+  	width:100%;
+  }
+  .art-side{
+  	display:none;
+  }*/
 }
 /* line 9, ../sass/videreutdanning.scss */
 .videreutdanning .facet_content li.facet_item {
@@ -12,4 +13,12 @@
   display: inline;
   float: left;
   margin-left: 5px;
+}
+/* line 16, ../sass/videreutdanning.scss */
+.videreutdanning .adminarea {
+  clear: left;
+}
+/* line 23, ../sass/videreutdanning.scss */
+.videreutdanning .pager li {
+  display: inline;
 }
