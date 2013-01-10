@@ -3646,4 +3646,6 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
 .videreutdanning .facet_content li.facet_item {
   list-style: none;
   display: inline;
+  float: left;
+  margin-left: 5px;
 }

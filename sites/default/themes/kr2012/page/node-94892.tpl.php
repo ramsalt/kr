@@ -8,18 +8,18 @@
       <p><div id="level">
         <h2>Nivå</h2>
       </div></p>
-      <p><div id="sublevel">
+      <div id="sublevel">
         <h2>Nivå</h2>
-      </div></p>
+      </div>
       <div id="fagomrade"></div>
-      <div id="adminarea">
+      <p><div id="adminarea">
         <h2>Fylke</h2>
-      </div>    
+      </div> </p>   
     </div>
     <div class="main_content">
       <div class="main_content_inner">
         <div id="logo"></div>
-        <div id="search"></div>
+        <p><div id="search"></div></p>
         <div id="pager-header"></div>
         <div id="result"></div>
         <div id="pager"></div>
