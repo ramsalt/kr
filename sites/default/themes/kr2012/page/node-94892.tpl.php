@@ -5,12 +5,12 @@
        <div id="currentsearch"> </div>
         <h2>Dine valg</h2>
       </div>
-      <div id="level">
+      <p><div id="level">
         <h2>Nivå</h2>
-      </div>
-      <div id="sublevel">
+      </div></p>
+      <p><div id="sublevel">
         <h2>Nivå</h2>
-      </div>
+      </div></p>
       <div id="fagomrade"></div>
       <div id="adminarea">
         <h2>Fylke</h2>
