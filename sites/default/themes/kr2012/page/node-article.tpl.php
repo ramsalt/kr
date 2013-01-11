@@ -96,7 +96,7 @@
 	 <?php print $calais_geo_map; ?>
 </div><!-- /.google-map -->
 <?php endif; ?>
-<?php if ($related_terms_links && false): ?>
+<?php if ($related_terms_links && FALSE): ?>
 <?php print $related_terms_links; ?>
 <?php endif; ?>
 <?php print $themed_links; ?>

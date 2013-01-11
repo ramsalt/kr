@@ -1,23 +1,40 @@
 /* line 2, ../sass/search.scss */
+.search-form input#edit-keys {
+  height: 24px;
+}
+/* line 6, ../sass/search.scss */
+.search-form .form-item {
+  margin: 0px;
+}
+/* line 8, ../sass/search.scss */
+.search-form .form-item label {
+  display: none;
+}
+/* line 12, ../sass/search.scss */
+.search-form .form-submit {
+  top: 16px;
+}
+
+/* line 17, ../sass/search.scss */
 .view-search-sorted-by-time .views-separator {
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #DDD;
   margin: 15px 0 15px;
   float: left;
   width: 100%;
   clear: both;
 }
-/* line 9, ../sass/search.scss */
+/* line 24, ../sass/search.scss */
 .view-search-sorted-by-time .views-field-tid a {
   color: #a9a9a9;
   text-decoration: none;
   font-family: Arial;
 }
-/* line 14, ../sass/search.scss */
+/* line 29, ../sass/search.scss */
 .view-search-sorted-by-time .views-field-field-main-image-fid {
   float: right;
   margin-left: 10px;
 }
-/* line 18, ../sass/search.scss */
+/* line 33, ../sass/search.scss */
 .view-search-sorted-by-time .views-field-title a {
   font-family: "MerriweatherRegular",Arial,serif;
   font-size: 1.5em;
@@ -25,7 +42,7 @@
   color: #333;
   text-decoration: none;
 }
-/* line 25, ../sass/search.scss */
+/* line 40, ../sass/search.scss */
 .view-search-sorted-by-time .views-field-teaser {
   font-family: Arial;
   margin: 1em 0em;

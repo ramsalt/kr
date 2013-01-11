@@ -1,3 +1,18 @@
+.search-form{
+  input#edit-keys{
+    height: 24px;
+    
+  }
+  .form-item{
+    margin: 0px;
+    label{
+      display: none;
+    }
+  }
+  .form-submit{
+    top: 16px;
+  }
+}
 .view-search-sorted-by-time{
 	.views-separator{
 		border-top: 1px solid #DDD;
