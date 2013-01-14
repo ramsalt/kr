@@ -3658,6 +3658,26 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
   color: #333;
   text-decoration: none;
 }
+/* line 57, ../sass/search.scss */
+.page-search .search-results .search-info {
+  margin-bottom: 0em;
+  color: #a9a9a9;
+  text-decoration: none;
+  font-family: Arial;
+}
+/* line 63, ../sass/search.scss */
+.page-search .search-results .search-separator {
+  border-top: 1px solid #dddddd;
+  margin: 15px 0 15px;
+  float: left;
+  width: 100%;
+  clear: both;
+}
+/* line 70, ../sass/search.scss */
+.page-search .search-results .search-snippet {
+  font-family: Arial;
+  margin: 1em 0em;
+}
 
 /* line 2, ../sass/tema.scss */
 .block-tema img {
