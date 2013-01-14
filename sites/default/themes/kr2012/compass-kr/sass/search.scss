@@ -40,12 +40,19 @@
 	.views-field-teaser{
 		font-family: Arial;
 		margin: 1em 0em;
+	}				
+}
+
+/*Ny søkeside:*/
+
+.page-search{
+	.search-results{
+		.title a{
+			font-family: "MerriweatherRegular",Arial,serif;
+			font-size: 1.5em;
+			line-height: 1.3em;
+			color: #333;
+			text-decoration: none;
+		}
 	}
-					
-				
-				
-				
-			
-		
-	
 }

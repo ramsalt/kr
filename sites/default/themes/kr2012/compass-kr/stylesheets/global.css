@@ -3649,6 +3649,16 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
   margin: 1em 0em;
 }
 
+/*Ny søkeside:*/
+/* line 50, ../sass/search.scss */
+.page-search .search-results .title a {
+  font-family: "MerriweatherRegular",Arial,serif;
+  font-size: 1.5em;
+  line-height: 1.3em;
+  color: #333;
+  text-decoration: none;
+}
+
 /* line 2, ../sass/tema.scss */
 .block-tema img {
   width: 100%;

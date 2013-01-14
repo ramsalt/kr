@@ -17,7 +17,7 @@
 
 /* line 17, ../sass/search.scss */
 .view-search-sorted-by-time .views-separator {
-  border-top: 1px solid #DDD;
+  border-top: 1px solid #dddddd;
   margin: 15px 0 15px;
   float: left;
   width: 100%;
@@ -46,4 +46,14 @@
 .view-search-sorted-by-time .views-field-teaser {
   font-family: Arial;
   margin: 1em 0em;
+}
+
+/*Ny søkeside:*/
+/* line 50, ../sass/search.scss */
+.page-search .search-results .title a {
+  font-family: "MerriweatherRegular",Arial,serif;
+  font-size: 1.5em;
+  line-height: 1.3em;
+  color: #333;
+  text-decoration: none;
 }
