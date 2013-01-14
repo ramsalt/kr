@@ -46,6 +46,7 @@
  * @see template_preprocess_search_result()
  */
 ?>
+<div class="test"></div>
 <dt class="title">
   <a href="<?php print $url; ?>"><?php print $title; ?></a>
 </dt>
