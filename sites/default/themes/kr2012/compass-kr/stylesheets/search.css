@@ -1,55 +1,26 @@
-/* line 2, ../sass/search.scss */
+/*Ny søkeside:*/
+/* line 4, ../sass/search.scss */
 .search-form input#edit-keys {
   height: 24px;
 }
-/* line 6, ../sass/search.scss */
+/* line 8, ../sass/search.scss */
 .search-form .form-item {
   margin: 0px;
 }
-/* line 8, ../sass/search.scss */
+/* line 10, ../sass/search.scss */
 .search-form .form-item label {
   display: none;
 }
-/* line 12, ../sass/search.scss */
+/* line 14, ../sass/search.scss */
 .search-form .form-submit {
   top: 16px;
 }
 
-/* line 17, ../sass/search.scss */
-.view-search-sorted-by-time .views-separator {
-  border-top: 1px solid #dddddd;
-  margin: 15px 0 15px;
-  float: left;
-  width: 100%;
-  clear: both;
+/* line 20, ../sass/search.scss */
+.page-search .search-results {
+  margin-top: 10px;
 }
-/* line 24, ../sass/search.scss */
-.view-search-sorted-by-time .views-field-tid a {
-  color: #a9a9a9;
-  text-decoration: none;
-  font-family: Arial;
-}
-/* line 29, ../sass/search.scss */
-.view-search-sorted-by-time .views-field-field-main-image-fid {
-  float: right;
-  margin-left: 10px;
-}
-/* line 33, ../sass/search.scss */
-.view-search-sorted-by-time .views-field-title a {
-  font-family: "MerriweatherRegular",Arial,serif;
-  font-size: 1.5em;
-  line-height: 1.3em;
-  color: #333;
-  text-decoration: none;
-}
-/* line 40, ../sass/search.scss */
-.view-search-sorted-by-time .views-field-teaser {
-  font-family: Arial;
-  margin: 1em 0em;
-}
-
-/*Ny søkeside:*/
-/* line 50, ../sass/search.scss */
+/* line 22, ../sass/search.scss */
 .page-search .search-results .title a {
   font-family: "MerriweatherRegular",Arial,serif;
   font-size: 1.5em;
@@ -57,14 +28,14 @@
   color: #333;
   text-decoration: none;
 }
-/* line 57, ../sass/search.scss */
+/* line 29, ../sass/search.scss */
 .page-search .search-results .search-info {
   margin-bottom: 0em;
   color: #a9a9a9;
   text-decoration: none;
   font-family: Arial;
 }
-/* line 63, ../sass/search.scss */
+/* line 35, ../sass/search.scss */
 .page-search .search-results .search-separator {
   border-top: 1px solid #dddddd;
   margin: 15px 0 15px;
@@ -72,8 +43,42 @@
   width: 100%;
   clear: both;
 }
-/* line 70, ../sass/search.scss */
+/* line 42, ../sass/search.scss */
 .page-search .search-results .search-snippet {
+  font-family: Arial;
+  margin: 1em 0em;
+}
+
+/*Gammel søkeside:*/
+/* line 52, ../sass/search.scss */
+.view-search-sorted-by-time .views-separator {
+  border-top: 1px solid #dddddd;
+  margin: 15px 0 15px;
+  float: left;
+  width: 100%;
+  clear: both;
+}
+/* line 59, ../sass/search.scss */
+.view-search-sorted-by-time .views-field-tid a {
+  color: #a9a9a9;
+  text-decoration: none;
+  font-family: Arial;
+}
+/* line 64, ../sass/search.scss */
+.view-search-sorted-by-time .views-field-field-main-image-fid {
+  float: right;
+  margin-left: 10px;
+}
+/* line 68, ../sass/search.scss */
+.view-search-sorted-by-time .views-field-title a {
+  font-family: "MerriweatherRegular",Arial,serif;
+  font-size: 1.5em;
+  line-height: 1.3em;
+  color: #333;
+  text-decoration: none;
+}
+/* line 75, ../sass/search.scss */
+.view-search-sorted-by-time .views-field-teaser {
   font-family: Arial;
   margin: 1em 0em;
 }
