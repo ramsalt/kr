@@ -46,9 +46,9 @@
  * @see template_preprocess_search_result()
  */
 ?>
-
+<div class="search-result">
 <?php if ($info) : ?>
-<p class="search-info"><?php print $info; ?></p>
+<p class="search-info"><?php print $info_split['type']; ?> - <?php print $info_split['date']; ?></p>
 <?php endif; ?>
 <dt class="title">
   <a href="<?php print $url; ?>"><?php print $title; ?></a>
@@ -58,4 +58,5 @@
     <p class="search-snippet"><?php print $snippet; ?></p>
   <?php endif; ?>
 </dd>
-
+</div>
+<div class="search-separator"></div>

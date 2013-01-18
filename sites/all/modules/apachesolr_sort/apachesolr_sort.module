@@ -1,0 +1,173 @@
+<?php
+/**
+ * Implementation of hook_menu().
+ * To enable sorting and removal of the sort by fields
+ */
+function apachesolr_sort_menu() {
+    $items['admin/settings/apachesolr/sort'] = array(
+    'title'              => 'Sorting',
+    'description'        => 'Sorting settings',
+    'page callback'      => 'drupal_get_form',
+    'page arguments'     => array('apachesolr_sort_page_form'),
+    'access arguments'   => array('administer site configuration'),
+    'file'               => 'apachesolr_sort.admin.inc',
+    'weight'             => -10,
+    'type'               => MENU_LOCAL_TASK,
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_apachesolr_prepare_query().
+ * Used to modify our sorts
+ */
+function apachesolr_sort_apachesolr_query_prepare($query) {
+  $sorts = $query->getAvailableSorts();
+  foreach ($sorts as $sort_key => $sort) {
+    if (!variable_get('apachesolr_sort_sort_' . $sort_key, TRUE)) {
+      $query->removeAvailableSort($sort_key);
+    }
+  }
+  $sorts = $query->getAvailableSorts();
+  foreach($sorts as $sort_key => $sort) {
+    $weight = variable_get('apachesolr_sort_sort_weight_' . $sort_key, 0);
+    $sorts[$sort_key]['weight'] = $weight;
+  }
+  uasort($sorts, "apachesolr_sort_weight_sort");
+  $query->setAvailableSorts($sorts);
+}
+
+function apachesolr_sort_weight_sort($a, $b) {
+  return strcmp($a['weight'], $b['weight']);
+}
+
+/**
+ * Implement hook_block().
+ */
+function apachesolr_sort_block($op = 'list', $delta = 0, $edit = array()) {
+  // Instead of a monolithic function, split out this code into separate
+  // functions for each operation (which we're going to need when we port to
+  // D7, anyway).
+  switch ($op) {
+    case 'list':
+      return apachesolr_sort_block_info();
+
+    case 'view':
+      return apachesolr_sort_block_view($delta);
+
+  }
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function apachesolr_sort_block_info() {
+  $blocks['apachesolr_sort'] = array(
+    'info' => t('Apache Solr Select Sort'),
+    'cache' => DRUPAL_CACHE_PER_PAGE,
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function apachesolr_sort_block_view($delta) {
+  if ('apachesolr_sort' == $delta) {
+    $environments = apachesolr_load_all_environments();
+    foreach ($environments as $env_id => $environment) {
+      if (apachesolr_has_searched($env_id) && !apachesolr_suppress_blocks($env_id)) {
+        $response = NULL;
+
+        // Get the query and response. Without these no blocks make sense.
+        if ($query = apachesolr_current_query($env_id)) {
+          $response = apachesolr_static_response_cache($query->getSearcher());
+        }
+        if (!$response || $response->response->numFound < 2) {
+          return;
+        }
+
+        // Gets apachesolr_sort_apachesolr_sort_form() arguments.
+        $new_query = clone $query;
+        $sorts = $query->getAvailableSorts();
+        $solrsort = $query->getSolrsort();
+
+        // Returns the sort form.
+        return array(
+          'subject' => t('Sort by'),
+          'content' => drupal_get_form('apachesolr_sort_sort_form_', $new_query, $sorts, $solrsort),
+        );
+      }
+    }
+  }
+}
+
+/**
+ * Displays the sort form as a dropdown.
+ */
+function apachesolr_sort_sort_form_(&$form_state, SolrBaseQuery $query, array $sorts, array $solrsort) {
+  $form = array();
+  $form['apachesolr_sort_query'] = array(
+    '#type' => 'value',
+    '#value' => $query,
+  );
+  $toggle = array('asc' => 'desc', 'desc' => 'asc');
+
+  // Build sort options.
+  $sort_options = array();
+  foreach ($sorts as $name => $data) {
+    $sort_options[$name] = check_plain($data['title']);
+  }
+
+  $form['apachesolr_sort_name'] = array(
+    '#type' => 'select',
+    '#title' => t('Field'),
+    '#options' => $sort_options,
+    '#default_value' => $solrsort['#name'],
+  );
+
+  $form['apachesolr_sort_direction'] = array(
+    '#type' => 'select',
+    '#title' => t('Direction'),
+    '#options' => array(
+      'asc' => t('Ascending'),
+      'desc' => t('Descending'),
+    ),
+    '#default_value' => $solrsort['#direction'],
+  );
+
+  $form['actions'] = array(
+    '#type' => 'actions',
+    '#weight' => 20,
+  );
+
+  $form['actions']['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Sort results'),
+  );
+
+  $form['#submit'][] = 'apachesolr_sort_sort_form_submit';
+
+  return $form;
+}
+
+/**
+ * Form submission handler for apachesolr_sort_apachesolr_sort_form().
+ */
+function apachesolr_sort_sort_form_submit($form, &$form_state) {
+  $query = $form_state['values']['apachesolr_sort_query'];
+  $name = $form_state['values']['apachesolr_sort_name'];
+  $direction = $form_state['values']['apachesolr_sort_direction'];
+
+  // Sets the Solr sort, gets query string parameters.
+  $query->setSolrsort($name, $direction);
+  $params = array_merge($_GET, $query->getSolrsortUrlQuery());
+  $params = drupal_get_query_parameters($params, array('q', 'page'));
+
+  // For sone reason query->getSolrsortUrlQuery() doesn't seem to handle score.
+  if ('score' == $name) {
+    $params = array();
+  }
+  // Redirect to a URL with the solrsort params included.
+  $form_state['redirect'] = array(current_path(), array('query' => $params));
+}

@@ -84,7 +84,10 @@ $logos: sprite-map("logo/*.png");
     }
     .views-field-nothing{
       float: right;
-      padding: 0px 0px 10px 10px;
+      padding: 14px 0px 10px 10px;
+      .quizlogo img{
+      	width:125px;
+      }
     }
     .views-field-view-node{
       a{

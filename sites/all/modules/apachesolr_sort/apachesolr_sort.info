@@ -1,0 +1,11 @@
+name=Apache Solr sort
+description=Manage your Apache Solr sorts through an UI
+package = Search Toolkit
+core = "6.x"
+
+; Information added by drupal.org packaging script on 2012-07-15
+version = "6.x-3.x-dev"
+core = "6.x"
+project = "apachesolr_sort"
+datestamp = "1342310731"
+

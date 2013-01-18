@@ -1,3 +1,5 @@
+/*Ny søkeside:*/
+
 .search-form{
   input#edit-keys{
     height: 24px;
@@ -13,6 +15,39 @@
     top: 16px;
   }
 }
+
+.page-search{
+	.search-results{
+		margin-top:10px;
+		.title a{
+			font-family: "MerriweatherRegular",Arial,serif;
+			font-size: 1.5em;
+			line-height: 1.3em;
+			color: #333;
+			text-decoration: none;
+		}
+		.search-info{
+			margin-bottom:0em;
+			color: #a9a9a9;
+			text-decoration:none;
+			font-family: Arial;
+		}
+		.search-separator{
+			border-top: 1px solid #DDD;
+			margin: 15px 0 15px;
+			float: left;
+			width: 100%;
+			clear: both;
+		}
+		.search-snippet{
+			font-family: Arial;
+			margin: 1em 0em;
+		}
+	}
+}
+
+/*Gammel søkeside:*/
+
 .view-search-sorted-by-time{
 	.views-separator{
 		border-top: 1px solid #DDD;
@@ -40,12 +75,5 @@
 	.views-field-teaser{
 		font-family: Arial;
 		margin: 1em 0em;
-	}
-					
-				
-				
-				
-			
-		
-	
+	}				
 }
