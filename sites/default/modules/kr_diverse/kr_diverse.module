@@ -316,7 +316,7 @@ function kr_diverse_twitter_pull_blocks() {
   return array($block->delta => $block);
 }
 
-function kr_diverse_query_alter($query){
+function kr_diverse_apachesolr_query_prepare($query){
 	global $user;
 	if($user->uid == 1){
 		dsm($query);
