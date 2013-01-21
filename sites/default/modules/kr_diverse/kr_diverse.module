@@ -322,8 +322,8 @@ function kr_diverse_apachesolr_query_prepare($query){
 		dsm($query);
 	}
 	// $query->setSolrsort('created', 'desc');
-	$sortstring = 'created desc';
-	$query['sortstring'] = $sortstring;
+	//$sortstring = 'created desc';
+	//$query['sortstring'] = $sortstring;
 	
 	//$params['sort'] = $sortstring;
 }
