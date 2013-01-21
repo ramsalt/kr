@@ -119,4 +119,24 @@ $logos: sprite-map("logo/*.png");
   #logo-area .login-wrapper, #logo-area .search-wrapper{
     display: block;
   }
+  #search-form{
+    label{
+      display: none;
+    }
+    #edit-keys-wrapper{
+      float: left;
+      margin: 0px;
+    }
+                input.form-text{
+              height: 34px;
+              width: 300px;
+              @include border-radius(4px, 4px);
+              border: 1px solid #223e6b;
+              -webkit-box-shadow: inset 1px 2px 3px 0px rgba(0, 0, 0, 0.7);
+              box-shadow: inset 1px 2px 3px 0px rgba(0, 0, 0, 0.7);
+              text-indent: 5px;
+              font-family: Arial;
+              font-size: 1em;
+            }
+  }
 }
