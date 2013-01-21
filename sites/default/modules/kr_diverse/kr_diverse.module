@@ -317,13 +317,5 @@ function kr_diverse_twitter_pull_blocks() {
 }
 
 function kr_diverse_apachesolr_query_prepare($query){
-	global $user;
-	if($user->uid == 1){
-		dsm($query);
-	}
 	$query->setSolrsort('ds_created', 'desc');
-	//$sortstring = 'created desc';
-	//$query->sortstring = $sortstring;
-	
-	//$params['sort'] = $sortstring;
 }
