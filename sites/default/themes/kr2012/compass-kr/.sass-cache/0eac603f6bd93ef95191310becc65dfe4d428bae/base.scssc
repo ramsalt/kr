@@ -1,7 +1,7 @@
 3.2.4 (Media Mark)
-9e1ecb7ca4cfaf77fd384ff59562462432ac8a54
+55d9e8f88decb92895842d7dc56e30502ee018f8
 o:Sass::Tree::RootNode
-:@template"_)@import "compass";
+:@template"¨)@import "compass";
 @import "mixins.scss";
 @import "ticker.scss";
 @import "nav.scss";
@@ -606,7 +606,9 @@ strong{
   			font-family: 'MerriweatherLight', Arial, serif !important;
 			}
 		}
-	
+		.body{
+			font-family: 'MerriweatherLight', Arial, serif !important;
+		}
 }
 :@has_childrenT:@options{ :@children[Fo:Sass::Tree::ImportNode;0:@imported_filename"compass;@;	[ :@imported_file0:
 @lineio;
@@ -989,9 +991,13 @@ solid;iGo;=	;>{	;?iÿ;@i;Aiÿ;Biÿ;@;0;iG;iG;iG;([".views-row-
 ;+[o;6;["views-row-3;/" ;iP;1o;2;3{ ;40;/@º;iP;/@º;iP;iP;([".relaterte-artikler;)o;*;+[o;,;+[o;-
 ;+[o;6;["relaterte-artikler;/" ;i%;1o;2;3{ ;40;/@È;i%;/@È;i%;i%;([".node-type-article;)o;*;+[o;,;+[o;-
 ;+[o;6;["node-type-article;/" ;i#;1o;2;3{ ;40;/@Ö;i#;/@Ö;i#;i#o:Sass::Tree::DirectiveNode
-;T;@;	[o;;T;@;i ;	[o;;T;@;i ;	[o;;["font-family;@;i ;	[ ;;;o;	;@; ;!;[o;	;;;@;"MerriweatherLight;i[o;	;;";@;"
+;T;@;	[o;;T;@;i ;	[o;;T;@;i ;	[o;;["font-family;@;i ;	[ ;;;o;	;@; ;!;[o;	;;;@;"MerriweatherLight;i[o;	;;";@;"
 Arial;i[o;	;@; ;#;[o;	;;";@;"
 serif;i[o;	;;";@;"!important;i[;i[;i[;i[;([".views-field-title a;)o;*;+[o;,;+[o;-
 ;+[o;6;["views-field-title;/" ;iZ;1o;2;3{ ;40;/@ú;iZo;-
 ;+[o;.	;["a;/@ú;iZ;00;1o;2;3{ ;40;/@ú;iZ;/@ú;iZ;iZ;([".newslist;)o;*;+[o;,;+[o;-
-;+[o;6;["newslist;/" ;iY;1o;2;3{ ;40;/@;iY;/@;iY;iY;["@-moz-document " "url-prefix();iW;i
+;+[o;6;["newslist;/" ;iY;1o;2;3{ ;40;/@;iY;/@;iY;iYo;;T;@;i ;	[o;;["font-family;@;i ;	[ ;;;o;	;@; ;!;[o;	;;;@;"MerriweatherLight;i_o;	;;";@;"
+Arial;i_o;	;@; ;#;[o;	;;";@;"
+serif;i_o;	;;";@;"!important;i_;i_;i_;i_;(["
+.body;)o;*;+[o;,;+[o;-
+;+[o;6;["	body;/" ;i^;1o;2;3{ ;40;/@/;i^;/@/;i^;i^;["@-moz-document " "url-prefix();iW;i
