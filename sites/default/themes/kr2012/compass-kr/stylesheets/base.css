@@ -1845,4 +1845,9 @@ strong {
   .newslist .views-field-title a {
     font-family: "MerriweatherLight", Arial, serif !important;
   }
+
+  /* line 606, ../sass/base.scss */
+  .body {
+    font-family: "MerriweatherLight", Arial, serif !important;
+  }
 }
