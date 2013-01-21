@@ -106,7 +106,7 @@ DirectoryIndex index.php
   #
   # If your site is running in a VirtualDocumentRoot at http://example.com/,
   # uncomment the following line:
-#   RewriteBase /
+   RewriteBase /
 
 	# Rewrite migrated news article URLs (Migrate module)
 	# Old format: index.db2?id=123

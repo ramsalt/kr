@@ -2233,9 +2233,15 @@ strong {
     font-family: 'MerriweatherLight', Arial, serif !important;
   }
 
+<<<<<<< HEAD
   /* line 612, ../sass/base.scss */
   .body {
     font-family: 'MerriweatherLight', Arial, serif !important;
+=======
+  /* line 606, ../sass/base.scss */
+  body {
+    font-family: "MerriweatherLight", Arial, serif !important;
+>>>>>>> a9c48d5cea34857315b4a74de30ddbe61d7cc9d9
   }
 }
 
