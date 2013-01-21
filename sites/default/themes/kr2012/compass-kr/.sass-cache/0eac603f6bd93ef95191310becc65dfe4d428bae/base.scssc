@@ -1,7 +1,7 @@
 3.2.4 (Media Mark)
-55d9e8f88decb92895842d7dc56e30502ee018f8
+59513603beb003fa1b147a0684261a43bb3821f3
 o:Sass::Tree::RootNode
-:@template"¨)@import "compass";
+:@template"§)@import "compass";
 @import "mixins.scss";
 @import "ticker.scss";
 @import "nav.scss";
@@ -606,7 +606,7 @@ strong{
   			font-family: 'MerriweatherLight', Arial, serif !important;
 			}
 		}
-		.body{
+		body{
 			font-family: 'MerriweatherLight', Arial, serif !important;
 		}
 }
@@ -998,6 +998,5 @@ serif;i[o;	;;";@;"!important;i[;i[;i[;i[;([".views-field-
 ;+[o;.	;["a;/@ú;iZ;00;1o;2;3{ ;40;/@ú;iZ;/@ú;iZ;iZ;([".newslist;)o;*;+[o;,;+[o;-
 ;+[o;6;["newslist;/" ;iY;1o;2;3{ ;40;/@;iY;/@;iY;iYo;;T;@;i ;	[o;;["font-family;@;i ;	[ ;;;o;	;@; ;!;[o;	;;;@;"MerriweatherLight;i_o;	;;";@;"
 Arial;i_o;	;@; ;#;[o;	;;";@;"
-serif;i_o;	;;";@;"!important;i_;i_;i_;i_;(["
-.body;)o;*;+[o;,;+[o;-
-;+[o;6;["	body;/" ;i^;1o;2;3{ ;40;/@/;i^;/@/;i^;i^;["@-moz-document " "url-prefix();iW;i
+serif;i_o;	;;";@;"!important;i_;i_;i_;i_;(["	body;)o;*;+[o;,;+[o;-
+;+[o;.	;["	body;/" ;i^;00;1o;2;3{ ;40;/@/;i^;/@/;i^;i^;["@-moz-document " "url-prefix();iW;i
