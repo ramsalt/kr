@@ -374,4 +374,28 @@
   #logo-area .login-wrapper, #logo-area .search-wrapper {
     display: block;
   }
+
+  /* line 123, ../sass/base-tablet.scss */
+  #search-form label {
+    display: none;
+  }
+  /* line 126, ../sass/base-tablet.scss */
+  #search-form #edit-keys-wrapper {
+    float: left;
+    margin: 0px;
+  }
+  /* line 130, ../sass/base-tablet.scss */
+  #search-form input.form-text {
+    height: 34px;
+    width: 300px;
+    -webkit-border-radius: 4px 4px;
+    -moz-border-radius: 4px / 4px;
+    border-radius: 4px / 4px;
+    border: 1px solid #223e6b;
+    -webkit-box-shadow: inset 1px 2px 3px 0px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 1px 2px 3px 0px rgba(0, 0, 0, 0.7);
+    text-indent: 5px;
+    font-family: Arial;
+    font-size: 1em;
+  }
 }
