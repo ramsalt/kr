@@ -321,7 +321,9 @@ function kr_diverse_apachesolr_query_prepare($query){
 	if($user->uid == 1){
 		dsm($query);
 	}
-	$query->setSolrsort('created', 'desc');
-	//$sortstring = 'created desc';
+	// $query->setSolrsort('created', 'desc');
+	$sortstring = 'created desc';
+	$query['sortstring'] = $sortstring;
+	
 	//$params['sort'] = $sortstring;
 }
