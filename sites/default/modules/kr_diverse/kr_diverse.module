@@ -317,6 +317,10 @@ function kr_diverse_twitter_pull_blocks() {
 }
 
 function kr_diverse_query_alter($query){
+	global $user;
+	if($user->uid == 1){
+		dsm($query);
+	}
 	$query->setSolrsort('created', 'desc');
 	//$sortstring = 'created desc';
 	//$params['sort'] = $sortstring;
