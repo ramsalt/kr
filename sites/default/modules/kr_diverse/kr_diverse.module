@@ -316,8 +316,8 @@ function kr_diverse_twitter_pull_blocks() {
   return array($block->delta => $block);
 }
 
-function kr_diverse_apachesolr_modify_query(&$query, &$params, $caller){
-	
-	$sortstring = 'created desc';
-	$params['sort'] = $sortstring;
+function kr_diverse_apachesolr_query($query){
+	$query->setSolrsort('created', 'desc');
+	//$sortstring = 'created desc';
+	//$params['sort'] = $sortstring;
 }
