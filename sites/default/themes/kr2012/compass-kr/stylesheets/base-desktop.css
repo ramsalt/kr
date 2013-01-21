@@ -53,7 +53,7 @@
   .byline .addthis {
     height: 25px;
     min-width: 191px;
-    overflow: hidden;
+    position: relative;
   }
 
   /* line 275, ../sass/nav.scss */
@@ -74,7 +74,7 @@
   /* line 287, ../sass/nav.scss */
   #login-area .wrapper .container .inner-container {
     border-top: 1px solid #2b5782;
-    border-bottom: 1px solid #4876a3;
+    border-bottom: 1px solid #4876A3;
     float: left;
     width: 100%;
   }
@@ -235,7 +235,7 @@
     color: #d71010;
     font-weight: bold;
     text-transform: uppercase;
-    border-bottom: 2px solid #d71010;
+    border-bottom: 2px solid #D71010;
   }
   /* line 205, ../sass/base-desktop.scss */
   .fakta .content {
@@ -282,7 +282,7 @@
   .block-views .newslist.sak-4 ul li {
     border: none;
     width: 100%;
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #DDD;
   }
   /* line 700, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-last {
@@ -295,13 +295,13 @@
   /* line 711, ../sass/mixins.scss */
   .block-views .newslist.fire ul, .block-views .newslist.fem ul {
     float: left;
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #DDD;
   }
   /* line 714, ../sass/mixins.scss */
   .block-views .newslist.fire ul li, .block-views .newslist.fem ul li {
     width: 24.8%;
     border-bottom: 0px;
-    border-right: 1px solid #dddddd;
+    border-right: 1px solid #DDD;
     margin: 0px;
     padding: 1em 0px 0px 0px;
   }
@@ -333,7 +333,7 @@
   }
   /* line 747, ../sass/mixins.scss */
   .block-views .newslist.adart .views-row-last {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #DDD;
   }
 
   /* line 797, ../sass/mixins.scss */
@@ -344,7 +344,7 @@
   }
   /* line 864, ../sass/mixins.scss */
   div .seksjonsside .views-field-title a {
-    font-family: "MerriweatherRegular", Arial, serif;
+    font-family: 'MerriweatherRegular', Arial, serif;
     font-size: 1.5em;
     line-height: 1.3em;
     color: #333;
@@ -374,7 +374,7 @@
 
   /* line 222, ../sass/base-desktop.scss */
   .one.one_one .one-inner {
-    border-right: 1px solid #dddddd;
+    border-right: 1px solid #DDD;
     height: 100%;
   }
 
@@ -385,7 +385,7 @@
 
   /* line 229, ../sass/base-desktop.scss */
   .three-art {
-    border-left: 1px solid #dddddd;
+    border-left: 1px solid #DDD;
     margin-left: 10px;
     margin-bottom: 10px;
   }

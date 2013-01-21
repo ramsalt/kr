@@ -52,7 +52,7 @@ $logos: sprite-map("logo/*.png");
     .addthis{
      height: 25px;
      min-width: 191px;
-     overflow: hidden;
+     position: relative;
       .twitter-share-button{
           //width: 76px;
       }

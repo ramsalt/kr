@@ -71,10 +71,7 @@ body.admin-menu{
   display: none;
 }
 
-/* To fill the container and nothing else */
-.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
-  width: 100% !important;
-}
+
 #logo-area{
   @include background-image(linear-gradient(top, #225a84, #083e6b));
   background-color: #225A84;
@@ -486,10 +483,19 @@ div {
   width: 100%;
   position: relative;
 }
+.layout-mobile{
+  .addthis{
+    clear: both;
+  }
+}
 .addthis{
   .addthis_button_facebook_like.at300b{
-    width: 97px;
-    height: 22px;
+    display: inline;
+    float: left;
+    /* To fill the container and nothing else */
+    .fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+     
+    }
   }
   .addthis_button_tweet.at300b{
     width: 106px;
