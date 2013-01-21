@@ -68,6 +68,10 @@
     float: left;
   }
   /* line 56, ../sass/base-tablet.scss */
+  #logo-area .wrapper .container .logo-item-wrapper .search-wrapper label {
+    display: none;
+  }
+  /* line 59, ../sass/base-tablet.scss */
   #logo-area .wrapper .container .logo-item-wrapper .search-wrapper input.form-text {
     height: 34px;
     width: 150px;
@@ -81,7 +85,7 @@
     font-family: Arial;
     font-size: 1em;
   }
-  /* line 67, ../sass/base-tablet.scss */
+  /* line 70, ../sass/base-tablet.scss */
   #logo-area .wrapper .container .logo-item-wrapper .search-wrapper .form-submit {
     position: absolute;
     right: 21px;
@@ -92,6 +96,7 @@
     border: none;
     padding: 0px;
     margin: 11px 4px 0px 0px;
+    top: 16px;
   }
 
   /* line 186, ../sass/nav.scss */
@@ -184,12 +189,12 @@
     margin: 6px 0px 0px 4px;
   }
 
-  /* line 89, ../sass/base-tablet.scss */
+  /* line 93, ../sass/base-tablet.scss */
   #content-area .wrapper .container .inner-container {
     padding-top: 2%;
   }
 
-  /* line 96, ../sass/base-tablet.scss */
+  /* line 100, ../sass/base-tablet.scss */
   .view-bilde-slider-node .views-field-field-main-image-data {
     font-family: Arial;
     font-size: 1em;
@@ -222,7 +227,7 @@
   }
   /* line 598, ../sass/mixins.scss */
   .block-views .newslist.sak-2 li {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #DDD;
   }
   /* line 601, ../sass/mixins.scss */
   .block-views .newslist.sak-2 li.views-row-last {
@@ -243,15 +248,15 @@
   .block-views .newslist.sak-4 ul {
     width: 100%;
     float: left;
-    border-top: 1px solid #dddddd;
-    border-bottom: 1px solid #dddddd;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
   }
   /* line 628, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li {
     float: left;
     width: 253px;
     border-bottom: 0px;
-    border-right: 1px solid #dddddd;
+    border-right: 1px solid #DDD;
     margin: 0px;
     padding: 0px;
   }
@@ -365,7 +370,7 @@
     height: 44px;
   }
 
-  /* line 115, ../sass/base-tablet.scss */
+  /* line 119, ../sass/base-tablet.scss */
   #logo-area .login-wrapper, #logo-area .search-wrapper {
     display: block;
   }

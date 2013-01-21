@@ -77,7 +77,12 @@
 				    					
 				    				</div>
 				    				<div class="search-wrapper">
-										<?php print drupal_get_form('search_form'); ?>
+				    					
+				    					<?php
+$block = module_invoke('search', 'block', 'view', 0);
+print $block['content'];
+?>				    				
+										<?php /* print drupal_get_form('search_form'); */ ?>
 									</div>
 								</div>
 		    			</div>

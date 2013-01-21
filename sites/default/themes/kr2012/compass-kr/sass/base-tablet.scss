@@ -53,6 +53,9 @@ $logos: sprite-map("logo/*.png");
           }
           .search-wrapper{
             float: left;
+            label{
+              display: none;
+            }
             input.form-text{
               height: 34px;
               width: 150px;
@@ -74,6 +77,7 @@ $logos: sprite-map("logo/*.png");
               border: none;
               padding: 0px;
               margin: 11px 4px 0px 0px;
+              top: 16px;
             }
           }
         }
