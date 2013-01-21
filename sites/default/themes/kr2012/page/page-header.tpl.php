@@ -77,7 +77,7 @@
 				    					
 				    				</div>
 				    				<div class="search-wrapper">
-										<?php print drupal_get_form('search_form', NULL, '', 'apachesolr_search'); ?>
+										<?php print drupal_get_form('search_form'); ?>
 									</div>
 								</div>
 		    			</div>
