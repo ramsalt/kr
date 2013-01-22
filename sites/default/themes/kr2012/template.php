@@ -106,14 +106,15 @@ function kr2012_preprocess_node(&$vars){
 			$vars['ingress']=1;
 			$vars['ingress_value']=$vars['field_teaser'][0]['safe'];
 		}
-    foreach($vars['field_sitat'] as $sitatlinje){
-      $sitater .= '<div class="sitat-line"><div class="mark"></div><span>'.$sitatlinje['value'].'</span></div>';
-      if(strlen($sitatlinje['value'])>2){
-        $vars['sitat']=1;
-      }
-    }
-    $vars['sitat_content']='<div class="sitat-wrapper">'.$sitater.'</div>';
-    
+	if(isset($vars['field_sitat'])){
+	    foreach($vars['field_sitat'] as $sitatlinje){
+	      $sitater .= '<div class="sitat-line"><div class="mark"></div><span>'.$sitatlinje['value'].'</span></div>';
+	      if(strlen($sitatlinje['value'])>2){
+	        $vars['sitat']=1;
+	      }
+	    }
+	    $vars['sitat_content']='<div class="sitat-wrapper">'.$sitater.'</div>';
+	}
     $updated = format_date($vars['node']->changed, 'medium');
     if($vars['node']->changed != $vars['node']->created){
       $vars['node_updated_rdfa'] = _openpublish_get_rdfa_date($vars['node']->changed, $updated);
@@ -193,7 +194,8 @@ function kr2012_preprocess_page(&$vars){
 	}
 	$byline = kr2012_byline($vars['node']);
 	$vars['byline'] = $byline;
-	if($vars['node']){
+	
+	if($vars['node'] && module_exists('node_class')){
 		$vars['body_classes'] .= ' '.node_class($vars['node']);
 	}
 	
