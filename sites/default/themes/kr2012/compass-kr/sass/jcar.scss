@@ -136,6 +136,18 @@ $logos: sprite-map("logo/*.png");
 /**
  * Buttons
  */
+ 
+ .jcar{
+ 	.jcarousel-prev-disabled{
+ 		opacity: 0.2;
+ 		cursor:default;
+ 	}
+ 	.jcarousel-next-disabled{
+ 		opacity: 0.2;
+ 		cursor:default;
+ 	}
+ 	
+ }
 .jcar .jcarousel-next{
   background: sprite($logos, jcarright) no-repeat;
   display: block;
@@ -179,15 +191,4 @@ $logos: sprite-map("logo/*.png");
 .jcar .jcarousel-navigation li.active a {
   font-weight: bold;
   text-decoration: none;
-}
-.jcar{
-	.jcarousel-prev-disabled{
-		opacity: 0.2;
-		cursor:default;
-	}
-	.jcarousel-next-disabled{
-		opacity: 0.2;
-		cursor:default;
-	}
-	
 }

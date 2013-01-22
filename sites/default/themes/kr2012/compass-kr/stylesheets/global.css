@@ -3578,7 +3578,18 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
 /**
  * Buttons
  */
-/* line 139, ../sass/jcar.scss */
+/* line 141, ../sass/jcar.scss */
+.jcar .jcarousel-prev-disabled {
+  opacity: 0.2;
+  cursor: default;
+}
+/* line 145, ../sass/jcar.scss */
+.jcar .jcarousel-next-disabled {
+  opacity: 0.2;
+  cursor: default;
+}
+
+/* line 151, ../sass/jcar.scss */
 .jcar .jcarousel-next {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -429px no-repeat;
   display: block;
@@ -3591,12 +3602,12 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
   left: 0px;
 }
 
-/* line 150, ../sass/jcar.scss */
+/* line 162, ../sass/jcar.scss */
 .jcar.jobber .jcarousel-next {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -378px no-repeat;
 }
 
-/* line 153, ../sass/jcar.scss */
+/* line 165, ../sass/jcar.scss */
 .jcar .jcarousel-prev {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -459px no-repeat;
   display: block;
@@ -3609,18 +3620,18 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
   left: 0px;
 }
 
-/* line 164, ../sass/jcar.scss */
+/* line 176, ../sass/jcar.scss */
 .jcar.jobber .jcarousel-prev {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -348px no-repeat;
 }
 
-/* line 167, ../sass/jcar.scss */
+/* line 179, ../sass/jcar.scss */
 .jcar .jcarousel-navigation {
   margin: 0;
   padding: 0;
 }
 
-/* line 172, ../sass/jcar.scss */
+/* line 184, ../sass/jcar.scss */
 .jcar .jcarousel-navigation li {
   display: inline;
   margin: 0 2px 0 0;
@@ -3628,21 +3639,10 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
   background: none;
 }
 
-/* line 179, ../sass/jcar.scss */
+/* line 191, ../sass/jcar.scss */
 .jcar .jcarousel-navigation li.active a {
   font-weight: bold;
   text-decoration: none;
-}
-
-/* line 184, ../sass/jcar.scss */
-.jcar .jcarousel-prev-disabled {
-  opacity: 0.2;
-  cursor: default;
-}
-/* line 188, ../sass/jcar.scss */
-.jcar .jcarousel-next-disabled {
-  opacity: 0.2;
-  cursor: default;
 }
 
 /*Ny søkeside:*/
