@@ -3505,7 +3505,7 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
 .jcar.jobber .jcarousel-item {
   text-align: left;
   background: #ffffff;
-  width: 187px;
+  width: 187px!important;
   height: 70px;
   padding: 20px;
   color: #333333;
@@ -3548,7 +3548,7 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
 }
 /* line 112, ../sass/jcar.scss */
 .jcar.jobber .jcarousel-item .views-field.views-field-field-job-date-value {
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 /* line 115, ../sass/jcar.scss */
 .jcar.jobber .jcarousel-item .views-field.views-field-field-job-utlyser-value {
