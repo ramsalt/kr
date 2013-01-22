@@ -168,12 +168,12 @@
  * Buttons
  */
 /* line 141, ../sass/jcar.scss */
-.jcar .jcarousel-prev-disabled {
+.jcar .jcarousel-prev.jcarousel-prev-disabled {
   opacity: 0.2;
   cursor: default;
 }
 /* line 145, ../sass/jcar.scss */
-.jcar .jcarousel-next-disabled {
+.jcar .jcarousel-next.jcarousel-next-disabled {
   opacity: 0.2;
   cursor: default;
 }

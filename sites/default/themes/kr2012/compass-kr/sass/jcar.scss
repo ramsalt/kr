@@ -138,11 +138,11 @@ $logos: sprite-map("logo/*.png");
  */
  
  .jcar{
- 	.jcarousel-prev-disabled{
+ 	.jcarousel-prev.jcarousel-prev-disabled{
  		opacity: 0.2;
  		cursor:default;
  	}
- 	.jcarousel-next-disabled{
+ 	.jcarousel-next.jcarousel-next-disabled{
  		opacity: 0.2;
  		cursor:default;
  	}
