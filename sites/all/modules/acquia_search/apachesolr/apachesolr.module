@@ -1890,7 +1890,7 @@ function apachesolr_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
     case 'insert':
     case 'update':
       // Insert or update are the same
-      apachesolr_entity_update($node, 'node');
+      apachesolr_entity_update($node, 'node');	  
       break;
   }
 }
@@ -1913,11 +1913,12 @@ function apachesolr_entity_update($entity, $type) {
         if (is_callable($status_callback)) {
           // by placing $status in front we prevent calling any other callback
           // after one status callback returned false
-          $status = $status && $status_callback($id, $type);
+          //dsm($status_callback);
+          //$status = $status && $status_callback($id, $type);
         }
       }
     }
-
+	$status = apachesolr_index_node_status_callback('node', $id);
     // Delete the entity from our index if the status callback returns FALSE
     if (!$status) {
       apachesolr_entity_delete($entity, $type);
@@ -1928,10 +1929,12 @@ function apachesolr_entity_update($entity, $type) {
 
     // If we haven't seen this entity before it may not be there, so merge
     // instead of update.
+    
     $query = "INSERT INTO {{$indexer_table}} (entity_type, entity_id, bundle, status, changed)
       VALUES ('%s', %d, '%s', %d, %d)
       ON DUPLICATE KEY UPDATE entity_type = '%s', entity_id = %d, bundle = '%s', status = %d, changed = %d";
     db_query($query, array($type, $id, $bundle, 1, APACHESOLR_REQUEST_TIME, $type, $id, $bundle, 1, APACHESOLR_REQUEST_TIME));
+	 
   }
 }
 
