@@ -75,7 +75,7 @@ $logos: sprite-map("logo/*.png");
   .jcarousel-item{
     text-align: left;
     background: #ffffff;
-    width: auto;
+    width: 187px;
     height: 70px;
     padding: 20px;
     color: #333333;
@@ -101,6 +101,7 @@ $logos: sprite-map("logo/*.png");
       margin: 0px;
       padding: 0px;
       height: auto;
+      max-width:136px;
       a{
         font-family: Arial;      
         color: #333333;
