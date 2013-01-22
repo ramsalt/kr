@@ -227,7 +227,7 @@
   }
   /* line 598, ../sass/mixins.scss */
   .block-views .newslist.sak-2 li {
-    border-bottom: 1px solid #DDD;
+    border-bottom: 1px solid #dddddd;
   }
   /* line 601, ../sass/mixins.scss */
   .block-views .newslist.sak-2 li.views-row-last {
@@ -248,15 +248,15 @@
   .block-views .newslist.sak-4 ul {
     width: 100%;
     float: left;
-    border-top: 1px solid #DDD;
-    border-bottom: 1px solid #DDD;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
   }
   /* line 628, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li {
     float: left;
     width: 253px;
     border-bottom: 0px;
-    border-right: 1px solid #DDD;
+    border-right: 1px solid #dddddd;
     margin: 0px;
     padding: 0px;
   }

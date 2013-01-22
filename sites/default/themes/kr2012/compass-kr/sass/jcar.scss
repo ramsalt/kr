@@ -182,9 +182,12 @@ $logos: sprite-map("logo/*.png");
 }
 .jcar{
 	.jcarousel-prev-disabled{
-		display: none;
+		opacity: 0.2;
+		cursor:default;
 	}
 	.jcarousel-next-disabled{
-		display: none;
+		opacity: 0.2;
+		cursor:default;
 	}
+	
 }

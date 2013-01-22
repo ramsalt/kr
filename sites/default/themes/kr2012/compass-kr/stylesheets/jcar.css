@@ -225,9 +225,11 @@
 
 /* line 184, ../sass/jcar.scss */
 .jcar .jcarousel-prev-disabled {
-  display: none;
+  opacity: 0.2;
+  cursor: default;
 }
-/* line 187, ../sass/jcar.scss */
+/* line 188, ../sass/jcar.scss */
 .jcar .jcarousel-next-disabled {
-  display: none;
+  opacity: 0.2;
+  cursor: default;
 }
