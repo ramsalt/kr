@@ -180,3 +180,11 @@ $logos: sprite-map("logo/*.png");
   font-weight: bold;
   text-decoration: none;
 }
+.jcar{
+	.jcarousel-prev-disabled{
+		display: none;
+	}
+	.jcarousel-next-disabled{
+		display: none;
+	}
+}

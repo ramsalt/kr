@@ -3633,6 +3633,15 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
   text-decoration: none;
 }
 
+/* line 184, ../sass/jcar.scss */
+.jcar .jcarousel-prev-disabled {
+  display: none;
+}
+/* line 187, ../sass/jcar.scss */
+.jcar .jcarousel-next-disabled {
+  display: none;
+}
+
 /*Ny søkeside:*/
 /* line 4, ../sass/search.scss */
 .search-form input#edit-keys {
