@@ -322,7 +322,6 @@ function kr_diverse_apachesolr_query_prepare($query){
 		dsm($query);
 	}
 	$query->setSolrsort('ds_created', 'desc');
-	$query->addParam('op', 'AND');
 	//$query->operator = 'AND';
 }
 function kr_diverse_apachesolr_query_alter($query) {
@@ -330,4 +329,5 @@ function kr_diverse_apachesolr_query_alter($query) {
 	if($user->uid == 1){
 		dsm(array($query, $query->getParams(), $query->getSolrParams()));
 	}
+	$query->addParam('mm', 1);
 }
