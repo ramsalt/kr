@@ -322,7 +322,8 @@ function kr_diverse_apachesolr_query_prepare($query){
 		dsm($query);
 	}
 	$query->setSolrsort('ds_created', 'desc');
-	$query->operator = 'AND';
+	$query->addParam('op', 'AND');
+	//$query->operator = 'AND';
 }
 function kr_diverse_apachesolr_query_alter($query) {
 	global $user;
