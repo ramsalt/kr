@@ -39,8 +39,13 @@
         filter : {collection : 'utdanning'},
         per_page : 25,
         collection : 'dismax',
-        use_lightbox : false,
+        use_lightbox : true,
         show_facet_numbers : true,
+        fields : [
+                 {label : 'Nivå', field : 'niva'},
+                 {label : 'Fylke', field : 'fylke'},
+                 {label : 'Undervisningssted', field : 'undervisningssted'},
+               ]
       });
       // Current search
       $('#currentsearch').currentSearch();
