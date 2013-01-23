@@ -1932,9 +1932,9 @@ function apachesolr_entity_update($entity, $type) {
       apachesolr_entity_delete($entity, $type);
       
     }else{
-
-    $indexer_table = apachesolr_get_indexer_table($type);
 dsm($entity);
+    $indexer_table = apachesolr_get_indexer_table($type);
+
     // If we haven't seen this entity before it may not be there, so merge
     // instead of update.
     
