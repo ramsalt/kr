@@ -330,4 +330,5 @@ function kr_diverse_apachesolr_query_alter($query) {
 		dsm(array($query, $query->getParams(), $query->getSolrParams()));
 	}
 	$query->addParam('mm', 1);
+	$query->params['mm'] = '1';
 }
