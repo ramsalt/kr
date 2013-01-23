@@ -1901,7 +1901,7 @@ function apachesolr_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
 function apachesolr_entity_update($entity, $type) {
 	global $user;
 	if($user->uid == 1){
-		dsm($entity);
+		
 	}
   module_load_include('inc', 'apachesolr', 'apachesolr.index');
   if (apachesolr_entity_should_index($entity, $type)) {
@@ -1934,7 +1934,7 @@ function apachesolr_entity_update($entity, $type) {
     }else{
 
     $indexer_table = apachesolr_get_indexer_table($type);
-
+dsm($entity);
     // If we haven't seen this entity before it may not be there, so merge
     // instead of update.
     
