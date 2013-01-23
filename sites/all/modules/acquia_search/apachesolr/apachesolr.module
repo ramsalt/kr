@@ -1891,6 +1891,7 @@ function apachesolr_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
     case 'update':
       // Insert or update are the same
       apachesolr_entity_update($node, 'node');	  
+	  dsm($node);
       break;
   }
 }
@@ -1930,7 +1931,7 @@ function apachesolr_entity_update($entity, $type) {
     // Delete the entity from our index if the status callback returns FALSE
     if ($status == 0) {
       apachesolr_entity_delete($entity, $type);
-dsm($entity);      
+      
     }else{
 
     $indexer_table = apachesolr_get_indexer_table($type);
