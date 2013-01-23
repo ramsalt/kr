@@ -244,8 +244,10 @@ function kr2012_preprocess_block(&$variables, $hook){
   	}
 }
 function kr2012_preprocess_search_result(&$variables) {
-  global $language;
-
+  global $language, $user;
+if($user->uid == 1){
+	dsm($variables);
+}
   $result = $variables['result'];
   $variables['url'] = check_url($result['link']);
   $variables['title'] = check_plain($result['title']);
