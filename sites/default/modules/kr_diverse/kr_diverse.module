@@ -327,6 +327,6 @@ function kr_diverse_apachesolr_query_prepare($query){
 function kr_diverse_apachesolr_query_alter($query) {
 	global $user;
 	if($user->uid == 1){
-		dsm($query);
+		dsm(array($query, $query->getParams(), $query->getSolrParams()));
 	}
 }
