@@ -23,17 +23,21 @@ $logos: sprite-map("logo/*.png");
   }
   #top-area{
     .container{
-      .grid{
-        .block{
-          clear: none;
-          float: left;
-          overflow: hidden;
-        }
-        #block-openx-8{
-          width: 18.7%;
-        }
-        #block-openx-7{
-          width: 81.3%;
+      .inner-container{
+        .grid{
+          width: 100%;
+          margin: 0px;
+          .block{
+            clear: none;
+            float: left;
+            overflow: hidden;
+          }
+          #block-openx-8{
+            width: 18.7%;
+          }
+          #block-openx-7{
+            width: 81.3%;
+          }
         }
       }
     }
