@@ -244,10 +244,8 @@ function kr2012_preprocess_block(&$variables, $hook){
   	}
 }
 function kr2012_preprocess_search_result(&$variables) {
-  global $language, $user;
-if($user->uid == 1){
-	//dsm($variables);
-}
+  global $language;
+
   $result = $variables['result'];
   $variables['url'] = check_url($result['link']);
   $variables['url'] = str_replace('178.79.186.243', 'kommunal-rapport.no', $variables['url']);
@@ -274,7 +272,7 @@ if($user->uid == 1){
   //$variables['snippet'] = isset($result['snippet']) ? $result['snippet'] : '';
   //dsm($variables);
   $node = node_load($variables['result']['node']->entity_id);
-  $variables['snippet'] = $node->teaser;
+  $variables['snippet'] = strip_tags($node->teaser);
 
 
   
