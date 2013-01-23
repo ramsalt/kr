@@ -1918,7 +1918,10 @@ function apachesolr_entity_update($entity, $type) {
         }
       }
     }
-	$status = apachesolr_index_node_status_callback('node', $id);
+	  $node = node_load($id, NULL, TRUE);
+  	  $status = ($node->status == 1 ? 1 : 0);
+  
+	//$status = apachesolr_index_node_status_callback('node', $id);
     // Delete the entity from our index if the status callback returns FALSE
     if (!$status) {
       apachesolr_entity_delete($entity, $type);
