@@ -321,7 +321,10 @@ function kr_diverse_apachesolr_query_prepare($query){
 	$query->operator = 'AND';
 }
 function kr_diverse_apachesolr_query_alter($query) {
+	global $user;
+	if($user->uid == 1){
+		dsm($query);
+	}
 	$params = $query->getParams();
-	$query->replaceParam('q', '"'.$params['q'].'"');	
 	$query->operator = 'AND';
 }
