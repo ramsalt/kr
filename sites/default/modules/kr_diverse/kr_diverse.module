@@ -326,6 +326,7 @@ function kr_diverse_apachesolr_query_prepare($query){
 	$query->replaceParam('q.op', 'AND');
 	$query->addParam('op', 'AND');
 	$query->addParam('q.op', 'AND');
+	$query->addParam('mm', '100%');
 	//$query->operator = 'AND';
 }
 function kr_diverse_apachesolr_query_alter($query) {
