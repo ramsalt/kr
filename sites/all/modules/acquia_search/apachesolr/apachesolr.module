@@ -1899,6 +1899,10 @@ function apachesolr_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
  * Helper function for the hook_nodeapi().
  */
 function apachesolr_entity_update($entity, $type) {
+	global $user;
+	if($user->uid == 1){
+		dsm($entity);
+	}
   module_load_include('inc', 'apachesolr', 'apachesolr.index');
   if (apachesolr_entity_should_index($entity, $type)) {
     $id = $entity->nid;
