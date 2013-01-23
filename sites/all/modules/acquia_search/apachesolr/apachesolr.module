@@ -1924,7 +1924,7 @@ function apachesolr_entity_update($entity, $type) {
   
 	//$status = apachesolr_index_node_status_callback('node', $id);
     // Delete the entity from our index if the status callback returns FALSE
-    if (!$status) {
+    if ($status == 0) {
       apachesolr_entity_delete($entity, $type);
       
     }else{
