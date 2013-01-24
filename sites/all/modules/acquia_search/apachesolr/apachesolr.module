@@ -1905,6 +1905,7 @@ function apachesolr_entity_update($entity, $type) {
   if (apachesolr_entity_should_index($entity, $type)) {
     $id = $entity->nid;
     $bundle = $entity->type;
+	$node = $entity;
 /*
     // Check status callback before sending to the index
     $status_callbacks = apachesolr_entity_get_callback($type, 'status callback', $bundle);
@@ -1921,7 +1922,7 @@ function apachesolr_entity_update($entity, $type) {
       }
     }
  */
-	  $node = node_load($id, NULL, TRUE);
+	  //$node = node_load($id, NULL, TRUE);
   	  $status = ($node->status == 1 ? 1 : 0);
   
 	//$status = apachesolr_index_node_status_callback('node', $id);
