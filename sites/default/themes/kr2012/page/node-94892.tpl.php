@@ -36,7 +36,7 @@
   (function($) {
     $(document).ready(function() {
       $.search({
-        filter : {collection : 'yrke'},
+        filter : {collection : 'utdanninger'},
         per_page : 25,
         collection : 'dismax',
         use_lightbox : false,

@@ -470,7 +470,17 @@ $logos: sprite-map("logo/*.png");
     .views-field-title a{
       font-family: 'MerriweatherRegular', Arial, serif;
     }
-    
+    .Quiz, .Lederloggen, .Lederspalten, .Økonomibloggen{
+    	.tid{
+    		display:block;
+    	}
+    }
+    .tid{
+    float: left;
+    margin-right:3px;
+    font-weight:bold;
+    display:none;
+    }
     p{
       margin: 0px;
       line-height: 1.4em;

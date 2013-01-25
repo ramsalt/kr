@@ -79,7 +79,7 @@
   /* line 287, ../sass/nav.scss */
   #login-area .wrapper .container .inner-container {
     border-top: 1px solid #2b5782;
-    border-bottom: 1px solid #4876A3;
+    border-bottom: 1px solid #4876a3;
     float: left;
     width: 100%;
   }
@@ -240,7 +240,7 @@
     color: #d71010;
     font-weight: bold;
     text-transform: uppercase;
-    border-bottom: 2px solid #D71010;
+    border-bottom: 2px solid #d71010;
   }
   /* line 209, ../sass/base-desktop.scss */
   .fakta .content {
@@ -278,88 +278,88 @@
     padding-bottom: 0px;
   }
 
-  /* line 692, ../sass/mixins.scss */
+  /* line 702, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul {
     border: none;
     height: auto;
   }
-  /* line 695, ../sass/mixins.scss */
+  /* line 705, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li {
     border: none;
     width: 100%;
-    border-bottom: 1px solid #DDD;
+    border-bottom: 1px solid #dddddd;
   }
-  /* line 700, ../sass/mixins.scss */
+  /* line 710, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-last {
     border-bottom: 0px;
   }
-  /* line 704, ../sass/mixins.scss */
+  /* line 714, ../sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-first .views-field-title {
     padding-top: 0px;
   }
-  /* line 711, ../sass/mixins.scss */
+  /* line 721, ../sass/mixins.scss */
   .block-views .newslist.fire ul, .block-views .newslist.fem ul {
     float: left;
-    border-bottom: 1px solid #DDD;
+    border-bottom: 1px solid #dddddd;
   }
-  /* line 714, ../sass/mixins.scss */
+  /* line 724, ../sass/mixins.scss */
   .block-views .newslist.fire ul li, .block-views .newslist.fem ul li {
     width: 24.8%;
     border-bottom: 0px;
-    border-right: 1px solid #DDD;
+    border-right: 1px solid #dddddd;
     margin: 0px;
     padding: 1em 0px 0px 0px;
   }
-  /* line 721, ../sass/mixins.scss */
+  /* line 731, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-field-teaser-value, .block-views .newslist.fem ul li .views-field-field-teaser-value {
     margin: 0px 15px;
   }
-  /* line 724, ../sass/mixins.scss */
+  /* line 734, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-title, .block-views .newslist.fem ul li .views-field-title {
     width: 85%;
     margin: 0px 15px;
   }
-  /* line 728, ../sass/mixins.scss */
+  /* line 738, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-field-main-image-fid, .block-views .newslist.fem ul li .views-field-field-main-image-fid {
     margin: 0px 15px;
   }
-  /* line 730, ../sass/mixins.scss */
+  /* line 740, ../sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-field-main-image-fid img, .block-views .newslist.fem ul li .views-field-field-main-image-fid img {
     width: 100%;
     height: auto;
   }
-  /* line 736, ../sass/mixins.scss */
+  /* line 746, ../sass/mixins.scss */
   .block-views .newslist.fire ul li.views-row-last, .block-views .newslist.fem ul li.views-row-last {
     border: 0px;
   }
-  /* line 742, ../sass/mixins.scss */
+  /* line 752, ../sass/mixins.scss */
   .block-views .newslist.fem .item-list ul li.views-row {
     width: 19.8%;
   }
-  /* line 747, ../sass/mixins.scss */
+  /* line 757, ../sass/mixins.scss */
   .block-views .newslist.adart .views-row-last {
-    border-bottom: 1px solid #DDD;
+    border-bottom: 1px solid #dddddd;
   }
 
-  /* line 797, ../sass/mixins.scss */
+  /* line 807, ../sass/mixins.scss */
   div .ownsection {
     margin-top: 1em;
     margin-left: 3%;
     width: 26%;
   }
-  /* line 864, ../sass/mixins.scss */
+  /* line 874, ../sass/mixins.scss */
   div .seksjonsside .views-field-title a {
-    font-family: 'MerriweatherRegular', Arial, serif;
+    font-family: "MerriweatherRegular", Arial, serif;
     font-size: 1.5em;
     line-height: 1.3em;
     color: #333;
     text-decoration: none;
   }
-  /* line 980, ../sass/mixins.scss */
+  /* line 990, ../sass/mixins.scss */
   div .nopremium-message #edit-pass-wrapper {
     margin: 0px 10px;
   }
-  /* line 983, ../sass/mixins.scss */
+  /* line 993, ../sass/mixins.scss */
   div .nopremium-message .form-submit {
     clear: none;
   }
@@ -379,7 +379,7 @@
 
   /* line 226, ../sass/base-desktop.scss */
   .one.one_one .one-inner {
-    border-right: 1px solid #DDD;
+    border-right: 1px solid #dddddd;
     height: 100%;
   }
 
@@ -390,7 +390,7 @@
 
   /* line 233, ../sass/base-desktop.scss */
   .three-art {
-    border-left: 1px solid #DDD;
+    border-left: 1px solid #dddddd;
     margin-left: 10px;
     margin-bottom: 10px;
   }
