@@ -1,5 +1,7 @@
 .htaccess
 /nbproject/private/
+sites/default/files
+sites/default/settings.php
 .DS_Store
 sites/default/files/
 sites/default/default.settings.php
