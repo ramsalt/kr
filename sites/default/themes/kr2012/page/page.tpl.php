@@ -116,7 +116,7 @@
 				  </div>
 				  
 				  <div id="op-content" typeof="dcmitype:Text">
-				    <?php print $content ?>
+            <?php print $content ?>
 				  </div>			  
 				  <div id="op-under-content">
 				    <?php print $under_content ?>  

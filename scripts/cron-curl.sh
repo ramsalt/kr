@@ -1,4 +1,4 @@
 #!/bin/sh
 # $Id: cron-curl.sh,v 1.3 2006/08/22 07:38:24 dries Exp $
 
-curl --silent --compressed http://www.kommunal-rapport.no/cron.php
+curl --silent --compressed http://kommunal-rapport.no/cron.php

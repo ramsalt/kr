@@ -1,0 +1,5 @@
+name = "Kommunal Rapport Kalkulator"
+description = "Legger til kalkulator funksjonalitet på gitte nodetyper"
+core = 6.x
+php = 5.2
+files[] = kr_kalkulator.module
