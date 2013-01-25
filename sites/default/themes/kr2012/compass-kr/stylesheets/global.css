@@ -3778,10 +3778,20 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
   margin: 1em 0em;
 }
 /* line 36, ../sass/videreutdanning.scss */
+.videreutdanning .search-result .field h3 {
+  display: inline;
+  font-size: 1.2em;
+  margin-right: 5px;
+}
+/* line 41, ../sass/videreutdanning.scss */
+.videreutdanning .search-result .field .field-content {
+  display: inline;
+}
+/* line 44, ../sass/videreutdanning.scss */
 .videreutdanning .search-result.first {
   border-top: 0px solid;
 }
-/* line 43, ../sass/videreutdanning.scss */
+/* line 51, ../sass/videreutdanning.scss */
 .videreutdanning .pager li {
   display: inline;
 }

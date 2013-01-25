@@ -36,10 +36,10 @@
   (function($) {
     $(document).ready(function() {
       $.search({
-        filter : {collection : 'utdanning'},
+        filter : {collection : 'yrke'},
         per_page : 25,
         collection : 'dismax',
-        use_lightbox : true,
+        use_lightbox : false,
         show_facet_numbers : true,
         fields : [
                  {label : 'Nivå', field : 'niva'},
