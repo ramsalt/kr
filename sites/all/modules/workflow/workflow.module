@@ -500,8 +500,9 @@ function workflow_cron() {
     // still in the state it was when the transition was scheduled.
     if ($node->_workflow == $row->old_state_name) {
       // Do transition.
-      workflow_execute_transition($node, $row->state_name, $row->comment, TRUE);
-
+      $state = workflow_get_state($node->workflow);
+      $workflow = workflow_load($state->workflow_name);
+    	workflow_execute_transition($node, $row->state_name, $workflow, $row->comment, TRUE);
       watchdog('content', '%type: scheduled transition of %title.', array('%type' => t($node->type), '%title' => $node->title), WATCHDOG_NOTICE, l(t('view'), 'node/'. $node->nid));
       $clear_cache = TRUE;
     }

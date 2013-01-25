@@ -1,0 +1,23 @@
+<?php
+
+function kr_kalkulator_init () {
+  //watchdog('kalk', 'ini');
+}  
+
+function kr_kalkulator_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
+  switch ($op) {
+    case 'view':
+		if($node->type == 'kalkulator') {
+		  include_once(libraries_get_path('parsecsv').'/parsecsv.lib.php');
+		  $values = $node->field_values[0]['value'];
+		  
+		  $csv = new parseCSV();
+		  $csv->heading = false;
+		  $csv->delimiter = ';';
+		  $csv->parse($values);
+
+		  drupal_add_js(drupal_get_path('module', 'kr_kalkulator').'/kr_kalkulator.js');
+		  drupal_add_js(array('kalkulator' => array('values' => $csv->data)), 'setting');
+		} 
+  }
+}
