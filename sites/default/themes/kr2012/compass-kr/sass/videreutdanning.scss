@@ -32,6 +32,15 @@
 		font-family: Arial;
 		margin: 1em 0em;
 		}
+		.field{
+		h3{
+		display:inline;
+		font-size:1.2em;
+		margin-right:5px;
+		}
+		.field-content{display:inline;}
+		
+		}
 	}
 	.search-result.first{
 		border-top: 0px solid;
