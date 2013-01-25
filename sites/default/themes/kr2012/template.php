@@ -248,6 +248,7 @@ function kr2012_preprocess_search_result(&$variables) {
 
   $result = $variables['result'];
   $variables['url'] = check_url($result['link']);
+  $variables['url'] = str_replace('178.79.186.243', 'kommunal-rapport.no', $variables['url']);
   $variables['title'] = check_plain($result['title']);
   if (isset($result['language']) && $result['language'] != $language->language && $result['language'] != LANGUAGE_NONE) {
     $variables['title_attributes_array']['xml:lang'] = $result['language'];
@@ -271,7 +272,7 @@ function kr2012_preprocess_search_result(&$variables) {
   //$variables['snippet'] = isset($result['snippet']) ? $result['snippet'] : '';
   //dsm($variables);
   $node = node_load($variables['result']['node']->entity_id);
-  $variables['snippet'] = $node->teaser;
+  $variables['snippet'] = strip_tags($node->teaser);
 
 
   

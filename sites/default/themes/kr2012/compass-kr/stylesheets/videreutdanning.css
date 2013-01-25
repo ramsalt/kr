@@ -48,11 +48,11 @@
 .videreutdanning .search-result .field .field-content {
   display: inline;
 }
-/* line 44, ../sass/videreutdanning.scss */
+/* line 45, ../sass/videreutdanning.scss */
 .videreutdanning .search-result.first {
   border-top: 0px solid;
 }
-/* line 51, ../sass/videreutdanning.scss */
+/* line 52, ../sass/videreutdanning.scss */
 .videreutdanning .pager li {
   display: inline;
 }

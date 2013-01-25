@@ -1891,6 +1891,7 @@ function apachesolr_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
     case 'update':
       // Insert or update are the same
       apachesolr_entity_update($node, 'node');	  
+	  
       break;
   }
 }
@@ -1899,11 +1900,13 @@ function apachesolr_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
  * Helper function for the hook_nodeapi().
  */
 function apachesolr_entity_update($entity, $type) {
+
   module_load_include('inc', 'apachesolr', 'apachesolr.index');
   if (apachesolr_entity_should_index($entity, $type)) {
     $id = $entity->nid;
     $bundle = $entity->type;
-
+	$node = $entity;
+/*
     // Check status callback before sending to the index
     $status_callbacks = apachesolr_entity_get_callback($type, 'status callback', $bundle);
 
@@ -1918,12 +1921,16 @@ function apachesolr_entity_update($entity, $type) {
         }
       }
     }
-	$status = apachesolr_index_node_status_callback('node', $id);
+ */
+	  //$node = node_load($id, NULL, TRUE);
+  	  $status = ($node->status == 1 ? 1 : 0);
+  
+	//$status = apachesolr_index_node_status_callback('node', $id);
     // Delete the entity from our index if the status callback returns FALSE
-    if (!$status) {
+    if ($status == 0) {
       apachesolr_entity_delete($entity, $type);
-      return;
-    }
+      
+    }else{
 
     $indexer_table = apachesolr_get_indexer_table($type);
 
@@ -1934,7 +1941,7 @@ function apachesolr_entity_update($entity, $type) {
       VALUES ('%s', %d, '%s', %d, %d)
       ON DUPLICATE KEY UPDATE entity_type = '%s', entity_id = %d, bundle = '%s', status = %d, changed = %d";
     db_query($query, array($type, $id, $bundle, 1, APACHESOLR_REQUEST_TIME, $type, $id, $bundle, 1, APACHESOLR_REQUEST_TIME));
-	 
+	}
   }
 }
 

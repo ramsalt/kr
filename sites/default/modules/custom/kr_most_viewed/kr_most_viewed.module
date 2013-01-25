@@ -69,6 +69,6 @@ function _most_viewd_last_week(){
 function kr_most_viewed_cron(){
 	$expiredate = strtotime('-30 days');
 
-	db_query('DELETE FROM {node_counter_old} WHERE timestamp < %d AND', $expiredate);
+	db_query('DELETE FROM {node_counter_old} WHERE timestamp < %d', $expiredate);
 	
 }
