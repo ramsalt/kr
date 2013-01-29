@@ -36,7 +36,7 @@
   (function($) {
     $(document).ready(function() {
       $.search({
-        filter : {collection : 'utdanninger'},
+        filter : {fq : '(collection:utdanning AND (termEvu:ja OR labelGeouavhengig:Ja OR termGeouavhengig:ja)) OR collection:course'},
         per_page : 25,
         collection : 'dismax',
         use_lightbox : false,
@@ -54,6 +54,7 @@
       $('#sublevel').facet('underniva');
       $('#fagomrade').facet('fagomrade');
       $('#undervisningsform').facet('undervisningsform');
+      $('#pace').facet('pace');
       $('#adminarea').facet('fylke');
       // Search box
       $('#search').searchBox();
