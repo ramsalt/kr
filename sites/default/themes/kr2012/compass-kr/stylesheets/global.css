@@ -2229,10 +2229,6 @@ strong {
   font-size: 0.8em !important;
   color: #333;
 }
-/* line 594, ../sass/base.scss */
-.node-type-article .relaterte-artikler .views-row-last {
-  border-right: 0px solid white;
-}
 /* line 597, ../sass/base.scss */
 .node-type-article .relaterte-artikler .views-row-1 {
   padding-right: 22px;
@@ -2245,15 +2241,30 @@ strong {
 /* line 604, ../sass/base.scss */
 .node-type-article .relaterte-artikler .views-row-3 {
   padding-left: 22px;
+  border-right: 0px solid white;
+}
+/* line 608, ../sass/base.scss */
+.node-type-article .relaterte-artikler .views-row-4 {
+  padding-right: 22px;
+}
+/* line 611, ../sass/base.scss */
+.node-type-article .relaterte-artikler .views-row-5 {
+  padding-left: 22px;
+  padding-right: 22px;
+}
+/* line 615, ../sass/base.scss */
+.node-type-article .relaterte-artikler .views-row-6 {
+  padding-left: 22px;
+  border-right: 0px solid white;
 }
 
 @-moz-document url-prefix() {
-  /* line 614, ../sass/base.scss */
+  /* line 626, ../sass/base.scss */
   .newslist .views-field-title a {
     font-family: "MerriweatherLight", Arial, serif !important;
   }
 
-  /* line 618, ../sass/base.scss */
+  /* line 630, ../sass/base.scss */
   body {
     font-family: "MerriweatherLight", Arial, serif !important;
   }
