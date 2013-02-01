@@ -1,7 +1,7 @@
 3.2.4 (Media Mark)
-cb8c99bed8e2d0bbdf69aecfdf03135e48119ceb
+4cb61a1301d35b3423b4dd2641b4a9fd0ef29720
 o:Sass::Tree::RootNode
-:@template"×+@import "compass";
+:@template" ,@import "compass";
 @import "mixins.scss";
 @import "ticker.scss";
 @import "nav.scss";
@@ -638,14 +638,18 @@ strong{
 		}
 }
 .embedchartblock{
+	.embedded-chart{
+		background-color:#f1f2ee;
+	}
 	.embedded-text{
-		background-color: #f0f2ed;
+		background-color: #f1f2ee;
 		border-bottom:1px solid #c0bfb8;
 		padding:5px;
 		margin-bottom:10px;
 		.embedded-title{
 			float: left;
 			margin-right:5px;
+			margin-bottom: -1px;
 		}
 	}
 	
@@ -1044,10 +1048,11 @@ serif;ivo;	;;";@;"!important;iv;iv;iv;iv;([".views-field-
 ;+[o;6;["newslist;/" ;it;1o;2;3{ ;40;/@·;it;/@·;it;ito;;T;@;i ;	[o;;["font-family;@;i ;	[ ;;;o;	;@; ;!;[o;	;;;@;"MerriweatherLight;izo;	;;";@;"
 Arial;izo;	;@; ;#;[o;	;;";@;"
 serif;izo;	;;";@;"!important;iz;iz;iz;iz;(["	body;)o;*;+[o;,;+[o;-
-;+[o;.	;["	body;/" ;iy;00;1o;2;3{ ;40;/@×;iy;/@×;iy;iy;["@-moz-document " "url-prefix();iro;;T;@;i ;	[o;;T;@;i ;	[
-o;;["background-color;@;i ;	[ ;;;o;;;";@;"#f0f2ed;io;;["border-bottom;@;i ;	[ ;;;o;	;@; ;#;[o;$;%["px;@;&"1px;i;'[ ;i€o;	;;";@;"
-solid;i€o;8	;9{	;:iÀ;;i;<i¿;=i¸;@;0;i€;i€;i€o;;["padding;@;i ;	[ ;;;o;;;";@;"5px;io;;["margin-bottom;@;i ;	[ ;;;o;;;";@;"	10px;i‚o;;T;@;i ;	[o;;["
-float;@;i ;	[ ;;;o;;;";@;"	left;i„o;;["margin-right;@;i ;	[ ;;;o;;;";@;"5px;i…;([".embedded-title;)o;*;+[o;,;+[o;-
-;+[o;6;["embedded-title;/" ;iƒ;1o;2;3{ ;40;/@;iƒ;/@;iƒ;iƒ;([".embedded-text;)o;*;+[o;,;+[o;-
-;+[o;6;["embedded-text;/" ;i~;1o;2;3{ ;40;/@*;i~;/@*;i~;i~;([".embedchartblock;)o;*;+[o;,;+[o;-
-;+[o;6;["embedchartblock;/" ;i};1o;2;3{ ;40;/@8;i};/@8;i};i};i
+;+[o;.	;["	body;/" ;iy;00;1o;2;3{ ;40;/@×;iy;/@×;iy;iy;["@-moz-document " "url-prefix();iro;;T;@;i ;	[o;;T;@;i ;	[o;;["background-color;@;i ;	[ ;;;o;;;";@;"#f1f2ee;i;([".embedded-chart;)o;*;+[o;,;+[o;-
+;+[o;6;["embedded-chart;/" ;i~;1o;2;3{ ;40;/@ó;i~;/@ó;i~;i~o;;T;@;i ;	[
+o;;["background-color;@;i ;	[ ;;;o;;;";@;"#f1f2ee;i‚o;;["border-bottom;@;i ;	[ ;;;o;	;@; ;#;[o;$;%["px;@;&"1px;i;'[ ;iƒo;	;;";@;"
+solid;iƒo;8	;9{	;:iÀ;;i;<i¿;=i¸;@;0;iƒ;iƒ;iƒo;;["padding;@;i ;	[ ;;;o;;;";@;"5px;i„o;;["margin-bottom;@;i ;	[ ;;;o;;;";@;"	10px;i…o;;T;@;i ;	[o;;["
+float;@;i ;	[ ;;;o;;;";@;"	left;i‡o;;["margin-right;@;i ;	[ ;;;o;;;";@;"5px;iˆo;;["margin-bottom;@;i ;	[ ;;;o;;;";@;"	-1px;i‰;([".embedded-title;)o;*;+[o;,;+[o;-
+;+[o;6;["embedded-title;/" ;i†;1o;2;3{ ;40;/@8;i†;/@8;i†;i†;([".embedded-text;)o;*;+[o;,;+[o;-
+;+[o;6;["embedded-text;/" ;i;1o;2;3{ ;40;/@F;i;/@F;i;i;([".embedchartblock;)o;*;+[o;,;+[o;-
+;+[o;6;["embedchartblock;/" ;i};1o;2;3{ ;40;/@T;i};/@T;i};i};i

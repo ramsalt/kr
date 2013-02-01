@@ -1887,14 +1887,19 @@ strong {
 }
 
 /* line 638, ../sass/base.scss */
+.embedchartblock .embedded-chart {
+  background-color: #f1f2ee;
+}
+/* line 641, ../sass/base.scss */
 .embedchartblock .embedded-text {
-  background-color: #f0f2ed;
+  background-color: #f1f2ee;
   border-bottom: 1px solid #c0bfb8;
   padding: 5px;
   margin-bottom: 10px;
 }
-/* line 643, ../sass/base.scss */
+/* line 646, ../sass/base.scss */
 .embedchartblock .embedded-text .embedded-title {
   float: left;
   margin-right: 5px;
+  margin-bottom: -1px;
 }

@@ -635,14 +635,18 @@ strong{
 		}
 }
 .embedchartblock{
+	.embedded-chart{
+		background-color:#f1f2ee;
+	}
 	.embedded-text{
-		background-color: #f0f2ed;
+		background-color: #f1f2ee;
 		border-bottom:1px solid #c0bfb8;
 		padding:5px;
 		margin-bottom:10px;
 		.embedded-title{
 			float: left;
 			margin-right:5px;
+			margin-bottom: -1px;
 		}
 	}
 	
