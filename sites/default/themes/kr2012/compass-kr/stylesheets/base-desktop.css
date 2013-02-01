@@ -257,6 +257,7 @@
     background: #f1f2ee;
     float: left;
     border-bottom: 2px solid #c1bfb9;
+    width: 94%;
   }
   /* line 445, ../sass/mixins.scss */
   .listeboks ul li, .listeboks .item-list ul li {
