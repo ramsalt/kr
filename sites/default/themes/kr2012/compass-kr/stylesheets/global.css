@@ -2430,34 +2430,39 @@ body.page-user #tabs-wrapper #drupal-control-bar ul li {
 }
 
 /* line 1, ../sass/node.scss */
+.node-unpublished {
+  background-color: #fff;
+}
+
+/* line 5, ../sass/node.scss */
 .node-type-ordforer .field {
   margin-bottom: 0.5em;
 }
 
-/* line 4, ../sass/node.scss */
+/* line 8, ../sass/node.scss */
 .node-type-ordforer .field-label {
   text-transform: none;
 }
 
-/* line 7, ../sass/node.scss */
+/* line 11, ../sass/node.scss */
 .node-type-ordforer div.fieldgroup .content, .node-type-ordforer .field-items .field-item {
   padding-left: 0px;
   margin-left: 0px;
 }
 
-/* line 11, ../sass/node.scss */
+/* line 15, ../sass/node.scss */
 .node-type-ordforer .fieldgroup.group-perioder {
   margin: 0px;
 }
 
-/* line 17, ../sass/node.scss */
+/* line 21, ../sass/node.scss */
 .node-type-ordforer .pane-ordforer-group-perioder,
 .node-type-ordforer .pane-ordforer-group-perioder div.fieldgroup,
 .node-type-ordforer #op-content .content {
   margin-bottom: 0px;
 }
 
-/* line 20, ../sass/node.scss */
+/* line 24, ../sass/node.scss */
 .node-type-ordforer .pane-ordforer-group-perioder h2 {
   font-family: Arial,Helvetica,sans-serif;
   font-size: 0.9em;
@@ -2465,66 +2470,66 @@ body.page-user #tabs-wrapper #drupal-control-bar ul li {
   margin: 0px;
 }
 
-/* line 26, ../sass/node.scss */
+/* line 30, ../sass/node.scss */
 .node-type-ordforer .pane-ordforer-group-perioder thead {
   display: none;
 }
 
-/* line 29, ../sass/node.scss */
+/* line 33, ../sass/node.scss */
 .node-type-ordforer .pane-ordforer-group-perioder tbody {
   border-top: none;
 }
 
-/* line 32, ../sass/node.scss */
+/* line 36, ../sass/node.scss */
 .node-type-ordforer .pane-ordforer-group-perioder tbody tr {
   padding: 0px;
   border-bottom: none;
   background: transparent;
 }
 
-/* line 37, ../sass/node.scss */
+/* line 41, ../sass/node.scss */
 .node-type-ordforer .field-items .field-item {
   background: none;
 }
 
-/* line 40, ../sass/node.scss */
+/* line 44, ../sass/node.scss */
 .node-type-ordforer .pane-field-ordf-bilde {
   float: right;
   margin-left: 15px;
 }
 
-/* line 44, ../sass/node.scss */
+/* line 48, ../sass/node.scss */
 .node-type-ordforer #op-content {
   padding-top: 20px;
 }
 
-/* line 47, ../sass/node.scss */
+/* line 51, ../sass/node.scss */
 em {
   font-style: italic;
 }
 
-/* line 51, ../sass/node.scss */
+/* line 55, ../sass/node.scss */
 .cke_contents ul {
   list-style: square;
   list-style-position: inside;
 }
 
-/* line 56, ../sass/node.scss */
+/* line 60, ../sass/node.scss */
 body .body-content, body .body-content p {
   font-size: 1.02em;
   line-height: 1.6em;
   color: #333;
 }
-/* line 60, ../sass/node.scss */
+/* line 64, ../sass/node.scss */
 body .body-content h2, body .body-content p h2 {
   font-size: 1.2em;
   padding-top: 1em;
 }
-/* line 64, ../sass/node.scss */
+/* line 68, ../sass/node.scss */
 body .body-content em, body .body-content p em {
   font-style: italic;
 }
-/* line 67, ../sass/node.scss */
+/* line 71, ../sass/node.scss */
 body .body-content ul, body .body-content p ul {
   list-style: square;
   list-style-position: inside;
