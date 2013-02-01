@@ -634,3 +634,16 @@ strong{
 			font-family: 'MerriweatherLight', Arial, serif !important;
 		}
 }
+.embedchartblock{
+	.embedded-text{
+		background-color: #f0f2ed;
+		border-bottom:1px solid #c0bfb8;
+		padding:5px;
+		margin-bottom:10px;
+		.embedded-title{
+			float: left;
+			margin-right:5px;
+		}
+	}
+	
+}
