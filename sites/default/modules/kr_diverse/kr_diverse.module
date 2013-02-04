@@ -317,21 +317,12 @@ function kr_diverse_twitter_pull_blocks() {
 }
 
 function kr_diverse_apachesolr_query_prepare($query){
-	/*
-	global $user;
-	if($user->uid == 1){
-		dsm($query);
-	}
-	 */
-	 /*
 	$query->setSolrsort('ds_created', 'desc');
 	$query->removeParam('mm');
-	$query->replaceParam('q.op', 'AND');
-	$query->addParam('op', 'AND');
-	$query->addParam('q.op', 'AND');
+	//$query->replaceParam('q.op', 'AND');
+	//$query->addParam('op', 'AND');
+	//$query->addParam('q.op', 'AND');
 	$query->addParam('mm', '100%');
-	  
-	  */
-	//$query->operator = 'AND';
+
 }
 
