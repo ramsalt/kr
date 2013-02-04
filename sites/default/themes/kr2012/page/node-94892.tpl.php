@@ -36,7 +36,7 @@
   (function($) {
     $(document).ready(function() {
       $.search({
-        filter : {collection : 'yrke'},
+        filter : {fq : '(collection:utdanning AND (termEvu:ja OR labelGeouavhengig:Ja OR termGeouavhengig:ja)) OR collection:course'},
         per_page : 25,
         collection : 'dismax',
         use_lightbox : false,
@@ -44,7 +44,7 @@
         fields : [
                  {label : 'Nivå', field : 'niva'},
                  {label : 'Fylke', field : 'fylke'},
-                 {label : 'Undervisningssted', field : 'undervisningssted'},
+                 {label : 'Undervisningssted', field : 'undervisningssted', href :'linkRelHttp_x003A__x002F__x002F_utdanning.no_x002F_org_x0023_teachingOrg' },
                ]
       });
       // Current search
@@ -54,7 +54,9 @@
       $('#sublevel').facet('underniva');
       $('#fagomrade').facet('fagomrade');
       $('#undervisningsform').facet('undervisningsform');
+      $('#pace').facet('pace');
       $('#adminarea').facet('fylke');
+      $('#org').facet('undervisningssted');
       // Search box
       $('#search').searchBox();
       // Search results

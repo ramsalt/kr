@@ -193,6 +193,11 @@ body.admin-menu{
     }
   }
 }
+.kategori{
+	float: left;
+	text-transform: uppercase;
+	margin-right:5px;
+}
 .ingress{
   font-family: Arial;
   font-weight: bold;
@@ -573,6 +578,9 @@ strong{
 		border-bottom:1px solid #DDD;
 		height:250px;
 		overflow:hidden;
+		.views-field-field-main-image-fid{
+			height:115px;
+		}
 		.views-field-title a{
 			font-family: "MerriweatherRegular",Arial,serif;
 			font-size: 1.2em;
@@ -587,7 +595,7 @@ strong{
 		}
 	}
 	.views-row-last{
-		border-right:0px solid #fff;
+		
 	}
 	.views-row-1{
 		padding-right:22px;
@@ -598,6 +606,18 @@ strong{
 	}
 	.views-row-3{
 		padding-left:22px;
+		border-right:0px solid #fff;
+	}
+	.views-row-4{
+		padding-right:22px;
+	}
+	.views-row-5{
+		padding-left:22px;
+		padding-right:22px;
+	}
+	.views-row-6{
+		padding-left:22px;
+		border-right:0px solid #fff;
 	}
 	}
 		
@@ -613,4 +633,21 @@ strong{
 		body{
 			font-family: 'MerriweatherLight', Arial, serif !important;
 		}
+}
+.embedchartblock{
+	.embedded-chart{
+		background-color:#f1f2ee;
+	}
+	.embedded-text{
+		background-color: #f1f2ee;
+		border-bottom:1px solid #c0bfb8;
+		padding:5px;
+		margin-bottom:10px;
+		.embedded-title{
+			float: left;
+			margin-right:5px;
+			margin-bottom: -1px;
+		}
+	}
+	
 }
