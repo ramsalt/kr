@@ -34,7 +34,7 @@
   </div>
 <?php if ($ingress): ?>
 	<div class="ingress">
-            <?php if (isset($node->taxonomy[1999])) print '<div class="kategori">Lederspalten: </div>'; ?><?php if (isset($node->taxonomy[1536])) print '<div class="kategori">Lederloggen: </div>'; ?><?php if (isset($node->taxonomy[1694])) print '<div class="kategori">Økonomibloggen: </div>'; ?><?php if (isset($node->taxonomy[1535])) print '<div class="kategori">Quiz: </div>'; ?><?php print $ingress_value; ?>
+            <?php if (isset($node->taxonomy[1999])) print '<div class="kategori">Lederspalten: </div>'; ?><?php if (isset($node->taxonomy[1536])) print '<div class="kategori">Lederloggen: </div>'; ?><?php if (isset($node->taxonomy[1694])) print '<div class="kategori">Økonomibloggen: </div>'; ?><?php if (isset($node->taxonomy[1535])) print '<div class="kategori">Quiz: </div>'; ?><?php if (isset($node->taxonomy[2205])) print '<div class="kategori">Resultatbørsen: </div>'; ?><?php if (isset($node->taxonomy[80])) print '<div class="kategori">Kommentar: </div>'; ?><?php print $ingress_value; ?>
         </div><!-- /.ingress -->
 <?php endif; ?>
   <div>	
