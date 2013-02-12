@@ -28,7 +28,6 @@
  * @see openpublish_node_article_preprocess()
  */
 ?>
-
 <?php if ($ingress): ?>
 	<div class="ingress">
             <?php print $ingress_value; ?>

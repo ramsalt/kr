@@ -63,7 +63,7 @@
       <?php print $body; ?>
       <?php if ($fakta): ?><div class="fakta-mobil visible-mobile"><div class="faktatittel"><a href=""><span>Fakta</span><span class="icon"></span></a></div><div class="innhold"><?php print $fakta; ?></div></div><?php endif; ?>
   </div>
-  
+  <div class="kategorien">Flere artikler om <?php print $terms ?></div>
   <?php if ($documentcloud_doc): ?>
     <h2><?php print t("Source Documents ");?></h2>
     <?php foreach ($documentcloud_doc as $doc) : ?>
@@ -95,7 +95,10 @@
 	 <?php print $calais_geo_map; ?>
 </div><!-- /.google-map -->
 <?php endif; ?>
+
 <?php if ($related_terms_links && FALSE): ?>
 <?php print $related_terms_links; ?>
 <?php endif; ?>
 <?php print $themed_links; ?>
+
+
