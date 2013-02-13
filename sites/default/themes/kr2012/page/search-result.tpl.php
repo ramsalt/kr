@@ -55,7 +55,9 @@
 </dt>
 
 <div class="searchimage-wrapper">
-<?php if (isset($main_image[0]['..sites/default/files/'])): ?>
+<?php
+  
+  if ($main_image && FALSE): ?>
   <span class="search-image"><?php print theme('imagecache', 'thumbnail', $main_image[0]['..sites/default/files/imagecache/thumbnail/']); ?></span>
 <?php endif; ?>
 </div>
