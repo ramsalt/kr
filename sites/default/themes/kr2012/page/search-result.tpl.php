@@ -53,11 +53,9 @@
 <dt class="title">
   <a href="<?php print $url; ?>"><?php print $title; ?></a>
 </dt>
-
-<div class="searchimage-wrapper">
-
-  <span class="search-image"><?php print theme('imagecache', 'thumbnail', $field_main_image[0]['..sites/default/files/imagecache/thumbnail/']['filename']); ?> </span>
-
+ <span class="search-image">
+<img src="..sites/default/files/imagecache/thumbnail/<?php print $field_main_image[0]['filename'] ?>" class="imagecache imagecache-thumbnail">
+</span>
 </div>
 <dd>
   <?php if ($snippet) : ?>
@@ -65,4 +63,5 @@
   <?php endif; ?>
 </dd>
 </div>
+
 <div class="search-separator"></div>
