@@ -3762,10 +3762,11 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
 /* line 46, ../sass/search.scss */
 .page-search .search-results .search-image {
   float: right;
+  margin-left: 10px;
 }
 
 /*Gammel søkeside:*/
-/* line 55, ../sass/search.scss */
+/* line 56, ../sass/search.scss */
 .view-search-sorted-by-time .views-separator {
   border-top: 1px solid #dddddd;
   margin: 15px 0 15px;
@@ -3773,18 +3774,18 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
   width: 100%;
   clear: both;
 }
-/* line 62, ../sass/search.scss */
+/* line 63, ../sass/search.scss */
 .view-search-sorted-by-time .views-field-tid a {
   color: #a9a9a9;
   text-decoration: none;
   font-family: Arial;
 }
-/* line 67, ../sass/search.scss */
+/* line 68, ../sass/search.scss */
 .view-search-sorted-by-time .views-field-field-main-image-fid {
   float: right;
   margin-left: 10px;
 }
-/* line 71, ../sass/search.scss */
+/* line 72, ../sass/search.scss */
 .view-search-sorted-by-time .views-field-title a {
   font-family: "MerriweatherRegular",Arial,serif;
   font-size: 1.5em;
@@ -3792,7 +3793,7 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
   color: #333;
   text-decoration: none;
 }
-/* line 78, ../sass/search.scss */
+/* line 79, ../sass/search.scss */
 .view-search-sorted-by-time .views-field-teaser {
   font-family: Arial;
   margin: 1em 0em;
