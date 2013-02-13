@@ -53,6 +53,12 @@
 <dt class="title">
   <a href="<?php print $url; ?>"><?php print $title; ?></a>
 </dt>
+
+<?php print $main_image; ?>
+<?php if (isset($node->main_image[0]['filepath'])): ?>
+  <span class="search-image"><?php print theme('imagecache', 'thumbnail', $node->main_image[0]['/sites/default/files/imagecache/thumbnail/']); ?></span>
+<?php endif; ?>
+
 <dd>
   <?php if ($snippet) : ?>
     <p class="search-snippet"><?php print $snippet; ?></p>
