@@ -274,7 +274,7 @@ function kr2012_preprocess_search_result(&$variables) {
   $node = node_load($variables['result']['node']->entity_id);
   $variables['snippet'] = strip_tags($node->teaser);
   if(isset($node->field_main_image['und'][0])){
-  	$variables['img'] = theme_imagecache('thumbnail', $node->field_main_image[0]['filepath']);
+  	$variables['bilde'] = theme_imagecache('thumbnail', $node->field_main_image[0]['filepath']);
   }
   
   // Provide separated and grouped meta information..

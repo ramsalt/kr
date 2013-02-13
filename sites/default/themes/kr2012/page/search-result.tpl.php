@@ -55,7 +55,7 @@
 </dt>
 
 <span class="search-image">
-<?php print $img; ?>
+<?php print $bilde; ?>
 </span>
 <?php print $result['node']->field_main_image[0]['filename']; ?>
 
