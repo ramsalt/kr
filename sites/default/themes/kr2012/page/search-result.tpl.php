@@ -56,7 +56,7 @@
 
 <div class="searchimage-wrapper">
 
-  <span class="search-image"><?php print theme('imagecache', 'thumbnail', $main_image[0]['..sites/default/files/imagecache/thumbnail/']); ?></span>
+  <span class="search-image"><?php print theme('imagecache', 'thumbnail', $main_image[0]['..sites/default/files/imagecache/thumbnail/'], $main_image[0]['filename']); ?> </span>
 
 </div>
 <dd>
