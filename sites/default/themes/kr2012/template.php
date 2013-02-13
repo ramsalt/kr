@@ -280,6 +280,7 @@ function kr2012_preprocess_search_result(&$variables) {
   $variables['info_split'] = $info;
   $variables['info'] = implode(' - ', $info);
   $variables['theme_hook_suggestions'][] = 'search_result__' . $variables['module'];
-  
+  $n = node_load($vars['result']['node']->__get("nid"));
+  $n && ($vars['node'] = $n);
 }
 ?>
