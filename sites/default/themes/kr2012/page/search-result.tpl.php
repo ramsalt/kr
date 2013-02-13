@@ -53,10 +53,11 @@
 <dt class="title">
   <a href="<?php print $url; ?>"><?php print $title; ?></a>
 </dt>
-
+<?php if($bilde): ?>
 <span class="search-image">
 <?php print $bilde; ?>
 </span>
+<?php endif; ?>
 <?php print $result['node']->field_main_image[0]['filename']; ?>
 
 <dd>
