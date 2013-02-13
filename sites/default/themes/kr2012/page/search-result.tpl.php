@@ -55,12 +55,10 @@
 </dt>
 
 <span class="search-image">
-<img src="/sites/default/files/imagecache/thumbnail/<?php print $result['node']->field_main_image[0]['filename']; ?>"/> 
+<img src="/sites/default/files/imagecache/thumbnail/<?php print $node->field_main_image[0]['filename']; ?>"/> 
 </span>
 <?php print $result['node']->field_main_image[0]['filename']; ?>
-<?php
-print_r ($node);
-?>
+
 <dd>
   <?php if ($snippet) : ?>
     <p class="search-snippet"><?php print $snippet; ?></p>
