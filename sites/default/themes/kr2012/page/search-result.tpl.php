@@ -54,7 +54,7 @@
   <a href="<?php print $url; ?>"><?php print $title; ?></a>
 </dt>
 
-</div>
+
 <dd>
   <?php if ($snippet) : ?>
     <p class="search-snippet"><?php print $snippet; ?></p>
