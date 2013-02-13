@@ -64,5 +64,5 @@
   <?php endif; ?>
 </dd>
 </div>
-<?php print '<pre>'. check_plain(print_r($info_split, 1)) .'</pre>'; ?>
+
 <div class="search-separator"></div>
