@@ -54,6 +54,9 @@
   <a href="<?php print $url; ?>"><?php print $title; ?></a>
 </dt>
 
+<span class="search-image">
+<img src="/sites/default/files/imagecache/thumbnail/<?php print $result['node']->field_main_image[0]['filepath']; ?>"/> 
+</span>
 
 <dd>
   <?php if ($snippet) : ?>
