@@ -55,7 +55,7 @@
 </dt>
 
 <span class="search-image">
-<img src="/sites/default/files/imagecache/thumbnail/<?php print $field_main_image[0]['filepath']; ?>"/> 
+<img src="/sites/default/files/imagecache/thumbnail/<?php print $result['node']->main_image[0]['filepath']; ?>"/> 
 </span>
 
 <dd>
