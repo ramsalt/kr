@@ -273,7 +273,10 @@ function kr2012_preprocess_search_result(&$variables) {
   //dsm($variables);
   $node = node_load($variables['result']['node']->entity_id);
   $variables['snippet'] = strip_tags($node->teaser);
-  if(isset($node->field_main_image['und'][0])){
+  
+  
+  
+  if(isset($node->field_main_image[0])){
   	$variables['bilde'] = theme_imagecache('thumbnail', $node->field_main_image[0]['filepath']);
   }
   
