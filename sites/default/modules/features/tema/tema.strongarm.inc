@@ -74,6 +74,7 @@ function tema_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'content_extra_weights_tema';
   $strongarm->value = array(
+    'apachesolr' => '100',
     'workflow' => '-2',
     'title' => '-5',
     'revision_information' => '-1',
@@ -82,8 +83,8 @@ function tema_strongarm() {
     'comment_settings' => '5',
     'menu' => '-3',
     'path' => '4',
-    'attachments' => '3',
     'path_redirect' => '2',
+    'print' => '30',
   );
   $export['content_extra_weights_tema'] = $strongarm;
 

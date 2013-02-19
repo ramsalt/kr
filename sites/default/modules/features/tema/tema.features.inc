@@ -41,7 +41,7 @@ function tema_imagecache_default_presets() {
           'module' => 'imagecache',
           'action' => 'imagecache_scale',
           'data' => array(
-            'width' => '200',
+            'width' => '250',
             'height' => '',
             'upscale' => 0,
           ),
@@ -52,7 +52,7 @@ function tema_imagecache_default_presets() {
           'action' => 'imagecache_crop',
           'data' => array(
             'width' => '200',
-            'height' => '200',
+            'height' => '130',
             'xoffset' => 'center',
             'yoffset' => 'center',
           ),

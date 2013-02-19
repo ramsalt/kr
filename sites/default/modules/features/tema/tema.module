@@ -69,44 +69,51 @@ function _tema_block($nid){
 function _tema_layout_std($node){
 	
 	$saker = $node->field_tema_saker;
-	if(count($saker)>0){
-		$number = 1;
+	$show = $node->field_tema_vis_pa_forsiden;
+	$show_nodes = 0;
+	foreach($show as $delta => $value){
+		if($value['value'] == 1){
+			$show_nodes++;
+		}
 		
+	}	
+	if(count($show_nodes)>0){
+		$number = 1;		
 		foreach ($saker as $delta => $item) {
-			$sub_nid = $item['nid'];
-			$sub_node = node_load($sub_nid);
-			if($number == 1){				
-				$bilde = $sub_node->field_main_image[0]['filename']; //filepath
-				$content.= '<div class="item first number-'.$number.'">';
-				if(isset($sub_node->field_main_image[0]['fid'])){
-					$content.= '<div class="image"><a href="'.url('node/'.$sub_nid).'">'. theme('imagecache', 'tema_1_3_stor', $bilde).'</a></div>';
+			if($show[$delta]['value'] == 1){
+				$sub_nid = $item['nid'];
+				$sub_node = node_load($sub_nid);
+				if($number == 1){				
+					$bilde = $sub_node->field_main_image[0]['filename']; //filepath
+					$content.= '<div class="item first number-'.$number.'">';
+					if(isset($sub_node->field_main_image[0]['fid'])){
+						$content.= '<div class="image"><a href="'.url('node/'.$sub_nid).'">'. theme('imagecache', 'tema_1_3_stor', $bilde).'</a></div>';
+					}
+					$content.= '<div class="node-title"><h2>'.l($sub_node->title, 'node/'.$sub_node->nid).'</h2></div>';
+					if(strlen($sub_node->field_teaser[0]['value'])>2){
+						$content.= '<div class="node-text"><p>'.check_plain($sub_node->field_teaser[0]['value']).'</p></div>';
+					}
+					$content.= '</div>';
 				}
-				$content.= '<div class="node-title"><h2>'.l($sub_node->title, 'node/'.$sub_node->nid).'</h2></div>';
-				if(strlen($sub_node->field_teaser[0]['value'])>2){
-					$content.= '<div class="node-text"><p>'.check_plain($sub_node->field_teaser[0]['value']).'</p></div>';
+				else{
+					$bilde = $sub_node->field_main_image[0]['filename']; //filepath
+					$css_class = 'item number-'.$number;
+					if($number == $show_nodes){
+						$css_class .= ' last';
+					}
+					$content.= '<div class="'.$css_class.'">';
+					if(isset($sub_node->field_main_image[0]['fid'])){
+						$content.= '<div class="image"><a href="'.url('node/'.$sub_nid).'">'.theme('imagecache', 'tema_liten', $bilde).'</a></div>';
+					}
+					$content.= '<div class="node-title"><h2>'.l($sub_node->title, 'node/'.$sub_node->nid).'</h2></div>';
+					if(strlen($sub_node->field_teaser[0]['value'])>2){
+						$content.= '<div class="node-text"><p>'.check_plain($sub_node->field_teaser[0]['value']).'</p></div>';
+					}
+					$content.= '</div>';
 				}
-				$content.= '</div>';
+
+				$number++;
 			}
-			else{
-				$bilde = $sub_node->field_main_image[0]['filename']; //filepath
-				$css_class = 'item number-'.$number;
-				if($number == 4 || count($saker) == $number){
-					$css_class .= ' last';
-				}
-				$content.= '<div class="'.$css_class.'">';
-				if(isset($sub_node->field_main_image[0]['fid'])){
-					$content.= '<div class="image"><a href="'.url('node/'.$sub_nid).'">'.theme('imagecache', 'tema_liten', $bilde).'</a></div>';
-				}
-				$content.= '<div class="node-title"><h2>'.l($sub_node->title, 'node/'.$sub_node->nid).'</h2></div>';
-				if(strlen($sub_node->field_teaser[0]['value'])>2){
-					$content.= '<div class="node-text"><p>'.check_plain($sub_node->field_teaser[0]['value']).'</p></div>';
-				}
-				$content.= '</div>';
-			}
-			if($number == 4){
-				break;
-			}
-			$number++;
 		}
 	}
 	return $content;
