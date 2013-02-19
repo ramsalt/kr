@@ -19,6 +19,7 @@ function tema_views_default_views() {
 
   /* Display: Standardverdier */
   $handler = $view->new_display('default', 'Standardverdier', 'default');
+  $handler->display->display_options['css_class'] = 'seksjonsside';
   $handler->display->display_options['use_more_text'] = 'mer';
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -37,24 +38,6 @@ function tema_views_default_views() {
   $handler->display->display_options['relationships']['field_tema_saker_nid']['field'] = 'field_tema_saker_nid';
   $handler->display->display_options['relationships']['field_tema_saker_nid']['required'] = 1;
   $handler->display->display_options['relationships']['field_tema_saker_nid']['delta'] = '-1';
-  /* Felt: Node: Tittel */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['relationship'] = 'field_tema_saker_nid';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
   /* Felt: Innhold: Main Image (field_main_image) */
   $handler->display->display_options['fields']['field_main_image_fid']['id'] = 'field_main_image_fid';
   $handler->display->display_options['fields']['field_main_image_fid']['table'] = 'node_data_field_main_image';
@@ -78,6 +61,24 @@ function tema_views_default_views() {
   $handler->display->display_options['fields']['field_main_image_fid']['multiple']['multiple_number'] = '1';
   $handler->display->display_options['fields']['field_main_image_fid']['multiple']['multiple_from'] = '0';
   $handler->display->display_options['fields']['field_main_image_fid']['multiple']['multiple_reversed'] = 0;
+  /* Felt: Node: Tittel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['relationship'] = 'field_tema_saker_nid';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
   /* Felt: Innhold: Info om utlyseren (field_teaser) */
   $handler->display->display_options['fields']['field_teaser_value']['id'] = 'field_teaser_value';
   $handler->display->display_options['fields']['field_teaser_value']['table'] = 'node_data_field_teaser';
@@ -151,6 +152,12 @@ function tema_views_default_views() {
   );
   $handler->display->display_options['arguments']['nid']['break_phrase'] = 0;
   $handler->display->display_options['arguments']['nid']['not'] = 0;
+  /* Filtrer: Node: Publisert */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['relationship'] = 'field_tema_saker_nid';
+  $handler->display->display_options['filters']['status']['value'] = '1';
 
   /* Display: Ingress av saker */
   $handler = $view->new_display('block', 'Ingress av saker', 'block_1');
