@@ -72,12 +72,18 @@
 		}
 		img{
 		float: left;
+		margin-right:10px;
 			}
 		li{
-		padding:0px 3% 15px 3%;
+		padding:10px 3% 15px 3%;
 		background:#f1f2ee;
 		border-bottom:2px solid #c1bfb9;
 			}
+		a{
+		color:#000;
+		text-decoration:none;
+		
+		}
 		}
 	
 }

@@ -4075,10 +4075,16 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
 /* line 73, ../sass/videreutdanning.scss */
 .videreutdanning .utdanninger img {
   float: left;
+  margin-right: 10px;
 }
-/* line 76, ../sass/videreutdanning.scss */
+/* line 77, ../sass/videreutdanning.scss */
 .videreutdanning .utdanninger li {
-  padding: 0px 3% 15px 3%;
+  padding: 10px 3% 15px 3%;
   background: #f1f2ee;
   border-bottom: 2px solid #c1bfb9;
+}
+/* line 82, ../sass/videreutdanning.scss */
+.videreutdanning .utdanninger a {
+  color: #000;
+  text-decoration: none;
 }
