@@ -13,7 +13,7 @@
       </div>
       <div id="fagomrade"></div>
       <p><div id="adminarea">
-        <h2>Fylke</h2>
+       <!-- <h2>Fylke</h2> -->
       </div> </p>   
     </div>
     <div class="main_content">
