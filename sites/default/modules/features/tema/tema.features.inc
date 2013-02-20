@@ -33,6 +33,32 @@ function tema_imagecache_default_presets() {
         ),
       ),
     ),
+    'tema_liten' => array(
+      'presetname' => 'tema_liten',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '250',
+            'height' => '',
+            'upscale' => 0,
+          ),
+        ),
+        '1' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_crop',
+          'data' => array(
+            'width' => '200',
+            'height' => '130',
+            'xoffset' => 'center',
+            'yoffset' => 'center',
+          ),
+        ),
+      ),
+    ),
   );
   return $items;
 }
@@ -62,6 +88,6 @@ function tema_node_info() {
  */
 function tema_views_api() {
   return array(
-    'api' => '2',
+    'api' => '3.0',
   );
 }

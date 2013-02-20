@@ -12,7 +12,7 @@ function tema_content_default_fields() {
     'type_name' => 'tema',
     'display_settings' => array(
       'weight' => '-4',
-      'parent' => '',
+      'parent' => 'group_tema_group',
       'label' => array(
         'format' => 'hidden',
       ),
@@ -101,9 +101,89 @@ function tema_content_default_fields() {
     ),
   );
 
+  // Exported field: field_tema_vis_pa_forsiden
+  $fields['tema-field_tema_vis_pa_forsiden'] = array(
+    'field_name' => 'field_tema_vis_pa_forsiden',
+    'type_name' => 'tema',
+    'display_settings' => array(
+      'weight' => '-3',
+      'parent' => 'group_tema_group',
+      'label' => array(
+        'format' => 'hidden',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 1,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 1,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'cck_blocks' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'email_plain' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'email_html' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'number_integer',
+    'required' => '0',
+    'multiple' => '1',
+    'module' => 'number',
+    'active' => '1',
+    'prefix' => '',
+    'suffix' => '',
+    'min' => '',
+    'max' => '',
+    'allowed_values' => '0|Ikke vis på forsiden
+1|Vis på forsiden',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'default_value' => array(
+        '0' => array(
+          'value' => 1,
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Vis på forsiden',
+      'weight' => '-3',
+      'description' => '',
+      'type' => 'optionwidgets_onoff',
+      'module' => 'optionwidgets',
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Artikler');
+  t('Vis på forsiden');
 
   return $fields;
 }

@@ -1,5 +1,195 @@
-/* line 2, ../sass/tema.scss */
-.block-tema img {
+/* line 1, ../sass/tema.scss */
+.block-tema {
+  margin-top: 5px;
+}
+/* line 5, ../sass/tema.scss */
+.block-tema .node-title h2 a {
+  font-size: 1.1em;
+  color: #222222;
+  font-family: "MerriweatherRegular",Arial,serif;
+  text-decoration: none;
+  font-weight: normal;
+}
+/* line 14, ../sass/tema.scss */
+.block-tema .node-text {
+  color: #222222;
+}
+
+/* line 18, ../sass/tema.scss */
+.layout-mobile .block-tema {
+  margin: 0px 15px 10px 15px;
+}
+/* line 21, ../sass/tema.scss */
+.layout-mobile .block-tema .content .item.last {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  border-bottom: none;
+}
+/* line 26, ../sass/tema.scss */
+.layout-mobile .block-tema .content .item {
+  border-bottom: 1px solid #b4c5d4;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+/* line 30, ../sass/tema.scss */
+.layout-mobile .block-tema .content .item .image {
+  display: none;
+}
+/* line 33, ../sass/tema.scss */
+.layout-mobile .block-tema .content .item .node-text {
+  display: none;
+}
+/* line 38, ../sass/tema.scss */
+.layout-mobile .block-tema .content .item.first .image {
+  display: block;
+}
+/* line 40, ../sass/tema.scss */
+.layout-mobile .block-tema .content .item.first .image img {
+  width: 100%;
+  height: auto;
+}
+/* line 45, ../sass/tema.scss */
+.layout-mobile .block-tema .content .item.first .node-title {
+  margin-top: 5px;
+}
+/* line 48, ../sass/tema.scss */
+.layout-mobile .block-tema .content .item.first .node-title h2 a {
+  font-size: 1.6em;
+  line-height: 1em;
+}
+/* line 54, ../sass/tema.scss */
+.layout-mobile .block-tema .content .item.first .node-text {
+  font-weight: bold;
+  display: block;
+}
+/* line 57, ../sass/tema.scss */
+.layout-mobile .block-tema .content .item.first .node-text p {
+  margin: 2px 0px 15px;
+}
+
+/* line 66, ../sass/tema.scss */
+.layout-desktop .block-tema .content,
+.layout-tablet .block-tema .content {
+  float: left;
+}
+/* line 68, ../sass/tema.scss */
+.layout-desktop .block-tema .content .item,
+.layout-tablet .block-tema .content .item {
+  width: 35%;
+  float: right;
+  clear: right;
+  margin-left: 1%;
+  border-bottom: 1px solid #b4c5d4;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+/* line 76, ../sass/tema.scss */
+.layout-desktop .block-tema .content .item .image,
+.layout-tablet .block-tema .content .item .image {
+  display: none;
+}
+/* line 79, ../sass/tema.scss */
+.layout-desktop .block-tema .content .item .node-text,
+.layout-tablet .block-tema .content .item .node-text {
+  display: none;
+}
+/* line 83, ../sass/tema.scss */
+.layout-desktop .block-tema .content .item.first, .layout-desktop .block-tema .content .item.last,
+.layout-tablet .block-tema .content .item.first,
+.layout-tablet .block-tema .content .item.last {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  border-bottom: none;
+}
+/* line 88, ../sass/tema.scss */
+.layout-desktop .block-tema .content .item.first,
+.layout-tablet .block-tema .content .item.first {
+  width: 63%;
+  float: left;
+  margin-left: 0px;
+}
+/* line 92, ../sass/tema.scss */
+.layout-desktop .block-tema .content .item.first .image,
+.layout-tablet .block-tema .content .item.first .image {
+  display: block;
+  float: left;
+  width: 50%;
+  margin-right: 3%;
+}
+/* line 97, ../sass/tema.scss */
+.layout-desktop .block-tema .content .item.first .image img,
+.layout-tablet .block-tema .content .item.first .image img {
+  width: 100%;
+  height: auto;
+}
+/* line 104, ../sass/tema.scss */
+.layout-desktop .block-tema .content .item.first .node-title h2 a,
+.layout-tablet .block-tema .content .item.first .node-title h2 a {
+  font-size: 2em;
+  line-height: 1em;
+}
+/* line 110, ../sass/tema.scss */
+.layout-desktop .block-tema .content .item.first .node-text,
+.layout-tablet .block-tema .content .item.first .node-text {
+  display: block;
+}
+
+/* line 126, ../sass/tema.scss */
+.layout-desktop .one .block-tema .content .item.first,
+.layout-tablet .one .block-tema .content .item.first,
+.layout-desktop .three .block-tema .content .item.first,
+.layout-tablet .three .block-tema .content .item.first,
+.layout-desktop .seven .block-tema .content .item.first,
+.layout-tablet .seven .block-tema .content .item.first {
+  width: 100%;
+}
+/* line 128, ../sass/tema.scss */
+.layout-desktop .one .block-tema .content .item.first .image,
+.layout-tablet .one .block-tema .content .item.first .image,
+.layout-desktop .three .block-tema .content .item.first .image,
+.layout-tablet .three .block-tema .content .item.first .image,
+.layout-desktop .seven .block-tema .content .item.first .image,
+.layout-tablet .seven .block-tema .content .item.first .image {
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* line 133, ../sass/tema.scss */
+.layout-desktop .one .block-tema .content .item.number-3,
+.layout-tablet .one .block-tema .content .item.number-3,
+.layout-desktop .three .block-tema .content .item.number-3,
+.layout-tablet .three .block-tema .content .item.number-3,
+.layout-desktop .seven .block-tema .content .item.number-3,
+.layout-tablet .seven .block-tema .content .item.number-3 {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+/* line 137, ../sass/tema.scss */
+.layout-desktop .one .block-tema .content .item,
+.layout-tablet .one .block-tema .content .item,
+.layout-desktop .three .block-tema .content .item,
+.layout-tablet .three .block-tema .content .item,
+.layout-desktop .seven .block-tema .content .item,
+.layout-tablet .seven .block-tema .content .item {
+  border-bottom: none;
+  width: 30%;
+  float: left;
+}
+/* line 141, ../sass/tema.scss */
+.layout-desktop .one .block-tema .content .item .image,
+.layout-tablet .one .block-tema .content .item .image,
+.layout-desktop .three .block-tema .content .item .image,
+.layout-tablet .three .block-tema .content .item .image,
+.layout-desktop .seven .block-tema .content .item .image,
+.layout-tablet .seven .block-tema .content .item .image {
+  display: block;
+}
+/* line 143, ../sass/tema.scss */
+.layout-desktop .one .block-tema .content .item .image img,
+.layout-tablet .one .block-tema .content .item .image img,
+.layout-desktop .three .block-tema .content .item .image img,
+.layout-tablet .three .block-tema .content .item .image img,
+.layout-desktop .seven .block-tema .content .item .image img,
+.layout-tablet .seven .block-tema .content .item .image img {
   width: 100%;
   height: auto;
 }
