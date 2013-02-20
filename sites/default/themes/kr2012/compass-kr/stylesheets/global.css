@@ -4081,10 +4081,18 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
 .videreutdanning .utdanninger li {
   padding: 10px 3% 15px 3%;
   background: #f1f2ee;
-  border-bottom: 2px solid #c1bfb9;
+  border-bottom: 1px solid #dddddd;
 }
 /* line 82, ../sass/videreutdanning.scss */
+.videreutdanning .utdanninger ol {
+  border-bottom: 2px solid #c1bfb9;
+}
+/* line 85, ../sass/videreutdanning.scss */
 .videreutdanning .utdanninger a {
   color: #000;
   text-decoration: none;
+}
+/* line 90, ../sass/videreutdanning.scss */
+.videreutdanning .utdanninger .field-content {
+  margin-top: 10px;
 }
