@@ -22,9 +22,13 @@
   #logo-area .wrapper .container .inner-container {
     -moz-border-radius-topleft: 3px;
     -webkit-border-top-left-radius: 3px;
+    -ms-border-top-left-radius: 3px;
+    -o-border-top-left-radius: 3px;
     border-top-left-radius: 3px;
     -moz-border-radius-topright: 3px;
     -webkit-border-top-right-radius: 3px;
+    -ms-border-top-right-radius: 3px;
+    -o-border-top-right-radius: 3px;
     border-top-right-radius: 3px;
   }
   /* line 25, ../sass/base-tablet.scss */
@@ -77,6 +81,8 @@
     width: 150px;
     -webkit-border-radius: 4px 4px;
     -moz-border-radius: 4px / 4px;
+    -ms-border-radius: 4px / 4px;
+    -o-border-radius: 4px / 4px;
     border-radius: 4px / 4px;
     border: 1px solid #223e6b;
     -webkit-box-shadow: inset 1px 2px 3px 0px rgba(0, 0, 0, 0.7);
@@ -99,24 +105,24 @@
     top: 16px;
   }
 
-  /* line 186, ../sass/nav.scss */
+  /* line 186, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
   #login-area .wrapper .container .inner-container .grid {
     overflow: visible;
     height: 38px;
     margin-left: 15px;
     margin-right: 15px;
   }
-  /* line 195, ../sass/nav.scss */
+  /* line 195, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
   #login-area #nav {
     display: block;
     background: transparent;
   }
-  /* line 198, ../sass/nav.scss */
+  /* line 198, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
   #login-area #nav ul {
     margin-left: -10px;
     padding: 0px;
   }
-  /* line 201, ../sass/nav.scss */
+  /* line 201, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
   #login-area #nav ul li {
     width: auto;
     clear: none;
@@ -125,13 +131,13 @@
     position: relative;
     overflow: visible;
   }
-  /* line 208, ../sass/nav.scss */
+  /* line 208, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
   #login-area #nav ul li a {
     width: auto;
     font-family: Helvetica;
     color: white;
   }
-  /* line 213, ../sass/nav.scss */
+  /* line 213, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
   #login-area #nav ul li ul {
     top: 38px;
     background: #004e7e;
@@ -141,7 +147,7 @@
     margin: 0px;
     z-index: 999;
   }
-  /* line 221, ../sass/nav.scss */
+  /* line 221, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
   #login-area #nav ul li ul li {
     float: left;
     clear: both;
@@ -149,7 +155,7 @@
     width: 100%;
     border-bottom: 1px solid transparent;
   }
-  /* line 227, ../sass/nav.scss */
+  /* line 227, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
   #login-area #nav ul li ul li a {
     padding: 6px 0px 6px 10px;
     font-weight: bold;
@@ -157,31 +163,31 @@
     background: white;
     width: 200px;
   }
-  /* line 233, ../sass/nav.scss */
+  /* line 233, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
   #login-area #nav ul li ul li a span {
     padding: 0px;
   }
-  /* line 241, ../sass/nav.scss */
+  /* line 241, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
   #login-area #nav ul li.on a {
     background: #004e7e;
   }
-  /* line 246, ../sass/nav.scss */
+  /* line 246, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
   #login-area #nav ul li.open a {
     background: #004e7e;
   }
-  /* line 250, ../sass/nav.scss */
+  /* line 250, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
   #login-area #nav ul li.open li a {
     background: white;
   }
-  /* line 254, ../sass/nav.scss */
+  /* line 254, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
   #login-area #nav ul li.open ul {
     display: block;
   }
-  /* line 259, ../sass/nav.scss */
+  /* line 259, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
   #login-area #nav ul li:hover a {
     background: #004e7e;
   }
-  /* line 264, ../sass/nav.scss */
+  /* line 264, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
   #login-area #nav ul li.multilevel span.level {
     background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -641px no-repeat;
     width: 8px;
@@ -203,114 +209,114 @@
     border-bottom: 1px solid #c1bfb9;
   }
 
-  /* line 585, ../sass/mixins.scss */
+  /* line 585, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist .views-field-title, .block-views .newslist .views-field-field-main-image-fid, .block-views .newslist .views-field-field-teaser-value {
     margin: 0px 20px;
   }
-  /* line 588, ../sass/mixins.scss */
+  /* line 588, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist a {
     font-size: 1.7em;
     line-height: 1.1em;
   }
-  /* line 592, ../sass/mixins.scss */
+  /* line 592, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist .views-field-title {
     padding-bottom: 10px;
   }
-  /* line 598, ../sass/mixins.scss */
+  /* line 598, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-1 .views-field-title a {
     font-size: 2.2em;
     line-height: 1.2em;
   }
-  /* line 604, ../sass/mixins.scss */
+  /* line 604, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-1 ul li {
     margin-top: 0px;
   }
-  /* line 610, ../sass/mixins.scss */
+  /* line 610, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-2 li {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #DDD;
   }
-  /* line 613, ../sass/mixins.scss */
+  /* line 613, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-2 li.views-row-last {
     border-bottom: 0px;
   }
-  /* line 619, ../sass/mixins.scss */
+  /* line 619, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-2 .views-field-field-main-image-fid .field-content a img {
     width: 170px;
     height: auto;
     border: 1px solid #d1d1d1;
   }
-  /* line 628, ../sass/mixins.scss */
+  /* line 628, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-2 .views-field-title a {
     font-size: 1.8em;
     line-height: 1.1em;
   }
-  /* line 635, ../sass/mixins.scss */
+  /* line 635, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-4 ul {
     width: 100%;
     float: left;
-    border-top: 1px solid #dddddd;
-    border-bottom: 1px solid #dddddd;
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
   }
-  /* line 640, ../sass/mixins.scss */
+  /* line 640, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-4 ul li {
     float: left;
     width: 253px;
     border-bottom: 0px;
-    border-right: 1px solid #dddddd;
+    border-right: 1px solid #DDD;
     margin: 0px;
     padding: 0px;
   }
-  /* line 647, ../sass/mixins.scss */
+  /* line 647, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-4 ul li .views-field-field-main-image-fid {
     float: left;
     display: none;
   }
-  /* line 651, ../sass/mixins.scss */
+  /* line 651, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-4 ul li .views-field-title {
     padding-top: 25px;
   }
-  /* line 654, ../sass/mixins.scss */
+  /* line 654, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-4 ul li .views-field-field-teaser-value {
     display: block;
     padding-bottom: 25px;
   }
-  /* line 659, ../sass/mixins.scss */
+  /* line 659, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-last {
     border-right: 0px;
   }
-  /* line 668, ../sass/mixins.scss */
+  /* line 668, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-12 ul li .views-field-title a, .block-views .newslist.sak-23 ul li .views-field-title a {
     font-size: 1.4em;
   }
-  /* line 676, ../sass/mixins.scss */
+  /* line 676, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.fire .views-field-field-main-image-fid, .block-views .newslist.fem .views-field-field-main-image-fid {
     float: left;
     margin-right: 10px;
   }
-  /* line 679, ../sass/mixins.scss */
+  /* line 679, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.fire .views-field-field-main-image-fid img, .block-views .newslist.fem .views-field-field-main-image-fid img {
     width: 223px;
     height: auto;
   }
-  /* line 684, ../sass/mixins.scss */
+  /* line 684, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.fire .views-field-title, .block-views .newslist.fem .views-field-title {
     float: none;
     width: auto;
   }
-  /* line 688, ../sass/mixins.scss */
+  /* line 688, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.fire .views-field-field-teaser-value, .block-views .newslist.fem .views-field-field-teaser-value {
     display: block;
   }
-  /* line 693, ../sass/mixins.scss */
+  /* line 693, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.adart .views-row-last {
     border-bottom: none;
   }
-  /* line 696, ../sass/mixins.scss */
+  /* line 696, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.adart .views-field-field-teaser-value {
     display: block;
   }
 
-  /* line 328, ../sass/mixins.scss */
+  /* line 328, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   #block-views-Kommentarutdrag-block_1,
   #block-boxes-box-4bb00d6c,
   #block-simplenews-22 {
@@ -318,7 +324,7 @@
     width: 90%;
   }
 
-  /* line 332, ../sass/mixins.scss */
+  /* line 332, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .rammeboks {
     padding: 3%;
     width: 94%;
@@ -329,34 +335,34 @@
     background: #f1f2ee;
     float: left;
   }
-  /* line 343, ../sass/mixins.scss */
+  /* line 343, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .rammeboks ul li .views-field-field-teaser-value {
     font-size: 1em;
     font-family: Arial;
     color: #333;
   }
 
-  /* line 354, ../sass/mixins.scss */
+  /* line 354, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .rammeboks.eco ul li .views-field-title {
     padding-top: 0.7em;
   }
 
-  /* line 362, ../sass/mixins.scss */
+  /* line 362, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .rammeboks.blogger .more-link a {
     font-size: 1em;
   }
-  /* line 366, ../sass/mixins.scss */
+  /* line 366, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .rammeboks.blogger .views-field-field-blogg-bilde-fid {
     display: none;
   }
 
-  /* line 795, ../sass/mixins.scss */
+  /* line 795, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   div .ownsection {
     float: left;
     width: 197px;
     margin-left: 20px;
   }
-  /* line 799, ../sass/mixins.scss */
+  /* line 799, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   div .ownsection .desc {
     padding-top: 1em;
     display: block;
@@ -364,7 +370,7 @@
     font-family: Arial;
     color: #333333;
   }
-  /* line 980, ../sass/mixins.scss */
+  /* line 980, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   div .nopremium-message .form-submit {
     margin-top: 22px;
     height: 44px;
@@ -390,6 +396,8 @@
     width: 300px;
     -webkit-border-radius: 4px 4px;
     -moz-border-radius: 4px / 4px;
+    -ms-border-radius: 4px / 4px;
+    -o-border-radius: 4px / 4px;
     border-radius: 4px / 4px;
     border: 1px solid #223e6b;
     -webkit-box-shadow: inset 1px 2px 3px 0px rgba(0, 0, 0, 0.7);

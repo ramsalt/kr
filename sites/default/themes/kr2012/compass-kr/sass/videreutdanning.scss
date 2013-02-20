@@ -46,11 +46,25 @@
 		border-top: 0px solid;
 	}
 	#search{
-		
+		.search-form{
+			
+			clear:left;
+			a{
+				background-image: url(http://utdanning.no/sites/all/themes/uno/images/logo-footer.png);
+				text-indent: 10000px;
+				display:block;
+				width:111px;
+				height:52px;
+				float:left;
+				margin-right:20px;
+			}
+		}
 	}
 	.pager{
 		li{
 		display:inline;
 		}
 	}
+			
+	
 }

@@ -55,7 +55,7 @@
       $('#fagomrade').facet('fagomrade');
       $('#undervisningsform').facet('undervisningsform');
       $('#pace').facet('pace');
-      $('#adminarea').facet('fylke');
+      // $('#adminarea').facet('fylke');
       $('#org').facet('undervisningssted');
       // Search box
       $('#search').searchBox();

@@ -61,25 +61,25 @@
     position: relative;
   }
 
-  /* line 275, ../sass/nav.scss */
+  /* line 275, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
   #login-area .wrapper {
     background: transparent;
     border-bottom: none;
   }
-  /* line 278, ../sass/nav.scss */
+  /* line 278, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
   #login-area .wrapper .inner-wrapper {
     border-bottom: none;
   }
-  /* line 281, ../sass/nav.scss */
+  /* line 281, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
   #login-area .wrapper .container {
     background: #336699;
     border-top: 1px solid #214264;
     border-bottom: 1px solid #234f7c;
   }
-  /* line 287, ../sass/nav.scss */
+  /* line 287, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/nav.scss */
   #login-area .wrapper .container .inner-container {
     border-top: 1px solid #2b5782;
-    border-bottom: 1px solid #4876a3;
+    border-bottom: 1px solid #4876A3;
     float: left;
     width: 100%;
   }
@@ -240,18 +240,18 @@
     color: #d71010;
     font-weight: bold;
     text-transform: uppercase;
-    border-bottom: 2px solid #d71010;
+    border-bottom: 2px solid #D71010;
   }
   /* line 209, ../sass/base-desktop.scss */
   .fakta .content {
     font-size: 0.9em;
   }
 
-  /* line 435, ../sass/mixins.scss */
+  /* line 435, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .listeboks h3, .listeboks .item-list h3 {
     margin-bottom: 0px;
   }
-  /* line 439, ../sass/mixins.scss */
+  /* line 439, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .listeboks ul, .listeboks .item-list ul {
     padding: 0px 3% 15px 3%;
     background: #f1f2ee;
@@ -259,128 +259,128 @@
     border-bottom: 2px solid #c1bfb9;
     width: 94%;
   }
-  /* line 445, ../sass/mixins.scss */
+  /* line 445, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .listeboks ul li, .listeboks .item-list ul li {
     float: left;
     width: 100%;
     padding: 9px 0px 9px 0px;
     margin: 0px;
   }
-  /* line 450, ../sass/mixins.scss */
+  /* line 450, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .listeboks ul li a, .listeboks .item-list ul li a {
     color: #333333;
     text-decoration: none;
     font-size: 1.2em;
     line-height: 1.3em;
   }
-  /* line 457, ../sass/mixins.scss */
+  /* line 457, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .listeboks ul li:last-child, .listeboks .item-list ul li:last-child {
     border: none;
     padding-bottom: 0px;
   }
 
-  /* line 704, ../sass/mixins.scss */
+  /* line 704, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-4 ul {
     border: none;
     height: auto;
   }
-  /* line 707, ../sass/mixins.scss */
+  /* line 707, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-4 ul li {
     border: none;
     width: 100%;
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #DDD;
   }
-  /* line 712, ../sass/mixins.scss */
+  /* line 712, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-last {
     border-bottom: 0px;
   }
-  /* line 716, ../sass/mixins.scss */
+  /* line 716, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.sak-4 ul li.views-row-first .views-field-title {
     padding-top: 0px;
   }
-  /* line 723, ../sass/mixins.scss */
+  /* line 723, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.fire ul, .block-views .newslist.fem ul {
     float: left;
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #DDD;
   }
-  /* line 726, ../sass/mixins.scss */
+  /* line 726, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.fire ul li, .block-views .newslist.fem ul li {
     width: 24.8%;
     border-bottom: 0px;
-    border-right: 1px solid #dddddd;
+    border-right: 1px solid #DDD;
     margin: 0px;
     padding: 1em 0px 0px 0px;
   }
-  /* line 733, ../sass/mixins.scss */
+  /* line 733, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-field-teaser-value, .block-views .newslist.fem ul li .views-field-field-teaser-value {
     margin: 0px 15px;
   }
-  /* line 736, ../sass/mixins.scss */
+  /* line 736, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-title, .block-views .newslist.fem ul li .views-field-title {
     width: 85%;
     margin: 0px 15px;
   }
-  /* line 740, ../sass/mixins.scss */
+  /* line 740, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-field-main-image-fid, .block-views .newslist.fem ul li .views-field-field-main-image-fid {
     margin: 0px 15px;
   }
-  /* line 742, ../sass/mixins.scss */
+  /* line 742, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.fire ul li .views-field-field-main-image-fid img, .block-views .newslist.fem ul li .views-field-field-main-image-fid img {
     width: 100%;
     height: auto;
   }
-  /* line 748, ../sass/mixins.scss */
+  /* line 748, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.fire ul li.views-row-last, .block-views .newslist.fem ul li.views-row-last {
     border: 0px;
   }
-  /* line 754, ../sass/mixins.scss */
+  /* line 754, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.fem .item-list ul li.views-row {
     width: 19.8%;
   }
-  /* line 759, ../sass/mixins.scss */
+  /* line 759, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .block-views .newslist.adart .views-row-last {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #DDD;
   }
 
-  /* line 809, ../sass/mixins.scss */
+  /* line 809, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   div .ownsection {
     margin-top: 1em;
     margin-left: 3%;
     width: 26%;
   }
-  /* line 876, ../sass/mixins.scss */
+  /* line 876, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   div .seksjonsside .views-field-title a {
-    font-family: "MerriweatherRegular", Arial, serif;
+    font-family: 'MerriweatherRegular', Arial, serif;
     font-size: 1.5em;
     line-height: 1.3em;
     color: #333;
     text-decoration: none;
   }
-  /* line 992, ../sass/mixins.scss */
+  /* line 992, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   div .nopremium-message #edit-pass-wrapper {
     margin: 0px 10px;
   }
-  /* line 995, ../sass/mixins.scss */
+  /* line 995, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   div .nopremium-message .form-submit {
     clear: none;
   }
 
-  /* line 373, ../sass/mixins.scss */
+  /* line 373, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .rammeboks.blogger .views-field-field-blogg-bilde-fid {
     display: block;
   }
-  /* line 377, ../sass/mixins.scss */
+  /* line 377, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .rammeboks.blogger .views-field-title-1 a {
     font-size: 1em;
   }
-  /* line 382, ../sass/mixins.scss */
+  /* line 382, /Users/Falster/www/kr/sites/default/themes/kr2012/compass-kr/sass/mixins.scss */
   .rammeboks.blogger .views-field-title a {
     font-size: 1.1em;
   }
 
   /* line 226, ../sass/base-desktop.scss */
   .one.one_one .one-inner {
-    border-right: 1px solid #dddddd;
+    border-right: 1px solid #DDD;
     height: 100%;
   }
 
@@ -391,7 +391,7 @@
 
   /* line 233, ../sass/base-desktop.scss */
   .three-art {
-    border-left: 1px solid #dddddd;
+    border-left: 1px solid #DDD;
     margin-left: 10px;
     margin-bottom: 10px;
   }

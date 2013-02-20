@@ -3600,7 +3600,7 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
   margin: 0px;
   padding: 0px;
   height: auto;
-  max-width: 136px;
+  width: 136px;
 }
 /* line 105, ../sass/jcar.scss */
 .jcar.jobber .jcarousel-item .views-field.views-field-title a {
@@ -3859,7 +3859,21 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
 .videreutdanning .search-result.first {
   border-top: 0px solid;
 }
+/* line 49, ../sass/videreutdanning.scss */
+.videreutdanning #search .search-form {
+  clear: left;
+}
 /* line 52, ../sass/videreutdanning.scss */
+.videreutdanning #search .search-form a {
+  background-image: url(http://utdanning.no/sites/all/themes/uno/images/logo-footer.png);
+  text-indent: 10000px;
+  display: block;
+  width: 111px;
+  height: 52px;
+  float: left;
+  margin-right: 20px;
+}
+/* line 64, ../sass/videreutdanning.scss */
 .videreutdanning .pager li {
   display: inline;
 }

@@ -52,7 +52,21 @@
 .videreutdanning .search-result.first {
   border-top: 0px solid;
 }
+/* line 49, ../sass/videreutdanning.scss */
+.videreutdanning #search .search-form {
+  clear: left;
+}
 /* line 52, ../sass/videreutdanning.scss */
+.videreutdanning #search .search-form a {
+  background-image: url(http://utdanning.no/sites/all/themes/uno/images/logo-footer.png);
+  text-indent: 10000px;
+  display: block;
+  width: 111px;
+  height: 52px;
+  float: left;
+  margin-right: 20px;
+}
+/* line 64, ../sass/videreutdanning.scss */
 .videreutdanning .pager li {
   display: inline;
 }
