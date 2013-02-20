@@ -4094,5 +4094,6 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
 }
 /* line 90, ../sass/videreutdanning.scss */
 .videreutdanning .utdanninger .field-content {
-  margin-top: 10px;
+  padding-top: 10px;
+  clear: left;
 }
