@@ -3600,7 +3600,7 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
   margin: 0px;
   padding: 0px;
   height: auto;
-  width: 136px;
+  width: 120px;
 }
 /* line 105, ../sass/jcar.scss */
 .jcar.jobber .jcarousel-item .views-field.views-field-title a {
@@ -3612,28 +3612,29 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
 /* line 112, ../sass/jcar.scss */
 .jcar.jobber .jcarousel-item .views-field.views-field-field-job-date-value {
   font-size: 0.7em;
+  clear: left;
 }
-/* line 115, ../sass/jcar.scss */
+/* line 116, ../sass/jcar.scss */
 .jcar.jobber .jcarousel-item .views-field.views-field-field-job-utlyser-value {
   font-weight: bold;
   font-size: 0.8em;
 }
-/* line 119, ../sass/jcar.scss */
+/* line 120, ../sass/jcar.scss */
 .jcar.jobber .jcarousel-item a {
   color: #333333;
 }
 
-/* line 124, ../sass/jcar.scss */
+/* line 125, ../sass/jcar.scss */
 .jcar .jcarousel-item-horizontal {
   margin: 0 8px 0px 4px;
 }
 
-/* line 128, ../sass/jcar.scss */
+/* line 129, ../sass/jcar.scss */
 .jcar .jcarousel-item-vertical {
   margin: 4px 0;
 }
 
-/* line 132, ../sass/jcar.scss */
+/* line 133, ../sass/jcar.scss */
 .jcar .jcarousel-item-placeholder {
   background: white url(throbber.gif) no-repeat center center;
   color: #000;
@@ -3642,18 +3643,18 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
 /**
  * Buttons
  */
-/* line 142, ../sass/jcar.scss */
+/* line 143, ../sass/jcar.scss */
 .jcar .jcarousel-prev.jcarousel-prev-disabled {
   opacity: 0.2;
   cursor: default;
 }
-/* line 146, ../sass/jcar.scss */
+/* line 147, ../sass/jcar.scss */
 .jcar .jcarousel-next.jcarousel-next-disabled {
   opacity: 0.2;
   cursor: default;
 }
 
-/* line 152, ../sass/jcar.scss */
+/* line 153, ../sass/jcar.scss */
 .jcar .jcarousel-next {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -429px no-repeat;
   display: block;
@@ -3666,12 +3667,12 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
   left: 0px;
 }
 
-/* line 163, ../sass/jcar.scss */
+/* line 164, ../sass/jcar.scss */
 .jcar.jobber .jcarousel-next {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -378px no-repeat;
 }
 
-/* line 166, ../sass/jcar.scss */
+/* line 167, ../sass/jcar.scss */
 .jcar .jcarousel-prev {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -459px no-repeat;
   display: block;
@@ -3684,18 +3685,18 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
   left: 0px;
 }
 
-/* line 177, ../sass/jcar.scss */
+/* line 178, ../sass/jcar.scss */
 .jcar.jobber .jcarousel-prev {
   background: url('/sites/default/themes/kr2012/compass-kr/images/logo-s90197362fa.png') 0 -348px no-repeat;
 }
 
-/* line 180, ../sass/jcar.scss */
+/* line 181, ../sass/jcar.scss */
 .jcar .jcarousel-navigation {
   margin: 0;
   padding: 0;
 }
 
-/* line 185, ../sass/jcar.scss */
+/* line 186, ../sass/jcar.scss */
 .jcar .jcarousel-navigation li {
   display: inline;
   margin: 0 2px 0 0;
@@ -3703,7 +3704,7 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
   background: none;
 }
 
-/* line 192, ../sass/jcar.scss */
+/* line 193, ../sass/jcar.scss */
 .jcar .jcarousel-navigation li.active a {
   font-weight: bold;
   text-decoration: none;
@@ -4062,37 +4063,38 @@ body #tabs-wrapper #drupal-control-bar ul li.active a {
   height: 52px;
   float: left;
   margin-right: 20px;
+  overflow: hidden;
 }
-/* line 64, ../sass/videreutdanning.scss */
+/* line 65, ../sass/videreutdanning.scss */
 .videreutdanning .pager li {
   display: inline;
 }
-/* line 69, ../sass/videreutdanning.scss */
+/* line 70, ../sass/videreutdanning.scss */
 .videreutdanning .utdanninger h3 {
   border-bottom: 2px solid #333333;
   padding: 4px 0px;
 }
-/* line 73, ../sass/videreutdanning.scss */
+/* line 74, ../sass/videreutdanning.scss */
 .videreutdanning .utdanninger img {
   float: left;
   margin-right: 10px;
 }
-/* line 77, ../sass/videreutdanning.scss */
+/* line 78, ../sass/videreutdanning.scss */
 .videreutdanning .utdanninger li {
   padding: 10px 3% 15px 3%;
   background: #f1f2ee;
   border-bottom: 1px solid #dddddd;
 }
-/* line 82, ../sass/videreutdanning.scss */
+/* line 83, ../sass/videreutdanning.scss */
 .videreutdanning .utdanninger ol {
   border-bottom: 2px solid #c1bfb9;
 }
-/* line 85, ../sass/videreutdanning.scss */
+/* line 86, ../sass/videreutdanning.scss */
 .videreutdanning .utdanninger a {
   color: #000;
   text-decoration: none;
 }
-/* line 90, ../sass/videreutdanning.scss */
+/* line 91, ../sass/videreutdanning.scss */
 .videreutdanning .utdanninger .field-content {
   padding-top: 10px;
   clear: left;

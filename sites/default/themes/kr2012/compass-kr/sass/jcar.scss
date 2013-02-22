@@ -101,7 +101,7 @@ $logos: sprite-map("logo/*.png");
       margin: 0px;
       padding: 0px;
       height: auto;
-      width:136px;
+      width:120px;
       a{
         font-family: Arial;      
         color: #333333;
@@ -111,6 +111,7 @@ $logos: sprite-map("logo/*.png");
     }
     .views-field.views-field-field-job-date-value{
       font-size: 0.7em;
+      clear:left;
     }
     .views-field.views-field-field-job-utlyser-value{
       font-weight: bold;
