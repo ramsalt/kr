@@ -669,6 +669,13 @@ function nodereference_autocomplete_process($element, $edit, $form_state, $form)
     '#delta' => $element['#delta'],
     '#columns' => $element['#columns'],
   );
+  if($element['#field_name'] == 'field_tema_saker' && $element['#default_value']['nid']){
+  	$nid = $element['#default_value']['nid'];	
+	$query = db_query('SELECT created FROM {node} WHERE nid = '.$nid);
+	$res = db_fetch_object($query);
+	$unix = $res->created;
+	$element['#suffix'] = 'Publiseringsdato: '.date('d.m.Y',$unix);	 	
+  }
   if (empty($element[$field_key]['#element_validate'])) {
     $element[$field_key]['#element_validate'] = array();
   }
