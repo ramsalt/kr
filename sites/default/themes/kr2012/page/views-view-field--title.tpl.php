@@ -24,9 +24,9 @@
 		$nid =$row->node_node_data_field_related_content_nid;
 	}
 	if($nid>0){
-  		$q = db_query("SELECT title FROM {node} WHERE nid LIKE '".$nid."'");
+  		$q = db_query("SELECT title,nid FROM {node} WHERE nid LIKE '".$nid."'");
 		$r = db_fetch_object($q);
-		$output = l($r->title, 'node/'.$row->nid, array('html' => true));
+		$output = l($r->title, 'node/'.$nid, array('html' => true));
 	}
 ?>
 <?php print $output; ?>
