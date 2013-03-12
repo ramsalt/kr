@@ -20,6 +20,9 @@
   */
 
 	$nid = $row->nid;
+	if($view->name == 'also_read'){
+		$nid =$row->node_node_data_field_related_content_nid;
+	}
 	if($nid>0){
   		$q = db_query("SELECT title FROM {node} WHERE nid LIKE '".$nid."'");
 		$r = db_fetch_object($q);
