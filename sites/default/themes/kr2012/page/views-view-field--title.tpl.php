@@ -21,7 +21,10 @@
 
 	$nid = $row->nid;
 	if($view->name == 'also_read'){
-		$nid =$row->node_node_data_field_related_content_nid;
+		$nid = $row->node_node_data_field_related_content_nid;
+	}
+	if($view->name == 'Tema'){
+		$nid = $row->node_node_data_field_tema_saker_nid;
 	}
 	if($nid>0){
   		$q = db_query("SELECT title,nid FROM {node} WHERE nid LIKE '".$nid."'");
