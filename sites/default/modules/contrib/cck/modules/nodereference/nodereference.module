@@ -937,7 +937,7 @@ function _nodereference_potential_references_standard($field, $string = '', $mat
       'equals' => "= '%s'",
       'starts_with' => "$like '%s%%'",
     );
-    $where[] = 'n.title '. (isset($match_clauses[$match]) ? $match_clauses[$match] : $match_clauses['contains']);
+    $where[] = 'n.clean_title '. (isset($match_clauses[$match]) ? $match_clauses[$match] : $match_clauses['contains']);
     $args[] = $string;
   }
   elseif ($ids) {
@@ -946,7 +946,16 @@ function _nodereference_potential_references_standard($field, $string = '', $mat
   }
 
   $where_clause = $where ? 'WHERE ('. implode(') AND (', $where) .')' : '';
-  $sql = db_rewrite_sql("SELECT n.nid, n.title AS node_title, n.type AS node_type FROM {node} n $where_clause ORDER BY n.title, n.type");
+  /*
+   * OLE
+   * CREATE VIEW node_titles_clean AS
+   * SELECT Replace(title, '&#173;', '') AS clean_title, title, nid, type
+   * FROM node 
+   * 
+   * 
+  */
+  
+  $sql = db_rewrite_sql("SELECT n.nid, n.title AS node_title, n.type AS node_type FROM {node_titles_clean} n $where_clause ORDER BY n.title, n.type");
   $result = $limit ? db_query_range($sql, $args, 0, $limit) : db_query($sql, $args);
   $references = array();
   while ($node = db_fetch_object($result)) {
