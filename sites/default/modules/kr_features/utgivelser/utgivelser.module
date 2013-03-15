@@ -36,10 +36,11 @@ function utgivelser_taxonomy_validate($form, &$form_state){
 	}
 }
 function utgivelser_views_query_alter(&$view, &$query){
-
+/*
 	global $user;
 	if($user->uid == 1){
 		dsm(array($view, $query));
+		*/
 	if($view->name == 'admin_content'){
 		foreach($query->where[0]['clauses'] as $delta => $item){
 			if($item == 'node.changed <= %s'){
@@ -50,5 +51,5 @@ function utgivelser_views_query_alter(&$view, &$query){
 			}
 		}
 	}
-	}
+	
 }
