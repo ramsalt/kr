@@ -16,8 +16,9 @@ function utgivelser_taxonomy_default_vocabularies() {
       'tags' => '0',
       'module' => 'features_utgave',
       'weight' => '0',
-      'type' => NULL,
-      'nodes' => array(),
+      'nodes' => array(
+        'article' => 'article',
+      ),
     ),
   );
 }
