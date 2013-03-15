@@ -42,7 +42,8 @@ function utgivelser_views_query_alter(&$view, &$query){
 		
 		
 	if($view->name == 'admin_content'){
-		dsm(array($view, $query));
+		dsm($view);
+		dsm($query);
 		foreach($query->where[0]['clauses'] as $delta => $item){
 			if($item == 'node.changed <= %s'){
 				$unixtime = $query->where[0]['args'][$delta];
