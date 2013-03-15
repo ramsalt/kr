@@ -466,3 +466,13 @@ div.node .column-side .column-wrapper {
 body.tao.rubik #page .content-wrapper div.view-admin-content input.form-text{
 	width: 190px;
 }
+
+#edit-changed-min-wrapper{
+	float: left;
+}
+#edit-changed-max-wrapper{
+	float: left;
+}
+#edit-changed-max-wrapper label{
+	
+	}
