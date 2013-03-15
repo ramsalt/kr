@@ -16,7 +16,7 @@ function utgivelser_form_alter(&$form, &$form_state, $form_id){
 	}elseif($form_id == 'views_exposed_form'){
 		if(strlen($form_state['input']['changed']['min']) == 0 && $form_state['input']['changed']['max'] == 0){
 			$form_state['input']['changed']['min'] = date('d.m.Y', strtotime('-3 month'));
-			$form_state['input']['changed']['max'] = date('d.m.Y', strtotime('+1 day'));
+			$form_state['input']['changed']['max'] = date('d.m.Y');
 		}
 	}
 	
@@ -33,5 +33,17 @@ function utgivelser_taxonomy_validate($form, &$form_state){
 		WHERE utgivelsesdato_value LIKE '".$year."%'");
 		$r = db_fetch_object($q);
 		$form_state['values']['name'] = 'Nr '.($r->antall+1).'/'.$year;
+	}
+}
+function utgivelser_views_query_alter(&$view, &$query){
+	if($view->name == 'admin_content'){
+		foreach($query->where[0]['clauses'] as $delta => $item){
+			if($item == 'node.changed <= %s'){
+				$unixtime = $query->where[0]['args'][$delta];
+				$date_string = date('Y', $unixtime).'-'.date('m', $unixtime).'-'.date('d', $unixtime). ' 23:59:59';
+				$date = date_create_from_format('Y-m-d H:i:s', $date_string);
+				$query->where[0]['args'][$delta] = date_format($date, 'U');
+			}
+		}
 	}
 }
