@@ -1,0 +1,7 @@
+name = "Utgivelser"
+description = "Utgivelser"
+core = "6.x"
+package = "Features"
+dependencies[] = "features"
+dependencies[] = "taxonomy"
+features[taxonomy][] = "utgave"
