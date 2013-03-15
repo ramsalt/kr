@@ -470,9 +470,13 @@ body.tao.rubik #page .content-wrapper div.view-admin-content input.form-text{
 #edit-changed-min-wrapper{
 	float: left;
 }
+body.tao.rubik #page .content-wrapper div.view-admin-content #edit-changed-min-wrapper input,
+body.tao.rubik #page .content-wrapper div.view-admin-content #edit-changed-max-wrapper input{
+	width: 100px;
+}
 #edit-changed-max-wrapper{
 	float: left;
 }
-#edit-changed-max-wrapper label{
-	
-	}
+div.view-admin-content .views-exposed-widget.views-widget-filter-type select{
+	width: 100px;
+}
