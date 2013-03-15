@@ -462,3 +462,7 @@ div.node .column-side .column-wrapper {
   font-weight:normal;
   font-size:16px;
   }
+
+body.tao.rubik #page .content-wrapper div.view-admin-content input.form-text{
+	width: 190px;
+}
