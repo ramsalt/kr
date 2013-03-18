@@ -12,6 +12,9 @@
 		font-size:2em;
 	}
 	.facet_content{
+		.expanded{
+			clear: left;
+		}
 		.filterList li a{
 			list-style:none;
 			display:inline;
@@ -25,6 +28,7 @@
 		clear:left;
 	}
 	.search-result{
+		clear:left;
 		ul{
 		border-bottom: 1px solid #DDD;
 		margin-top:5px;
@@ -65,7 +69,7 @@
 			}
 		}
 	}
-	.pager{
+	#navigator{
 		li{
 		display:inline;
 		}

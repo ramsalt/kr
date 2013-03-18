@@ -16,6 +16,10 @@
   font-size: 2em;
 }
 /* line 15, ../sass/videreutdanning.scss */
+.videreutdanning .facet_content .expanded {
+  clear: left;
+}
+/* line 18, ../sass/videreutdanning.scss */
 .videreutdanning .facet_content .filterList li a {
   list-style: none;
   display: inline;
@@ -24,22 +28,26 @@
   font-family: Arial;
   color: #000;
 }
-/* line 24, ../sass/videreutdanning.scss */
+/* line 27, ../sass/videreutdanning.scss */
 .videreutdanning #adminarea {
   clear: left;
 }
-/* line 28, ../sass/videreutdanning.scss */
+/* line 30, ../sass/videreutdanning.scss */
+.videreutdanning .search-result {
+  clear: left;
+}
+/* line 32, ../sass/videreutdanning.scss */
 .videreutdanning .search-result ul {
   border-bottom: 1px solid #dddddd;
   margin-top: 5px;
   padding-top: 10px;
 }
-/* line 33, ../sass/videreutdanning.scss */
+/* line 37, ../sass/videreutdanning.scss */
 .videreutdanning .search-result li a {
   text-decoration: none;
   color: #000;
 }
-/* line 36, ../sass/videreutdanning.scss */
+/* line 40, ../sass/videreutdanning.scss */
 .videreutdanning .search-result li a h2 {
   font-family: "MerriweatherRegular",Arial,serif;
   font-size: 1.4em;
@@ -47,16 +55,16 @@
   color: #333;
   text-decoration: none;
 }
-/* line 43, ../sass/videreutdanning.scss */
+/* line 47, ../sass/videreutdanning.scss */
 .videreutdanning .search-result li a p {
   font-family: Arial;
   margin: 1em 0em;
 }
-/* line 53, ../sass/videreutdanning.scss */
+/* line 57, ../sass/videreutdanning.scss */
 .videreutdanning #search .search-form {
   clear: left;
 }
-/* line 56, ../sass/videreutdanning.scss */
+/* line 60, ../sass/videreutdanning.scss */
 .videreutdanning #search .search-form a {
   background-image: url(http://utdanning.no/sites/all/themes/uno/images/logo-footer.png);
   text-indent: 10000px;
@@ -67,36 +75,36 @@
   margin-right: 20px;
   overflow: hidden;
 }
-/* line 69, ../sass/videreutdanning.scss */
-.videreutdanning .pager li {
+/* line 73, ../sass/videreutdanning.scss */
+.videreutdanning #navigator li {
   display: inline;
 }
-/* line 74, ../sass/videreutdanning.scss */
+/* line 78, ../sass/videreutdanning.scss */
 .videreutdanning .utdanninger h3 {
   border-bottom: 2px solid #333333;
   padding: 4px 0px;
 }
-/* line 78, ../sass/videreutdanning.scss */
+/* line 82, ../sass/videreutdanning.scss */
 .videreutdanning .utdanninger img {
   float: left;
   margin-right: 10px;
 }
-/* line 82, ../sass/videreutdanning.scss */
+/* line 86, ../sass/videreutdanning.scss */
 .videreutdanning .utdanninger li {
   padding: 10px 3% 15px 3%;
   background: #f1f2ee;
   border-bottom: 1px solid #dddddd;
 }
-/* line 87, ../sass/videreutdanning.scss */
+/* line 91, ../sass/videreutdanning.scss */
 .videreutdanning .utdanninger ol {
   border-bottom: 2px solid #c1bfb9;
 }
-/* line 90, ../sass/videreutdanning.scss */
+/* line 94, ../sass/videreutdanning.scss */
 .videreutdanning .utdanninger a {
   color: #000;
   text-decoration: none;
 }
-/* line 95, ../sass/videreutdanning.scss */
+/* line 99, ../sass/videreutdanning.scss */
 .videreutdanning .utdanninger .field-content {
   padding-top: 10px;
   clear: left;
