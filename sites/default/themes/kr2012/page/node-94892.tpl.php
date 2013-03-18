@@ -1,73 +1,131 @@
 <h1 property="dc:title"><?php print $title; ?></h1>
-  <div id="search_wrapper">
-    <div class="left">
-      <div id="currentsearch">
-       <div id="currentsearch"> </div>
-        <h2>Dine valg</h2>
-      </div>
-      <p><div id="level">
-        <h2>Nivå</h2>
-      </div></p>
-      <div id="sublevel">
-        <h2>Nivå</h2>
-      </div>
-      <div id="fagomrade"></div>
-      <p><div id="adminarea">
-       <!-- <h2>Fylke</h2> -->
-      </div> </p>   
-    </div>
-    <div class="main_content">
-      <div class="main_content_inner">
-        <div id="logo"></div>
-        <p><div id="search"></div></p>
-        <div id="pager-header"></div>
-        <div id="result"></div>
-        <div id="pager"></div>
-        <div>
-          <span id="per_page"></span>
-          <span id="sorting"></span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="http://service.utdanning.no/finn/scripts/ajax-solr-complete.min.js"></script>
   
-  <script>
-  (function($) {
-    $(document).ready(function() {
-      $.search({
-        filter : {fq : '(collection:utdanning AND (termEvu:ja OR labelGeouavhengig:Ja OR termGeouavhengig:ja)) OR collection:course'},
-        per_page : 25,
-        collection : 'dismax',
-        use_lightbox : false,
-        show_facet_numbers : true,
-        fields : [
-                 {label : 'Nivå', field : 'niva'},
-                 {label : 'Fylke', field : 'fylke'},
-                 {label : 'Undervisningssted', field : 'undervisningssted', href :'linkRelHttp_x003A__x002F__x002F_utdanning.no_x002F_org_x0023_teachingOrg' },
-               ]
-      });
-      // Current search
-      $('#currentsearch').currentSearch();
-      // Facets
-      $('#level').facet('niva');
-      $('#sublevel').facet('underniva');
-      $('#fagomrade').facet('fagomrade');
-      $('#undervisningsform').facet('undervisningsform');
-      $('#pace').facet('pace');
-      // $('#adminarea').facet('fylke');
-      $('#org').facet('undervisningssted');
-      // Search box
-      $('#search').searchBox();
-      // Search results
-      $('#pager-header').searchRows();
-      $('#result').searchResult();
-      // Pager
-      $('#pager').searchPager();
-      $('#per_page').searchPerPage();
-      $('#sorting').searchSort();
-      $.doRequest();
-console.log('doh');
-    });
-  })(jQuery);
-  </script>
+      <meta charset="utf-8" />
+    
+      
+      <!-- jQuery (1.8+, possibly lower too) -->
+      <script src="http://utdanning.no/solrservice/contrib/jQuery/jquery.js"></script>
+      
+      <!-- utdanning.no search framework (use remote version for automatic updates) -->
+      <script src="http://utdanning.no/solrservice/js-min/solr-search-full-min.js?ver=11"></script>
+      
+  	<!-- Your init-script, normally in external JS, but inline for demo-purpose -->
+  	<script type="text/javascript">
+  	    
+  		var Manager; // Search manager object
+  		(function ($) { // jQuery => $
+  		  $(function () { // On page load
+  
+                      jQuery.ajax({
+                        dataType: "jsonp",
+                        cache: true,
+                        jsonpCallback: 'ajaxSolrConfigCallback',
+                        url: "http://utdanning.no/solrservice/utdanning.no/config/searchpage.php?callback=?",
+                        success: function (uno_config) {
+                          
+  			  uno_config['server']['proxy_filter'] = 'bm_field_evu:true&fq=sm_vid_Ansvarlig:Offentlig';
+                            
+                            fylker = uno_config['facets']['fylke_vgs'];
+                            fylker['target'] = '#facet_fylker';
+                            
+                            content_types = new Array();
+                            content_types['widget'] = 'plain';
+                            content_types['facet'] = 'bundle_name';
+                            content_types['target'] = '#content_types';
+                            content_types['max_facets'] = 10;
+  
+  
+                            uno_config['facets'] = [];
+  			  uno_config['facets']['level'] = content_types;
+                            uno_config['facets']['fylke_vgs'] = fylker;
+  			  uno_config['search']['menu_dependencies']['always'].push(content_types);
+  			  uno_config['search']['menu_dependencies']['always'].push(fylker);
+  
+  			  // Loading the search manager
+  			  Manager = AjaxSolr.auxiliary('manager', uno_config);
+  
+  			  // Connecting search box - uses default HTML-id from uno_config['plain-searchbox']['target'] = "#query"
+  			  Manager.addPlainSearch(uno_config);
+  
+  			  // Adding hitcounter - uses default HTML-id from uno_config['result-count']['target'] = "#result_count"
+  			  Manager.addResultCount(uno_config); 
+  
+  			  // Adding rows per page selector - uses default HTML-id from uno_config['rows-per-page']['target'] = '#resultsperpage';
+  			  Manager.addRowsPerPage(uno_config);
+  
+  			  // Adding pager - uses default HTML-id from uno_config['pager']['target'] = '#navigator';
+  			  Manager.addPager(uno_config);
+  
+  			  // Adding result list - uses default HTML-id from uno_config['search']['target'] = '#hits';
+  			  Manager.addResults(uno_config);
+  			  
+  			  // Adding "You are searching for" area - uses default HTML-id from uno_config['current-search']['target'] = '#selection';
+  			  Manager.addCurrentSearch(uno_config);
+  
+  			  // Adding facets - adds all facets configured in uno_config['facets'], we simplified it in this example
+  			  Manager.addFacets(uno_config);
+  			  
+  			  // Finalize config
+  			  Manager.finalizeConfig(uno_config);
+  
+  			  // Optional, but recommended; loads the results for an empty search
+  			  Manager.doRequest();
+  
+                        } // End loading config
+                      });
+  		  });
+  		})(jQuery);
+  	</script>	
+  	
+  	
+  	
+  	
+  
+  	
+  	
+   
+    
+  	<!-- 
+  	  Searchbox - must have name="query"
+  	-->
+  	<div class="videreutdanning">
+          <form>
+           <!-- Logo - must be presented with the search results -->
+           <a href="#" class="logoSenter visible-desktop"><img style="height: 35px; margin-bottom: -10px;" id="utdanningno_logo" src="http://utdanning.no/solrservice/design/img/logo-utdanning.png" alt="utdanning.no" title="Søket er levert av utdanning.no" /></a>
+  	 <input id="query" name="query" type="search" autocomplete="off" placeholder="Finn utdanning, yrke eller skole" />
+  	 <input type="submit" value="Søk" />
+          </form>
+  	        
+  	<!-- Hitcount - displays a hitcount in a <h1> element plus additional info within a <span> -->
+          <div id="result_count"></div>
+      
+  	<!-- Your choices - displays selected facets and text searches in a list -->
+  	<div class="yourChoices">
+  	  <h2>Dine valg</h2>
+  	  <ul id="selection"></ul>
+  	</div>
+  	<div class="facet_content">
+          <!-- Facets -->
+          <h2 class="expanded">Nivå</h2>
+          <ul class="filterList" id="content_types"></ul>
+  
+          <h2 class="expanded">Fylke</h2>
+          <ul class="filterList" id="facet_fylker"></ul>
+      </div>    
+          
+  	<!-- Results -->
+  	<div class="search-result">
+  	<ul class="hits" id="hits"></ul>
+  	
+  	</div>
+              
+  	<!-- Pager -->
+  	<div>
+  	  <div id="resultsperpage"></div>
+  	  <div id="navigator">
+  		<ul class="navigator"></ul>
+  	  </div>
+  	</div>
+   </div>
+  
+  
