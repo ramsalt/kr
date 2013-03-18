@@ -5,49 +5,50 @@
 	.art-side{
 		display:none;
 	}*/
+	.logoSenter img{
+		float: right;
+	}
+	#result_count h1{
+		font-size:2em;
+	}
 	.facet_content{
-		li.facet_item{
+		.filterList li a{
 			list-style:none;
 			display:inline;
 			float: left;
 			margin-left:5px;
 			font-family: Arial;
+			color:#000;
 		}
 	}
 	#adminarea{
 		clear:left;
 	}
 	.search-result{
-		li a{
-		border-top: 1px solid #DDD;
+		ul{
+		border-bottom: 1px solid #DDD;
 		margin-top:5px;
 		padding-top:10px;
+		}
+		li a{		
 		text-decoration:none;
 		color:#000;
-		h2{
-		font-family: "MerriweatherRegular",Arial,serif;
-		font-size: 1.4em;
-		line-height: 1.3em;
-		color: #333;
-		text-decoration: none;
+			h2{
+			font-family: "MerriweatherRegular",Arial,serif;
+			font-size: 1.4em;
+			line-height: 1.3em;
+			color: #333;
+			text-decoration: none;
+			}
+			p{
+			font-family: Arial;
+			margin: 1em 0em;
+				}
+			}
 		}
-		p{
-		font-family: Arial;
-		margin: 1em 0em;
-		}
-		.field{
-		h3{
-		display:inline;
-		font-size:1.2em;
-		margin-right:5px;
-		}
-		.field-content{display:inline;}
-		}
-		}
-	}
-	.search-result.first{
-		border-top: 0px solid;
-	}
+	
+	
+	
 	#search{
 		.search-form{
 			
