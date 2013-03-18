@@ -286,4 +286,27 @@ function kr2012_preprocess_search_result(&$variables) {
   $variables['theme_hook_suggestions'][] = 'search_result__' . $variables['module'];
   
 }
+function htmlkarakter($string) 
+{ 
+   $string = str_replace(array("&lt;", "&gt;", '&amp;', '&#039;', '&quot;','&lt;', '&gt;'), array("<", ">",'&','\'','"','<','>'), htmlspecialchars_decode($string, ENT_NOQUOTES)); 
+
+       return $string; 
+   
+} 
+
+function kr2012_preprocess_views_bonus_export_xml(&$vars) {
+_views_bonus_export_shared_preprocess($vars);
+
+  foreach ($vars['themed_rows'] as $num => $row) {
+    foreach ($row as $field => $content) {
+      $content = decode_entities(strip_tags($content, '<b><h2><strong><i><em>'));
+      // Prevent double encoding of the ampersand. Look for the entities produced by check_plain().
+      $content = preg_replace('/&(?!(amp|quot|#039|lt|gt);)/', '&amp;', $content);
+      // Convert < and > to HTML entities.
+
+      $vars['themed_rows'][$num][$field] = $content;
+    }
+  }
+}
+
 ?>
