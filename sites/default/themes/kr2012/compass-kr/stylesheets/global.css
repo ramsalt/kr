@@ -2217,7 +2217,7 @@ strong {
 }
 /* line 581, ../sass/base.scss */
 .node-type-article .relaterte-artikler .views-row .views-field-field-main-image-fid {
-  height: 115px;
+  /*	height:115px; Gir plass til bilde hvis det ikke er der.  */
 }
 /* line 584, ../sass/base.scss */
 .node-type-article .relaterte-artikler .views-row .views-field-title a {
