@@ -204,9 +204,10 @@ function kr2012_nopremium_message($node){
 	global $user;
 
 	  // Check if this is a free account disabled or has just authenticated role
-	if (isset($user->roles[2]) && $user->sms_user['status'] != 2) {
-		$block = module_invoke('boxes', 'block', 'view', 'premium_box_non_authenticated');
-	} else if (isset($user->roles[12]) || !(count($user->roles) && isset($user->roles[1])) ) {
+	//if (isset($user->roles[2]) && $user->sms_user['status'] != 2) {
+	//	$block = module_invoke('boxes', 'block', 'view', 'premium_box_non_authenticated');
+	//} else 
+	if (isset($user->roles[12]) || !(count($user->roles) && isset($user->roles[1])) ) {
         $block = module_invoke('boxes', 'block', 'view', 'premium_box_disabled_user');
 	} else {
 		$html ='<div class="msg">';
