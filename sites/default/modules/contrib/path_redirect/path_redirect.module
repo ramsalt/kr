@@ -241,10 +241,31 @@ function path_redirect_local_actions($redirect = array()) {
  */
 function path_redirect_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
   switch ($op) {
-    case 'presave':
-      if (!empty($node->nid) && !empty($node->path)) {
+    case 'presave':		
+      if (!empty($node->nid) && !empty($node->path)) {      	
         path_redirect_check_alias_changed('node/' . $node->nid, $node->path, $node->language);
       }
+	  elseif(!empty($node->nid) && $node->pathauto_perform_alias == 1){
+	  	$old = $node->old_alias;
+		$source = $old;
+	  	$query = db_query('SELECT * FROM {path_redirect} WHERE source = "'.$source.'"');
+		$result = db_fetch_array($query);
+	  	if(!$result->rid){
+			$redirect = array(
+			  'redirect' => 'node/' . $node->nid,
+			  'source' => $source
+			);
+		    $redirect += array(
+			  'rid' => NULL,
+			  'query' => '',
+			  'fragment' => '',
+			  'language' => 'nb',
+			  'type' => variable_get('path_redirect_default_status', 301),
+			  'last_used' => time(),
+			);
+			path_redirect_save($redirect);
+		}
+	  }
       break;
     case 'delete':
       // When a node is deleted, also delete the redirects to it (they will result in a 404).
@@ -272,6 +293,7 @@ function path_redirect_check_alias_changed($path, $new_alias, $language = '') {
   }
 
   $old_alias = drupal_get_path_alias($path, $language);
+
   if ($old_alias != $path && $old_alias != $new_alias) {
     // If the user is manually changing the path alias, add a redirect from the old alias to the node.
     $redirect = array(
@@ -279,6 +301,7 @@ function path_redirect_check_alias_changed($path, $new_alias, $language = '') {
       'redirect' => $path,
       //'language' => $language,
     );
+
     path_redirect_save($redirect);
     return $redirect;
   }
@@ -343,7 +366,6 @@ function path_redirect_save(&$redirect) {
   $redirect['source'] = trim($redirect['source'], '\/?');
 
   path_redirect_clear_cache();
-
   if (empty($redirect['rid'])) {
     drupal_write_record('path_redirect', $redirect);
     module_invoke_all('path_redirect_insert', $redirect);
@@ -352,7 +374,6 @@ function path_redirect_save(&$redirect) {
     drupal_write_record('path_redirect', $redirect, array('rid'));
     module_invoke_all('path_redirect_update', $redirect);
   }
-
   return $redirect;
 }
 
